@@ -16,16 +16,44 @@ Shuchao Gao · Waseda University · <i>ISCAS 2027 submission</i>
 ---
 
 <p align="center">
-<img src="docs/img/fig1_pathway.png" width="820" alt="escape pathway">
+<img src="docs/img/hero.png" width="980" alt="from animal to verdict">
 </p>
 
-**Fig. 1 — The instrumented escape pathway (real connectome data).** 314 looming-sensitive sensory cells (LC4, 104 cells, blue; LPLC2, 210 cells, orange) converge through the top-ranked two-hop relays (top 90 of 849 candidates) onto 8 command descending neurons. All drawn edges are real FlyWire connectome edges (594 direct sensory→DN); line opacity and width scale with synapse count. Red badges F1–F5 mark the five fault-injection points. Stimulus: independent 150 Hz Poisson trains to the sensory populations; readout: population rate of the command set {DNp01, DNa02, DNp04, DNb01} against threshold θ = 51.4 Hz. Inset: FlyWire brain rendering, adapted from Dorkenwald et al., *Nature* 634, 124–138 (2024), CC BY 4.0.
+**From animal to verdict in one pipeline.** The animal (CC BY-SA 2.5 photo) → its brain, every cell type rendered (FlyWire) → the digital twin, built from real connectome edges → fault injection at five scales (F1–F5) → the verdict. The roadmap holds for any substrate: the same five steps consume any connectome, at any scale.
+
+<h2 align="center">A whole brain, deliberately broken, that keeps driving</h2>
 
 ## What this repository is
 
 The code injects five hardware-motivated fault families into the released leaky integrate-and-fire (LIF) whole-brain model of *Drosophila melanogaster* (138,639 neurons, 15,091,983 signed synapses, FlyWire connectome) and measures behavioral outcome on the visuomotor escape pathway: 150 Hz Poisson drive to the LC4 + LPLC2 populations (314 cells), scored as the population firing rate of the 8 descending command neurons.
 
 **36 conditions × 12 seeded 600 ms trials each**, fully deterministic (SHA-256–derived fault realizations, state restoration before every fault), ≈3.5 s per trial on one CPU core.
+
+### The instrumented pathway
+
+<p align="center">
+<img src="docs/img/fig1_pathway.png" width="700" alt="escape pathway">
+</p>
+
+**Fig. 1 — The instrumented escape pathway (real connectome data).** 314 looming-sensitive sensory cells (LC4, 104 cells, blue; LPLC2, 210 cells, orange) converge through the top-ranked two-hop relays (top 90 of 849 candidates) onto 8 command descending neurons. All drawn edges are real FlyWire connectome edges (594 direct sensory→DN); line opacity and width scale with synapse count. Red badges F1–F5 mark the five fault-injection points. Inset: FlyWire brain rendering, adapted from Dorkenwald et al., *Nature* 634, 124–138 (2024), CC BY 4.0.
+
+## What the experiment identifies
+
+The sweep is not just a stress test — it is a **diagnosis**. Three things fall out that no single-component benchmark gives you:
+
+1. **Where the single point of failure lives.** Silencing *both* sensory channels is the only catastrophic mode (0.0 Hz, every trial) while the rest of the brain keeps spiking — the sensor interface, not the network, is what must be duplicated.
+2. **The silent killer.** Removing the top-1% hubs makes the command rate *rise* 29% with 2.52× global activity — output violates its envelope while **every per-unit monitor still reads "active"**. Only fault injection exposes this mode; liveness monitoring cannot.
+3. **A certifiable envelope.** Every pass/fail verdict is unchanged for any decision threshold between 9.2 and 63.1 Hz — the robustness claim survives threshold choice, seed choice, and fault realization.
+
+## Applications
+
+- **Pre-deployment certification of neuromorphic controllers** — seconds-per-trial fault-injection campaigns as a standard gate before embodied hardware ships.
+- **Where to spend hard silicon** — the sweep tells you which redundancy pays (sensory front-end) and which does not (weight precision): dense low-precision, partially defective fabrics are tolerated by this architecture.
+- **Envelope monitors for autonomous systems** — the hub-loss dysregulation mode argues for output-envelope supervision, not component liveness checks, in safety-critical loops.
+
+## Beyond the fly
+
+The pipeline is species-agnostic by construction: image → connectome → digital twin → fault injection → certified robustness. The same five steps run unchanged on any connectome-scale controller — mouse (~10⁸ neurons), human (~10¹¹), or engineered silicon systems with arbitrary topologies. What scales is the certification, not the method.
 
 ## Results at a glance
 
@@ -127,6 +155,7 @@ Runtime: ≈3.5 s per 600 ms trial on one CPU core; the full sweep is minutes-to
 - Whole-brain LIF model and connectome tables: [philshiu/Drosophila_brain_model](https://github.com/philshiu/Drosophila_brain_model)
 - Connectome: FlyWire Consortium — Dorkenwald et al., *Nature* 634, 124–138 (2024), doi:10.1038/s41586-024-07558-y (CC BY 4.0); cell-type annotations via Schlegel et al. 2023 (codex.flywire.ai).
 - Escape-pathway neurobiology: Shuang et al. 2023; Fu & Card 2020 (see paper references).
+- Fruit-fly photograph in the hero banner: André Karwath, Wikimedia Commons, CC BY-SA 2.5. The hero banner is a composite schematic (photo + FlyWire rendering + this repo's figures); the fault-injection panel is illustrative.
 
 ## License
 
