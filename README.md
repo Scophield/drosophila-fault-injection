@@ -1,29 +1,76 @@
-# Fault-Injection Analysis of a Whole-Connectome Spiking Controller
+<h1 align="center">How Much Fault Tolerance Is in a Fly Brain?</h1>
 
-Artifact repository for the paper *"How Much Fault Tolerance Is in a Fly Brain? Fault-Injection Analysis of a Whole-Connectome Spiking Controller for Physical Intelligence"* (Shuchao Gao, Waseda University — ISCAS 2027 submission).
+<p align="center">
+<b>Fault-Injection Analysis of a Whole-Connectome Spiking Controller</b><br>
+Shuchao Gao · Waseda University · <i>ISCAS 2027 submission</i>
+</p>
 
-The code injects five hardware-motivated fault families into the released leaky integrate-and-fire (LIF) whole-brain model of *Drosophila melanogaster* (138,639 neurons, 15,091,983 signed synapses, FlyWire connectome) and measures behavioral outcome on the visuomotor escape pathway: 150 Hz Poisson drive to the looming-sensitive LC4 + LPLC2 populations (314 cells), scored as the population firing rate of the 8 descending command neurons (DNp01, DNa02, DNp04, DNb01) against a threshold θ = 51.4 Hz.
+<p align="center">
+<img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green">
+<img alt="Python" src="https://img.shields.io/badge/python-3.11-blue">
+<img alt="Simulator" src="https://img.shields.io/badge/simulator-Brian%202-blueviolet">
+<img alt="Connectome" src="https://img.shields.io/badge/connectome-FlyWire%20(CC%20BY%204.0)-informational">
+<img alt="Paper" src="https://img.shields.io/badge/paper-ISCAS%202027-orange">
+</p>
 
-## Headline results (36 conditions × 12 seeded 600 ms trials each)
+---
+
+<p align="center">
+<img src="docs/img/fig1_pathway.png" width="820" alt="escape pathway">
+</p>
+
+**Fig. 1 — The instrumented escape pathway (real connectome data).** 314 looming-sensitive sensory cells (LC4, 104 cells, blue; LPLC2, 210 cells, orange) converge through the top-ranked two-hop relays (top 90 of 849 candidates) onto 8 command descending neurons. All drawn edges are real FlyWire connectome edges (594 direct sensory→DN); line opacity and width scale with synapse count. Red badges F1–F5 mark the five fault-injection points. Stimulus: independent 150 Hz Poisson trains to the sensory populations; readout: population rate of the command set {DNp01, DNa02, DNp04, DNb01} against threshold θ = 51.4 Hz. Inset: FlyWire brain rendering, adapted from Dorkenwald et al., *Nature* 634, 124–138 (2024), CC BY 4.0.
+
+## What this repository is
+
+The code injects five hardware-motivated fault families into the released leaky integrate-and-fire (LIF) whole-brain model of *Drosophila melanogaster* (138,639 neurons, 15,091,983 signed synapses, FlyWire connectome) and measures behavioral outcome on the visuomotor escape pathway: 150 Hz Poisson drive to the LC4 + LPLC2 populations (314 cells), scored as the population firing rate of the 8 descending command neurons.
+
+**36 conditions × 12 seeded 600 ms trials each**, fully deterministic (SHA-256–derived fault realizations, state restoration before every fault), ≈3.5 s per trial on one CPU core.
+
+## Results at a glance
+
+<p align="center">
+<img src="docs/img/fig5_glance.png" width="760" alt="results at a glance">
+</p>
 
 | Condition | Command rate (median) | vs. healthy (94.7 Hz) | Note |
 |---|---|---|---|
 | Healthy | 94.7 Hz (94.0–95.6) | — | 4.05 ms first-spike latency |
 | Random-drive control | 8.2 Hz | 9% | total spikes 293k vs 40k — specificity, not arousal |
-| F1 weight noise, σ = 0.5 | 94.7 Hz | 100% | flat through the dose |
+| F1 weight noise, σ = 0.5 | 94.2 Hz | 99% | median within healthy trial dispersion |
 | F2 synapse loss, 50% | 72.4 Hz | 76.5% | latency 4.05 → 5.4 ms (+33%) |
-| F3 unit loss, 10% (~14k neurons) | 94.6 Hz | ~100% | flat through the dose |
+| F3 unit loss, 10% (~14k neurons) | 95.1 Hz | 100% | flat through the dose (a hair above baseline) |
 | F4 hub loss, top 1% (9.1% of synapses) | 122.3 Hz (121.1–123.9) | **+29%, 2.52× global activity** | dysregulation, not silence |
 | F5 both sensory channels silenced | 0.0 Hz (every trial) | 0% | the only catastrophic mode; brain keeps spiking (21.2k spikes) |
 | ER null (edge-permuted control) | 0.0 Hz (every condition) | — | transmits nothing |
 
-An edge-permuted Erdős–Rényi null with identical weight and out-degree statistics transmits nothing, while an analytic multi-hop pathway-mass analysis shows that *relative* route-mass decay under edge loss is topology-independent. Conclusion: functional robustness arises from **threshold amplification acting on convergent wiring**, not from graph redundancy alone — and the dangerous failure mode is hub-loss **dysregulation** (over-activity while every per-unit monitor reads "active"), not signal loss. See `REPORT_zh.md` for a detailed Chinese walkthrough of every experiment, and `paper/main.pdf` for the paper itself.
+## The three findings
+
+<p align="center">
+<img src="docs/img/fig2_specificity.png" width="560" alt="specificity">
+</p>
+
+**Fig. 2 — The readout is pathway-specific.** Escape drive pushes the command population to 94.7 Hz; an equal-sized random set, driven identically, yields 8.2 Hz while producing *more* total activity (293k vs 40k spikes). Silencing both sensory channels (F5_both) drops the command rate to exactly zero in every trial while the rest of the brain keeps spiking.
+
+<p align="center">
+<img src="docs/img/fig3_curves.png" width="820" alt="dose-response">
+</p>
+
+**Fig. 3 — Dose–response.** (a) Synapse deletion degrades gracefully: 50% loss still retains 76.5% of the command rate, with the cost appearing almost entirely in latency (+33%), consistent with recruitment of longer residual multi-hop routes. (b) Hub removal is non-monotone and qualitatively different from every distributed fault: removing the top-1% hubs *raises* the command rate +29% with 2.5× global activity — over-drive, not silence.
+
+<p align="center">
+<img src="docs/img/fig4_topology.png" width="560" alt="hub runaway">
+</p>
+
+**Fig. 4 — The dangerous failure mode is dysregulation.** The top-1% hub set carries ~60% inhibitory output synapses (network mean 40%), so hub loss removes broad inhibitory regulation rather than starving the pathway — output violates the envelope while every per-unit monitor still reads "active". The same lesion on an edge-permuted ER control does not produce this signature, binding the effect to biological hub structure rather than degree heterogeneity.
+
+An edge-permuted Erdős–Rényi null with identical weight and out-degree statistics transmits nothing, while an analytic multi-hop pathway-mass analysis shows that *relative* route-mass decay under edge loss is topology-independent. Conclusion: functional robustness arises from **threshold amplification acting on convergent wiring**, not from graph redundancy alone. See [`REPORT_zh.md`](REPORT_zh.md) for a detailed Chinese walkthrough of every experiment, and [`paper/main.pdf`](paper/main.pdf) for the paper itself.
 
 ## Repository layout
 
 ```
 ├── paper/                 LaTeX source of the paper + compiled main.pdf + figure PDFs
-├── docs/img/              PNG renders of the four paper figures (used by README/REPORT)
+├── docs/img/              PNG renders of the paper figures (used by README/REPORT)
 ├── sim/
 │   ├── engine.py          network construction + fault injection + trial runner (Brian2)
 │   ├── calibrate.py       background calibration + θ placement (10-trial set)
@@ -31,6 +78,7 @@ An edge-permuted Erdős–Rényi null with identical weight and out-degree stati
 │   ├── analyze.py         dose-response figures from results/
 │   ├── pathway_analysis.py  analytic multi-hop pathway mass m_k = ||A^k||_1
 │   ├── fig_pathway.py     real-data escape-pathway figure (Fig. 1)
+│   ├── fig_glance.py      results-at-a-glance bar chart (README)
 │   ├── data/annotations.tsv   FlyWire cell-type annotations (see Credits)
 │   ├── results/           per-trial JSONL records, calibration, summary.json, pathway_mass.json
 │   └── figs/              generated figure PDFs
@@ -62,6 +110,7 @@ python3 sweep.py               # ~1 h single core: 36 conditions x 12 trials (re
 python3 pathway_analysis.py    # ~1 min: multi-hop route-mass analysis
 python3 analyze.py             # regenerates figs 2-4 (writes sim/figs/, copy to paper/figs/)
 python3 fig_pathway.py         # regenerates Fig. 1 (writes sim/figs/ and paper/figs/)
+python3 fig_glance.py          # regenerates the README results-at-a-glance chart
 ```
 
 Runtime: ≈3.5 s per 600 ms trial on one CPU core; the full sweep is minutes-to-an-hour on a laptop. Figures are written with embedded TrueType (Type 42) fonts to comply with IEEE PDF specifications (no Type 3 fonts).
