@@ -1,0 +1,33 @@
+\section{Results}
+\subsection{Baseline: The Connectome Is a Specific, Low-Latency Controller}
+Driving LC4 and LPLC2 at 150\,Hz produces a command-population rate of $94.7$\,Hz (median over 12 trials; interdecile 94.0--95.6\,Hz) with 4.05\,ms median first-spike latency, far above $\theta$ (Fig.~\ref{fig:baseline}). An equal-sized random set, driven identically, yields only $8.2$\,Hz on the same readout while producing \emph{more} total activity (293k vs.\ 40k spikes): the readout is pathway-specific, not generic arousal. When both sensory channels are silenced (F5\textsubscript{both}), the command rate collapses to exactly zero in every trial---consistent with effective drive passing only through the two lesioned channels---while the rest of the brain keeps spiking at background level: the score measures signal transmission through the instrumented pathway.
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig2_baseline.pdf}
+\caption{Readout specificity. Command-population rate under escape stimulation (LC4$+$LPLC2) versus matched random stimulation; dashed line: $\theta$.}
+\label{fig:baseline}
+\end{figure}
+
+\subsection{Tolerance Curves: Noise Is Absorbed, Disconnection Degrades Gracefully}
+Figure~\ref{fig:curves} shows dose--response curves for the two most consequential families; the F1 and F3 responses are flat to within noise (Table~\ref{tab:principles}). Weight variability (F1) is invisible: at $\sigma{=}0.5$ the rate is $94.7$\,Hz (healthy: 94.7\,Hz), total activity up only from 39.7k to 41.5k spikes. Random synapse deletion (F2) degrades gracefully: 5\% and 10\% loss leave the rate at 91.9 and 93.1\,Hz, 25\% loss retains $84.7$\,Hz (89.5\% of baseline), and even 50\% loss retains $72.4$\,Hz (76.5\%), with all 12 trials successful in every condition (the weakest per-trial rates, 63.1\,Hz under single-channel loss and 68.1\,Hz at 50\% synapse loss, both remain far above $\theta$). Disconnection's cost appears almost entirely in latency: 4.05 to 5.4\,ms at 50\% loss (+33\%), consistent with recruitment of longer residual multi-hop routes. Random unit loss (F3) up to 10\%---nearly 14{,}000 neurons with all their synapses---has no measurable effect (94.6 vs.\ 94.7\,Hz): command drive integrates over hundreds of converging presynaptic populations, and no single 10\% slice is load-bearing. The wide 1{,}299-neuron descending layer tracks the same pattern (2{,}941 spikes healthy vs.\ 1{,}918 at 50\% synapse loss), so the graded response is a property of command encoding, not of the eight-neuron readout.
+
+\begin{figure*}[tb]
+\centering
+\includegraphics[width=\textwidth]{figs/fig3_curves.pdf}
+\caption{Behavioral tolerance curves (medians over 12 trials; blue: rate; orange: latency or spikes). (a) Synapse dropout: 76\% retained at 50\% loss, latency dominant. (b) Hub lesion: dysregulation, not loss of signal.}
+\label{fig:curves}
+\end{figure*}
+
+\subsection{Hub Loss Produces Runaway, Not Silence}
+The dose--response of hub removal (F4) is non-monotonic and qualitatively different from every distributed fault (Figs.~\ref{fig:curves}b, \ref{fig:topology}b). Removing the top 1\% of cells ranked by total outgoing synapse count (1{,}386 neurons, 9.1\% of all synapses) \emph{increases} the command rate to $122.3$\,Hz (+29\%, interdecile 121.1--123.9\,Hz across trials) and more than doubles global activity (99.9k spikes, $2.52\times$ healthy); at 2\% the rate stays elevated (117.5\,Hz) while activity partially normalizes (42.4k); at 5\% (22.4\% of synapses) both metrics return to near-baseline (94.1\,Hz, 36.4k). Hub lesions do not starve the pathway of drive---they remove broadly connected inhibitory regulation, and spared circuitry over-drives the command layer: about 60\% of removed hub output synapses are inhibitory, versus 40\% network-wide. In an engineered system this is the dangerous mode: a controller that violates its output envelope while every per-unit health monitor still reads ``active.'' The same lesion in the ER null produces no such signature, tying the runaway to biological hub structure rather than to degree heterogeneity per se.
+
+\subsection{What the Wiring Contributes: Null Network and Pathway Analysis}
+The ER control dissociates specificity from redundancy: with out-degree and weight preserved but in-degree structure permuted, the null transmits \emph{nothing} to the command layer in every condition---0.0\,Hz even on the 1{,}299-neuron broad readout---while global activity is normal. Pathway mass quantifies the convergence advantage: the intact connectome carries 5.8$\times$ more 1-hop and 17.7$\times$ more 4-hop route mass from sensory input to command neurons than the ER null. Yet the \emph{relative} decay of pathway mass under the same edge-deletion levels is nearly identical in both graphs (e.g., at $f{=}0.5$, $k{=}8$: 0.3\% vs.\ 0.4\% of baseline; Fig.~\ref{fig:topology}b). Combined with the simulation result that behavior degrades far more slowly than pathway mass (76\% functional retention at $f{=}0.5$, against 5.8\% retention of the intact four-hop route mass), this yields the central mechanistic insight: exponential topological decay is converted into graceful functional decay by threshold amplification in convergent spiking dynamics. This conversion has a simple mechanism. Let $N$ afferents converge on a command neuron and let each synapse survive independently with probability $p$: expected converged drive scales linearly ($Np$), whereas $k$-hop route mass decays geometrically ($p^k$; 6.25\% at $k{=}4$, $p{=}0.5$). The threshold maps converged drive onto output through a saturating nonlinearity, so rate varies slowly with drive near the operating point---at $p{=}0.5$ the rate retains 76.5\%, more than the linear 50\% drive bound. Graceful degradation therefore requires both convergent wiring, which preserves aggregate drive, and threshold dynamics, which compress drive changes into small rate changes.
+
+\begin{figure*}[tb]
+\centering
+\includegraphics[width=\textwidth]{figs/fig4_topology.pdf}
+\caption{Topology contrast. (a) Route mass under edge loss, normalized per graph (solid: connectome, dashed: ER): relative decay nearly identical, absolute mass 5.8--17.7$\times$ higher. (b) Activity under hub lesions: runaway only in biological wiring; ER null transmits nothing (0.0\,Hz).}
+\label{fig:topology}
+\end{figure*}

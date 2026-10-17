@@ -1,0 +1,24 @@
+\section{Design Principles for Neuromorphic Embodied Controllers}
+\begin{table}[tb]
+\centering
+\caption{Design principles distilled from connectome fault injection, with quantitative anchors.}
+\label{tab:principles}
+\begin{tabular}{@{}p{0.6cm}p{3.4cm}p{3.4cm}@{}}
+\toprule
+\# & Principle & Anchor (this study) \\
+\midrule
+P1 & Buy robustness with redundancy of wiring, not precision of weights & $\sigma{=}0.5$ lognormal noise: 100\% retention \\
+P2 & Distribute command integration; no 10\% slice may be load-bearing & 10\% random unit loss: 100\% retention \\
+P3 & Budget latency, not accuracy, for disconnection faults & 50\% synapse loss: 76\% rate, $+33\%$ latency \\
+P4 & Regulate high-fanout units; monitor envelope, not liveness & top-1\% hub loss: $2.5\times$ activity runaway \\
+P5 & Duplicate the sensory interface before the network & single-channel loss 68--79\% median (weakest trial 63.1\,Hz); both channels 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:principles} distills five transferable principles. P1 and P2 follow from the flat F1 and F3 curves: an evolved controller stores computation in distributed convergence rather than precise magnitudes, so implementations can prefer dense low-precision, partially defective fabrics---consistent with hardware observations\cite{arfa2025hardwareaware,thieu2022effects}. P3 shifts the failure budget: disconnection costs mostly latency, so real-time loops should specify tolerance as worst-case response time under edge loss---which the framework measures. P4 is the most actionable: the only \emph{amplifying} failure mode is triggered by removing the highest-fanout units, so designs should cap the influence of any single high-degree component and monitor output-envelope violation rather than component liveness---the fault presents as over-activity while all units remain alive. P5 locates the single point of failure at the interface: each sensory channel alone suffices (68--79\% retention), so duplicating or cross-timing the sensory front-end buys more safety than any internal redundancy.
+
+The study also carries a methodological message: identical relative pathway decay in both graphs, yet only the biological one transmitting a decodable command, warns against certifying embodied controllers by topology alone; and the hub-loss runaway is invisible to per-unit fault metrics, arguing for fault-injection campaigns as a standard pre-deployment stage\cite{yik2023neurobench,medvedeva2025formalizing}. Seed-exact and seconds per trial, the sweep re-runs in minutes on any hardware mapping\cite{wang2025neuromorphic}.
+
+\section{Limitations and Conclusion}
+Our measurements inherit the LIF abstraction---single-compartment neurons, delta synapses, no plasticity, Poisson sensory drive; doses were bounded to keep the background regime intact, the hub analysis is descriptive, and the taxonomy does not model correlated damage or plastic recovery. In sum: an evolved 138k-neuron controller is indifferent to weight noise, distributed unit death, and even half its synapses being gone---provided convergent wiring and one sensory channel survive---and its dangerous failure is hub-loss dysregulation, not signal loss: robustness is a property of the wiring, not of precision parts.
