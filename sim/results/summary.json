@@ -1,0 +1,386 @@
+{
+  "real": {
+    "F1_wvar_05": {
+      "rate_med": 94.375,
+      "rate_p10": 93.37500000000001,
+      "rate_p90": 96.25,
+      "lat_med": 4.2,
+      "tot_med": 39678.5,
+      "dn2_med": 2969.5,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F1_wvar_10": {
+      "rate_med": 95.3125,
+      "rate_p10": 93.77083333333333,
+      "rate_p90": 95.81250000000001,
+      "lat_med": 4.2,
+      "tot_med": 39723.0,
+      "dn2_med": 2934.5,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F1_wvar_20": {
+      "rate_med": 94.16666666666667,
+      "rate_p10": 91.52083333333334,
+      "rate_p90": 97.25,
+      "lat_med": 4.2,
+      "tot_med": 39988.0,
+      "dn2_med": 2978.0,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F1_wvar_50": {
+      "rate_med": 94.16666666666667,
+      "rate_p10": 90.39583333333334,
+      "rate_p90": 100.8125,
+      "lat_med": 4.35,
+      "tot_med": 41638.0,
+      "dn2_med": 3254.0,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F2_drop_05": {
+      "rate_med": 91.875,
+      "rate_p10": 90.27083333333334,
+      "rate_p90": 95.08333333333334,
+      "lat_med": 4.4,
+      "tot_med": 39077.0,
+      "dn2_med": 2871.5,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F2_drop_10": {
+      "rate_med": 93.125,
+      "rate_p10": 90.22916666666667,
+      "rate_p90": 96.43750000000001,
+      "lat_med": 4.300000000000001,
+      "tot_med": 38448.0,
+      "dn2_med": 2774.5,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F2_drop_25": {
+      "rate_med": 84.47916666666667,
+      "rate_p10": 81.6875,
+      "rate_p90": 89.625,
+      "lat_med": 4.65,
+      "tot_med": 36598.0,
+      "dn2_med": 2682.0,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F2_drop_50": {
+      "rate_med": 72.39583333333334,
+      "rate_p10": 70.29166666666667,
+      "rate_p90": 76.43750000000001,
+      "lat_med": 5.4,
+      "tot_med": 31589.5,
+      "dn2_med": 1918.5,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F3_loss_01": {
+      "rate_med": 94.58333333333334,
+      "rate_p10": 93.75,
+      "rate_p90": 95.5625,
+      "lat_med": 4.3,
+      "tot_med": 39335.0,
+      "dn2_med": 2922.5,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F3_loss_02": {
+      "rate_med": 94.27083333333334,
+      "rate_p10": 93.14583333333333,
+      "rate_p90": 96.22916666666667,
+      "lat_med": 4.15,
+      "tot_med": 39936.0,
+      "dn2_med": 3038.0,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F3_loss_05": {
+      "rate_med": 94.0625,
+      "rate_p10": 91.16666666666667,
+      "rate_p90": 96.60416666666667,
+      "lat_med": 4.1000000000000005,
+      "tot_med": 39373.5,
+      "dn2_med": 2856.5,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F3_loss_10": {
+      "rate_med": 95.10416666666667,
+      "rate_p10": 92.58333333333333,
+      "rate_p90": 97.45833333333333,
+      "lat_med": 4.15,
+      "tot_med": 39753.5,
+      "dn2_med": 3013.0,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F4_hub_1pct": {
+      "rate_med": 122.29166666666667,
+      "rate_p10": 121.125,
+      "rate_p90": 123.93750000000001,
+      "lat_med": 4.300000000000001,
+      "tot_med": 99899.0,
+      "dn2_med": 11474.0,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F4_hub_2pct": {
+      "rate_med": 117.08333333333334,
+      "rate_p10": 116.875,
+      "rate_p90": 117.91666666666667,
+      "lat_med": 4.2,
+      "tot_med": 42311.0,
+      "dn2_med": 4684.0,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F4_hub_5pct": {
+      "rate_med": 94.16666666666667,
+      "rate_p10": 93.95833333333334,
+      "rate_p90": 94.58333333333334,
+      "lat_med": 4.2,
+      "tot_med": 36488.5,
+      "dn2_med": 2961.5,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F5_in_LC4": {
+      "rate_med": 75.52083333333334,
+      "rate_p10": 74.62500000000001,
+      "rate_p90": 76.25,
+      "lat_med": 6.1,
+      "tot_med": 34543.5,
+      "dn2_med": 2165.0,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F5_in_LPLC2": {
+      "rate_med": 64.27083333333334,
+      "rate_p10": 63.54166666666667,
+      "rate_p90": 65.0,
+      "lat_med": 5.0,
+      "tot_med": 27686.0,
+      "dn2_med": 1197.0,
+      "succ": 1.0,
+      "n": 12
+    },
+    "F5_in_both": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 21191.0,
+      "dn2_med": 0.0,
+      "succ": 0.0,
+      "n": 12
+    },
+    "healthy": {
+      "rate_med": 94.6875,
+      "rate_p10": 93.95833333333334,
+      "rate_p90": 95.625,
+      "lat_med": 4.050000000000001,
+      "tot_med": 39694.0,
+      "dn2_med": 2941.0,
+      "succ": 1.0,
+      "n": 12
+    }
+  },
+  "er": {
+    "F1_wvar_05": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23911.0,
+      "dn2_med": 46.0,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F1_wvar_10": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23890.0,
+      "dn2_med": 51.0,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F1_wvar_20": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 24004.5,
+      "dn2_med": 54.0,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F1_wvar_50": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": 504.8,
+      "tot_med": 24754.5,
+      "dn2_med": 67.0,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F2_drop_05": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23710.0,
+      "dn2_med": 41.5,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F2_drop_10": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23601.5,
+      "dn2_med": 42.5,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F2_drop_25": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23203.5,
+      "dn2_med": 30.0,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F2_drop_50": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 22415.0,
+      "dn2_med": 19.0,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F3_loss_01": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23812.0,
+      "dn2_med": 43.5,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F3_loss_02": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23845.0,
+      "dn2_med": 51.5,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F3_loss_05": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23874.0,
+      "dn2_med": 47.5,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F3_loss_10": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23871.0,
+      "dn2_med": 49.0,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F4_hub_1pct": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23837.5,
+      "dn2_med": 54.5,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F4_hub_2pct": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23721.0,
+      "dn2_med": 49.5,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F4_hub_5pct": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23803.5,
+      "dn2_med": 53.5,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F5_in_LC4": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23680.5,
+      "dn2_med": 48.0,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F5_in_LPLC2": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 21410.5,
+      "dn2_med": 0.0,
+      "succ": 0.0,
+      "n": 12
+    },
+    "F5_in_both": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 21322.0,
+      "dn2_med": 0.0,
+      "succ": 0.0,
+      "n": 12
+    },
+    "healthy": {
+      "rate_med": 0.0,
+      "rate_p10": 0.0,
+      "rate_p90": 0.0,
+      "lat_med": NaN,
+      "tot_med": 23836.5,
+      "dn2_med": 45.5,
+      "succ": 0.0,
+      "n": 12
+    }
+  }
+}

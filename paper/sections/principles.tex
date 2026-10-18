@@ -1,7 +1,7 @@
-\section{Design Principles for Neuromorphic Embodied Controllers}
+\section{Candidate Design Implications for Embodied Neuromorphic Controllers}
 \begin{table}[tb]
 \centering
-\caption{Design principles from connectome fault injection, with quantitative anchors.}
+\caption{Candidate design implications from connectome fault injection, with quantitative anchors.}
 \label{tab:principles}
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}p{0.55cm}p{3.5cm}p{3.5cm}@{}}
@@ -10,16 +10,16 @@
 \midrule
 P1 & Buy robustness with redundancy of wiring, not precision of weights & $\sigma{=}0.5$ lognormal noise: 99.4\% retention \\
 P2 & Distribute command integration; no tested slice load-bearing & 10\% unit loss: 100.4\% retention \\
-P3 & Budget latency, not accuracy, for disconnection faults & 50\% synapse loss: 76\% rate, $+33\%$ latency \\
+P3 & Budget latency for disconnection faults & 50\% synapse loss: 76\% rate, $+33\%$ latency \\
 P4 & Regulate high-fanout units; monitor envelope, not liveness & top-1\% hub loss: $2.5\times$ activity runaway \\
 P5 & Duplicate the sensory interface before the network & single-channel loss 68--79\% median; both channels 0\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:principles} distills five transferable principles. P1 and P2 follow from the flat F1 and F3 medians: computation lives in distributed convergence, not precise magnitudes, favoring dense low-precision, partially defective fabrics---consistent with hardware observations\cite{arfa2025hardwareaware,thieu2022effects}. P3 shifts the failure budget: disconnection costs are mostly latency here, so real-time loops should specify worst-case response time under edge loss, which Fig.~\ref{fig:curves}a reports directly. P4 is the most actionable: the only \emph{amplifying} failure mode comes from removing the highest-fanout units, so designs should cap high-degree influence and monitor output-envelope violation rather than liveness---over-activity while all units read ``active.'' P5 locates the single point of failure at the interface: each sensory channel alone suffices (68--79\%); front-end duplication buys more safety than any internal redundancy.
+Table~\ref{tab:principles} distills five candidate design implications. P1 and P2 follow from the flat F1 and F3 medians: computation lives in distributed convergence, not precise magnitudes, consistent with hardware observations\cite{arfa2025hardwareaware,thieu2022effects}. P3: disconnection costs are mostly latency, so real-time loops should budget for the median latency growth that Fig.~\ref{fig:curves}a reports. P4: removing the highest-fanout units is the only \emph{amplifying} failure mode, so cap high-degree influence and monitor output-envelope violation rather than liveness. P5: each sensory channel alone suffices (68--79\%); front-end duplication buys more margin than internal redundancy.
 
-One methodological lesson: identical relative pathway decay in both graphs, yet only the biological one transmitting a decodable command, argues against certifying embodied controllers by topology alone; fault-injection campaigns belong in pre-deployment stages\cite{yik2023neurobench,medvedeva2025formalizing}, and the seed-exact sweep re-runs in minutes on other hardware mappings\cite{wang2025neuromorphic}.
+One methodological lesson: identical relative pathway decay in both graphs, yet only the biological one transmitting a decodable command, argues against certifying embodied controllers by topology alone; fault-injection campaigns belong in pre-deployment stages\cite{yik2023neurobench,medvedeva2025formalizing}.
 
 \section{Limitations and Conclusion}
-Our measurements inherit the LIF abstraction---single-compartment delta synapses, no plasticity, Poisson drive---and a single drive rate; doses kept the background regime intact, the hub analysis is descriptive, and the taxonomy excludes correlated damage and recovery. An evolved 138k-neuron controller keeps its median command rate under weight noise and unit death and three quarters of it at half its connections gone---given convergent wiring and one live sensory channel; its dangerous failure is hub-loss dysregulation: robustness lives in the wiring, not in precision parts.
+Our measurements inherit the LIF abstraction---single-compartment units, no plasticity, Poisson drive, one drive rate; doses kept the background regime intact, the hub analysis is descriptive, and correlated damage and recovery are excluded. Under the tested drive, the controller keeps its median command rate under weight noise, unit death, and 50\% synapse loss; its dangerous failure is hub-loss dysregulation.
