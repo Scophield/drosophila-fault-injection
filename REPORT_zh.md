@@ -118,3 +118,28 @@ LIF 抽象(单室、delta 突触、无可塑性、Poisson 驱动);剂量上界�
 **5. 过度声明收敛 — 采纳,已改。** immune→"无中位变化";no random slice→"no *tested* random slice";indifferent→"保持中位速率、保留约四分之三活性";latency dominant→"延迟上占主导",并注明"实际工作负载的延迟权衡依任务而定"。F1 的试验间离散带(90.4–100.8 Hz)已写进正文,避免与校准集(94.0–95.6)混淆。
 
 **6. 图与引用 — 部分属实,已改。** 修正 Fig. 2 标签("background"→"random-site stimulation (314)");Fig. 3 增加逐 trial 散点与十分位误差须;Fig. 4(b) 增加散点并统一"permuted null"术语;删除 Fu & Card 2020,新增 **Shiu et al., Nature 634:210–219 (2024)**(模型正式版,补充模型综述引用)与 **Simpson, Curr. Opin. Neurobiol. 84:102822 (2023)**(DN 下行控制直接证据),现共 32 条参考文献。另补**匹配尺度对照**:随机 10% 单元切除 10.0% 的连接(> hub 的 9.05%)却无任何影响(95.1 Hz),且 hub 输出 61.6% 为抑制性(全网 40%),支持"失控源于抑制性调控解除而非规模"的归因。
+
+
+## 19. 第二份外部审稿意见:逐条裁定与修正(2026-10-18)
+
+六点实质意见全部核实属实,全部采纳修正;AI 文风问题全部采纳。
+
+**意见 1(最重):背景活动与 F5 解释错误。** 原稿称全脑活动由"校准过的 Poisson 背景驱动"维持、F5 后"其余脑区仍在背景水平放电"。核查 engine.py 证实:网络从零基线静息态初始化,唯一外部输入是刺激 Poisson 池(只打 LC4+LPLC2;600 细胞背景池在逃逸 trial 中权重为零);Shiu 原文亦明言模型基线放电为 0 Hz。因此 F5_both 的 21.2k 残余放电按构造**必然全部来自 314 个被直接刺激的感觉细胞**(其全部输出突触已被切断,非受激脑区不可能收到任何输入);ER null 的 ~24k 总放电只比该基线多 ~2.6k 传播放电。已修正:III-A 模型描述、IV-A F5 解释、README 表格与确定性段落。
+
+**意见 2:阈值放大未证明。** E/I 网络中删抑制边可在纯线性系统里抬高输出保留率,"50%/75% 线性界"不是有效界。已降级为候选机制假说,明确指出需 E/I 平衡删除与驱动强度扫描对照;IV-D 重写。
+
+**意见 3:8 神经元聚合掩盖成分变化。** 从 jsonl 的 i_readout 逐项核验全部吻合:healthy 4/8 细胞占 96.6% 读出脉冲;F2_50 下最小贡献者崩溃(158→10、26→0),两个 DNa02 再招募(1→58、0→21),聚合保留 76.9%。已加入 IV-B,并明确"曲线是下行群种群响应,不是行为";repo 新增 sim/fig_neuron.py 逐神经元成分图(README Fig. 6)。
+
+**意见 4:"seed-exact sweep" 不成立。** sweep.py 只播种故障 RNG,从未调用 brian2.seed(),刺激流未固定——重跑统计等价而非逐位一致。已改为 "seeded sweep",方法节注明归档记录为规范实现。
+
+**意见 5:null "全零" 有反例。** er/F1_wvar_50.jsonl 第 9 试次 pop_rate=0.208 Hz(504.8 ms 处 1 脉冲),全部 null 记录中唯一非零。已改为 "median 0.0 Hz in every condition; no null trial reaches θ",图注同步。
+
+**意见 6:工程指导过满。** Fig3a 是中位首脉冲延迟,不能称 worst-case。已改:P3 "Budget latency for disconnection faults";"worst-case response time"→中位延迟移;"front-end duplication buys more safety"→"more margin in this task";"five transferable principles"→"five candidate design implications"(节标题、表题、摘要、贡献同步)。
+
+**新颖性重定位。** Shiu 原文已做逐神经元 silencing 实验(Fig 1f/4c/5d 已核实),原 "first fault-injection study" 表述撤回;改为 "its original study used targeted computational silencings...; we extend that perturbation style into a systematic sweep across hardware-motivated fault classes"。术语链统一为 "descending-neuron population response"。
+
+**参考文献展示格式。** 35 条 bib 全量作者名单经 ref_verify + curl 逐条核验后,按 IEEE 编辑风格手册(>6 作者用 et al.)在编译稿中转换展示;全量名单存档于 paper/refs-full.bib。
+
+**审稿人补充建议:** repo 级三状态并排动画(可做,列为可选);任务级逃逸演示需视觉输入编码+动作映射,作为 future work。
+
+**页面合规:** 上述修改净增文字导致溢出,经多轮压缩(VI 段深剪、图注收紧、图高微调)+ IEEE et al. 展示转换,恢复 5 页、第 5 页纯文献、Type3=0、??=0。

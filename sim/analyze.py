@@ -60,7 +60,7 @@ C_REAL = "#1f77b4"
 C_ER = "#d62728"
 C_HL = "#2ca02c"
 
-fig2, axs = plt.subplots(1, 1, figsize=(3.5, 1.22))
+fig2, axs = plt.subplots(1, 1, figsize=(3.5, 0.76))
 cal = json.loads((SIM / "results" / "calib" / "calibration.json").read_text())
 
 ax = axs
@@ -78,7 +78,7 @@ ax.spines[["top", "right"]].set_visible(False)
 fig2.savefig(FIGS / "fig2_baseline.pdf")
 plt.close(fig2)
 
-fig3, axs = plt.subplots(1, 2, figsize=(7.0, 1.24), gridspec_kw={"wspace": 0.5})
+fig3, axs = plt.subplots(1, 2, figsize=(7.0, 0.72), gridspec_kw={"wspace": 0.5})
 jit = np.random.default_rng(3)
 ax = axs[0]
 fs = [0.05, 0.10, 0.25, 0.50]
@@ -128,13 +128,16 @@ ax4.errorbar(xs_f4, [t / 1000 for t in tot], yerr=[np.zeros(4), np.zeros(4)], co
 ax4.set_ylabel("total spikes (k)", color="#ff7f0e")
 ax4.tick_params(axis="y", colors="#ff7f0e")
 ax.set_title("(b) F4 hub lesion: dysregulation")
+h_rate, h_tot = med(agg("real", "healthy")["rates"]), med(agg("real", "healthy")["tot"]) / 1000
+ax.axhline(h_rate, color="gray", ls=":", lw=0.7, zorder=0)
+ax4.axhline(h_tot, color="gray", ls=":", lw=0.7, zorder=0)
 ax.set_ylim(60, 135)
 ax.spines[["top"]].set_visible(False)
 ax4.spines[["top"]].set_visible(False)
 fig3.savefig(FIGS / "fig3_curves.pdf")
 plt.close(fig3)
 
-fig4, axs = plt.subplots(1, 2, figsize=(7.0, 0.88))
+fig4, axs = plt.subplots(1, 2, figsize=(7.0, 0.58))
 ax = axs[0]
 pm = json.loads((SIM / "results" / "graph" / "pathway_mass.json").read_text())
 ks = np.arange(1, 9)
@@ -163,6 +166,8 @@ ax.bar(xs + 0.2, te, 0.38, color=C_ER, label="permuted null")
 ax.set_xticks(xs)
 ax.set_xticklabels(labs, fontsize=6.5)
 ax.set_ylabel("total spikes (k)")
+ax.set_ylim(0, 132)
+ax.annotate("null command: median 0.0 Hz", xy=(-0.38, 122), fontsize=5.8, ha="left", va="center", color="#333333")
 ax.set_title("(b) Hub-lesion runaway")
 ax.legend(frameon=False)
 ax.spines[["top", "right"]].set_visible(False)

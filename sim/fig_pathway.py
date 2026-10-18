@@ -35,7 +35,7 @@ top = np.argsort(-(m_in + m_out))[:90]
 Mtop = Mset[top]
 
 rng = np.random.default_rng(7)
-fig, ax = plt.subplots(figsize=(3.5, 1.64), dpi=300)
+fig, ax = plt.subplots(figsize=(3.5, 1.14), dpi=300)
 ax.set_position([0.01, 0.03, 0.98, 0.74])
 ax.set_xlim(-0.14, 1.32)
 ax.set_ylim(-0.09, 1.06)
