@@ -118,3 +118,7 @@ LIF 抽象(单室、delta 突触、无可塑性、Poisson 驱动);剂量上界�
 **5. 过度声明收敛 — 采纳,已改。** immune→"无中位变化";no random slice→"no *tested* random slice";indifferent→"保持中位速率、保留约四分之三活性";latency dominant→"延迟上占主导",并注明"实际工作负载的延迟权衡依任务而定"。F1 的试验间离散带(90.4–100.8 Hz)已写进正文,避免与校准集(94.0–95.6)混淆。
 
 **6. 图与引用 — 部分属实,已改。** 修正 Fig. 2 标签("background"→"random-site stimulation (314)");Fig. 3 增加逐 trial 散点与十分位误差须;Fig. 4(b) 增加散点并统一"permuted null"术语;删除 Fu & Card 2020,新增 **Shiu et al., Nature 634:210–219 (2024)**(模型正式版,补充模型综述引用)与 **Simpson, Curr. Opin. Neurobiol. 84:102822 (2023)**(DN 下行控制直接证据),现共 32 条参考文献。另补**匹配尺度对照**:随机 10% 单元切除 10.0% 的连接(> hub 的 9.05%)却无任何影响(95.1 Hz),且 hub 输出 61.6% 为抑制性(全网 40%),支持"失控源于抑制性调控解除而非规模"的归因。
+
+## 超级审稿(PAPERGURU)执行(10-18)
+
+按八项评级修约执行:① intro"benchmark"软化为"reference point";② 阈值放大论证升级为两点验证(p=0.5→76.5%、p=0.75→89.2%,均高于线性界,并注明近阈值处应失效);③ 三条头部对比(F4-1%、F2-50%、F5-both)补 Mann–Whitney U,p<10⁻⁴(n=12/条件);④ 摘要补"54.5M synapse contacts";⑤ F1 注明均值保持(lognormal 因子 exp(σz−σ²/2));⑥ 引 Brian2(Goodman 2009)、Luca 2026(Front. Neurosci.,边缘端权重扰动缓解)、Aerts 2016(Brain,脑网络 lesion 传统锚定);⑦ 包络判据注明 1.5×–2× 区间内 F4-1% 恒 12/12 违例(数值验证);⑧ 图 3(b) 加健康中位参考线、图 4(b) 注明"null command: 0.0 Hz (all conditions)"、图 3 题注补单位、θ 中点算式入文、m_k 注明计 k 步游走(布线密度代理)、限制段补"单一驱动速率"。排版经五轮微缩恢复 5 页、p5 纯文献;refs 35 条待 ref_verify 终验。
