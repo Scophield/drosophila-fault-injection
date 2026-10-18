@@ -8,18 +8,18 @@
 \toprule
 \# & Implication & Anchor (this study) \\
 \midrule
-P1 & Buy robustness with redundancy of wiring, not precision of weights & $\sigma{=}0.5$ lognormal noise: 99.4\% retention \\
-P2 & Distribute command integration; no tested slice load-bearing & 10\% unit loss: 100.4\% retention \\
+P1 & Redundancy of wiring, not precision of weights & $\sigma{=}0.5$ lognormal noise: 99.4\% retention \\
+P2 & Distribute command integration & 10\% unit-output silencing: 100.4\% retention \\
 P3 & Budget latency for disconnection faults & 50\% connection loss: 76\% rate, $+33\%$ latency \\
-P4 & Regulate high-fanout units; monitor envelope, not liveness & top-1\% hub loss: $2.5\times$ activity runaway \\
-P5 & Duplicate the sensory interface before the network & single-channel loss 68--79\% median; both channels 0\% \\
+P4 & Regulate high-fanout units; monitor envelope & top-1\% hub silencing: $2.5\times$ over-activity \\
+P5 & Harden the sensory interface first & single-channel silencing retains 68--79\% median; both 0\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:principles} distills five candidate design implications. P1 and P2 follow from the flat F1 and F3 medians: computation lives in distributed convergence, not precise magnitudes, consistent with hardware observations\cite{arfa2025hardwareaware,thieu2022effects}. P3: disconnection costs are mostly latency, so real-time loops should budget for the median latency growth that Fig.~\ref{fig:curves}a reports. P4: removing the highest-fanout units is the only \emph{amplifying} failure mode, so cap high-degree influence and monitor output-envelope violation rather than liveness. P5: each sensory channel alone suffices (68--79\%); front-end duplication buys more margin than internal redundancy.
+Table~\ref{tab:principles} distills five candidate design implications. P1 and P2 follow from the flat F1 and F3 medians: computation lives in distributed convergence, consistent with hardware observations\cite{arfa2025hardwareaware,thieu2022effects}. P3: disconnection costs are mostly latency; real-time loops should budget the median growth of Fig.~\ref{fig:curves}a. P4: silencing the highest-fanout units is the only \emph{amplifying} failure mode, cap high-degree influence and monitor envelope violation, not liveness. P5: each sensory channel alone suffices (68--79\% median), marking the sensor interface as the first redundancy candidate.
 
-One methodological lesson: identical relative pathway decay, yet only the biological graph transmitting a decodable command, argues against certifying embodied controllers by topology alone; fault-injection campaigns belong in pre-deployment stages\cite{yik2023neurobench,medvedeva2025formalizing}.
+Identical relative pathway decay yet only the biological graph transmitting a decodable command, argues against certifying embodied controllers by topology alone; fault-injection campaigns belong in pre-deployment stages\cite{yik2023neurobench,medvedeva2025formalizing}.
 
 \section{Limitations and Conclusion}
-Our measurements inherit the LIF abstraction---single-compartment units, no plasticity, Poisson drive, one drive rate; doses kept the background regime intact, the hub analysis is descriptive, and correlated damage and recovery are excluded. Under the tested drive (sustained, well-above-threshold), the controller keeps its median command rate under weight noise, unit death, and 50\% connection loss; its dangerous failure is hub-loss dysregulation.
+Our measurements inherit the LIF abstraction---single-compartment units, no plasticity, Poisson drive, one drive rate; doses kept the background regime intact, the hub analysis is descriptive, and correlated damage and recovery are excluded. Under the tested drive (sustained, well-above-threshold), the median command rate is preserved under weight noise and unit silencing and retains 76.5\% of baseline at 50\% connection loss; the dangerous failure is hub-silencing over-activity.

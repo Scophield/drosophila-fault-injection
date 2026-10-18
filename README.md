@@ -25,9 +25,9 @@ Shuchao Gao · Waseda University · <i>ISCAS 2027 submission</i>
 
 ## What this repository is
 
-The code injects five hardware-motivated fault families into the released leaky integrate-and-fire (LIF) whole-brain model of *Drosophila melanogaster* (138,639 neurons, 15,091,983 signed synapses, FlyWire connectome) and measures behavioral outcome on the visuomotor escape pathway: 150 Hz Poisson drive to the LC4 + LPLC2 populations (314 cells), scored as the population firing rate of the 8 descending command neurons.
+The code injects five hardware-motivated fault families into the released leaky integrate-and-fire (LIF) whole-brain model of *Drosophila melanogaster* (138,639 neurons, 15,091,983 signed connections / 54.5M contacts, FlyWire connectome) and measures output transmission and activity-envelope compliance on the visuomotor escape pathway: 150 Hz Poisson drive to the LC4 + LPLC2 populations (314 cells), scored as the population firing rate of the 8 descending command neurons.
 
-**36 conditions × 12 seeded 600 ms trials each** (≈3.5 s per trial on one CPU core). Every trial restores the full network state from the same healthy snapshot; fault realizations are derived from SHA-256 seeds over (condition, trial), so F1–F3 faults are independently redrawn per trial while F4/F5 lesions are fixed. Determinism covers the connectome, the state, and the fault seeds. The stimulus Poisson stream is not re-seeded per trial (it keeps advancing across trials, as it would on repeated hardware runs), so re-runs are statistically equivalent rather than bit-identical; the archived per-trial records are the canonical realization. There is no whole-brain background drive: baseline firing is zero, and every recorded spike traces back to the directly stimulated sensory cells.
+**36 conditions × 12 seeded 600 ms trials each** (≈3.5 s per trial on one CPU core). Every trial restores the full network state from the same healthy snapshot; fault realizations are derived from SHA-256 seeds over (condition, trial), so F1–F3 faults are independently redrawn per trial while F4/F5 sets are fixed. Determinism covers the connectome, the state, and the fault seeds. The stimulus Poisson stream is not re-seeded per trial (it keeps advancing across trials, as it would on repeated hardware runs), so re-runs are statistically equivalent rather than bit-identical; the archived per-trial records are the canonical realization. There is no whole-brain background drive: baseline firing is zero, and every recorded spike traces back to the directly stimulated sensory cells.
 
 ### The instrumented pathway
 
@@ -43,17 +43,17 @@ The sweep is not just a stress test — it is a **diagnosis**. Three things fall
 
 1. **Where the single point of failure lives.** Silencing *both* sensory channels is the only catastrophic mode (0.0 Hz, every trial); the residual 21.2k spikes are, by construction, the stimulated sensory cells themselves — all their outputs are severed and the non-stimulated brain, initialized at zero baseline, receives no input. The sensor interface, not the network, is what must be duplicated.
 2. **The silent killer.** Removing the top-1% hubs makes the command rate *rise* 29% with 2.52× global activity — output violates its envelope while **every per-unit monitor still reads "active"**. Only fault injection exposes this mode; liveness monitoring cannot.
-3. **A certifiable envelope.** Every pass/fail verdict is unchanged for any decision threshold between 9.2 and 63.1 Hz, and a second, activity-envelope criterion (rate *and* total spikes within 2× the healthy median) flags the hub-loss dysregulation mode that rate-only scoring misses: F4_hub_1pct passes transmission 12/12 but violates the envelope 12/12.
+3. **A certifiable envelope.** Every pass/fail verdict is unchanged for any decision threshold between 9.2 and 63.1 Hz, and a second, activity-envelope criterion (rate *and* total spikes within 2× the healthy median) flags the hub-silencing over-activity mode that rate-only scoring misses: F4_hub_1pct passes transmission 12/12 but violates the envelope 12/12.
 
 ## Applications
 
-- **Pre-deployment certification of neuromorphic controllers** — seconds-per-trial fault-injection campaigns as a standard gate before embodied hardware ships.
+- **Pre-deployment fault-injection campaigns for neuromorphic controllers** — seconds-per-trial sweeps as a candidate gate before embodied hardware ships.
 - **Where to spend hard silicon** — the sweep tells you which redundancy pays (sensory front-end) and which does not (weight precision): dense low-precision, partially defective fabrics are tolerated by this architecture.
 - **Envelope monitors for autonomous systems** — the hub-loss dysregulation mode argues for output-envelope supervision, not component liveness checks, in safety-critical loops.
 
 ## Beyond the fly
 
-The pipeline is species-agnostic by construction: image → connectome → digital twin → fault injection → certified robustness. The same five steps run unchanged on any connectome-scale controller — mouse (~10⁸ neurons), human (~10¹¹), or engineered silicon systems with arbitrary topologies. What scales is the certification, not the method.
+The pipeline is species-agnostic by construction: image → connectome → digital twin → fault injection → fault-tolerance characterization. The same five steps run unchanged on any connectome-scale controller — mouse (~10⁸ neurons), human (~10¹¹), or engineered silicon systems with arbitrary topologies. What scales is the characterization, not the method.
 
 ## Results at a glance
 
@@ -66,9 +66,9 @@ The pipeline is species-agnostic by construction: image → connectome → digit
 | Healthy | 94.7 Hz (94.0–95.6) | — | 4.05 ms first-spike latency |
 | Random-drive control | 8.2 Hz | 9% | total spikes 293k vs 40k — specificity, not arousal |
 | F1 weight noise, σ = 0.5 | 94.2 Hz | 99% | median within healthy trial dispersion |
-| F2 synapse loss, 50% | 72.4 Hz | 76.5% | latency 4.05 → 5.4 ms (+33%) |
-| F3 unit loss, 10% (~14k neurons) | 95.1 Hz | 100% | flat through the dose (a hair above baseline) |
-| F4 hub loss, top 1% (9.1% of synapses) | 122.3 Hz (121.1–123.9) | **+29%, 2.52× global activity** | dysregulation, not silence |
+| F2 connection loss, 50% | 72.4 Hz | 76.5% | latency 4.05 → 5.4 ms (+33%) |
+| F3 unit silencing, 10% (~14k neurons) | 95.1 Hz | 100% | flat through the dose (a hair above baseline) |
+| F4 hub silencing, top 1% (9.1% of connections) | 122.3 Hz (121.1–123.9) | **+29%, 2.52× global activity** | over-activity, not silence |
 | F5 both sensory channels silenced | 0.0 Hz (every trial) | 0% | the only catastrophic mode; the 21.2k residual spikes are the driven sensory cells themselves (no background drive) |
 | Permuted null (edge retargeting) | 0.0 Hz (median, every condition) | — | transmits nothing; broad activity ~24k spikes, barely above the 21.2k driven-cell baseline (≈2.6k propagated) |
 
@@ -87,18 +87,18 @@ The pipeline is species-agnostic by construction: image → connectome → digit
 **Fig. 3 — Dose–response.** (a) Synapse deletion degrades gracefully: 50% loss still retains 76.5% of the command rate, with the cost appearing almost entirely in latency (+33%), consistent with recruitment of longer residual multi-hop routes. (b) Hub removal is non-monotone and qualitatively different from every distributed fault: removing the top-1% hubs *raises* the command rate +29% with 2.5× global activity — over-drive, not silence.
 
 <p align="center">
-<img src="docs/img/fig4_topology.png" width="560" alt="hub runaway">
+<img src="docs/img/fig4_topology.png" width="560" alt="hub over-activity">
 </p>
 
-**Fig. 4 — The dangerous failure mode is dysregulation.** The top-1% hub set carries ~60% inhibitory output synapses (network mean 40%), so hub loss removes broad inhibitory regulation rather than starving the pathway — output violates the envelope while every per-unit monitor still reads "active". The same lesion on the permuted control does not produce this signature, binding the effect to biological hub structure rather than degree heterogeneity.
+**Fig. 4 — The dangerous failure mode is over-activity.** The top-1% hub set carries ~62% inhibitory output connections (network mean 40%), so hub silencing removes broad inhibitory regulation rather than starving the pathway — output violates the envelope while every per-unit monitor still reads "active". The same silencing on the permuted control does not produce this signature, binding the effect to biological hub structure.
 
 <p align="center">
 <img src="docs/img/fig6_neuron.png" width="560" alt="per-neuron composition">
 </p>
 
-**Fig. 6 — Aggregates hide composition.** Four of the eight command cells carry 96.6% of healthy readout spikes; at 50% synapse loss the smallest contributors collapse (158→10 and 26→0 spikes over 12 trials) while previously silent cells are recruited (1→58, 0→21). The aggregate retains 76.9%, so the tolerance curves should be read as a descending-population response, not as behavior.
+**Fig. 6 — Aggregates hide composition.** Four of the eight command cells carry 96.6% of healthy readout spikes; at 50% connection loss the smallest contributors collapse (158→10 and 26→0 spikes over 12 trials) while previously silent cells are recruited (1→58, 0→21). The aggregate retains 76.9%, so the tolerance curves should be read as a descending-population response, not as behavior.
 
-An edge-permuted null (postsynaptic partners reshuffled, preserving each neuron's out-degree, weight profile, and the global incoming-degree histogram) transmits nothing at the command readout, while an analytic multi-hop pathway-mass analysis shows that *relative* route-mass decay under edge loss is topology-independent. Conclusion: functional robustness arises from **threshold amplification acting on convergent wiring**, not from graph redundancy alone. See [`REPORT_zh.md`](REPORT_zh.md) for a detailed Chinese walkthrough of every experiment, and [`paper/main.pdf`](paper/main.pdf) for the paper itself.
+An edge-permuted null (postsynaptic partners reshuffled, preserving each neuron's out-degree, weight profile, and the global incoming-degree histogram) yields a zero median command rate in every tested condition, with no trial reaching the transmission threshold; while an analytic multi-hop pathway-mass analysis shows that *relative* route-mass decay under edge loss is topology-independent. Conclusion: functional robustness arises from **threshold amplification acting on convergent wiring**, not from graph redundancy alone. See [`REPORT_zh.md`](REPORT_zh.md) for a detailed Chinese walkthrough of every experiment, and [`paper/main.pdf`](paper/main.pdf) for the paper itself.
 
 ## Repository layout
 
@@ -133,6 +133,10 @@ git clone https://github.com/philshiu/Drosophila_brain_model.git
 # directory layout expected by the code:
 #   <parent>/Drosophila_brain_model/   (Connectivity_783.parquet, Completeness_783.csv, ...)
 #   <parent>/sim/                      (this repository)
+#
+# verify the upstream files against the versions used for every number below:
+#   Connectivity_783.parquet  sha256 efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347
+#   Completeness_783.csv      sha256 bbb847a4cc2caaa7a16349722d220c087317b946d148d4d592d94d250617a311
 ```
 
 ## Reproduce
@@ -148,7 +152,7 @@ python3 analyze.py             # regenerates figs 2-4 (writes sim/figs/, copy to
 python3 envelope.py            # transmission vs activity-envelope verdict table (Table I P4)
 python3 fig_pathway.py         # regenerates Fig. 1 (writes sim/figs/ and paper/figs/)
 python3 fig_glance.py          # regenerates the README results-at-a-glance chart
-python3 fig_neuron.py          # per-neuron composition: healthy vs 50% synapse loss
+python3 fig_neuron.py          # per-neuron composition: healthy vs 50% connection loss
 ```
 
 Runtime: ≈3.5 s per 600 ms trial on one CPU core; the full sweep is minutes-to-an-hour on a laptop. Figures are written with embedded TrueType (Type 42) fonts to comply with IEEE PDF specifications (no Type 3 fonts).
