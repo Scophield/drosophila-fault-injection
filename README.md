@@ -97,7 +97,7 @@ An edge-permuted Erdős–Rényi null with identical weight and out-degree stati
 ## Repository layout
 
 ```
-├── paper/                 LaTeX source of the paper + compiled main.pdf + figure PDFs
+├── paper/                 LaTeX source of the paper + figure PDFs
 ├── docs/img/              PNG renders of the paper figures (used by README/REPORT)
 ├── sim/
 │   ├── engine.py          network construction + fault injection + trial runner (Brian2)
