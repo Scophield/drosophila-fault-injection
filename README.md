@@ -27,7 +27,7 @@ Shuchao Gao · Waseda University · <i>ISCAS 2027 submission</i>
 
 The code injects five hardware-motivated fault families into the released leaky integrate-and-fire (LIF) whole-brain model of *Drosophila melanogaster* (138,639 neurons, 15,091,983 signed synapses, FlyWire connectome) and measures behavioral outcome on the visuomotor escape pathway: 150 Hz Poisson drive to the LC4 + LPLC2 populations (314 cells), scored as the population firing rate of the 8 descending command neurons.
 
-**36 conditions × 12 seeded 600 ms trials each**, fully deterministic (SHA-256–derived fault realizations, state restoration before every fault), ≈3.5 s per trial on one CPU core.
+**36 conditions × 12 seeded 600 ms trials each** (≈3.5 s per trial on one CPU core). Every trial restores the full network state from the same healthy snapshot; fault realizations are derived from SHA-256 seeds over (condition, trial), so F1–F3 faults are independently redrawn per trial while F4/F5 lesions are fixed. Determinism covers the connectome, the state, and the seeds — the background Poisson stream keeps advancing across trials, exactly as it would on repeated hardware runs.
 
 ### The instrumented pathway
 
@@ -43,7 +43,7 @@ The sweep is not just a stress test — it is a **diagnosis**. Three things fall
 
 1. **Where the single point of failure lives.** Silencing *both* sensory channels is the only catastrophic mode (0.0 Hz, every trial) while the rest of the brain keeps spiking — the sensor interface, not the network, is what must be duplicated.
 2. **The silent killer.** Removing the top-1% hubs makes the command rate *rise* 29% with 2.52× global activity — output violates its envelope while **every per-unit monitor still reads "active"**. Only fault injection exposes this mode; liveness monitoring cannot.
-3. **A certifiable envelope.** Every pass/fail verdict is unchanged for any decision threshold between 9.2 and 63.1 Hz — the robustness claim survives threshold choice, seed choice, and fault realization.
+3. **A certifiable envelope.** Every pass/fail verdict is unchanged for any decision threshold between 9.2 and 63.1 Hz, and a second, activity-envelope criterion (rate *and* total spikes within 2× the healthy median) flags the hub-loss dysregulation mode that rate-only scoring misses: F4_hub_1pct passes transmission 12/12 but violates the envelope 12/12.
 
 ## Applications
 
@@ -70,7 +70,7 @@ The pipeline is species-agnostic by construction: image → connectome → digit
 | F3 unit loss, 10% (~14k neurons) | 95.1 Hz | 100% | flat through the dose (a hair above baseline) |
 | F4 hub loss, top 1% (9.1% of synapses) | 122.3 Hz (121.1–123.9) | **+29%, 2.52× global activity** | dysregulation, not silence |
 | F5 both sensory channels silenced | 0.0 Hz (every trial) | 0% | the only catastrophic mode; brain keeps spiking (21.2k spikes) |
-| ER null (edge-permuted control) | 0.0 Hz (every condition) | — | transmits nothing |
+| Permuted null (edge retargeting) | 0.0 Hz (every condition) | — | transmits nothing; broad activity still ~24k spikes (≈60% of the real brain) |
 
 ## The three findings
 
@@ -90,9 +90,9 @@ The pipeline is species-agnostic by construction: image → connectome → digit
 <img src="docs/img/fig4_topology.png" width="560" alt="hub runaway">
 </p>
 
-**Fig. 4 — The dangerous failure mode is dysregulation.** The top-1% hub set carries ~60% inhibitory output synapses (network mean 40%), so hub loss removes broad inhibitory regulation rather than starving the pathway — output violates the envelope while every per-unit monitor still reads "active". The same lesion on an edge-permuted ER control does not produce this signature, binding the effect to biological hub structure rather than degree heterogeneity.
+**Fig. 4 — The dangerous failure mode is dysregulation.** The top-1% hub set carries ~60% inhibitory output synapses (network mean 40%), so hub loss removes broad inhibitory regulation rather than starving the pathway — output violates the envelope while every per-unit monitor still reads "active". The same lesion on the permuted control does not produce this signature, binding the effect to biological hub structure rather than degree heterogeneity.
 
-An edge-permuted Erdős–Rényi null with identical weight and out-degree statistics transmits nothing, while an analytic multi-hop pathway-mass analysis shows that *relative* route-mass decay under edge loss is topology-independent. Conclusion: functional robustness arises from **threshold amplification acting on convergent wiring**, not from graph redundancy alone. See [`REPORT_zh.md`](REPORT_zh.md) for a detailed Chinese walkthrough of every experiment, and [`paper/main.pdf`](paper/main.pdf) for the paper itself.
+An edge-permuted null (postsynaptic partners reshuffled, preserving each neuron's out-degree, weight profile, and the global incoming-degree histogram) transmits nothing at the command readout, while an analytic multi-hop pathway-mass analysis shows that *relative* route-mass decay under edge loss is topology-independent. Conclusion: functional robustness arises from **threshold amplification acting on convergent wiring**, not from graph redundancy alone. See [`REPORT_zh.md`](REPORT_zh.md) for a detailed Chinese walkthrough of every experiment, and [`paper/main.pdf`](paper/main.pdf) for the paper itself.
 
 ## Repository layout
 
@@ -129,7 +129,7 @@ git clone https://github.com/philshiu/Drosophila_brain_model.git
 
 ## Reproduce
 
-All runs are deterministic: fault realizations are derived from SHA-256 seeds, and every trial restores the full network state, so all conditions share identical initial states and background realizations. Every number in the paper is exactly reproducible.
+All runs are seeded and reproducible: the connectome, the healthy state snapshot, and the fault seeds are fixed; per-trial fault realizations are drawn from SHA-256 seeds over (condition, trial) so F1–F3 replicate hardware draw-to-draw variability. Every number in the paper is exactly reproducible.
 
 ```bash
 cd sim

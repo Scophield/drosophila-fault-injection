@@ -31,7 +31,7 @@ Tokyo, Japan}}
 \maketitle
 
 \begin{abstract}
-Whole-brain point-neuron models built from complete synaptic wiring diagrams have begun to serve as controllers in embodied settings, but their behavior under component-level faults has, to our knowledge, never been measured. We take the released leaky integrate-and-fire (LIF) whole-brain model of \emph{Drosophila melanogaster} (138{,}639 neurons, 15.1M signed synapses) and inject five hardware-motivated fault classes---weight variability, synapse loss, random unit loss, hub loss, and sensory-channel deafferentation---scoring behavioral outcome on descending command neurons. Across 36 fault conditions (12 seeded trials each), the connectome absorbs 50\% lognormal weight variability, retains 76\% of escape-command activity after 50\% synapse loss, and is immune to 10\% random unit loss, while loss of the top-1\% out-degree hubs produces a 2.5$\times$ runaway of global activity rather than silence. An edge-permuted Erd\H{o}s--R\'enyi null network with identical weight and out-degree statistics transmits nothing, and an analytic multi-hop pathway analysis shows that relative pathway decay under edge loss is topology-independent: functional robustness arises from threshold amplification acting on convergence structure, not from graph redundancy alone. We distill the results into five design principles for fault-tolerant neuromorphic controllers.
+Whole-brain point-neuron models built from complete synaptic wiring diagrams have begun to serve as controllers in embodied settings, but their behavior under component-level faults has never been measured. We take the released leaky integrate-and-fire (LIF) whole-brain model of \emph{Drosophila melanogaster} (138{,}639 neurons, 15.1M signed connections) and inject five hardware-motivated fault classes---weight variability, synapse loss, random unit loss, hub loss, and sensory-channel deafferentation---scoring behavioral outcome on descending command neurons. Across 36 fault conditions (12 seeded trials each), the connectome absorbs 50\% lognormal weight variability, retains 76\% of escape-command activity after 50\% synapse loss, and shows no median change under 10\% random unit loss, while loss of the top-1\% out-degree hubs produces a 2.5$\times$ runaway of global activity rather than silence. An edge-permuted null preserving weight and degree statistics transmits nothing, and relative pathway decay under edge loss is topology-independent: the observed robustness is consistent with threshold amplification on convergence structure, not with graph redundancy alone. We distill the results into five design principles for fault-tolerant neuromorphic controllers.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -44,7 +44,6 @@ neuromorphic computing, connectome, fault tolerance, fault injection, Drosophila
 \input{sections/results}
 \input{sections/principles}
 
-\FloatBarrier
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
 
