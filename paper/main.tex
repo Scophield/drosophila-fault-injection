@@ -1,0 +1,51 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{placeins}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,backgrounds,calc}
+\usepackage[hidelinks]{hyperref}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.95}
+\setcounter{topnumber}{3}
+\setcounter{dbltopnumber}{3}
+\setcounter{totalnumber}{5}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+\title{How Much Fault Tolerance Is in a Fly Brain?\\
+{\large Fault-Injection Analysis of a Whole-Connectome Spiking Controller for Physical Intelligence}}
+
+\author{\IEEEauthorblockN{Shuchao Gao}
+\IEEEauthorblockA{Waseda University\\
+Tokyo, Japan}}
+
+\maketitle
+
+\begin{abstract}
+Whole-brain point-neuron models built from complete synaptic wiring diagrams have begun to serve as controllers in embodied settings, but their behavior under component-level faults has, to our knowledge, never been measured. We take the released leaky integrate-and-fire (LIF) whole-brain model of \emph{Drosophila melanogaster} (138{,}639 neurons, 15.1M signed synapses) and inject five hardware-motivated fault classes---weight variability, synapse loss, random unit loss, hub loss, and sensory-channel deafferentation---scoring behavioral outcome on descending command neurons. Across 36 fault conditions (12 seeded trials each), the connectome absorbs 50\% lognormal weight variability, retains 76\% of escape-command activity after 50\% synapse loss, and is immune to 10\% random unit loss, while loss of the top-1\% out-degree hubs produces a 2.5$\times$ runaway of global activity rather than silence. An edge-permuted Erd\H{o}s--R\'enyi null network with identical weight and out-degree statistics transmits nothing, and an analytic multi-hop pathway analysis shows that relative pathway decay under edge loss is topology-independent: functional robustness arises from threshold amplification acting on convergence structure, not from graph redundancy alone. We distill the results into five design principles for fault-tolerant neuromorphic controllers.
+\end{abstract}
+
+\begin{IEEEkeywords}
+neuromorphic computing, connectome, fault tolerance, fault injection, Drosophila
+\end{IEEEkeywords}
+
+\input{sections/intro}
+\input{sections/related}
+\input{sections/methods}
+\input{sections/results}
+\input{sections/principles}
+
+\FloatBarrier
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}
