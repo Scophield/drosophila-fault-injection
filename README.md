@@ -104,6 +104,7 @@ An edge-permuted null (postsynaptic partners reshuffled, preserving each neuron'
 │   ├── calibrate.py       background calibration + θ placement (10-trial set)
 │   ├── sweep.py           fault sweep over all 36 conditions (writes results/)
 │   ├── analyze.py         dose-response figures from results/
+│   ├── envelope.py        two-criterion scoring: transmission + activity envelope
 │   ├── pathway_analysis.py  analytic multi-hop pathway mass m_k = ||A^k||_1
 │   ├── fig_pathway.py     real-data escape-pathway figure (Fig. 1)
 │   ├── fig_glance.py      results-at-a-glance bar chart (README)
@@ -137,6 +138,7 @@ python3 calibrate.py           # ~1 min: background stats + threshold (10-trial 
 python3 sweep.py               # ~1 h single core: 36 conditions x 12 trials (real + ER)
 python3 pathway_analysis.py    # ~1 min: multi-hop route-mass analysis
 python3 analyze.py             # regenerates figs 2-4 (writes sim/figs/, copy to paper/figs/)
+python3 envelope.py            # transmission vs activity-envelope verdict table (Table I P4)
 python3 fig_pathway.py         # regenerates Fig. 1 (writes sim/figs/ and paper/figs/)
 python3 fig_glance.py          # regenerates the README results-at-a-glance chart
 ```
