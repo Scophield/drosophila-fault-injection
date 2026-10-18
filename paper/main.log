@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2026.9.28)  18 OCT 2026 01:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2026.9.28)  18 OCT 2026 03:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -781,35 +781,35 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
-<figs/fig0_pathway.pdf, id=152, 260.95847pt x 110.37769pt>
+<figs/fig0_pathway.pdf, id=155, 260.95847pt x 102.64204pt>
 File: figs/fig0_pathway.pdf Graphic file (type pdf)
 <use figs/fig0_pathway.pdf>
 Package pdftex.def Info: figs/fig0_pathway.pdf  used on input line 10.
-(pdftex.def)             Requested size: 241.92169pt x 102.3268pt.
+(pdftex.def)             Requested size: 241.92169pt x 95.1554pt.
 )
 (./sections/results.tex [2 <./figs/fig0_pathway.pdf>]
-<figs/fig2_baseline.pdf, id=199, 253.11055pt x 121.60828pt>
+<figs/fig2_baseline.pdf, id=204, 253.11055pt x 118.2694pt>
 File: figs/fig2_baseline.pdf Graphic file (type pdf)
 <use figs/fig2_baseline.pdf>
 Package pdftex.def Info: figs/fig2_baseline.pdf  used on input line 7.
-(pdftex.def)             Requested size: 252.0pt x 121.07353pt.
-<figs/fig3_curves.pdf, id=202, 471.4802pt x 121.67831pt>
+(pdftex.def)             Requested size: 252.0pt x 117.74934pt.
+<figs/fig3_curves.pdf, id=207, 471.4802pt x 116.11353pt>
 File: figs/fig3_curves.pdf Graphic file (type pdf)
 <use figs/fig3_curves.pdf>
 Package pdftex.def Info: figs/fig3_curves.pdf  used on input line 17.
-(pdftex.def)             Requested size: 516.0pt x 133.17813pt.
-<figs/fig4_topology.pdf, id=203, 436.75671pt x 102.5704pt>
+(pdftex.def)             Requested size: 516.0pt x 127.08743pt.
+<figs/fig4_topology.pdf, id=208, 436.75671pt x 99.62006pt>
 File: figs/fig4_topology.pdf Graphic file (type pdf)
 <use figs/fig4_topology.pdf>
 Package pdftex.def Info: figs/fig4_topology.pdf  used on input line 24.
-(pdftex.def)             Requested size: 516.0pt x 121.1807pt.
+(pdftex.def)             Requested size: 516.0pt x 117.69505pt.
 
 Underfull \hbox (badness 3965) in paragraph at lines 30--31
 \OT1/ptm/m/n/10 and qual-i-ta-tively dif-fer-ent from ev-ery dis-tributed fault
 
  []
 
-) (./sections/principles.tex
+[3 <./figs/fig2_baseline.pdf>]) (./sections/principles.tex
 Underfull \hbox (badness 1629) in paragraph at lines 11--11
 []\OT1/ptm/m/n/8 Buy ro-bust-ness with re-dun-
  []
@@ -840,8 +840,7 @@ Underfull \hbox (badness 4001) in paragraph at lines 15--16
 []\OT1/ptm/m/n/8 single-channel loss 68--79%
  []
 
-[3 <./figs/fig2_baseline.pdf>]) (./main.bbl [4 <./figs/fig3_curves.pdf> <./figs
-/fig4_topology.pdf>]
+) (./main.bbl [4 <./figs/fig3_curves.pdf> <./figs/fig4_topology.pdf>]
 Underfull \hbox (badness 3735) in paragraph at lines 101--103
 []\OT1/ptm/m/n/8 S. Senge, ``A con-nec-tome test of the fly hash-ing al-go-rith
 m,''
@@ -864,13 +863,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 2E039EDB728F4AA9CC00A14FDF37C4AF;3210.
  ) 
 Here is how much of TeX's memory you used:
- 21581 strings out of 477967
- 408839 string characters out of 5838802
- 1880330 words of memory out of 5000000
- 41261 multiletter control sequences out of 15000+600000
+ 21587 strings out of 477967
+ 408950 string characters out of 5838802
+ 1882330 words of memory out of 5000000
+ 41264 multiletter control sequences out of 15000+600000
  558292 words of font info for 121 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 84i,12n,80p,1908b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,80p,2057b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -886,10 +885,10 @@ live/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on main.pdf (5 pages, 294932 bytes).
+Output written on main.pdf (5 pages, 295159 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
+ 379 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
  153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
