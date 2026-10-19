@@ -34,8 +34,8 @@ def build_rf_map(df):
     z_norm = (z - z.min()) / max(z.max() - z.min(), 1e-9)
     phi = np.where(
         df["side"].to_numpy() == "left",
-        rng.uniform(-90.0, -10.0, len(df)),
         rng.uniform(10.0, 90.0, len(df)),
+        rng.uniform(-90.0, -10.0, len(df)),
     )
     psi = -30.0 + 90.0 * z_norm
     w_grad = np.where(
@@ -56,6 +56,7 @@ def loom_trajectory(radius_m, v_m, dur_ms, t_start_ms, frame_dt_ms=FRAME_DT_MS, 
     u = np.clip(da_dt / 150.0, 0.0, None) * np.exp(-half_angle / 60.0)
     u_max = np.clip(np.degrees(np.arctan(radius_m / 0.02)) / 150.0, 0.0, None) * np.exp(-5.0 / 60.0)
     u = u / max(u_max, 1e-9)
+    u[ts < t_start_ms / 1000.0] = 0.0
     return {"t_ms": ts * 1000.0, "dist_m": dist, "half_angle_deg": half_angle, "u": np.minimum(u, 1.0)}
 
 
