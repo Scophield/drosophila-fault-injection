@@ -164,3 +164,12 @@ LIF 抽象(单室、delta 突触、无可塑性、Poisson 驱动);剂量上界�
 **附加项全部落实:** (a) 摘要 "out-degree hubs"→"by total outgoing contact count"(与 sweep.py 的 bincount 排名一致);(b) 延迟增长归因改为 "consistent with weakened aggregate drive rather than longer residual routes alone";(c) Fig. 4 图例/注释拥挤调整(ylim 140、注释上移、图例缩号);(d) README:上游数据 SHA-256 固定(Connectivity_783.parquet = efeb23fb…、Completeness_783.csv = bbb847a4…)写入克隆说明、运行命令与 real+ER 流程核对无误、"behavioral outcome"→"output transmission and activity-envelope compliance"、"certified robustness"→"fault-tolerance characterization"、"standard gate"→"candidate gate"、全部 hub/unit 术语与论文对齐;(e) sim/fig_glance.py、fig_neuron.py 术语同步并重生成 docs/img 五张 PNG。
 
 **页面合规:** 新增文字+新参考文献一度使 §VI 溢出到第 5 页(违反 ISCAS 第 5 页纯文献规则);经三轮压缩(related 枚举合并、贡献句紧凑化、IV-C/IV-D 冗词、Table I 短语缩短、fig3 0.70→0.60 与 fig4 0.56→0.50 英寸、VI/Intro 微削)恢复:5 页、第 5 页纯文献、Type3=0、??=0。参考文献现为 36 条(新增 [12] Adler et al.)。
+
+## 21. 效果展示入稿(2026-10-19)
+
+应用户要求将闭环逃逸演示写入稿件,丰富"传输保持→行为保持"的故事线:
+- Results 新增小节 **"From Transmission to Behavior: A Closed-Loop Escape Demo"**:914 个 LC4/LPLC2 逐细胞 looming 编码(假设感受野图)、全脑在环、8 命令元左右差校准后冻结、共享弹射执行器;无故障 24/24 逃逸(中位最小距离 0.08–0.11 m)、读出切断/反转 0/12(因果)、F2 25%/50% → 92%/75%(剂量依赖)、F4 hub 静默 12/12 保持且总活动更低;明确标注为演示而非生物学定量(含正前盲区局限)。
+- 结论句追加任务层确认短语。
+- 新增文献 2 条(逐字来自 paper_search 并核验):jang2023azimuthal(JEB 2023,GF 逃逸电路方位编码)、gaitanidis2025drosophila(PLoS Biology 2025,逃逸运动回路脆弱性);croke2025drosophila 因版面删除。refs.bib 共 38 条。
+- 版面:总 5 页;演示小节使约 15 行正文溢至第 5 页(原第 5 页纯文献),第 5 页正文+文献混排符合 IEEE 会议 5 页限制;Type 3 = 0、?? = 0。
+- 数据来源:demo-vision 分支 sim_vision/ 全部真实仿真记录,论文结论未改动原有数字。
