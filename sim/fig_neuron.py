@@ -28,7 +28,7 @@ fv = [f2.get(i, 0) for i in cells]
 y = np.arange(len(cells))[::-1]
 fig, ax = plt.subplots(figsize=(3.5, 2.1), dpi=300)
 ax.barh(y + 0.2, hv, height=0.38, color="#4878CF", label="healthy")
-ax.barh(y - 0.2, fv, height=0.38, color="#EE854E", label="50% synapse loss")
+ax.barh(y - 0.2, fv, height=0.38, color="#EE854E", label="50% connection loss")
 ax.set_yticks(y)
 ax.set_yticklabels(labels, fontsize=6)
 ax.set_xlabel("readout spikes over 12 trials", fontsize=7)

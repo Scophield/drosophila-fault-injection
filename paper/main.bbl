@@ -22,15 +22,14 @@
 \BIBdecl
 
 \bibitem{yuan2026embodiedr}
-Y.~Yuan, Y.~Huang, X.~Yao, Y.~Li, S.~Zhang, L.~Han, P.~Li, J.~Sun, W.~Jia,
-  Z.~Zhang, Y.~Liu, R.~Liao, Y.~Hu, Q.~Wu, Y.~Li, Z.~Dong, F.~Ni, Y.~Zheng,
-  S.~Gu, Y.~Ma, H.~Tang, H.~Hu, and J.~Hao, ``Embodied-r1.5: Evolving physical
-  intelligence via embodied foundation models,'' arXiv:2606.11324, 2026.
+Y.~Yuan, Y.~Huang, X.~Yao, Y.~Li, S.~Zhang, L.~Han \emph{et~al.},
+  ``Embodied-r1.5: Evolving physical intelligence via embodied foundation
+  models,'' arXiv:2606.11324, 2026.
 
 \bibitem{guo2026neurovla}
-W.~Guo, H.~Zhang, P.~Li, T.~Cai, Z.~Chen, Y.~Guo, X.~He, Y.~Yang, Y.~Sun, and
-  H.~Xiong, ``Neurovla: A brain-inspired embodied intelligence for fluid and
-  fast reflexive robotics control,'' arXiv:2601.14628, 2026.
+W.~Guo, H.~Zhang, P.~Li, T.~Cai, Z.~Chen, Y.~Guo \emph{et~al.}, ``Neurovla: A
+  brain-inspired embodied intelligence for fluid and fast reflexive robotics
+  control,'' arXiv:2601.14628, 2026.
 
 \bibitem{katti2026neuromorphic}
 K.~Katti, P.~Chaudhari, and D.~Jariwala, ``Neuromorphic computing for low-power
@@ -65,31 +64,31 @@ A.~Yunusoglu, D.~Le, M.~Isik, I.~C. Dikmen, and T.~Karadag, ``Neuromorphic
   tolerance, and memory capacitance,'' arXiv:2502.20492, 2025.
 
 \bibitem{shiu2024drosophila}
-P.~K. Shiu, G.~R. Sterne, N.~Spiller, R.~Franconville, A.~M. Sandoval, J.~Zhou,
-  N.~Simha, C.~H. Kang, S.~Yu, J.~S. Kim, S.~Dorkenwald, A.~Matsliah,
-  P.~Schlegel, S.~chieh Yu, C.~E. McKellar, A.~R. Sterling, M.~Costa,
-  K.~Eichler, A.~S. Bates, N.~Eckstein, J.~Funke, G.~S. Jefferis, M.~Murthy,
-  S.~S. Bidaye, S.~Hampel, A.~M. Seeds, and K.~Scott, ``A drosophila
-  computational brain model reveals sensorimotor processing,'' \emph{Nature},
-  vol. 634, no. 8032, pp. 210--219, 2024.
+P.~K. Shiu, G.~R. Sterne, N.~Spiller, R.~Franconville, A.~M. Sandoval, J.~Zhou
+  \emph{et~al.}, ``A drosophila computational brain model reveals sensorimotor
+  processing,'' \emph{Nature}, vol. 634, no. 8032, pp. 210--219, 2024.
 
 \bibitem{lin2024network}
-A.~Lin, R.~Yang, S.~Dorkenwald, A.~Matsliah, A.~R. Sterling, P.~Schlegel, S.-C.
-  Yu, C.~E. McKellar, M.~Costa, K.~Eichler, A.~S. Bates, N.~Eckstein, J.~Funke,
-  G.~S. X.~E. Jefferis, and M.~Murthy, ``Network statistics of the whole-brain
-  connectome of drosophila.'' in \emph{Nature}, 2024.
+A.~Lin, R.~Yang, S.~Dorkenwald, A.~Matsliah, A.~R. Sterling, P.~Schlegel
+  \emph{et~al.}, ``Network statistics of the whole-brain connectome of
+  drosophila.'' in \emph{Nature}, 2024.
+
+\bibitem{adler2026latent}
+T.~Adler, M.~Grassia, Z.~Liao, G.~Mangioni, and C.~V. Cannistraci, ``Latent
+  geometry-driven network automata for complex network dismantling,'' Preprint
+  (ICLR 2026), 2025.
 
 \bibitem{simpson2023descending}
 J.~H. Simpson, ``Descending control of motor sequences in drosophila,''
   \emph{Current Opinion in Neurobiology}, vol.~84, p. 102822, 2023.
 
 \bibitem{liew2026connectomebased}
-J.-N. Liew, S.~Lin, B.~Chen, W.~Zhang, X.~Zhu, W.~Zhang, and X.~Hu,
+J.-N. Liew, S.~Lin, B.~Chen, W.~Zhang, X.~Zhu, W.~Zhang \emph{et~al.},
   ``Connectome-based modelling reveals orientation maps in the drosophila optic
   lobe,'' arXiv:2609.01330, 2026.
 
 \bibitem{xie2025visual}
-J.~Xie, R.~Ren, X.~Zhou, A.~Zheng, J.~Zhu, W.~Jiang, and Z.~Zhao, ``Visual
+J.~Xie, R.~Ren, X.~Zhou, A.~Zheng, J.~Zhu, W.~Jiang \emph{et~al.}, ``Visual
   function profiles via multi-path aggregation reveal neuron-level responses in
   the drosophila brain,'' arXiv:2512.06934, 2025.
 
@@ -106,7 +105,7 @@ Z.~Jin, Y.~Zhu, C.~Zhang, and Y.~Sui, ``Whole-brain connectomic graph model
   enables whole-body locomotion control in fruit fly,'' arXiv:2602.17997, 2026.
 
 \bibitem{yu2025biological}
-S.~Yu, Z.~Qin, T.~Liu, B.~Xu, R.~J. Vogelstein, J.~Brown, and J.~T. Vogelstein,
+S.~Yu, Z.~Qin, T.~Liu, B.~Xu, R.~J. Vogelstein, J.~Brown \emph{et~al.},
   ``Biological processing units: Leveraging an insect connectome to pioneer
   biofidelic neural architectures,'' arXiv:2507.10951, 2025.
 
@@ -173,25 +172,9 @@ J.~Gracia-Mor{\'a}n, J.~C. Baraza-Calvo, J.-C. Ruiz, D.~de~Andr{\'e}s,
   Computer Science}, pp. 147--161, 2026.
 
 \bibitem{yik2023neurobench}
-J.~Yik, K.~V. den Berghe, D.~den Blanken, Y.~Bouhadjar, M.~Fabre, P.~Hueber,
-  W.~Ke, M.~A. Khoei, D.~Kleyko, N.~Pacik-Nelson, A.~Pierro, P.~Stratmann,
-  P.-S.~V. Sun, G.~Tang, S.~Wang, B.~Zhou, S.~H. Ahmed, G.~V. Joseph, B.~Leto,
-  A.~Micheli, A.~K. Mishra, G.~Lenz, T.~Sun, Z.~Ahmed, M.~Akl, B.~Anderson,
-  A.~G. Andreou, C.~Bartolozzi, A.~Basu, P.~Bogdan, S.~Bohte, S.~Buckley,
-  G.~Cauwenberghs, E.~Chicca, F.~Corradi, G.~de~Croon, A.~Danielescu, A.~Daram,
-  M.~Davies, Y.~Demirag, J.~Eshraghian, T.~Fischer, J.~Forest, V.~Fra,
-  S.~Furber, P.~M. Furlong, W.~Gilpin, A.~Gilra, H.~A. Gonzalez, G.~Indiveri,
-  S.~Joshi, V.~Karia, L.~Khacef, J.~C. Knight, L.~Kriener, R.~Kubendran,
-  D.~Kudithipudi, S.-C. Liu, Y.-H. Liu, H.~Ma, R.~Manohar, J.~M.
-  Margarit-Taul{\'e}, C.~Mayr, K.~Michmizos, D.~R. Muir, E.~Neftci, T.~Nowotny,
-  F.~Ottati, A.~Ozcelikkale, P.~Panda, J.~Park, M.~Payvand, C.~Pehle, M.~A.
-  Petrovici, C.~Posch, A.~Renner, Y.~Sandamirskaya, C.~J. Schaefer, A.~van
-  Schaik, J.~Schemmel, S.~Schmidgall, C.~Schuman, J.~sun Seo, S.~Sheik, S.~B.
-  Shrestha, M.~Sifalakis, A.~Sironi, K.~Stewart, M.~Stewart, T.~C. Stewart,
-  J.~Timcheck, N.~T{\"o}men, G.~Urgese, M.~Verhelst, C.~M. Vineyard,
-  B.~Vogginger, A.~Yousefzadeh, F.~T. Zohora, C.~Frenkel, and V.~J. Reddi,
-  ``Neurobench: A framework for benchmarking neuromorphic computing algorithms
-  and systems,'' arXiv:2304.04640, 2023.
+J.~Yik, K.~V. den Berghe, D.~den Blanken, Y.~Bouhadjar, M.~Fabre, P.~Hueber
+  \emph{et~al.}, ``Neurobench: A framework for benchmarking neuromorphic
+  computing algorithms and systems,'' arXiv:2304.04640, 2023.
 
 \bibitem{medvedeva2025formalizing}
 T.~Medvedeva, A.~Franci, and F.~Casta{\~n}os, ``Formalizing neuromorphic
@@ -199,9 +182,9 @@ T.~Medvedeva, A.~Franci, and F.~Casta{\~n}os, ``Formalizing neuromorphic
   arXiv:2506.10203, 2025.
 
 \bibitem{shuang2023opplod}
-F.~Shuang, Y.~Zhu, Y.~Xie, L.~Zhao, Q.~Xie, J.~Zhao, and S.~Yue, ``Opplod: the
-  opponency based looming detector, model extension of looming sensitivity from
-  lgmd to lplc2,'' arXiv:2302.10284, 2023.
+F.~Shuang, Y.~Zhu, Y.~Xie, L.~Zhao, Q.~Xie, J.~Zhao \emph{et~al.}, ``Opplod:
+  the opponency based looming detector, model extension of looming sensitivity
+  from lgmd to lplc2,'' arXiv:2302.10284, 2023.
 
 \bibitem{qin2025dynamic}
 Z.~Qin, Q.~Fu, J.~Peng, and S.~Yue, ``Dynamic neural field modeling of visual
@@ -213,13 +196,19 @@ D.~F.~M. Goodman, ``The brian simulator,'' \emph{Frontiers in Neuroscience},
 
 \bibitem{dorkenwald2024neuronal}
 S.~Dorkenwald, A.~Matsliah, A.~R. Sterling, P.~Schlegel, S.-C. Yu, C.~E.
-  McKellar, A.~Lin, M.~Costa, K.~Eichler, Y.~Yin, W.~Silversmith,
-  C.~Schneider-Mizell, C.~S. Jordan, D.~Brittain, A.~Halageri, K.~Kuehner,
-  O.~Ogedengbe, R.~Morey, J.~Gager, K.~Kruk, E.~Perlman, R.~Yang, D.~Deutsch,
-  D.~Bland, M.~Sorek, R.~Lu, T.~Macrina, K.~Lee, J.~A. Bae, S.~Mu, B.~Nehoran,
-  E.~Mitchell, S.~Popovych, J.~Wu, Z.~Jia, M.~A. Castro, N.~Kemnitz, D.~Ih,
-  A.~S. Bates, N.~Eckstein, J.~Funke, F.~Collman, D.~D. Bock, G.~S. X.~E.
-  Jefferis, H.~S. Seung, and M.~Murthy, ``Neuronal wiring diagram of an adult
-  brain.'' \emph{Nature}, vol. 634, no. 8032, pp. 124--138, 2024.
+  McKellar \emph{et~al.}, ``Neuronal wiring diagram of an adult brain.''
+  \emph{Nature}, vol. 634, no. 8032, pp. 124--138, 2024.
+
+\bibitem{jang2023azimuthal}
+H.~Jang, D.~P. Goodman, J.~Ausborn, and C.~R. von Reyn, ``Azimuthal invariance
+  to looming stimuli in the drosophila giant fiber escape circuit,''
+  \emph{Journal of Experimental Biology}, vol. 226, no.~8, 2023.
+
+\bibitem{gaitanidis2025drosophila}
+A.~Gaitanidis, V.~Pampanin, J.~Thiem, G.~Kalaras, L.~Huthmacher, S.~Hürkey,
+  D.~Kadas, A.~Dimitriadou, A.~Ntogka, S.~Sanyal, C.~Consoulas, and C.~Duch,
+  ``The drosophila escape motor circuit shows differential vulnerability to
+  aging linked to functional decay,'' \emph{PLoS Biology}, vol.~23, no.~12, p.
+  e3003553, 2025.
 
 \end{thebibliography}

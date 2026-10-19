@@ -60,7 +60,7 @@ C_REAL = "#1f77b4"
 C_ER = "#d62728"
 C_HL = "#2ca02c"
 
-fig2, axs = plt.subplots(1, 1, figsize=(3.5, 0.76))
+fig2, axs = plt.subplots(1, 1, figsize=(3.5, 0.74))
 cal = json.loads((SIM / "results" / "calib" / "calibration.json").read_text())
 
 ax = axs
@@ -78,7 +78,7 @@ ax.spines[["top", "right"]].set_visible(False)
 fig2.savefig(FIGS / "fig2_baseline.pdf")
 plt.close(fig2)
 
-fig3, axs = plt.subplots(1, 2, figsize=(7.0, 0.72), gridspec_kw={"wspace": 0.5})
+fig3, axs = plt.subplots(1, 2, figsize=(7.0, 0.60), gridspec_kw={"wspace": 0.5})
 jit = np.random.default_rng(3)
 ax = axs[0]
 fs = [0.05, 0.10, 0.25, 0.50]
@@ -92,7 +92,7 @@ for x, c in zip(xs_f2, conds_f2):
 lo = [float(np.percentile(agg("real", c)["rates"], 10)) for c in conds_f2]
 hi = [float(np.percentile(agg("real", c)["rates"], 90)) for c in conds_f2]
 ax.errorbar(xs_f2, r, yerr=[np.array(r) - lo, np.array(hi) - r], color=C_REAL, fmt="o-", lw=1.2, ms=3.5, capsize=2, label="command rate")
-ax.set_xlabel("synapse dropout fraction")
+ax.set_xlabel("connection dropout fraction")
 ax.set_ylabel("command rate (Hz)")
 ax2 = ax.twinx()
 llo = [float(np.nanpercentile(agg("real", c)["lat"], 10)) for c in conds_f2]
@@ -104,7 +104,7 @@ ax2.errorbar(xs_f2, lat, yerr=[np.array(lat) - llo, np.array(lhi) - lat], color=
 ax2.set_ylim(3.5, 6.5)
 ax2.set_ylabel("latency (ms)", color="#ff7f0e")
 ax2.tick_params(axis="y", colors="#ff7f0e")
-ax.set_title("(a) F2 synapse dropout")
+ax.set_title("(a) F2 connection dropout")
 ax.set_ylim(60, 130)
 ax.spines[["top"]].set_visible(False)
 ax2.spines[["top"]].set_visible(False)
@@ -121,13 +121,13 @@ for x, c in zip(xs_f4, conds_f4):
 lo = [float(np.percentile(agg("real", c)["rates"], 10)) for c in conds_f4]
 hi = [float(np.percentile(agg("real", c)["rates"], 90)) for c in conds_f4]
 ax.errorbar(xs_f4, r, yerr=[np.array(r) - lo, np.array(hi) - r], color=C_REAL, fmt="o-", lw=1.2, ms=3.5, capsize=2, label="command rate")
-ax.set_xlabel("hub-lesion fraction (top synapse count)")
+ax.set_xlabel("hub-silencing fraction (top contact count)")
 ax.set_ylabel("command rate (Hz)")
 ax4 = ax.twinx()
 ax4.errorbar(xs_f4, [t / 1000 for t in tot], yerr=[np.zeros(4), np.zeros(4)], color="#ff7f0e", fmt="s--", lw=1.2, ms=3.5, capsize=2)
 ax4.set_ylabel("total spikes (k)", color="#ff7f0e")
 ax4.tick_params(axis="y", colors="#ff7f0e")
-ax.set_title("(b) F4 hub lesion: dysregulation")
+ax.set_title("(b) F4 hub silencing: over-activity")
 h_rate, h_tot = med(agg("real", "healthy")["rates"]), med(agg("real", "healthy")["tot"]) / 1000
 ax.axhline(h_rate, color="gray", ls=":", lw=0.7, zorder=0)
 ax4.axhline(h_tot, color="gray", ls=":", lw=0.7, zorder=0)
@@ -137,7 +137,7 @@ ax4.spines[["top"]].set_visible(False)
 fig3.savefig(FIGS / "fig3_curves.pdf")
 plt.close(fig3)
 
-fig4, axs = plt.subplots(1, 2, figsize=(7.0, 0.58))
+fig4, axs = plt.subplots(1, 2, figsize=(7.0, 0.50))
 ax = axs[0]
 pm = json.loads((SIM / "results" / "graph" / "pathway_mass.json").read_text())
 ks = np.arange(1, 9)
@@ -166,10 +166,10 @@ ax.bar(xs + 0.2, te, 0.38, color=C_ER, label="permuted null")
 ax.set_xticks(xs)
 ax.set_xticklabels(labs, fontsize=6.5)
 ax.set_ylabel("total spikes (k)")
-ax.set_ylim(0, 132)
-ax.annotate("null command: median 0.0 Hz", xy=(-0.38, 122), fontsize=5.8, ha="left", va="center", color="#333333")
-ax.set_title("(b) Hub-lesion runaway")
-ax.legend(frameon=False)
+ax.set_ylim(0, 140)
+ax.annotate("null command: median 0.0 Hz", xy=(-0.38, 130), fontsize=5.8, ha="left", va="center", color="#333333")
+ax.set_title("(b) Hub silencing: over-activity")
+ax.legend(frameon=False, fontsize=6, loc="upper right")
 ax.spines[["top", "right"]].set_visible(False)
 fig4.savefig(FIGS / "fig4_topology.pdf")
 plt.close(fig4)

@@ -15,8 +15,8 @@ healthy = r["healthy"]["rate_med"]
 
 rows = [
     ("F1 weight noise $\\sigma{=}0.5$", r["F1_wvar_50"]["rate_med"] / healthy * 100, "#2e7d32"),
-    ("F2 synapse loss 50%", r["F2_drop_50"]["rate_med"] / healthy * 100, "#558b2f"),
-    ("F3 unit loss 10%", r["F3_loss_10"]["rate_med"] / healthy * 100, "#2e7d32"),
+    ("F2 connection loss 50%", r["F2_drop_50"]["rate_med"] / healthy * 100, "#558b2f"),
+    ("F3 unit silencing 10%", r["F3_loss_10"]["rate_med"] / healthy * 100, "#2e7d32"),
     ("F5 LC4 silenced", r["F5_in_LC4"]["rate_med"] / healthy * 100, "#1565c0"),
     ("F5 LPLC2 silenced", r["F5_in_LPLC2"]["rate_med"] / healthy * 100, "#1565c0"),
     ("F5 both channels", r["F5_in_both"]["rate_med"] / healthy * 100, "#b03a2e"),
@@ -40,7 +40,7 @@ for sp in ["top", "right"]:
 
 hub = r["F4_hub_1pct"]
 box = ax.text(0.985, 0.06,
-              "F4 hub loss (top 1%): rate 122.3 Hz (+29%),\nglobal activity 2.52$\\times$ — runaway, not silence",
+              "F4 hub silencing (top 1%): rate 122.3 Hz (+29%),\nglobal activity 2.52$\\times$ — over-activity, not silence",
               transform=ax.transAxes, ha="right", va="bottom", fontsize=9,
               bbox=dict(boxstyle="round,pad=0.45", fc="#fdecea", ec="#b03a2e", lw=0.9))
 er_note = ax.text(0.99, 1.02,

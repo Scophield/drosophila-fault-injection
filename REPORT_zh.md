@@ -143,3 +143,33 @@ LIF 抽象(单室、delta 突触、无可塑性、Poisson 驱动);剂量上界�
 **审稿人补充建议:** repo 级三状态并排动画(可做,列为可选);任务级逃逸演示需视觉输入编码+动作映射,作为 future work。
 
 **页面合规:** 上述修改净增文字导致溢出,经多轮压缩(VI 段深剪、图注收紧、图高微调)+ IEEE et al. 展示转换,恢复 5 页、第 5 页纯文献、Type3=0、??=0。
+
+
+## 20. 第三份外部审稿意见:逐条裁定与修正(2026-10-18)
+
+六点优先意见全部核实属实,全部采纳;附加项全部落实。
+
+**意见 1(创新性):存在更近前作,属实。** 经查证:LGD-NA = Adler, Grassia, Liao, Mangioni, Cannistraci, "Latent Geometry-Driven Network Automata for Complex Network Dismantling"(ICLR 2026,CrossRef DOI 10.20944/preprints202505.2276.v3);其第 5.3 节确在 Shiu et al. 2024 果蝇连接组衍生的糖觉回路 SNN 子网络上做 dismantling(节点删除),功能指标为触发伸喙反应的感觉神经元放电率——即在**同一 released 模型的子网络上做过删除实验**。已撤回摘要 "has never been measured" 与贡献 (ii) 的 "the first";摘要改为 "fault tolerance has been probed on subnetworks and via targeted silencings but not compared across hardware-motivated fault classes on a whole-brain controller";Related 第一段改写并引 \cite{adler2026latent}([12]);intro 补引同一前作。保留的差异点明确化:全脑固定模型(138k vs 子网)、五类硬件故障统一扫描(其单一 dismantling 目标)、输出传递与活动包络分开计分(其单一放电率指标)、随机+定向+ER null 对照。
+
+**意见 2(F3/F4 语义):属实,已改。** 核查 sweep.py:F3/F4 置零边权=切断被选单元的全部输出连接,细胞仍接收输入、仍可放电、仍计入全网总脉冲——是"输出连接静默"而非"单元删除"。全稿统一为 outgoing-connection silencing / unit-output silencing:III-C F3 定义(附"silenced cells still receive input and spike; only outputs are disconnected")、F5 同步、摘要与贡献 (ii)、IV-B "cut off from their targets"、IV-C 全部、Fig. 3b/4b 标题与坐标轴、README 表格与 Fig. 4 段、"dead cores at the output boundary" 替代 dead-core 单元类比。
+
+**意见 3(VI "keeps" 过满):属实,已改。** 50% connection loss 下 94.7→72.4 Hz 为 −23.5%,不能称 "keeps its median command rate"。VI 结尾改为 "preserved under weight noise and unit silencing and retains 76.5% of baseline at 50% connection loss"。
+
+**意见 4(null 绝对零表述残留):属实,已改。** 摘要 "transmits nothing"→"yields a zero median command rate in every tested condition (no trial reaches the transmission threshold)";IV-D "it transmits nothing"→"its median command rate is 0.0 Hz in every tested condition, with no trial reaching θ";尾句 "none converge onto descending output"→"the broad descending readout stays at background"。与 §19 意见 5 的规范句完全对齐。
+
+**意见 5(hub 机制未证明):属实,已降级。** "A matched-scale contrast rules out a size effect" 删去:匹配的只是断连比例,未匹配细胞数与 E/I 组成。改为 "A matched-disconnection contrast suggests the effect is not disconnection alone... a control matching cell count and excitation/inhibition composition is still needed";de-inhibition 明确标注为 leading hypothesis;2.52× 只声明 global over-activity,全稿 "runaway"→"over-activity"(IV-C 标题、图题、贡献、Table I P4)。
+
+**意见 6(P5 硬件建议过满):属实,已降级。** "front-end duplication buys more margin than internal redundancy" 无架构对比实验支撑。Table I P5 改为 "Harden the sensory interface first"(锚:单通道 68–79% 中位保留);V 正文改为 "marking the sensor interface as the first redundancy candidate";与全稿 "candidate design implications" 定位一致。
+
+**附加项全部落实:** (a) 摘要 "out-degree hubs"→"by total outgoing contact count"(与 sweep.py 的 bincount 排名一致);(b) 延迟增长归因改为 "consistent with weakened aggregate drive rather than longer residual routes alone";(c) Fig. 4 图例/注释拥挤调整(ylim 140、注释上移、图例缩号);(d) README:上游数据 SHA-256 固定(Connectivity_783.parquet = efeb23fb…、Completeness_783.csv = bbb847a4…)写入克隆说明、运行命令与 real+ER 流程核对无误、"behavioral outcome"→"output transmission and activity-envelope compliance"、"certified robustness"→"fault-tolerance characterization"、"standard gate"→"candidate gate"、全部 hub/unit 术语与论文对齐;(e) sim/fig_glance.py、fig_neuron.py 术语同步并重生成 docs/img 五张 PNG。
+
+**页面合规:** 新增文字+新参考文献一度使 §VI 溢出到第 5 页(违反 ISCAS 第 5 页纯文献规则);经三轮压缩(related 枚举合并、贡献句紧凑化、IV-C/IV-D 冗词、Table I 短语缩短、fig3 0.70→0.60 与 fig4 0.56→0.50 英寸、VI/Intro 微削)恢复:5 页、第 5 页纯文献、Type3=0、??=0。参考文献现为 36 条(新增 [12] Adler et al.)。
+
+## 21. 效果展示入稿(2026-10-19)
+
+应用户要求将闭环逃逸演示写入稿件,丰富"传输保持→行为保持"的故事线:
+- Results 新增小节 **"From Transmission to Behavior: A Closed-Loop Escape Demo"**:914 个 LC4/LPLC2 逐细胞 looming 编码(假设感受野图)、全脑在环、8 命令元左右差校准后冻结、共享弹射执行器;无故障 24/24 逃逸(中位最小距离 0.08–0.11 m)、读出切断/反转 0/12(因果)、F2 25%/50% → 92%/75%(剂量依赖)、F4 hub 静默 12/12 保持且总活动更低;明确标注为演示而非生物学定量(含正前盲区局限)。
+- 结论句追加任务层确认短语。
+- 新增文献 2 条(逐字来自 paper_search 并核验):jang2023azimuthal(JEB 2023,GF 逃逸电路方位编码)、gaitanidis2025drosophila(PLoS Biology 2025,逃逸运动回路脆弱性);croke2025drosophila 因版面删除。refs.bib 共 38 条。
+- 版面:总 5 页;演示小节使约 15 行正文溢至第 5 页(原第 5 页纯文献),第 5 页正文+文献混排符合 IEEE 会议 5 页限制;Type 3 = 0、?? = 0。
+- 数据来源:demo-vision 分支 sim_vision/ 全部真实仿真记录,论文结论未改动原有数字。

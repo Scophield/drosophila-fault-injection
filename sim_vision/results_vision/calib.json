@@ -1,0 +1,15 @@
+{
+ "data_sign": 1.0,
+ "left_target_lr_mean": -77.77777777777777,
+ "bias": -0.8333333333333348,
+ "lr_ref": 88.83333333333336,
+ "k_turn_deg_s": 400.0,
+ "v_fly_ms": 0.05,
+ "train_conditions": [
+  "phi_-60",
+  "phi_-30",
+  "v_0p5",
+  "static"
+ ],
+ "note": "data_sign from left-target lr mean on training conditions only; bias from v_0p5 (phi=0) training condition; frozen for all test trajectories"
+}
