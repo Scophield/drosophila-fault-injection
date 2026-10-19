@@ -19,6 +19,7 @@ V_TARGET = 0.3
 EP_DUR_MS = 1000.0
 V_BURST = 0.35
 BURST_S = 0.45
+BURST_DELAY_MS = 250.0
 THETA_HZ = 51.4
 SMOOTH_N = 5
 
@@ -52,8 +53,6 @@ def run_episode(sim, rf_map, cmd_df, seed, phi_t_deg, fault=None, mode="brain"):
     n_frames = int(round(EP_DUR_MS / FRAME_DT_MS))
     fly_x, fly_y, heading = 0.0, 0.0, 0.0
     tx, ty = D0 * np.cos(np.radians(phi_t_deg)), D0 * np.sin(np.radians(phi_t_deg))
-    tvx = -tx / D0 * V_TARGET
-    tvy = -ty / D0 * V_TARGET
     radius = PARAMS["r_ref_m"]
     lr_hist = []
     cmd_hist = []
@@ -104,22 +103,26 @@ def run_episode(sim, rf_map, cmd_df, seed, phi_t_deg, fault=None, mode="brain"):
             c = load_calib()
             omega = K_TURN_DEG_S * np.clip(c["data_sign"] * (lr_s - c["bias"]) / c["lr_ref"], -1.0, 1.0)
         elif mode == "handrule":
-            omega = K_TURN_DEG_S * np.clip(phi_now / 60.0, -1.0, 1.0)
+            omega = -K_TURN_DEG_S * np.clip(phi_now / 60.0, -1.0, 1.0)
         cmd_hist.append(cmd_sum)
         cmd_s = float(np.mean(cmd_hist[-SMOOTH_N:]))
         if cmd_s >= THETA_HZ and burst_until < 0.0:
             if len(cmd_hist) >= 2 and cmd_hist[-2] >= THETA_HZ:
-                burst_until = t_ms + BURST_S * 1000.0
-        v_now = V_BURST if t_ms < burst_until else V_FLY
-        heading += np.radians(omega) * (FRAME_DT_MS / 1000.0)
+                burst_until = t_ms + BURST_DELAY_MS + BURST_S * 1000.0
+        bursting = (t_ms >= burst_until - BURST_S * 1000.0) and (t_ms < burst_until) and burst_until > 0.0
+        v_now = V_BURST if bursting else V_FLY
+        if not bursting:
+            heading += np.radians(omega) * (FRAME_DT_MS / 1000.0)
         fly_x += v_now * np.cos(heading) * (FRAME_DT_MS / 1000.0)
         fly_y += v_now * np.sin(heading) * (FRAME_DT_MS / 1000.0)
-        tx += tvx * (FRAME_DT_MS / 1000.0)
-        ty += tvy * (FRAME_DT_MS / 1000.0)
+        gapx, gapy = fly_x - tx, fly_y - ty
+        gap = max(np.hypot(gapx, gapy), 1e-9)
+        tx += gapx / gap * V_TARGET * (FRAME_DT_MS / 1000.0)
+        ty += gapy / gap * V_TARGET * (FRAME_DT_MS / 1000.0)
         log.append({"k": k, "t_ms": t_ms, "fly_x": fly_x, "fly_y": fly_y, "heading_deg": np.degrees(heading),
                     "target_x": tx, "target_y": ty, "dist": float(np.hypot(fly_x - tx, fly_y - ty)),
                     "phi_now": phi_now, "phi_abs": phi_abs, "lr_s": lr_s, "omega": omega, "u": float(u_frame), "half_angle": float(half_angle),
-                    "n_total": int(total_spikes), "cmd_rates": cmd_rates, "cmd_s": cmd_s, "burst": bool(t_ms < burst_until)})
+                    "n_total": int(total_spikes), "cmd_rates": cmd_rates, "cmd_s": cmd_s, "burst": bool(bursting)})
         t_ms += FRAME_DT_MS
         if np.hypot(fly_x - tx, fly_y - ty) <= D_CONTACT:
             break
@@ -183,7 +186,7 @@ def main():
                     with (OUT / f"episodes_{args.tag}" / f"{mode}_{fault or 'healthy'}_phi{int(phi)}_s{seed}.json").open("w") as fh:
                         json.dump(res, fh)
                     print(json.dumps({k: rows[-1][k] for k in ("mode", "fault", "phi_t_deg", "seed", "min_dist", "escaped", "n_total")}), flush=True)
-    out = OUT / f"closedloop_{args.tag}.jsonl"
+    out = OUT / f"closedloop_{args.tag}_{args.modes.replace(',', '_')}{'_' + args.faults.replace(',', '_') if args.faults else ''}.jsonl"
     with out.open("w") as fh:
         for r in rows:
             fh.write(json.dumps(r) + "\n")

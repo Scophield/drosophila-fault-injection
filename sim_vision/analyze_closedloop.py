@@ -8,7 +8,10 @@ OUT = Path(__file__).resolve().parent / "results_vision"
 
 
 def main(tag="main"):
-    rows = [json.loads(l) for l in (OUT / f"closedloop_{tag}.jsonl").open()]
+    import glob
+    rows = []
+    for f in sorted(glob.glob(str(OUT / f"closedloop_{tag}_*.jsonl"))):
+        rows.extend(json.loads(l) for l in open(f))
     agg = defaultdict(list)
     for r in rows:
         key = (r["mode"], r["fault"] or "healthy", r["phi_t_deg"])
