@@ -11,9 +11,7 @@ sys.path.insert(0, str(ROOT / "sim"))
 
 import engine as _engine
 from engine import W_IN_V, N_BACKGROUND, get_type_ids
-from brian2 import Network, NeuronGroup, Synapses, SpikeMonitor, PoissonGroup, volt, second, ms, Hz, prefs
-
-prefs.codegen.cpp.extra_compile_args_gcc = ["-w", "-O1"]
+from brian2 import Network, NeuronGroup, Synapses, SpikeMonitor, PoissonGroup, volt, second, ms, Hz
 
 N_CHUNKS = 8
 
@@ -35,6 +33,9 @@ def _load_edges_lean():
         off += m
         del batch
     assert off == n
+    w0 = w0.astype(np.float64) * _engine.W_SCALE
+    del pf
+    gc.collect()
     return i_pre, i_post, w0
 
 
@@ -66,7 +67,7 @@ class VisionSim:
         for k in range(N_CHUNKS):
             syn = Synapses(self.neu, self.neu, "w : volt", on_pre="g += w", delay=p["t_dly"], name=f"syn_{k}")
             syn.connect(i=i_pre[edges[k]:edges[k + 1]], j=i_post[edges[k]:edges[k + 1]])
-            syn.w = (w0[edges[k]:edges[k + 1]].astype(np.float64)) * volt
+            syn.w = w0[edges[k]:edges[k + 1]] * volt
             self.syn_list.append(syn)
         del i_pre, i_post, w0
         gc.collect()
