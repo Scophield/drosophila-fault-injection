@@ -36,8 +36,8 @@ M.~van Gerven, ``Neuromorphic intelligence,'' arXiv:2509.11940, 2025.
 
 \bibitem{wang2025neuromorphic}
 F.~Wang, B.~H. Theilman, F.~Rothganger, W.~Severa, C.~M. Vineyard, and J.~B.
-  Aimone, ``Neuromorphic simulation of drosophila melanogaster brain connectome
-  on loihi 2,'' arXiv:2508.16792, 2025.
+  Aimone, ``Neuromorphic simulation of {D}rosophila melanogaster brain
+  connectome on {L}oihi 2,'' arXiv:2508.16792, 2025.
 
 \bibitem{arfa2025hardwareaware}
 S.~Arfa, B.~Vogginger, and C.~Mayr, ``Hardware-aware fine-tuning of spiking
@@ -61,36 +61,37 @@ A.~Yunusoglu, D.~Le, M.~Isik, I.~C. Dikmen, and T.~Karadag, ``Neuromorphic
 
 \bibitem{shiu2024drosophila}
 P.~K. Shiu, G.~R. Sterne, N.~Spiller, R.~Franconville, A.~M. Sandoval, J.~Zhou
-  \emph{et~al.}, ``A drosophila computational brain model reveals sensorimotor
-  processing,'' \emph{Nature}, vol. 634, no. 8032, pp. 210--219, 2024.
+  \emph{et~al.}, ``A {D}rosophila computational brain model reveals
+  sensorimotor processing,'' \emph{Nature}, vol. 634, no. 8032, pp. 210--219,
+  2024.
 
 \bibitem{lin2024network}
 A.~Lin, R.~Yang, S.~Dorkenwald, A.~Matsliah, A.~R. Sterling, P.~Schlegel
   \emph{et~al.}, ``Network statistics of the whole-brain connectome of
-  drosophila.'' in \emph{Nature}, 2024.
+  {D}rosophila.'' in \emph{Nature}, 2024.
 
 \bibitem{adler2026latent}
 T.~Adler, M.~Grassia, Z.~Liao, G.~Mangioni, and C.~V. Cannistraci, ``Latent
   geometry-driven network automata for complex network dismantling,'' Preprint
-  (ICLR 2026), 2025.
+  (ICLR 2026), 2026.
 
 \bibitem{simpson2023descending}
-J.~H. Simpson, ``Descending control of motor sequences in drosophila,''
+J.~H. Simpson, ``Descending control of motor sequences in {D}rosophila,''
   \emph{Current Opinion in Neurobiology}, vol.~84, p. 102822, 2023.
 
 \bibitem{liew2026connectomebased}
 J.-N. Liew, S.~Lin, B.~Chen, W.~Zhang, X.~Zhu, W.~Zhang \emph{et~al.},
-  ``Connectome-based modelling reveals orientation maps in the drosophila optic
-  lobe,'' arXiv:2609.01330, 2026.
+  ``Connectome-based modelling reveals orientation maps in the {D}rosophila
+  optic lobe,'' arXiv:2609.01330, 2026.
 
 \bibitem{xie2025visual}
 J.~Xie, R.~Ren, X.~Zhou, A.~Zheng, J.~Zhu, W.~Jiang \emph{et~al.}, ``Visual
   function profiles via multi-path aggregation reveal neuron-level responses in
-  the drosophila brain,'' arXiv:2512.06934, 2025.
+  the {D}rosophila brain,'' arXiv:2512.06934, 2025.
 
 \bibitem{cho2026drosophila}
-J.~Cho, M.~Kang, and D.~Kim, ``A drosophila whole-connectome network can learn
-  human-designed cognitive tasks,'' arXiv:2610.10014, 2026.
+J.~Cho, M.~Kang, and D.~Kim, ``A {D}rosophila whole-connectome network can
+  learn human-designed cognitive tasks,'' arXiv:2610.10014, 2026.
 
 \bibitem{senge2026connectome}
 S.~Senge, ``A connectome test of the fly hashing algorithm,'' arXiv:2610.09114,
@@ -106,13 +107,31 @@ S.~Yu, Z.~Qin, T.~Liu, B.~Xu, R.~J. Vogelstein, J.~Brown \emph{et~al.},
   biofidelic neural architectures,'' arXiv:2507.10951, 2025.
 
 \bibitem{zhang2026synaptic}
-X.~Zhang, ``Synaptic placement reflects shared input in drosophila descending
+X.~Zhang, ``Synaptic placement reflects shared input in {D}rosophila descending
   neurons,'' arXiv:2610.00690, 2026.
 
 \bibitem{drummond2026population}
 N.~Drummond, A.~Zhao, and A.~Borst, ``Population morphology implies a common
-  developmental blueprint for drosophila motion detectors.'' in \emph{PLoS
+  developmental blueprint for {D}rosophila motion detectors,'' in \emph{PLoS
   computational biology}, 2026.
+
+\bibitem{jo2026simulating}
+\BIBentryALTinterwordspacing
+T.~Jo, ``Simulating {A}lzheimer's amyloid-like pathology on a fly central
+  nervous system connectome,'' in \emph{arXiv (Cornell University)}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Cornell University, 2026. [Online]. Available:
+  \url{https://arxiv.org/pdf/2610.19153}
+\BIBentrySTDinterwordspacing
+
+\bibitem{an2026sparse}
+\BIBentryALTinterwordspacing
+D.~An, ``How sparse can a fly-brain model be? {C}onnection strength, wiring
+  placement, network state and task jointly determine function-preserving
+  compression of the {D}rosophila connectome,'' in \emph{bioRxiv (Cold Spring
+  Harbor Laboratory)}.\hskip 1em plus 0.5em minus 0.4em\relax Cold Spring
+  Harbor Laboratory, 2026. [Online]. Available:
+  \url{https://www.biorxiv.org/content/10.64898/2026.09.19.752860}
+\BIBentrySTDinterwordspacing
 
 \bibitem{aerts2016brain}
 H.~Aerts, W.~Fias, K.~Caeyenberghs, and D.~Marinazzo, ``Brain networks under
@@ -126,12 +145,12 @@ S.~Luca, T.~P. Xiao, F.~S. Chance, S.~Agarwal, C.~Teeter, and G.~W. Chapman,
   1766765, 2026.
 
 \bibitem{spyrou2024spikefi}
-T.~Spyrou, S.~Hamdioui, and H.-G. Stratigopoulos, ``Spikefi: A fault injection
-  framework for spiking neural networks,'' arXiv:2412.06795, 2024.
+T.~Spyrou, S.~Hamdioui, and H.-G. Stratigopoulos, ``{S}pike{Fi}: A fault
+  injection framework for spiking neural networks,'' arXiv:2412.06795, 2024.
 
 \bibitem{gogebakan2024spikingjet}
 A.~B. G{\"o}{\u{g}}ebakan, E.~Magliano, A.~Carpegna, A.~Ruospo, A.~Savino, and
-  S.~D. Carlo, ``Spikingjet: Enhancing fault injection for fully and
+  S.~D. Carlo, ``{S}piking{JET}: Enhancing fault injection for fully and
   convolutional spiking neural networks,'' in \emph{2024 IEEE 30th
   International Symposium on On-Line Testing and Robust System Design
   (IOLTS)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2024, pp. 1--7.
@@ -164,7 +183,7 @@ J.~Gracia-Mor{\'a}n, J.~C. Baraza-Calvo, J.-C. Ruiz, D.~de~Andr{\'e}s,
 \bibitem{shuang2023opplod}
 F.~Shuang, Y.~Zhu, Y.~Xie, L.~Zhao, Q.~Xie, J.~Zhao \emph{et~al.}, ``Opplod:
   the opponency based looming detector, model extension of looming sensitivity
-  from lgmd to lplc2,'' arXiv:2302.10284, 2023.
+  from {LGMD} to lplc2,'' arXiv:2302.10284, 2023.
 
 \bibitem{yik2023neurobench}
 J.~Yik, K.~V. den Berghe, D.~den Blanken, Y.~Bouhadjar, M.~Fabre, P.~Hueber
@@ -177,12 +196,12 @@ T.~Medvedeva, A.~Franci, and F.~Casta{\~n}os, ``Formalizing neuromorphic
   arXiv:2506.10203, 2025.
 
 \bibitem{goodman2009brian}
-D.~F.~M. Goodman, ``The brian simulator,'' \emph{Frontiers in Neuroscience},
+D.~F.~M. Goodman, ``The {B}rian simulator,'' \emph{Frontiers in Neuroscience},
   vol.~3, no.~2, pp. 192--197, 2009.
 
 \bibitem{jang2023azimuthal}
 H.~Jang, D.~P. Goodman, J.~Ausborn, and C.~R. von Reyn, ``Azimuthal invariance
-  to looming stimuli in the drosophila giant fiber escape circuit,''
+  to looming stimuli in the {D}rosophila giant fiber escape circuit,''
   \emph{Journal of Experimental Biology}, vol. 226, no.~8, 2023.
 
 \bibitem{dorkenwald2024neuronal}
@@ -193,7 +212,7 @@ S.~Dorkenwald, A.~Matsliah, A.~R. Sterling, P.~Schlegel, S.-C. Yu, C.~E.
 \bibitem{gaitanidis2025drosophila}
 A.~Gaitanidis, V.~Pampanin, J.~Thiem, G.~Kalaras, L.~Huthmacher, S.~Hürkey,
   D.~Kadas, A.~Dimitriadou, A.~Ntogka, S.~Sanyal, C.~Consoulas, and C.~Duch,
-  ``The drosophila escape motor circuit shows differential vulnerability to
+  ``The {D}rosophila escape motor circuit shows differential vulnerability to
   aging linked to functional decay,'' \emph{PLoS Biology}, vol.~23, no.~12, p.
   e3003553, 2025.
 

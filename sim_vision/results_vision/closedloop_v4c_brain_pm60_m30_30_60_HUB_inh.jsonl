@@ -1,0 +1,12 @@
+{"seed": 0, "phi_t_deg": -60.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.04982597862991945, "escaped": false, "n_total": 1230488}
+{"seed": 1, "phi_t_deg": -60.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.04958702930294148, "escaped": false, "n_total": 1086084}
+{"seed": 2, "phi_t_deg": -60.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.049692256178959206, "escaped": false, "n_total": 1084459}
+{"seed": 0, "phi_t_deg": -30.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.048957054794888315, "escaped": false, "n_total": 504446}
+{"seed": 1, "phi_t_deg": -30.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.04556091090231484, "escaped": false, "n_total": 568416}
+{"seed": 2, "phi_t_deg": -30.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.04623795097394048, "escaped": false, "n_total": 564738}
+{"seed": 0, "phi_t_deg": 30.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.08710552076585261, "escaped": true, "n_total": 1253923}
+{"seed": 1, "phi_t_deg": 30.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.07535750345208264, "escaped": true, "n_total": 1253128}
+{"seed": 2, "phi_t_deg": 30.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.08189724049109376, "escaped": true, "n_total": 1251983}
+{"seed": 0, "phi_t_deg": 60.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.11328885770921975, "escaped": true, "n_total": 1252887}
+{"seed": 1, "phi_t_deg": 60.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.10779542733505439, "escaped": true, "n_total": 1250581}
+{"seed": 2, "phi_t_deg": 60.0, "mode": "brain", "fault": "HUB_inh", "min_dist": 0.11251232975966438, "escaped": true, "n_total": 1250411}
