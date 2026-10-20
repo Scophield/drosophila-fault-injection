@@ -1,0 +1,12 @@
+{"trial": 0, "pop_rate": 114.79166666666667, "n_total_spikes": 56116, "latency_ms": 4.2, "frac_edges_modified": 0.08649148359099, "n_cells": 8889, "wall": 3.6677229404449463}
+{"trial": 1, "pop_rate": 93.33333333333334, "n_total_spikes": 43072, "latency_ms": 4.2, "frac_edges_modified": 0.0873480973308809, "n_cells": 8889, "wall": 3.5752830505371094}
+{"trial": 2, "pop_rate": 99.58333333333334, "n_total_spikes": 45682, "latency_ms": 4.5, "frac_edges_modified": 0.08589858602411625, "n_cells": 8889, "wall": 3.65097713470459}
+{"trial": 3, "pop_rate": 116.875, "n_total_spikes": 327246, "latency_ms": 4.4, "frac_edges_modified": 0.08597982120706073, "n_cells": 8889, "wall": 4.5594093799591064}
+{"trial": 4, "pop_rate": 101.45833333333334, "n_total_spikes": 48465, "latency_ms": 4.2, "frac_edges_modified": 0.08643966800121627, "n_cells": 8889, "wall": 3.5981757640838623}
+{"trial": 5, "pop_rate": 110.0, "n_total_spikes": 56337, "latency_ms": 4.2, "frac_edges_modified": 0.0891769491126514, "n_cells": 8889, "wall": 3.72009015083313}
+{"trial": 6, "pop_rate": 100.83333333333334, "n_total_spikes": 48075, "latency_ms": 4.4, "frac_edges_modified": 0.08408570298548573, "n_cells": 8889, "wall": 3.6127750873565674}
+{"trial": 7, "pop_rate": 101.25, "n_total_spikes": 43174, "latency_ms": 4.1000000000000005, "frac_edges_modified": 0.08736360225160604, "n_cells": 8889, "wall": 3.7857484817504883}
+{"trial": 8, "pop_rate": 109.16666666666667, "n_total_spikes": 52181, "latency_ms": 4.2, "frac_edges_modified": 0.0861463997143384, "n_cells": 8889, "wall": 3.721951484680176}
+{"trial": 9, "pop_rate": 103.33333333333334, "n_total_spikes": 271058, "latency_ms": 4.1000000000000005, "frac_edges_modified": 0.08583086795154753, "n_cells": 8889, "wall": 4.3232502937316895}
+{"trial": 10, "pop_rate": 108.125, "n_total_spikes": 53444, "latency_ms": 4.5, "frac_edges_modified": 0.08553865983018931, "n_cells": 8889, "wall": 3.625899076461792}
+{"trial": 11, "pop_rate": 98.54166666666667, "n_total_spikes": 48188, "latency_ms": 4.5, "frac_edges_modified": 0.08772127559380367, "n_cells": 8889, "wall": 3.5968823432922363}

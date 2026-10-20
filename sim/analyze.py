@@ -127,7 +127,7 @@ ax4 = ax.twinx()
 ax4.errorbar(xs_f4, [t / 1000 for t in tot], yerr=[np.zeros(4), np.zeros(4)], color="#ff7f0e", fmt="s--", lw=1.2, ms=3.5, capsize=2)
 ax4.set_ylabel("total spikes (k)", color="#ff7f0e")
 ax4.tick_params(axis="y", colors="#ff7f0e")
-ax.set_title("(b) F4 hub silencing: over-activity")
+ax.set_title("(b) F4 hub silencing")
 h_rate, h_tot = med(agg("real", "healthy")["rates"]), med(agg("real", "healthy")["tot"]) / 1000
 ax.axhline(h_rate, color="gray", ls=":", lw=0.7, zorder=0)
 ax4.axhline(h_tot, color="gray", ls=":", lw=0.7, zorder=0)
@@ -154,23 +154,25 @@ ax.legend(frameon=False, fontsize=6, loc="upper right")
 ax.spines[["top", "right"]].set_visible(False)
 
 ax = axs[1]
-labs = ["healthy", "hub 1%", "hub 2%", "hub 5%"]
-ks4 = ["healthy", "F4_hub_1pct", "F4_hub_2pct", "F4_hub_5pct"]
-tr = [summary["real"][k]["tot_med"] / 1000 for k in ks4]
-te = [summary["er"][k]["tot_med"] / 1000 for k in ks4]
-xs = np.arange(4)
-for i, k in enumerate(ks4):
-    a = agg("real", k)
-    ax.scatter(np.full(a["n"], xs[i] - 0.2) + jit.uniform(-0.06, 0.06, a["n"]), a["tot"] / 1000, s=4, color="#ffffff", alpha=0.55, lw=0, zorder=4)
-ax.bar(xs - 0.2, tr, 0.38, color=C_REAL, label="connectome")
-ax.bar(xs + 0.2, te, 0.38, color=C_ER, label="permuted null")
+hs = json.loads((SIM / "results" / "graph" / "hub_sign.json").read_text())
+order = [("healthy", "healthy"), ("F4_1pct", "hub 1%"), ("HUB_inh", "inh. only"),
+         ("HUB_exc", "exc. only"), ("INHrand_mass", "rand. inh.\n8.6%")]
+vals = [hs[k]["tot"] / 1000 for k, _ in order]
+labs = [v for _, v in order]
+xs = np.arange(len(order))
+cols = ["#4c72b0", "#4c72b0", "#d62728", "#7f7f7f", "#7f7f7f"]
+ax.bar(xs, vals, 0.7, color=cols)
+for i, (k, _) in enumerate(order):
+    ax.text(xs[i], vals[i] * 1.12, f"{vals[i]:.0f}", ha="center", va="bottom", fontsize=5.6)
+ax.axhline(hs["healthy"]["tot"] / 1000 * 2, color="k", ls=":", lw=0.7)
+ax.text(-0.45, hs["healthy"]["tot"] / 1000 * 2.25, "2$\\times$ healthy", fontsize=5.4, ha="left", va="bottom")
+ax.set_xlim(-0.6, 4.6)
+ax.set_yscale("log")
+ax.set_ylim(20, 1600)
 ax.set_xticks(xs)
-ax.set_xticklabels(labs, fontsize=6.5)
+ax.set_xticklabels(labs, fontsize=6.2)
 ax.set_ylabel("total spikes (k)")
-ax.set_ylim(0, 74)
-ax.annotate("null command: median 0.0 Hz", xy=(-0.45, 68), fontsize=5.8, ha="left", va="center", color="#333333")
-ax.set_title("(b) Hub silencing: over-activity")
-ax.legend(frameon=False, fontsize=5.2, loc="upper right", ncol=1, handlelength=1.0, handletextpad=0.4, labelspacing=0.25, borderaxespad=0.1)
+ax.set_title("(b) Hub silencing: activity by sign")
 ax.spines[["top", "right"]].set_visible(False)
 fig4.savefig(FIGS / "fig4_topology.pdf")
 plt.close(fig4)
