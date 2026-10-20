@@ -1,3 +1,8 @@
 paper/main.pdf
 paper/main.aux
 paper/main.log
+
+__pycache__/
+*.pyc
+
+Drosophila_brain_model

@@ -20,12 +20,16 @@ EP_DUR_MS = 1000.0
 V_BURST = 0.35
 BURST_S = 0.45
 BURST_DELAY_MS = 250.0
-THETA_HZ = 51.4
+HEADING_LIMIT_RAD = np.radians(100.0)
+
 SMOOTH_N = 5
 
 
 def load_calib():
     return json.loads((OUT / "calib.json").open().read())
+
+
+THETA_HZ = float(load_calib().get("theta_demo_hz") or 51.4)
 
 
 def frame_lr_diff(rec, t0_ms, t1_ms, cmd_df, sim):
@@ -60,7 +64,8 @@ def run_episode(sim, rf_map, cmd_df, seed, phi_t_deg, fault=None, mode="brain"):
     log = []
     t_ms = 0.0
     total_spikes = 0
-    for k in range(n_frames):
+    horizon_frames = n_frames
+    for k in range(horizon_frames):
         dx, dy = tx - fly_x, ty - fly_y
         dist = max(np.hypot(dx, dy), 0.02)
         phi_now = np.degrees(np.arctan2(dy, dx)) - np.degrees(heading)
@@ -97,7 +102,9 @@ def run_episode(sim, rf_map, cmd_df, seed, phi_t_deg, fault=None, mode="brain"):
         if mode == "brain":
             c = load_calib()
             omega = -K_TURN_DEG_S * np.clip(c["data_sign"] * (lr_s - c["bias"]) / c["lr_ref"], -1.0, 1.0)
-        elif mode == "silence":
+        elif mode == "steer_disabled":
+            omega = 0.0
+        elif mode == "readout_disabled":
             omega = 0.0
         elif mode == "flip":
             c = load_calib()
@@ -105,14 +112,16 @@ def run_episode(sim, rf_map, cmd_df, seed, phi_t_deg, fault=None, mode="brain"):
         elif mode == "handrule":
             omega = -K_TURN_DEG_S * np.clip(phi_now / 60.0, -1.0, 1.0)
         cmd_hist.append(cmd_sum)
-        cmd_s = float(np.mean(cmd_hist[-SMOOTH_N:]))
-        if cmd_s >= THETA_HZ and burst_until < 0.0:
-            if len(cmd_hist) >= 2 and cmd_hist[-2] >= THETA_HZ:
+        cmd_avg = float(np.mean(cmd_hist[-SMOOTH_N:])) / len(cmd_rates)
+        cmd_s = cmd_avg
+        if mode != "readout_disabled" and cmd_avg >= THETA_HZ and burst_until < 0.0:
+            if len(cmd_hist) >= 2 and cmd_hist[-2] / len(cmd_rates) >= THETA_HZ:
                 burst_until = t_ms + BURST_DELAY_MS + BURST_S * 1000.0
         bursting = (t_ms >= burst_until - BURST_S * 1000.0) and (t_ms < burst_until) and burst_until > 0.0
         v_now = V_BURST if bursting else V_FLY
         if not bursting:
-            heading += np.radians(omega) * (FRAME_DT_MS / 1000.0)
+            heading_new = heading + np.radians(omega) * (FRAME_DT_MS / 1000.0)
+            heading = np.clip(heading_new, -HEADING_LIMIT_RAD, HEADING_LIMIT_RAD)
         fly_x += v_now * np.cos(heading) * (FRAME_DT_MS / 1000.0)
         fly_y += v_now * np.sin(heading) * (FRAME_DT_MS / 1000.0)
         gapx, gapy = fly_x - tx, fly_y - ty
@@ -126,6 +135,8 @@ def run_episode(sim, rf_map, cmd_df, seed, phi_t_deg, fault=None, mode="brain"):
         t_ms += FRAME_DT_MS
         if np.hypot(fly_x - tx, fly_y - ty) <= D_CONTACT:
             break
+        if k == n_frames - 1 and burst_until > 0.0 and burst_until > t_ms:
+            horizon_frames = int(np.ceil(burst_until / FRAME_DT_MS))
     min_dist = min(r["dist"] for r in log)
     return {"seed": seed, "phi_t_deg": phi_t_deg, "mode": mode, "fault": fault, "min_dist": min_dist,
             "escaped": bool(min_dist > D_CONTACT), "n_total": int(total_spikes), "log": log}
@@ -140,20 +151,23 @@ def build_fault(sim, fault, rng):
         drop = rng.random(len(w0)) < 0.50
         return np.where(drop, 0.0, w0)
     if fault == "F4_1pct":
-        exc = set(int(f) for f in sim.sens_flyids)
-        ro = set()
-        import pandas as pd
-        from run_openloop import get_dn_sides
-        cmd_df, dn_all = get_dn_sides()
-        ro = set(cmd_df.flyid.tolist())
-        pool = np.asarray([i for i, f in sim.i2flyid.items() if f not in exc and f not in ro], dtype=np.int64)
-        outdeg = np.bincount(sim._pre_idx, weights=sim.w0 / 2.75e-4, minlength=sim.n_neurons)
-        cand = np.argsort(-outdeg[pool])[: int(round(0.01 * len(pool)))]
-        hub = set(pool[cand].tolist())
+        from run_openloop import load_sensory, get_dn_sides
+        sensory = load_sensory()
+        exc = set(int(f) for f in sensory["root_id"])
+        cmd_df, _ = get_dn_sides()
+        protected = exc | set(cmd_df.flyid.tolist())
+        out_deg = np.bincount(sim._pre_idx, weights=np.abs(sim.w0) / 2.75e-4, minlength=sim.n_neurons)
+        order = np.argsort(-out_deg)
+        hubs = []
+        for i in order:
+            if sim.i2flyid[int(i)] not in protected:
+                hubs.append(int(i))
+            if len(hubs) >= int(round(0.01 * sim.n_neurons)):
+                break
+        hub = set(hubs)
         w = w0.copy()
-        for k in range(len(sim._pre_idx)):
-            if sim._pre_idx[k] in hub:
-                w[k] = 0.0
+        mask = np.isin(sim._pre_idx, list(hub))
+        w[mask] = 0.0
         return w
     return None
 
@@ -186,7 +200,7 @@ def main():
                     with (OUT / f"episodes_{args.tag}" / f"{mode}_{fault or 'healthy'}_phi{int(phi)}_s{seed}.json").open("w") as fh:
                         json.dump(res, fh)
                     print(json.dumps({k: rows[-1][k] for k in ("mode", "fault", "phi_t_deg", "seed", "min_dist", "escaped", "n_total")}), flush=True)
-    out = OUT / f"closedloop_{args.tag}_{args.modes.replace(',', '_')}{'_' + args.faults.replace(',', '_') if args.faults else ''}.jsonl"
+    out = OUT / f"closedloop_{args.tag}_{args.modes.replace(',', '_')}_p{args.phis.replace(',', '_').replace('-', 'm')}{'_' + args.faults.replace(',', '_') if args.faults else ''}.jsonl"
     with out.open("w") as fh:
         for r in rows:
             fh.write(json.dumps(r) + "\n")

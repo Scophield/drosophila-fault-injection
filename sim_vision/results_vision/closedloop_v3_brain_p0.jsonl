@@ -1,0 +1,3 @@
+{"seed": 0, "phi_t_deg": 0.0, "mode": "brain", "fault": null, "min_dist": 0.04744779873534153, "escaped": false, "n_total": 5622}
+{"seed": 1, "phi_t_deg": 0.0, "mode": "brain", "fault": null, "min_dist": 0.04340831382135451, "escaped": false, "n_total": 5989}
+{"seed": 2, "phi_t_deg": 0.0, "mode": "brain", "fault": null, "min_dist": 0.043237048105649156, "escaped": false, "n_total": 5179}
