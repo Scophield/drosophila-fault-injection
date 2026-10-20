@@ -122,3 +122,21 @@ LIF 抽象(单室、delta 突触、无可塑性、Poisson 驱动);剂量上界�
 ## 超级审稿(PAPERGURU)执行(10-18)
 
 按八项评级修约执行:① intro"benchmark"软化为"reference point";② 阈值放大论证升级为两点验证(p=0.5→76.5%、p=0.75→89.2%,均高于线性界,并注明近阈值处应失效);③ 三条头部对比(F4-1%、F2-50%、F5-both)补 Mann–Whitney U,p<10⁻⁴(n=12/条件);④ 摘要补"54.5M synapse contacts";⑤ F1 注明均值保持(lognormal 因子 exp(σz−σ²/2));⑥ 引 Brian2(Goodman 2009)、Luca 2026(Front. Neurosci.,边缘端权重扰动缓解)、Aerts 2016(Brain,脑网络 lesion 传统锚定);⑦ 包络判据注明 1.5×–2× 区间内 F4-1% 恒 12/12 违例(数值验证);⑧ 图 3(b) 加健康中位参考线、图 4(b) 注明"null command: 0.0 Hz (all conditions)"、图 3 题注补单位、θ 中点算式入文、m_k 注明计 k 步游走(布线密度代理)、限制段补"单一驱动速率"。排版经五轮微缩恢复 5 页、p5 纯文献;refs 35 条待 ref_verify 终验。
+
+## 第六轮:ISCAS 2027 规则核查与硬缺陷修复(10-20)
+
+按 ISCAS 2027 官方 Author Information(<https://epapers2.org/iscas2027/ESR/authorinfo1.php>,2026-10-20 取)逐条核对,发现并修复五处**必须修**的缺陷;全部改动只涉及正文、图 5 与图注,不涉仿真。
+
+**1. 页数规则违反 — 已修。** 官方原文:"Maximum 5 pages, of which 4 are for technical content including text, figures and references (if any), and with one additional optional 5th page containing only references"。修改前 p5 以 TABLE I 开头,承载 P1–P5、pathway-decay 段与整节 Limitations and Conclusion,属正文侵入第 5 页。处置:Table I 改写为两段正文(P1/P2 合并、P3 并入延迟讨论、P4/P5 独立成段),§IV-E 开头压缩,§IV-B/C/D 逐句收紧,Fig. 0/2/3/4 宽度分别降为 0.86/0.90/0.93/0.93,浮动体间距 7pt。**验证:p4 末行为 §VI 的 "behavior.",p5 首行 "REFERENCES",第 5 页仅含文献。**
+
+**2. 悬空引用 `[?]` — 已修。** `sections/intro.tex` 仍引用压缩版面时删除的 `katti2026neuromorphic`,PDF 第 1 页渲染为 "promise the required efficiency [?]"。改为 `\cite{gerven2025neuromorphic}`。同时核对全库:bib 35 条,被引 35 条,**无孤儿、无缺失**;`main.blg` 警告数 0。
+
+**3. 摘要歧义与漏项 — 已修。** 原文 "retains 76% of command rate after 50% connection loss and under 10% random-unit output silencing" 会被读成两者皆 76%(实为 76.5% 与"中位不变")。重写为分号并列的三项独立陈述,补入闭环结果(50% 损失下 0/12,读出仅在威胁 7–11 cm 时才越过触发阈值),并删去易误解的 "36 fault conditions"(实为 18 条件 × 2 图),改为"每种故障 3–4 个剂量、每条件 12 trials、生物图与边置换零模型各一套"。
+
+**4. §IV-E 阈值句自相矛盾 — 已修。** 原文 "the command rate stays above the open-loop threshold yet falls below θ_demo" 在逻辑上不可能(θ_demo=25.6 < θ=51.4)。实测复核:F2_50 单目标驱动下 cmd_avg 峰值中位 37.5 Hz,首次越过 25.625 Hz 在 420–500 ms,此时威胁距离 7–11 cm。改为:"open-loop 同剂量仍保留 72.4 Hz,但单目标驱动下读出峰值约 38 Hz、420–500 ms 才越过 θ_demo,此时威胁已 7–11 cm 外,晚于 250 ms 瞄准 + 450 ms 起飞"。
+
+**5. 试验次数重复计数 — 已修。** "24/24 at four azimuths (six seeds), 12/12 at held-out azimuths" 中的 12/12 属 24/24 子集。核对 `episodes_v4`:±30°、±60° 各 6/6(24/24),frontal 0/3;训练方位为 −60°、−30°(见 `calib.json` 的 `theta_source`),故留出方位为 **+30°、+60°**(12/12)。正文改为 "including 12/12 at the two untrained azimuths (+30°, +60°)"。
+
+**6. 图 5 字号 — 已修。** 原图题注 6.7 pt、轴标 5.8 pt。`fig_demo.py` 改为 title 7.5 pt、tick/轴标 8.0 pt,标题拆两行(条件 + 最近距离),面板间距 0.7,`x (m)` 移至轴下方居中。重生成后实测 8.3–9.3 pt,无重叠;题注同步改为 "Columns: healthy, F2_50, F4_1%, steering disabled; the distance in each label is the closest approach"。
+
+**终检:** 5 页;US Letter;24 个字体全部嵌入、Type 3 为 0;322 KB;Overfull box 0;`[?]` 0;第 5 页纯文献。

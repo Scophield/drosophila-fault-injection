@@ -18,6 +18,12 @@
 \setcounter{topnumber}{3}
 \setcounter{dbltopnumber}{3}
 \setcounter{totalnumber}{5}
+\setlength{\textfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\floatsep}{7pt plus 2pt minus 2pt}
+\setlength{\intextsep}{7pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{3pt}
+\setlength{\belowcaptionskip}{0pt}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 \begin{document}
@@ -31,7 +37,7 @@ Tokyo, Japan}}
 \maketitle
 
 \begin{abstract}
-Whole-brain point-neuron models built from complete synaptic wiring diagrams have begun to serve as controllers in embodied settings; fault tolerance has been probed on subnetworks and via targeted silencings but not compared across hardware-motivated fault classes on a whole-brain controller. We take the released leaky integrate-and-fire (LIF) whole-brain model of \emph{Drosophila melanogaster} (138{,}639 neurons, 15.1M signed connections, 54.5M synapse contacts) and inject five hardware-motivated fault classes---weight variability, connection loss, random-unit and hub output silencing, and sensory-channel deafferentation---scoring the population response of descending command neurons. Across 36 fault conditions (12 seeded trials each) under sustained escape-grade drive, the connectome absorbs 50\% lognormal weight variability, retains 76\% of command rate after 50\% connection loss and under 10\% random-unit output silencing, while silencing the top-1\% hubs by total outgoing contact count produces a 2.5$\times$ global over-activity rather than silence. An edge-permuted null preserving weight and degree statistics yields a zero median command rate in every tested condition (no trial reaches the transmission threshold), and relative pathway decay is topology-independent: robustness is consistent with threshold amplification on convergence structure, not graph redundancy alone. We distill the results into five candidate design implications for fault-tolerant neuromorphic controllers.
+Whole-brain point-neuron models built from complete wiring diagrams now serve as controllers in embodied settings, yet their fault tolerance has been probed only on subnetworks and via targeted silencings. We take the released leaky integrate-and-fire (LIF) whole-brain model of \emph{Drosophila melanogaster} (138{,}639 neurons, 15.1M signed connections, 54.5M contacts) and inject five hardware-motivated fault classes---weight variability, connection loss, random-unit and hub output silencing, and sensory deafferentation---scoring the population response of descending command neurons at three to four doses, 12 seeded trials each, on the biological graph and on an edge-permuted null. Under escape-grade drive the connectome absorbs 50\% lognormal weight variability; 50\% connection loss retains 76.5\% of command rate at a 33\% latency cost; 10\% random-unit output silencing leaves the median unchanged; silencing the top-1\% hubs produces a 2.5$\times$ over-activity rather than silence. The null, which preserves weights and degrees but reassigns every target, never reaches threshold and decays at the same relative rate, so robustness tracks threshold amplification on convergence structure rather than redundancy alone. A synthetic closed-loop escape task then exposes the limit of these metrics: at 50\% loss open-loop transmission is retained while escape collapses to 0/12, because the readout reaches its trigger only when the threat is 7--11\,cm away. Five candidate design implications follow.
 \end{abstract}
 
 \begin{IEEEkeywords}
