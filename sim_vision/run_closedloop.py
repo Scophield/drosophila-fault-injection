@@ -155,7 +155,7 @@ def build_fault(sim, fault, rng):
     if fault == "F2_50":
         drop = rng.random(len(w0)) < 0.50
         return np.where(drop, 0.0, w0)
-    if fault in ("F4_1pct", "HUB_inh", "HUB_exc"):
+    if fault == "F4_1pct":
         from run_openloop import load_sensory, get_dn_sides
         sensory = load_sensory()
         exc = set(int(f) for f in sensory["root_id"])
@@ -169,15 +169,10 @@ def build_fault(sim, fault, rng):
                 hubs.append(int(i))
             if len(hubs) >= int(round(0.01 * sim.n_neurons)):
                 break
-        hubs = np.asarray(hubs, dtype=np.int64)
-        if fault != "F4_1pct":
-            first = np.unique(sim._pre_idx, return_index=True)[1]
-            sign = np.zeros(sim.n_neurons, dtype=np.int64)
-            sign[sim._pre_idx[first]] = np.sign(sim.w0[first]).astype(np.int64)
-            keep = sign[hubs] < 0 if fault == "HUB_inh" else sign[hubs] > 0
-            hubs = hubs[keep]
+        hub = set(hubs)
         w = w0.copy()
-        w[np.isin(sim._pre_idx, hubs)] = 0.0
+        mask = np.isin(sim._pre_idx, list(hub))
+        w[mask] = 0.0
         return w
     return None
 
