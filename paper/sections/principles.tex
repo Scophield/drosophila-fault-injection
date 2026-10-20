@@ -1,25 +1,8 @@
 \section{Candidate Design Implications for Embodied Neuromorphic Controllers}
-\begin{table}[tb]
-\centering
-\caption{Candidate design implications from connectome fault injection, with quantitative anchors.}
-\label{tab:principles}
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}p{0.55cm}p{3.5cm}p{3.5cm}@{}}
-\toprule
-\# & Implication & Anchor (this study) \\
-\midrule
-P1 & Redundancy of wiring, not precision of weights & $\sigma{=}0.5$ lognormal noise: 99.4\% retention \\
-P2 & Distribute command integration & 10\% unit-output silencing: 100.4\% retention \\
-P3 & Budget latency for disconnection faults & 50\% connection loss: 76\% rate, $+33\%$ latency \\
-P4 & Regulate high-fanout units; monitor envelope & top-1\% hub silencing: $2.5\times$ over-activity \\
-P5 & Harden the sensory interface first & single-channel silencing retains 68--79\% median; both 0\% \\
-\bottomrule
-\end{tabular}
-\end{table}
+\label{sec:implications}
+Three of the five implications concern where redundancy pays. Because $50\%$ weight variability and $10\%$ unit-output silencing both leave the median command rate unchanged (99.4\% and 100.4\% of baseline), precision and per-unit yield can be traded against wiring redundancy: such a controller needs many converging routes, not accurate synapses, consistent with hardware observations\cite{arfa2025hardwareaware,thieu2022effects}. Disconnection is instead paid in latency rather than rate---$76.5\%$ of the rate survives at $50\%$ loss while latency rises $33\%$---so a real-time loop should budget the latency curve (Fig.~\ref{fig:curves}a).
 
-P1 and P2 follow from the flat F1 and F3 medians: computation lives in distributed convergence, consistent with hardware observations\cite{arfa2025hardwareaware,thieu2022effects}. P3: disconnection costs are latency; real-time loops should budget Fig.~\ref{fig:curves}a. P4: hub silencing is the only \emph{amplifying} mode; monitor envelope violation, not liveness. P5: each sensory channel alone suffices (68--79\% median), marking the sensor interface as the first redundancy candidate.
-
-Identical relative pathway decay yet a decodable command only in the biological graph argues against certifying embodied controllers by topology alone; fault injection belongs pre-deployment\cite{yik2023neurobench,medvedeva2025formalizing}.
+The other two implications concern failure modes that per-unit monitoring misses. Hub silencing is the only \emph{amplifying} class: it passes transmission while doubling activity, so controllers should monitor the activity envelope rather than liveness and should regulate high-fanout units before deployment. Deafferentation is the opposite extreme: either channel alone retains 68--79\% of the median rate, but losing both drives the pathway to zero, making the sensor interface---not the synaptic fabric---the first redundancy candidate. Because relative pathway decay is identical while only the biological graph yields a decodable command, fault injection belongs pre-deployment\cite{yik2023neurobench,medvedeva2025formalizing}.
 
 \section{Limitations and Conclusion}
-Our LIF abstraction (single compartments, no plasticity, Poisson drive) fixes one drive rate; doses kept the background regime intact, the hub analysis is descriptive, and correlated damage and recovery are excluded. Under the tested drive, the median command rate is preserved under weight noise and unit silencing and retains 76.5\% at 50\% loss; the dangerous failure is hub-silencing over-activity, and a preliminary synthetic loop shows that preserved transmission need not preserve behavior.
+Our LIF abstraction fixes one drive rate, the hub analysis is descriptive, and correlated damage and recovery are excluded. The instrumented pathway is one of many, so the tolerance ordering is a hypothesis for other pathways rather than a whole-brain law, and its documented vulnerability to aging\cite{gaitanidis2025drosophila} suggests tolerance is not a fixed property of the wiring either. Under the tested drive the median command rate survives weight noise and unit silencing and retains 76.5\% at 50\% loss; the dangerous failure is hub over-activity, and a synthetic loop shows preserved transmission need not preserve behavior.

@@ -161,6 +161,11 @@ J.~Gracia-Mor{\'a}n, J.~C. Baraza-Calvo, J.-C. Ruiz, D.~de~Andr{\'e}s,
   spiking convolutional neural network ({S-CNN}),'' \emph{Lecture Notes in
   Computer Science}, pp. 147--161, 2026.
 
+\bibitem{shuang2023opplod}
+F.~Shuang, Y.~Zhu, Y.~Xie, L.~Zhao, Q.~Xie, J.~Zhao \emph{et~al.}, ``Opplod:
+  the opponency based looming detector, model extension of looming sensitivity
+  from lgmd to lplc2,'' arXiv:2302.10284, 2023.
+
 \bibitem{yik2023neurobench}
 J.~Yik, K.~V. den Berghe, D.~den Blanken, Y.~Bouhadjar, M.~Fabre, P.~Hueber
   \emph{et~al.}, ``Neurobench: A framework for benchmarking neuromorphic
@@ -171,18 +176,25 @@ T.~Medvedeva, A.~Franci, and F.~Casta{\~n}os, ``Formalizing neuromorphic
   control systems: A general proposal and a rhythmic case study,''
   arXiv:2506.10203, 2025.
 
-\bibitem{shuang2023opplod}
-F.~Shuang, Y.~Zhu, Y.~Xie, L.~Zhao, Q.~Xie, J.~Zhao \emph{et~al.}, ``Opplod:
-  the opponency based looming detector, model extension of looming sensitivity
-  from lgmd to lplc2,'' arXiv:2302.10284, 2023.
-
 \bibitem{goodman2009brian}
 D.~F.~M. Goodman, ``The brian simulator,'' \emph{Frontiers in Neuroscience},
   vol.~3, no.~2, pp. 192--197, 2009.
+
+\bibitem{jang2023azimuthal}
+H.~Jang, D.~P. Goodman, J.~Ausborn, and C.~R. von Reyn, ``Azimuthal invariance
+  to looming stimuli in the drosophila giant fiber escape circuit,''
+  \emph{Journal of Experimental Biology}, vol. 226, no.~8, 2023.
 
 \bibitem{dorkenwald2024neuronal}
 S.~Dorkenwald, A.~Matsliah, A.~R. Sterling, P.~Schlegel, S.-C. Yu, C.~E.
   McKellar \emph{et~al.}, ``Neuronal wiring diagram of an adult brain.''
   \emph{Nature}, vol. 634, no. 8032, pp. 124--138, 2024.
+
+\bibitem{gaitanidis2025drosophila}
+A.~Gaitanidis, V.~Pampanin, J.~Thiem, G.~Kalaras, L.~Huthmacher, S.~Hürkey,
+  D.~Kadas, A.~Dimitriadou, A.~Ntogka, S.~Sanyal, C.~Consoulas, and C.~Duch,
+  ``The drosophila escape motor circuit shows differential vulnerability to
+  aging linked to functional decay,'' \emph{PLoS Biology}, vol.~23, no.~12, p.
+  e3003553, 2025.
 
 \end{thebibliography}
