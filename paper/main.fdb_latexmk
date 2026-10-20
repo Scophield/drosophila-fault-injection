@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1792474320 "main.aux" "main.bbl" "main" 1792474322 0
-  "./refs.bib" 1792474301 13976 60962d7e6f0f761a2f74f456a1026501 ""
+["bibtex main"] 1792494225 "main.aux" "main.bbl" "main" 1792494227 0
+  "./refs.bib" 1792494223 13216 3cef18856e7b5af8d0c34a02636c4358 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1792474322 9497 04786e01c2b36a62323235138bc4fe01 "pdflatex"
+  "main.aux" 1792494226 9500 a70ddd432921b88e9df240110ddfe725 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1792474320 "main.tex" "main.pdf" "main" 1792474322 0
+["pdflatex"] 1792494225 "main.tex" "main.pdf" "main" 1792494227 0
   "/etc/texmf/web2c/texmf.cnf" 1790133869 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -197,16 +197,16 @@
   "figs/fig2_baseline.pdf" 1792470010 15236 1d89d511b9f02ee35f159e7ee2ebfcc7 ""
   "figs/fig3_curves.pdf" 1792470010 21010 dc205abf9623558f02a030224eabc4b7 ""
   "figs/fig4_topology.pdf" 1792470010 19636 067f68cc7316e7ebbade29dd0b364c84 ""
-  "figs/fig5_demo.pdf" 1792474260 19769 e7988b88bd3ba7709412b94ad7c60816 ""
-  "main.aux" 1792474322 9497 04786e01c2b36a62323235138bc4fe01 "pdflatex"
-  "main.bbl" 1792474320 8705 1c17c29ab1f0dd44f3434701cfa3d705 "bibtex main"
-  "main.out" 1792474322 3629 dceb74423b3dbf0598d582a8f80d5408 "pdflatex"
+  "figs/fig5_demo.pdf" 1792494128 18515 b4249996b3e48d27511837f1e691e49b ""
+  "main.aux" 1792494226 9500 a70ddd432921b88e9df240110ddfe725 "pdflatex"
+  "main.bbl" 1792494225 8260 9fb913332abe9ffbfe563a2ffb54c7e9 "bibtex main"
+  "main.out" 1792494226 3629 dceb74423b3dbf0598d582a8f80d5408 "pdflatex"
   "main.tex" 1792470010 2860 346219c1c3fd9d7ee6e06831d41fc70f ""
-  "sections/intro.tex" 1792470010 3073 bcdbc7e0f217a1979f1ff39872aa6e3b ""
+  "sections/intro.tex" 1792494097 3081 d59d8d9b93bcb99983565d1b6d919a5f ""
   "sections/methods.tex" 1792470010 5534 f3f7dac49b86630d4326069ed4a8e636 ""
-  "sections/principles.tex" 1792474319 2162 95c6708235d89d7df970381cfd6cc61d ""
-  "sections/related.tex" 1792474301 2648 d17c71615ca862c7e3eafcf2ab329e62 ""
-  "sections/results.tex" 1792474319 9141 0d79e0ee69326a5c5ffd4c0df23e6bd8 ""
+  "sections/principles.tex" 1792494181 2174 0ad157ea7b29546a41038d4a18d8ba36 ""
+  "sections/related.tex" 1792494223 2559 ebfa960ac0268bbdc9a6a91e72b0dc8b ""
+  "sections/results.tex" 1792494223 9227 7c67474e61b539a79c54591db10f3824 ""
   (generated)
   "main.aux"
   "main.log"

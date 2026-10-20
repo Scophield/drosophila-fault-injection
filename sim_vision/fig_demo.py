@@ -18,7 +18,8 @@ def load(tag, mode, fault, phi, seed):
 
 
 def main():
-    tag = "v3"
+    import sys
+    tag = sys.argv[sys.argv.index('--tag') + 1] if '--tag' in sys.argv else 'v4'
     phi, seed = -30.0, 0
     panels = [
         ("brain", "healthy", "no fault"),
@@ -26,7 +27,7 @@ def main():
         ("brain", "F4_1pct", "F4: hub silence"),
         ("steer_disabled", "healthy", "steering disabled"),
     ]
-    fig, axes = plt.subplots(1, 4, figsize=(3.45, 1.02), sharex=True, sharey=True)
+    fig, axes = plt.subplots(1, 4, figsize=(3.45, 0.95), sharex=True, sharey=True)
     for ax, (mode, fault, lbl) in zip(axes, panels):
         e = load(tag, mode, fault, phi, seed)
         if e is None:
@@ -42,13 +43,13 @@ def main():
         ax.scatter([xs[0]], [ys[0]], s=10, color="#1f4e79", zorder=3)
         hit = e["min_dist"] <= 0.05
         tag_txt = "contact" if hit else f"escaped"
-        ax.set_title(f"{lbl}\n{tag_txt} ({e['min_dist']*100:.0f} cm)", fontsize=5.2, pad=1.5)
+        ax.set_title(f"{lbl}\n{tag_txt} ({e['min_dist']*100:.0f} cm)", fontsize=6.0, pad=1.8)
         ax.set_xlim(-0.06, 0.28)
         ax.set_ylim(-0.10, 0.20)
-        ax.tick_params(labelsize=4.2, length=1.2)
+        ax.tick_params(labelsize=4.8, length=1.2)
         ax.set_aspect("equal")
-    fig.text(0.5, 0.0, "x (m)", ha="center", fontsize=4.5)
-    axes[0].set_ylabel("y (m)", fontsize=4.5)
+    fig.text(0.5, 0.0, "x (m)", ha="center", fontsize=5.2)
+    axes[0].set_ylabel("y (m)", fontsize=5.2)
     fig.tight_layout(rect=(0, 0.02, 1, 1), h_pad=0.2, w_pad=0.2)
     FIG.mkdir(exist_ok=True)
     fig.savefig(FIG / "fig5_demo.pdf", bbox_inches="tight", pad_inches=0.01)

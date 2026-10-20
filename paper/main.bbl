@@ -31,10 +31,6 @@ W.~Guo, H.~Zhang, P.~Li, T.~Cai, Z.~Chen, Y.~Guo \emph{et~al.}, ``Neurovla: A
   brain-inspired embodied intelligence for fluid and fast reflexive robotics
   control,'' arXiv:2601.14628, 2026.
 
-\bibitem{katti2026neuromorphic}
-K.~Katti, P.~Chaudhari, and D.~Jariwala, ``Neuromorphic computing for low-power
-  artificial intelligence,'' arXiv:2604.04727, 2026.
-
 \bibitem{gerven2025neuromorphic}
 M.~van Gerven, ``Neuromorphic intelligence,'' arXiv:2509.11940, 2025.
 
@@ -158,12 +154,6 @@ G.~Chessa, Y.~Yang, E.~Jones, M.~Favalli, and D.~Bertozzi, ``Cross-layer
   computing,'' in \emph{Proceedings of the International Conference on
   Neuromorphic Systems}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2026, pp.
   31--38.
-
-\bibitem{imanov2026energyefficient}
-O.~Y.~L. Imanov, D.~U. Kulali, T.~Yilmaz, D.~Erisken, and R.~I. Turhan,
-  ``Energy-efficient neuromorphic computing for edge ai: A framework with
-  adaptive spiking neural networks and hardware-aware optimization,''
-  arXiv:2602.02439, 2026.
 
 \bibitem{graciamorn2026dependability}
 J.~Gracia-Mor{\'a}n, J.~C. Baraza-Calvo, J.-C. Ruiz, D.~de~Andr{\'e}s,

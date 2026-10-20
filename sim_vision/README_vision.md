@@ -29,7 +29,7 @@ LC4/LPLC2→GF/DN 是果蝇对逼近物体(loom)的**逃逸**通路(Klapoetke et
 
 **B 校准**:仅用训练条件(方位 −60°/−30°、慢速逼近);`bias`、`lr_ref`、`data_sign` 冻结于 `calib.json`,测试方位(+30°/+60°)不参与任何参数。
 
-**C 闭环无故障**:24/24(四方位 × 6 种子)逃逸成功,最小距离中位 0.09–0.11 m(碰撞判据 = 威胁半径 0.05 m);两个保留方位(+30°/+60°)12/12;正前方位 0/3——左右差读出的对称盲区,如实展示。
+**C 闭环无故障**(v4,Poisson 输入已播种):24/24(四方位 × 6 种子)逃逸成功,最小距离中位 0.09–0.11 m(碰撞判据 = 威胁半径 0.05 m);两个保留方位(+30°/+60°)12/12;正前方位 0/3——左右差读出的对称盲区,如实展示。
 
 **D 因果对照**(同刺激、同时限、同种子;0/12 指全部失败):
 - `steer_disabled`(转向支路关闭,弹射支路仍由网络触发):0/12——直线弹射不足以逃逸;
@@ -41,7 +41,7 @@ LC4/LPLC2→GF/DN 是果蝇对逼近物体(loom)的**逃逸**通路(Klapoetke et
 **E 故障注入**(brain 模式,12 集/故障;F4 名单与原实验 F4 同一算法):
 - F2_25(随机损坏 25% 连接):10/12(83%),最小距离基本保持;
 - F2_50(50% 连接):0/12——阈值悬崖:读出率降至 θ_demo 以下(传输仍保持,但弱驱动场景下命令率不足以触发逃逸);
-- F4_1pct(输出强度前 1% 单元静默,排除兴奋池与读出;1,386 单元,算法同 `sim/sweep.py`):**12/12 逃逸保持,但总尖峰升至健康 1.83×**——与开环"传输保持+活动包络违反"的结论同序。
+- F4_1pct(输出强度前 1% 单元静默,排除兴奋池与读出;1,386 单元,算法同 `sim/sweep.py`):**12/12 逃逸保持,总尖峰升至健康 1.73×**(升高,但仍低于 2× 包络)。
 
 **统计口径**:健康 24 集(4 方位×6 种子)+ 3 集正前;故障与对照各 12 集(4 方位×3 种子)。成功率均以"逃逸集数/总集数"报告,小样本不做事后区间估计。
 
@@ -49,7 +49,8 @@ LC4/LPLC2→GF/DN 是果蝇对逼近物体(loom)的**逃逸**通路(Klapoetke et
 
 - **正前盲区**:方位 0° 时左右差读出对称失效;闭环实测 0/3(已入论文),8 DN 左右差结构的真实局限。
 - **合成性声明**:视觉编码用世界坐标方位(未建模眼睛/头部朝向,转头不改变输入图样);loom 包络由预设轨迹给出而非实际距离;2D 运动学执行器为外部组件。这是合成演示,不是生物学定量。
-- **量纲**:命令率一律用 8 个 DN 的**平均单细胞率**(与论文 `pop_rate` 定义一致);触发阈值 θ_demo=26.3 Hz 由训练条件(φ∈{−60°,−30°})轨迹在 t∈[250,300] ms 的响应水平中位校准并冻结,与开环全池驱动的 θ=51.4 Hz 区分。
+- **量纲**:命令率一律用 8 个 DN 的**平均单细胞率**(与论文 `pop_rate` 定义一致);触发阈值 θ_demo=25.6 Hz 由训练条件(φ∈{−60°,−30°},`episodes_train/`,已随仓库归档)轨迹在 t∈[250,300] ms 的响应水平中位校准并冻结,来源记录于 calib.json 的 `theta_source` 字段,与开环全池驱动的 θ=51.4 Hz 区分。
+- **随机性播种**:每个 episode 以同一 seed 播种 NumPy(故障掩码)与 Brian2(Poisson 输入),因此同一 seed 下健康/故障/对照使用相同噪声实现,配对比较成立。
 - **弹射定向**:GF 式弹射在触发后延迟 250 ms(定向反射时标)沿当时朝向弹射;弹射中不转向,落地后继续行走转向;转向角限幅 ±100°(避免无限自旋);episode 上限 1000 ms(命中即终止)。执行器参数对所有模式(含对照)一致。
 - **u 门控**:loom 驱动仅在威胁出现(t≥100 ms)后非零,保证无刺激/静息段零驱动。
 
@@ -73,14 +74,28 @@ git clone https://github.com/philshiu/Drosophila_brain_model.git   # 上游数�
 ln -s <parent>/Drosophila_brain_model .
 pip install -r requirements.txt
 cd sim_vision
-python3 run_openloop.py            # A:开环 15 条件 × 6 种子(~25 min 单核)
-python3 analyze_openloop.py        # 汇总表 + 方向编码检查
-python3 calibrate_readout.py       # B:训练条件校准(冻结 calib.json)
-python3 run_closedloop.py --tag main --modes brain --seeds 0,1,2,3,4,5 --phis=-60,-30,30,60   # C(~20 min)
-python3 run_closedloop.py --tag main --modes silence,flip,handrule --seeds 0,1,2 --phis=-60,-30,30,60   # D
-python3 run_closedloop.py --tag main --modes brain --faults F2_25,F2_50,F4_1pct --seeds 0,1,2 --phis=-60,-30,30,60   # E
-python3 analyze_closedloop.py      # C+D+E 汇总表(聚合 closedloop_main_*.jsonl)
-python3 make_video.py --tag main --phi -30 --seed 0   # 视频(需对应 episode 记录已生成)
+
+# A 开环(~25 min)
+python3 run_openloop.py
+python3 analyze_openloop.py
+
+# B 校准:先跑训练轨迹(6 集),再冻结参数与阈值
+python3 run_closedloop.py --tag train --modes brain --seeds 0,1,2 --phis=-60,-30
+python3 calibrate_readout.py        # 读取 results_vision/episodes_train/;缺输入即报错退出,不会覆盖 calib.json
+
+# C+D+E 闭环全量(--tag v4 与论文一致;~85 min)
+python3 run_closedloop.py --tag v4 --modes brain --seeds 0,1,2,3,4,5 --phis=-60,-30,30,60
+python3 run_closedloop.py --tag v4 --modes brain --seeds 0,1,2 --phis=0
+python3 run_closedloop.py --tag v4 --modes steer_disabled,readout_disabled,flip,handrule --seeds 0,1,2 --phis=-60,-30,30,60
+python3 run_closedloop.py --tag v4 --modes brain --faults F2_25,F2_50,F4_1pct --seeds 0,1,2 --phis=-60,-30,30,60
+
+# 汇总与图
+python3 analyze_closedloop.py --tag v4
+python3 fig_demo.py --tag v4        # paper/figs/fig5_demo.pdf
+python3 make_video.py --tag v4 --phi -30 --seed 0
+```
+
+说明:每个 episode 同时播种 NumPy(故障掩码,F2/F4)与 Brian2(Poisson 输入),故"同种子"下刺激与网络噪声均可复现;模式只有 `brain / steer_disabled / readout_disabled / flip / handrule`,未知模式直接报错。校准输出含 `theta_source` 字段,记录阈值所依据的训练轨迹文件与统计量,可逐条审计。
 ```
 
 注意:argparse 负数参数必须用 `--phis=-60,...` 等号形式;各段输出为独立 `closedloop_main_<modes>_<faults>.jsonl`,`analyze_closedloop.py` 自动聚合;单进程运行(构建全脑网络峰值内存约 1.1 GB,勿并行)。
@@ -90,5 +105,5 @@ python3 make_video.py --tag main --phi -30 --seed 0   # 视频(需对应 episode
 - **A**:无刺激全网 0 尖峰;方位条件左右差符号跨种子一致;loom 速率/尺寸呈剂量趋势;背腹梯度方向正确。
 - **B**:校准仅用 φ∈{−60,−30}、v_0p5 训练条件;`calib.json` 冻结后用于全部测试轨迹。
 - **C**:闭环逃逸成功率与最小距离(真实记录,失败照实展示)。
-- **D**:silence(DN 输出断开)与 flip(左右反转)性能应显著劣于 brain;handrule 为外部规则上界参考(其读场景方位角,不属于本架构)。
+- **D**:steer_disabled(转向支路关闭,弹射仍在)、readout_disabled(两路全关)与 flip(左右反转)均应为 0;handrule 为外部规则参考基线(其读场景方位角,不属于本架构)。
 - **E**:F2/F4 故障应用于全脑网络(统一刺激/时限/种子);同步检查总尖峰(过活动检查);F4 为输出静默(权重置零),不是神经元删除。

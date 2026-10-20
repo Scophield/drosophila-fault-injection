@@ -3,7 +3,7 @@
  "train_neg_phi_lr_mean": -77.77777777777777,
  "bias": -0.8333333333333348,
  "lr_ref": 88.83333333333336,
- "theta_demo_hz": 26.25,
+ "theta_demo_hz": 25.625,
  "k_turn_deg_s": 400.0,
  "v_fly_ms": 0.05,
  "train_conditions": [
@@ -12,5 +12,6 @@
   "v_0p5",
   "static"
  ],
+ "theta_source": "episodes_train/brain_healthy_phi{-60,-30}_s{0,1,2}.json, median of per-episode max cmd_avg over t in [250,300] ms",
  "note": "data_sign from neg-phi (right-field) training-condition lr mean on training conditions only; bias from v_0p5 (phi=0) training condition; frozen for all test trajectories"
 }

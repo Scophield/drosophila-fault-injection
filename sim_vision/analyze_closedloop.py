@@ -7,7 +7,7 @@ import numpy as np
 OUT = Path(__file__).resolve().parent / "results_vision"
 
 
-def main(tag="main"):
+def main(tag="v4"):
     import glob
     rows = []
     for f in sorted(glob.glob(str(OUT / f"closedloop_{tag}_*.jsonl"))):
@@ -40,4 +40,7 @@ def main(tag="main"):
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--tag", default="v4")
+    main(ap.parse_args().tag)
