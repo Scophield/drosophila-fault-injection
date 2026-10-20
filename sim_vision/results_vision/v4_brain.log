@@ -1,0 +1,25 @@
+{"mode": "brain", "fault": null, "phi_t_deg": -60.0, "seed": 0, "min_dist": 0.0758303792593456, "escaped": true, "n_total": 13942}
+{"mode": "brain", "fault": null, "phi_t_deg": -60.0, "seed": 1, "min_dist": 0.08117125274343266, "escaped": true, "n_total": 14549}
+{"mode": "brain", "fault": null, "phi_t_deg": -60.0, "seed": 2, "min_dist": 0.0925243390357091, "escaped": true, "n_total": 13849}
+{"mode": "brain", "fault": null, "phi_t_deg": -60.0, "seed": 3, "min_dist": 0.08742535156795067, "escaped": true, "n_total": 13826}
+{"mode": "brain", "fault": null, "phi_t_deg": -60.0, "seed": 4, "min_dist": 0.08777078983148752, "escaped": true, "n_total": 14208}
+{"mode": "brain", "fault": null, "phi_t_deg": -60.0, "seed": 5, "min_dist": 0.10211004480937597, "escaped": true, "n_total": 14193}
+{"mode": "brain", "fault": null, "phi_t_deg": -30.0, "seed": 0, "min_dist": 0.07350404367860333, "escaped": true, "n_total": 15266}
+{"mode": "brain", "fault": null, "phi_t_deg": -30.0, "seed": 1, "min_dist": 0.07977036841946268, "escaped": true, "n_total": 15703}
+{"mode": "brain", "fault": null, "phi_t_deg": -30.0, "seed": 2, "min_dist": 0.09049427255507954, "escaped": true, "n_total": 15277}
+{"mode": "brain", "fault": null, "phi_t_deg": -30.0, "seed": 3, "min_dist": 0.08328477567209205, "escaped": true, "n_total": 15458}
+{"mode": "brain", "fault": null, "phi_t_deg": -30.0, "seed": 4, "min_dist": 0.09032572527044051, "escaped": true, "n_total": 15560}
+{"mode": "brain", "fault": null, "phi_t_deg": -30.0, "seed": 5, "min_dist": 0.0805250058848247, "escaped": true, "n_total": 15700}
+{"mode": "brain", "fault": null, "phi_t_deg": 30.0, "seed": 0, "min_dist": 0.08916220288018499, "escaped": true, "n_total": 18186}
+{"mode": "brain", "fault": null, "phi_t_deg": 30.0, "seed": 1, "min_dist": 0.09134748250042604, "escaped": true, "n_total": 17819}
+{"mode": "brain", "fault": null, "phi_t_deg": 30.0, "seed": 2, "min_dist": 0.09074836123844152, "escaped": true, "n_total": 17948}
+{"mode": "brain", "fault": null, "phi_t_deg": 30.0, "seed": 3, "min_dist": 0.091141791131467, "escaped": true, "n_total": 18079}
+{"mode": "brain", "fault": null, "phi_t_deg": 30.0, "seed": 4, "min_dist": 0.0907389922019104, "escaped": true, "n_total": 17883}
+{"mode": "brain", "fault": null, "phi_t_deg": 30.0, "seed": 5, "min_dist": 0.08760784872687691, "escaped": true, "n_total": 18266}
+{"mode": "brain", "fault": null, "phi_t_deg": 60.0, "seed": 0, "min_dist": 0.11416977658436284, "escaped": true, "n_total": 16636}
+{"mode": "brain", "fault": null, "phi_t_deg": 60.0, "seed": 1, "min_dist": 0.11391223507857448, "escaped": true, "n_total": 17117}
+{"mode": "brain", "fault": null, "phi_t_deg": 60.0, "seed": 2, "min_dist": 0.11340620872400682, "escaped": true, "n_total": 16639}
+{"mode": "brain", "fault": null, "phi_t_deg": 60.0, "seed": 3, "min_dist": 0.11312532174941617, "escaped": true, "n_total": 17113}
+{"mode": "brain", "fault": null, "phi_t_deg": 60.0, "seed": 4, "min_dist": 0.1133258090398595, "escaped": true, "n_total": 16579}
+{"mode": "brain", "fault": null, "phi_t_deg": 60.0, "seed": 5, "min_dist": 0.11344138832841419, "escaped": true, "n_total": 17205}
+wrote 24 -> /tmp/work/pkg/drosophila-fault-injection/sim_vision/results_vision/closedloop_v4_brain_pm60_m30_30_60.jsonl

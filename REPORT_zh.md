@@ -187,3 +187,16 @@ LIF 抽象(单室、delta 突触、无可塑性、Poisson 驱动);剂量上界�
 **修正后 v3 全量结果**(全部真实记录,`sim_vision/results_vision/`):healthy 24/24(四方位)+0/3(正前);F2_25 10/12;F2_50 0/12(阈值悬崖:传输保持但读出率低于 θ_demo);F4_1pct 12/12 保持但活动 1.83×(包络违反,与开环同序);steer_disabled/readout_disabled/flip 均 0/12;handrule 12/12(上界)。
 
 新增 Fig. 5(1×4 轨迹面板:无故障/F2_50/F4_1pct/转向关闭)。版面 5 页、Type 3=0、??=0。为容纳新增内容:图缩排、正文精炼、移除一条次要引用(shuang2023opplod 单独支撑该句),现 37 条文献。
+
+## 23. 第五审回应:复现链与论文表述(2026-10-20)
+
+第五份外部审阅五点核实并处置:
+
+1. **校准静默回退(硬错误)**:`calibrate_theta_demo` 缺输入时返回 None 并覆盖 calib.json → 闭环静默回退 51.4 Hz。已改为:缺训练轨迹直接报错退出、不写 calib.json;calib 增加 `theta_source` 字段记录阈值来源文件与统计量;`run_closedloop` 读到 null 阈值时**抛错**而非回退。训练轨迹(`episodes_train/`,6 集)已随仓库归档,可逐条审计。
+2. **README 调用已删 silence 模式**:命令更新为 `steer_disabled,readout_disabled`;`run_closedloop` 增加模式白名单校验(未知模式直接报错,不再出现未赋值 omega);README 提供单一复现链(开环→训练轨迹→校准→v4 三段→汇总→图→视频),`analyze_closedloop.py`/`fig_demo.py` 参数化 `--tag`,默认 v4,与论文数据一致。
+3. **摘要 76% 歧义**:拆分为"50% 连接损失保留 76.5% 命令率;10% 随机单元输出静默使中位率基本不变";"only catastrophic mode" 限定为"fails both open-loop criteria"。
+4. **传输 vs 任务阈值效应**:E 小节改写为"命令率仍高于开环阈值、但低于 θ_demo,故传输保持不蕴含行为保持";结论收紧为"preserved transmission need not preserve behavior";F4 活动措辞改为 1.7×(升高,仍在 2× 包络内),不再称包络违反。
+5. **seed 未控 Poisson 随机性**:每个 episode 增加 `brian2.seed(20000+seed)` 显式播种;全部闭环结果以 v4 重跑核验(健康 24/24、保留方位 12/12、正前 0/3、F2_25 10/12、F2_50 0/12、F4 12/12 且 1.73×、对照 0/12、handrule 12/12),与 v3 一致,配对主张成立。
+
+图表:Fig. 5 字号加大;图注改为 "red dot: threat endpoint (not agent)",注明各面板共用同一威胁脚本;正文 0/3 正前失败不再引用该图(图展示 −30°);handrule 改称"reference baseline"。
+版面:5 页、Type 3=0、??=0;文献 35 条(qin/katti/imanov 三条并列列举项为版面移除)。

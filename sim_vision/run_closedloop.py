@@ -29,7 +29,10 @@ def load_calib():
     return json.loads((OUT / "calib.json").open().read())
 
 
-THETA_HZ = float(load_calib().get("theta_demo_hz") or 51.4)
+_calib_theta = load_calib().get("theta_demo_hz")
+if _calib_theta is None:
+    raise RuntimeError("calib.json has no theta_demo_hz; run calibrate_readout.py with archived training episodes first")
+THETA_HZ = float(_calib_theta)
 
 
 def frame_lr_diff(rec, t0_ms, t1_ms, cmd_df, sim):
@@ -47,6 +50,8 @@ def frame_lr_diff(rec, t0_ms, t1_ms, cmd_df, sim):
 
 
 def run_episode(sim, rf_map, cmd_df, seed, phi_t_deg, fault=None, mode="brain"):
+    import brian2
+    brian2.seed(20_000 + seed)
     rng = np.random.default_rng(10_000 + seed)
     sim.reset_state()
     w_fault = None
@@ -188,6 +193,10 @@ def main():
     phis = [float(x) for x in args.phis.split(",")]
     seeds = [int(x) for x in args.seeds.split(",")]
     modes = args.modes.split(",")
+    allowed = {"brain", "steer_disabled", "readout_disabled", "flip", "handrule"}
+    unknown = [m for m in modes if m not in allowed]
+    if unknown:
+        raise SystemExit(f"unknown mode(s) {unknown}; allowed: {sorted(allowed)}")
     faults = [f if f != "none" else None for f in args.faults.split(",")] if args.faults else [None]
     rows = []
     for mode in modes:

@@ -1,0 +1,6 @@
+{"seed": 0, "phi_t_deg": -60.0, "mode": "brain", "fault": null, "min_dist": 0.0758303792593456, "escaped": true, "n_total": 13942}
+{"seed": 1, "phi_t_deg": -60.0, "mode": "brain", "fault": null, "min_dist": 0.08117125274343266, "escaped": true, "n_total": 14549}
+{"seed": 2, "phi_t_deg": -60.0, "mode": "brain", "fault": null, "min_dist": 0.0925243390357091, "escaped": true, "n_total": 13849}
+{"seed": 0, "phi_t_deg": -30.0, "mode": "brain", "fault": null, "min_dist": 0.07350404367860333, "escaped": true, "n_total": 15266}
+{"seed": 1, "phi_t_deg": -30.0, "mode": "brain", "fault": null, "min_dist": 0.07977036841946268, "escaped": true, "n_total": 15703}
+{"seed": 2, "phi_t_deg": -30.0, "mode": "brain", "fault": null, "min_dist": 0.09049427255507954, "escaped": true, "n_total": 15277}
