@@ -1,0 +1,5 @@
+{"mode": "brain", "fault": null, "phi_t_deg": -30.0, "seed": 0, "min_dist": 0.04916233044851292, "escaped": false, "n_total": 8185}
+{"mode": "brain", "fault": null, "phi_t_deg": -30.0, "seed": 1, "min_dist": 0.048676120305431454, "escaped": false, "n_total": 8159}
+{"mode": "brain", "fault": null, "phi_t_deg": 30.0, "seed": 0, "min_dist": 0.06139769745810537, "escaped": true, "n_total": 18120}
+{"mode": "brain", "fault": null, "phi_t_deg": 30.0, "seed": 1, "min_dist": 0.07012114265933772, "escaped": true, "n_total": 18429}
+wrote 4 -> /tmp/work/pkg/drosophila-fault-injection/sim_vision/results_vision/closedloop_check5_brain.jsonl

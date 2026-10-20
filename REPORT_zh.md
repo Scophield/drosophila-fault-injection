@@ -173,3 +173,17 @@ LIF 抽象(单室、delta 突触、无可塑性、Poisson 驱动);剂量上界�
 - 新增文献 2 条(逐字来自 paper_search 并核验):jang2023azimuthal(JEB 2023,GF 逃逸电路方位编码)、gaitanidis2025drosophila(PLoS Biology 2025,逃逸运动回路脆弱性);croke2025drosophila 因版面删除。refs.bib 共 38 条。
 - 版面:总 5 页;演示小节使约 15 行正文溢至第 5 页(原第 5 页纯文献),第 5 页正文+文献混排符合 IEEE 会议 5 页限制;Type 3 = 0、?? = 0。
 - 数据来源:demo-vision 分支 sim_vision/ 全部真实仿真记录,论文结论未改动原有数字。
+
+## 22. 第四审回应:演示代码与结果全面修正(2026-10-19)
+
+第四份外部审阅(核对 PDF、代码、归档记录)五点全部核实属实,逐项修正:
+
+1. **F4 定义不一致**:演示 `build_fault` 旧版在剔除驱动/读出后的池内算扇出并取池的 1%;原实验 `sim/sweep.py` 是全网 `bincount(abs(w0)/2.75e-4)` 排序后跳过 protected、取 `round(0.01×n_neurons)`=1,386 个。已改为逐行复刻原算法(共用同一名单口径),重跑 F4 全部 12 集。
+2. **计数冲突**:归档 jsonl 与 episode json 一致为 F2_25 = 10/12(83.3%);论文原写 92% 来自一次未存档的部分读取,已按归档更正为 10/12,并由 `analyze_closedloop.py` 重新生成汇总 CSV(现与原始记录逐条可对账)。
+3. **"切断读出"措辞**:原 `silence` 只关转向、弹射支路仍由网络触发(实测 7 帧 burst)。已改名 `steer_disabled` 并如实描述;另新增 `readout_disabled`(转向+弹射全关)作为真正全断对照,两者均 0/12。
+4. **合成性 + 量纲**:(a) 编码用世界坐标方位、未建模眼睛/头部朝向,loom 包络来自预设轨迹——论文与 README 均明确标注"合成演示、非生物学定量"。(b) 证明命令率量纲错误:原实验 `pop_rate = 总尖峰/(8×时长)` 为平均单细胞率,演示旧版用 8 细胞总和比 θ=51.4(差 8×);已改为平均率,并按 B 阶段方法论用训练条件(φ∈{−60,−30})轨迹 t∈[250,300] ms 响应水平中位校准 θ_demo=26.3 Hz(冻结),与全池驱动 θ=51.4 明确区分。
+5. **事实与措辞**:914→314 输入细胞更正;"confirms the signatures at task level" 改为 "a preliminary synthetic closed-loop demonstration reproduces this ordering"(结论不再声称行为层验证);补样本数(健康 24+正前 3;故障/对照各 12)与训练/保留方位拆分(保留方位 12/12;正前 0/3 盲区)。
+
+**修正后 v3 全量结果**(全部真实记录,`sim_vision/results_vision/`):healthy 24/24(四方位)+0/3(正前);F2_25 10/12;F2_50 0/12(阈值悬崖:传输保持但读出率低于 θ_demo);F4_1pct 12/12 保持但活动 1.83×(包络违反,与开环同序);steer_disabled/readout_disabled/flip 均 0/12;handrule 12/12(上界)。
+
+新增 Fig. 5(1×4 轨迹面板:无故障/F2_50/F4_1pct/转向关闭)。版面 5 页、Type 3=0、??=0。为容纳新增内容:图缩排、正文精炼、移除一条次要引用(shuang2023opplod 单独支撑该句),现 37 条文献。
