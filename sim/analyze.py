@@ -163,7 +163,8 @@ xs = np.arange(len(order))
 cols = ["#4c72b0", "#4c72b0", "#d62728", "#7f7f7f", "#7f7f7f"]
 ax.bar(xs, vals, 0.7, color=cols)
 for i, (k, _) in enumerate(order):
-    ax.text(xs[i], vals[i] * 1.12, f"{vals[i]:.0f}", ha="center", va="bottom", fontsize=5.6)
+    ax.text(xs[i], vals[i] * 1.15, f"{vals[i]:.0f}", ha="center", va="bottom", fontsize=5.6,
+            bbox=dict(boxstyle="square,pad=0.05", fc="white", ec="none"))
 ax.axhline(hs["healthy"]["tot"] / 1000 * 2, color="k", ls=":", lw=0.7)
 ax.text(-0.45, hs["healthy"]["tot"] / 1000 * 2.25, "2$\\times$ healthy", fontsize=5.4, ha="left", va="bottom")
 ax.set_xlim(-0.6, 4.6)
