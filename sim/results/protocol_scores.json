@@ -1,0 +1,155 @@
+{
+ "baseline_rate_hz": 94.6875,
+ "baseline_spikes": 39694.0,
+ "theta_hz": 51.4,
+ "envelope": 2.0,
+ "trials": 288,
+ "accuracy_only_pass": 276,
+ "envelope_pass": 262,
+ "conditions": [
+  {
+   "name": "F1_wvar_05",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F1_wvar_10",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F1_wvar_20",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F1_wvar_50",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F2_drop_05",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F2_drop_10",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F2_drop_25",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F2_drop_50",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F3_loss_01",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F3_loss_02",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F3_loss_05",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F3_loss_10",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F4_hub_1pct",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F4_hub_2pct",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F4_hub_5pct",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F5_in_LC4",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F5_in_LPLC2",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "F5_in_both",
+   "trials": 12,
+   "transmission": 0,
+   "envelope": 0
+  },
+  {
+   "name": "EIm_1pct",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "EIm_2pct",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "HUB_exc",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "HUB_inh",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 0
+  },
+  {
+   "name": "INHrand_cells",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 12
+  },
+  {
+   "name": "INHrand_mass",
+   "trials": 12,
+   "transmission": 12,
+   "envelope": 10
+  }
+ ]
+}
