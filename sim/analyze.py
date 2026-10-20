@@ -60,7 +60,7 @@ C_REAL = "#1f77b4"
 C_ER = "#d62728"
 C_HL = "#2ca02c"
 
-fig2, axs = plt.subplots(1, 1, figsize=(3.5, 0.74))
+fig2, axs = plt.subplots(1, 1, figsize=(2.78, 0.62))
 cal = json.loads((SIM / "results" / "calib" / "calibration.json").read_text())
 
 ax = axs
@@ -132,6 +132,7 @@ h_rate, h_tot = med(agg("real", "healthy")["rates"]), med(agg("real", "healthy")
 ax.axhline(h_rate, color="gray", ls=":", lw=0.7, zorder=0)
 ax4.axhline(h_tot, color="gray", ls=":", lw=0.7, zorder=0)
 ax.set_ylim(60, 135)
+ax4.set_ylim(28, 56)
 ax.spines[["top"]].set_visible(False)
 ax4.spines[["top"]].set_visible(False)
 fig3.savefig(FIGS / "fig3_curves.pdf")
@@ -166,10 +167,10 @@ ax.bar(xs + 0.2, te, 0.38, color=C_ER, label="permuted null")
 ax.set_xticks(xs)
 ax.set_xticklabels(labs, fontsize=6.5)
 ax.set_ylabel("total spikes (k)")
-ax.set_ylim(0, 140)
-ax.annotate("null command: median 0.0 Hz", xy=(-0.38, 130), fontsize=5.8, ha="left", va="center", color="#333333")
+ax.set_ylim(0, 74)
+ax.annotate("null command: median 0.0 Hz", xy=(-0.45, 68), fontsize=5.8, ha="left", va="center", color="#333333")
 ax.set_title("(b) Hub silencing: over-activity")
-ax.legend(frameon=False, fontsize=6, loc="upper right")
+ax.legend(frameon=False, fontsize=5.2, loc="upper right", ncol=1, handlelength=1.0, handletextpad=0.4, labelspacing=0.25, borderaxespad=0.1)
 ax.spines[["top", "right"]].set_visible(False)
 fig4.savefig(FIGS / "fig4_topology.pdf")
 plt.close(fig4)
