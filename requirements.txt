@@ -1,7 +1,7 @@
 brian2==2.9.0
-pandas==3.0.6
 numpy==2.4.6
+pandas==3.0.6
+scipy==1.17.1
 matplotlib==3.11.2
 pyarrow==26.0.0
-scipy>=1.14
-Pillow>=10.0
+Pillow==12.3.0
