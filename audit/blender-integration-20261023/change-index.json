@@ -1,0 +1,25 @@
+{
+  "changed_baseline_files": [
+    "ARTIFACT_README.md",
+    "docs/STATE.md",
+    "paper/figs/task_v9_overview.pdf",
+    "paper/main.pdf",
+    "paper/main.tex",
+    "paper/README.md",
+    "paper/sections/v9_artifact.tex",
+    "paper/sections/v9_discussion.tex",
+    "paper/sections/v9_intro.tex",
+    "paper/sections/v9_methods.tex",
+    "paper/supplement.pdf",
+    "README.md",
+    "REVIEW_MATERIALS.md",
+    "tools/package_visual_v9.py"
+  ],
+  "new_helpers_and_report": [
+    "tools/export_blender_v9.py",
+    "tools/check_blender_v9.py",
+    "tools/plot_task_v9_blender.py",
+    "BLENDER_INTEGRATION_V9_zh.md"
+  ],
+  "scope": "Changes relative to the preserved start-of-turn local state, not relative to old Git HEAD; inherited work remains."
+}

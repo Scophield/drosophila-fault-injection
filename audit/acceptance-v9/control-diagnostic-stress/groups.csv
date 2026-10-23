@@ -1,0 +1,7 @@
+mode,fault,n,median_trigger_ms,median_abs_heading_400_deg
+proportional,healthy,16,150.0,82.5651781208479
+proportional,F2_25,16,180.0,68.3696261240386
+proportional,F2_50,16,220.0,39.07214017100323
+relay,healthy,16,150.0,100.0
+relay,F2_25,16,180.0,100.0
+relay,F2_50,16,220.0,78.00000000000001

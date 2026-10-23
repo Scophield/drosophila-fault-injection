@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "model_neurons": 138639,
+    "model_edge_rows": 15091983,
+    "model_contacts": 54492922,
+    "annotated_valid_anchors": 138625,
+    "LC4": 104,
+    "LPLC2": 210,
+    "command_neurons": 8,
+    "all_two_hop_relays": 849,
+    "displayed_relays": 90,
+    "displayed_pathway_neurons": 410,
+    "distinct_relay_nodes": 88,
+    "relay_endpoint_overlap": 2,
+    "candidate_pathway_edges": 8327,
+    "displayed_edges": 1050,
+    "background_sample": 8500
+  },
+  "sources": {
+    "D:\\autoresearch_labtorary\\Drosophila_brain_model\\Completeness_783.csv": {
+      "bytes": 3465987,
+      "sha256": "52b0ac6094cd32c546f8d4c341e094376f48f4e791f8db9b166de5dff8199ea4"
+    },
+    "D:\\autoresearch_labtorary\\Drosophila_brain_model\\Connectivity_783.parquet": {
+      "bytes": 100804642,
+      "sha256": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347"
+    },
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\sim\\data\\annotations.tsv": {
+      "bytes": 31859547,
+      "sha256": "d00c92142f6b96ce916cbef681d0d93f856b7cb0904c738f996130cd0e0c0b29"
+    },
+    "D:\\autoresearch_labtorary\\blender_drosophila\\extract_local_connectome.py": {
+      "bytes": 7552,
+      "sha256": "14f3464eef9a734b555da45dc473db19a004b46bd3e2e638f9d2aff44a1bafc7"
+    }
+  },
+  "coordinate_reference": "https://github.com/flyconnectome/flywire_annotations/blob/main/supplemental_files/README.md",
+  "coordinate_transform": {
+    "voxel_size_nm": [
+      4,
+      4,
+      40
+    ],
+    "center_um": [
+      495.456,
+      247.12400000000002,
+      139.68
+    ],
+    "um_per_blender_unit": 85,
+    "blender_axes": [
+      "+x",
+      "+z",
+      "-y"
+    ]
+  },
+  "sampling_seed": 20261023,
+  "selection": "LC4 + LPLC2 inputs; DNp01/DNa02/DNp04/DNb01 outputs; top 90 of all two-hop relays by absolute incident model weight; strongest incident edge per endpoint, then strongest remaining to 1050.",
+  "integrity": "Actual local IDs, annotations, anchors and edge weights. Brain points are representative anchors, not soma positions. Connecting curves show abstract connectivity and are not measured axon paths. The separate fly is an illustrative model. No research inputs, experiments or paper figures were changed."
+}

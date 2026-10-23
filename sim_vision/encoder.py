@@ -1,11 +1,12 @@
 import numpy as np
 import pandas as pd
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'sim'))
+from project_paths import PATH_COMP, PATH_ANN
 
 SIM_DIR = Path(__file__).resolve().parent
 ROOT = SIM_DIR.parent
-PATH_ANN = ROOT / "sim" / "data" / "annotations.tsv"
-PATH_COMP = ROOT / "Drosophila_brain_model" / "Completeness_783.csv"
 
 RF_SEED = 20260201
 SIGMA_RF_DEG = 30.0
@@ -28,8 +29,8 @@ def load_sensory():
     return df
 
 
-def build_rf_map(df):
-    rng = np.random.default_rng(RF_SEED)
+def build_rf_map(df, seed=RF_SEED):
+    rng = np.random.default_rng(seed)
     z = df["pos_z"].to_numpy(dtype=float)
     z_norm = (z - z.min()) / max(z.max() - z.min(), 1e-9)
     phi = np.where(

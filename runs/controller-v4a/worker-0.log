@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "D:\autoresearch_labtorary\drosophila-fault-injection\tmp\brian-current\brian2\codegen\get_cpu_flags.py", line 13, in <module>
+    import cpuinfo
+ModuleNotFoundError: No module named 'cpuinfo'
+{"mode": "brain", "fault": null, "phi_t_deg": -30.0, "seed": 12, "min_dist": 0.06479244330815417, "escaped": true, "n_total": 1733, "run_seconds": 244.90121789998375}
+{"mode": "brain", "fault": null, "phi_t_deg": -30.0, "seed": 13, "min_dist": 0.06180484101633452, "escaped": true, "n_total": 1607, "run_seconds": 269.87223869992886}
+{"mode": "brain", "fault": null, "phi_t_deg": 30.0, "seed": 12, "min_dist": 0.048595661470488924, "escaped": false, "n_total": 646, "run_seconds": 136.48019260005094}
+{"mode": "brain", "fault": null, "phi_t_deg": 30.0, "seed": 13, "min_dist": 0.04834363819053221, "escaped": false, "n_total": 703, "run_seconds": 123.27380970004015}
+{"mode": "precue_gated", "fault": null, "phi_t_deg": -30.0, "seed": 12, "min_dist": 0.06728893189437855, "escaped": true, "n_total": 1560, "run_seconds": 177.03943339991383}
+{"mode": "precue_gated", "fault": null, "phi_t_deg": -30.0, "seed": 13, "min_dist": 0.07384378021597626, "escaped": true, "n_total": 1383, "run_seconds": 191.16079190000892}
+{"mode": "precue_gated", "fault": null, "phi_t_deg": 30.0, "seed": 12, "min_dist": 0.04569225391287119, "escaped": false, "n_total": 742, "run_seconds": 132.38366749999113}
+{"mode": "precue_gated", "fault": null, "phi_t_deg": 30.0, "seed": 13, "min_dist": 0.04576361616645437, "escaped": false, "n_total": 874, "run_seconds": 130.10850630002096}
+{"mode": "bias_only", "fault": null, "phi_t_deg": -30.0, "seed": 12, "min_dist": 0.048747031743200164, "escaped": false, "n_total": 3431, "run_seconds": 104.14009779994376}
+{"mode": "bias_only", "fault": null, "phi_t_deg": -30.0, "seed": 13, "min_dist": 0.048747031743200164, "escaped": false, "n_total": 3333, "run_seconds": 83.3051862999564}
+{"mode": "bias_only", "fault": null, "phi_t_deg": 30.0, "seed": 12, "min_dist": 0.04914883793016163, "escaped": false, "n_total": 2009, "run_seconds": 90.72661030001473}
+{"mode": "bias_only", "fault": null, "phi_t_deg": 30.0, "seed": 13, "min_dist": 0.04914883793016163, "escaped": false, "n_total": 2271, "run_seconds": 102.24933840008453}
+{"mode": "steer_disabled", "fault": null, "phi_t_deg": -30.0, "seed": 12, "min_dist": 0.042495348953836616, "escaped": false, "n_total": 4643, "run_seconds": 90.67780559998937}
+{"mode": "steer_disabled", "fault": null, "phi_t_deg": -30.0, "seed": 13, "min_dist": 0.044778081049258955, "escaped": false, "n_total": 4697, "run_seconds": 85.08314010000322}
+{"mode": "steer_disabled", "fault": null, "phi_t_deg": 30.0, "seed": 12, "min_dist": 0.044778081049258955, "escaped": false, "n_total": 3614, "run_seconds": 86.14968090003822}
+{"mode": "steer_disabled", "fault": null, "phi_t_deg": 30.0, "seed": 13, "min_dist": 0.044778081049258955, "escaped": false, "n_total": 3517, "run_seconds": 73.64075999998022}
+wrote 16 -> D:\autoresearch_labtorary\drosophila-fault-injection\runs\controller-v4a\vision\batches\controls_73f6651b3e79\summary.jsonl

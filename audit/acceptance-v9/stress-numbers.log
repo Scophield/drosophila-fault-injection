@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "errors": [],
+  "records": 96,
+  "clusters": 8,
+  "verified": "raw outcome cells, losses/gains/risk sets, cluster means/intervals, polynomial exact sign-flip tails, saved-metric confusion counts, pre-cue state reset",
+  "source_sha256": "7a903a3dcdc2d5c78719a3cf1f28d91b468296fd9be2c1e4a614d69a351d9124",
+  "summary_sha256": "71b21afd6f20b82775a8a06d48e27f06b6a69eae376c94c46a304488a40716d2"
+}

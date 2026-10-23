@@ -1,3 +1,25 @@
+# 当前闭环入口：assessment-v9
+
+当前论文使用 `task-v9.1-causal-exact-events`，从仓库根目录运行
+`tools/run_v9.py` 和 `tools/run_task_v9.py`。请先读根目录 `REPRODUCE.md`、
+`paper/PROTOCOL_v9.md` 和 `paper/PROTOCOL_v9_NOTES.md`；不要将旧命令混入新矩阵。
+
+- `task_v9.py`：下一帧生效的决策、精确执行器边界、段内首次接触、固定终点。
+- `vision_v9.py`：按帧索引的共用 Bernoulli 均匀流；实际输入随反馈变化。
+- `vision_core.py`：138639 神经元、15091983 加权行的 Brian2 基础实现。
+- 感受野与身体耦合是工程假设，不是经验证的果蝇行为。
+- 输出必须放独立目录，保存源码、输入、校准、mask 和输入事件摘要。
+- 分析用 `tools/analyze_task_v9_exportfix.py`；原冻结脚本及失败记录保留。
+- 独立回放只核对输入和轨迹一致性，不等于整脑神经动力学重跑。
+
+旧 hub 代码已统一 FlyID 保护与可复现排序，但原始 hub 清单缺失。当前主实验
+仅用随机加权行删除，不宣称校正 hub 动力学已经重跑。
+
+## 以下为历史说明，不用于 v9
+
+旧说明另存于 `docs/history/assessment-v8/sim_vision/README_vision.md`。
+下文的旧命令、状态和“已验证”措辞均不是当前 v9 的结论或运行规范。
+
 # 视觉任务示例:移动逼近威胁的逃逸转向(全脑连接组在环)
 
 本目录在论文实验之外,提供一个独立的演示:完整果蝇全脑连接组网络对移动逼近视觉威胁产生逃逸转向决策,并比较故障注入前后的行为变化。**不修改、不依赖原论文实验的任何结论。**

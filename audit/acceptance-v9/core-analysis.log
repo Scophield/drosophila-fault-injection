@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\autoresearch_labtorary\drosophila-fault-injection\tools\run_v9.py", line 26, in <module>
+    runpy.run_path(target, run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "tools/analyze_task_v9.py", line 212, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "tools/analyze_task_v9.py", line 145, in main
+    metric_rows.append(dict(seed=r['seed'],mode=r['mode'],fault=r['fault'],phi_deg=r['phi_deg'],
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dict() got multiple values for keyword argument 'deadline'

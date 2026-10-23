@@ -1,0 +1,20 @@
+{
+  "old_index_check": {
+    "inhibitory_cells": 765,
+    "inhibitory_contacts": 4730144,
+    "eligible_inhibitory_mean_contacts": 532.111659529167,
+    "expected_mass_random_cells": 8889
+  },
+  "old_mapped_check": {
+    "inhibitory_cells": 767,
+    "inhibitory_contacts": 4735824,
+    "eligible_inhibitory_mean_contacts": 532.111659529167,
+    "expected_mass_random_cells": 8900
+  },
+  "corrected": {
+    "inhibitory_cells": 766,
+    "inhibitory_contacts": 4732878,
+    "eligible_inhibitory_mean_contacts": 532.111659529167,
+    "expected_mass_random_cells": 8895
+  }
+}

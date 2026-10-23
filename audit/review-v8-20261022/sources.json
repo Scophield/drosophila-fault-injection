@@ -1,0 +1,19 @@
+{
+  "access_date": "2026-10-22",
+  "reviewed_manuscript_sha256": "011e40516af3a791899a3de4fc934adf095e20c05a0c9d515f3c39b64dff002d",
+  "reviewed_supplement_sha256": "72c763a8b061a626a80005234e3d056265b0d2114ab60228dc621266284138b8",
+  "official_sources": [
+    {"url": "https://epapers2.org/iscas2027/ESR/authorinfo1.php", "sections": ["Paper Specifications", "Important Deadlines"], "document_revision_date": "not displayed", "finding": "Four technical pages and optional fifth page containing only references; include author information; embedded fonts; PDF at most 5 MB."},
+    {"url": "https://2027.ieee-iscas.org/call-for-papers", "sections": ["Scope of Contributions", "Types of Contributions"], "document_revision_date": "not displayed", "finding": "Neural Networks and Neuromorphic Engineering is an included topic; regular papers concern original circuits-and-systems research."},
+    {"url": "https://epapers2.org/iscas2027/ESR/samples.php", "document_revision_date": "not displayed", "finding": "Use IEEEtran conference mode for LaTeX."},
+    {"url": "https://journals.ieeeauthorcenter.ieee.org/submit-your-article-for-peer-review/become-an-ieee-reviewer/", "sections": ["Evaluating an Article", "Reviewing a New Article", "Reviewing a Revised Article"], "document_revision_date": "not displayed", "finding": "General IEEE scientific review guidance, used as a disclosed fallback; no ISCAS 2027 numerical review form was found."}
+  ],
+  "literature": [
+    {"doi": "10.64898/2026.09.19.752860", "url": "https://www.biorxiv.org/content/10.64898/2026.09.19.752860v1.full", "read_scope": "Full-text HTML, focusing on matched budgets, task and state comparisons."},
+    {"arxiv": "2610.19153", "url": "https://arxiv.org/pdf/2610.19153", "read_scope": "Abstract, introduction, readout definitions and circuit-versus-arena results; not all 104 pages."},
+    {"arxiv": "2605.00030", "url": "https://arxiv.org/html/2605.00030v1", "read_scope": "Abstract, introduction and methodology."},
+    {"doi": "10.1109/IOLTS65288.2025.11116934", "url": "https://api.crossref.org/works/10.1109/IOLTS65288.2025.11116934", "read_scope": "Registry metadata; HAL full text blocked by an interstitial."}
+  ],
+  "bibliography_spot_check_dois": ["10.1038/s41586-024-07763-9", "10.1038/s41467-025-56739-4", "10.1038/s42256-026-01197-w", "10.23919/DATE69613.2026.11539446", "10.1109/IOLTS60994.2024.10616060", "10.1016/j.conb.2023.102822"],
+  "limitations": ["No new full-connectome simulation or clean-environment installation was performed.", "Scores are the reviewer's own scale, not official ISCAS ratings.", "Only the new review and review audit files were written."]
+}

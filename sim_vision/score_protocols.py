@@ -1,73 +1,30 @@
+"""Transmission-only re-scoring of records, not execution of external FI tools."""
+import argparse
+import hashlib
 import json
 from pathlib import Path
+import sys
 
-ROOT = Path(__file__).resolve().parent.parent
-CORE = ROOT / "sim/results/real"
-CTRL = ROOT / "sim_vision/results_vision/openloop_controls"
-THETA = 51.4
-ENV = 2.0
-
-
-def load(p):
-    return [json.loads(l) for l in open(p) if l.strip()]
-
-
-def med(xs):
-    xs = sorted(xs)
-    n = len(xs)
-    return xs[n // 2] if n % 2 else 0.5 * (xs[n // 2 - 1] + xs[n // 2])
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'tools'))
+from audit_archive import load, summarize, protocols
 
 
 def main():
-    base = load(CORE / "healthy.jsonl")
-    b_rate = med([r["pop_rate"] for r in base])
-    b_tot = med([r["n_total_spikes"] for r in base])
-    conds = {}
-    for p in sorted(CORE.glob("*.jsonl")):
-        if p.stem != "healthy":
-            conds[p.stem] = p
-    for p in sorted(CTRL.glob("*.jsonl")):
-        if p.stem.startswith(("HUB_", "EIm_", "INHrand_")):
-            conds[p.stem] = p
-
-    tot = acc_ok = env_ok = 0
-    rows = []
-    for name, p in conds.items():
-        rs = load(p)
-        a = e = 0
-        for r in rs:
-            rate, tot_sp = r["pop_rate"], r["n_total_spikes"]
-            acc = rate >= THETA
-            env = acc and rate <= ENV * b_rate and tot_sp <= ENV * b_tot
-            a += acc
-            e += env
-        rows.append((name, len(rs), a, e))
-        tot += len(rs)
-        acc_ok += a
-        env_ok += e
-
-    print(f"baseline {b_rate:.1f} Hz  {b_tot:.0f} spikes  theta {THETA}  envelope {ENV:.0f}x")
-    print(f"{'condition':16s} {'n':>3s} {'transmit':>9s} {'envelope':>9s}")
-    for name, n, a, e in rows:
-        print(f"{name:16s} {n:3d} {a:3d}/{n:<3d}   {e:3d}/{n:<3d}")
-    print(f"{'all':16s} {tot:3d} {acc_ok:3d}/{tot:<3d}   {env_ok:3d}/{tot:<3d}")
-    print(f"accuracy-only pass {100 * acc_ok / tot:.1f}%  dual {100 * env_ok / tot:.1f}%")
-
-    out = {
-        "baseline_rate_hz": b_rate,
-        "baseline_spikes": b_tot,
-        "theta_hz": THETA,
-        "envelope": ENV,
-        "trials": tot,
-        "accuracy_only_pass": acc_ok,
-        "envelope_pass": env_ok,
-        "conditions": [
-            {"name": n, "trials": c, "transmission": a, "envelope": e}
-            for n, c, a, e in rows
-        ],
-    }
-    (ROOT / "sim/results/protocol_scores.json").write_text(json.dumps(out, indent=1))
+    ap=argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--core',type=Path,default=ROOT/'sim/results/real')
+    ap.add_argument('--controls',type=Path,action='append',help='repeat for separate control directories')
+    ap.add_argument('--out',type=Path,required=True)
+    args=ap.parse_args()
+    controls=args.controls or [ROOT/'sim_vision/results_vision/openloop_controls']
+    result=protocols(args.core,controls,summarize(load(args.core/'healthy.jsonl')))
+    files=[args.core/'healthy.jsonl']+[Path(c['source']) if Path(c['source']).is_absolute() else ROOT/c['source'] for c in result['conditions']]
+    result['source_sha256']={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
+    args.out.parent.mkdir(parents=True,exist_ok=True)
+    with args.out.open('x') as f:
+        json.dump(result,f,indent=2)
+    print(f"{result['transmission_only_pass']}/{result['trials']} transmission; {result['envelope_pass']}/{result['trials']} joint")
 
 
-if __name__ == "__main__":
+if __name__=='__main__':
     main()

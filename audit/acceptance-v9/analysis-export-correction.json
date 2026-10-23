@@ -1,0 +1,6 @@
+{
+  "original_sha256": "40aac59dfaae4c68ba487079f6e4ce978cf1edadafa2370989e7d47eb7031e22",
+  "corrected_sha256": "33ec42c44ff4003dd7e4c55a7b0fdc711184224277aafa42770d84a0de8f1dfb",
+  "only_changes": "docstring plus distinct numeric CSV names; mathematical definitions/thresholds/statistical code unchanged",
+  "normalized_source_equal": true
+}

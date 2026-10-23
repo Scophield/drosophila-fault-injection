@@ -1,0 +1,44 @@
+{
+  "code_sha256": "53c5e525bb526a37040f21e66865bb2c82b206ab98104cb5ae185a9deaed1302",
+  "parameters": {
+    "tag": "controls",
+    "modes": "readout_disabled",
+    "phis": "-30,30",
+    "seeds": "6,7,8,9,10,11",
+    "faults": "",
+    "calibration_sha256": "5427eaa0159bbf7ebb7f4208fad13a1f8e18c43c7c695b39a078bcde41f639b3",
+    "protocol_version": "geometry-v2",
+    "evaluation_role": "test",
+    "duration_ms": 1000.0,
+    "threat_speed": 0.3,
+    "burst_delay_ms": 250.0,
+    "rf_seed": 20260201,
+    "frame_dt_ms": 20.0,
+    "neural_dt_ms": 0.1,
+    "retinal_elevation_deg": 0.0,
+    "brian_seed_rule": "20000+seed",
+    "fault_seed_rule": "10000+seed"
+  },
+  "neural_dt_ms": 0.1,
+  "runtime_backend": "numpy",
+  "sensory_refractory_ms": 2.2,
+  "model_inputs": {
+    "model.py": "b879a8a286f367165e3effa6d47562cac289333c977be7716ccb646067326cce",
+    "Completeness_783.csv": "52b0ac6094cd32c546f8d4c341e094376f48f4e791f8db9b166de5dff8199ea4",
+    "Connectivity_783.parquet": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347"
+  },
+  "git_commit": "051dcb6a3123841041a34d3b43395e2841975879",
+  "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.5.4",
+    "brian2": "2.10.1",
+    "pandas": "3.0.6",
+    "pyarrow": "26.0.0",
+    "matplotlib": "3.11.2",
+    "scipy": null,
+    "Cython": "3.3.0",
+    "joblib": "1.6.0"
+  },
+  "annotations_sha256": "d00c92142f6b96ce916cbef681d0d93f856b7cb0904c738f996130cd0e0c0b29",
+  "stimulus_note": "fault seeds traceable; unseeded open-loop Poisson stream is not bit-identical on resume"
+}

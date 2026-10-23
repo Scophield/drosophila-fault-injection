@@ -1,0 +1,32 @@
+{
+  "main_pages": 5,
+  "main_sha256": "9cad0840e2a553e8dfd9d00afc646c062ca1b225afb0738879959854e43f2082",
+  "supplement_pages": 13,
+  "supplement_sha256": "52d74fadd9b65affbbc29b42225acfb70be1cee84537bd9992662b800989d4db",
+  "supplement_tex_identical": true,
+  "supplement_pixels_identical": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true,
+    "7": true,
+    "8": true,
+    "9": true,
+    "10": true,
+    "11": true,
+    "12": true,
+    "13": true
+  },
+  "quantitative_figures_byte_identical": true,
+  "original_blender_assets_unchanged": true,
+  "original_named_pdfs_unchanged": {
+    "paper/fly_connectome_fault_assessment_v8.pdf": true,
+    "paper/fly_connectome_fault_assessment_v9.pdf": true,
+    "paper/fly_connectome_fault_assessment_v9_visual.pdf": true,
+    "paper/fly_connectome_supplement_v8.pdf": true,
+    "paper/fly_connectome_supplement_v9.pdf": true,
+    "paper/fly_connectome_supplement_v9_visual.pdf": true
+  }
+}

@@ -1,7 +1,8 @@
 import pandas as pd
+from project_paths import PATH_COMP, PATH_ANN
 
-ann = pd.read_csv("sim/data/annotations.tsv", sep="\t", dtype={"root_id": "int64"})
-comp = pd.read_csv("Drosophila_brain_model/Completeness_783.csv", index_col=0)
+ann = pd.read_csv(PATH_ANN, sep="\t", dtype={"root_id": "int64"})
+comp = pd.read_csv(PATH_COMP, index_col=0)
 comp_ids = set(comp.index.astype("int64"))
 print(f"annotations rows={len(ann)}, completeness={len(comp_ids)}")
 print(f"columns={list(ann.columns)}")

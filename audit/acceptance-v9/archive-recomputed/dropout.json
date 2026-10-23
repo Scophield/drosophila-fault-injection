@@ -1,0 +1,26 @@
+[
+  {
+    "deleted": 0.05,
+    "surviving": 0.95,
+    "retention": 0.9702970297029703,
+    "retention_over_survival": 1.0213652944241793
+  },
+  {
+    "deleted": 0.1,
+    "surviving": 0.9,
+    "retention": 0.9834983498349835,
+    "retention_over_survival": 1.0927759442610927
+  },
+  {
+    "deleted": 0.25,
+    "surviving": 0.75,
+    "retention": 0.8921892189218923,
+    "retention_over_survival": 1.1895856252291896
+  },
+  {
+    "deleted": 0.5,
+    "surviving": 0.5,
+    "retention": 0.7645764576457647,
+    "retention_over_survival": 1.5291529152915293
+  }
+]

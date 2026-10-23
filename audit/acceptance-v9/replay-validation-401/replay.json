@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "records": 6,
+  "seed_clusters": 1,
+  "scope": "validation/debug subset",
+  "checks": "independent sampled geometry, retinal expansion, readout/decision causality, exact actuation, latched collision, complete exposure and input-event/uniform replay",
+  "neural_dynamics_resimulated": false,
+  "seconds": 0.8125597999896854,
+  "audit_source_sha256": "34e75250f7d9f2add5ed074676341fb3ad69f268d7560cbea16405608c648156",
+  "records_checked": [
+    {
+      "seed": 401,
+      "phi_deg": -30.0,
+      "mode": "proportional",
+      "fault": "F2_25",
+      "escaped": true,
+      "burst_ms": 450.0,
+      "geometry_passed": true,
+      "input_events_replayed": true,
+      "file_sha256": "6b227e869a7923ae3cabcf8f1a432ec58c0b9846e66e4a2a9727b7d9eea93155",
+      "file": "runs/task-v9-fault-screen/episodes/proportional_F2_25_phi-30_s401.json"
+    },
+    {
+      "seed": 401,
+      "phi_deg": 30.0,
+      "mode": "proportional",
+      "fault": "F2_25",
+      "escaped": true,
+      "burst_ms": 450.0,
+      "geometry_passed": true,
+      "input_events_replayed": true,
+      "file_sha256": "148de61d56f4ed2864243c89139c786b2bf8dc9b77778ca149fbac4c32f7d459",
+      "file": "runs/task-v9-fault-screen/episodes/proportional_F2_25_phi30_s401.json"
+    },
+    {
+      "seed": 401,
+      "phi_deg": -30.0,
+      "mode": "proportional",
+      "fault": "F2_50",
+      "escaped": false,
+      "burst_ms": 450.0,
+      "geometry_passed": true,
+      "input_events_replayed": true,
+      "file_sha256": "f8dcf0c65a27df7508618954a6d0eecfaa48d9f57983143d40ff7f0fbd14885c",
+      "file": "runs/task-v9-fault-screen/episodes/proportional_F2_50_phi-30_s401.json"
+    },
+    {
+      "seed": 401,
+      "phi_deg": 30.0,
+      "mode": "proportional",
+      "fault": "F2_50",
+      "escaped": true,
+      "burst_ms": 450.0,
+      "geometry_passed": true,
+      "input_events_replayed": true,
+      "file_sha256": "a583aa59a87795890e45f1463a93e663a2858450c3357266a90a25944b546dd6",
+      "file": "runs/task-v9-fault-screen/episodes/proportional_F2_50_phi30_s401.json"
+    },
+    {
+      "seed": 401,
+      "phi_deg": -30.0,
+      "mode": "relay",
+      "fault": "F2_25",
+      "escaped": true,
+      "burst_ms": 450.0,
+      "geometry_passed": true,
+      "input_events_replayed": true,
+      "file_sha256": "6a26b00734bdf9552fafa41ccf9cd4fe674aa33efcd1a79b5a0d258a1c102b23",
+      "file": "runs/task-v9-fault-screen/episodes/relay_F2_25_phi-30_s401.json"
+    },
+    {
+      "seed": 401,
+      "phi_deg": -30.0,
+      "mode": "relay",
+      "fault": "F2_50",
+      "escaped": true,
+      "burst_ms": 450.0,
+      "geometry_passed": true,
+      "input_events_replayed": true,
+      "file_sha256": "c91868d3196cf4aab4b2cd7fb3bb7f4b5347f799e861a3def591eef857b9ffa5",
+      "file": "runs/task-v9-fault-screen/episodes/relay_F2_50_phi-30_s401.json"
+    }
+  ]
+}

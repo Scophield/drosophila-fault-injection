@@ -9,6 +9,7 @@ from brian2 import Hz, ms
 from vision_core import VisionSim
 from engine import get_type_ids
 import controls_openloop as C
+from run_provenance import output_dir, prepare
 
 OUT = Path(__file__).resolve().parents[1] / "sim" / "results" / "real"
 T_RUN = 600
@@ -18,17 +19,18 @@ THETA = 51.4
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--trials", type=int, default=12)
-    ap.add_argument("--out", default=str(OUT))
+    ap.add_argument('--resume', action='store_true')
     args = ap.parse_args()
-    out = Path(args.out)
-    out.mkdir(parents=True, exist_ok=True)
+    out = prepare(output_dir('recheck_real'), dict(producer='f4_recheck',trials=args.trials,
+                  drive_hz=150,duration_ms=T_RUN,seed_rule='sha256 ctrl|condition|trial'), args.resume)
 
     st = C.Setup()
     st.hubs[0.05] = st._top_cells(int(round(0.05 * st.sim.n_neurons)))
+    hashes = st.save_hubs(out)
     ro2 = np.asarray([st.sim.flyid2i[int(f)] for f in st.ro2], dtype=np.int64)
     print(f"hubs {[(k, len(v)) for k, v in sorted(st.hubs.items())]}", flush=True)
 
-    for frac, name in ((0.01, "F4_hub_1pct"), (0.02, "F4_hub_2pct"), (0.05, "F4_hub_5pct")):
+    for frac, name in ((None,'healthy'), (0.01, "F4_hub_1pct"), (0.02, "F4_hub_2pct"), (0.05, "F4_hub_5pct")):
         f_out = out / f"{name}.jsonl"
         done = set()
         if f_out.exists():
@@ -40,7 +42,8 @@ def main():
                 continue
             rng = np.random.default_rng(C.trial_seed(name, k))
             w = st.w0.copy()
-            w[C.out_mask(st.sim, st.hubs[frac])] = 0.0
+            if frac is not None:
+                w[C.out_mask(st.sim, st.hubs[frac])] = 0.0
             st.sim.net.restore("init")
             st.sim.arm_stim_weights(st.exc)
             rates = np.zeros(len(st.sim.pool_flyids))
@@ -57,6 +60,7 @@ def main():
             t_ro = t_all[keep]
             uni, cnt = np.unique(i_all[keep2], return_counts=True)
             rec = {
+                'fault_seed': C.trial_seed(name,k), 'hub_sha256': hashes.get(frac),
                 "trial": k,
                 "pop_rate": len(t_ro) / (len(st.ro) * T_RUN / 1000),
                 "success": bool(len(t_ro) / (len(st.ro) * T_RUN / 1000) >= THETA),

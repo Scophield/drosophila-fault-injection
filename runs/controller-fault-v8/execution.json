@@ -1,0 +1,12 @@
+{
+  "exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "workers": 3,
+  "wall_seconds": 1727.142997264862,
+  "started_unix": 1792593225.7975976,
+  "completed_unix": 1792594952.9406023,
+  "runner_sha256": "4efe943ab0ed1be38519bdf806288883159551c0b738920baecde17a09d7f99f"
+}

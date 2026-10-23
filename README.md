@@ -1,194 +1,98 @@
-<h1 align="center">How Much Fault Tolerance Is in a Fly Brain?</h1>
+# Paired Fault Assessment of a Fly-Connectome Spiking Controller
 
-<p align="center">
-<b>Fault-Injection Analysis of a Whole-Connectome Spiking Controller</b><br>
-Shuchao Gao · Waseda University · <i>ISCAS 2027 submission</i>
-</p>
+**Current presentation: assessment-v9 Blender integration (2026-10-23).**
+The scientific data, protocol and statistics are unchanged. A wide model/task
+overview uses the audited Blender assets: representative anchors, a selected
+410-cell/1,050-connection graph and an illustrative fly, with vector labels and
+explicit task/clocks. Quantitative figures 2/3 retain their previous bytes.
+See [Blender integration](BLENDER_INTEGRATION_V9_zh.md) for sources and commands;
+[the earlier visual revision](VISUAL_REVISION_V9_zh.md) remains historical.
+The local matched archive is `assessment-v9-blender-review.zip`; its source/data
+contents are included in this research branch. The ZIP itself is not a Git file.
+Previous named PDFs and source/data ZIPs remain immutable.
 
-<p align="center">
-<img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green">
-<img alt="Python" src="https://img.shields.io/badge/python-3.11-blue">
-<img alt="Simulator" src="https://img.shields.io/badge/simulator-Brian%202-blueviolet">
-<img alt="Connectome" src="https://img.shields.io/badge/connectome-FlyWire%20(CC%20BY%204.0)-informational">
-<img alt="Paper" src="https://img.shields.io/badge/paper-ISCAS%202027-orange">
-</p>
+Shuchao Gao, Waseda University. ISCAS 2027 research revision **assessment-v9**.
+Branch `research/iscas2027-20261022`, base HEAD
+`051dcb6a3123841041a34d3b43395e2841975879`. This research branch contains the
+updated manuscript and its matching source/data snapshot. The older main and
+submission branches do not reproduce this revision. See [GitHub snapshot](GITHUB_SNAPSHOT.md).
 
----
+The independent core, separate angle stress and secondary action diagnostic
+are complete: **288 + 96 + 64 new episodes**, with independent input/geometry
+replay. Development and validation remain separate. All 59 lightweight tests
+passed without skips. The matching main (5 pages, fifth references only) and
+supplement (13 pages) use embedded fonts and no Type 3; every page was reviewed.
+[Release state](docs/STATE.md) identifies final source/PDF checks and ZIP receipts.
+The GitHub source snapshot is distinct from a conference submission or acceptance.
 
-<p align="center">
-<img src="docs/img/hero.png" width="980" alt="from animal to verdict">
-</p>
+## Independent core evidence
 
-**From animal to verdict in one pipeline.** The animal (CC BY-SA 2.5 photo) → its brain, every cell type rendered (FlyWire) → the digital twin, built from real connectome edges → fault injection at five scales (F1–F5) → the verdict. The roadmap holds for any substrate: the same five steps consume any connectome, at any scale.
+The core crosses 24 new seed clusters, two bearings, two frozen laws and three
+network conditions. A seed contains all 12 conditions, not 12 independent repeats.
 
-<h2 align="center">A whole brain, deliberately broken, that keeps driving</h2>
+| Law | Healthy | 25% row deletion | 50% row deletion |
+|---|---:|---:|---:|
+| Proportional | 48/48 | 46/48 | 37/48 |
+| Relay | 48/48 | 48/48 | 48/48 |
 
-## What this repository is
+Success means collision-free through one second, not eventual escape. At 50%,
+relay-minus-proportional net loss is -22.9 pp, 95% cluster interval [-33.3,-12.5],
+Holm-adjusted symmetric-null sign-flip p=0.001953125. At 25%, p=0.50.
+Both healthy directions work and every failure is retained. Healthy clearance
+medians (33.1/41.4 mm) and executed turning effort differ: this is whole-system
+context dependence, not isolated fault-specific superiority at matched reserve.
 
-The code injects five hardware-motivated fault families into the released leaky integrate-and-fire (LIF) whole-brain model of *Drosophila melanogaster* (138,639 neurons, 15,091,983 signed connections / 54.5M contacts, FlyWire connectome) and measures output transmission and activity-envelope compliance on the visuomotor escape pathway: 150 Hz Poisson drive to the LC4 + LPLC2 populations (314 cells), scored as the population firing rate of the 8 descending command neurons.
+Frozen 400-ms command-rate and two-sided activity criteria detect 2/13 and 3/13
+later collisions. A held-command forecast detects 13/13 but flags 57/275
+successful tasks, versus 84/275 for its same-state actuator-schedule baseline.
+Exact simulated geometry, sparse positives and false alarms limit deployment
+claims. Zero observed misses do not establish zero FNR. These are scores of our
+records, not executed benchmarks of SpikeFI or SpikingJET.
 
-**38 conditions (19 fault sets on two graph phases) × 12 seeded 600 ms trials each** (≈3.5 s per trial on one CPU core). Every trial restores the full network state from the same healthy snapshot; fault realizations are derived from SHA-256 seeds over (condition, trial), so F1–F3 faults are independently redrawn per trial while F4/F5 sets are fixed. Determinism covers the connectome, the state, and the fault seeds. The stimulus Poisson stream is not re-seeded per trial (it keeps advancing across trials, as it would on repeated hardware runs), so re-runs are statistically equivalent rather than bit-identical; the archived per-trial records are the canonical realization. There is no whole-brain background drive: baseline firing is zero, and every recorded spike traces back to the directly stimulated sensory cells.
+Stopped/common activity medians are identical in the new cohort; the large
+historical exposure shift is not a current finding. Only two collisions occur
+by 800/900 ms, versus 13 by 1000 ms: the declared task horizon matters.
 
-### The instrumented pathway
+## Separate tests and limitations
 
-<p align="center">
-<img src="docs/img/fig1_pathway.png" width="700" alt="escape pathway">
-</p>
+The prespecified +/-45-degree stress uses eight new clusters/96 episodes:
+healthy and 25% deletion each 32/32, 50% proportional/relay 14/16 versus 16/16.
+Its contrast interval [-31.3,0] pp is wide; it is not pooled with core inference.
+Forecasts detect 2/2 collisions, with held-command/schedule false alarms 11/94
+and 21/94. The two-sided activity rule flags 22/32 healthy stress episodes.
 
-**Fig. 1 — The instrumented escape pathway (real connectome data).** 314 looming-sensitive sensory cells (LC4, 104 cells, blue; LPLC2, 210 cells, orange) converge through the top-ranked two-hop relays (top 90 of 849 candidates) onto 8 command descending neurons. All drawn edges are real FlyWire connectome edges (594 direct sensory→DN); line opacity and width scale with synapse count. Red badges F1–F5 mark the five fault-injection points. Inset: FlyWire brain rendering, adapted from Dorkenwald et al., *Nature* 634, 124–138 (2024), CC BY 4.0.
+The 64-episode action diagnostic uses eight other clusters and was registered
+after core launch. Normal laws each succeed 16/16; turn-disabled (burst retained)
+and both-neural-actions-disabled each 0/16. Baseline walking remains active.
+Burst necessity partly follows from the toy plant's speed/distance construction;
+these controls do not establish connectome-specific superiority or biological escape.
 
-## What the experiment identifies
+One graph, one assumed RF map, a synthetic task, unmatched nominal reserve and
+no hardware mapping remain material limits. No energy, area or physical upset
+rate benefit is inferred. The original six-cluster 25% p=.25 remains historical.
 
-The sweep is not just a stress test — it is a **diagnosis**. Three things fall out that no single-component benchmark gives you:
+## Evidence and reproduction
 
-1. **Where the single point of failure lives.** Silencing *both* sensory channels is the only catastrophic mode (0.0 Hz, every trial); the residual 21.2k spikes are, by construction, the stimulated sensory cells themselves — all their outputs are severed and the non-stimulated brain, initialized at zero baseline, receives no input. The sensor interface, not the network, is what must be duplicated.
-2. **The silent killer.** Removing the top-1% hubs makes the command rate *rise* 26%, and the effect is not distributed: the 765 inhibitory hubs alone drive it to 21× baseline activity while the 621 excitatory hubs depress it — output violates its envelope while **every per-unit monitor still reads "active"**. Only fault injection exposes this mode; liveness monitoring cannot.
-3. **A certifiable envelope.** Every pass/fail verdict is unchanged for any decision threshold between 9.2 and 63.1 Hz, and a second, activity-envelope criterion (rate *and* total spikes within 2× the healthy median) flags the runaway that rate-only scoring misses: the inhibitory-hub subfamily passes transmission 12/12 but violates the envelope 12/12, and an accuracy-only protocol of the kind automated by SpikeFi and SpikingJET passes 276 of 288 trials against 262 for the two-criterion score.
+- [Main PDF](paper/fly_connectome_fault_assessment_v9_blender.pdf), [TeX](paper/main.tex), [supplement PDF](paper/fly_connectome_supplement_v9_blender.pdf), [supplement TeX](paper/supplement.tex).
+- [Chinese research/change report](RESEARCH_V9_REPORT_zh.md), [final simulated review and Reject risks](FINAL_REVIEW_V9_zh.md).
+- [Core raw records](runs/task-v9-test/episodes/), [summary](audit/acceptance-v9/core-v2/summary.json), [index](audit/acceptance-v9/core-v2/raw-index.csv).
+- [Stress](audit/acceptance-v9/stress-v2/summary.json), [action diagnostic](audit/acceptance-v9/causal/summary.json).
+- [Protocol](paper/PROTOCOL_v9.md), [development](paper/PROTOCOL_v9_DEVELOPMENT.md), [clarifications](paper/PROTOCOL_v9_NOTES.md).
+- [Reproduction commands](REPRODUCE.md), [evidence interface](docs/ASSESSMENT_v9_INTERFACE.md), [material index](REVIEW_MATERIALS.md), [artifact scope](ARTIFACT_README.md).
 
-## Applications
-
-- **Pre-deployment fault-injection campaigns for neuromorphic controllers** — seconds-per-trial sweeps as a candidate gate before embodied hardware ships.
-- **Where to spend hard silicon** — the sweep tells you which redundancy pays (sensory front-end) and which does not (weight precision): dense low-precision, partially defective fabrics are tolerated by this architecture.
-- **Envelope monitors for autonomous systems** — the hub-loss dysregulation mode argues for output-envelope supervision, not component liveness checks, in safety-critical loops.
-
-## Beyond the fly
-
-The pipeline is species-agnostic by construction: image → connectome → digital twin → fault injection → fault-tolerance characterization. The same five steps run unchanged on any connectome-scale controller — mouse (~10⁸ neurons), human (~10¹¹), or engineered silicon systems with arbitrary topologies. What scales is the characterization, not the method.
-
-## Results at a glance
-
-<p align="center">
-<img src="docs/img/fig5_glance.png" width="760" alt="results at a glance">
-</p>
-
-| Condition | Command rate (median) | vs. healthy (94.7 Hz) | Note |
-|---|---|---|---|
-| Healthy | 94.7 Hz (94.0–95.6) | — | 4.05 ms first-spike latency |
-| Random-drive control | 8.2 Hz | 9% | total spikes 293k vs 40k — specificity, not arousal |
-| F1 weight noise, σ = 0.5 | 94.2 Hz | 99% | median within healthy trial dispersion |
-| F2 connection loss, 50% | 72.4 Hz | 76.5% | latency 4.05 → 5.4 ms (+33%) |
-| F3 unit silencing, 10% (~14k neurons) | 95.1 Hz | 100% | flat through the dose (a hair above baseline) |
-| F4 hub silencing, top 1% (9.1% of connections) | 119.1 Hz (118.3–119.9) | +26%, 1.25× global activity | non-monotonic: 119 → 115 → 94 Hz over 1/2/5% |
-| F4 inhibitory hubs only (765 cells, 5.6% of connections) | 168.2 Hz (167.8–168.8) | **+78%, 21.4× global activity** | runaway in 12/12 trials; the dangerous mode |
-| F4 excitatory hubs only (621 cells, 3.5%) | 88.6 Hz (88.3–89.0) | −6%, 0.82× | the two halves cancel in the full set |
-| 8,889 random inhibitory cells (8.6% of connections) | 102.4 Hz (100.2–109.6) | +8%, 1.27× | same mass as the hubs, none of the effect |
-| F5 both sensory channels silenced | 0.0 Hz (every trial) | 0% | the only catastrophic mode; the 21.2k residual spikes are the driven sensory cells themselves (no background drive) |
-| Permuted null (edge retargeting) | 0.0 Hz (median, every condition) | — | transmits nothing; broad activity ~24k spikes, barely above the 21.2k driven-cell baseline (≈2.6k propagated) |
-
-## The three findings
-
-<p align="center">
-<img src="docs/img/fig2_specificity.png" width="560" alt="specificity">
-</p>
-
-**Pathway specificity.** The readout is not a generic arousal response: Escape drive pushes the command population to 94.7 Hz; an equal-sized random set, driven identically, yields 8.2 Hz while producing *more* total activity (293k vs 40k spikes). Silencing both sensory channels (F5_both) drops the command rate to exactly zero in every trial; the residual global activity is the stimulated sensory cells themselves (see the determinism note above).
-
-<p align="center">
-<img src="docs/img/fig3_curves.png" width="820" alt="dose-response">
-</p>
-
-**Fig. 3 — Dose–response.** (a) Synapse deletion degrades gracefully: 50% loss still retains 76.5% of the command rate, with the cost appearing almost entirely in latency (+33%). (b) Hub removal is non-monotone and qualitatively different from every distributed fault: 119, 115 and 94 Hz at 1, 2 and 5%, because the inhibitory half of the set drives a runaway that the excitatory half offsets.
-
-<p align="center">
-<img src="docs/img/fig4_topology.png" width="560" alt="hub over-activity">
-</p>
-
-**Fig. 4 — The dangerous failure mode is over-activity.** The top-1% hub set carries ~62% inhibitory output connections (network mean 40%), so hub silencing removes broad inhibitory regulation rather than starving the pathway — output violates the envelope while every per-unit monitor still reads "active". Splitting the set by sign localizes it: the inhibitory half runs to 21× baseline, the excitatory half drops below it, and a random inhibitory lesion of the same mass does not reproduce either. The same silencing on the permuted control does not produce this signature, binding the effect to biological hub structure.
-
-<p align="center">
-<img src="docs/img/fig6_neuron.png" width="560" alt="per-neuron composition">
-</p>
-
-**Fig. 6 — Aggregates hide composition.** Four of the eight command cells carry 96.6% of healthy readout spikes; at 50% connection loss the smallest contributors collapse (158→10 and 26→0 spikes over 12 trials) while previously silent cells are recruited (1→58, 0→21). The aggregate retains 76.9%, so the tolerance curves should be read as a descending-population response, not as behavior.
-
-An edge-permuted null (postsynaptic partners reshuffled, preserving each neuron's out-degree, weight profile, and the global incoming-degree histogram) yields a zero median command rate in every tested condition, with no trial reaching the transmission threshold; while an analytic multi-hop pathway-mass analysis shows that *relative* route-mass decay under edge loss is topology-independent. Conclusion: functional robustness arises from **threshold amplification acting on convergent wiring**, not from graph redundancy alone. See [`REPORT_zh.md`](REPORT_zh.md) for a detailed Chinese walkthrough of every experiment, and [`paper/main.pdf`](paper/main.pdf) for the paper itself.
-
-## Repository layout
-
-```
-├── paper/                 LaTeX source of the paper + figure PDFs
-├── seeds.json             integer seed for every (condition, trial) pair
-├── REPRODUCE.md           environment, data, seeds, run order
-├── docs/img/              PNG renders of the paper figures (used by README/REPORT)
-├── sim/
-│   ├── engine.py          network construction + fault injection + trial runner (Brian2)
-│   ├── calibrate.py       background calibration + θ placement (10-trial set)
-│   ├── sweep.py           fault sweep over 19 conditions (writes results/)
-│   ├── analyze.py         dose-response figures from results/
-│   ├── envelope.py        two-criterion scoring: transmission + activity envelope
-│   ├── pathway_analysis.py  analytic multi-hop pathway mass m_k = ||A^k||_1
-│   ├── fig_pathway.py     real-data escape-pathway figure (Fig. 1)
-│   ├── fig_neuron.py      per-neuron command readout composition (README)
-│   ├── fig_glance.py      results-at-a-glance bar chart (README)
-│   ├── data/annotations.tsv   FlyWire cell-type annotations (see Credits)
-│   ├── results/           per-trial JSONL records, calibration, summary.json, pathway_mass.json
-│   ├── seed_table.py      regenerates seeds.json
-│   └── figs/              generated figure PDFs
-└── sim_vision/            lean harness: controls, closed loop, protocol scoring
-    ├── vision_core.py     chunked network build + stimulus weights
-    ├── controls_openloop.py   drive sweep, E/I-matched set, random inhibitory sets
-    ├── inhib_controls.py  sign-matched controls (765 and 8,889 cells)
-    ├── run_closedloop.py  closed-loop escape, per-fault (incl. HUB_inh / HUB_exc)
-    └── score_protocols.py accuracy-only vs envelope re-scoring
+```text
+python tools/run_v9.py tools/analyze_task_v9_exportfix.py --root runs/task-v9-test --registration runs/task-v9-frozen/registration-core.json --out audit/my-core
+python tools/run_v9.py tools/replay_audit_v9.py --root runs/task-v9-test --calibration runs/task-v9-frozen/calibration.json --out audit/my-replay
 ```
 
-## Setup
+Saved-data analysis/replay needs no external matrices or neural rerun. A logged
+CSV export-key correction leaves the original frozen script and raw data intact;
+only numeric export column names change. Registrations are local, not externally timestamped.
 
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-The connectome itself is **not** bundled here. Clone the released model and place it next to this repository:
-
-```bash
-git clone https://github.com/philshiu/Drosophila_brain_model.git
-# directory layout expected by the code:
-#   <parent>/Drosophila_brain_model/   (Connectivity_783.parquet, Completeness_783.csv, ...)
-#   <parent>/sim/                      (this repository)
-#
-# verify the upstream files against the versions used for every number below:
-#   Connectivity_783.parquet  sha256 efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347
-#   Completeness_783.csv      sha256 bbb847a4cc2caaa7a16349722d220c087317b946d148d4d592d94d250617a311
-```
-
-## Reproduce
-
-All runs are seeded and reproducible: the connectome, the healthy state snapshot, and the fault seeds are fixed; per-trial fault realizations are drawn from SHA-256 seeds over (condition, trial) so F1–F3 replicate hardware draw-to-draw variability. The stimulus stream is not re-seeded, so re-runs are statistically equivalent rather than bit-identical; the archived per-trial records are the canonical realization, and every number in the paper is reproducible from them.
-
-```bash
-cd sim
-python3 seed_table.py          # regenerate seeds.json from the derivation rule
-python3 calibrate.py           # ~1 min: background stats + threshold (10-trial set)
-python3 sweep.py               # ~1 h single core: 19 conditions x 12 trials
-python3 sweep.py --phase er    # same on the degree-matched graph
-python3 pathway_analysis.py    # ~1 min: multi-hop route-mass analysis
-python3 analyze.py             # regenerates figs 2-4 (writes sim/figs/, copy to paper/figs/)
-python3 envelope.py            # transmission vs activity-envelope verdict table (Table I P4)
-python3 fig_pathway.py         # regenerates Fig. 1 (writes sim/figs/ and paper/figs/)
-python3 fig_glance.py          # regenerates the README results-at-a-glance chart
-python3 fig_neuron.py          # per-neuron composition: healthy vs 50% connection loss
-```
-
-Controls, closed loop and protocol scoring live in `sim_vision/`; see
-[`REPRODUCE.md`](REPRODUCE.md) for the full sequence, pinned package versions
-and the seed table.
-
-Runtime: ≈3.5 s per 600 ms trial on one CPU core; the full sweep is minutes-to-an-hour on a laptop. Figures are written with embedded TrueType (Type 42) fonts to comply with IEEE PDF specifications (no Type 3 fonts).
-
-## Output format
-
-- `sim/results/real/*.jsonl`, `sim/results/er/*.jsonl` — one JSON record per trial: condition, seed, command rate, broad-readout rate, first-spike latency, total spikes.
-- `sim/results/calib/calibration.json` — healthy/random calibration distributions and θ.
-- `sim/results/summary.json` — per-condition medians, interdeciles, success fractions.
-- `sim/results/graph/pathway_mass.json` — route mass m_k per graph per edge-loss level.
-
-## Credits
-
-- Whole-brain LIF model and connectome tables: [philshiu/Drosophila_brain_model](https://github.com/philshiu/Drosophila_brain_model)
-- Connectome: FlyWire Consortium — Dorkenwald et al., *Nature* 634, 124–138 (2024), doi:10.1038/s41586-024-07558-y (CC BY 4.0); cell-type annotations via Schlegel et al. 2023 (codex.flywire.ai).
-- Escape-pathway neurobiology: Shuang et al. 2023; Fu & Card 2020 (see paper references).
-- Fruit-fly photograph in the hero banner: André Karwath, Wikimedia Commons, CC BY-SA 2.5. The hero banner is a composite schematic (photo + FlyWire rendering + this repo's figures); the fault-injection panel is illustrative.
-
-## License
-
-MIT (see `LICENSE`). The bundled `sim/data/annotations.tsv` derives from the FlyWire annotation release (CC BY 4.0); the upstream connectome files remain under the terms of the original model repository.
+Fresh simulation requires Git, Python 3.12, requirements-v9.txt and separate
+Drosophila_brain_model inputs: model.py, Completeness_783.csv and
+Connectivity_783.parquet. Default location is a sibling, or set FLY_MODEL_DIR.
+Exact hashes/layout are documented. A source/data ZIP excludes matrices and
+dependency caches; it is not the complete experimental environment. Original
+F4 manifests and some old generation metadata remain unavailable. Old source
+entry documents are preserved in docs/history/assessment-v8/.

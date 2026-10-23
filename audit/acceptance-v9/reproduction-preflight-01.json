@@ -1,0 +1,274 @@
+{
+  "documented_commands": [
+    {
+      "script": "tools/analyze_task_v9_exportfix.py",
+      "flags": [
+        "--out",
+        "--registration",
+        "--root"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/replay_audit_v9.py",
+      "flags": [
+        "--calibration",
+        "--out",
+        "--root"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/analyze_task_v9_exportfix.py",
+      "flags": [
+        "--out",
+        "--registration",
+        "--root"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/replay_audit_v9.py",
+      "flags": [
+        "--calibration",
+        "--out",
+        "--root"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/check_task_numbers_v9.py",
+      "flags": [
+        "--analysis",
+        "--out",
+        "--registration",
+        "--root"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/check_task_numbers_v9.py",
+      "flags": [
+        "--analysis",
+        "--out",
+        "--registration",
+        "--root"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/plot_task_v9.py",
+      "flags": [
+        "--analysis",
+        "--out"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/compare_warnings_v9.py",
+      "flags": [
+        "--analysis",
+        "--out"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/diagnose_control_v9.py",
+      "flags": [
+        "--out",
+        "--root"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/launch_task_v9.py",
+      "flags": [
+        "--calibration",
+        "--out",
+        "--registration",
+        "--role",
+        "--seeds"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/launch_task_v9.py",
+      "flags": [
+        "--calibration",
+        "--out",
+        "--phis",
+        "--registration",
+        "--role",
+        "--seeds"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/run_task_v9.py",
+      "flags": [
+        "--horizon",
+        "--modes",
+        "--out",
+        "--phis",
+        "--role",
+        "--seeds"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/calibrate_task_v9.py",
+      "flags": [
+        "--out",
+        "--root"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/calibrate_task_v9.py",
+      "flags": [
+        "--configuration",
+        "--out",
+        "--parent",
+        "--root"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/launch_task_v9.py",
+      "flags": [
+        "--calibration",
+        "--faults",
+        "--out",
+        "--role",
+        "--seeds"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/freeze_task_v9.py",
+      "flags": [
+        "--calibration",
+        "--out",
+        "--stress-out",
+        "--validation"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/build_supplement_v9.py",
+      "flags": [
+        "--causal",
+        "--core",
+        "--figures",
+        "--out",
+        "--stress"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/qa_pdf.py",
+      "flags": [
+        "--out",
+        "--pdf",
+        "--submission"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/qa_pdf.py",
+      "flags": [
+        "--out",
+        "--pdf"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/check_tests_v9.py",
+      "flags": [
+        "--out"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/check_reproduction.py",
+      "flags": [
+        "--out",
+        "--require-model"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/validate_release_v9.py",
+      "flags": [
+        "--main-build",
+        "--main-qa",
+        "--out",
+        "--preservation",
+        "--supplement-build",
+        "--supplement-qa",
+        "--tests",
+        "--visual"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/package_task_v9.py",
+      "flags": [
+        "--out",
+        "--validation"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/verify_artifact_v9.py",
+      "flags": [
+        "--out",
+        "--zip"
+      ],
+      "wrapped": false
+    },
+    {
+      "script": "tools/launch_causal_v9.py",
+      "flags": [
+        "--out",
+        "--registration"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/analyze_causal_v9.py",
+      "flags": [
+        "--out",
+        "--registration",
+        "--root"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/replay_causal_v9.py",
+      "flags": [
+        "--calibration",
+        "--out",
+        "--root"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/audit_archive.py",
+      "flags": [
+        "--out"
+      ],
+      "wrapped": true
+    }
+  ],
+  "model_directory": "D:\\autoresearch_labtorary\\Drosophila_brain_model",
+  "input_files": {
+    "model.py": true,
+    "Completeness_783.csv": true,
+    "Connectivity_783.parquet": true
+  },
+  "execution": "static CLI/input check only; no simulator imports or trials",
+  "reproduce_sha256": "2b159132e11d5cd4830baee4c51bd002c1bdf52aa9ceb9efcdd5d9b5999116e1",
+  "script_sha256": "60c425713131fe242c8c61e9ca8066919504a9267acec8527df144a5920518ca",
+  "passed": true
+}

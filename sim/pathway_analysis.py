@@ -6,14 +6,16 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent))
 from engine import load_edges, get_type_ids
+from project_paths import PATH_COMP
+from run_provenance import output_dir, prepare
 
-OUT = Path(__file__).parent / "results" / "graph"
-OUT.mkdir(parents=True, exist_ok=True)
+OUT = prepare(output_dir('graph'),dict(producer='pathway_analysis',er_seed=17,
+              deletion_seed_rules=['100+int(f*1000)','200+int(f*1000)'],deletion_unit='original edge-table row'))
 ids = get_type_ids()
 comp_ids = None
 
 import pandas as pd
-comp = pd.read_csv(Path(__file__).resolve().parents[1] / "Drosophila_brain_model" / "Completeness_783.csv", index_col=0)
+comp = pd.read_csv(PATH_COMP, index_col=0)
 flyid2i = {int(j): i for i, j in enumerate(comp.index.astype("int64"))}
 inp = np.array([flyid2i[int(f)] for f in ids["LC4"] + ids["LPLC2"]])
 dn = np.array([flyid2i[int(f)] for f in ids["DN_ALL"]])
@@ -23,13 +25,14 @@ rng = np.random.default_rng(17)
 
 def build_A(j_override=None):
     i_pre, i_post, w0 = load_edges(j_override)
-    A = sparse.csr_matrix((np.abs(w0), (i_pre, i_post)), shape=(N, N))
-    return A
+    return i_pre, i_post, np.abs(w0)
 
 def pathway_mass(A, f, seed):
     r = np.random.default_rng(seed)
-    Af = A.copy()
-    Af.data = Af.data * (r.random(len(Af.data)) >= f)
+    pre, post, weights = A
+    # Sample original connections before CSR coalesces repeated null graph pairs.
+    kept_weights = weights * (r.random(len(weights)) >= f)
+    Af = sparse.csr_matrix((kept_weights,(pre,post)),shape=(N,N))
     v = np.zeros(N)
     v[inp] = 1.0
     masses = []

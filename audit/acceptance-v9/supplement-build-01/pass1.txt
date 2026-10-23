@@ -1,0 +1,155 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(supplement.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/base\article.c
+ls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.cl
+o))
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geome
+try.sty
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyva
+l.sty)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex
+.sty
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.
+sty))
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geome
+try.cfg))
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.s
+ty)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmat
+h.sty
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstex
+t.sty
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen
+.sty))
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy
+.sty)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn
+.sty))
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssy
+mb.sty
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfo
+nts.sty))
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\bookt
+abs.sty)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graph
+icx.sty
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graph
+ics.sty
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.
+sty)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\g
+raphics.cfg)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\p
+dftex.def)))
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/float\float.st
+y)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.st
+y)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtabl
+e.sty)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/caption\captio
+n.sty
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/caption\captio
+n3.sty)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcapt
+ion.sty))
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3ba
+ckend-pdftex.def)
+No file supplement.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\su
+pp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\e
+pstopdf-base.sty
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epsto
+pdf-sys.cfg))
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.
+fd)
+(C:\Users\ohsawalab gpu3\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.
+fd) [1{C:/Users/ohsawalab gpu3/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map
+}{C:/Users/ohsawalab gpu3/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-e
+c.enc}{C:/Users/ohsawalab gpu3/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm
+/lm-rm.enc}{C:/Users/ohsawalab gpu3/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
+ps/lm/lm-mathit.enc}{C:/Users/ohsawalab gpu3/AppData/Local/Programs/MiKTeX/font
+s/enc/dvips/lm/lm-mathsy.enc}] [2 <./figs/development_v9.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table S5 on input line 190.
+
+supplement.tex:190: ignored error: Infinite glue shrinkage found in box being s
+plit [3]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table S7 on input line 244.
+
+[4] [5]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table S12 on input line 342.
+
+[6]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table S15 on input line 411.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table S16 on input line 446.
+
+supplement.tex:446: ignored error: Infinite glue shrinkage found in box being s
+plit [7] [8 <./figs/task_v9_assessment.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table S19 on input line 523.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table S20 on input line 554.
+
+supplement.tex:554: ignored error: Infinite glue shrinkage found in box being s
+plit [9] [10] [11] [12]
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+[13] (supplement.aux) )<C:/Users/ohsawalab gpu3/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/lm/lmbx12.pfb><C:/Users/ohsawalab gpu3/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/ohsawalab gpu3/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/ohsawalab gpu3/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/ohsawalab gp
+u3/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/ohsa
+walab gpu3/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Us
+ers/ohsawalab gpu3/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pf
+b><C:/Users/ohsawalab gpu3/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmr7.pfb><C:/Users/ohsawalab gpu3/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmr9.pfb><C:/Users/ohsawalab gpu3/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmsy10.pfb><C:/Users/ohsawalab gpu3/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/lm/lmsy7.pfb><C:/Users/ohsawalab gpu3/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/ohsawalab gpu3/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on supplement.pdf (13 pages, 299682 bytes).
+Transcript written on supplement.log.
+pdflatex: major issue: So far, you have not checked for MiKTeX updates.

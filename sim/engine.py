@@ -1,20 +1,20 @@
 import sys
+import os
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "Drosophila_brain_model"))
+from project_paths import ROOT, MODEL_DIR, PATH_COMP, PATH_CON, PATH_ANN, require_model
+sys.path.insert(0, str(require_model()))
 
 from model import default_params
-from brian2 import Network, NeuronGroup, Synapses, SpikeMonitor, PoissonGroup, volt, second, ms, Hz, prefs
+from brian2 import Network, NeuronGroup, Synapses, SpikeMonitor, PoissonGroup, volt, second, ms, Hz, prefs, defaultclock
 
-prefs.codegen.target = "cython"
-
-ROOT = Path(__file__).resolve().parents[1]
-PATH_COMP = ROOT / "Drosophila_brain_model" / "Completeness_783.csv"
-PATH_CON = ROOT / "Drosophila_brain_model" / "Connectivity_783.parquet"
-PATH_ANN = ROOT / "sim" / "data" / "annotations.tsv"
+CODEGEN_TARGET = os.environ.get('FLY_CODEGEN_TARGET', 'cython')
+if CODEGEN_TARGET not in {'cython', 'numpy'}:
+    raise ValueError('FLY_CODEGEN_TARGET must be cython or numpy')
+prefs.codegen.target = CODEGEN_TARGET
 
 INPUT_TYPES = ["LC4", "LPLC2"]
 READOUT_TYPES = ["DNp01", "DNa02", "DNp04", "DNb01"]
@@ -48,6 +48,7 @@ def load_edges(j_override=None):
 
 class FlyBrainSim:
     def __init__(self, j_override=None, background_seed=0):
+        defaultclock.dt = 0.1 * ms
         self.params = dict(default_params)
         p = self.params
         comp = pd.read_csv(PATH_COMP, index_col=0)

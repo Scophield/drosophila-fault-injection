@@ -3,6 +3,8 @@ from pathlib import Path
 
 import matplotlib
 matplotlib.use("Agg")
+matplotlib.rcParams['pdf.fonttype'] = 42
+matplotlib.rcParams['ps.fonttype'] = 42
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -18,8 +20,16 @@ def load(tag, mode, fault, phi, seed):
 
 
 def main():
-    import sys
-    tag = sys.argv[sys.argv.index('--tag') + 1] if '--tag' in sys.argv else 'v4'
+    global OUT, FIG
+    import argparse
+    ap=argparse.ArgumentParser()
+    ap.add_argument('--tag',default='v4')
+    ap.add_argument('--input',type=Path,default=OUT)
+    ap.add_argument('--out',type=Path,required=True)
+    args=ap.parse_args()
+    OUT=args.input
+    FIG=args.out
+    tag=args.tag
     phi, seed = -30.0, 0
     panels = [
         ("brain", "healthy", "healthy"),
@@ -31,8 +41,7 @@ def main():
     for ax, (mode, fault, lbl) in zip(axes, panels):
         e = load(tag, mode, fault, phi, seed)
         if e is None:
-            ax.set_visible(False)
-            continue
+            raise FileNotFoundError(f'missing panel {tag}/{mode}/{fault}/{phi}/{seed}')
         xs = [q["fly_x"] for q in e["log"]]
         ys = [q["fly_y"] for q in e["log"]]
         tx = [q["target_x"] for q in e["log"]]
@@ -50,7 +59,9 @@ def main():
     fig.text(0.5, 0.035, "x (m)", ha="center", va="center", fontsize=8.0)
     axes[0].set_ylabel("y (m)", fontsize=8.0)
     fig.tight_layout(rect=(0, 0.09, 1, 1), h_pad=0.2, w_pad=0.7)
-    FIG.mkdir(exist_ok=True)
+    FIG.mkdir(parents=True,exist_ok=True)
+    if (FIG/'fig5_demo.pdf').exists():
+        raise FileExistsError(FIG/'fig5_demo.pdf')
     fig.savefig(FIG / "fig5_demo.pdf", bbox_inches="tight", pad_inches=0.01)
     print("saved", FIG / "fig5_demo.pdf")
 

@@ -3,7 +3,8 @@ import resource
 import numpy as np
 import pandas as pd
 import sys
-sys.path.insert(0, "Drosophila_brain_model")
+from project_paths import require_model, PATH_COMP, PATH_CON
+sys.path.insert(0,str(require_model()))
 
 from model import default_params, create_model, poi
 from brian2 import Network, Hz, ms, prefs
@@ -12,8 +13,8 @@ prefs.codegen.target = "cython"
 
 t0 = time.time()
 neu, syn, spk_mon = create_model(
-    "Drosophila_brain_model/Completeness_783.csv",
-    "Drosophila_brain_model/Connectivity_783.parquet",
+    PATH_COMP,
+    PATH_CON,
     default_params,
 )
 print(f"[build] wall={time.time()-t0:.1f}s "

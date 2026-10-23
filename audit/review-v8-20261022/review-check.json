@@ -1,0 +1,279 @@
+{
+  "manuscript": {
+    "sha256": "011e40516af3a791899a3de4fc934adf095e20c05a0c9d515f3c39b64dff002d",
+    "pages": 5,
+    "bytes": 315872,
+    "type3": 0,
+    "unembedded": 0,
+    "page_five_start": "200\n400\n600\n800\n1000\nObservation horizon (ms)\n1.5\n2.0\n2.5\nFault / healthy spikes\n400 ms\n-60\u00b0 (cal.)\n-30\u00b0 (cal.)\n+30\u00b0\n+60\u00b0\nFig. 3.\nLegacy full-hub cumulative activity ratios. Both members of every\npair last 1000 ms. Marker/color encode bearing; three same-bearing traces are\nshared seeds. Negative bearings are calibration scenarios. Crosses mark first\ntwofold crossings at 840\u2013900 ms. The first 400 ms excludes late activity rather\nthan correcting unequal durations.\nThe privileged geometry rule surv"
+  },
+  "supplement": {
+    "sha256": "72c763a8b061a626a80005234e3d056265b0d2114ab60228dc621266284138b8",
+    "pages": 14,
+    "bytes": 506079,
+    "type3": 0,
+    "unembedded": 0,
+    "page_five_start": "5\nStopping times, early windows and late crossings\nTable S6:\nMedian paired legacy spike ratios, using main-paper Eq. (3).\nRatios are computed within scenario before\naggregation.\nCondition\nWhole\nCommon duration\nFirst 400 ms\nF2_25\n0.8861\n0.8861\n0.8837\nF2_50\n0.3817\n0.7294\n0.7226\nF4_1pct\n1.7029\n1.7029\n1.3618\nHUB_inh\n71.6931\n75.2306\n118.1571\nTable S7: Full-hub cumulative horizon sensitivity. Every fault/healthy pair lasts 1000 ms.\nHorizon (ms)\nMedian paired ratio\nAbove twofold\n200\n1.302\n0/12\n300\n1.33"
+  },
+  "raw": {
+    "n": 72,
+    "groups": {
+      "brain/healthy": {
+        "successes": 4,
+        "min_duration": 660.0,
+        "by_bearing": {
+          "-30": 4,
+          "30": 0
+        }
+      },
+      "brain/F2_25": {
+        "successes": 4,
+        "min_duration": 640.0,
+        "by_bearing": {
+          "-30": 4,
+          "30": 0
+        },
+        "losses": 1,
+        "gains": 1
+      },
+      "brain/F2_50": {
+        "successes": 0,
+        "min_duration": 600.0,
+        "by_bearing": {
+          "-30": 0,
+          "30": 0
+        },
+        "losses": 4,
+        "gains": 0
+      },
+      "precue_gated/healthy": {
+        "successes": 6,
+        "min_duration": 700.0,
+        "by_bearing": {
+          "-30": 6,
+          "30": 0
+        }
+      },
+      "precue_gated/F2_25": {
+        "successes": 3,
+        "min_duration": 660.0,
+        "by_bearing": {
+          "-30": 3,
+          "30": 0
+        },
+        "losses": 3,
+        "gains": 0
+      },
+      "precue_gated/F2_50": {
+        "successes": 0,
+        "min_duration": 640.0,
+        "by_bearing": {
+          "-30": 0,
+          "30": 0
+        },
+        "losses": 6,
+        "gains": 0
+      }
+    },
+    "interactions": {
+      "F2_25": {
+        "contrasts": [
+          0.0,
+          0.5,
+          0.5,
+          0.0,
+          0.5,
+          0.0
+        ],
+        "mean": 0.25,
+        "percentile95": [
+          0.08333333333333333,
+          0.4166666666666667
+        ],
+        "sign_flip_p": 0.25
+      },
+      "F2_50": {
+        "contrasts": [
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.5,
+          0.0
+        ],
+        "mean": 0.16666666666666666,
+        "percentile95": [
+          0.0,
+          0.3333333333333333
+        ],
+        "sign_flip_p": 0.5
+      }
+    },
+    "thresholds": [
+      {
+        "t": 200,
+        "c": 1.5,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 200,
+        "c": 2,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 200,
+        "c": 3,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 200,
+        "c": 4,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 300,
+        "c": 1.5,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 300,
+        "c": 2,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 300,
+        "c": 3,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 300,
+        "c": 4,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 400,
+        "c": 1.5,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 400,
+        "c": 2,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 400,
+        "c": 3,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 400,
+        "c": 4,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 500,
+        "c": 1.5,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 2
+      },
+      {
+        "t": 500,
+        "c": 2,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 500,
+        "c": 3,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      },
+      {
+        "t": 500,
+        "c": 4,
+        "collisions": 41,
+        "flagged_collisions": 0,
+        "flagged_survivors": 0
+      }
+    ]
+  },
+  "sources": {
+    "cited_keys": [
+      "an2026sparse",
+      "colucci2022enpheeph",
+      "dangelo2026embodied",
+      "dorkenwald2024neuronal",
+      "gleyo2026population",
+      "gogebakan2024spikingjet",
+      "jang2023azimuthal",
+      "jo2026simulating",
+      "klapoetke2017looming",
+      "lin2024network",
+      "shiu2024drosophila",
+      "simpson2023descending",
+      "spyrou2024spikefi",
+      "stimberg2019brian2",
+      "theilman2026robustness",
+      "wang2025neuromorphic",
+      "yik2023neurobench"
+    ],
+    "cited_count": 17,
+    "bibliography_count": 43,
+    "uncited_keys": [
+      "adler2026latent",
+      "aerts2016brain",
+      "arfa2025hardwareaware",
+      "chessa2026crosslayer",
+      "cho2026drosophila",
+      "drummond2026population",
+      "gaitanidis2025drosophila",
+      "gautam2025neurocorex",
+      "gerven2025neuromorphic",
+      "goodman2009brian",
+      "graciamorn2026dependability",
+      "guo2026neurovla",
+      "jin2026wholebrain",
+      "jouni2025stdptrained",
+      "liew2026connectomebased",
+      "luca2026learned",
+      "medvedeva2025formalizing",
+      "senge2026connectome",
+      "shuang2023opplod",
+      "thieu2022effects",
+      "xie2025visual",
+      "yu2025biological",
+      "yuan2026embodiedr",
+      "yunusoglu2025neuromorphic",
+      "zhang2026synaptic"
+    ],
+    "tables": 22,
+    "figures": 9
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "source_sha256": "059fc138225fae96d5ea3b90ef1f72312eae86b09fa40f3d3b16135cd216662e",
+  "script_sha256": "e75c3eb9dfe15de90f150547f406c499b92cec260bab1fdba635a8cdd09428b1",
+  "blender_version": "5.4.0 Alpha",
+  "scenes": {
+    "fly": {
+      "scene": "01_Fruit_fly",
+      "identities": {
+        "nodes": 0,
+        "edges": 0,
+        "sha256": "f5f601586348141cb59f4afc4fab6c1a56cf15d36b9b45c2bfbfcc92b9154bcc"
+      },
+      "hidden": [
+        "Studio_floor",
+        "Label_Drosophila melanogaster",
+        "Label_Procedural 3D illustration",
+        "Label_COMPOUND EYES   /   VEINED WINGS   ",
+        "Label_Illustrative exterior; no anatomica"
+      ],
+      "camera": {
+        "projected_bounds": [
+          -3.6011760234832764,
+          3.171931028366089,
+          -2.791879892349243,
+          2.7834317684173584
+        ],
+        "padding": 1.04,
+        "ortho_scale": 7.044031143188477,
+        "camera_location": [
+          7.3747992515563965,
+          9.375442504882812,
+          10.49666690826416
+        ],
+        "camera_rotation": [
+          0.9092226624488831,
+          2.180319391698049e-08,
+          2.5103862285614014
+        ]
+      },
+      "resolution": [
+        1200,
+        1000
+      ],
+      "device": "GPU",
+      "seconds": 16.074937600060366,
+      "png_sha256": "1ebf79c8878395988f90d691ac36e401bae365b97f0529b31d291ec1c0e90639"
+    },
+    "brain": {
+      "scene": "02_Connectome_anchors",
+      "identities": {
+        "nodes": 410,
+        "edges": 1050,
+        "sha256": "7ea87db600635002ec06f4b2e0a3728a508e2da228c6db638719c951877044d5"
+      },
+      "hidden": [
+        "Label_The local fly connectome",
+        "Label_FlyWire v783  /  measured represent",
+        "Label_LC4   104",
+        "Label_LPLC2   210",
+        "Label_RELAY   88",
+        "Label_command   8",
+        "Label_8,500 background anchors  +  select",
+        "Label_Curves encode selected connections;"
+      ],
+      "camera": {
+        "projected_bounds": [
+          -4.803253650665283,
+          4.702500343322754,
+          -2.573917865753174,
+          2.472883939743042
+        ],
+        "padding": 1.04,
+        "ortho_scale": 10.497347831726074,
+        "camera_location": [
+          -0.05037665367126465,
+          -18.01276206970215,
+          4.651121616363525
+        ],
+        "camera_rotation": [
+          1.3153878450393677,
+          -0.0,
+          0.0
+        ]
+      },
+      "resolution": [
+        2200,
+        1100
+      ],
+      "device": "GPU",
+      "seconds": 69.55390659999102,
+      "png_sha256": "ce76b8c5d92d3367bff06751e996e05bf474eebb1ddf8b8153917cdd4f720803"
+    },
+    "pathway": {
+      "scene": "03_Visual_command_pathway",
+      "identities": {
+        "nodes": 410,
+        "edges": 1050,
+        "sha256": "7ea87db600635002ec06f4b2e0a3728a508e2da228c6db638719c951877044d5"
+      },
+      "hidden": [
+        "Node_label_DNp01  L",
+        "Node_label_DNp01  R",
+        "Node_label_DNa02  L",
+        "Node_label_DNa02  R",
+        "Node_label_DNp04  L",
+        "Node_label_DNp04  R",
+        "Node_label_DNb01  L",
+        "Node_label_DNb01  R",
+        "Label_Visual-to-command pathway",
+        "Label_Real connectivity from your local f",
+        "Label_VISUAL INPUT",
+        "Label_SELECTED RELAYS",
+        "Label_COMMAND OUTPUT",
+        "Label_LC4  104",
+        "Label_LPLC2  210",
+        "Label_88 distinct relays",
+        "Label_8 neurons",
+        "Label_410 unique neurons  /  1,050 select",
+        "Label_Schematic positions. Thickness foll"
+      ],
+      "camera": {
+        "projected_bounds": [
+          -4.982870101928711,
+          3.7299997806549072,
+          -2.2978649139404297,
+          2.2496743202209473
+        ],
+        "padding": 1.04,
+        "ortho_scale": 9.90930461883545,
+        "camera_location": [
+          -0.6264352798461914,
+          -22.004100799560547,
+          3.7762563228607178
+        ],
+        "camera_rotation": [
+          1.399756908416748,
+          -0.0,
+          0.0
+        ]
+      },
+      "resolution": [
+        2200,
+        1050
+      ],
+      "device": "GPU",
+      "seconds": 107.62254630005918,
+      "png_sha256": "6871a7b6e4046eb29fb6aa6044ece537b5fd565d496cfe8910457d499631c65a"
+    }
+  },
+  "display_only": {
+    "transparent_background": true,
+    "hide_text_and_floor": true,
+    "uniform_edge_radius_multiplier": 0.65,
+    "all_geometry_in_frame": true
+  },
+  "outputs": {
+    "brain.png": "ce76b8c5d92d3367bff06751e996e05bf474eebb1ddf8b8153917cdd4f720803",
+    "fly.png": "1ebf79c8878395988f90d691ac36e401bae365b97f0529b31d291ec1c0e90639",
+    "paper_scenes.blend": "b88325e80e1089484234f05ffd2556fc370e2ad96ed20b220f81b577cbc19daa",
+    "pathway.png": "6871a7b6e4046eb29fb6aa6044ece537b5fd565d496cfe8910457d499631c65a"
+  }
+}

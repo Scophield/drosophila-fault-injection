@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "records": 64,
+  "seed_clusters": 8,
+  "scope": "all supplied records",
+  "checks": "independent sampled geometry, retinal expansion, readout/decision causality, exact actuation, latched collision, complete exposure, fault masks and input-event/uniform replay",
+  "neural_dynamics_resimulated": false,
+  "seconds": 8.688963900087401,
+  "audit_source_sha256": "9c88ea0ae1fc26d3ec0db627a0b17e66478bec1c0b1c3ca1edb9beefd861771d"
+}

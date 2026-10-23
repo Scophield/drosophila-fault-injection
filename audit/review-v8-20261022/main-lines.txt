@@ -1,0 +1,59 @@
+1: \documentclass[conference]{IEEEtran}
+2: \IEEEoverridecommandlockouts
+3: \usepackage{cite}
+4: \usepackage{amsmath,amssymb,amsfonts}
+5: \usepackage{graphicx}
+6: \usepackage{textcomp}
+7: \usepackage{xcolor}
+8: \usepackage{booktabs}
+9: \usepackage{placeins}
+10: \usepackage{tikz}
+11: \usetikzlibrary{arrows.meta,positioning,fit,backgrounds,calc}
+12: \usepackage{url}
+13: \renewcommand{\topfraction}{0.95}
+14: \renewcommand{\dbltopfraction}{0.95}
+15: \renewcommand{\textfraction}{0.05}
+16: \renewcommand{\floatpagefraction}{0.95}
+17: \renewcommand{\dblfloatpagefraction}{0.95}
+18: \setcounter{topnumber}{3}
+19: \setcounter{dbltopnumber}{3}
+20: \setcounter{totalnumber}{5}
+21: \setlength{\textfloatsep}{7pt plus 2pt minus 2pt}
+22: \setlength{\dbltextfloatsep}{7pt plus 2pt minus 2pt}
+23: \setlength{\floatsep}{7pt plus 2pt minus 2pt}
+24: \setlength{\intextsep}{7pt plus 2pt minus 2pt}
+25: \raggedbottom
+26: \setlength{\abovecaptionskip}{3pt}
+27: \setlength{\belowcaptionskip}{0pt}
+28: \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+29: 
+30: \begin{document}
+31: \title{Endpoint and Exposure Sensitivity in Fault Assessment\\
+32: of a Fly-Connectome Spiking Model}
+33: 
+34: \author{\IEEEauthorblockN{Shuchao Gao}
+35: \IEEEauthorblockA{Waseda University\\
+36: Tokyo, Japan}}
+37: 
+38: \maketitle
+39: \bstctlcite{IEEEcontrol}
+40: 
+41: \begin{abstract}
+42: Fault assessment can conflate preserved neural transmission with task tolerance when cohorts, exposure and control laws differ. We quantify these dependencies in a 138{,}639-neuron \emph{Drosophila} spiking model. A frozen-calibration comparison crosses two laws with healthy, 25\%-deletion and 50\%-deletion networks on six paired seed clusters, comprising 72 records. Collision-free counts are 4/4/0 of 12 under the original law and 6/3/0 under pre-cue gating. Gated-minus-original net fault loss is +25.0 and +16.7 percentage points at the two doses. The 25\% conditional percentile range excludes zero, but only three clusters have nonzero contrasts; a post-hoc sign-flip sensitivity gives $p=0.25$. All factorial $+30^\circ$ episodes collide. Archive reanalysis removes 12 of 14 additional rejections relative to transmission-only scoring when targeted hubs are excluded. Duration matching changes the median deletion spike ratio from 0.382 to 0.729; six equal-duration hub pairs instead cross twofold at 840--900\,ms on calibration scenarios. These conditional findings support reporting cohorts, paired exposure, analysis horizons and task outcomes together, without establishing a resource budget or broad reliability.
+43: \end{abstract}
+44: 
+45: \begin{IEEEkeywords}
+46: neuromorphic computing, connectome, fault assessment, fault injection, Drosophila
+47: \end{IEEEkeywords}
+48: 
+49: \input{sections/intro}
+50: \input{sections/related}
+51: \input{sections/methods}
+52: \input{sections/results}
+53: \input{sections/principles}
+54: 
+55: \FloatBarrier
+56: \bibliographystyle{IEEEtran}
+57: \bibliography{refs}
+58: 
+59: \end{document}

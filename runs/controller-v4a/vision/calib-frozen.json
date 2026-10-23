@@ -1,0 +1,61 @@
+{
+  "protocol_version": "geometry-v2",
+  "theta_demo_hz": 18.125,
+  "data_sign": 1.0,
+  "bias": -20.0,
+  "lr_ref": 70.0,
+  "rf_seed": 20260201,
+  "threat_speed": 0.3,
+  "frame_dt_ms": 20.0,
+  "calibration_keys": [
+    {
+      "phi": -60.0,
+      "seed": 0
+    },
+    {
+      "phi": -60.0,
+      "seed": 1
+    },
+    {
+      "phi": -60.0,
+      "seed": 2
+    },
+    {
+      "phi": -30.0,
+      "seed": 0
+    },
+    {
+      "phi": -30.0,
+      "seed": 1
+    },
+    {
+      "phi": -30.0,
+      "seed": 2
+    },
+    {
+      "phi": 0.0,
+      "seed": 0
+    },
+    {
+      "phi": 0.0,
+      "seed": 1
+    },
+    {
+      "phi": 0.0,
+      "seed": 2
+    }
+  ],
+  "source_sha256": {
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\geometry-v3\\vision\\episodes_calibration\\observe_healthy_phi-30_s0.json": "ea157fe884988fa884c9b95a31c1b4758a76e9364a7c434a3b6c288e952808ab",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\geometry-v3\\vision\\episodes_calibration\\observe_healthy_phi-30_s1.json": "de7ba0d05e6701320261d07756756c0199177413dd3f6eccdfb901c96ad03e0f",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\geometry-v3\\vision\\episodes_calibration\\observe_healthy_phi-30_s2.json": "8e16fc51bba2b989f84048f477b5c03390cfd84980becd7bbce5d3070df2a342",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\geometry-v3\\vision\\episodes_calibration\\observe_healthy_phi-60_s0.json": "bc123b05df248f665b21dd184ffdbfb344c9e2b80c1ef4b4361db7e575d48072",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\geometry-v3\\vision\\episodes_calibration\\observe_healthy_phi-60_s1.json": "bed99d900b79a5a3cd1919644e046beeaa09bf99397175ec5e595483e635d46a",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\geometry-v3\\vision\\episodes_calibration\\observe_healthy_phi-60_s2.json": "9fe6231d500d58985df2f807c527590106bb6111aa36a3686b8fce9d08a74c36",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\geometry-v3\\vision\\episodes_calibration\\observe_healthy_phi0_s0.json": "bb04d2117c6b2b9829e7ca74b700f2d7d1d9e90ec8d1533a91c922fffecad05b",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\geometry-v3\\vision\\episodes_calibration\\observe_healthy_phi0_s1.json": "71c12989a6fd3f5fb0e32bb9ae5c672410a6f99bb2bd8e32597abe82cd7acc8c",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\geometry-v3\\vision\\episodes_calibration\\observe_healthy_phi0_s2.json": "1ee91761ddc2170e8e87d49c278c35be130b070edd8073a5b6d93173b49d5b29"
+  },
+  "theta_source": "median of negative-azimuth episode maxima with frame end in [250,300] ms",
+  "note": "passive observe mode: no steering, threshold, or burst used for calibration"
+}

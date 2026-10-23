@@ -1,0 +1,104 @@
+{
+  "code_sha256": "f9e6f1bd6227638a2e5c218da3b8c50f3748d8247399e32fe3e4b2ae069adac4",
+  "parameters": {
+    "protocol": "task-v9-causal-exact-events",
+    "seeds": [
+      302
+    ],
+    "phis": [
+      -30.0,
+      30.0
+    ],
+    "modes": [
+      "proportional",
+      "relay"
+    ],
+    "faults": [
+      "healthy",
+      "F2_25",
+      "F2_50"
+    ],
+    "horizon": 1000.0,
+    "calibration_sha256": "bdccc41cee6e2c8082f3fddc410fef58a6d6d46d5e3fa13405658b900d0e368c",
+    "role": "validation",
+    "registration_sha256": null,
+    "entrypoint_sha256": {
+      "tools/run_v9.py": "be088007bb12190c3216ae83ef93ae19669879844c72e5ac708804eb5e175154",
+      "tools/run_task_v9.py": "0cbbd0822e3dce846ab14bdbb82ddd8fb3d00260885e7173ab4c27766ccf2784",
+      "tools/calibrate_task_v9.py": "f76011e64cc1bc5e107dac57cc7b243051fbb9ed446c75eaf9d36affc424e3b5"
+    },
+    "stimulus_note": "Common frame-indexed Bernoulli uniforms; independent deletion stream; hashes recorded. Seed traceability does not promise cross-platform bit identity."
+  },
+  "neural_dt_ms": 0.1,
+  "runtime_backend": "numpy",
+  "sensory_refractory_ms": 2.2,
+  "model_inputs": {
+    "model.py": "b879a8a286f367165e3effa6d47562cac289333c977be7716ccb646067326cce",
+    "Completeness_783.csv": "52b0ac6094cd32c546f8d4c341e094376f48f4e791f8db9b166de5dff8199ea4",
+    "Connectivity_783.parquet": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347"
+  },
+  "git_commit": "051dcb6a3123841041a34d3b43395e2841975879",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.5.4",
+    "brian2": "2.10.1",
+    "pandas": "3.0.6",
+    "pyarrow": "26.0.0",
+    "matplotlib": "3.11.2",
+    "scipy": "1.17.1",
+    "Cython": "3.1.3",
+    "joblib": "1.6.0"
+  },
+  "annotations_sha256": "d00c92142f6b96ce916cbef681d0d93f856b7cb0904c738f996130cd0e0c0b29",
+  "stimulus_note": "Common frame-indexed Bernoulli uniforms; independent deletion stream; hashes recorded. Seed traceability does not promise cross-platform bit identity.",
+  "source_sha256": {
+    "sim\\analyze.py": "daa55b9bbe89b663bafd1b5cfdcd99c9591aa08166747729359c60845b3486b7",
+    "sim\\calibrate.py": "edf8df3266dd8b8533e5d8ce9de7d9a40994c157460f522ad80ec4f7129eb49b",
+    "sim\\engine.py": "7f2c501fbba364ae5e524e4a28ad872056c18b3a372490f53c813d7c1db2f0c2",
+    "sim\\envelope.py": "c702b95e02bbb9079ed66d127f02cb70835fe65ca7651512a803f1e48cebd6d3",
+    "sim\\fig_glance.py": "40c6bcdae9a0b108ef3f489aaea35f062b3ba75d0e9a9cd045c6735859c630ae",
+    "sim\\fig_hero.py": "864137d0ae16eb7e6f75ef53f0453991e52f47961be9e7055a6ae88a14e42708",
+    "sim\\fig_neuron.py": "64fe58ede4779dc25132480bc54bd960ceba3a206bac83619c8ae79759049fce",
+    "sim\\fig_pathway.py": "c0ee27b18455f228e1e9d65ed8fab5af1e58f92aecbf615d892777e0b14f4d8b",
+    "sim\\find_escape_types.py": "24a716d0618901062eb6ef6d1633104d5d71c5dd62611075812346dd3e979c65",
+    "sim\\hub_selection.py": "293b44fb295337d55ba9ca626e89c0a48920212b50a79f133676d9a7d28cf883",
+    "sim\\inspect_data.py": "65f7c66922f6651f860e54ebe38a1a782e45b37f692f5d65a39178d25c00c804",
+    "sim\\pathway_analysis.py": "55c5fd2d20f3b2d902c8567e8e7be1e871631e14cbefbb76704b13beb96d93ce",
+    "sim\\project_paths.py": "35ecdb41b79f6107dcbc40e506e62f99a4cbc9ae0f050a04a459c426b0c37c97",
+    "sim\\run_provenance.py": "7d08b96e61afd67241c2acbdcbf8e07810b8280609d51c7f79ffac9c445ceeff",
+    "sim\\seed_table.py": "48fda7e3946c04631af39e221da09a6ae9903bf9321bd3587f568569471ed798",
+    "sim\\smoke_test.py": "4a6af5b202d82eaa1d9164c28968758af47a69f4b12a6585cb5e5440a4f6bf9d",
+    "sim\\spike_attribution.py": "e06ab8c755cde3366d8f28697fdf6e999750211104d7c7dd91a28d3120e83208",
+    "sim\\sweep.py": "912e9ed0220403bb8029e1950a0a6ad91cdfe3fb3eed009ea175998d82b03be6",
+    "sim\\timing_test.py": "1e7dfe874ac07733af8e8bc01f78a2572f60d9d8409bf4294ba8120ff11e6c66",
+    "sim_vision\\_diag_calls.py": "2f361a1af39b554d4e7b09474a33cdfda413cae5c6a483e6c45a54611b37ade0",
+    "sim_vision\\_diag_chunked.py": "433d0a129c789674de3413426b9795b569b5439848353ed7fb86df1a2607bca0",
+    "sim_vision\\_diag_default_cc.py": "9267d5783c5941173d66fea378ddff0ec06bad6392c3e61dc39d083bc7ddc2ed",
+    "sim_vision\\_diag_dtypes.py": "5e14f95d97851944582af187e8885dc7b48492af23f24074ec0452ae0073deb3",
+    "sim_vision\\_diag_origin.py": "614026ac0d04cdd2cebc630faaccc15a1560b95dde5f65b708d88507b042b000",
+    "sim_vision\\analyze_closedloop.py": "5e6865b92dcc3cf7e318aebf7d033c152540715a0c9c18c730a1b1aa3ff2dd5f",
+    "sim_vision\\analyze_controls.py": "f64a7762112459ecf27a63c96104be093eec489cd9862e0dc74fce9a7682bbe6",
+    "sim_vision\\analyze_openloop.py": "a6b2b268cb92603d019c3ba7991d74deac0a94d05ce148bab03ab6a807ef5a77",
+    "sim_vision\\calibrate_readout.py": "d0eb1847b585d482fd0bc58c8d0bccfd8f599e0cade10919a9dc872f8fc8d6e9",
+    "sim_vision\\closedloop_protocol.py": "ea1727495a1b3579d6c35c6d042ba279033fc8336ecfc5ba8e5c7425054f42c4",
+    "sim_vision\\controls_openloop.py": "caeafd36c7fb4ea0d82b26892792c68aee3ffa31c0a71933b9053407bcd315fd",
+    "sim_vision\\encoder.py": "70ff9dd6f4843355f4bece5a1c573f5e83851ade0ae573e24e733e384099c1bd",
+    "sim_vision\\f4_recheck.py": "40c557c219018d53c627f760acba0e2ccdcd71f3a3b11b366436ab80562f81c0",
+    "sim_vision\\fig_demo.py": "49b6d139495209b41f4886ec5843d996314c16b50ec6096c5fc6eddfd2c11e5d",
+    "sim_vision\\inhib_controls.py": "7a284d299b2d350f0f85e939315dbc66029d1a60ec17932b4761bb3201d2fe1c",
+    "sim_vision\\make_video.py": "b4ff73bc1d1234eac2be91766880b0a12d1a04fd90b54edb1436f36daf1e15b1",
+    "sim_vision\\run_closedloop.py": "63e9cd491d59e75019e9de1055b7fecffdffa0d5dabfb102b26f5554431e7ec0",
+    "sim_vision\\run_openloop.py": "53344e993412465393b9e1bfa5aec48ec9ff94a58dbcb4dcadcf6ec49868ffba",
+    "sim_vision\\score_protocols.py": "e76262bee3052cfd66faded6b7e085745f692796a176384f65c1992402a0591d",
+    "sim_vision\\task_v9.py": "fccd6243416ba71872c1f83f3c3c5d1d757df7808a1ceb306341a22a57218956",
+    "sim_vision\\vision_core.py": "190b5e32a9d7ca0cdba3474af6596bcc6bee3b77035b79270ab61553a618fef0",
+    "sim_vision\\vision_v9.py": "bafb139fc9abdd4783760c56348bc1ee0081b4f9aebd45f302c23f426f5265e7",
+    "external/model.py": "b879a8a286f367165e3effa6d47562cac289333c977be7716ccb646067326cce"
+  },
+  "hardware": {
+    "system": "Windows",
+    "release": "11",
+    "processor": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+    "logical_cpus": 8
+  }
+}

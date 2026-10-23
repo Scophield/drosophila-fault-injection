@@ -1,0 +1,716 @@
+PAGE 1
+Endpoint and Exposure Sensitivity in Fault
+Assessment
+of a Fly-Connectome Spiking Model
+Shuchao Gao
+Waseda University
+Tokyo, Japan
+Abstract—Fault assessment can conflate preserved neural
+transmission with task tolerance when cohorts, exposure and
+control laws differ. We quantify these dependencies in a 138,639-
+neuron Drosophila spiking model. A frozen-calibration compar-
+ison crosses two laws with healthy, 25%-deletion and 50%-
+deletion networks on six paired seed clusters, comprising 72
+records. Collision-free counts are 4/4/0 of 12 under the original
+law and 6/3/0 under pre-cue gating. Gated-minus-original net
+fault loss is +25.0 and +16.7 percentage points at the two
+doses. The 25% conditional percentile range excludes zero, but
+only three clusters have nonzero contrasts; a post-hoc sign-flip
+sensitivity gives p = 0.25. All factorial +30◦episodes collide.
+Archive reanalysis removes 12 of 14 additional rejections relative
+to transmission-only scoring when targeted hubs are excluded.
+Duration matching changes the median deletion spike ratio from
+0.382 to 0.729; six equal-duration hub pairs instead cross twofold
+at 840–900 ms on calibration scenarios. These conditional findings
+support reporting cohorts, paired exposure, analysis horizons and
+task outcomes together, without establishing a resource budget
+or broad reliability.
+Index Terms—neuromorphic computing, connectome, fault
+assessment, fault injection, Drosophila
+I. INTRODUCTION
+Fault tolerance inferred from a neural endpoint can depend
+on which fault cohorts, observation durations and feedback
+laws enter the assessment. Preserved command transmission
+can coexist with elevated activity or failed behavior. The adult
+Drosophila wiring diagram [1], [2] and an executable spiking
+model [3] provide an anatomically constrained substrate for
+quantifying this dependence. Biological wiring supplies a
+structural prior without validating a simplified controller’s
+reliability.
+We study software perturbations of a 138,639-neuron leaky
+integrate-and-fire (LIF) model, driving LC4/LPLC2 visual
+neurons and reading eight descending neurons (Fig. 1). Five
+families alter weights, delete weighted connection rows or
+silence neuronal outputs. These experiments specify neither
+hardware-resource mapping nor biological resilience.
+The contribution is empirical: we quantify how assessment
+choices change the interpretation of fault effects in this model.
+Archive reanalysis holds observations fixed while varying
+cohort and exposure definitions; prospective tests cross two
+frozen control laws with healthy, 25%-deletion and 50%-
+deletion networks. Paired task loss separates fault effects
+from baseline controller success. Duration matching, complete
+a From visual input to movement
+Faults
+F1-F5
+8 command
+cells
+Visual input
+314 sensory cells
+Spiking model
+138,639 neurons
+Motion
+steering + burst
+visual feedback in geometric tests
+b Measure three different outcomes
+Transmission
+command rate
+Activity
+network spikes
+Task outcome
+survival at 1 s
+c Declare the assessment conditions
+Which trials?
+How long?
+Which control?
+Cohort     |     paired exposure + full horizon     |     feedback law
+Fig. 1.
+Assessment overview. (a) Model flow with visual feedback in
+geometric tests. (b) Distinct transmission, activity and bounded task endpoints.
+(c) Required assessment conditions. Icons and traces are schematic; Supple-
+mentary Fig. S8 retains mapped wiring.
+trajectories and endpoint separation are established evaluation
+practices, not new algorithms.1
+II. RELATED WORK
+Connectome models connect anatomy to executable sen-
+sorimotor hypotheses [3], while graph statistics characterize
+wiring rather than dynamical reliability [2]. A recent spar-
+sification study investigates compression across connection
+strength, placement, state and task, including active-state over-
+excitation [4]. Endpoint-dependent damage responses have
+also been reported on the male central nervous system connec-
+tome [5]. Those studies investigate how damage or sparsifica-
+tion changes function. Our assessment comparison explicitly
+separates paired exposure, full observation horizons and neural
+versus task endpoints. It introduces no perturbation operator
+or claim of superior fault tolerance. Bilateral integration mea-
+sured in the giant-fiber circuit [6] cautions against treating the
+controller’s directional failure as established fly behavior.
+SpikeFI [7], SpikingJET [8] and enpheeph [9] provide
+SNN fault-injection frameworks. Population-coded regression
+1Review
+package:
+assessment-v8,
+including
+supplement.pdf
+and reproducible paired analyses. Repository: https://github.com/Scophield/
+drosophila-fault-injection; this local revision is not yet published there.
+
+
+PAGE 2
+[10] and scientific computing [11] assess application outputs.
+Loihi 2 deployment [12] establishes implementation feasi-
+bility. NeuroBench [13] and embodied benchmarking [14]
+motivate separate functional/resource measures. We examine
+assessment definitions rather than benchmark injector imple-
+mentations.
+III. MODEL, PERTURBATIONS AND ENDPOINTS
+Evidence is tiered: prospective geometry-corrected experi-
+ments provide the principal task evidence; archive reanalysis
+supplies cohort/exposure sensitivity; reconstructed historical
+selectors are diagnostic only. Missing historical metadata are
+not inferred from current code.
+A. Spiking Substrate and Readout
+The model uses the released signed connectivity and param-
+eters [3], implemented with Brian 2 [15]. There are 138,639
+neurons and 15,091,983 connection-table rows representing
+54.5 million contacts. Between events, each unit follows
+dvi
+dt = v0 −vi + gi
+20 ms
+,
+dgi
+dt = −gi
+5 ms.
+(1)
+Here gi is voltage-valued synaptic drive. Events add signed
+contact counts times 0.275 mV after 1.8 ms. Spikes above
+−45 mV reset voltage to v0 = −52 mV and drive to zero.
+Both equations pause during 2.2 ms refractoriness, retained in
+sensory cells unlike upstream stimulation. This variant is tested
+below. Linear integration advances the dynamics; stored initial
+states are restored before each trial. The time step used in
+the archived simulations was not documented; fresh runs pin
+0.1 ms.
+Independent 150 Hz Poisson trains drive 104 LC4 and 210
+LPLC2 cells (Fig. 1). Each external event adds 68.75 mV to
+the target voltage. Other cells receive no background drive.
+LC4/LPLC2 are associated with looming processing, includ-
+ing measured LPLC2 motion opponency [16]; the demo’s
+receptive fields are assumptions, not measured maps. The
+command readout is eight cells of types DNp01, DNa02,
+DNp04 and DNb01 [17]. For duration T = 0.6 s, command
+rate is r = Ncmd/(8T). Latency is the first spike in this group,
+not a command decision time. Total activity S counts all model
+spikes.
+B. Functional Perturbations
+F1 multiplies each weight by exp(σZ −σ2/2), Z
+∼
+N(0, 1), with σ = 0.05, 0.10, 0.20, 0.50. This preserves ex-
+pected weight; it does not implement bit flips. F2 indepen-
+dently zeroes weighted connection-table rows with proba-
+bilities f = 0.05, 0.10, 0.25, 0.50, not individual contacts;
+expected lost contact mass is f. F3 silences all outgoing
+connections of a random fraction 0.01, 0.02, 0.05, 0.10 of
+eligible units, protecting sensory and command cells. Those
+units still receive input and spike. F4 targets the top 1%, 2%
+or 5% by outgoing contact count; its archived selections lack
+cell manifests and have protection inconsistencies. F5 silences
+LC4, LPLC2 or both output channels.
+There are 12 fault-seeded 600 ms trials per condition. F1–F3
+draw realizations from SHA-256 seeds over (phase, condition,
+trial). Archived open-loop stimulus streams advance without
+explicit per-trial reseeding; dispersion combines fault and stim-
+ulus variation. Fresh code saves selected cell identities, input
+hashes and backend metadata. Corrected selection excludes
+protected FlyWire identities and breaks ties by identity. It has
+not generated the historical F4 data.
+C. Scoring and Controls
+Transmission requires r
+≥
+θ
+=
+51.4 Hz, rounding
+(94.5833 + 8.2292)/2 = 51.40625 Hz from separate ten-trial
+sensory and random-drive calibrations. The operational joint
+rule is
+r ≥51.4 Hz,
+r ≤c rH,
+S ≤c SH,
+(2)
+with healthy medians rH = 94.6875 Hz, SH = 39,694 and c =
+2 (sensitivity: 1.5, 3, 4). This operational sensitivity criterion is
+not a hardware-, power- or safety-validated failure threshold.
+Joint passes are nested in transmission; disagreement does not
+establish predictive accuracy. The 288 records mix 216 main-
+sweep faults and 72 HUB/EIm/random-inhibitory controls, not
+288 independent population samples. Twelve healthy refer-
+ences provide resubstitution checks only. Median intervals use
+20,000 trial resamples, seed 0; relative effects independently
+resample fault and healthy groups. Dispersion bars instead
+show 10th–90th percentiles.
+The target-permuted null preserves sources, weights, signs
+and incoming row counts while changing convergence and
+weighted input. It fails intact transmission, so supplies a
+specificity control rather than a functioning fault-tolerance
+alternative. Supplementary Table S4 reports realized control
+damage. Expected contact-mass matching does not imply
+realized edge equality.
+D. Stopping Times and Observation Horizons
+Legacy 20 ms frames couple a readout-driven planar agent
+to a pursuing threat. Collision is recorded at 0.05 m with
+a nominal 1 s horizon. Six calibration episodes overlap the
+healthy evaluation; all fault episodes share calibration seeds.
+We treat these records as illustrative. For paired cumulative
+spikes SF, SH and recorded durations TF, TH, define
+Rwhole = SF(TF)
+SH(TH),
+Rcommon = SF(T∗)
+SH(T∗),
+R(t) = SF(t)
+SH(t),
+(3)
+where T∗= min(TF, TH) and t ≤T∗. Matching unequal
+stopping times differs from selecting an earlier horizon. All
+selected 200–500 ms windows precede included terminations;
+full-hub pairs reach 1000 ms. Diagnostics retain every pair.
+The 33 = 27 ordered draws with replacement of three seed
+clusters are bootstrap resamples, not independent experiments
+or confirmatory coverage.
+
+
+PAGE 3
+E. Prospective Geometric Validation
+The prospective protocol uses body-frame bearing, actual-
+separation expansion and within-frame collision checks. Nine
+passive 400 ms episodes (−60/ −30/0◦, seeds 0–2) fix cal-
+ibration before testing. At frame k, let dk be summed left-
+minus-right command rates and ak their eight-cell mean. Bars
+denote means over the latest five frames (all available frames
+initially). Steering is
+ωk = −400 deg/s clip
+ ¯dk −b
+ℓ
+, −1, 1
+
+,
+(4)
+with frozen b = −20 Hz, ℓ= 70 Hz and positive data sign.
+Body-frame +30◦is left, −30◦right; positive heading turns
+left. For example, ¯d = 50 Hz gives ω = −400◦/s (right),
+whereas ¯d = −90 Hz gives +400◦/s (left). These define the
+implemented sign convention, not a biological response. Trig-
+gering requires current ¯ak and preceding unsmoothed ak−1
+both to reach 18.125 Hz. The first qualifying frame schedules
+one burst 250 ms after its end. Burst speed is 0.35 m/s for
+450 ms with fixed heading; otherwise speed is 0.05 m/s and
+heading is capped at ±100◦. Cue onset is 100 ms; original
+steering has no onset gate.
+The first 48 tests use seeds 6–11, ±30◦, a 1 s horizon,
+healthy/F2 25/F2 50 and readout disabling. Healthy controls
+on seeds 12–17 compare the original law, pre-cue gating
+(ω = 0 before 100 ms), offset only ( ¯d = 0) and no steering
+(ω = 0), retaining the neural trigger. The new factorial com-
+parison reuses 24 byte-identical original/gated healthy records
+and adds 48 F2 25/F2 50 episodes on these same seeds and
+bearings. Calibration, neural-source snapshots, input hashes
+and package versions are verified unchanged. Brian2 seed
+20000 + s and deletion seed 10000 + s are reset per episode.
+Masks are shared across controllers/bearings and nested across
+doses. Healthy outcomes were known before this extension; no
+controller is retuned.
+For matched binary survival YH, YF, paired loss is L =
+I(YH = 1, YF = 0), gain is G = I(YH = 0, YF = 1)
+and net loss D = YH −YF = L −G. The interaction is
+Dgate −Doriginal, averaging both bearings within seed. Ex-
+ploratory conditional ranges use 20,000 six-cluster resamples,
+seed 0; 72 records are not independent replicates. Activity
+compares each faulty record to the same-law healthy reference
+at 200–500 ms and common duration. The NumPy backend
+uses Brian2 2.10.1, NumPy 2.5.4 and 0.1 ms steps on a
+Xeon W-2223. Supplementary Tables S17–S22 give paired
+records, activity, thresholds and compute; protocol v8 gives
+reproduction commands.
+IV. RESULTS
+A. Held-Out Whole-Connectome Tests
+Frozen calibration yielded healthy collision-free survival
+in 5/6 cases at −30◦and 0/6 at +30◦(Fig. 2). The corre-
+sponding counts were 4/6 and 0/6 under 25% deletion; 50%
+deletion and readout disabling yielded 0/12 each. On paired
+negative-bearing seeds, deletion lost one and five healthy
+Healthy
+25%
+deletion
+50%
+deletion
+Readout
+off
+0
+3
+6
+Collision-free count
+5/6
+4/6
+0/6
+0/6
+0/6
+0/6
+0/6
+0/6
+(a) Fixed 1000 ms horizon
+-30 deg
+30 deg
+25% deletion
+50% deletion
+1
+1.25
+Paired spike ratio (log)
+(b) Common first 400 ms
+Fig. 2. First prospective campaign, seeds 6–11. (a) Collision-free counts at
+1000 ms, six seeds per bearing. (b) Every 400 ms activity pair: circles −30◦,
+triangles +30◦, black median. Thin lines connect the same seed/bearing
+across deletion doses. Shared seeds are not independent replicates. This
+activity limit did not distinguish the observed collisions; no predictive detector
+was fitted.
+TABLE I
+FROZEN CONTROLLER × FAULT COMPARISON, SEEDS 12–17. SIX
+CLUSTERS SHARE BOTH BEARINGS AND ALL CONDITIONS. L/G: PAIRED
+HEALTHY-TO-FAULT LOSSES/GAINS OUT OF 12; HEALTHY SURVIVORS AT
+RISK ARE FOUR/SIX UNDER ORIGINAL/GATED LAWS. HEALTHY ROWS
+REUSE PRESERVED RECORDS.
+Law
+Network
+−30◦+30◦Total L/G
+Original
+Healthy
+4/6
+0/6
+4/12
+—
+Original
+25% deletion
+4/6
+0/6
+4/12
+1/1
+Original
+50% deletion
+0/6
+0/6
+0/12
+4/0
+Pre-cue gate Healthy
+6/6
+0/6
+6/12
+—
+Pre-cue gate 25% deletion
+3/6
+0/6
+3/12
+3/0
+Pre-cue gate 50% deletion
+0/6
+0/6
+0/12
+6/0
+survivors, respectively; the positive bearing was already at
+floor. These are six-cluster conditional observations. For 50%
+deletion, matched spike ratios were 0.748/0.845/0.890/1.012
+over 200/300/400/500 ms. Neither deletion condition exceeded
+twice its paired healthy activity in those windows, despite eight
+and twelve collisions. Thus this activity limit did not flag these
+outcomes. It is distinct from the open-loop joint rule.
+B. Controller-by-Fault Comparison
+All 12 first-campaign healthy tests turned −11.429◦before
+the 100 ms cue while recording zero spikes. Equation (4) pro-
+duces −114.286◦/s at zero readout. Readout disabling removes
+both this offset and the neural trigger, so its comparison alone
+cannot isolate stimulus-dependent steering.
+The 72-record matrix directly pairs each fault with its same-
+law healthy reference (Table I). The healthy gate advantage
+is two episodes out of 12 (+16.7 percentage points); its six-
+cluster conditional range includes zero. Offset-only and no-
+steering healthy controls triggered bursts in 11/12 and 12/12
+
+
+PAGE 4
+cases but yielded 0/12 survival (Supplementary Tables S12–
+S14). These compare complete feedback laws, which can
+change sensory trajectories and trigger timing.
+At 25% deletion, gated-minus-original net task loss was
++25.0 percentage points (conditional 95% range 8.3 to 41.7).
+At 50% deletion, gated-minus-original net task loss was +16.7
+percentage points (conditional 95% range 0.0 to 33.3). The
+25% range excludes zero, but only 3 seed clusters have
+nonzero interactions; a post-hoc symmetric-null sign-flip sen-
+sitivity gives p = 0.25 (Supplementary Section 13). At 50%
+deletion, both controllers yield 0/12; their net-loss contrast
+reflects different healthy baselines. Loss and gain counts are
+retained separately; a healthy success difference alone is not
+a fault-tolerance comparison.
+Among 48 faulty episodes, 41 collided; none of these
+collisions was flagged at any tested c = 1.5, 2, 3, 4 over 200–
+500 ms. At 500 ms, c = 1.5 instead flagged 2 surviving fault
+episodes. This activity-only criterion did not distinguish the
+observed collisions under these settings; it does not establish
+that spike count is generally uninformative. Supplementary
+Table S22 and the threshold CSV report the full sensitivity.
+C. Transmission Under Five Perturbation Families
+Healthy command rate is 94.69 Hz (95% median CI 94.06–
+95.42), with first-spike latency 4.05 ms. Equal-sized random
+drive yields approximately 8.2 Hz despite greater activity; the
+intact target-permuted graph yields zero. This specificity does
+not isolate a fault-tolerance mechanism.
+The supplement supplies every main dose, recorded control
+damage and selected-dose intervals. F1 at σ = 0.50 retained
+99.4% of median rate, with 10th–90th percentiles 90.40–
+100.81 Hz versus healthy 93.96–95.63 Hz. F3 at 10% retained
+100.4%. These sampled medians do not establish equivalence.
+F2 retained 97.0%, 98.3%, 89.2% and 76.5% of median
+command rate at 5%, 10%, 25% and 50% deletion. The 95%
+bootstrap interval for the ratio of median rates at 50% was
+75.1–79.0%. Latency rose from 4.05 to 5.40 ms (ratio 1.33,
+interval 1.25–1.40). All sampled deletion trials passed trans-
+mission; a separate 75 Hz control passed only 10/12 at 50%
+deletion. F5 retained 79.8% or 67.9% when removing LC4
+or LPLC2 outputs; silencing both eliminated transmission.
+Supplementary plots show all doses and dispersion.
+Twelve new 600 ms runs tested the sensory refractory
+variant on three paired seeds. Median paired 50%-deletion
+retention was 76.3% at 2.2 ms versus 79.2% at zero sensory
+refractory time. Healthy median rates were 94.8 and 103.1 Hz.
+These conditional observations do not establish variant invari-
+ance.
+D. Historical Hub Records and Activity Scoring
+The historical 1% F4 condition yielded 119.06 Hz and
+49,272.5 median spikes (1.24× healthy). Cell manifests are
+missing; reconstructed selection includes protected readout
+cells, and implementations differ. Historical contrasts can-
+not be attributed to cell sign alone. The artifact’s audit/
+TABLE II
+POST-HOC COHORT SENSITIVITY, c = 2. T: TRANSMISSION; J: JOINT
+PASSES. EIM: COMPOSITION-MATCHED CONTROLS. ROWS SUCCESSIVELY
+ISOLATE THE INHIBITORY SUBSET, ALL TARGETED-HUB COHORTS, THEN
+THE MAIN NON-HUB SWEEP BY REMOVING WHOLE CONDITIONS.
+REMAINING DISAGREEMENTS ARE RANDOM-MASS TRIALS 3 AND 9;
+MIXTURES DO NOT ESTIMATE POPULATION FAILURE PROBABILITY.
+Included records
+n
+T
+J
+T−J
+All faults/controls
+288
+276
+262
+14
+Exclude inhibitory hubs
+276
+264
+262
+2
+Exclude F4/HUB/EIm
+204
+192
+190
+2
+Main F1/F2/F3/F5
+180
+168
+168
+0
+verified-hubs contains selector reconstructions, not re-
+covered historical manifests; Supplementary Table S4 gives
+recorded damage.
+The inhibitory subset had 847,476.5 median spikes (21.35×
+healthy), failing the activity criterion in 12/12 trials. The
+random inhibitory expected-contact-mass control had median
+50,323 spikes, with two extreme trials (327,246 and 271,058).
+Individual records and realized damage are supplied.
+Across 288 fault/control records, 276 passed transmission
+and 262 jointly. Twelve extra rejections arose from inhibitory
+hubs and two from random-mass records (Table II). Excluding
+targeted hubs left two disagreements among 204 records;
+the main non-hub sweep had none. Counts were unchanged
+for c = 1.5, 2, 3, 4. All 12 healthy reference trials passed,
+but resubstitution does not estimate held-out false alarms or
+calibrate the limit.
+E. Legacy Evaluation and Stopping-Time Matching
+Legacy looming used elapsed time and heading canceled
+from receptive-field bearing. Six threshold-calibration logs
+duplicate healthy evaluation records; all fault episodes share
+calibration seeds. Four-bearing/three-seed survival was 10/12
+for 25% deletion, 0/12 for 50%, 12/12 for full hubs and 6/12
+for inhibitory hubs. Eight healthy records stopped during a
+burst. These are compromised recorded-horizon illustrations,
+not corrected geometric tests (Supplementary Table S5).
+For legacy 50% deletion, early collisions shorten fault
+records relative to healthy references. Matching each pair to
+T∗changes the median spike ratio from Rwhole = 0.382 to
+Rcommon = 0.729. Fixed 200–500 ms ratios span 0.723–0.745.
+This stopping-time mismatch is distinct from the horizon effect
+below; neither ratio defines an activity budget.
+F. Late Activity Under Equal Durations
+All full-hub and paired healthy records last 1000 ms, so
+Rwhole = Rcommon for each pair. No ratio exceeds twofold
+through 800 ms. Six first crossings occur at 840–900 ms, all
+at −60◦or −30◦on calibration seeds (Fig. 3). Thus selecting
+400 ms excludes late exceedances; it does not remove unequal
+exposure. Pooled medians rise from 1.362 at 400 ms to 1.703
+at 1000 ms. Inhibitory hubs exceed twofold in every pair at all
+200–500 ms windows. Individual trajectories and three-seed
+sensitivity are supplied; sparse conditional bootstrap ranges
+do not establish independent reliability.
+
+
+PAGE 5
+200
+400
+600
+800
+1000
+Observation horizon (ms)
+1.5
+2.0
+2.5
+Fault / healthy spikes
+400 ms
+-60° (cal.)
+-30° (cal.)
++30°
++60°
+Fig. 3.
+Legacy full-hub cumulative activity ratios. Both members of every
+pair last 1000 ms. Marker/color encode bearing; three same-bearing traces are
+shared seeds. Negative bearings are calibration scenarios. Crosses mark first
+twofold crossings at 840–900 ms. The first 400 ms excludes late activity rather
+than correcting unequal durations.
+The privileged geometry rule survives both bearings at 800
+and 1000 ms but collides by 1200 ms. This establishes bounded
+task feasibility with identical actuator limits, without a neural
+resource-cost comparison. The supplement records each seed,
+termination and generating manifest.
+V. IMPLICATIONS, LIMITATIONS AND CONCLUSION
+Fault comparisons require declared cohorts, criteria and
+stopping rules. Targeted-hub exclusion leaves two disagree-
+ments; the main non-hub sweep shows none. Duration match-
+ing changes deletion ratios, whereas early hub horizons omit
+late activity. The six recorded one-second exceedances remain
+after duration matching. Resource-failure prediction requires
+independent budgets and held-out healthy false-alarm mea-
+surements.
+One connectome, selected drives and small samples limit
+transfer. The intact null is nonfunctional; missing hub mani-
+fests and compromised legacy evaluation limit interpretation.
+Post-hoc exclusions and windows require prospective confir-
+mation. Software perturbations support no hardware protection
+policy without mapped resources and faults.
+The new factorial comparison directly pairs faults within
+each frozen control law. Gating improves healthy counts from
+4/12 to 6/12, yet at 25% deletion yields 3/12 versus 4/12. The
+original law’s zero net loss at this dose contains one loss and
+one gain, not absence of fault effects. The positive conditional
+interaction range rests on three nonzero seed clusters; post-
+hoc sign-flip sensitivity does not supply confirmatory evidence.
+At 50% deletion both laws fail all 12 episodes, so their net-
+loss difference reflects healthy baseline success. Six clusters,
+directional floors, negative/frontal calibration coverage and
+assumed receptive fields limit generalization. Some survivors
+are still bursting at 1 s; bounded survival does not establish
+eventual escape.
+Report transmission, activity and bounded task outcomes
+with cohort denominators, paired exposure, analysis horizon,
+termination reason and direction-specific results. Retain paired
+losses and gains as well as net effects. A pass fraction cannot
+certify reliability or a safety budget.
+REFERENCES
+[1] S. Dorkenwald, A. Matsliah, A. R. Sterling, P. Schlegel, S.-C. Yu, C. E.
+McKellar et al., “Neuronal wiring diagram of an adult brain.” Nature,
+vol. 634, no. 8032, pp. 124–138, 2024.
+[2] A. Lin, R. Yang, S. Dorkenwald, A. Matsliah, A. R. Sterling,
+P. Schlegel et al., “Network statistics of the whole-brain connectome
+of Drosophila,” Nature, vol. 634, no. 8032, pp. 153–165, Oct. 2024.
+[Online]. Available: http://dx.doi.org/10.1038/s41586-024-07968-y
+[3] P. K. Shiu, G. R. Sterne, N. Spiller, R. Franconville, A. M. Sandoval,
+J. Zhou et al., “A Drosophila computational brain model reveals senso-
+rimotor processing,” Nature, vol. 634, no. 8032, pp. 210–219, 2024.
+[4] D. An, “How sparse can a fly-brain model be? Connection strength,
+wiring placement, network state and task jointly determine function-
+preserving compression of the Drosophila connectome,” bioRxiv, 2026.
+[Online]. Available: https://www.biorxiv.org/content/10.64898/2026.09.
+19.752860
+[5] T. Jo, “Simulating Alzheimer’s amyloid-like pathology on a fly central
+nervous
+system
+connectome,”
+arXiv:2610.19153,
+2026.
+[Online].
+Available: https://arxiv.org/pdf/2610.19153
+[6] H. Jang, D. P. Goodman, J. Ausborn, and C. R. von Reyn, “Azimuthal
+invariance to looming stimuli in the Drosophila giant fiber escape
+circuit,” Journal of Experimental Biology, vol. 226, no. 8, 2023.
+[Online]. Available: https://doi.org/10.1242/jeb.244790
+[7] T. Spyrou, S. Hamdioui, and H.-G. Stratigopoulos, “SpikeFI: A fault
+injection framework for spiking neural networks,” arXiv:2412.06795,
+2024. [Online]. Available: https://arxiv.org/abs/2412.06795
+[8] A. B. G¨o˘gebakan, E. Magliano, A. Carpegna, A. Ruospo, A. Savino,
+and S. D. Carlo, “SpikingJET: Enhancing fault injection for fully and
+convolutional spiking neural networks,” in 2024 IEEE 30th International
+Symposium on On-Line Testing and Robust System Design (IOLTS).
+IEEE, 2024, pp. 1–7.
+[9] A. Colucci, A. Steininger, and M. Shafique, “enpheeph: A fault
+injection framework for spiking and compressed deep neural networks,”
+in 2022 IEEE/RSJ International Conference on Intelligent Robots and
+Systems (IROS).
+IEEE, Oct. 2022, pp. 5155–5162. [Online]. Available:
+https://doi.org/10.1109/IROS47612.2022.9982181
+[10] A. Gleyo and B. Girau, “Population coding to improve fault tolerance of
+neuromorphic networks in regression tasks,” in 2026 Design, Automation
+and Test in Europe Conference (DATE).
+IEEE, 2026, pp. 1–7.
+[11] B. H. Theilman and J. B. Aimone, “Intrinsic numerical robustness
+and
+fault
+tolerance
+in
+a
+neuromorphic
+algorithm
+for
+scientific
+computing,”
+arXiv:2603.10246,
+2026.
+[Online].
+Available:
+https:
+//arxiv.org/abs/2603.10246
+[12] F. Wang, B. H. Theilman, F. Rothganger, W. Severa, C. M. Vineyard, and
+J. B. Aimone, “Neuromorphic simulation of Drosophila melanogaster
+brain connectome on Loihi 2,” arXiv:2508.16792, 2025.
+[13] J.
+Yik,
+K.
+Van
+den
+Berghe,
+D.
+den
+Blanken,
+Y.
+Bouhadjar,
+M.
+Fabre,
+P.
+Hueber
+et
+al.,
+“The
+NeuroBench
+framework
+for
+benchmarking
+neuromorphic
+computing
+algorithms
+and
+systems,”
+Nature Communications, vol. 16, no. 1, Feb. 2025. [Online]. Available:
+http://dx.doi.org/10.1038/s41467-025-56739-4
+[14] G.
+D’Angelo,
+J.
+E.
+Pedersen,
+T.
+Hassan,
+M.
+Cianchetti,
+J.
+Bongard,
+F.
+Iida
+et
+al.,
+“A
+benchmarking
+framework
+for
+embodied
+neuromorphic
+agents,”
+Nature
+Machine
+Intelligence,
+vol.
+8,
+no.
+3,
+pp.
+300–312,
+Mar.
+2026.
+[Online].
+Available:
+http://dx.doi.org/10.1038/s42256-026-01197-w
+[15] M. Stimberg, R. Brette, and D. F. Goodman, “Brian 2, an intuitive
+and efficient neural simulator,” eLife, vol. 8, Aug. 2019. [Online].
+Available: http://dx.doi.org/10.7554/eLife.47314
+[16] N. C. Klapoetke, A. Nern, M. Y. Peek, E. M. Rogers, P. Breads, G. M.
+Rubin et al., “Ultra-selective looming detection from radial motion
+opponency,” Nature, vol. 551, no. 7679, pp. 237–241, Nov. 2017.
+[Online]. Available: http://dx.doi.org/10.1038/nature24626
+[17] J. H. Simpson, “Descending control of motor sequences in Drosophila,”
+Current Opinion in Neurobiology, vol. 84, p. 102822, 2024.

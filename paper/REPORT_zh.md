@@ -1,3 +1,5 @@
+> 历史说明：下文保留原始分析叙述，不能作为修订后结论或当前运行规范。请以仓库根目录 REPAIR_REPORT.md、README.md、REPRODUCE.md 和 audit/verified-analysis/ 为准。随机抑制对照为 2/12 超限；闭环 F4 为 12/12 逃脱、6/12 配对活动超限；hub 选择已修代码但未重跑。
+
 # 实验详细报告:果蝇全脑连接组控制器的故障注入分析
 
 **对应论文**:*How Much Fault Tolerance Is in a Fly Brain? Fault-Injection Analysis of a Whole-Connectome Spiking Controller for Physical Intelligence*(Shuchao Gao, Waseda University;ISCAS 2027 投稿)

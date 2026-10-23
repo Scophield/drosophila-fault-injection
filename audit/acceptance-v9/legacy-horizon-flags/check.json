@@ -1,0 +1,2300 @@
+{
+  "unique_records": 153,
+  "qualified": 96,
+  "unverified": [
+    {
+      "sha256": "ea157fe884988fa884c9b95a31c1b4758a76e9364a7c434a3b6c288e952808ab",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_calibration/observe_healthy_phi-30_s0.json",
+        "runs/controller-v4/vision/episodes_calibration/observe_healthy_phi-30_s0.json",
+        "runs/controller-v4a/vision/episodes_calibration/observe_healthy_phi-30_s0.json",
+        "runs/geometry-v3/vision/episodes_calibration/observe_healthy_phi-30_s0.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "de7ba0d05e6701320261d07756756c0199177413dd3f6eccdfb901c96ad03e0f",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_calibration/observe_healthy_phi-30_s1.json",
+        "runs/controller-v4/vision/episodes_calibration/observe_healthy_phi-30_s1.json",
+        "runs/controller-v4a/vision/episodes_calibration/observe_healthy_phi-30_s1.json",
+        "runs/geometry-v3/vision/episodes_calibration/observe_healthy_phi-30_s1.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "8e16fc51bba2b989f84048f477b5c03390cfd84980becd7bbce5d3070df2a342",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_calibration/observe_healthy_phi-30_s2.json",
+        "runs/controller-v4/vision/episodes_calibration/observe_healthy_phi-30_s2.json",
+        "runs/controller-v4a/vision/episodes_calibration/observe_healthy_phi-30_s2.json",
+        "runs/geometry-v3/vision/episodes_calibration/observe_healthy_phi-30_s2.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "bc123b05df248f665b21dd184ffdbfb344c9e2b80c1ef4b4361db7e575d48072",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_calibration/observe_healthy_phi-60_s0.json",
+        "runs/controller-v4/vision/episodes_calibration/observe_healthy_phi-60_s0.json",
+        "runs/controller-v4a/vision/episodes_calibration/observe_healthy_phi-60_s0.json",
+        "runs/geometry-v3/vision/episodes_calibration/observe_healthy_phi-60_s0.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "bed99d900b79a5a3cd1919644e046beeaa09bf99397175ec5e595483e635d46a",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_calibration/observe_healthy_phi-60_s1.json",
+        "runs/controller-v4/vision/episodes_calibration/observe_healthy_phi-60_s1.json",
+        "runs/controller-v4a/vision/episodes_calibration/observe_healthy_phi-60_s1.json",
+        "runs/geometry-v3/vision/episodes_calibration/observe_healthy_phi-60_s1.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "9fe6231d500d58985df2f807c527590106bb6111aa36a3686b8fce9d08a74c36",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_calibration/observe_healthy_phi-60_s2.json",
+        "runs/controller-v4/vision/episodes_calibration/observe_healthy_phi-60_s2.json",
+        "runs/controller-v4a/vision/episodes_calibration/observe_healthy_phi-60_s2.json",
+        "runs/geometry-v3/vision/episodes_calibration/observe_healthy_phi-60_s2.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "bb04d2117c6b2b9829e7ca74b700f2d7d1d9e90ec8d1533a91c922fffecad05b",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_calibration/observe_healthy_phi0_s0.json",
+        "runs/controller-v4/vision/episodes_calibration/observe_healthy_phi0_s0.json",
+        "runs/controller-v4a/vision/episodes_calibration/observe_healthy_phi0_s0.json",
+        "runs/geometry-v3/vision/episodes_calibration/observe_healthy_phi0_s0.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "71c12989a6fd3f5fb0e32bb9ae5c672410a6f99bb2bd8e32597abe82cd7acc8c",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_calibration/observe_healthy_phi0_s1.json",
+        "runs/controller-v4/vision/episodes_calibration/observe_healthy_phi0_s1.json",
+        "runs/controller-v4a/vision/episodes_calibration/observe_healthy_phi0_s1.json",
+        "runs/geometry-v3/vision/episodes_calibration/observe_healthy_phi0_s1.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "1ee91761ddc2170e8e87d49c278c35be130b070edd8073a5b6d93173b49d5b29",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_calibration/observe_healthy_phi0_s2.json",
+        "runs/controller-v4/vision/episodes_calibration/observe_healthy_phi0_s2.json",
+        "runs/controller-v4a/vision/episodes_calibration/observe_healthy_phi0_s2.json",
+        "runs/geometry-v3/vision/episodes_calibration/observe_healthy_phi0_s2.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "007236f4fbca9fffddad1e9d11c8f1e9a53ad28e48c7b213d994f36f9cb7b5f3",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi-30_s10.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "8d4bb4355a0f1f71f98935532b7eb1fdb39489b967a23f6bbd4debabb8d0d58f",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi-30_s11.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "bf9e2f579caeb422c3696a081d5a327b309b16128a23f1d90e1817dfc4b870e0",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi-30_s6.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "8be98263ecef9d769a01c431f1bdda01772c03d475059a39cc4c4b48bcb8a9f2",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi-30_s7.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "237d1cf556cab20c4d4ae9bffb5e28196dc18a08f805c96f19495e870fafd12d",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi-30_s8.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "82c1b68b40bac69790a592d184ac4783f2b864b7224faa47f7d3d4b7a26f027d",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi-30_s9.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "40abdfb7019d79c8bbb52411fc23b30973d4186077036c74e469a0633e373b0f",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi30_s10.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "4aef75e290c5c3aa2f952bf8cad9446a91cedea5bca19dfd2647ef4bc2459f80",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi30_s11.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "24d4a679971351eb8f7e5f09cab61812514c9e4d38c5d70502e88c157ed2d925",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi30_s6.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "b1e942d551f522aa058e698e09a026d87a34fb4b5d870e662f1e76ba5ca13628",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi30_s7.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "d5d894f17561223ec43ac37ec9b01cbca04ea05f8ca0f406047452337f30855f",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi30_s8.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "920e3f976071c3f961579c1a386d3df16efaf9680134b317977f1374e204edd7",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_controls/readout_disabled_healthy_phi30_s9.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "b7ddaf57766c6f6221ce1c5e3fbb7a4277430eab4e189ee4756ac6047ed681ba",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi-30_s10.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "ae14c08c83f32636e673fd8b7cf595fc7b5f99e1af5cc9dd2139dc86de02d2fc",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi-30_s11.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "14de29979d2a8d9f72e7c5ae30debd0f32039a1670a9ad1d709e3dab5ffeb490",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi-30_s6.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "19160af419fd4577b95960f4df984b97e9c9c8fb112454370640d576ccc415d2",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi-30_s7.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "9c106cc7429d3a25464e072adda8f2da61f527f4870498319dae8336d20aa959",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi-30_s8.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "0db285f86fae24313f3894b4af137c70fab2195fcd49fddc2bb6c6526d038366",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi-30_s9.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "26dbcfcd96d6872f7412e36be87531d2c2e06184491047e6e738562eaddf3a1f",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi30_s10.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "831fffe021dc5046af4b76c41ed2bcb5aee43403bbbd10d8a7e6625e72800029",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi30_s11.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "d0c58f540336008d69abe392104a1d07194b33693e934c80afc1fc4a260f7a1d",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi30_s6.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "a670ce90c3cd023a255c3f08af5479db27487a166af4e4dfb8d5e601a1b34e5b",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi30_s7.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "48d6b7e9d1468b53f8d2d9cf0c1ed77651bbae7b31fcb46f0b89c2d9659b81bd",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi30_s8.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "ec3ea7c7e7e891f9c3848c94e80d3f0bb1a54d0a1df93096c906ac1371d5a9be",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_25_phi30_s9.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "d15de5576b8a2ad524820a13eb84152e3e97c8a053829e8fd515bf2fd274af61",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi-30_s10.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "e1376085f028b1f8ee66200022bf49b1fddc346e4cd7880f026024cfd6c05372",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi-30_s11.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "2bad861dcb1f436a78a3f33435396634d117fb506832e593a5725fa6c2db427d",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi-30_s6.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "04f0e8930045bd24c20dd8559b9463d53a7ab8fd58d46b1a874d59f692ebfb9e",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi-30_s7.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "af53cd37b8c552eee93e33296c4f7549263720e3b339d010638e66055f9aefa8",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi-30_s8.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "e1f56a30a44244f7843b8f61f4201c9fcc3459d86001d0c112cd09b94d8a98d5",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi-30_s9.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "7e84295a95633f54c106308a5a0c5f27694bc392c6ac28f8325f16d829e1dbd4",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi30_s10.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "dc77eb07bcb6468f5f47bf8c649201978e5508f0ff89302dfe93f2fb492b6c2c",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi30_s11.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "a8fafdbaa12b418855c80d7d4934bfdb0825ae453fe663c3f78d57480318deed",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi30_s6.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "de9d0626f6c46587b9e62e6b50ed94644835a7817ef8b4cc527ad0e34f23c339",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi30_s7.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "785195e77268e18ba03a981bf39442811f5a42b0f6dbe34fd176e429b53cdcef",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi30_s8.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "6aed579b693abed7ef535cb1d69e4ebaf2939f311266f469fb49c31e2df187b5",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_F2_50_phi30_s9.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "756fd80f3f08379c20b6e420102b7fab29e4606f2dce01f31eee204ef0c7831c",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi-30_s10.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "659e461201280e087a59b6e796d547c7ee35e69267276496705f9abcd82d8f21",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi-30_s11.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "4ae7b1be75d682122a57d982c0a008bec44d01f94ac6b2a9c5463fe50ce7d2f3",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi-30_s6.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "e1e2dda07a06424118e50481a1baf892bd7f3b6a6e37f8e4194063e0ff4dd51c",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi-30_s7.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "7825c53236dca211979b47bf53bd2440d34ba1ab4777808ef0148cfaa5070427",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi-30_s8.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "e6912268717c5f6c66c9b77fd23d59469e5f68552d605c5b54bea919748b5dce",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi-30_s9.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "713b907bc41678c9e84c934e1ede1a987a35a77c62fcdf0510b1515e2dd4e9cf",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi30_s10.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "8b28e0e8f67166cc444f53c9c091cfc8b77cd42d4fea4e3683e18b48a9ac16fc",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi30_s11.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "882a248f7ec4268f2cd8dfe337912b1fed4648ad2c86cf35ed1265494ee131be",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi30_s6.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "54a98a8a8eb9c09daad66eacd35c7126698e17458254d178ce8e1d417ea9ed6f",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi30_s7.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "1d645c043478c4cdd39a34fc9fc4b601e5521d9015213fb42a25980cee84284a",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi30_s8.json"
+      ],
+      "reason": "exact generating source unavailable"
+    },
+    {
+      "sha256": "fbb42dfeb7ada71963624d6ed21bc55cd77493f2747712d23a23a9a768553d07",
+      "paths": [
+        "runs/geometry-v3/vision/episodes_evaluation/brain_healthy_phi30_s9.json"
+      ],
+      "reason": "exact generating source unavailable"
+    }
+  ],
+  "mismatches": [
+    {
+      "sha256": "cd1ef10134199af3d152c122188c7a43ca1fcbe391f422facf49f2ba432ae2a2",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi-30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    },
+    {
+      "sha256": "c62359f9ec4c71b14bfe75677284ec514959d95e2e329f26e6d46bf3e48aadd0",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi-30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    },
+    {
+      "sha256": "ecfea3d19c70c04ed04a31db07541666a9605384fff8c81572f02db8d3a5cfc8",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi-30_s15.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi-30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    },
+    {
+      "sha256": "8cf9a42a5c62628dd52e3a5f5749402464925f43dea2b74308dbb93df81c3424",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi-30_s17.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi-30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    },
+    {
+      "sha256": "f8c5b72f395a965be0d5f35d32ecf5a69da94c1b05b7995708bd856ef33b6251",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi-30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    },
+    {
+      "sha256": "e395c67605a84cafa2abebaf4c08646cbcf7fd975a5f01f4e74f5480dd8c3f97",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi-30_s13.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi-30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    }
+  ],
+  "records": [
+    {
+      "sha256": "fb5fc66d0ffbc4b2961096bd40f1378b9eb02fff8f8ad0c58ba42d591e2b68f2",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi-30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "cd1ef10134199af3d152c122188c7a43ca1fcbe391f422facf49f2ba432ae2a2",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi-30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    },
+    {
+      "sha256": "8efb6f5b3af855d5018cbf41669845556d143d414c60d91b127d905840d811db",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi-30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 320.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": true,
+      "mismatch": false
+    },
+    {
+      "sha256": "c62359f9ec4c71b14bfe75677284ec514959d95e2e329f26e6d46bf3e48aadd0",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi-30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    },
+    {
+      "sha256": "1ded6d1fdaf2e2772efec2b42b6f3ab4296b59182728321b06a7df822042a087",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi-30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "05083e452c11ecca297c970138664b03efc85314627660affa9b35b2df8f9f3c",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi-30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 260.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "a13f4c817554c1d57ef72febd144d0e406bf5e9ec6321729621404a071b94ed9",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "9399d5746198ef248f82608ab18ed713c1efd5c74b17cedb4c40002aa03cf42f",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "13b217c74aea953354dd70306474ef374f1868194eec8fd934ce5a7e8db90ca6",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "0da205ad616a92a9fcaf6fb43338c7ddc29a23e1e70bd43efb1e290d091f87b9",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "794fa40018b59ab9860b96d7e3864558d617f4edb108c53c961ab54736bc04ca",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "637a0e42b7768a0e9f9331ee3baf842a2e69726d47e99200607029bf51957e28",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_25_phi30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "brain",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "dd8d392d388d40085822da3602d82ef43a15064cffab4cec5b9aba6d60cd7e24",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi-30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "57846d2540b456cf23e329d54d18f42cdabd61c40b3536120a9272b504ef41f5",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi-30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "42a3b704aab36dea73d59787d4e6272219025ff9bf70cdba27d855091b9bafe4",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi-30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "749894e3eaac377167c2326ad0cc3c26786a2a420c12f85f945d4c181c10ea51",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi-30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "b3fb05abf94833f42a3351537826d36cd837b60327d7b584b20d53010c3dc3e6",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi-30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 540.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "c08574fe6ed8ae871e721a03523f41db87876fda5297ac50086f75cc801988dc",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi-30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "034bc19fae249ea4b81c782bf6d6e9f67aa73ac3b007ff117f948c8b2f88acc0",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "c866daa15e9511b065d24af46f1d087359260ccc03d57c8538dfe51f6fd57422",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "31581ff1f2759c4b0fd9d0b16c05dd5b5f17b6f9f73bfb8550b146795528bfbc",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "1273b3be5637edb55ee3aed7b17e35d40f12de7abcdb3cca39562cf4459e371b",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "51f136e433e7598783d647c4c580b83c0799c3efc9c970fe53105db7f0d3e3a7",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "ca7f5412661711abcb0c44d8c179b829fb2450b711660f2ff042eea8ac25ad09",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_F2_50_phi30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "brain",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "5f0285c05623594ca60d54f55726963ca68eaff64ac087169f9e8e96e8e4a562",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi-30_s12.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi-30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 320.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": true,
+      "mismatch": false
+    },
+    {
+      "sha256": "3ff97c58843d7c507d662c3c275569f27e9a07ac87a360f7a499fc0b0f771ed9",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi-30_s13.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi-30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 340.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": true,
+      "mismatch": false
+    },
+    {
+      "sha256": "b80224801c3d82a6ef02339fc2a282e52ef1fcf669a9080f42e4acc8515daf17",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi-30_s14.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi-30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "ecfea3d19c70c04ed04a31db07541666a9605384fff8c81572f02db8d3a5cfc8",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi-30_s15.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi-30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    },
+    {
+      "sha256": "bbb79ba53367bb46f564bd56bfe56cf8f3621d1a308480877e19b6ed15c1854f",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi-30_s16.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi-30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "8cf9a42a5c62628dd52e3a5f5749402464925f43dea2b74308dbb93df81c3424",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi-30_s17.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi-30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    },
+    {
+      "sha256": "528bdeb9c3798ab503652ff9f3040caf1628ca184629832b51434d0c50c5e244",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi30_s12.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "553b26b9cc40f5391806cd4787fa6ecf71de4fc1dc162bf11c668aa678879f24",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi30_s13.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "b78fec4bbd82031de039ef99a75246e8f728b4350d0a680ebc7b6e42f446dd90",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi30_s14.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "306233e6dc0a07622ac78a1b92d3207b6c8dff2c7a71e7edf64a0712bb4dc927",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi30_s15.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "e871a3c2fa803e83fbcd1be5c5dba2dcc38045c243ff56d91b60865a82e33d97",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi30_s16.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "b31e82cd4f1214e2aa6c9b320aa33fafb1806f48c0bdbfb10e266cfcaa251575",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/brain_healthy_phi30_s17.json",
+        "runs/controller-v4a/vision/episodes_controls/brain_healthy_phi30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "brain",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "5d3a047d302db177af0c60b516c48fcf60d41863e8958ecd03eaf677f495a43d",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi-30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "bb0645c3c9c17a3908f92223ee64a17213aac46ca25255ef4978f1e74b6ee445",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi-30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 400.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "05a8c19716da7f132d458f241cbe852ca9f78eaa3d29cba61ad361927601bc12",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi-30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 340.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": true,
+      "mismatch": false
+    },
+    {
+      "sha256": "e47ca6daa9ff75153732cda5252f44bb479fa70e8e28bdc90364d2de1cea2496",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi-30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 320.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": true,
+      "mismatch": false
+    },
+    {
+      "sha256": "ced9337f3b75042d1f643e65c0012487edf506f630f49fdcceb35cb7595e9fec",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi-30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "f8c5b72f395a965be0d5f35d32ecf5a69da94c1b05b7995708bd856ef33b6251",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi-30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    },
+    {
+      "sha256": "1967db8228dc8b2784a8699c3a495373ac07d746bceee7227330bedc2bdeeeda",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "ff46d175d10213f789a66fa1ece620047430b8130c75c61d3c7380d0c00d8a05",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "ac2a4a9dd6a92a22a844f96e319c2c7a4b0ec1ace1bb28b3a68d3348391cfa92",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "baae036e4a55c61e0ba0434af9e71ae39a18dee2567bea60631ed7ecca35c00a",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "c5e418ae1e15dc7135e04167aeeda2fd34cda75190d7c1b5ee7fc52c6d77d230",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "7b383bc3c5adf4238619dbac5009ec19284b6fcd418eb315537633c03ee7ce0d",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_25_phi30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "precue_gated",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "8f89616abf986d93236dc54379c1baf8e761fb5a72f72316d60362a4e2333c53",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi-30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "32a65c040214db77b31355436ed9c7439d09d88814c371bbb479dde06fab843d",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi-30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "d8741cad5927c996a07e425011032a19db81662045adb65723bd73d5e5502a2a",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi-30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "9934b336092eb1609bce18b67c9759496909295745c81f8e75f044fd74093d4a",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi-30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "e6dc7473cedab40e7f3269539b91bb8a7719ee65251671fe06a9d2040b142877",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi-30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "37e3d4d848553c19f6cd96f59b5df644b62293f27f7b612f0657581a4df62d21",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi-30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "bc242ba8e0f6b8a75a48adf52bc8fdc7cd33224db2a0e65e440a942e3e5c1722",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "1874428b4d232d56568703e853e2acf1ea01617c23ef87859dccee4e174f7098",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "d74cb476c301e194a3f2ce381bea4353f22fbb7ffc362cde029ac05e1e9301a5",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "b6f43765b4212569d646742d42a20e0312ef68a10681125d2930f84d6cdee512",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "4b138d2ecf3f2a292b3732906ca6e0a0ff59d0a8e4c8779f5362e3a268137593",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "6fc3ed62a8f5c251e6c47aa38015c4a98a9d7ef598946ad89d649332ce98fe8b",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_F2_50_phi30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "precue_gated",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "1aced4b27070ec5263c4678b19aee6104492b4868d6476527c389bb0fb131f23",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi-30_s12.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi-30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 320.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": true,
+      "mismatch": false
+    },
+    {
+      "sha256": "e395c67605a84cafa2abebaf4c08646cbcf7fd975a5f01f4e74f5480dd8c3f97",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi-30_s13.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi-30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 300.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": false,
+      "mismatch": true
+    },
+    {
+      "sha256": "f9accb1d8e332722204c9ebc8bc9393f8c934dbb3a34a95ce624867520a2d6ba",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi-30_s14.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi-30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 280.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "f0d3c7c3abaa741d6575b9b1524e096ad38649e322244d13de99a57d17c16166",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi-30_s15.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi-30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 320.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": true,
+      "at_exact_horizon": true,
+      "mismatch": false
+    },
+    {
+      "sha256": "073d2b6a2a2adee1f342f21b0fcbf414cab6111eb2d604d43290915e7e56d4f7",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi-30_s16.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi-30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 280.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "ad9ea36f2d2670a4b6b07b147d9b919076e2a50639beb9875682ccd59fadacec",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi-30_s17.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi-30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": true,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 220.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "6a5380cd0acb1cab34ddf93e8c90384ac353c442d3796688fa1a46af0d319aa3",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi30_s12.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "2205a3c4564ca32afecfb193354af7955b158c5957f2616da5a45ee4b7dae3dd",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi30_s13.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "8a6de3e5c88338f4a91e56f0a490334feb1f106ea998d5a0fb3bb0a451d7a4e9",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi30_s14.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "d665632c9feb8844cfe13f1658b0ce1e150876f298aa1611955eab38123cd7cb",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi30_s15.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "7aa6c70887458fde170846d52eb6dd3751966ad76d401b157efb6a8229ba90c1",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi30_s16.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "0bd4365a5bb599197589a74bd4091305f4f58a711da9db9e87749c948ecd2cfe",
+      "paths": [
+        "runs/controller-fault-v8/vision/episodes_controls/precue_gated_healthy_phi30_s17.json",
+        "runs/controller-v4a/vision/episodes_controls/precue_gated_healthy_phi30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "precue_gated",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "c00ff36197465a36394593b60a5d54fc41970868ed223b733ffb2408ae558cac",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi-30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 340.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "e46015a80bb8ee6798cb5264c14fd2a792d0971d833dc491bf70f45dbd30df07",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi-30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 400.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "9a0fc8343d7a4e7ad16dbb361e54ec7b2c2ad90edf1c4a85051e1145f6f026d7",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi-30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 380.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "e3da05be5a214b1aa406760a50edd099aaac3dd1216041e3182ca7b177c88d4b",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi-30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 460.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "8b476b01e24d84516158e008f882ab6cf25d180baa9b761bc84d07a37812f5d8",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi-30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 340.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "252a337c59b17d851c36c27f3a28c476724e6a0bbbf55420ed1c7d4099f43f1d",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi-30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 380.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "daeebec4b1e4392a63e533e64d356818439b6e3b0588606ccb1ee783387efb46",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 620.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "2b3e9a82048ade639e7382c40f21a054c855fd3590f06b4b733d7210ed9d7dc8",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 620.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "2b2443a6b05b35d6751b0a3f337dbb8a4760a2e15479194fd113a4dee8e8b16d",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": null,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "ebaa19623887077a82305be7be2ab11277f1088325e29d8f8bebfd42538a8eac",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 620.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "dd9cd42c46b2d0eeb5d0c1ca2810b6674ed1be48e25436be81e0e03e30fb9ce1",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 600.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "8115b88f7fa3225499f9a58abc62585010358d961695485271901bf0438b95c9",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/bias_only_healthy_phi30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "bias_only",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 640.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "aadf58db390cf24180cd1f6c7ac0f002d89c0de6a0a03e9b77d136624f5b35bc",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi-30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 280.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "5f6cba932fd47fab1ce2a40a2c358509323c8eafa585bfcfb39d8bb8afeff39b",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi-30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 340.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "7e4881ac789b92804b8f82ed973d7aefcc8645d3917270dba3ddad0a488d90b3",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi-30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 260.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "07277bd9f094d6686968fa3c368cff41a7501195e25a79af2c4e0942fbc8fa37",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi-30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 340.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "01b4969f5113cdc1013d8354e59b5893228747a993186c07c5585d40c1b94bee",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi-30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 260.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "b842cb06314e585dda3296f65a7988eaedf04ce1fb18227c8f028be7272e915d",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi-30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": -30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 340.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "2ed0d894bb561c0469c487a7764d451e62e75658b68688166333bb17433c26ba",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi30_s12.json"
+      ],
+      "seed": 12,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 420.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "b41beed95158c89588647e7e5f4f1f7ccfd3888bb8fd301d26c74a59ac88c982",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi30_s13.json"
+      ],
+      "seed": 13,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 460.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "6341166a2cfb5352d2b95f9cee2939c10b8162d7f1176516c4ce23260422b20e",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi30_s14.json"
+      ],
+      "seed": 14,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 440.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "9206e9683c4e95c44b2aeff60c4274a7e5e854be921bab5a6c8feb225f62a302",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi30_s15.json"
+      ],
+      "seed": 15,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 460.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "4d3eaa48bd55f2710695655152cec45dcc6f97628df3c9c332b4844063327006",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi30_s16.json"
+      ],
+      "seed": 16,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 440.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    },
+    {
+      "sha256": "eb3cd595eb61ae7e168008aeaccee1be62273d6de86765a09655317c84737f6c",
+      "paths": [
+        "runs/controller-v4a/vision/episodes_controls/steer_disabled_healthy_phi30_s17.json"
+      ],
+      "seed": 17,
+      "mode": "steer_disabled",
+      "fault": null,
+      "phi_deg": 30.0,
+      "escaped": false,
+      "horizon_ms": 1000.0,
+      "trigger_ms": 460.0,
+      "delay_ms": 250.0,
+      "burst_ms": 450.0,
+      "recorded": false,
+      "at_exact_horizon": false,
+      "mismatch": false
+    }
+  ],
+  "note": "old scheduled state at frame-aligned horizons; source-qualified, reused records deduplicated; raw records unchanged"
+}

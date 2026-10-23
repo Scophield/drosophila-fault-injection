@@ -1,0 +1,19 @@
+{
+  "registration_sha256": "020ad97501b7fbde836cfaf032b47679cbab4a3d330692543e1109a6cd015c86",
+  "seeds": [
+    1200,
+    1201,
+    1202,
+    1203,
+    1204,
+    1205,
+    1206,
+    1207
+  ],
+  "modes": [
+    "proportional",
+    "relay",
+    "disabled",
+    "observe"
+  ]
+}

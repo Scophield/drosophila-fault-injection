@@ -1,0 +1,15 @@
+00:03.860  blend            | Read blend: "D:\autoresearch_labtorary\drosophila-fault-injection\audit\blender-integration-20261023\source\drosophila_studio.blend"
+00:04.407  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+RENDER_START fly GPU
+00:20.579  render           | Saved: 'D:\autoresearch_labtorary\drosophila-fault-injection\audit\blender-integration-20261023\renders-01\fly.png'
+RENDER_DONE fly
+RENDER_START brain GPU
+01:30.922  render           | Saved: 'D:\autoresearch_labtorary\drosophila-fault-injection\audit\blender-integration-20261023\renders-01\brain.png'
+RENDER_DONE brain
+RENDER_START pathway GPU
+03:19.329  render           | Saved: 'D:\autoresearch_labtorary\drosophila-fault-injection\audit\blender-integration-20261023\renders-01\pathway.png'
+RENDER_DONE pathway
+Info: Saved as "paper_scenes.blend"
+Blender 5.4.0 Alpha (hash 954765769893 built 2026-10-22 03:13:27)
+
+Blender quit

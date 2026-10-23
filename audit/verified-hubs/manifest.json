@@ -1,0 +1,17 @@
+{
+  "sources": {
+    "D:\\autoresearch_labtorary\\Drosophila_brain_model\\Connectivity_783.parquet": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347",
+    "D:\\autoresearch_labtorary\\Drosophila_brain_model\\Completeness_783.csv": "52b0ac6094cd32c546f8d4c341e094376f48f4e791f8db9b166de5dff8199ea4",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\sim\\data\\annotations.tsv": "d00c92142f6b96ce916cbef681d0d93f856b7cb0904c738f996130cd0e0c0b29"
+  },
+  "upstream_commit": "91bdd1e7dcf193f3e7ca5a8933497fcef63b7960",
+  "model_py_sha256": "b879a8a286f367165e3effa6d47562cac289333c977be7716ccb646067326cce",
+  "completeness_git_blob_sha256": "bbb847a4cc2caaa7a16349722d220c087317b946d148d4d592d94d250617a311",
+  "completeness_matches_after_crlf_normalization": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.4",
+  "pandas": "3.0.6",
+  "script_sha256": "16a46bd874e1edcb03d40fe32de95cf4950728102205bdc9929285438177adfa",
+  "caveat": "old sets reconstructed from current code/data, not recovered historical manifests; no activity simulated",
+  "null_note": "target-only permutation cannot change fixed source-selected sets or outgoing row counts; old index/mapped reconstructions match archived damage counts, but are not historical run manifests"
+}

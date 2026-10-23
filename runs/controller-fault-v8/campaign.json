@@ -1,0 +1,57 @@
+{
+  "seeds": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "phis": [
+    -30,
+    30
+  ],
+  "modes": [
+    "brain",
+    "precue_gated"
+  ],
+  "faults": [
+    null,
+    "F2_25",
+    "F2_50"
+  ],
+  "new_faults": [
+    "F2_25",
+    "F2_50"
+  ],
+  "horizon_ms": 1000,
+  "analysis": "paired loss, gain, net loss, controller interaction; same-law healthy activity",
+  "selection": "six existing held-out seed clusters; no outcome-based exclusions",
+  "reused_healthy": {
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi-30_s12.json": "5f0285c05623594ca60d54f55726963ca68eaff64ac087169f9e8e96e8e4a562",
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi-30_s13.json": "3ff97c58843d7c507d662c3c275569f27e9a07ac87a360f7a499fc0b0f771ed9",
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi-30_s14.json": "b80224801c3d82a6ef02339fc2a282e52ef1fcf669a9080f42e4acc8515daf17",
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi-30_s15.json": "ecfea3d19c70c04ed04a31db07541666a9605384fff8c81572f02db8d3a5cfc8",
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi-30_s16.json": "bbb79ba53367bb46f564bd56bfe56cf8f3621d1a308480877e19b6ed15c1854f",
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi-30_s17.json": "8cf9a42a5c62628dd52e3a5f5749402464925f43dea2b74308dbb93df81c3424",
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi30_s12.json": "528bdeb9c3798ab503652ff9f3040caf1628ca184629832b51434d0c50c5e244",
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi30_s13.json": "553b26b9cc40f5391806cd4787fa6ecf71de4fc1dc162bf11c668aa678879f24",
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi30_s14.json": "b78fec4bbd82031de039ef99a75246e8f728b4350d0a680ebc7b6e42f446dd90",
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi30_s15.json": "306233e6dc0a07622ac78a1b92d3207b6c8dff2c7a71e7edf64a0712bb4dc927",
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi30_s16.json": "e871a3c2fa803e83fbcd1be5c5dba2dcc38045c243ff56d91b60865a82e33d97",
+    "runs\\controller-v4a\\vision\\episodes_controls\\brain_healthy_phi30_s17.json": "b31e82cd4f1214e2aa6c9b320aa33fafb1806f48c0bdbfb10e266cfcaa251575",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi-30_s12.json": "1aced4b27070ec5263c4678b19aee6104492b4868d6476527c389bb0fb131f23",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi-30_s13.json": "e395c67605a84cafa2abebaf4c08646cbcf7fd975a5f01f4e74f5480dd8c3f97",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi-30_s14.json": "f9accb1d8e332722204c9ebc8bc9393f8c934dbb3a34a95ce624867520a2d6ba",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi-30_s15.json": "f0d3c7c3abaa741d6575b9b1524e096ad38649e322244d13de99a57d17c16166",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi-30_s16.json": "073d2b6a2a2adee1f342f21b0fcbf414cab6111eb2d604d43290915e7e56d4f7",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi-30_s17.json": "ad9ea36f2d2670a4b6b07b147d9b919076e2a50639beb9875682ccd59fadacec",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi30_s12.json": "6a5380cd0acb1cab34ddf93e8c90384ac353c442d3796688fa1a46af0d319aa3",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi30_s13.json": "2205a3c4564ca32afecfb193354af7955b158c5957f2616da5a45ee4b7dae3dd",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi30_s14.json": "8a6de3e5c88338f4a91e56f0a490334feb1f106ea998d5a0fb3bb0a451d7a4e9",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi30_s15.json": "d665632c9feb8844cfe13f1658b0ce1e150876f298aa1611955eab38123cd7cb",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi30_s16.json": "7aa6c70887458fde170846d52eb6dd3751966ad76d401b157efb6a8229ba90c1",
+    "runs\\controller-v4a\\vision\\episodes_controls\\precue_gated_healthy_phi30_s17.json": "0bd4365a5bb599197589a74bd4091305f4f58a711da9db9e87749c948ecd2cfe"
+  },
+  "runner_sha256": "4efe943ab0ed1be38519bdf806288883159551c0b738920baecde17a09d7f99f"
+}

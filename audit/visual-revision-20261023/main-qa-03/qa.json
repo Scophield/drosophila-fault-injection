@@ -1,0 +1,191 @@
+{
+  "pdf_sha256": "8688efcc39ae021ad254cda5fe0bc19eea3c58820c3f4071e583ffd2c3f1815c",
+  "references_only_fifth_page": true,
+  "pages": 5,
+  "page_sizes": [
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ]
+  ],
+  "fonts": {
+    "6": {
+      "type": "Type1",
+      "name": "QHGGQG+NimbusRomNo9L-Regu",
+      "embedded_bytes": 20434
+    },
+    "7": {
+      "type": "Type1",
+      "name": "LREKMX+NimbusRomNo9L-MediItal",
+      "embedded_bytes": 8298
+    },
+    "8": {
+      "type": "Type1",
+      "name": "VCGRXY+NimbusRomNo9L-Medi",
+      "embedded_bytes": 15300
+    },
+    "9": {
+      "type": "Type1",
+      "name": "HLQHUA+CMMI9",
+      "embedded_bytes": 7566
+    },
+    "10": {
+      "type": "Type1",
+      "name": "YZKUPU+CMR9",
+      "embedded_bytes": 8322
+    },
+    "13": {
+      "type": "Type0",
+      "name": "BCEMNV+ArialMT",
+      "embedded_bytes": 47932
+    },
+    "14": {
+      "type": "Type0",
+      "name": "EDRLZZ+Arial-BoldMT",
+      "embedded_bytes": 28184
+    },
+    "15": {
+      "type": "Type0",
+      "name": "EMXNKG+DejaVuSans-Oblique",
+      "embedded_bytes": 3512
+    },
+    "38": {
+      "type": "Type1",
+      "name": "KQNKSN+NimbusRomNo9L-ReguItal",
+      "embedded_bytes": 14768
+    },
+    "39": {
+      "type": "Type1",
+      "name": "DUORVH+CMMI10",
+      "embedded_bytes": 12260
+    },
+    "40": {
+      "type": "Type1",
+      "name": "XVFXUY+CMR7",
+      "embedded_bytes": 10369
+    },
+    "41": {
+      "type": "Type1",
+      "name": "UJYIMB+CMMI7",
+      "embedded_bytes": 9414
+    },
+    "42": {
+      "type": "Type1",
+      "name": "CBSKME+CMR10",
+      "embedded_bytes": 15509
+    },
+    "43": {
+      "type": "Type1",
+      "name": "MLIBUP+CMSY10",
+      "embedded_bytes": 7984
+    },
+    "44": {
+      "type": "Type1",
+      "name": "QDETGT+CMSY7",
+      "embedded_bytes": 7802
+    },
+    "45": {
+      "type": "Type1",
+      "name": "ZHIOWR+CMMIB10",
+      "embedded_bytes": 7375
+    },
+    "46": {
+      "type": "Type1",
+      "name": "WQVXEZ+CMBX10",
+      "embedded_bytes": 8814
+    },
+    "47": {
+      "type": "Type1",
+      "name": "LHRDPA+CMEX10",
+      "embedded_bytes": 7395
+    },
+    "52": {
+      "type": "Type1",
+      "name": "TMCDBM+CMSY8",
+      "embedded_bytes": 7274
+    },
+    "53": {
+      "type": "Type1",
+      "name": "LLBSHY+CMR8",
+      "embedded_bytes": 7530
+    },
+    "54": {
+      "type": "Type1",
+      "name": "EWZFDL+CMSY6",
+      "embedded_bytes": 7466
+    },
+    "55": {
+      "type": "Type1",
+      "name": "OKAOPP+CMMI8",
+      "embedded_bytes": 7473
+    },
+    "57": {
+      "type": "Type0",
+      "name": "EMXHDQ+ArialMT",
+      "embedded_bytes": 43380
+    },
+    "58": {
+      "type": "Type0",
+      "name": "CMYSKE+Arial-BoldMT",
+      "embedded_bytes": 25468
+    },
+    "75": {
+      "type": "Type0",
+      "name": "CJDTCB+ArialMT",
+      "embedded_bytes": 46108
+    },
+    "76": {
+      "type": "Type0",
+      "name": "PMNSTJ+Arial-BoldMT",
+      "embedded_bytes": 22096
+    }
+  },
+  "type3": [],
+  "unembedded": [],
+  "outside_page": [],
+  "pdf_version": "1.5",
+  "encrypted": false,
+  "links_per_page": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "bookmarks": 0,
+  "widgets_per_page": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "form_fields": 0,
+  "submission_feature_errors": []
+}

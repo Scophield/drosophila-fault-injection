@@ -1,0 +1,18 @@
+--- tools/analyze_task_v9.py
++++ tools/analyze_task_v9_exportfix.py
+@@ -1,4 +1,4 @@
+-"""Reconstruct the registered independent matrix and all reported estimands."""
++"""Registered analysis with a documented CSV export-key correction; estimands unchanged."""
+ import argparse
+ import csv
+ import hashlib
+@@ -142,6 +142,9 @@
+     for p,r in zip(paths,records):
+         h=lookup[(r['seed'],r['phi_deg'],r['mode'],'healthy')]
+         ff=features(r); decisions=flags(r,reg['thresholds'],h)
++        # Numeric margins and Boolean warnings must have distinct CSV fields.
++        ff['deadline_margin_m']=ff.pop('deadline')
++        ff['schedule_margin_m']=ff.pop('schedule_only')
+         metric_rows.append(dict(seed=r['seed'],mode=r['mode'],fault=r['fault'],phi_deg=r['phi_deg'],
+             collision=not r['escaped'],**ff,**decisions))
+         raw_rows.append(dict(file=p.as_posix(),sha256=sha(p),**{k:r[k] for k in ['seed','phi_deg','mode','fault','escaped',

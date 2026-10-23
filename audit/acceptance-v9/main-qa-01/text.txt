@@ -1,0 +1,515 @@
+Paired Fault Assessment of a Fly-Connectome
+Spiking Controller
+Shuchao Gao
+Waseda University
+Tokyo, Japan
+Abstract—Task-level fault loss in a spiking controller can
+depend on feedback even when healthy performance matches.
+We provide an auditable paired assessment with shared input
+variates and deletion masks, causal feedback, exact scheduled
+actuation and independent input/geometry replay. A 138,639-
+neuron fly-connectome model is tested on 24 new seed clusters
+crossing two laws, two bearings and three network conditions.
+All 96 healthy episodes remain collision-free through one second.
+At 50% connection-row deletion, proportional and relay control
+succeed in 37/48 and 48/48 episodes; their paired loss difference
+is 22.9 percentage points, with a 95% cluster interval of 12.5–
+33.3 and Holm-adjusted p = 0.00195. The 25% contrast remains
+uncertain. A frozen 400-ms command-rate criterion detects only
+2/13 later collisions. Geometry-informed forecasting detects all
+13 but flags 57/275 successful tasks. Task loss changes with the
+declared horizon; stopped-duration matching leaves new group
+activity medians unchanged. These findings support paired task
+assessment without establishing biological or hardware fault
+tolerance.
+Index Terms—spiking neural networks, fault assessment, feed-
+back control, connectome, neuromorphic systems
+I. INTRODUCTION
+An embedded spiking controller must produce an effective
+action before contact. A neural-rate criterion can therefore
+accept an episode that fails its task, while altered network
+activity can accompany successful behavior. Assessment re-
+quires a defined plant, a causal neural-to-actuator interface and
+a declared observation horizon.
+Closed-loop comparisons also couple faults to future sen-
+sory input. Equal seed labels alone need not align random
+inputs when stopping or event consumption changes. Early ter-
+mination changes the interval over which spikes are accumu-
+lated. Stopped-episode, common-duration and fixed-horizon
+counts answer different resource questions. Their relationship
+to task failure should be measured on paired records after
+verifying healthy capability in every direction.
+We couple a fly-connectome spiking substrate to a synthetic
+pursuit-avoidance task. Its assumed receptive fields and body
+coupling define an engineering stress model, not biological
+escape. Separate development and validation establish two
+bilateral laws; new seed clusters cross law, direction and nested
+deletion dose at a fixed one-second endpoint.
+Our engineering contribution is an executable paired proto-
+col with source-bound registrations, shared input variates and
+masks, exact actuation and independent input/geometry replay.
+The prospective experiment demonstrates controller-dependent
+fault loss despite matched healthy task success, and quantifies
+a
+One paired seed: 2 bearings × 2 laws × 3 networks
+Retinal
+rates
+LIF
+network
+Turn +
+trigger
+Delayed
+actuator
+Task +
+counts
+Body-frame geometry feeds back; realized inputs may differ
+b
+Distinct clocks and endpoints
+0
+0
+Cue
+100
+Assess
+400
+Task
+1000
+250 ms delay
+450 ms burst
+20 ms feedback; 0.1 ms neural step; exact actuator events
+Fig. 1. One seed couples all twelve core conditions. Neural decisions affect
+the next motion frame; actuator boundaries are exact. The example trigger is
+200 ms. Fixed precontact warnings, first contact and resource exposure have
+different endpoints.
+errors when neural criteria are used as task-failure warnings.
+Standard statistical and kinematic components support these
+bounded findings; they are not claimed as new algorithms.
+All failed development attempts and test cells are retained.
+II. POSITIONING AND SCOPE
+Shiu et al. [1] connect anatomical wiring to executable
+sensorimotor hypotheses. An’s sparsification study [2] varies
+connection strength, placement, state and task; Jo [3] re-
+ports neural and virtual-arena responses to connectome dam-
+age. These works already establish context- and endpoint-
+dependent function. Our question concerns source-auditable
+pairing, sampled-data actuation and same-record exposure
+estimands in a prospective assessment, rather than a new claim
+that endpoint choice matters.
+SpikeFI [4] and SpikingJET [5] provide SNN injection
+frameworks with application evaluation. NeuroBench [6] and
+embodied-agent benchmarking [7] motivate separate func-
+tional and resource measurements. Here the comparisons
+rescore our own generated records; neither injector framework
+is executed as a benchmark. Physical neutron tests [8] illustrate
+the additional evidence needed to connect software fault mod-
+els to hardware. Our weighted-row deletions have no calibrated
+physical upset rate, power or area interpretation.
+
+
+III. PAIRED CLOSED-LOOP ASSESSMENT PROTOCOL
+A. Substrate and Randomness
+The released FlyWire v783 graph has 138,639 neurons and
+15,091,983 signed connection-table rows, each representing
+multiple contacts. We use the Shiu LIF parameterization [1] in
+Brian 2 [9], NumPy backend, 0.1 ms steps. The original publi-
+cation used v630. Sensory cells retain 2.2 ms refractoriness, a
+stated stimulation variant. Initial states and unmodified weights
+are restored before each episode; equations and parameters
+accompany the source.
+An
+assumed
+receptive-field
+map
+supplies
+geometry-
+dependent rates up to 150 Hz to 104 LC4 and 210 LPLC2
+cells. Other external rates are zero. Eight descending cells
+form a synthetic command interface. Anatomy and looming
+selectivity [10] motivate the substrate; the map and body
+coupling are not validated fly behavior. Actual cell identities
+and map parameters are saved.
+Each
+seed
+crosses
+both
+bearings,
+both
+laws
+and
+healthy/25%/50%
+deletion.
+Shared
+row
+variates
+define
+w(f)
+j
+= wjI(Vsj ≥f), giving nested masks. All contacts
+in a row are removed together. Separate frame-indexed
+uniforms generate inputs I[Uskτi < λki∆t]. Uniforms are
+common across conditions; realized events differ through
+feedback-dependent λ. Digests bind masks, uniforms, actual
+events, maps, sources and external tables. Seed traceability
+does not imply cross-platform bit identity.
+B. Causal Feedback and Actuation
+Body-frame bearing subtracts heading from world-relative
+bearing. Looming uses changes in α = arctan(0.05/d) at
+actual separation d. Input begins at 100 ms; decisions at each
+frame end affect the next 20 ms motion interval.
+Twenty passive episodes (four seeds; −60, −30, 0, 30, 60◦)
+fit a ridge decoder zk = β0 +β⊤¯rk of bearing/60◦, using five-
+frame means of eight command rates. Both laws set ωk = 0
+before the cue or below the 4.03125 Hz eight-cell mean trigger
+level; otherwise
+ωk =
+(
+−600 clip(zk, −1, 1),
+proportional,
+−600 sgn(zk),
+relay,
+[deg/s]. (1)
+The first qualifying decision td schedules one 0.35 m/s
+heading-fixed burst on [td + 250, td + 700) ms. Otherwise
+speed is 0.05 m/s and heading is capped at ±100◦. Motion
+segments split at exact actuator boundaries; positions use
+starting heading, updated at each segment end. A 0.3 m/s
+pursuer starts 0.25 m away and aims at the agent at each
+segment’s beginning. First contact at distance ≤0.05 m is
+solved inside each linear relative-motion segment.
+Success means collision-free through 1 s, not eventual es-
+cape. Failure latches at first contact; the specified trajectory
+and neural loop continue for equal 1 s resource exposure.
+Post-contact activity is counterfactual accounting, not physical
+collision dynamics or warning data. Independent replay checks
+input events, geometry, decisions, clocks and exact-horizon
+state without rerunning neural dynamics.
+C. Paired Estimands
+Let SF (t), SH(t) be paired network counts, and TF , TH
+their contact-frame end or 1 s. Distinguish
+Rstop = SF (TF )
+SH(TH),
+Rcommon = SF (T∗)
+SH(T∗),
+T∗= min(TF , TH).
+(2)
+Fixed 400 ms and 1 s ratios are separate estimands. The former
+precedes all contacts; common duration remains outcome-
+dependent and does not equate sensory histories. For bi-
+nary outcomes, report loss YH(1 −YF ), gain (1 −YH)YF
+and net loss D = YH −YF . The controller interaction is
+Drelay −Dproportional, averaging bearings within seed.
+D. Validation, Warnings and Inference
+An initial controller failed its declared capability screen;
+all attempts are retained. Final calibration passed on eight
+new healthy validation clusters, 8/8 per law/bearing. A two-
+cluster fault screen was developmental. Core testing uses 24
+new clusters (288 episodes); eight separate ±45◦clusters test
+angle transfer. Parameters, thresholds and stopping rules were
+frozen before both tests.
+Warnings use only data through 400 ms: low mean com-
+mand rate, an upper activity limit, and | log(S/ ˜SH)| against
+law/side-specific healthy medians. A held-command forecast
+uses current geometry, neural turn command and pending
+burst; absent a trigger it assumes the earliest next-frame
+decision. A same-state actuator baseline sets future turn to
+zero. Both have exact simulated geometry, not implemented
+sensors or reachability guarantees. Lower fifth-percentile com-
+mand/clearance and upper 95th-percentile log-score thresholds
+use all healthy validation records; the upper resource limit is
+2 ˜SH. Healthy flag calibration does not guarantee task false-
+alarm rates.
+All test records contribute sensitivity, specificity, false
+alarms and misses against contact through 1 s. Confidence
+intervals use 20,000 whole-seed percentile resamples, RNG
+20261022. Controller sign-flip sensitivity assumes a sym-
+metric cluster null, Holm-adjusted over two doses. Fixed
+800/900/1000 ms task horizons are repeated observations, not
+new replicates. No test tuning, seed replacement or efficacy
+stopping is permitted. Inference remains conditional on one
+model, map and task.
+IV. INDEPENDENT TEST RESULTS
+A. Fault Loss Depends on Feedback
+All 96 healthy core episodes succeed: 24/24 for each
+law/bearing in Fig. 2. At 25% deletion, proportional control
+succeeds in 46/48 episodes and relay in 48/48; at 50%, these
+counts are 37/48 and 48/48. There are no healthy-to-fault
+gains. The 50% proportional losses are direction-dependent:
+10/24 at −30◦, 1/24 at +30◦. Both healthy directions remain
+capable, avoiding the earlier directional floor.
+The registered relay-minus-proportional net-loss contrast
+at 50% is −22.9 percentage points (pp), 95% cluster in-
+terval [−33.3, −12.5], with 11/24 nonzero cluster contrasts.
+
+
+TABLE I
+FROZEN 400-MS WARNINGS ON ALL CORE RECORDS. TP/FN USE 13
+COLLISIONS; FP USES 275 SUCCESSFUL TASKS. FULL CLUSTER
+INTERVALS, SPECIFICITY, FPR AND FNR ARE IN THE SUPPLEMENT.
+THESE ARE SCORES OF OUR RECORDS, NOT EXECUTIONS OF SPIKEFI OR
+SPIKINGJET.
+Criterion
+TP
+FP
+FN
+Sens. (%)
+FPR (%)
+Command low
+2
+51
+11
+15.4
+18.5
+Activity upper
+0
+0
+13
+0.0
+0.0
+Activity two-sided
+3
+68
+10
+23.1
+24.7
+Actuator schedule
+13
+84
+0
+100.0
+30.5
+Held command
+13
+57
+0
+100.0
+20.7
+Symmetric-null sign-flip sensitivity gives raw p = 0.000977,
+Holm-adjusted p = 0.00195. At 25%, the contrast is −4.2 pp,
+interval [−10.4, 0], adjusted p = 0.50; two nonzero clusters
+provide limited evidence. Relay’s zero losses are observations,
+not zero-risk estimates. These new laws do not replicate the
+older six-cluster original/gated comparison, whose exploratory
+25% p = 0.25 remains in the supplement.
+A post-hoc trace diagnostic finds identical trigger times
+and pre-decision traces in all 144 matched law/scenario pairs.
+Steering is gated below the trigger threshold, so the laws first
+diverge after that decision. Median trigger time rises from
+160 to 220 ms under 50% deletion for both laws; median
+absolute heading at the precontact 400-ms window is 38.7◦
+for proportional control and 96.0◦for relay. This describes
+a timing/turning pathway, not an identified mediation effect.
+Maximum turn rates match; executed turning effort does not.
+The result concerns feedback context rather than an intrinsi-
+cally more fault-tolerant network.
+B. Neural Criteria Miss Task Failures
+All 400-ms assessments precede the earliest contact,
+607.6 ms. Table I scores the same 288 records against 13
+later collisions and 275 successful tasks. The command-rate
+criterion detects only 2/13 collisions; its sensitivity interval
+is [0, 40.0]%. Two-sided activity detects 3/13 with more false
+alarms, and the upper activity limit detects none. Thus, simply
+adding a lower activity cutoff does not resolve the endpoint
+mismatch.
+Both geometry-informed forecasts detect 13/13 collisions.
+Holding the current neural turn command reduces false alarms
+from 84 to 57 relative to the same-state zero-future-turn base-
+line. A secondary descriptive paired analysis gives a specificity
+gain of 9.8 pp, interval [6.6, 13.4]. Its remaining 20.7% false-
+alarm rate and exact-state information limit practical inter-
+pretation. Zero observed misses yield a degenerate bootstrap
+interval; the one-sided 95% bound on any miss in a new,
+identically defined seed cluster is 11.7%, not a conditional
+FNR guarantee. This candidate is not a validated protection
+algorithm.
+C. Horizon and Exposure Have Distinct Effects
+Only two collisions occur by 800 or 900 ms, versus 13
+by 1 s. The 50% controller contrast is therefore −4.2 pp
+at the earlier horizons, versus −22.9 pp at 1 s. These are
+repeated observations, not extra samples; the declared horizon
+materially changes task loss.
+In contrast, duration matching leaves every group median
+spike ratio unchanged. At 50% deletion, stopped/common
+medians are 1.505 for proportional control and 1.257 for relay;
+the maximum individual change over all pairs is 0.00325.
+The large historical stopped/common difference does not recur
+here. Proportional 50% activity has median ratio 0.981 at
+400 ms and 1.505 over 1 s, illustrating distinct resource win-
+dows. Full-horizon post-contact continuation is not prospective
+warning evidence.
+V. IMPLICATIONS AND LIMITS
+The same functional deletion mask can receive different
+task-level fault labels under two healthy-capable feedback
+laws. A neural threshold and a task requirement should there-
+fore be reported as separate specifications, with the actuator
+schedule and task horizon attached. The two-sided activity
+control shows that the discrepancy is not explained solely by
+choosing an upper envelope for a deletion fault.
+Evidence remains conditional on one v783 graph, one as-
+sumed visual map and a simple finite-horizon pursuit task. The
+laws share actuator limits but use different turning histories;
+relay performance does not establish lower control cost or a
+hardware protection policy. Geometry-informed forecasts have
+more information than neural counts, and false alarms remain
+substantial. Sparse failure clusters and fixed calibration limit
+uncertainty estimates. Functional row deletion is uncalibrated
+to physical bit errors, and no energy, area, real-time execution
+or biological fault tolerance is established.
+VI. CONCLUSION
+An
+auditable
+paired
+assessment
+separates
+feedback-
+dependent task loss from neural-rate and activity criteria in a
+large connectome SNN. Independent evidence supports a 50%
+deletion contrast at the specified one-second endpoint; the 25%
+contrast remains uncertain and stopped-duration matching has
+little effect in the new cohort. The reusable result is a source-
+bound assessment and replay workflow with explicit task,
+timing and resource endpoints.
+
+
+Healthy
+25%
+50%
+Connection-row deletion
+0.00
+0.25
+0.50
+0.75
+1.00
+Collision-free fraction
+24/24
+23/24
+14/24
+24/24
+23/24
+23/24
+a
+Proportional
+Healthy
+25%
+50%
+Connection-row deletion
+0.00
+0.25
+0.50
+0.75
+1.00
+Collision-free fraction
+24/24
+24/24
+24/24
+24/24
+24/24
+24/24
+b
+Relay
+-30°
++30°
+Fig. 2. All independent core outcomes at the fixed 1-s task horizon. Each bar contains 24 seed clusters; the two directions, laws and doses within a seed are
+paired, not independent replicates. Counts are raw successes/episodes. Both healthy directions succeed under both laws; 50% deletion produces different task
+loss despite the common mask and actuator limits.
+
+
+REFERENCES
+[1] P. K. Shiu, G. R. Sterne, N. Spiller, R. Franconville, A. M. Sandoval,
+J. Zhou et al., “A Drosophila computational brain model reveals senso-
+rimotor processing,” Nature, vol. 634, no. 8032, pp. 210–219, 2024.
+[2] D. An, “How sparse can a fly-brain model be? Connection strength,
+wiring placement, network state and task jointly determine function-
+preserving compression of the Drosophila connectome,” bioRxiv, 2026.
+[Online]. Available: https://www.biorxiv.org/content/10.64898/2026.09.
+19.752860
+[3] T. Jo, “Simulating Alzheimer’s amyloid-like pathology on a fly central
+nervous
+system
+connectome,”
+arXiv:2610.19153,
+2026.
+[Online].
+Available: https://arxiv.org/pdf/2610.19153
+[4] T. Spyrou, S. Hamdioui, and H.-G. Stratigopoulos, “SpikeFI: A fault
+injection framework for spiking neural networks,” arXiv:2412.06795,
+2024. [Online]. Available: https://arxiv.org/abs/2412.06795
+[5] A. B. G¨o˘gebakan, E. Magliano, A. Carpegna, A. Ruospo, A. Savino,
+and S. D. Carlo, “SpikingJET: Enhancing fault injection for fully and
+convolutional spiking neural networks,” in 2024 IEEE 30th International
+Symposium on On-Line Testing and Robust System Design (IOLTS).
+IEEE, 2024, pp. 1–7.
+[6] J.
+Yik,
+K.
+Van
+den
+Berghe,
+D.
+den
+Blanken,
+Y.
+Bouhadjar,
+M.
+Fabre,
+P.
+Hueber
+et
+al.,
+“The
+NeuroBench
+framework
+for
+benchmarking
+neuromorphic
+computing
+algorithms
+and
+systems,”
+Nature Communications, vol. 16, no. 1, Feb. 2025. [Online]. Available:
+http://dx.doi.org/10.1038/s41467-025-56739-4
+[7] G.
+D’Angelo,
+J.
+E.
+Pedersen,
+T.
+Hassan,
+M.
+Cianchetti,
+J.
+Bongard,
+F.
+Iida
+et
+al.,
+“A
+benchmarking
+framework
+for
+embodied
+neuromorphic
+agents,”
+Nature
+Machine
+Intelligence,
+vol.
+8,
+no.
+3,
+pp.
+300–312,
+Mar.
+2026.
+[Online].
+Available:
+http://dx.doi.org/10.1038/s42256-026-01197-w
+[8] W. Nijsink, B. E. Forlin, A. Yousefzadeh, and M. Ottavi, “Shooting
+neutrons at neurons: Radiation testing of a spiking neural network
+on flash-based FPGAs,” arXiv:2605.00030, 2026. [Online]. Available:
+https://arxiv.org/abs/2605.00030
+[9] M. Stimberg, R. Brette, and D. F. Goodman, “Brian 2, an intuitive
+and efficient neural simulator,” eLife, vol. 8, Aug. 2019. [Online].
+Available: http://dx.doi.org/10.7554/eLife.47314
+[10] N. C. Klapoetke, A. Nern, M. Y. Peek, E. M. Rogers, P. Breads, G. M.
+Rubin et al., “Ultra-selective looming detection from radial motion
+opponency,” Nature, vol. 551, no. 7679, pp. 237–241, Nov. 2017.
+[Online]. Available: http://dx.doi.org/10.1038/nature24626

@@ -1,0 +1,18 @@
+{
+  "report_sha256": "f7f3be736444c65d094a5949992175bcf330138bbd1026fd70ec7dc018ae6765",
+  "generator_sha256": "955039152ffce828ee0ccaf587808761c123366fea19330e89f2ce7b42cc9dc9",
+  "input_sha256": {
+    "audit/acceptance-v9/core-v2/summary.json": "4e2e595d4e2cd8cd0d309fb2f34b35a9a17d1d2137e129fe11dcd3cf48a2c1c0",
+    "audit/acceptance-v9/stress-v2/summary.json": "71b21afd6f20b82775a8a06d48e27f06b6a69eae376c94c46a304488a40716d2",
+    "audit/acceptance-v9/control-diagnostic-core-v2/diagnostic.json": "2312ee5575be2ec5b8c50e6a48b7ea26e0d0f21b58da031d59e9ff0c37e332d6",
+    "audit/acceptance-v9/warning-comparisons-core/comparisons.json": "f3493eb9c7ad7fb2b55dfefac2e289fb4e8f47b3f8f94be30442db35b1ea4b76",
+    "audit/acceptance-v9/warning-comparisons-stress/comparisons.json": "93424ed2f82d052cc366fe76351ba7aaed6b9f390be82880637c0c0fb6c8e26b",
+    "audit/acceptance-v9/replay-core/replay.json": "c56cad659a7d5ba2e0a5c86478585ac588f6c0a9fff33daecb0ba623efb0880f",
+    "audit/acceptance-v9/numbers-core/check.json": "f9f5716d879d54481f3f5b26d79a0d3be7c3110ee72c23665a8f2522f6ab8a39",
+    "audit/acceptance-v9/replay-stress/replay.json": "945b52c3b27b35ae52ef7ea22677ff5871c2981ef7edaf64d31fe23459886dfd",
+    "audit/acceptance-v9/numbers-stress/check.json": "7c87b34b1ededf52891887254f07c24f653b0719a6bec4f3bca745d44628b38f",
+    "audit/acceptance-v9/core-v2/pairs.csv": "53ef446298864275177f8ddf4bb49a312412b09bdf5d7b23ce22f023ac19910e",
+    "runs/task-v9-test/execution-1792642362.json": "10393547c85df215b7b5dda0d00a03ff4f6da65c5dbef30dbf553d7cb358060c",
+    "runs/task-v9-stress/execution-1792656914.json": "6e2fa6070287d098bb8b66442fe5966bd93cfbf7a6e746905b2bc895200df9d4"
+  }
+}

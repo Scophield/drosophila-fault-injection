@@ -1,0 +1,58 @@
+[
+  {
+    "mode": "proportional",
+    "phi_deg": -30.0,
+    "n": 8,
+    "success": 8,
+    "triggers": 8
+  },
+  {
+    "mode": "proportional",
+    "phi_deg": 30.0,
+    "n": 8,
+    "success": 8,
+    "triggers": 8
+  },
+  {
+    "mode": "relay",
+    "phi_deg": -30.0,
+    "n": 8,
+    "success": 8,
+    "triggers": 8
+  },
+  {
+    "mode": "relay",
+    "phi_deg": 30.0,
+    "n": 8,
+    "success": 8,
+    "triggers": 8
+  },
+  {
+    "mode": "disabled",
+    "phi_deg": -30.0,
+    "n": 8,
+    "success": 0,
+    "triggers": 8
+  },
+  {
+    "mode": "disabled",
+    "phi_deg": 30.0,
+    "n": 8,
+    "success": 0,
+    "triggers": 8
+  },
+  {
+    "mode": "observe",
+    "phi_deg": -30.0,
+    "n": 8,
+    "success": 0,
+    "triggers": 0
+  },
+  {
+    "mode": "observe",
+    "phi_deg": 30.0,
+    "n": 8,
+    "success": 0,
+    "triggers": 0
+  }
+]

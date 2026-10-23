@@ -1,4 +1,5 @@
 import json
+import argparse
 from pathlib import Path
 
 import numpy as np
@@ -11,8 +12,14 @@ import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parents[1]
 SIM = ROOT / "sim"
-FIGS = SIM / "figs"
-FIGS.mkdir(exist_ok=True)
+ap = argparse.ArgumentParser(description='Plot immutable records into a NEW derived directory')
+ap.add_argument('--results',type=Path,default=SIM/'results')
+ap.add_argument('--derived',type=Path,required=True,help='output of tools/audit_archive.py (summary, hub_sign)')
+ap.add_argument('--out',type=Path,required=True)
+ap.add_argument('--pathway',type=Path,help='explicit pathway_mass.json from the selected run')
+args=ap.parse_args()
+FIGS = args.out
+FIGS.mkdir(parents=True,exist_ok=False)
 
 plt.rcParams.update({
     "font.size": 8, "axes.titlesize": 8, "axes.labelsize": 8,
@@ -25,25 +32,27 @@ THETA = 51.4
 
 
 def agg(phase, cond):
-    p = SIM / "results" / phase / f"{cond}.jsonl"
+    p = args.results / phase / f"{cond}.jsonl"
     if not p.exists():
         return None
     rows = [json.loads(l) for l in p.read_text().splitlines() if l.strip()]
     rates = np.array([r["pop_rate"] for r in rows])
     lat = np.array([r["latency_ms"] if r["latency_ms"] is not None else np.nan for r in rows])
     tot = np.array([r["n_total_spikes"] for r in rows])
-    dn2 = np.array([r["dn2_n"] for r in rows])
+    dn2 = np.array([r.get("dn2_n",np.nan) for r in rows])
     return dict(rates=rates, lat=lat, tot=tot, dn2=dn2, n=len(rows))
 
 
 def med(a):
+    if np.all(np.isnan(a)):
+        return None
     return float(np.nanmedian(a))
 
 
 summary = {}
 for phase in ["real", "er"]:
     summary[phase] = {}
-    for p in sorted((SIM / "results" / phase).glob("*.jsonl")):
+    for p in sorted((args.results / phase).glob("*.jsonl")):
         a = agg(phase, p.stem)
         if a:
             summary[phase][p.stem] = {
@@ -53,7 +62,7 @@ for phase in ["real", "er"]:
                 "dn2_med": med(a["dn2"]), "succ": float(np.mean(a["rates"] >= THETA)),
                 "n": a["n"],
             }
-with open(SIM / "results" / "summary.json", "w") as f:
+with open(FIGS / "summary.json", "w") as f:
     json.dump(summary, f, indent=2)
 
 C_REAL = "#1f77b4"
@@ -61,7 +70,7 @@ C_ER = "#d62728"
 C_HL = "#2ca02c"
 
 fig2, axs = plt.subplots(1, 1, figsize=(2.78, 0.62))
-cal = json.loads((SIM / "results" / "calib" / "calibration.json").read_text())
+cal = json.loads((args.results / "calib" / "calibration.json").read_text())
 
 ax = axs
 for name, c in [("healthy", C_REAL), ("background", "#7f7f7f")]:
@@ -124,7 +133,9 @@ ax.errorbar(xs_f4, r, yerr=[np.array(r) - lo, np.array(hi) - r], color=C_REAL, f
 ax.set_xlabel("hub-silencing fraction (top contact count)")
 ax.set_ylabel("command rate (Hz)")
 ax4 = ax.twinx()
-ax4.errorbar(xs_f4, [t / 1000 for t in tot], yerr=[np.zeros(4), np.zeros(4)], color="#ff7f0e", fmt="s--", lw=1.2, ms=3.5, capsize=2)
+tot_lo = np.array([np.percentile(agg('real',c)['tot'],10) for c in conds_f4])/1000
+tot_hi = np.array([np.percentile(agg('real',c)['tot'],90) for c in conds_f4])/1000
+ax4.errorbar(xs_f4, np.array(tot)/1000, yerr=[np.array(tot)/1000-tot_lo,tot_hi-np.array(tot)/1000], color="#ff7f0e", fmt="s--", lw=1.2, ms=3.5, capsize=2)
 ax4.set_ylabel("total spikes (k)", color="#ff7f0e")
 ax4.tick_params(axis="y", colors="#ff7f0e")
 ax.set_title("(b) F4 hub silencing")
@@ -140,7 +151,7 @@ plt.close(fig3)
 
 fig4, axs = plt.subplots(1, 2, figsize=(7.0, 0.50))
 ax = axs[0]
-pm = json.loads((SIM / "results" / "graph" / "pathway_mass.json").read_text())
+pm = json.loads((args.pathway or args.results / "graph" / "pathway_mass.json").read_text())
 ks = np.arange(1, 9)
 for f, c in [(0.10, "#9467bd"), (0.25, "#ff7f0e"), (0.50, "#d62728")]:
     br = np.array(pm[f"real_{f}"]) / np.array(pm["real_0.0"])
@@ -154,7 +165,7 @@ ax.legend(frameon=False, fontsize=6, loc="upper right")
 ax.spines[["top", "right"]].set_visible(False)
 
 ax = axs[1]
-hs = json.loads((SIM / "results" / "graph" / "hub_sign.json").read_text())
+hs = json.loads((args.derived / "hub_sign.json").read_text())
 order = [("healthy", "healthy"), ("F4_1pct", "hub 1%"), ("HUB_inh", "inh. only"),
          ("HUB_exc", "exc. only"), ("INHrand_mass", "rand. inh.\n8.6%")]
 vals = [hs[k]["tot"] / 1000 for k, _ in order]
@@ -163,6 +174,18 @@ xs = np.arange(len(order))
 cols = ["#4c72b0", "#4c72b0", "#d62728", "#7f7f7f", "#7f7f7f"]
 ax.bar(xs, vals, 0.7, color=cols)
 for i, (k, _) in enumerate(order):
+    source = args.results/'real'/f'{"F4_hub_1pct" if k=="F4_1pct" else k}.jsonl'
+    if k not in {'healthy','F4_1pct'}:
+        manifest=json.loads((args.derived/'manifest.json').read_text())
+        candidates=[p for p in manifest['source_sha256'] if Path(p).name==f'{k}.jsonl']
+        if len(candidates)!=1:
+            raise ValueError(f'ambiguous plot source for {k}: {candidates}')
+        source=Path(candidates[0])
+        if not source.is_absolute():
+            source=ROOT/source
+    records=[json.loads(line) for line in source.read_text().splitlines() if line.strip()]
+    ax.scatter(np.full(len(records),xs[i]),[r['n_total_spikes']/1000 for r in records],s=3,
+               color='black',alpha=.45,zorder=3)
     ax.text(xs[i], vals[i] * 1.15, f"{vals[i]:.0f}", ha="center", va="bottom", fontsize=5.6,
             bbox=dict(boxstyle="square,pad=0.05", fc="white", ec="none"))
 ax.axhline(hs["healthy"]["tot"] / 1000 * 2, color="k", ls=":", lw=0.7)
@@ -173,7 +196,7 @@ ax.set_ylim(20, 1600)
 ax.set_xticks(xs)
 ax.set_xticklabels(labs, fontsize=6.2)
 ax.set_ylabel("total spikes (k)")
-ax.set_title("(b) Hub silencing: activity by sign")
+ax.set_title("(b) Archived hub/control activity")
 ax.spines[["top", "right"]].set_visible(False)
 fig4.savefig(FIGS / "fig4_topology.pdf")
 plt.close(fig4)

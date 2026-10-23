@@ -6,3 +6,11 @@ __pycache__/
 *.pyc
 
 Drosophila_brain_model
+
+# Recreated, isolated CPython 3.12 dependency cache (not experiment records).
+/tmp/v9-deps/
+
+# Local runtimes, task metadata and source archives are not Git contents.
+/tmp/
+/.ccm/
+/releases/*.zip

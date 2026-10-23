@@ -1,0 +1,28 @@
+1: \begin{table}[t]
+2: \caption{Frozen controller $\times$ fault comparison, seeds 12--17. Six clusters share both bearings and all conditions. L/G: paired healthy-to-fault losses/gains out of 12; healthy survivors at risk are four/six under original/gated laws. Healthy rows reuse preserved records.}
+3: \label{tab:steering}
+4: \centering\small
+5: \setlength{\tabcolsep}{3pt}
+6: \begin{tabular}{llrrrr}
+7: \toprule
+8: Law & Network & $-30^\circ$ & $+30^\circ$ & Total & L/G\\
+9: \midrule
+10: Original & Healthy & 4/6 & 0/6 & 4/12 & ---\\
+11: Original & 25\% deletion & 4/6 & 0/6 & 4/12 & 1/1\\
+12: Original & 50\% deletion & 0/6 & 0/6 & 0/12 & 4/0\\
+13: Pre-cue gate & Healthy & 6/6 & 0/6 & 6/12 & ---\\
+14: Pre-cue gate & 25\% deletion & 3/6 & 0/6 & 3/12 & 3/0\\
+15: Pre-cue gate & 50\% deletion & 0/6 & 0/6 & 0/12 & 6/0\\
+16: \bottomrule\end{tabular}\end{table}
+17: 
+18: The 72-record matrix directly pairs each fault with its
+19: same-law healthy reference (Table~\ref{tab:steering}). The healthy gate advantage
+20: is two episodes out of 12 (+16.7 percentage points); its six-cluster conditional
+21: range includes zero. Offset-only and no-steering healthy controls triggered
+22: bursts in 11/12 and 12/12 cases but yielded 0/12 survival (Supplementary
+23: Tables~S12--S14). These compare complete feedback laws, which can change sensory
+24: trajectories and trigger timing.
+25: 
+26: At 25\% deletion, gated-minus-original net task loss was +25.0 percentage points (conditional 95\% range 8.3 to 41.7). At 50\% deletion, gated-minus-original net task loss was +16.7 percentage points (conditional 95\% range 0.0 to 33.3). The 25\% range excludes zero, but only 3 seed clusters have nonzero interactions; a post-hoc symmetric-null sign-flip sensitivity gives $p=0.25$ (Supplementary Section~13). At 50\% deletion, both controllers yield 0/12; their net-loss contrast reflects different healthy baselines. Loss and gain counts are retained separately; a healthy success difference alone is not a fault-tolerance comparison.
+27: 
+28: Among 48 faulty episodes, 41 collided; none of these collisions was flagged at any tested $c=1.5,2,3,4$ over 200--500\,ms. At 500\,ms, $c=1.5$ instead flagged 2 surviving fault episodes. This activity-only criterion did not distinguish the observed collisions under these settings; it does not establish that spike count is generally uninformative. Supplementary Table~S22 and the threshold CSV report the full sensitivity.

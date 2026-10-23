@@ -1,0 +1,17 @@
+{
+  "seeds": [
+    400,
+    401,
+    402,
+    403,
+    404,
+    405,
+    406,
+    407
+  ],
+  "calibration_sha256": "8ba27037d006ba6a8ae581c07170be6ac1ed0563873d4a3dc60af6d35d8e4ddf",
+  "role": "validation",
+  "faults": "healthy",
+  "workers": 3,
+  "registration_sha256": null
+}

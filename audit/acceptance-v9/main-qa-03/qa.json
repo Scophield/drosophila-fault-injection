@@ -1,0 +1,161 @@
+{
+  "pdf_sha256": "f58713ab9c09beca482c8089c71dbc9a6566d62c86193eab8dac403c78fb5a24",
+  "references_only_fifth_page": true,
+  "pages": 5,
+  "page_sizes": [
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ]
+  ],
+  "fonts": {
+    "5": {
+      "type": "Type1",
+      "name": "QHGGQG+NimbusRomNo9L-Regu",
+      "embedded_bytes": 20434
+    },
+    "6": {
+      "type": "Type1",
+      "name": "LREKMX+NimbusRomNo9L-MediItal",
+      "embedded_bytes": 8298
+    },
+    "7": {
+      "type": "Type1",
+      "name": "VCGRXY+NimbusRomNo9L-Medi",
+      "embedded_bytes": 15300
+    },
+    "8": {
+      "type": "Type1",
+      "name": "HLQHUA+CMMI9",
+      "embedded_bytes": 7566
+    },
+    "9": {
+      "type": "Type1",
+      "name": "YZKUPU+CMR9",
+      "embedded_bytes": 8322
+    },
+    "12": {
+      "type": "Type0",
+      "name": "BZLQYS+DejaVuSans-Bold",
+      "embedded_bytes": 6828
+    },
+    "13": {
+      "type": "Type0",
+      "name": "OLULPR+DejaVuSans",
+      "embedded_bytes": 14816
+    },
+    "14": {
+      "type": "Type0",
+      "name": "EEZAWI+DejaVuSans",
+      "embedded_bytes": 3864
+    },
+    "37": {
+      "type": "Type1",
+      "name": "KQNKSN+NimbusRomNo9L-ReguItal",
+      "embedded_bytes": 14768
+    },
+    "38": {
+      "type": "Type1",
+      "name": "DUORVH+CMMI10",
+      "embedded_bytes": 12260
+    },
+    "39": {
+      "type": "Type1",
+      "name": "XVFXUY+CMR7",
+      "embedded_bytes": 10369
+    },
+    "40": {
+      "type": "Type1",
+      "name": "UJYIMB+CMMI7",
+      "embedded_bytes": 9414
+    },
+    "41": {
+      "type": "Type1",
+      "name": "CBSKME+CMR10",
+      "embedded_bytes": 15509
+    },
+    "42": {
+      "type": "Type1",
+      "name": "MLIBUP+CMSY10",
+      "embedded_bytes": 7984
+    },
+    "43": {
+      "type": "Type1",
+      "name": "QDETGT+CMSY7",
+      "embedded_bytes": 7802
+    },
+    "44": {
+      "type": "Type1",
+      "name": "ZHIOWR+CMMIB10",
+      "embedded_bytes": 7375
+    },
+    "45": {
+      "type": "Type1",
+      "name": "WQVXEZ+CMBX10",
+      "embedded_bytes": 8814
+    },
+    "46": {
+      "type": "Type1",
+      "name": "LHRDPA+CMEX10",
+      "embedded_bytes": 7395
+    },
+    "51": {
+      "type": "Type0",
+      "name": "MWOAYY+DejaVuSans-Bold",
+      "embedded_bytes": 4640
+    },
+    "52": {
+      "type": "Type0",
+      "name": "FBDPBU+DejaVuSans",
+      "embedded_bytes": 11792
+    }
+  },
+  "type3": [],
+  "unembedded": [],
+  "outside_page": [],
+  "pdf_version": "1.5",
+  "encrypted": false,
+  "links_per_page": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "bookmarks": 0,
+  "widgets_per_page": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "form_fields": 0,
+  "submission_feature_errors": []
+}

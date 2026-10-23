@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "script_sha256": "0875a17b9f9a0aec7ac6a5186b00c94b853476b8f68155ab7d858ceda9e65167",
+  "input_sha256": {
+    "D:\\autoresearch_labtorary\\Drosophila_brain_model\\Completeness_783.csv": "52b0ac6094cd32c546f8d4c341e094376f48f4e791f8db9b166de5dff8199ea4",
+    "D:\\autoresearch_labtorary\\Drosophila_brain_model\\Connectivity_783.parquet": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\sim\\data\\annotations.tsv": "d00c92142f6b96ce916cbef681d0d93f856b7cb0904c738f996130cd0e0c0b29",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-frozen\\registration-core.json": "7efa2ad4da4dc72cfd5773c57adc44020f12981fcc30d78e9b3c5d10d395b54f",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-frozen\\calibration.json": "8ba27037d006ba6a8ae581c07170be6ac1ed0563873d4a3dc60af6d35d8e4ddf",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-test\\input-map.json": "c41aa94ffbfc33f525d435ab6a2bb3f0eb32f5617c1d6b963a13a5093d397144",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\audit\\blender-integration-20261023\\source\\connectome_data.json": "df09257169e0e37349b02dee9f73eb68c38f215f08b925954d7e2554d306bfa6",
+    "D:\\autoresearch_labtorary\\drosophila-fault-injection\\audit\\blender-integration-20261023\\source\\data_manifest.json": "880fdbcff193cc92d72547c6340252f67a0d0221279cef81677856c33cd8c78f"
+  },
+  "node_roles": {
+    "LC4": 104,
+    "LPLC2": 210,
+    "relay": 88,
+    "command": 8
+  },
+  "edge_role_pairs": {
+    "LC4->relay": 216,
+    "LPLC2->command": 19,
+    "LPLC2->relay": 627,
+    "relay->command": 103,
+    "LC4->command": 83,
+    "LPLC2->LPLC2": 1,
+    "command->command": 1
+  },
+  "nodes_verified": 410,
+  "edges_verified": 1050,
+  "sensory_match": 314,
+  "command_match": 8,
+  "original_model_rows": 15091983,
+  "within_group_edges": 2,
+  "scope": "Read-only node/edge/coordinate audit. Selected graph is not the full recurrent graph. No neural rerun or biological spatial registration."
+}

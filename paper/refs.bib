@@ -1,3 +1,9 @@
+@IEEEtranBSTCTL{IEEEcontrol,
+  CTLuse_forced_etal = {yes},
+  CTLmax_names_forced_etal = {6},
+  CTLnames_show_etal = {6}
+}
+
 @misc{cho2026drosophila,
   title = {A {D}rosophila Whole-Connectome Network Can Learn Human-Designed Cognitive Tasks},
   author = {Joonghui Cho and Minchan Kang and Daeshik Kim},
@@ -140,7 +146,7 @@
 }
 
 @misc{arfa2025hardwareaware,
-  title = {Hardware-Aware Fine-Tuning of Spiking Q-Networks on the SpiNNaker2 Neuromorphic Platform},
+  title = {Hardware-Aware Fine-Tuning of Spiking Q-Networks on the {SpiNNaker2} Neuromorphic Platform},
   author = {Sirine Arfa and Bernhard Vogginger and Christian Mayr},
   year = {2025},
   howpublished = {ACM ICONS 2025 - International Conference on Neuromorphic Systems},
@@ -184,7 +190,7 @@
 @article{simpson2023descending,
   title = {Descending control of motor sequences in {D}rosophila},
   author = {Julie H. Simpson},
-  year = {2023},
+  year = {2024},
   journal = {Current Opinion in Neurobiology},
   volume = {84},
   pages = {102822},
@@ -192,13 +198,7 @@
   doi = {10.1016/j.conb.2023.102822},
 }
 
-@inproceedings{lin2024network,
-  title = {Network statistics of the whole-brain connectome of {D}rosophila.},
-  author = {Albert Lin and Runzhe Yang and Sven Dorkenwald and Arie Matsliah and Amy R Sterling and Philipp Schlegel and others},
-  year = {2024},
-  booktitle = {Nature},
-  doi = {10.1038/s41586-024-07968-y},
-}
+@article{lin2024network, title={Network statistics of the whole-brain connectome of {Drosophila}}, volume={634}, ISSN={1476-4687}, url={http://dx.doi.org/10.1038/s41586-024-07968-y}, DOI={10.1038/s41586-024-07968-y}, number={8032}, journal={Nature}, publisher={Springer Science and Business Media LLC}, author={Lin, Albert and Yang, Runzhe and Dorkenwald, Sven and Matsliah, Arie and Sterling, Amy R. and Schlegel, Philipp and Yu, Szi-chieh and McKellar, Claire E. and Costa, Marta and Eichler, Katharina and Bates, Alexander Shakeel and Eckstein, Nils and Funke, Jan and Jefferis, Gregory S. X. E. and Murthy, Mala}, year={2024}, month=Oct, pages={153--165} }
 
 @inproceedings{gogebakan2024spikingjet,
   title = {{S}piking{JET}: Enhancing Fault Injection for Fully and Convolutional Spiking Neural Networks},
@@ -213,24 +213,17 @@
 }
 
 @misc{spyrou2024spikefi,
-  title = {{S}pike{Fi}: A Fault Injection Framework for Spiking Neural Networks},
+  title = {{SpikeFI}: A Fault Injection Framework for Spiking Neural Networks},
   author = {Theofilos Spyrou and Said Hamdioui and Haralampos-G. Stratigopoulos},
   year = {2024},
   howpublished = {arXiv:2412.06795},
   eprint = {2412.06795},
   archivePrefix = {arXiv},
   doi = {10.48550/arXiv.2412.06795},
+  url = {https://arxiv.org/abs/2412.06795},
 }
 
-@misc{yik2023neurobench,
-  title = {NeuroBench: A Framework for Benchmarking Neuromorphic Computing Algorithms and Systems},
-  author = {Jason Yik and Korneel Van den Berghe and Douwe den Blanken and Younes Bouhadjar and Maxime Fabre and Paul Hueber and others},
-  year = {2023},
-  howpublished = {arXiv:2304.04640},
-  eprint = {2304.04640},
-  archivePrefix = {arXiv},
-  doi = {10.48550/arXiv.2304.04640},
-}
+@article{yik2023neurobench, title={The {NeuroBench} framework for benchmarking neuromorphic computing algorithms and systems}, volume={16}, ISSN={2041-1723}, url={http://dx.doi.org/10.1038/s41467-025-56739-4}, DOI={10.1038/s41467-025-56739-4}, number={1}, journal={Nature Communications}, publisher={Springer Science and Business Media LLC}, author={Yik, Jason and Van den Berghe, Korneel and den Blanken, Douwe and Bouhadjar, Younes and Fabre, Maxime and Hueber, Paul and Ke, Weijie and Khoei, Mina A. and Kleyko, Denis and Pacik-Nelson, Noah and Pierro, Alessandro and Stratmann, Philipp and Sun, Pao-Sheng Vincent and Tang, Guangzhi and Wang, Shenqi and Zhou, Biyan and Ahmed, Soikat Hasan and Vathakkattil Joseph, George and Leto, Benedetto and Micheli, Aurora and Mishra, Anurag Kumar and Lenz, Gregor and Sun, Tao and Ahmed, Zergham and Akl, Mahmoud and Anderson, Brian and Andreou, Andreas G. and Bartolozzi, Chiara and Basu, Arindam and Bogdan, Petrut and Bohte, Sander and Buckley, Sonia and Cauwenberghs, Gert and Chicca, Elisabetta and Corradi, Federico and de Croon, Guido and Danielescu, Andreea and Daram, Anurag and Davies, Mike and Demirag, Yigit and Eshraghian, Jason and Fischer, Tobias and Forest, Jeremy and Fra, Vittorio and Furber, Steve and Furlong, P. Michael and Gilpin, William and Gilra, Aditya and Gonzalez, Hector A. and Indiveri, Giacomo and Joshi, Siddharth and Karia, Vedant and Khacef, Lyes and Knight, James C. and Kriener, Laura and Kubendran, Rajkumar and Kudithipudi, Dhireesha and Liu, Shih-Chii and Liu, Yao-Hong and Ma, Haoyuan and Manohar, Rajit and Margarit-Taul{\'e}, Josep Maria and Mayr, Christian and Michmizos, Konstantinos and Muir, Dylan R. and Neftci, Emre and Nowotny, Thomas and Ottati, Fabrizio and Ozcelikkale, Ayca and Panda, Priyadarshini and Park, Jongkil and Payvand, Melika and Pehle, Christian and Petrovici, Mihai A. and Posch, Christoph and Renner, Alpha and Sandamirskaya, Yulia and Schaefer, Clemens J. S. and van Schaik, Andr{\'e} and Schemmel, Johannes and Schmidgall, Samuel and Schuman, Catherine and Seo, Jae-sun and Sheik, Sadique and Shrestha, Sumit Bam and Sifalakis, Manolis and Sironi, Amos and Stewart, Kenneth and Stewart, Matthew and Stewart, Terrence C. and Timcheck, Jonathan and T{\"o}men, Nergis and Urgese, Gianvito and Verhelst, Marian and Vineyard, Craig M. and Vogginger, Bernhard and Yousefzadeh, Amirreza and Zohora, Fatima Tuz and Frenkel, Charlotte and Reddi, Vijay Janapa}, year={2025}, month=Feb }
 
 @misc{thieu2022effects,
   title = {Effects of noise on leaky integrate-and-fire neuron models for neuromorphic computing applications},
@@ -346,6 +339,7 @@
   number = {8},
   publisher = {The Company of Biologists},
   doi = {10.1242/jeb.244790},
+  url = {https://doi.org/10.1242/jeb.244790},
 }
 
 @article{gaitanidis2025drosophila,
@@ -360,22 +354,61 @@
   doi = {10.1371/journal.pbio.3003553},
 }
 
-@inproceedings{jo2026simulating,
+@misc{jo2026simulating,
   title = {Simulating {A}lzheimer's amyloid-like pathology on a fly central nervous system connectome},
   author = {Taeho Jo},
   year = {2026},
-  booktitle = {arXiv (Cornell University)},
+  howpublished = {arXiv:2610.19153},
   publisher = {Cornell University},
   doi = {10.48550/arxiv.2610.19153},
   url = {https://arxiv.org/pdf/2610.19153},
 }
 
-@inproceedings{an2026sparse,
+@misc{an2026sparse,
   title = {How sparse can a fly-brain model be? {C}onnection strength, wiring placement, network state and task jointly determine function-preserving compression of the {D}rosophila connectome},
   author = {Donggyu An},
   year = {2026},
-  booktitle = {bioRxiv (Cold Spring Harbor Laboratory)},
+  howpublished = {bioRxiv},
   publisher = {Cold Spring Harbor Laboratory},
   doi = {10.64898/2026.09.19.752860},
   url = {https://www.biorxiv.org/content/10.64898/2026.09.19.752860},
+}
+
+@misc{nijsink2026neutrons,
+  title = {Shooting Neutrons at Neurons: Radiation Testing of a Spiking Neural Network on Flash-Based {FPGA}s},
+  author = {Wim Nijsink and Bruno Endres Forlin and Amirreza Yousefzadeh and Marco Ottavi},
+  year = {2026},
+  howpublished = {arXiv:2605.00030},
+  url = {https://arxiv.org/abs/2605.00030},
+}
+
+
+@article{stimberg2019brian2, title={Brian 2, an intuitive and efficient neural simulator}, volume={8}, ISSN={2050-084X}, url={http://dx.doi.org/10.7554/eLife.47314}, DOI={10.7554/elife.47314}, journal={eLife}, publisher={eLife Sciences Publications, Ltd}, author={Stimberg, Marcel and Brette, Romain and Goodman, Dan FM}, year={2019}, month=Aug }
+
+
+@article{klapoetke2017looming, title={Ultra-selective looming detection from radial motion opponency}, volume={551}, ISSN={1476-4687}, url={http://dx.doi.org/10.1038/nature24626}, DOI={10.1038/nature24626}, number={7679}, journal={Nature}, publisher={Springer Science and Business Media LLC}, author={Klapoetke, Nathan C. and Nern, Aljoscha and Peek, Martin Y. and Rogers, Edward M. and Breads, Patrick and Rubin, Gerald M. and Reiser, Michael B. and Card, Gwyneth M.}, year={2017}, month=Nov, pages={237--241} }
+
+
+@article{dangelo2026embodied, title={A benchmarking framework for embodied neuromorphic agents}, volume={8}, ISSN={2522-5839}, url={http://dx.doi.org/10.1038/s42256-026-01197-w}, DOI={10.1038/s42256-026-01197-w}, number={3}, journal={Nature Machine Intelligence}, publisher={Springer Science and Business Media LLC}, author={D'Angelo, Giulia and Pedersen, Jens E. and Hassan, Taimoor and Cianchetti, Matteo and Bongard, Josh and Iida, Fumiya and Indiveri, Giacomo and Hoffmann, Matej and Laschi, Cecilia and De Luca, Chiara and Bartolozzi, Chiara and Donati, Elisa}, year={2026}, month=Mar, pages={300--312} }
+
+
+@misc{theilman2026robustness,
+      title={Intrinsic Numerical Robustness and Fault Tolerance in a Neuromorphic Algorithm for Scientific Computing}, 
+      author={Bradley H. Theilman and James B. Aimone},
+      year={2026},
+      eprint={2603.10246},
+      howpublished={arXiv:2603.10246},
+      archivePrefix={arXiv},
+      primaryClass={cs.NE},
+      url={https://arxiv.org/abs/2603.10246}, 
+}
+
+@inproceedings{colucci2022enpheeph,
+  title={enpheeph: A Fault Injection Framework for Spiking and Compressed Deep Neural Networks},
+  url={https://doi.org/10.1109/IROS47612.2022.9982181},
+  doi={10.1109/IROS47612.2022.9982181},
+  booktitle={2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  publisher={IEEE},
+  author={Colucci, Alessio and Steininger, Andreas and Shafique, Muhammad},
+  year={2022}, month=Oct, pages={5155--5162}
 }

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "errors": [],
+  "files": 3915,
+  "zip_sha256": "1a023c6b732fc6843c0e01cdb25c4746084403f8b255f14c93386090636a30ce",
+  "scope": "ZIP CRC, every member SHA256/size/path, final-validation inputs and both PDF bindings; does not rerun experiments or infer scientific validity",
+  "published": false
+}

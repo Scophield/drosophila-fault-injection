@@ -1,0 +1,27 @@
+{
+  "seeds": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "phis": [
+    -30,
+    30
+  ],
+  "modes": [
+    "brain",
+    "precue_gated",
+    "bias_only",
+    "steer_disabled"
+  ],
+  "faults": [
+    null
+  ],
+  "horizon_ms": 1000,
+  "calibration": "copied without refitting from geometry-v3",
+  "comparisons": "paired seeds and bearings; all four laws retain the same neural burst trigger",
+  "interpretation": "closed-loop interventions change subsequent retinal input; triggers follow the same law, not necessarily the same times"
+}

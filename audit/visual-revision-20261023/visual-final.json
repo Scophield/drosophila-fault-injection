@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "utc": "2026-10-22T16:30:13.353206+00:00",
+  "main_pdf_sha256": "8688efcc39ae021ad254cda5fe0bc19eea3c58820c3f4071e583ffd2c3f1815c",
+  "supplement_pdf_sha256": "795ea2876b7c550d6aac84cb44d5908722b471eec96881138b2d09c5d925716f",
+  "main_pages_checked": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "supplement_pages_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "notes": [
+    "All five final main pages individually inspected from main-qa-03. All three new figure composites checked standalone and at final paper size. No label collisions/clipping found. Default IEEE text size retained, fifth page references only.",
+    "All thirteen SI page renders are byte-identical to the previously individually reviewed final v9 SI pages; TeX bytes are also identical. Only PDF metadata/source binding changes. No new SI result or layout is claimed."
+  ],
+  "supplement_pixel_identical_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ]
+}

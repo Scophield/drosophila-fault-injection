@@ -1,0 +1,55 @@
+{
+  "scope": "targeted primary-source verification; not a systematic review",
+  "sources": [
+    {
+      "key": "shiu2024drosophila",
+      "url": "https://www.nature.com/articles/s41586-024-07763-9",
+      "verified": "title, DOI, Nature 634 210--219 (2024); model mechanism/context"
+    },
+    {
+      "key": "model-release",
+      "url": "https://github.com/philshiu/Drosophila_brain_model",
+      "verified": "README explicitly distinguishes published v630 and optional public v783 tables; actual local input/source hashes frozen"
+    },
+    {
+      "key": "an2026sparse",
+      "url": "https://github.com/aikian/flylite",
+      "verified": "author repository describes v630, task/state/operator contrasts and readout/population metrics; publisher full-text endpoint inaccessible"
+    },
+    {
+      "key": "jo2026simulating",
+      "url": "https://arxiv.org/pdf/2610.19153",
+      "verified": "primary 104-page preprint; relevant circuit/arena methods and same-fly endpoint comparison inspected; no exhaustive literature claim"
+    },
+    {
+      "key": "spyrou2024spikefi",
+      "url": "https://arxiv.org/abs/2412.06795",
+      "verified": "title/authors/year/framework scope"
+    },
+    {
+      "key": "gogebakan2024spikingjet",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10616060/",
+      "verified": "IOLTS 2024, DOI 10.1109/IOLTS60994.2024.10616060, scope"
+    },
+    {
+      "key": "nijsink2026neutrons",
+      "url": "https://arxiv.org/html/2605.00030v1",
+      "verified": "primary physical-radiation preprint and four-author metadata; no hardware evidence transferred to our model"
+    },
+    {
+      "key": "klapoetke2017looming",
+      "url": "https://www.nature.com/articles/nature24626",
+      "verified": "primary metadata/editorial summary and accessible primary PMC copy support LPLC2 looming rationale; no measured RF map claimed here"
+    },
+    {
+      "key": "yik2023neurobench",
+      "url": "https://www.nature.com/articles/s41467-025-56739-4",
+      "verified": "published 2025, despite historical BibTeX key; title/authors/DOI and benchmarking scope"
+    },
+    {
+      "key": "dangelo2026embodied",
+      "url": "https://www.nature.com/articles/s42256-026-01197-w",
+      "verified": "NMI 8, 300--312 (2026), DOI and embodied benchmarking/code scope; direct open intermittently cookie-blocked, primary indexed content accessible"
+    }
+  ]
+}

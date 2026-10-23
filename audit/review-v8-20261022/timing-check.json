@@ -1,0 +1,199 @@
+{
+  "burst_records": [
+    {
+      "episode": "brain_F2_25_phi-30_s13.json",
+      "trigger_ms": 300.0,
+      "first_burst_start_ms": 560.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 440.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "brain_F2_25_phi-30_s14.json",
+      "trigger_ms": 320.0,
+      "first_burst_start_ms": 580.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 420.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "brain_F2_25_phi-30_s15.json",
+      "trigger_ms": 300.0,
+      "first_burst_start_ms": 560.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 440.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "brain_F2_25_phi-30_s17.json",
+      "trigger_ms": 260.0,
+      "first_burst_start_ms": 520.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 440.0,
+      "completed_burst": true
+    },
+    {
+      "episode": "brain_healthy_phi-30_s12.json",
+      "trigger_ms": 320.0,
+      "first_burst_start_ms": 580.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 420.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "brain_healthy_phi-30_s13.json",
+      "trigger_ms": 340.0,
+      "first_burst_start_ms": 600.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 400.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "brain_healthy_phi-30_s15.json",
+      "trigger_ms": 300.0,
+      "first_burst_start_ms": 560.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 440.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "brain_healthy_phi-30_s17.json",
+      "trigger_ms": 300.0,
+      "first_burst_start_ms": 560.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 440.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "precue_gated_F2_25_phi-30_s14.json",
+      "trigger_ms": 340.0,
+      "first_burst_start_ms": 600.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 400.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "precue_gated_F2_25_phi-30_s15.json",
+      "trigger_ms": 320.0,
+      "first_burst_start_ms": 580.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 420.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "precue_gated_F2_25_phi-30_s17.json",
+      "trigger_ms": 300.0,
+      "first_burst_start_ms": 560.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 440.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "precue_gated_healthy_phi-30_s12.json",
+      "trigger_ms": 320.0,
+      "first_burst_start_ms": 580.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 420.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "precue_gated_healthy_phi-30_s13.json",
+      "trigger_ms": 300.0,
+      "first_burst_start_ms": 560.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 440.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "precue_gated_healthy_phi-30_s14.json",
+      "trigger_ms": 280.0,
+      "first_burst_start_ms": 540.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 440.0,
+      "completed_burst": true
+    },
+    {
+      "episode": "precue_gated_healthy_phi-30_s15.json",
+      "trigger_ms": 320.0,
+      "first_burst_start_ms": 580.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 420.0,
+      "completed_burst": false
+    },
+    {
+      "episode": "precue_gated_healthy_phi-30_s16.json",
+      "trigger_ms": 280.0,
+      "first_burst_start_ms": 540.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 440.0,
+      "completed_burst": true
+    },
+    {
+      "episode": "precue_gated_healthy_phi-30_s17.json",
+      "trigger_ms": 220.0,
+      "first_burst_start_ms": 480.0,
+      "realized_delay_ms": 260.0,
+      "observed_burst_ms": 440.0,
+      "completed_burst": true
+    }
+  ],
+  "horizon_flag_mismatches": [
+    {
+      "episode": "brain_F2_25_phi-30_s13.json",
+      "recorded": true,
+      "active_at_exact_horizon": false,
+      "scheduled_end_ms": 1000.0
+    },
+    {
+      "episode": "brain_F2_25_phi-30_s15.json",
+      "recorded": true,
+      "active_at_exact_horizon": false,
+      "scheduled_end_ms": 1000.0
+    },
+    {
+      "episode": "brain_healthy_phi-30_s15.json",
+      "recorded": true,
+      "active_at_exact_horizon": false,
+      "scheduled_end_ms": 1000.0
+    },
+    {
+      "episode": "brain_healthy_phi-30_s17.json",
+      "recorded": true,
+      "active_at_exact_horizon": false,
+      "scheduled_end_ms": 1000.0
+    },
+    {
+      "episode": "precue_gated_F2_25_phi-30_s17.json",
+      "recorded": true,
+      "active_at_exact_horizon": false,
+      "scheduled_end_ms": 1000.0
+    },
+    {
+      "episode": "precue_gated_healthy_phi-30_s13.json",
+      "recorded": true,
+      "active_at_exact_horizon": false,
+      "scheduled_end_ms": 1000.0
+    }
+  ],
+  "observed_delay_values": [
+    260.0
+  ],
+  "completed_burst_duration_values": [
+    440.0
+  ],
+  "completed_burst_count": 4,
+  "legacy_deletion_medians": {
+    "whole": 0.38170129527873403,
+    "common": 0.7294429570879406
+  },
+  "template_files": {
+    "IEEEtran.cls": {
+      "path": "C:\\Users\\ohsawalab gpu3\\AppData\\Local\\Programs\\MiKTeX\\tex\\latex\\ieeetran\\IEEEtran.cls",
+      "header": "%%\n%% IEEEtran.cls 2015/08/26 version V1.8b\n%% \n%% This is the IEEEtran LaTeX class for authors of the Institute of \n%% Electrical and Electronics Engineers (IEEE) Transactions journals and\n%% conferences.\n%% \n%% Support sites:\n%% http://www.michaelshell.org/tex/ieeetran/\n%% http://www.ctan.org/pkg/ieeetran\n%% and\n%% http://www.ieee.org/\n%%\n%% Based on the original 1993 IEEEtran.cls, but with many bug fixes\n%% and enhancements (from both JVH and MDS) over the 1996/7 version.\n%%\n%%\n%% Contributors:\n%% Gerry Murray (1993), Silvano Balemi (1993),\n%% Jon Dixon (1996), Peter N\"uchter (1996),\n%% Juergen von Hagen (2000), and Michael Shell (2001-2014)\n%% \n%% \n%% Copyright (c) 1993-2000 by Gerry Murray, Silvano Balemi, \n%%                         Jon Dixon, Peter N\"uchter,\n%%                         Juergen von Hagen\n%%                         and\n%% Copyright (c) 2001-2015 by Michael Shell\n%%\n%% Current maintainer (V1.3 to V1.8b): Michael Shell\n%%                                     See:\n%%                                     http://www.michaelshell.org/\n%%                                     for current contact information.\n%%\n%% Special thanks to Peter Wilson (CUA) and Donald Arseneau\n%% for allowing the inclusion of the \\@ifmtarg command \n%% from their ifmtarg LaTeX package. \n%% \n%%*************************************************************************\n%% Legal Notice:\n%% This code is offered as-is without any warranty either expressed or\n%% implied; without even the implied warranty of MERCHANTABILITY or\n%% FITNESS FOR A PARTICULAR PURPOSE! \n%% User assumes all risk.\n%% In no event shall the IEEE or any contributor to this code be liable for\n%% any damages or losses, including, but not limited to, incidental,\n%% consequential, or any other damages, resulting from the use or misuse\n%% of any information contained here.\n%%\n%% All comments are the opinions of their respective authors and are not\n%% necessarily endorsed by the IEEE.\n%%\n%% This work is distributed under the LaTeX Project Public License (LPPL)\n%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,\n%% distributed and modified. A copy of the LPPL, version 1.3, is included\n%% in the base LaTeX documentation of all distributions of LaTeX released\n%% 2003/12/01 or later.\n%% Retain all contribution notices and credits.\n%% ** Modified files should be clearly indicated as such, including  **\n%% ** renaming them and changing author support contact information. **\n%%\n%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,\n%%                    bare_conf.tex, bare_jrnl.tex, bare_conf_compsoc.tex,\n%%                    bare_jrnl_compsoc.tex\n%% \n%% Major changes to the user interface should be indicated by an \n%% increase in the version numbers. If a version is a beta, it will \n%% be indicated with a BETA suffix, i.e., 1.4 BETA.\n%% Small changes can be indicated by appending letters to the version\n%% such as \"IEEEtran_v14a.cls\".\n%% In all cases, \\Providesclass, any \\typeout messages to the user,\n%% \\IEEEtransversionmajor and \\IEEEtransversionminor must reflect the\n%% correct version information.\n%% The changes should also be documented via source comments.\n%%*************************************************************************\n%%\n%\n% Available class options \n% e.g., \\documentclass[10pt,conference]{IEEEtran} \n% \n%             *** choose only one from each category ***\n%\n% 9pt, 10pt, 11pt, 12pt\n%    Sets normal font size. The default is 10pt.\n% \n% conference, journal, technote, peerreview, peerreviewca\n%    determines format mode - conference papers, journal papers,\n%    correspondence papers (technotes), or peer review papers. The user\n%    should also select 9pt when using technote. peerreview is like\n%    journal mode, but provides for a single-column \"cover\" title page for\n%    anonymous peer review. The paper title (without the author names) is\n%    repeated at the top of the page after the cover page. For peer review\n%    papers, the \\IEEEpeerreviewmaketitle command must be executed (will\n%    automatically be ignored for non-peerreview modes) at the place the\n%    cover page is to end, usually just after the abstract (keywords are\n%    not normally used with peer review papers). peerreviewca is like\n%    peerreview, but allows the author names to be entered and formatted\n%    as with conference mode so that author affiliation and contact\n%    information can be easily seen on the cover page.\n%    The default is journal.\n%\n% draft, draftcls, draftclsnofoot, final\n%    determines if paper is formatted as a widely spaced draft (for\n%    handwritten editor comments) or as a properly typeset final version.\n%    draftcls restricts draft mode to the class file while all other LaTeX\n%    packages (i.e., \\usepackage{graphicx}) will behave as final - allows\n%    for a draft paper with visible figures, etc. draftclsnofoot is like\n%    draftcls, but does not display the date and the word \"DRAFT\" at the foot\n%    of the pages. If using one of the draft modes, the user will probably\n%    also want to select onecolumn.\n%    The default is final.\n%\n% letterpaper, a4paper, cspaper\n%    determines paper size: 8.5in X 11in, 210mm X 297mm or 7.875in X 10.75in.\n%    Changing the paper size in the standard journal and conference modes\n%    will not alter the typesetting of the document - only the margins will\n%    be affected. In particular, documents using the a4paper option will\n%    have reduced side margins (A4 is narrower than US letter) and a longer\n%    bottom margin (A4 is longer than US letter). For both cases, the top\n%    margins will be the same and the text will be horizontally centered.\n%    For the compsoc conference and draft modes, it is the margins that will\n%    remain constant, and thus the text area size will vary, with changes in\n%    the paper size.\n%    The cspaper option is the special ``trim'' paper size (7.875in x 10.75in)\n%    used in the actual publication of Computer Society journals. Under\n"
+    },
+    "IEEEtran.bst": {
+      "path": "C:\\Users\\ohsawalab gpu3\\AppData\\Local\\Programs\\MiKTeX\\bibtex\\bst\\ieeetran\\IEEEtran.bst",
+      "header": "%%\n%% IEEEtran.bst\n%% BibTeX Bibliography Style file for IEEE Journals and Conferences (unsorted)\n%% Version 1.14 (2015/08/26)\n%% \n%% Copyright (c) 2003-2015 Michael Shell\n%% \n%% Original starting code base and algorithms obtained from the output of\n%% Patrick W. Daly's makebst package as well as from prior versions of\n%% IEEE BibTeX styles:\n%% \n%% 1. Howard Trickey and Oren Patashnik's ieeetr.bst  (1985/1988)\n%% 2. Silvano Balemi and Richard H. Roy's IEEEbib.bst (1993)\n%% \n%% Support sites:\n%% http://www.michaelshell.org/tex/ieeetran/\n%% http://www.ctan.org/pkg/ieeetran\n%% and/or\n%% http://www.ieee.org/\n%% \n%% For use with BibTeX version 0.99a or later\n%%\n%% This is a numerical citation style.\n%% \n%%*************************************************************************\n%% Legal Notice:\n%% This code is offered as-is without any warranty either expressed or\n%% implied; without even the implied warranty of MERCHANTABILITY or\n%% FITNESS FOR A PARTICULAR PURPOSE! \n%% User assumes all risk.\n%% In no event shall the IEEE or any contributor to this code be liable for\n%% any damages or losses, including, but not limited to, incidental,\n%% consequential, or any other damages, resulting from the use or misuse\n%% of any information contained here.\n%%\n%% All comments are the opinions of their respective authors and are not\n%% necessarily endorsed by the IEEE.\n%%\n%% This work is distributed under the LaTeX Project Public License (LPPL)\n%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,\n%% distributed and modified. A copy of the LPPL, version 1.3, is included\n%% in the base LaTeX documentation of all distributions of LaTeX released\n%% 2003/12/01 or later.\n%% Retain all contribution notices and credits.\n%% ** Modified files should be clearly indicated as such, including  **\n%% ** renaming them and changing author support contact information. **\n%%*************************************************************************\n\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%% DEFAULTS FOR THE CONTROLS OF THE BST STYLE %%\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% These are the defaults for the user adjustable controls. The values used\n% here can be overridden by the user via IEEEtranBSTCTL entry type.\n\n% NOTE: The recommended LaTeX command to invoke a control entry type is:\n% \n%\\makeatletter\n%\\def\\bstctlcite{\\@ifnextchar[{\\@bstctlcite}{\\@bstctlcite[@auxout]}}\n%\\def\\@bstctlcite[#1]#2{\\@bsphack\n%  \\@for\\@citeb:=#2\\do{%\n%    \\edef\\@citeb{\\expandafter\\@firstofone\\@citeb}%\n%    \\if@filesw\\immediate\\write\\csname #1\\endcsname{\\string\\citation{\\@citeb}}\\fi}%\n%  \\@esphack}\n%\\makeatother\n%\n% It is called at the start of the document, before the first \\cite, like:\n% \\bstctlcite{IEEEexample:BSTcontrol}\n%\n% IEEEtran.cls V1.6 and later does provide this command.\n\n\n\n% #0 turns off the display of the number for articles.\n% #1 enables\nFUNCTION {default.is.use.number.for.article} { #1 }\n\n\n% #0 turns off the display of the paper and type fields in @inproceedings.\n% #1 enables\nFUNCTION {default.is.use.paper} { #1 }\n\n\n% #0 turns off the display of urls\n% #1 enables\nFUNCTION {default.is.use.url} { #1 }\n\n\n% #0 turns off the forced use of \"et al.\"\n% #1 enables\nFUNCTION {default.is.forced.et.al} { #0 }\n\n\n% The maximum number of names that can be present beyond which an \"et al.\"\n% usage is forced. Be sure that num.names.shown.with.forced.et.al (below)\n% is not greater than this value!\n% Note: There are many instances of references in IEEE journals which have\n% a very large number of authors as well as instances in which \"et al.\" is\n% used profusely.\nFUNCTION {default.max.num.names.before.forced.et.al} { #10 }\n\n\n% The number of names that will be shown with a forced \"et al.\".\n% Must be less than or equal to max.num.names.before.forced.et.al\nFUNCTION {default.num.names.shown.with.forced.et.al} { #1 }\n\n\n% #0 turns off the alternate interword spacing for entries with URLs.\n% #1 enables\nFUNCTION {default.is.use.alt.interword.spacing} { #1 }\n\n\n% If alternate interword spacing for entries with URLs is enabled, this is\n% the interword spacing stretch factor that will be used. For example, the\n% default \"4\" here means that the interword spacing in entries with URLs can\n% stretch to four times normal. Does not have to be an integer. Note that\n% the value specified here can be overridden by the user in their LaTeX\n% code via a command such as: \n% \"\\providecommand\\BIBentryALTinterwordstretchfactor{1.5}\" in addition to\n% that via the IEEEtranBSTCTL entry type.\nFUNCTION {default.ALTinterwordstretchfactor} { \"4\" }\n\n\n% #0 turns off the \"dashification\" of repeated (i.e., identical to those\n% of the previous entry) names. The IEEE normally does this.\n% #1 enables\nFUNCTION {default.is.dash.repeated.names} { #1 }\n\n\n% The default name format control string.\nFUNCTION {default.name.format.string}{ \"{f.~}{vv~}{ll}{, jj}\" }\n\n\n% The default LaTeX font command for the names.\nFUNCTION {default.name.latex.cmd}{ \"\" }\n\n\n% The default URL prefix.\nFUNCTION {default.name.url.prefix}{ \"[Online]. Available:\" }\n\n\n% Other controls that cannot be accessed via IEEEtranBSTCTL entry type.\n\n% #0 turns off the terminal startup banner/completed message so as to\n% operate more quietly.\n% #1 enables\nFUNCTION {is.print.banners.to.terminal} { #1 }\n\n\n\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%% FILE VERSION AND BANNER %%\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\nFUNCTION{bst.file.version} { \"1.14\" }\nFUNCTION{bst.file.date} { \"2015/08/26\" }\nFUNCTION{bst.file.website} { \"http://www.michaelshell.org/tex/ieeetran/bibtex/\" }\n\nFUNCTION {banner.message}\n{ is.print.banners.to.terminal\n     { \"-- IEEEtran.bst version\" \" \" * bst.file.version *\n       \" (\" * bst.file.date * \") \" * \"by Michael Shell.\" *\n       top$\n       \"-- \" bst.file.website *\n       top$\n       \"-- See the \" quote$ * \"IEEEtran_bst_HOWTO.pdf\" * quote$ * \" manual for usage information.\" *\n       top$\n     }\n     { skip$ }\n   if$\n}\n\nFUNCTION {completed.message}\n{ is.print.banners.to.terminal\n     { \"\"\n       to"
+    }
+  }
+}

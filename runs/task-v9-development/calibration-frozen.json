@@ -1,0 +1,71 @@
+{
+  "protocol": "task-v9-causal-exact-events",
+  "development_seeds": [
+    200,
+    201,
+    202,
+    203
+  ],
+  "development_phis": [
+    -60,
+    -30,
+    0,
+    30,
+    60
+  ],
+  "training_window_ms": [
+    200,
+    400
+  ],
+  "ridge_penalty": 10,
+  "feature": "five-frame means of eight ordered command-cell rates; bearing/60 target",
+  "command_flyids": [
+    720575940622838154,
+    720575940632499757,
+    720575940604737708,
+    720575940629327659,
+    720575940604954289,
+    720575940629757036,
+    720575940625878160,
+    720575940630758418
+  ],
+  "direction_weights": [
+    -0.0058819654761820845,
+    -0.004112179608800703,
+    0.0,
+    0.0,
+    0.01236843600619084,
+    -0.005714159294118695,
+    0.034961484800947636,
+    0.0
+  ],
+  "direction_intercept": 0.026677471660651954,
+  "turn_gain_deg_s": 400.0,
+  "trigger_hz": 4.03125,
+  "trigger_rule": "first post-cue five-frame mean crossing; threshold half development active 10th percentile, floor 2.5 Hz",
+  "input_sha256": {
+    "observe_healthy_phi-30_s200.json": "d3398155348af4bb40221eb6cc6ccf8533e17c9e0af8fb350378000ebd736eea",
+    "observe_healthy_phi-30_s201.json": "299f12972d3780c73560f5dd30123ddb51088f2b07e0658a312733247c9370f8",
+    "observe_healthy_phi-30_s202.json": "94bd46afd5297bb4347afb3e4a18a90a7f3fc343016ccd41540231a8b0799b6d",
+    "observe_healthy_phi-30_s203.json": "abd83f76af8ecaeb51d887b99127877430d6442650e340806252a28c5fe77934",
+    "observe_healthy_phi-60_s200.json": "ac6ecea2dfbebd9444e92425b492a4091d6fe195872848032f95522c36976371",
+    "observe_healthy_phi-60_s201.json": "30905120f917c12672ed29fef58f2c6eb974efe7d7b7cfe7cc57a8eb628a4ac5",
+    "observe_healthy_phi-60_s202.json": "fcf76c81c28067b95fc1a14e952866f3cacdd1dbc4c08ba4b066ce27e78e397a",
+    "observe_healthy_phi-60_s203.json": "5263df5dfe197bdffb98e1ea6412fd1bdd97a0b0f0e0692a37c817056e3d4fe4",
+    "observe_healthy_phi0_s200.json": "627f7e05b64e0b756dd6f432d2dd5323a691d2576bd9b40d50fcb3f1d57f901f",
+    "observe_healthy_phi0_s201.json": "c3e30d9a315319ce681e4f762af3998de87466f6750c97b080a17f06d32eb5cb",
+    "observe_healthy_phi0_s202.json": "806555effda5303353e81a8ddada3ff524c5cf4230679840e8cec227f5e7e5e8",
+    "observe_healthy_phi0_s203.json": "48f3db7dce457cfeb9d15e2dcc0a812e8bcf911c09be58ada797ca157eb82154",
+    "observe_healthy_phi30_s200.json": "98756fd88cda00e2d7f30284a25a2ca98cf081891815a09954ce47fb0dc8a198",
+    "observe_healthy_phi30_s201.json": "1bf814a81c9f83051306d377003212834f6e31a7be94a2611b2af5c9bdfe7246",
+    "observe_healthy_phi30_s202.json": "e4e0241e410727e93d4a9f7706c5f07565b646c2c4f4214ad9c26c0a238b0664",
+    "observe_healthy_phi30_s203.json": "933674daf5a2d400c5a48b088c9240a50c7b40da13028266a247adf4eca60975",
+    "observe_healthy_phi60_s200.json": "8b06e3924994278efd5519457bc5caea4425788e56a2bdd5a9015ee3bd0409de",
+    "observe_healthy_phi60_s201.json": "ed2d1c2703665e35fa6926aae3f647413d43716cc12544513f4c649d184b834b",
+    "observe_healthy_phi60_s202.json": "5fb59498d0e3c7d6a57ddbb84cec60748e688c2b0abe4d3147d12c17f87e2c8c",
+    "observe_healthy_phi60_s203.json": "a14e473eaa106548041459c2fa4f7683c56c18a3a83795f92e25e5b166ffbdc2"
+  },
+  "development_fit_rmse": 0.2542286018203948,
+  "development_direction_accuracy": 1.0,
+  "note": "development fit quality is not held-out accuracy; final evaluation requires new clusters"
+}

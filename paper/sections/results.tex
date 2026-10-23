@@ -1,38 +1,64 @@
 \section{Results}
-\subsection{Baseline: The Connectome Is a Specific, Low-Latency Controller}
-Driving LC4 and LPLC2 at 150\,Hz produces a command rate of $94.7$\,Hz (median over 12 trials) with 4.05\,ms first-spike latency, far above $\theta$. An equal-sized random set, driven identically, yields only $8.2$\,Hz on the same readout while producing \emph{more} total activity (293k vs.\ 40k spikes), so the readout is pathway-specific rather than a generic arousal response. With both channels silenced (F5\textsubscript{both}) it collapses to zero in every trial, and the residual 21.2k spikes are the stimulated sensory cells themselves, so the score measures transmission through the pathway.
-
-\subsection{Tolerance Curves: Noise Is Absorbed, Disconnection Degrades Gracefully}
-Figure~\ref{fig:curves} shows dose--response curves for the two most consequential families; F1 and F3 are flat (Section~\ref{sec:implications}). At $\sigma{=}0.5$ weight variability leaves the median unchanged ($94.2$ vs.\ 94.7\,Hz) but widens trial dispersion (interdecile 90.4--100.8 vs.\ 94.0--95.6\,Hz) and raises total activity only from 39.7k to 41.6k spikes. Random connection deletion degrades gracefully: 5\% and 10\% loss leave 91.9 and 93.1\,Hz, 25\% retains $84.5$\,Hz (89.2\%), and 50\% retains $72.4$\,Hz (76.5\%), with all 12 trials passing transmission in every condition (weakest 63.1, 68.1\,Hz, $\geq$22\% above $\theta$). The cost appears predominantly in latency---4.05 to 5.4\,ms at 50\% loss (+33\%)---consistent with weakened aggregate drive rather than longer residual routes: command drive integrates over hundreds of converging populations, so no random slice is load-bearing. The 1{,}299-neuron descending layer tracks the same pattern (2{,}941 vs.\ 1{,}918 spikes at 50\%), so the graded response belongs to command encoding, not to the eight-neuron readout.
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.92\textwidth]{figs/fig3_curves.pdf}
-\caption{Tolerance curves of descending-neuron output (medians over 12 trials; blue: rate; orange: latency (a) / total spikes (b); dotted grey: healthy medians). (a) Connection dropout: 76.5\% of command rate retained at 50\% loss, latency $+33\%$. (b) Hub silencing: non-monotonic dose response.}
-\label{fig:curves}
-\end{figure*}
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.92\textwidth]{figs/fig4_topology.pdf}
-\caption{Topology contrast. (a) Route mass under edge loss, normalized per graph (connectome solid, null dashed): relative decay nearly identical, absolute mass 5.8--17.7$\times$ higher. (b) Total activity by sign (medians over 12 trials, log scale; dotted: $2\times$ healthy envelope): the inhibitory half runs away, the excitatory half is depressed, and a random inhibitory lesion of the same mass does not (median of 12). Null readout 0.0\,Hz in every condition.}
-\label{fig:topology}
-\end{figure*}
-
-\subsection{Hub Silencing Is Resolved by Sign, Not by Size}
-The dose--response of hub silencing (F4) is the only non-monotonic family (Figs.~\ref{fig:curves}b, \ref{fig:topology}b). Silencing the top 1\% of cells by outgoing contact count (1{,}386 neurons, 9.1\% of connections, 62\% of them inhibitory) raises the command rate to $119.1$\,Hz ($+26$\%, 95\% CI 118.3--119.9) and global activity to 49.3k spikes ($1.25\times$ healthy; Mann--Whitney $p<10^{-4}$); at 2\% (13.2\% of connections) it stays elevated (114.8\,Hz, 38.9k) and at 5\% returns to baseline (94.0\,Hz, 34.1k). Splitting by sign explains both: silencing only the 765 inhibitory hubs (5.6\% of connections) drives the readout to $168.2$\,Hz (167.8--168.8) and activity to 846.9k spikes ($21.4\times$) in every trial, whereas silencing only the 621 excitatory hubs (3.5\%) lowers them to $88.6$\,Hz and 32.3k ($0.82\times$). The full set thus nearly cancels a runaway against a depression, which is why aggregate removal looks mild while its inhibitory half is extreme. Identity, not mass, drives this: 765 random inhibitory cells remove 0.8\% of connections and change nothing (95.2\,Hz), and even 8{,}889 random inhibitory cells removing 8.6\%---more than the hub set---give only a $1.27\times$ median excursion (102.4\,Hz, 50.3k), though one of twelve trials runs to 327k. A set matched in size and E/I composition (94.5\,Hz, 40.1k, 1.1\% of connections) and random 10\% unit silencing (95.1\,Hz) likewise do nothing. Scored separately, the inhibitory-hub condition alone passes \emph{transmission} ($\geq\theta$) and violates the $2\times$ \emph{envelope} in all 12 trials; every distributed fault passes both; F5\textsubscript{both} fails both. An accuracy-only protocol of the kind automated by SpikeFi~\cite{spyrou2024spikefi} and SpikingJET~\cite{gogebakan2024spikingjet} passes 276 of 288 trials, including all twelve hub-lesion runs; the envelope passes 262.
-
-\subsection{What the Wiring Contributes: Null Network and Pathway Analysis}
-The permuted null dissociates specificity from redundancy: out-degrees, weights and the in-degree histogram survive but convergence is reassigned, and no trial reaches $\theta$ (median 0.0\,Hz). Its readout falls to background (45.5 vs.\ 2{,}941 spikes per trial) and global activity to 60\% (23.8k vs.\ 39.7k), barely above the 21.2k the driven cells produce with all outputs severed. Pathway mass quantifies the convergence advantage: 5.8$\times$ (1-hop) and 17.7$\times$ (4-hop) more route mass into the descending layer. Yet \emph{relative} pathway-mass decay is nearly identical (at $f{=}0.5$, $k{=}8$: 0.3\% vs.\ 0.4\% of baseline; Fig.~\ref{fig:topology}a), while output degrades far more slowly (76.5\% at $f{=}0.5$ against 5.8\% four-hop route mass), ruling out graph redundancy alone. A candidate account is compressive recruitment: with $N$ converging afferents and survival $p$, aggregate drive scales as $Np$ while $k$-hop route mass decays as $p^k$ (6.25\% at $k{=}4$, $p{=}0.5$), and a threshold followed by saturation compresses drive changes into sub-proportional rate changes. Retention exceeds proportional scaling at every dose and increasingly so as damage weakens ($1.5\times$ proportional at $p{=}0.5$, $3.6\times$ at $p{=}0.25$, $19\times$ at $p{=}0.05$): mild deletion is buffered almost entirely, severe deletion bites. At $p{=}0.5$ the buffering is drive-invariant---raising drive from 75 to 300\,Hz lifts the healthy rate from 75.2 to 113.0\,Hz but leaves retention at 73.8\%, 77.6\%, 76.5\%---so it is set by convergence geometry rather than by operating point, although a common saturated regime at all three drives cannot be excluded. A single power law fits only the severe end ($\alpha\approx0.4$), so we report compression as dose-dependent rather than as a global exponent.
-
-
+\subsection{Held-Out Whole-Connectome Tests}
+Frozen calibration yielded healthy collision-free survival in 5/6 cases at $-30^\circ$ and 0/6 at $+30^\circ$ (Fig.~\ref{fig:prospective}). The corresponding counts were 4/6 and 0/6 under 25\% deletion; 50\% deletion and readout disabling yielded 0/12 each. On paired negative-bearing seeds, deletion lost one and five healthy survivors, respectively; the positive bearing was already at floor. These are six-cluster conditional observations. For 50\% deletion, matched spike ratios were 0.748/0.845/0.890/1.012 over 200/300/400/500\,ms. Neither deletion condition exceeded twice its paired healthy activity in those windows, despite eight and twelve collisions. Thus this activity limit did not flag these outcomes. It is distinct from the open-loop joint rule.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.84\columnwidth]{figs/fig5_demo.pdf}
-\caption{Synthetic closed-loop escape at $-30^\circ$ (seed 0, one threat script). Blue: agent path; grey: threat path; red dot: threat endpoint. Columns: healthy, F2$_{50}$, F4$_{1\%}$, steering disabled; the distance in each label is the closest approach. Success: separation $>0.05$\,m.}
+\includegraphics[width=\columnwidth]{figs/prospective_outcomes.pdf}
+\caption{First prospective campaign, seeds 6--11. (a) Collision-free counts at 1000\,ms, six seeds per bearing. (b) Every 400\,ms activity pair: circles $-30^\circ$, triangles $+30^\circ$, black median. Thin lines connect the same seed/bearing across deletion doses. Shared seeds are not independent replicates. This activity limit did not distinguish the observed collisions; no predictive detector was fitted.}
+\label{fig:prospective}
+\end{figure}
+
+\subsection{Controller-by-Fault Comparison}
+All 12 first-campaign healthy tests turned $-11.429^\circ$ before the 100\,ms cue while recording zero spikes. Equation~\eqref{eq:steering} produces $-114.286^\circ$/s at zero readout. Readout disabling removes both this offset and the neural trigger, so its comparison alone cannot isolate stimulus-dependent steering.
+\input{sections/controller_results}
+
+\subsection{Transmission Under Five Perturbation Families}
+Healthy command rate is 94.69\,Hz (95\% median CI 94.06--95.42), with first-spike latency 4.05\,ms. Equal-sized random drive yields approximately 8.2\,Hz despite greater activity; the intact target-permuted graph yields zero. This specificity does not isolate a fault-tolerance mechanism.
+
+The supplement supplies every main dose, recorded control damage and selected-dose intervals. F1 at $\sigma=0.50$ retained 99.4\% of median rate, with 10th--90th percentiles 90.40--100.81\,Hz versus healthy 93.96--95.63\,Hz. F3 at 10\% retained 100.4\%. These sampled medians do not establish equivalence.
+
+F2 retained 97.0\%, 98.3\%, 89.2\% and 76.5\% of median command rate at 5\%, 10\%, 25\% and 50\% deletion. The 95\% bootstrap interval for the ratio of median rates at 50\% was 75.1--79.0\%. Latency rose from 4.05 to 5.40\,ms (ratio 1.33, interval 1.25--1.40). All sampled deletion trials passed transmission; a separate 75\,Hz control passed only 10/12 at 50\% deletion. F5 retained 79.8\% or 67.9\% when removing LC4 or LPLC2 outputs; silencing both eliminated transmission. Supplementary plots show all doses and dispersion.
+
+Twelve new 600\,ms runs tested the sensory refractory variant on three paired seeds. Median paired 50\%-deletion retention was 76.3\% at 2.2\,ms versus 79.2\% at zero sensory refractory time. Healthy median rates were 94.8 and 103.1\,Hz. These conditional observations do not establish variant invariance.
+
+\subsection{Historical Hub Records and Activity Scoring}
+The historical 1\% F4 condition yielded 119.06\,Hz and 49{,}272.5 median spikes (1.24$\times$ healthy). Cell manifests are missing; reconstructed selection includes protected readout cells, and implementations differ. Historical contrasts cannot be attributed to cell sign alone. The artifact's \path{audit/verified-hubs} contains selector reconstructions, not recovered historical manifests; Supplementary Table~S4 gives recorded damage.
+
+The inhibitory subset had 847{,}476.5 median spikes (21.35$\times$ healthy), failing the activity criterion in 12/12 trials. The random inhibitory expected-contact-mass control had median 50{,}323 spikes, with two extreme trials (327{,}246 and 271{,}058). Individual records and realized damage are supplied.
+
+Across 288 fault/control records, 276 passed transmission and 262 jointly. Twelve extra rejections arose from inhibitory hubs and two from random-mass records (Table~\ref{tab:cohorts}). Excluding targeted hubs left two disagreements among 204 records; the main non-hub sweep had none. Counts were unchanged for $c=1.5,2,3,4$. All 12 healthy reference trials passed, but resubstitution does not estimate held-out false alarms or calibrate the limit.
+
+\begin{table}[t]
+\caption{Post-hoc cohort sensitivity, $c=2$. T: transmission; J: joint passes. EIm: composition-matched controls. Rows successively isolate the inhibitory subset, all targeted-hub cohorts, then the main non-hub sweep by removing whole conditions. Remaining disagreements are random-mass trials 3 and 9; mixtures do not estimate population failure probability.}
+\label{tab:cohorts}
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrr}
+\toprule
+Included records & $n$ & T & J & T$-$J\\
+\midrule
+All faults/controls & 288 & 276 & 262 & 14\\
+Exclude inhibitory hubs & 276 & 264 & 262 & 2\\
+Exclude F4/HUB/EIm & 204 & 192 & 190 & 2\\
+Main F1/F2/F3/F5 & 180 & 168 & 168 & 0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Legacy Evaluation and Stopping-Time Matching}
+Legacy looming used elapsed time and heading canceled from receptive-field bearing. Six threshold-calibration logs duplicate healthy evaluation records; all fault episodes share calibration seeds. Four-bearing/three-seed survival was 10/12 for 25\% deletion, 0/12 for 50\%, 12/12 for full hubs and 6/12 for inhibitory hubs. Eight healthy records stopped during a burst. These are compromised recorded-horizon illustrations, not corrected geometric tests (Supplementary Table~S5).
+
+For legacy 50\% deletion, early collisions shorten fault records relative to healthy references. Matching each pair to $T_*$ changes the median spike ratio from $R_{\mathrm{whole}}=0.382$ to $R_{\mathrm{common}}=0.729$. Fixed 200--500\,ms ratios span 0.723--0.745. This stopping-time mismatch is distinct from the horizon effect below; neither ratio defines an activity budget.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figs/late_hubs.pdf}
+\caption{Legacy full-hub cumulative activity ratios. Both members of every pair last 1000\,ms. Marker/color encode bearing; three same-bearing traces are shared seeds. Negative bearings are calibration scenarios. Crosses mark first twofold crossings at 840--900\,ms. The first 400\,ms excludes late activity rather than correcting unequal durations.}
 \label{fig:demo}
 \end{figure}
 
-\subsection{From Transmission to Behavior: A Closed-Loop Escape Demo}
-Transmission retention need not imply task capability, so we close the loop: looming rates over the 314 LC4/LPLC2 cells (assumed receptive fields) drive the full network, a frozen left--right difference across the eight command cells steers a planar agent away from a pursuing threat, and takeoff fires when their mean rate crosses $\theta_{\mathrm{demo}}{=}25.6$\,Hz (median peak of six training episodes; the open-loop $\theta{=}51.4$\,Hz does not transfer). It escapes 24/24 across four azimuths ($\pm30^\circ$, $\pm60^\circ$; six seeds; median miss 0.09--0.11\,m against a 0.05\,m radius; Fig.~\ref{fig:demo}), including 12/12 at the untrained azimuths ($+30^\circ$, $+60^\circ$), and 0/3 for a frontal approach (blind spot). Every control collapses (0/12 each), while a scene-reading hand rule reaches 12/12. Faults transfer as a threshold cliff rather than a graded rate loss: 25\% loss escapes 10/12 and 50\% escapes 0/12, although the same 50\% loss retains $72.4$\,Hz open-loop. Under single-target drive the F2$_{50}$ readout peaks at ${\approx}38$\,Hz and first reaches $\theta_{\mathrm{demo}}$ only at 420--500\,ms, when the threat is 7--11\,cm away---too late for the 250\,ms aiming delay and 450\,ms takeoff---so preserved transmission does not imply preserved behavior and the open-loop criterion is the wrong certificate for a closed loop. Hub silencing, by contrast, preserves escape (12/12) at $1.7\times$ the loop's healthy activity ($1.25\times$ open-loop), inside the $2\times$ envelope. Its inhibitory half is the dangerous mode: 6/12 escapes, 1.24M spikes ($77\times$), takeoff firing in every trial while the median heading change falls from 97$^\circ$ to 64$^\circ$, and all six failures at the two trained azimuths---the runaway does not silence the controller, it destroys the steering signal. This is a preliminary demonstration, not a behavioral validation (assumed encoding, scripted envelope, kinematic agent).
+\subsection{Late Activity Under Equal Durations}
+All full-hub and paired healthy records last 1000\,ms, so $R_{\mathrm{whole}}=R_{\mathrm{common}}$ for each pair. No ratio exceeds twofold through 800\,ms. Six first crossings occur at 840--900\,ms, all at $-60^\circ$ or $-30^\circ$ on calibration seeds (Fig.~\ref{fig:demo}). Thus selecting 400\,ms excludes late exceedances; it does not remove unequal exposure. Pooled medians rise from 1.362 at 400\,ms to 1.703 at 1000\,ms. Inhibitory hubs exceed twofold in every pair at all 200--500\,ms windows. Individual trajectories and three-seed sensitivity are supplied; sparse conditional bootstrap ranges do not establish independent reliability.
+
+The privileged geometry rule survives both bearings at 800 and 1000\,ms but collides by 1200\,ms. This establishes bounded task feasibility with identical actuator limits, without a neural resource-cost comparison. The supplement records each seed, termination and generating manifest.

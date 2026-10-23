@@ -1,0 +1,11 @@
+{
+  "script_sha256": "d8b184110cbe789c2d197f78e108cb663c1822124969bbac407c0ae4123fe5db",
+  "input_sha256": {},
+  "outputs": {
+    "task_v9_overview.pdf": "cf050d85ca61e2dc259e64c40f9a5b513da82a4869ce258fb644bd9224b5194e",
+    "task_v9_overview.png": "8bf6a7bdb05f4a3330c856ccf431fe3e363a1766570dddbbbdc172d0a9857e85",
+    "task_v9_overview.svg": "41e5d0661e89a044dca63bc91da184d76a6a0f22b3551b0eba318e91484df588"
+  },
+  "schematic_only": true,
+  "pdf_fonttype": 42
+}

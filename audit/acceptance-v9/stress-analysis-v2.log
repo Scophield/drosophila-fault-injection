@@ -1,0 +1,1064 @@
+{
+  "complete": true,
+  "records": 96,
+  "seed_clusters": 8,
+  "counts": [
+    {
+      "mode": "proportional",
+      "fault": "healthy",
+      "phi_deg": -45.0,
+      "n": 8,
+      "success": 8,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 8
+    },
+    {
+      "mode": "proportional",
+      "fault": "healthy",
+      "phi_deg": 45.0,
+      "n": 8,
+      "success": 8,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 8
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "phi_deg": -45.0,
+      "n": 8,
+      "success": 8,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 8
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "phi_deg": 45.0,
+      "n": 8,
+      "success": 8,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 8
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "phi_deg": -45.0,
+      "n": 8,
+      "success": 6,
+      "losses": 2,
+      "gains": 0,
+      "healthy_at_risk": 8
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "phi_deg": 45.0,
+      "n": 8,
+      "success": 8,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 8
+    },
+    {
+      "mode": "relay",
+      "fault": "healthy",
+      "phi_deg": -45.0,
+      "n": 8,
+      "success": 8,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 8
+    },
+    {
+      "mode": "relay",
+      "fault": "healthy",
+      "phi_deg": 45.0,
+      "n": 8,
+      "success": 8,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 8
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "phi_deg": -45.0,
+      "n": 8,
+      "success": 8,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 8
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "phi_deg": 45.0,
+      "n": 8,
+      "success": 8,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 8
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "phi_deg": -45.0,
+      "n": 8,
+      "success": 8,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 8
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "phi_deg": 45.0,
+      "n": 8,
+      "success": 8,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 8
+    }
+  ],
+  "cluster_effects": {
+    "proportional_F2_25_net_loss": {
+      "estimate": 0.0,
+      "low": 0.0,
+      "high": 0.0
+    },
+    "proportional_F2_50_net_loss": {
+      "estimate": 0.125,
+      "low": 0.0,
+      "high": 0.3125
+    },
+    "relay_F2_25_net_loss": {
+      "estimate": 0.0,
+      "low": 0.0,
+      "high": 0.0
+    },
+    "relay_F2_50_net_loss": {
+      "estimate": 0.0,
+      "low": 0.0,
+      "high": 0.0
+    },
+    "F2_25_interaction": {
+      "estimate": 0.0,
+      "low": 0.0,
+      "high": 0.0
+    },
+    "F2_50_interaction": {
+      "estimate": -0.125,
+      "low": -0.3125,
+      "high": 0.0
+    }
+  },
+  "interaction_raw_p": {
+    "F2_25": 1.0,
+    "F2_50": 0.5
+  },
+  "interaction_holm_p": {
+    "F2_50": 1.0,
+    "F2_25": 1.0
+  },
+  "activity_ratios": {
+    "proportional/F2_25": {
+      "stop_ratio": {
+        "median": 1.1498842825923925,
+        "cluster_interval": [
+          1.1104617541400157,
+          1.3430232558139534
+        ]
+      },
+      "common_ratio": {
+        "median": 1.1498842825923925,
+        "cluster_interval": [
+          1.1104617541400157,
+          1.3430232558139534
+        ]
+      },
+      "early_ratio": {
+        "median": 1.105604091995221,
+        "cluster_interval": [
+          1.083825626848852,
+          1.214332098917107
+        ]
+      },
+      "full_ratio": {
+        "median": 1.1498842825923925,
+        "cluster_interval": [
+          1.1104617541400157,
+          1.3430232558139534
+        ]
+      }
+    },
+    "proportional/F2_50": {
+      "stop_ratio": {
+        "median": 1.4725243233174283,
+        "cluster_interval": [
+          1.369319867404455,
+          1.790979097909791
+        ]
+      },
+      "common_ratio": {
+        "median": 1.4725243233174283,
+        "cluster_interval": [
+          1.369319867404455,
+          1.790979097909791
+        ]
+      },
+      "early_ratio": {
+        "median": 1.1244586028435948,
+        "cluster_interval": [
+          1.089147416832517,
+          1.1604093882455326
+        ]
+      },
+      "full_ratio": {
+        "median": 1.4725243233174283,
+        "cluster_interval": [
+          1.369319867404455,
+          1.790979097909791
+        ]
+      }
+    },
+    "relay/F2_25": {
+      "stop_ratio": {
+        "median": 1.0781173308402479,
+        "cluster_interval": [
+          0.9788053949903661,
+          1.1929258770221618
+        ]
+      },
+      "common_ratio": {
+        "median": 1.0781173308402479,
+        "cluster_interval": [
+          0.9788053949903661,
+          1.1929258770221618
+        ]
+      },
+      "early_ratio": {
+        "median": 1.067339793911176,
+        "cluster_interval": [
+          0.9768339768339769,
+          1.1889256179571066
+        ]
+      },
+      "full_ratio": {
+        "median": 1.0781173308402479,
+        "cluster_interval": [
+          0.9788053949903661,
+          1.1929258770221618
+        ]
+      }
+    },
+    "relay/F2_50": {
+      "stop_ratio": {
+        "median": 1.338074928611291,
+        "cluster_interval": [
+          1.2372911406465614,
+          1.4003000597275288
+        ]
+      },
+      "common_ratio": {
+        "median": 1.338074928611291,
+        "cluster_interval": [
+          1.2372911406465614,
+          1.4003000597275288
+        ]
+      },
+      "early_ratio": {
+        "median": 1.2038108569006476,
+        "cluster_interval": [
+          1.1955694735569171,
+          1.2652643977021456
+        ]
+      },
+      "full_ratio": {
+        "median": 1.338074928611291,
+        "cluster_interval": [
+          1.2372911406465614,
+          1.4003000597275288
+        ]
+      }
+    }
+  },
+  "warning_scores": {
+    "transmission": {
+      "all": {
+        "tp": 1,
+        "fp": 40,
+        "tn": 54,
+        "fn": 1,
+        "sensitivity": 0.5,
+        "specificity": 0.574468085106383,
+        "false_positive_rate": 0.425531914893617,
+        "false_negative_rate": 0.5,
+        "sensitivity_interval": [
+          0.0,
+          1.0
+        ],
+        "specificity_interval": [
+          0.5053763440860215,
+          0.6631578947368421
+        ],
+        "false_positive_rate_interval": [
+          0.3368421052631579,
+          0.4946236559139785
+        ],
+        "false_negative_rate_interval": [
+          0.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 8,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 1,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "faulty": {
+        "tp": 1,
+        "fp": 33,
+        "tn": 29,
+        "fn": 1,
+        "sensitivity": 0.5,
+        "specificity": 0.46774193548387094,
+        "false_positive_rate": 0.532258064516129,
+        "false_negative_rate": 0.5,
+        "sensitivity_interval": [
+          0.0,
+          1.0
+        ],
+        "specificity_interval": [
+          0.3709677419354839,
+          0.5967741935483871
+        ],
+        "false_positive_rate_interval": [
+          0.4032258064516129,
+          0.6290322580645161
+        ],
+        "false_negative_rate_interval": [
+          0.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 8,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 1,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 7,
+        "tn": 25,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 0.78125,
+        "false_positive_rate": 0.21875,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          0.75,
+          0.84375
+        ],
+        "false_positive_rate_interval": [
+          0.15625,
+          0.25
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 7,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.31234397806636793
+      },
+      "strata": {
+        "proportional/-45": {
+          "tp": 1,
+          "fp": 0,
+          "tn": 22,
+          "fn": 1,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.5
+        },
+        "proportional/45": {
+          "tp": 0,
+          "fp": 6,
+          "tn": 18,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.75,
+          "false_positive_rate": 0.25,
+          "false_negative_rate": null
+        },
+        "relay/-45": {
+          "tp": 0,
+          "fp": 14,
+          "tn": 10,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.4166666666666667,
+          "false_positive_rate": 0.5833333333333334,
+          "false_negative_rate": null
+        },
+        "relay/45": {
+          "tp": 0,
+          "fp": 20,
+          "tn": 4,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.16666666666666666,
+          "false_positive_rate": 0.8333333333333334,
+          "false_negative_rate": null
+        }
+      }
+    },
+    "stop_count_upper": {
+      "all": {
+        "tp": 0,
+        "fp": 2,
+        "tn": 92,
+        "fn": 2,
+        "sensitivity": 0.0,
+        "specificity": 0.9787234042553191,
+        "false_positive_rate": 0.02127659574468085,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          0.9479166666666666,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.052083333333333336
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 2,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 2,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "faulty": {
+        "tp": 0,
+        "fp": 2,
+        "tn": 60,
+        "fn": 2,
+        "sensitivity": 0.0,
+        "specificity": 0.967741935483871,
+        "false_positive_rate": 0.03225806451612903,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          0.921875,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.078125
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 2,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 2,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 32,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.31234397806636793,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.31234397806636793
+      },
+      "strata": {
+        "proportional/-45": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 22,
+          "fn": 2,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "proportional/45": {
+          "tp": 0,
+          "fp": 2,
+          "tn": 22,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.9166666666666666,
+          "false_positive_rate": 0.08333333333333333,
+          "false_negative_rate": null
+        },
+        "relay/-45": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 24,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        },
+        "relay/45": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 24,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        }
+      }
+    },
+    "equal_duration_upper": {
+      "all": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 94,
+        "fn": 2,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.31234397806636793,
+        "clusters_with_false_negative": 2,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "faulty": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 62,
+        "fn": 2,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.31234397806636793,
+        "clusters_with_false_negative": 2,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 32,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.31234397806636793,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.31234397806636793
+      },
+      "strata": {
+        "proportional/-45": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 22,
+          "fn": 2,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "proportional/45": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 24,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        },
+        "relay/-45": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 24,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        },
+        "relay/45": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 24,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        }
+      }
+    },
+    "equal_duration_two_sided": {
+      "all": {
+        "tp": 0,
+        "fp": 43,
+        "tn": 51,
+        "fn": 2,
+        "sensitivity": 0.0,
+        "specificity": 0.5425531914893617,
+        "false_positive_rate": 0.4574468085106383,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          0.4105263157894737,
+          0.6808510638297872
+        ],
+        "false_positive_rate_interval": [
+          0.3191489361702128,
+          0.5894736842105263
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 8,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 2,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "faulty": {
+        "tp": 0,
+        "fp": 21,
+        "tn": 41,
+        "fn": 2,
+        "sensitivity": 0.0,
+        "specificity": 0.6612903225806451,
+        "false_positive_rate": 0.3387096774193548,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          0.515625,
+          0.8166666666666667
+        ],
+        "false_positive_rate_interval": [
+          0.18333333333333332,
+          0.484375
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 7,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 2,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 22,
+        "tn": 10,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 0.3125,
+        "false_positive_rate": 0.6875,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          0.15625,
+          0.46875
+        ],
+        "false_positive_rate_interval": [
+          0.53125,
+          0.84375
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 8,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.31234397806636793
+      },
+      "strata": {
+        "proportional/-45": {
+          "tp": 0,
+          "fp": 4,
+          "tn": 18,
+          "fn": 2,
+          "sensitivity": 0.0,
+          "specificity": 0.8181818181818182,
+          "false_positive_rate": 0.18181818181818182,
+          "false_negative_rate": 1.0
+        },
+        "proportional/45": {
+          "tp": 0,
+          "fp": 13,
+          "tn": 11,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.4583333333333333,
+          "false_positive_rate": 0.5416666666666666,
+          "false_negative_rate": null
+        },
+        "relay/-45": {
+          "tp": 0,
+          "fp": 10,
+          "tn": 14,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.5833333333333334,
+          "false_positive_rate": 0.4166666666666667,
+          "false_negative_rate": null
+        },
+        "relay/45": {
+          "tp": 0,
+          "fp": 16,
+          "tn": 8,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.3333333333333333,
+          "false_positive_rate": 0.6666666666666666,
+          "false_negative_rate": null
+        }
+      }
+    },
+    "schedule_only": {
+      "all": {
+        "tp": 2,
+        "fp": 21,
+        "tn": 73,
+        "fn": 0,
+        "sensitivity": 1.0,
+        "specificity": 0.776595744680851,
+        "false_positive_rate": 0.22340425531914893,
+        "false_negative_rate": 0.0,
+        "sensitivity_interval": [
+          1.0,
+          1.0
+        ],
+        "specificity_interval": [
+          0.7203881048387097,
+          0.8333333333333334
+        ],
+        "false_positive_rate_interval": [
+          0.16666666666666666,
+          0.27961189516128665
+        ],
+        "false_negative_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "clusters_with_false_positive": 8,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.31234397806636793
+      },
+      "faulty": {
+        "tp": 2,
+        "fp": 21,
+        "tn": 41,
+        "fn": 0,
+        "sensitivity": 1.0,
+        "specificity": 0.6612903225806451,
+        "false_positive_rate": 0.3387096774193548,
+        "false_negative_rate": 0.0,
+        "sensitivity_interval": [
+          1.0,
+          1.0
+        ],
+        "specificity_interval": [
+          0.5737704918032787,
+          0.75
+        ],
+        "false_positive_rate_interval": [
+          0.25,
+          0.4262295081967213
+        ],
+        "false_negative_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "clusters_with_false_positive": 8,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.31234397806636793
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 32,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.31234397806636793,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.31234397806636793
+      },
+      "strata": {
+        "proportional/-45": {
+          "tp": 2,
+          "fp": 11,
+          "tn": 11,
+          "fn": 0,
+          "sensitivity": 1.0,
+          "specificity": 0.5,
+          "false_positive_rate": 0.5,
+          "false_negative_rate": 0.0
+        },
+        "proportional/45": {
+          "tp": 0,
+          "fp": 8,
+          "tn": 16,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.6666666666666666,
+          "false_positive_rate": 0.3333333333333333,
+          "false_negative_rate": null
+        },
+        "relay/-45": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 24,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        },
+        "relay/45": {
+          "tp": 0,
+          "fp": 2,
+          "tn": 22,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.9166666666666666,
+          "false_positive_rate": 0.08333333333333333,
+          "false_negative_rate": null
+        }
+      }
+    },
+    "deadline": {
+      "all": {
+        "tp": 2,
+        "fp": 11,
+        "tn": 83,
+        "fn": 0,
+        "sensitivity": 1.0,
+        "specificity": 0.8829787234042553,
+        "false_positive_rate": 0.11702127659574468,
+        "false_negative_rate": 0.0,
+        "sensitivity_interval": [
+          1.0,
+          1.0
+        ],
+        "specificity_interval": [
+          0.8279569892473119,
+          0.9368421052631579
+        ],
+        "false_positive_rate_interval": [
+          0.06315789473684211,
+          0.17204301075268819
+        ],
+        "false_negative_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "clusters_with_false_positive": 6,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.31234397806636793
+      },
+      "faulty": {
+        "tp": 2,
+        "fp": 11,
+        "tn": 51,
+        "fn": 0,
+        "sensitivity": 1.0,
+        "specificity": 0.8225806451612904,
+        "false_positive_rate": 0.1774193548387097,
+        "false_negative_rate": 0.0,
+        "sensitivity_interval": [
+          1.0,
+          1.0
+        ],
+        "specificity_interval": [
+          0.7377049180327869,
+          0.9047619047619048
+        ],
+        "false_positive_rate_interval": [
+          0.09523809523809523,
+          0.26229508196721313
+        ],
+        "false_negative_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "clusters_with_false_positive": 6,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.31234397806636793
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 32,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.31234397806636793,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.31234397806636793
+      },
+      "strata": {
+        "proportional/-45": {
+          "tp": 2,
+          "fp": 9,
+          "tn": 13,
+          "fn": 0,
+          "sensitivity": 1.0,
+          "specificity": 0.5909090909090909,
+          "false_positive_rate": 0.4090909090909091,
+          "false_negative_rate": 0.0
+        },
+        "proportional/45": {
+          "tp": 0,
+          "fp": 2,
+          "tn": 22,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.9166666666666666,
+          "false_positive_rate": 0.08333333333333333,
+          "false_negative_rate": null
+        },
+        "relay/-45": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 24,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        },
+        "relay/45": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 24,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        }
+      }
+    }
+  },
+  "compute": {
+    "episode_wall_seconds_sum": 12600.24574100005,
+    "episode_wall_seconds_median": 132.9990254000295,
+    "note": "overlapping episode wall times are not CPU seconds or elapsed campaign time"
+  }
+}

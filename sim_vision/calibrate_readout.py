@@ -1,55 +1,72 @@
+"""Fit a frozen calibration from passive, controller-independent fresh episodes."""
+import argparse
+import hashlib
 import json
 from pathlib import Path
 
 import numpy as np
-import pandas as pd
 
-from analyze_openloop import load_runs
-
-OUT = Path(__file__).resolve().parent / "results_vision"
-TRAIN_PHIS = [-60.0, -30.0]
-TRAIN_V = "v_0p5"
+from closedloop_protocol import PROTOCOL_VERSION, episode_key, validate_calibration
 
 
-def calibrate_theta_demo(out_dir=OUT):
-    import glob
-    import numpy as np
-    peaks = []
-    for f in sorted(glob.glob(str(out_dir / "episodes_train" / "brain_healthy_phi-*.json"))):
-        e = json.load(open(f))
-        win = [q["cmd_s"] for q in e["log"] if 250 <= q["t_ms"] <= 300]
-        if win:
-            peaks.append(max(win))
-    if not peaks:
-        return None
-    return float(np.median(peaks))
+def fit_calibration(paths):
+    episodes, hashes, keys = [], {}, set()
+    for path in sorted(paths):
+        row = json.loads(path.read_text())
+        if (row.get('protocol_version') != PROTOCOL_VERSION or row.get('mode') != 'observe'
+                or row.get('evaluation_role') != 'calibration' or row.get('fault') is not None):
+            raise ValueError(f'not a passive geometry-v2 calibration episode: {path}')
+        key = episode_key(row)
+        if key in keys:
+            raise ValueError(f'duplicate calibration episode: {key}')
+        keys.add(key)
+        hashes[str(path.resolve())] = hashlib.sha256(path.read_bytes()).hexdigest()
+        episodes.append(row)
+    if not episodes:
+        raise ValueError('no calibration episodes')
+    seeds = {seed for _, seed in keys}
+    if len(seeds) < 3 or keys != {(phi, seed) for phi in (-60.0, -30.0, 0.0) for seed in seeds}:
+        raise ValueError('require a complete -60/-30/0 degree calibration grid with at least three seeds')
+    configs = {(e['rf_seed'], e['threat_speed'], e['frame_dt_ms']) for e in episodes}
+    if len(configs) != 1:
+        raise ValueError('mixed calibration configurations')
+    rf_seed, speed, frame_dt = configs.pop()
+    peaks, negative_lr, frontal_lr = [], [], []
+    for e in episodes:
+        window = [q for q in e['log'] if 250 <= q.get('t_end_ms',q['t_ms']+frame_dt) <= 300]
+        if not window or window[-1].get('t_end_ms',window[-1]['t_ms']+frame_dt) < 300:
+            raise ValueError('episode does not cover calibration window [250,300] ms')
+        if e['phi_t_deg'] < 0:
+            peaks.append(max(q['cmd_s'] for q in window))
+            negative_lr.append(float(np.mean([q['lr_s'] for q in window])))
+        else:
+            frontal_lr.append(float(np.mean([q['lr_s'] for q in window])))
+    bias = float(np.median(frontal_lr))
+    lr_mean = float(np.mean(negative_lr))
+    result = dict(protocol_version=PROTOCOL_VERSION, theta_demo_hz=float(np.median(peaks)),
+                  data_sign=-1.0 if lr_mean > bias else 1.0, bias=bias,
+                  lr_ref=float(np.percentile(np.abs(np.asarray(negative_lr) - bias), 90)),
+                  rf_seed=rf_seed, threat_speed=speed, frame_dt_ms=frame_dt,
+                  calibration_keys=[dict(phi=p, seed=s) for p, s in sorted(keys)],
+                  source_sha256=hashes,
+                  theta_source='median of negative-azimuth episode maxima with frame end in [250,300] ms',
+                  note='passive observe mode: no steering, threshold, or burst used for calibration')
+    validate_calibration(result)
+    return result
 
 
 def main():
-    df = load_runs()
-    phisub = df[df.cond_id.isin([f"phi_{int(p)}" for p in TRAIN_PHIS])]
-    left_mean = float(phisub.lr_diff.mean())
-    data_sign = -1.0 if left_mean > 0 else 1.0
-    bias = float(df[df.cond_id == TRAIN_V].lr_diff.median())
-    ref_pool = np.abs(phisub.lr_diff.to_numpy() - bias)
-    lr_ref = float(np.percentile(ref_pool, 90))
-    theta_demo = calibrate_theta_demo()
-    if theta_demo is None:
-        raise SystemExit("no archived training episodes found (results_vision/episodes_train); refusing to overwrite calib.json")
-    prev = None
-    if (OUT / "calib.json").exists():
-        prev = json.loads((OUT / "calib.json").open().read()).get("theta_demo_hz")
-    if prev is not None and abs(prev - theta_demo) > 1e-9:
-        print(f"[calib] theta_demo changes {prev} -> {theta_demo}")
-    calib = {"data_sign": data_sign, "train_neg_phi_lr_mean": left_mean, "bias": bias, "lr_ref": lr_ref,
-             "theta_demo_hz": theta_demo,
-             "k_turn_deg_s": 400.0, "v_fly_ms": 0.05,
-             "train_conditions": [f"phi_{int(p)}" for p in TRAIN_PHIS] + [TRAIN_V, "static"],
-             "theta_source": "episodes_train/brain_healthy_phi{-60,-30}_s{0,1,2}.json, median of per-episode max cmd_avg over t in [250,300] ms",
-             "note": "data_sign from neg-phi (right-field) training-condition lr mean on training conditions only; bias from v_0p5 (phi=0) training condition; frozen for all test trajectories"}
-    (OUT / "calib.json").open("w").write(json.dumps(calib, indent=1))
-    print(json.dumps(calib))
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--input', type=Path, required=True)
+    ap.add_argument('--out', type=Path, required=True)
+    args = ap.parse_args()
+    result = fit_calibration(args.input.glob('*.json'))
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    with args.out.open('x') as handle:
+        json.dump(result, handle, indent=2, allow_nan=False)
+        handle.write('\n')
+    print(f'frozen calibration: {len(result["calibration_keys"])} episodes -> {args.out}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

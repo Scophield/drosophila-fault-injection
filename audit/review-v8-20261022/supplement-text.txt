@@ -1,0 +1,1354 @@
+PAGE 1
+Supplementary Information
+Endpoint and Exposure Sensitivity in Fault Assessment
+of a Fly-Connectome Spiking Model
+Shuchao Gao, Waseda University
+Review package assessment-v8, 22 October 2026
+This document is the current entry point for all supporting measurements. It consolidates the evidence retained
+across protocols v2–v4 and v8; their status statements describe earlier revisions and are not current experimental
+claims. This revision adds 48 fault episodes to 24 preserved healthy episodes, completing the 72-record controller-
+by-fault comparison in Sections 12–13. The matched artifact contains raw records, generating-source snapshots
+where recorded, current analysis scripts, figure sources and a SHA256/size manifest.
+1
+Campaign and material index
+Tables S1–S22 and Figures S1–S9 distinguish historical observations from new simulations. Main-paper Table I
+reports the controller-by-fault matrix; Tables S12–S14 retain the earlier healthy-only intervention evidence. The
++30-degree healthy direction is at floor in both prospective cohorts. Neural survival endpoints are bounded at 1000
+ms; the geometric rule uses the separate horizons in Table S1.
+Table S1: Campaigns and statistical units. Counts refer to neural episodes, except the deterministic rule.
+Campaign
+Seeds
+Bearings
+Runs
+Duration (ms)
+Passive calibration
+0–2
+−60, −30, 0
+9
+400
+First prospective campaign
+6–11
+−30, +30
+48
+1000
+Paired healthy controls
+12–17
+−30, +30
+48
+1000
+Controller-by-fault extension
+12–17
+−30, +30
+48 new + 24 reused
+1000
+Sensory refractory sensitivity
+12–14
+Constant drive
+12
+600
+Main historical sweep
+Fault-seeded
+Constant drive
+19 × 12
+600
+Privileged geometric rule
+Deterministic
+−30, +30
+6
+800/1000/1200
+The 288 scored fault/control records comprise 216 main-sweep fault trials plus 72 targeted/random-inhibitory con-
+trols; healthy references are separate. The target-permuted historical phase is a specificity control, not a functioning
+fault-tolerance baseline. Exact current tables derive from saved summaries; no missing historical manifest or gen-
+eration version is reconstructed as if it had been recorded.
+Reading map. Section 2 defines model and estimands; Section 3 supplies every main dose; Section 4 gives cohorts,
+controls and legacy partitions; Section 5 separates stopping-time matching from late crossings; Sections 6–7 give the
+prospective and paired-control results; Section 8 gives model-variant sensitivity and compute; Sections 9–10 give
+archived diagnostic figures; Section 11 gives reproduction and provenance boundaries; Sections 12–13 add the paired
+factorial experiment. Tables and figures are numbered continuously and have explicit sample/dispersion definitions.
+1
+
+
+PAGE 2
+2
+Model, endpoints and statistical definitions
+The signed FlyWire-v783 substrate contains 138,639 neurons, 15,091,983 connection rows and approximately 54.5
+million contacts. Membrane and synaptic-drive constants are 20 and 5 ms; threshold/reset are -45/-52 mV, delay
+1.8 ms, and contact gain 0.275 mV. Both voltage equations pause during the 2.2-ms refractory period. Project
+wrappers retain this interval in sensory neurons, unlike the upstream stimulation routine. Fresh integration uses 0.1
+ms; historical timestep metadata are unavailable. Independent 150-Hz inputs drive 104 LC4 and 210 LPLC2 cells;
+each external event adds 68.75 mV to voltage. Eight DNp01/DNa02/DNp04/DNb01 cells provide the readout. No
+background drive is used.
+Open-loop endpoints. For eight command cells and T = 0.6 s, r = Ncmd/(8T). Latency is the first spike in this
+group, not a completed decision. Total S counts all network spikes. Transmission requires r ≥51.4 Hz, rounding
+(94.583333 + 8.229167)/2 = 51.40625 Hz from separate ten-trial sensory/random-drive calibrations. Joint passing
+additionally requires r ≤c 94.6875 Hz and S ≤c 39694 with c = 2; sensitivity uses c = 1.5, 3, 4. This is a nested
+operational rule, not a validated energy/safety budget.
+Paired estimands. With cumulative spikes SF , SH and recorded durations TF , TH, define
+Rwhole = SF (TF )
+SH(TH),
+Rcommon = SF (T∗)
+SH(T∗),
+R(t) = SF (t)
+SH(t),
+T∗= min(TF , TH), t ≤T∗.
+Matching unequal stopping times and choosing an earlier endpoint are different. The common duration can itself
+depend on fault-induced collision. Ratios are reported per scenario before taking medians. Undefined zero-reference
+ratios are not silently assigned finite values. Legacy timestamps mark frame starts but cumulative counts include
+the completed 20-ms frame; 400 ms uses frame 19.
+Frozen controller. Nine passive episodes at -60/-30/0 degrees and seeds 0–2 fix threshold 18.125 Hz, bias b = −20
+Hz, scale ℓ= 70 Hz and sign +1.
+The fitted window is 250–300 ms.
+Steering is ωk = −400 deg/s clip(( ¯dk −
+b)/ℓ, −1, 1). dk sums four left rates minus four right rates; ak is the eight-cell mean. Bars average the latest five
+frames (all available initially). Triggering requires the current smoothed ¯ak and preceding unsmoothed ak−1 both
+to reach 18.125 Hz. The first qualifying frame schedules one burst 250 ms after its end. This is not two consecutive
+smoothed crossings. Burst speed/duration are 0.35 m/s and 450 ms, with fixed heading; otherwise speed is 0.05
+m/s and heading is limited to ±100 degrees. Cue onset is 100 ms. Geometry uses actual separation, body-frame
+bearing and within-frame collision checks at 0.05 m.
+Uncertainty. Historical median intervals use 20,000 resamples, seed 0. Reference-aware ratio-of-median intervals
+independently resample healthy/fault trials. Dispersion bars instead show 10th–90th trial percentiles. Legacy seed
+diagnostics enumerate 33 = 27 ordered draws, yielding only 4–7 distinct medians. New control ranges resample
+six complete seed clusters, keeping both bearings together. These conditional percentile ranges are exploratory,
+with no confirmatory coverage, significance or equivalence claim. More bootstrap draws do not add independent
+observations. Historical open-loop streams were not reset per trial.
+2
+
+
+PAGE 3
+3
+Complete archived main sweep
+Table S2: All main conditions, 12 trials each. Rate, latency and spikes are medians; brackets give conditional 95% bootstrap
+intervals for rate.
+Condition
+Rate [range] (Hz)
+Latency (ms)
+Spikes
+T
+F1_wvar_05
+94.38 [93.75,95.94]
+4.20
+39,678.5
+12/12
+F1_wvar_10
+95.31 [94.17,95.52]
+4.20
+39,723.0
+12/12
+F1_wvar_20
+94.17 [92.71,96.67]
+4.20
+39,988.0
+12/12
+F1_wvar_50
+94.17 [92.19,96.46]
+4.35
+41,638.0
+12/12
+F2_drop_05
+91.88 [91.15,93.75]
+4.40
+39,077.0
+12/12
+F2_drop_10
+93.12 [90.62,96.04]
+4.30
+38,448.0
+12/12
+F2_drop_25
+84.48 [82.29,87.81]
+4.65
+36,598.0
+12/12
+F2_drop_50
+72.40 [71.25,74.69]
+5.40
+31,589.5
+12/12
+F3_loss_01
+94.58 [93.85,95.00]
+4.30
+39,335.0
+12/12
+F3_loss_02
+94.27 [93.44,95.83]
+4.15
+39,936.0
+12/12
+F3_loss_05
+94.06 [92.71,95.73]
+4.10
+39,373.5
+12/12
+F3_loss_10
+95.10 [93.65,96.56]
+4.15
+39,753.5
+12/12
+F4_hub_1pct
+119.06 [118.33,119.90]
+4.20
+49,272.5
+12/12
+F4_hub_2pct
+114.79 [114.69,115.21]
+4.20
+38,861.0
+12/12
+F4_hub_5pct
+93.96 [93.75,94.27]
+4.25
+34,115.5
+12/12
+F5_in_both
+0.00 [0.00,0.00]
+—
+21,191.0
+0/12
+F5_in_LC4
+75.52 [75.10,76.15]
+6.10
+34,543.5
+12/12
+F5_in_LPLC2
+64.27 [63.75,64.90]
+5.00
+27,686.0
+12/12
+healthy
+94.69 [94.06,95.42]
+4.05
+39,694.0
+12/12
+F1 multiplies each weight by exp(σZ −σ2/2), Z ∼N(0, 1); σ = 0.5 has coefficient of variation 53.3%. F2 inde-
+pendently deletes connection rows, so expected lost absolute contact mass is the deletion fraction. F3/F4 silence
+outgoing connections while affected cells can still receive input and spike. F5 silences sensory outputs. Historical
+F4 selections lack contemporaneous cell manifests and may include protected readouts. These rows are descriptive,
+not corrected-selector results.
+The ratio of F2_50 and healthy median rates is 0.764576. Resampling both groups gives a 95% bootstrap interval
+[0.751101, 0.789648]. The first-spike-latency ratio is 1.333333 [1.253012, 1.400000]. These ratios of medians differ
+from the median of within-seed ratios in Table S15. A separate control at 75 Hz with 50% deletion passes 10/12;
+the 150-Hz sweep does not establish drive invariance or equivalence.
+3
+
+
+PAGE 4
+4
+Cohorts, realized controls and legacy partitions
+Table S3: Cohort scoring at c = 2. T and J denote transmission and joint passes.
+Included records
+n
+T
+J
+T−J
+All fault/control records
+288
+276
+262
+14
+Exclude inhibitory hubs
+276
+264
+262
+2
+Exclude F4/HUB/EIm
+204
+192
+190
+2
+Main F1/F2/F3/F5
+180
+168
+168
+0
+Table S4: Historical controls, 12 trials each. Medians of recorded damage and responses; cell/edge counts are not contact-
+mass equality.
+Condition
+Cells
+Rows modified (%)
+Rate (Hz)
+Spikes
+EIm_1pct
+—
+1.13
+94.48
+40,087.5
+EIm_2pct
+—
+2.25
+95.10
+39,882.5
+HUB_exc
+—
+3.48
+88.65
+32,265.0
+HUB_inh
+—
+5.57
+168.23
+847,476.5
+INHrand_cells
+765
+0.75
+95.21
+39,827.0
+INHrand_mass
+8,889
+8.63
+102.40
+50,323.0
+EIm denotes excitatory/inhibitory-composition-matched controls. The two remaining additional rejections after
+targeted-hub exclusion are INHrand_mass trials 3 and 9 (zero-based), with 327,246 and 271,058 spikes.
+Their
+median cannot summarize this tail. Complete per-trial damage is preserved in the raw JSONL files; dashes denote
+absent cell-count metadata, not zero cells. Post-hoc selector reconstructions are supplied at audit/verified-hubs
+with their original manifest. They cannot establish missing historical hub identities; expected-mass matching does
+not imply realized contact equality.
+Table S5: Healthy legacy partitions. Exact reused logs differ from shared seed clusters.
+Partition
+Scenarios
+Collision-free
+Calibration reuse
+−60/ −30 degrees, seeds 0–2
+6/6
+Other negative bearings
+−60/ −30 degrees, seeds 3–5
+6/6
+Positive bearings
++30/ + 60 degrees, seeds 0–5
+12/12
+Frontal
+0 degrees, seeds 0–2
+0/3
+All legacy fault records use calibration seed clusters. The remaining 18/18 healthy records lack exact scenario reuse
+but do not form an independent evaluation.
+4
+
+
+PAGE 5
+5
+Stopping times, early windows and late crossings
+Table S6:
+Median paired legacy spike ratios, using main-paper Eq. (3).
+Ratios are computed within scenario before
+aggregation.
+Condition
+Whole
+Common duration
+First 400 ms
+F2_25
+0.8861
+0.8861
+0.8837
+F2_50
+0.3817
+0.7294
+0.7226
+F4_1pct
+1.7029
+1.7029
+1.3618
+HUB_inh
+71.6931
+75.2306
+118.1571
+Table S7: Full-hub cumulative horizon sensitivity. Every fault/healthy pair lasts 1000 ms.
+Horizon (ms)
+Median paired ratio
+Above twofold
+200
+1.302
+0/12
+300
+1.332
+0/12
+400
+1.362
+0/12
+500
+1.402
+0/12
+600
+1.415
+0/12
+700
+1.435
+0/12
+800
+1.472
+0/12
+900
+1.682
+6/12
+1000
+1.703
+6/12
+Table S8: First twofold crossings. All six are negative-bearing calibration scenarios.
+Bearing (degrees)
+Seed 0 (ms)
+Seed 1 (ms)
+Seed 2 (ms)
+-60
+900
+880
+880
+-30
+840
+840
+860
+30
+None
+None
+None
+60
+None
+None
+None
+For F2_50, common-duration matching changes 0.381701 to 0.729443. For full hubs, whole and common ratios are
+identical within every pair. Selecting 400 ms excludes late activity, without invalidating the one-second warning.
+Inhibitory hubs exceed twofold in all 12 pairs at every selected 200–500-ms window. Late-crossing traces are in
+main-paper Figure 3; Figure S3 shows individual estimands rather than only pooled medians.
+5
+
+
+PAGE 6
+6
+First prospective campaign: directional outcomes
+Table S9: First campaign, seeds 6–11. Six clusters per condition; bearings share seeds.
+Condition
+−30 degrees
++30 degrees
+Total
+Burst at 1 s
+Healthy
+5/6
+0/6
+5/12
+3
+25% deletion
+4/6
+0/6
+4/12
+2
+50% deletion
+0/6
+0/6
+0/12
+0
+Readout disabled
+0/6
+0/6
+0/12
+0
+Table S10: First-campaign collision-free counts over both bearings within each seed (maximum two).
+Condition
+6
+7
+8
+9
+10
+11
+Healthy
+0
+1
+1
+1
+1
+1
+25% deletion
+0
+1
+0
+1
+1
+1
+50% deletion
+0
+0
+0
+0
+0
+0
+Readout disabled
+0
+0
+0
+0
+0
+0
+Table S11: Median paired activity in first-campaign faults. All 12 pairs are retained in each cell.
+Condition
+200 ms
+300 ms
+400 ms
+500 ms
+25% deletion
+0.9103
+0.9357
+0.9832
+1.0073
+50% deletion
+0.7484
+0.8451
+0.8898
+1.0123
+Neither deletion condition exceeds twofold matched activity in these windows despite eight and twelve collisions.
+This is not a fitted task-failure detector. The activity ratio is distinct from the open-loop joint criterion. Every
++30-degree healthy record collides, creating a floor for fault comparisons in that direction. Five healthy survivors
+are retained at -30 degrees; 25% deletion loses one and 50% loses all five on those paired seeds.
+Healthy
+25%
+deletion
+50%
+deletion
+Readout
+off
+0
+3
+6
+Collision-free count
+5/6
+4/6
+0/6
+0/6
+0/6
+0/6
+0/6
+0/6
+(a) Fixed 1000 ms horizon
+-30 deg
+30 deg
+25% deletion
+50% deletion
+1
+1.25
+Paired spike ratio (log)
+(b) Common first 400 ms
+Figure S1:
+First-campaign outcomes and every first-400-ms pair.
+Lines join the same seed and bearing across doses;
+directions share six seed clusters. Dashed ratio one is a reference; black segments are medians.
+6
+
+
+PAGE 7
+7
+Paired controller interventions: new seeds
+Table S12: Healthy-network controls, seeds 12–17. All retain the same neural trigger rule, not identical trigger times.
+Law
+−30 degrees
++30 degrees
+Total
+Bursts triggered
+Original law
+4/6
+0/6
+4/12
+4/12
+Pre-cue gate
+6/6
+0/6
+6/12
+6/12
+Offset only
+0/6
+0/6
+0/12
+11/12
+No steering
+0/6
+0/6
+0/12
+12/12
+Table S13: Every paired seed outcome. Each cell lists (-30,+30) binary survival at 1 s.
+Seed
+Original law
+Pre-cue gate
+Offset only
+No steering
+12
+1,0
+1,0
+0,0
+0,0
+13
+1,0
+1,0
+0,0
+0,0
+14
+0,0
+1,0
+0,0
+0,0
+15
+1,0
+1,0
+0,0
+0,0
+16
+0,0
+1,0
+0,0
+0,0
+17
+1,0
+1,0
+0,0
+0,0
+Table S14: Mean paired difference versus original law, averaging both bearings within seed. Conditional 95% percentile
+bootstrap ranges, 20,000 six-cluster draws; exploratory only.
+Law
+Difference (pp)
+Range (pp)
+Improved / worse / same
+Pre-cue gate
++16.7
+[0.0, 33.3]
+2 / 0 / 4
+Offset only
+-33.3
+[-50.0, -16.7]
+0 / 4 / 2
+No steering
+-33.3
+[-50.0, -16.7]
+0 / 4 / 2
+The gate comparison has two improving, zero worsening and four unchanged clusters. Its range includes zero. All
+positive-bearing tests collide under every law. Offset-only and no-steering laws trigger bursts in 11/12 and 12/12
+cases yet never survive. These complete feedback-law comparisons do not isolate trigger timing from subsequent
+sensory trajectories. They do not estimate deletion tolerance under altered control laws by themselves; Sections
+12–13 supply the direct fault comparison. Original/gated survivors still bursting at 1 s number four/three. Every
+group’s survival count is unchanged between 800 and 1000 ms; no 1200-ms neural outcome is imputed.
+12
+13
+14
+15
+16
+17
+12
+13
+14
+15
+16
+17
+Paired seed (1: collision-free at 1000 ms)
+Original law
+Pre-cue gate
+Offset only
+No steering
+1
+1
+0
+1
+0
+1
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+-30°
++30°
+(a) Every paired outcome
+−1.0
+−0.5
+0.0
+0.5
+1.0
+Survival difference vs original
+Pre-cue gate
+Offset only
+No steering
+(b) Six seed clusters
+Blue: mean with conditional 95% bootstrap range; open circles: seed means.
+Figure S2: Every paired outcome and six-cluster differences. Blue intervals are conditional exploratory percentile ranges;
+open circles are seed means. Bearings are fixed scenarios sharing each seed.
+7
+
+
+PAGE 8
+8
+Sensory refractory sensitivity and measured compute
+Table S15: Three-seed model-variant comparison, 12 full-connectome 600-ms runs. Retention is computed within seed
+before its median; it is not a ratio of group medians.
+Sensory refractory
+Healthy (Hz)
+Fault (Hz)
+Paired median
+Paired range
+2.2 ms
+94.79
+72.50
+0.7632
+[0.7451, 0.8285]
+0.0 ms
+103.12
+81.67
+0.7919
+[0.7619, 0.8525]
+Seeds 12–14 share deletion masks (10000+s) and reset Poisson seeds (20000+s) within each pair. All other neurons
+retain 2.2-ms refractoriness. Healthy median rates are 94.79 and 103.12 Hz under sensory refractory times 2.2 and 0
+ms. This quantifies a conditional implementation difference; three paired seeds cannot establish variant invariance
+or replace the historical sweep.
+Table S16: Measured compute on Intel Xeon W-2223, 3.60 GHz, Windows. Sums of worker episode wall times are not CPU
+time.
+Campaign
+Episodes
+Elapsed (s)
+Episode sum (s)
+Paired controls, 3 workers
+48
+2134.5
+6256.5
+Refractory, 1 worker
+12
+1222.4
+1219.7
+Refractory construction took 6.2 s before its elapsed interval. Control timings include state restoration and frame
+processing; workers overlap.
+Fresh neural execution uses CPython 3.13.15, Brian2 2.10.1, NumPy 2.5.4 and the NumPy backend, with 0.1-ms
+integration and 20-ms feedback. Observed per-process working memory is about 1.1 GB, not a profiled peak bound.
+Total historical campaign runtime is unavailable. A complete Cython/compiler environment has not been validated.
+The original 48-test campaign has generation hashes but not every complete version-specific source snapshot. New
+control and refractory batches save exact generating Python sources with per-file hashes.
+Assessment boundary. One connectome, selected drives, asymmetric calibration coverage, assumed receptive
+fields and directional floor effects limit transfer.
+Fixed-horizon survival is not eventual escape.
+The privileged
+geometric rule survives both bearings at 800/1000 ms but collides by 1200 ms; it establishes bounded feasibility,
+not a matched neural resource-cost baseline. No new hardware mapping, corrected-hub causal contrast, predictive
+activity budget, biological escape model or population reliability is established.
+8
+
+
+PAGE 9
+9
+Supplementary visual diagnostics
+Whole totals
+Common duration
+First 400 ms
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+2.00
+Fault / healthy spikes
+(a) Unequal stopping times: 50% deletion
+Whole totals
+Common duration
+First 400 ms
+1.4
+1.6
+1.8
+2.0
+2.2
+Fault / healthy spikes
+(b) Equal 1000-ms records: full hubs
+-60 deg (calibration)
+-30 deg (calibration)
++30 deg
++60 deg
+Median of 12 pairs
+Figure S3: Individual paired whole/common/400-ms estimands. Shape and color identify bearing; negative-bearing pairs
+reuse calibration scenarios, while positive bearings still share calibration seeds. The black line is the median of all 12 pairs.
+0
+5
+10
+25
+50
+Connections deleted (%)
+50
+100
+Command rate (Hz)
+Transmission threshold
+(a) Command transmission
+0
+5
+10
+25
+50
+Connections deleted (%)
+4
+5
+Latency (ms)
+(b) First readout spike
+Figure S4: Archived deletion doses, 12 trials each. Points are medians; bars show observed 10th–90th percentiles, not
+confidence intervals. Healthy references and the 51.4-Hz transmission threshold are separate lines.
+Healthy
+Full
+hubs
+Inhib.
+hubs
+Random
+mass
+40
+80
+300
+1000
+Total spikes (thousands, log)
+Operational limit: 2 x healthy
+Horizontal segment: median
+Figure S5: Historical network spikes in thousands, logarithmic scale. Each dot is a trial; horizontal segments are medians.
+The dashed twofold limit is operational, not an energy or safety budget. Both random-mass tail trials are retained.
+9
+
+
+PAGE 10
+10
+Legacy diagnostics and reproduction
+0
+200
+400
+600
+800
+1000
+Recorded time (ms)
+0.0
+0.1
+0.2
+Separation (m)
+(a) Legacy separation (+30 deg, seed 0)
+Healthy
+F2 50%
+Full hubs
+Inhib. hubs
+F2 25%
+F2 50%
+Full hubs
+Inhib. hubs
+100
+101
+102
+Paired spike ratio
+2 x reference
+(b) Whole totals vs first 400 ms
+Whole episode
+First 400 ms
+Figure S6:
+Legacy illustration, not a test of corrected geometry.
+The separation trace uses +30 degrees, seed 0.
+Squares/diamonds are whole/400-ms medians; dots show 400-ms pairs, open for calibration scenarios. Whole records can
+have unequal durations. Full-hub equal-duration late crossings remain valid in main Figure 3.
+200
+300
+400
+500
+Common window (ms)
+100
+101
+102
+Paired spike ratio (log)
+(a) Median of 12 scenario pairs
+F2_25
+F2_50
+F4_1pct
+HUB_inh
+200
+300
+400
+500
+Common window (ms)
+100
+101
+102
+Paired spike ratio (log)
+(b) Medians within each of three seeds
+Figure S7: Post-hoc early-window diagnostics, all 12 scenario pairs and three shared seed medians. The 500-ms endpoint
+does not cover the full-hub late crossings. Refer to main Figure 3 for the complete one-second time course.
+10
+
+
+PAGE 11
+11
+Reproduction and exact artifact access
+The review package contains main.pdf, this supplement.pdf, a material index and the matching source/data
+ZIP. The current revision is prepared locally; it has not been submitted or published. The repository link in the
+paper alone does not expose this revision.
+For review, the current files must be supplied through a permitted
+submission mechanism or an explicitly authorized accessible release. A hash check is evidence of file identity, not
+public availability or acceptance.
+Read-only reconstruction. From the repository root, install the declared analysis dependencies in a CPython
+environment, then use each campaign’s analyze() function to compare against its saved JSON. Entry points are
+• tools/analyze_controls_v4.py
+• tools/analyze_horizons_v4.py
+• tools/analyze_refractory_v4.py
+• tools/summarize_prospective.py
+The scripts refuse accidental overwrite of their original output directories. Raw reconstructions require no new
+neural simulation. Exact build commands, versions and expected external-input hashes are in REPRODUCE.md.
+Source and data identity. The artifact manifest lists every included file by SHA256 and size, and binds both
+PDFs to their sources. External Connectivity_783.parquet and Completeness_783.csv tables remain separate
+dependencies from the released Shiu model repository. Expected hashes and Windows newline normalization are
+documented; no table values were changed.
+The calibration file remains byte-identical across both prospective
+campaigns. No final-release source hash is substituted for a missing older generation hash. The bundled upstream
+source snapshots retain their license notice.
+Reporting procedure supported by this case study. Report the cohort denominator and condition compo-
+sition; identify the functional and activity criteria separately; state the paired stopping rule; inspect full-horizon
+activity; and report task outcomes by direction and independent seed cluster.
+These reporting choices clarify
+evidence without establishing a safety predictor.
+Prior work and inherited components.
+The manuscript bibliography supplies the full verified citation-
+s. The neural substrate follows Shiu et al., Nature 2024, DOI 10.1038/s41586-024-07763-9. Close comparisons
+include An’s sparsification study, DOI 10.64898/2026.09.19.752860, and Jo’s endpoint-dependent damage study,
+arXiv:2610.19153. NeuroBench, DOI 10.1038/s41467-025-56739-4, already motivates separate functional/system
+measures. Our contribution is the quantified case study of cohort, exposure, horizon and feedback-law dependence;
+neither adding a nested constraint nor defining a ratio is claimed as an algorithmic invention.
+Historical documentation. Protocols v2–v4 and earlier repair reports are retained for chronology. Their old
+pending-work statements are superseded by this current supplement and its campaign index. Historical raw records
+remain immutable; only current summaries, presentation and delivery files are revised.
+DNp01 R
+DNp01 L
+DNa02 R
+DNa02 L
+DNp04 L
+DNp04 R
+DNb01 L
+DNb01 R
+150 Hz
+input
+F5 channels
+F1 weights
+F2 edges
+F3/F4 output silencing
+rate
+vs. θ
+LC4: 104
+LPLC2: 210
+90 / 849
+relays
+8 command
+neurons
+Figure S8:
+Mapped pathway retained from the previous main Figure 1.
+For display, 90 of 849 relays are selected by
+summed sensory-input and command-output contacts. Labels follow mapped identities; line strength encodes contacts and
+dashed markers locate perturbations. Generator and input hashes accompany the artifact. This display does not establish a
+dynamical mechanism; the new main Figure 1 is a conceptual overview.
+11
+
+
+PAGE 12
+12
+Controller-by-fault comparison: frozen calibration
+This incremental campaign adds 48 actual full-connectome fault episodes and reuses 24 byte-identical healthy
+episodes from the paired controls. The six seed clusters (12–17), both bearings, calibration, receptive-field map,
+neural sources and package versions are shared across all six conditions. Healthy outcomes were already known when
+this extension was specified; the fault outcomes were not used to retune the controller. Each seed uses Brian2 seed
+20000+s and deletion seed 10000+s. F2 deletes weighted connection-table rows, including all contacts represented
+by each row. The same row mask is used across controllers and bearings. The 25/50-percent masks are nested
+draws, not independent fault realizations.
+Let YH, YF denote 1000-ms collision-free survival under the same law, bearing and seed. Loss is L = I(YH = 1, YF =
+0); gain is G = I(YH = 0, YF = 1); net loss is D = YH −YF = L −G. Loss counts are out of all 12 scenarios; the
+healthy survivors at risk are also reported. Both bearings and all six conditions remain together within each seed
+cluster. Thus 72 records do not represent 72 independent observations.
+Table S17: Complete factorial outcomes. L/G: paired losses/gains; H: healthy survivors at risk. Healthy rows are reused,
+not new runs.
+Law
+Deletion
+−30◦
++30◦
+Total
+L
+G
+H
+Original
+Healthy
+4/6
+0/6
+4/12
+—
+—
+—
+Original
+25%
+4/6
+0/6
+4/12
+1
+1
+4
+Original
+50%
+0/6
+0/6
+0/12
+4
+0
+4
+Pre-cue gate
+Healthy
+6/6
+0/6
+6/12
+—
+—
+—
+Pre-cue gate
+25%
+3/6
+0/6
+3/12
+3
+0
+6
+Pre-cue gate
+50%
+0/6
+0/6
+0/12
+6
+0
+6
+Table S18: Every scenario outcome: each cell lists binary survival (-30,+30 degrees). H denotes healthy; 25/50 denote
+deletion percentages.
+Seed
+Original H
+Original 25
+Original 50
+Pre-cue gate H
+Pre-cue gate 25
+Pre-cue gate 50
+12
+1,0
+0,0
+0,0
+1,0
+0,0
+0,0
+13
+1,0
+1,0
+0,0
+1,0
+0,0
+0,0
+14
+0,0
+1,0
+0,0
+1,0
+1,0
+0,0
+15
+1,0
+1,0
+0,0
+1,0
+1,0
+0,0
+16
+0,0
+0,0
+0,0
+1,0
+0,0
+0,0
+17
+1,0
+1,0
+0,0
+1,0
+1,0
+0,0
+Table S19: Every paired loss/gain count within seed (two bearings). A gain is retained rather than discarded from the net
+loss.
+Seed
+Original 25
+Original 50
+Gate 25
+Gate 50
+12
+1,0
+1,0
+1,0
+1,0
+13
+0,0
+1,0
+1,0
+1,0
+14
+0,1
+0,0
+0,0
+1,0
+15
+0,0
+1,0
+0,0
+1,0
+16
+0,0
+0,0
+1,0
+1,0
+17
+0,0
+1,0
+0,0
+1,0
+12
+
+
+PAGE 13
+13
+Paired interaction, activity and threshold sensitivity
+The interaction is Dgate −Doriginal, after averaging both bearings within seed. Positive values mean greater net
+fault loss under gating. Conditional 95-percent percentile ranges use 20,000 complete six-cluster bootstrap draws
+with RNG seed 0. These exploratory ranges are conditional on the frozen calibration and fixed bearings. They
+do not establish population coverage, equivalence or a controller mechanism. The +30-degree healthy floor limits
+observable loss in that direction.
+After observing the conditional bootstrap ranges, we added a post-hoc sign-flip sensitivity, applying all 26 = 64 sign
+patterns to the six seed-level interaction contrasts. Under an independent-cluster, symmetric zero-centered interac-
+tion null, the two-sided tail fraction is 0.25 at 25-percent deletion (three nonzero clusters) and 0.50 at 50-percent
+deletion (two nonzero clusters). This diagnostic is not a randomized controller-assignment test or confirmatory
+population inference. The positive percentile range at 25 percent must be interpreted with this sparse support; it
+is not a claim of established controller-dependent neural resilience. At 50 percent, both faulty controllers have zero
+survivors, so the net-loss contrast reflects healthy baseline success.
+Table S20: Controller interaction, in percentage points (pp). Six seed values are the actual independent cluster contrasts,
+not six extra experiments.
+Deletion
+Six seed contrasts (pp)
+Mean (pp)
+Range (pp)
+25%
+0, 50, 50, 0, 50, 0
++25.0
+[8.3, 41.7]
+50%
+0, 0, 50, 0, 50, 0
++16.7
+[0.0, 33.3]
+Table S21: Median within-scenario fault/healthy network-spike ratios under the same law. Each cell retains all 12 pairs.
+Common duration is pair-specific and outcome-dependent.
+Law / deletion
+200 ms
+300 ms
+400 ms
+500 ms
+Common
+Original 25%
+0.8889
+0.8976
+0.9532
+0.9623
+0.9712
+Original 50%
+0.7293
+0.7525
+0.9074
+0.9969
+1.0322
+Pre-cue gate 25%
+0.8863
+0.9414
+0.9457
+0.9470
+0.9701
+Pre-cue gate 50%
+0.7525
+0.7750
+0.8785
+0.9275
+1.0796
+Table S22: Activity-only flags R(t)>c versus collision/survival through 1000 ms. FC/UC: flagged/unflagged collisions;
+FS/US: flagged/unflagged survivors. Counts for c=2,3,4 are identical and combined. All four 200–500-ms windows appear
+in thresholds.csv.
+Law / deletion
+t (ms)
+c
+FC
+UC
+FS
+US
+Original 25%
+400
+1.5
+0
+8
+0
+4
+Original 25%
+400
+2/3/4
+0
+8
+0
+4
+Original 25%
+500
+1.5
+0
+8
+1
+3
+Original 25%
+500
+2/3/4
+0
+8
+0
+4
+Original 50%
+400
+1.5
+0
+12
+0
+0
+Original 50%
+400
+2/3/4
+0
+12
+0
+0
+Original 50%
+500
+1.5
+0
+12
+0
+0
+Original 50%
+500
+2/3/4
+0
+12
+0
+0
+Pre-cue gate 25%
+400
+1.5
+0
+9
+0
+3
+Pre-cue gate 25%
+400
+2/3/4
+0
+9
+0
+3
+Pre-cue gate 25%
+500
+1.5
+0
+9
+1
+2
+Pre-cue gate 25%
+500
+2/3/4
+0
+9
+0
+3
+Pre-cue gate 50%
+400
+1.5
+0
+12
+0
+0
+Pre-cue gate 50%
+400
+2/3/4
+0
+12
+0
+0
+Pre-cue gate 50%
+500
+1.5
+0
+12
+0
+0
+Pre-cue gate 50%
+500
+2/3/4
+0
+12
+0
+0
+These flags use network spikes only; they are distinct from the archived open-loop joint rule, which also requires
+13
+
+
+PAGE 14
+command transmission. The thresholds are operational definitions, with no validated hardware resource, power or
+safety interpretation. No threshold was selected to fit task outcomes. There is no imputation of neural activity
+after collision. Activity pairs use the same controller, bearing and seed at completed common frames.
+25% deletion
+50% deletion
+Connection-table row deletion
+0.75
+1
+1.25
+1.5
+Fault / same-law healthy spikes
+Common first 400 ms
+Original law
+25% deletion
+50% deletion
+Connection-table row deletion
+Pre-cue gate
+-30 deg
+30 deg
+Figure S9: Every paired seed/bearing activity ratio at 400 ms. Lines join the same seed and bearing across nested deletion
+doses within a control law. Color/shape identify direction; thick black bars are medians. Both bearings share six seed clusters.
+The successful resumed invocation took 1727.1 s, including worker construction and skipping completed records.
+This excludes the interrupted invocation. The sum of measured episode times across all 48 new fault episodes is
+6162.4 s; overlapping workers mean this is not CPU time or total campaign elapsed time.
+All three resumed workers returned zero. Each completed episode was written before interruption recovery; the
+runner verified source/configuration identity and did not overwrite it.
+The source and calibration hashes are
+checked independently by tools/cross_records_v8.py. Machine-readable per-scenario loss, gain, four fixed win-
+dows and common duration are in audit/controller-fault-v8/pairs.csv; complete summaries and manifests
+are in audit/controller-fault-v8/cross.json. Protocol details and commands are in paper/PROTOCOL_v8.md.
+Corrected historical hub experiments and additional test bearings remain outside this focused revision.
+14

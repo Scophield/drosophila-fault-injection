@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "main_pdf_sha256": "9cad0840e2a553e8dfd9d00afc646c062ca1b225afb0738879959854e43f2082",
+  "supplement_pdf_sha256": "52d74fadd9b65affbbc29b42225acfb70be1cee84537bd9992662b800989d4db",
+  "main_pages_checked": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "supplement_pages_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "notes": [
+    "Every final main page 1--5 visually inspected at 130 dpi after the final build; final overview also inspected at print scale.",
+    "SI TeX/tables unchanged; all13 current page pixels independently compared equal to the previous fully reviewed SI.",
+    "Overview has no cropped text or overlap, quantitative figures2/3 preserve exact bytes, IEEE body fonts unchanged.",
+    "Main is five US-letter pages, fifth references only; fonts embedded, no Type3 or layout diagnostics."
+  ],
+  "integrity_report_sha256": "18b69b7345195b72f707e2dcacb6f6a49c3b9aef125145e8cbb59744aa9b7ed4"
+}

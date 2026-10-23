@@ -1,0 +1,11 @@
+{
+  "exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "wall_seconds": 2134.5151059627533,
+  "started_unix": 1792574302.7102928,
+  "completed_unix": 1792576437.2254026,
+  "workers": 3
+}

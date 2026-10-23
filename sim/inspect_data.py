@@ -3,8 +3,7 @@ import numpy as np
 import time
 
 t0 = time.time()
-comp_path = "Drosophila_brain_model/Completeness_783.csv"
-con_path = "Drosophila_brain_model/Connectivity_783.parquet"
+from project_paths import PATH_COMP as comp_path, PATH_CON as con_path
 
 df_comp = pd.read_csv(comp_path, index_col=0)
 print(f"[completeness] shape={df_comp.shape} load={time.time()-t0:.1f}s")

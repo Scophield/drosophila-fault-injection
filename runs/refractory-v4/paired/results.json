@@ -1,0 +1,152 @@
+{
+  "complete": true,
+  "simulations_executed": true,
+  "parameters": {
+    "duration_ms": 600,
+    "seeds": [
+      12,
+      13,
+      14
+    ],
+    "sensory_refractory_ms": [
+      2.2,
+      0.0
+    ],
+    "faults": [
+      null,
+      "F2_50"
+    ],
+    "input_hz": 150,
+    "neural_dt_ms": 0.1,
+    "brian_seed_rule": "20000+seed",
+    "fault_seed_rule": "10000+seed",
+    "scope": "conditional three-seed paired model-variant sensitivity, no equivalence claim"
+  },
+  "neurons": 138639,
+  "connections": 15091983,
+  "build_seconds": 6.239018999971449,
+  "manifest_sha256": "c0912afa8e98534249892efdadab6e97942542c9861bbbe51a1e69cec4f4fd8e",
+  "trials": [
+    {
+      "seed": 12,
+      "sensory_refractory_ms": 2.2,
+      "fault": null,
+      "command_spikes": 449,
+      "rate_hz": 93.54166666666667,
+      "first_spike_ms": 4.5,
+      "network_spikes": 39602,
+      "run_seconds": 153.41028730000835
+    },
+    {
+      "seed": 12,
+      "sensory_refractory_ms": 2.2,
+      "fault": "F2_50",
+      "command_spikes": 372,
+      "rate_hz": 77.5,
+      "first_spike_ms": 6.4,
+      "network_spikes": 31664,
+      "run_seconds": 116.55420219991356
+    },
+    {
+      "seed": 12,
+      "sensory_refractory_ms": 0.0,
+      "fault": null,
+      "command_spikes": 495,
+      "rate_hz": 103.125,
+      "first_spike_ms": 4.2,
+      "network_spikes": 50986,
+      "run_seconds": 99.7273964000633
+    },
+    {
+      "seed": 12,
+      "sensory_refractory_ms": 0.0,
+      "fault": "F2_50",
+      "command_spikes": 422,
+      "rate_hz": 87.91666666666667,
+      "first_spike_ms": 5.8999999999999995,
+      "network_spikes": 41040,
+      "run_seconds": 88.83376199996565
+    },
+    {
+      "seed": 13,
+      "sensory_refractory_ms": 2.2,
+      "fault": null,
+      "command_spikes": 455,
+      "rate_hz": 94.79166666666667,
+      "first_spike_ms": 4.5,
+      "network_spikes": 39660,
+      "run_seconds": 91.51840340008494
+    },
+    {
+      "seed": 13,
+      "sensory_refractory_ms": 2.2,
+      "fault": "F2_50",
+      "command_spikes": 339,
+      "rate_hz": 70.625,
+      "first_spike_ms": 5.800000000000001,
+      "network_spikes": 31381,
+      "run_seconds": 91.55000680009834
+    },
+    {
+      "seed": 13,
+      "sensory_refractory_ms": 0.0,
+      "fault": null,
+      "command_spikes": 504,
+      "rate_hz": 105.0,
+      "first_spike_ms": 4.2,
+      "network_spikes": 51058,
+      "run_seconds": 98.55553520005196
+    },
+    {
+      "seed": 13,
+      "sensory_refractory_ms": 0.0,
+      "fault": "F2_50",
+      "command_spikes": 384,
+      "rate_hz": 80.0,
+      "first_spike_ms": 5.2,
+      "network_spikes": 40907,
+      "run_seconds": 99.07930590002798
+    },
+    {
+      "seed": 14,
+      "sensory_refractory_ms": 2.2,
+      "fault": null,
+      "command_spikes": 456,
+      "rate_hz": 95.0,
+      "first_spike_ms": 4.0,
+      "network_spikes": 39478,
+      "run_seconds": 94.55407499999274
+    },
+    {
+      "seed": 14,
+      "sensory_refractory_ms": 2.2,
+      "fault": "F2_50",
+      "command_spikes": 348,
+      "rate_hz": 72.5,
+      "first_spike_ms": 5.5,
+      "network_spikes": 31782,
+      "run_seconds": 99.72393440001179
+    },
+    {
+      "seed": 14,
+      "sensory_refractory_ms": 0.0,
+      "fault": null,
+      "command_spikes": 495,
+      "rate_hz": 103.125,
+      "first_spike_ms": 3.9000000000000004,
+      "network_spikes": 51216,
+      "run_seconds": 93.17157250002492
+    },
+    {
+      "seed": 14,
+      "sensory_refractory_ms": 0.0,
+      "fault": "F2_50",
+      "command_spikes": 392,
+      "rate_hz": 81.66666666666667,
+      "first_spike_ms": 5.0,
+      "network_spikes": 41251,
+      "run_seconds": 93.05496530001983
+    }
+  ],
+  "wall_seconds": 1222.387330400059
+}

@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "document_sha256": "b1ae7263cf16a25f3eddbf303254c0a6fb88777cb4e8b30e16bb84a218902dfe",
+  "commands": [
+    {
+      "script": "tools/plot_task_v9_visual.py",
+      "flags": [
+        "--analysis",
+        "--out"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/build_supplement_v9.py",
+      "flags": [
+        "--causal",
+        "--core",
+        "--figures",
+        "--out",
+        "--stress"
+      ],
+      "wrapped": true
+    },
+    {
+      "script": "tools/qa_pdf.py",
+      "flags": [
+        "--out",
+        "--pdf",
+        "--submission"
+      ],
+      "wrapped": true
+    }
+  ],
+  "scope": "static visual-revision command flags only; recorded build/QA logs establish execution"
+}

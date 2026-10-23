@@ -1,0 +1,225 @@
+{
+  "pdf_sha256": "52d74fadd9b65affbbc29b42225acfb70be1cee84537bd9992662b800989d4db",
+  "references_only_fifth_page": false,
+  "pages": 13,
+  "page_sizes": [
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ]
+  ],
+  "fonts": {
+    "4": {
+      "type": "Type1",
+      "name": "TWAALR+LMRoman12-Bold",
+      "embedded_bytes": 27692
+    },
+    "5": {
+      "type": "Type1",
+      "name": "XSOIKS+LMRoman10-Regular",
+      "embedded_bytes": 36415
+    },
+    "6": {
+      "type": "Type1",
+      "name": "BMAQFC+LMMono10-Regular",
+      "embedded_bytes": 24978
+    },
+    "7": {
+      "type": "Type1",
+      "name": "XSOIKS+LMRoman10-Regular",
+      "embedded_bytes": 36415
+    },
+    "8": {
+      "type": "Type1",
+      "name": "TZFAUD+LMMathItalic10-Regular",
+      "embedded_bytes": 5001
+    },
+    "9": {
+      "type": "Type1",
+      "name": "RAEVTD+LMMathItalic7-Regular",
+      "embedded_bytes": 3938
+    },
+    "10": {
+      "type": "Type1",
+      "name": "SLBSPG+LMRoman7-Regular",
+      "embedded_bytes": 20677
+    },
+    "11": {
+      "type": "Type1",
+      "name": "QIVOCX+LMMathSymbols10-Regular",
+      "embedded_bytes": 3805
+    },
+    "12": {
+      "type": "Type1",
+      "name": "UUEDSB+LMRoman9-Bold",
+      "embedded_bytes": 26278
+    },
+    "13": {
+      "type": "Type1",
+      "name": "DTCMRD+LMRoman9-Regular",
+      "embedded_bytes": 35222
+    },
+    "14": {
+      "type": "Type1",
+      "name": "XADSCS+LMMathSymbols9-Regular",
+      "embedded_bytes": 3687
+    },
+    "15": {
+      "type": "Type1",
+      "name": "DTCMRD+LMRoman9-Regular",
+      "embedded_bytes": 35222
+    },
+    "16": {
+      "type": "Type1",
+      "name": "TSSCRY+LMMathItalic9-Regular",
+      "embedded_bytes": 3632
+    },
+    "17": {
+      "type": "Type1",
+      "name": "ITTHQE+LMMathItalic6-Regular",
+      "embedded_bytes": 3095
+    },
+    "23": {
+      "type": "Type1",
+      "name": "UHMQMV+LMMathSymbols7-Regular",
+      "embedded_bytes": 3342
+    },
+    "25": {
+      "type": "Type0",
+      "name": "EYIZPP+DejaVuSans-Bold",
+      "embedded_bytes": 4796
+    },
+    "26": {
+      "type": "Type0",
+      "name": "GRZSGV+DejaVuSans",
+      "embedded_bytes": 15580
+    },
+    "74": {
+      "type": "Type0",
+      "name": "MWOAYY+DejaVuSans-Bold",
+      "embedded_bytes": 4640
+    },
+    "75": {
+      "type": "Type0",
+      "name": "DPRRSI+DejaVuSans",
+      "embedded_bytes": 12288
+    },
+    "76": {
+      "type": "Type0",
+      "name": "CPUQYB+DejaVuSans",
+      "embedded_bytes": 3844
+    }
+  },
+  "type3": [],
+  "unembedded": [],
+  "outside_page": [],
+  "pdf_version": "1.5",
+  "encrypted": false,
+  "links_per_page": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "bookmarks": 0,
+  "widgets_per_page": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "form_fields": 0,
+  "submission_feature_errors": []
+}

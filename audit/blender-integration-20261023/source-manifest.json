@@ -1,0 +1,14 @@
+{
+  "build_blender.py": "abe456177d15ec4660471f0cfcdbce65a3653f16230c333eae036567fc1d288b",
+  "connectome.png": "de7ee5003c24a705f7d52098f44f5ad30bdee6ec40ab0ecc8b36ad2d992cbdc9",
+  "connectome_data.json": "df09257169e0e37349b02dee9f73eb68c38f215f08b925954d7e2554d306bfa6",
+  "data_manifest.json": "880fdbcff193cc92d72547c6340252f67a0d0221279cef81677856c33cd8c78f",
+  "displayed_edges.csv": "318a83ba248522bfab890334bf5938120f4cc1cedc37996709a18d6fb349d8b8",
+  "displayed_neurons.csv": "f8c985497488a946d8c0b589773117c785e90991f10966c45631aa6cc1ed12e5",
+  "drosophila_studio.blend": "059fc138225fae96d5ea3b90ef1f72312eae86b09fa40f3d3b16135cd216662e",
+  "extract_local_connectome.py": "14f3464eef9a734b555da45dc473db19a004b46bd3e2e638f9d2aff44a1bafc7",
+  "fruit_fly.png": "55876834ab465bb3136d1d9d7513fb462f13494f2635a1d37ff48611d0595023",
+  "README_zh.md": "683b9ca3c094a882b2e097e899d224c23cd54755ab9caff128dacbe38c5ffefe",
+  "UPSTREAM_MODEL_LICENSE.txt": "7f80266a88ee61669cfa54b6a8a3683c56f275487bd518d446bd48112267c65d",
+  "visual_pathway.png": "6ee605256e11242a0bddee666951fcf583bac32142db32967146eaf6ceb7bd52"
+}

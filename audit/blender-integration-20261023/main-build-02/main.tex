@@ -1,0 +1,33 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx,booktabs,placeins,url}
+\begin{document}
+\title{Paired Fault Assessment of a Fly-Connectome Spiking Controller}
+\author{\IEEEauthorblockN{Shuchao Gao}
+\IEEEauthorblockA{Waseda University\\Tokyo, Japan}}
+\maketitle
+\bstctlcite{IEEEcontrol}
+\begin{abstract}
+Task-level fault loss in a spiking controller can depend on feedback even when healthy success counts match. We provide an auditable paired assessment with shared input variates and deletion masks, causal feedback, exact scheduled actuation and independent input/geometry replay. A 138,639-neuron fly-connectome model is tested on 24 new seed clusters crossing two laws, two bearings and three network conditions. All 96 healthy episodes remain collision-free through one second. At 50\% connection-row deletion, proportional and relay control succeed in 37/48 and 48/48 episodes; their paired loss difference is 22.9 percentage points, with a 95\% cluster interval of 12.5--33.3 and Holm-adjusted $p=0.00195$. The 25\% contrast remains uncertain. A frozen 400-ms command-rate criterion detects only 2/13 later collisions. Geometry-informed forecasting detects all 13 but flags 57/275 successful tasks. Task loss changes with the declared horizon; stopped-duration matching leaves new group activity medians unchanged. These findings support paired task assessment without establishing biological or hardware fault tolerance.
+\end{abstract}
+\begin{IEEEkeywords}
+spiking neural networks, fault assessment, feedback control, connectome, neuromorphic systems
+\end{IEEEkeywords}
+\input{sections/v9_intro}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figs/task_v9_overview.pdf}
+\caption{Model-to-task interface. (a) Representative neuron anchors and an unregistered, illustrative fly exterior. (b) Selected subgraph: 410 cells and 1,050 connections, with schematic positions and routes, not measured neurites or the full recurrent graph. Colors identify groups. (c) Synthetic task, next-frame steering and exact actuation for a 200-ms example decision; P/R denote proportional/relay control.}
+\label{fig:v9-protocol}
+\end{figure*}
+\input{sections/v9_related}
+\input{sections/v9_methods}
+\input{sections/v9_results}
+\input{sections/v9_artifact}
+\input{sections/v9_discussion}
+\FloatBarrier
+\clearpage
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+\end{document}

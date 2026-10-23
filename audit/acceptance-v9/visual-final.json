@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "utc": "2026-10-22T10:33:15.141414+00:00",
+  "main_pdf_sha256": "fa8f358a284577b088b4d76a683f74413318b01f1986743a7d50ee1db8f90eac",
+  "supplement_pdf_sha256": "ecd0f80581515d6ae48179a61680864c579722d64e1e816a564df23f4bda238a",
+  "main_pages_checked": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "supplement_pages_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "notes": [
+    "Main QA04 pages 1-5 individually inspected at rendered page resolution. Diagram routing clear, equation and table inside columns, raw denominators visible, page5 references only.",
+    "SI QA01 pages1-13 individually inspected, including repeated table headers, exact FlyID digits, development plot, warning denominators and historical labels.",
+    "Final SI QA02 differs only on page11; page11 individually reinspected after adding the degenerate-interval limitation. All other final page PNGs are byte-identical to the already reviewed pages, as recorded in si-render-comparison.json.",
+    "No clipping or overlapping labels found. Main default IEEE font size retained; fifth-page and embedded-font checks passed. This is local visual review, not portal certification."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "completed_utc": "2026-10-22T09:35:02.049285+00:00",
+  "core": {
+    "started_unix": 1792642362.969977,
+    "completed_unix": 1792656756.2772574,
+    "elapsed_seconds": 14393.307280540466,
+    "exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "episodes": 288
+  },
+  "stress": {
+    "started_unix": 1792656914.6064067,
+    "completed_unix": 1792661640.0712388,
+    "elapsed_seconds": 4725.46483206749,
+    "exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "episodes": 96
+  },
+  "records": 384,
+  "independent_core_clusters": 24,
+  "independent_stress_clusters": 8,
+  "note": "core/stress remain separate; no outcome-based tuning or stopping"
+}

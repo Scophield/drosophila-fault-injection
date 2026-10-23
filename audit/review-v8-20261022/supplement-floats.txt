@@ -1,0 +1,326 @@
+Table S1
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Campaigns and statistical units. Counts refer to neural episodes, except the deterministic rule.}
+\begin{tabular}{llllr}\toprule
+Campaign & Seeds & Bearings & Runs & Duration (ms)\\\midrule
+Passive calibration & 0--2 & $-60,-30,0$ & 9 & 400\\
+First prospective campaign & 6--11 & $-30,+30$ & 48 & 1000\\
+Paired healthy controls & 12--17 & $-30,+30$ & 48 & 1000\\
+Controller-by-fault extension & 12--17 & $-30,+30$ & 48 new + 24 reused & 1000\\
+Sensory refractory sensitivity & 12--14 & Constant drive & 12 & 600\\
+Main historical sweep & Fault-seeded & Constant drive & $19\times12$ & 600\\
+Privileged geometric rule & Deterministic & $-30,+30$ & 6 & 800/1000/1200\\
+\bottomrule\end{tabular}
+
+Table S2
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{All main conditions, 12 trials each. Rate, latency and spikes are medians; brackets give conditional 95\% bootstrap intervals for rate.}
+\begin{tabular}{lrrrr}\toprule
+Condition & Rate [range] (Hz) & Latency (ms) & Spikes & T\\\midrule
+F1\_wvar\_05 & 94.38 [93.75,95.94] & 4.20 & 39,678.5 & 12/12\\
+F1\_wvar\_10 & 95.31 [94.17,95.52] & 4.20 & 39,723.0 & 12/12\\
+F1\_wvar\_20 & 94.17 [92.71,96.67] & 4.20 & 39,988.0 & 12/12\\
+F1\_wvar\_50 & 94.17 [92.19,96.46] & 4.35 & 41,638.0 & 12/12\\
+F2\_drop\_05 & 91.88 [91.15,93.75] & 4.40 & 39,077.0 & 12/12\\
+F2\_drop\_10 & 93.12 [90.62,96.04] & 4.30 & 38,448.0 & 12/12\\
+F2\_drop\_25 & 84.48 [82.29,87.81] & 4.65 & 36,598.0 & 12/12\\
+F2\_drop\_50 & 72.40 [71.25,74.69] & 5.40 & 31,589.5 & 12/12\\
+F3\_loss\_01 & 94.58 [93.85,95.00] & 4.30 & 39,335.0 & 12/12\\
+F3\_loss\_02 & 94.27 [93.44,95.83] & 4.15 & 39,936.0 & 12/12\\
+F3\_loss\_05 & 94.06 [92.71,95.73] & 4.10 & 39,373.5 & 12/12\\
+F3\_loss\_10 & 95.10 [93.65,96.56] & 4.15 & 39,753.5 & 12/12\\
+F4\_hub\_1pct & 119.06 [118.33,119.90] & 4.20 & 49,272.5 & 12/12\\
+F4\_hub\_2pct & 114.79 [114.69,115.21] & 4.20 & 38,861.0 & 12/12\\
+F4\_hub\_5pct & 93.96 [93.75,94.27] & 4.25 & 34,115.5 & 12/12\\
+F5\_in\_both & 0.00 [0.00,0.00] & --- & 21,191.0 & 0/12\\
+F5\_in\_LC4 & 75.52 [75.10,76.15] & 6.10 & 34,543.5 & 12/12\\
+F5\_in\_LPLC2 & 64.27 [63.75,64.90] & 5.00 & 27,686.0 & 12/12\\
+healthy & 94.69 [94.06,95.42] & 4.05 & 39,694.0 & 12/12\\
+\bottomrule\end{tabular}
+
+Table S3
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Cohort scoring at $c=2$. T and J denote transmission and joint passes.}
+\begin{tabular}{lrrrr}\toprule
+Included records & $n$ & T & J & T$-$J\\\midrule
+All fault/control records & 288 & 276 & 262 & 14\\
+Exclude inhibitory hubs & 276 & 264 & 262 & 2\\
+Exclude F4/HUB/EIm & 204 & 192 & 190 & 2\\
+Main F1/F2/F3/F5 & 180 & 168 & 168 & 0\\
+\bottomrule\end{tabular}
+
+Table S4
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Historical controls, 12 trials each. Medians of recorded damage and responses; cell/edge counts are not contact-mass equality.}
+\begin{tabular}{lrrrr}\toprule
+Condition & Cells & Rows modified (\%) & Rate (Hz) & Spikes\\\midrule
+EIm\_1pct & --- & 1.13 & 94.48 & 40,087.5\\
+EIm\_2pct & --- & 2.25 & 95.10 & 39,882.5\\
+HUB\_exc & --- & 3.48 & 88.65 & 32,265.0\\
+HUB\_inh & --- & 5.57 & 168.23 & 847,476.5\\
+INHrand\_cells & 765 & 0.75 & 95.21 & 39,827.0\\
+INHrand\_mass & 8,889 & 8.63 & 102.40 & 50,323.0\\
+\bottomrule\end{tabular}
+
+Table S5
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Healthy legacy partitions. Exact reused logs differ from shared seed clusters.}
+\begin{tabular}{llr}\toprule
+Partition & Scenarios & Collision-free\\\midrule
+Calibration reuse & $-60/-30$ degrees, seeds 0--2 & 6/6\\
+Other negative bearings & $-60/-30$ degrees, seeds 3--5 & 6/6\\
+Positive bearings & $+30/+60$ degrees, seeds 0--5 & 12/12\\
+Frontal & 0 degrees, seeds 0--2 & 0/3\\
+\bottomrule\end{tabular}
+
+Table S6
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Median paired legacy spike ratios, using main-paper Eq.~(3). Ratios are computed within scenario before aggregation.}
+\begin{tabular}{lrrr}\toprule
+Condition & Whole & Common duration & First 400 ms\\\midrule
+F2\_25 & 0.8861 & 0.8861 & 0.8837\\
+F2\_50 & 0.3817 & 0.7294 & 0.7226\\
+F4\_1pct & 1.7029 & 1.7029 & 1.3618\\
+HUB\_inh & 71.6931 & 75.2306 & 118.1571\\
+\bottomrule\end{tabular}
+
+Table S7
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Full-hub cumulative horizon sensitivity. Every fault/healthy pair lasts 1000 ms.}
+\begin{tabular}{lrr}\toprule
+Horizon (ms) & Median paired ratio & Above twofold\\\midrule
+200 & 1.302 & 0/12\\
+300 & 1.332 & 0/12\\
+400 & 1.362 & 0/12\\
+500 & 1.402 & 0/12\\
+600 & 1.415 & 0/12\\
+700 & 1.435 & 0/12\\
+800 & 1.472 & 0/12\\
+900 & 1.682 & 6/12\\
+1000 & 1.703 & 6/12\\
+\bottomrule\end{tabular}
+
+Table S8
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{First twofold crossings. All six are negative-bearing calibration scenarios.}
+\begin{tabular}{lrrr}\toprule
+Bearing (degrees) & Seed 0 (ms) & Seed 1 (ms) & Seed 2 (ms)\\\midrule
+-60 & 900 & 880 & 880\\
+-30 & 840 & 840 & 860\\
+30 & None & None & None\\
+60 & None & None & None\\
+\bottomrule\end{tabular}
+
+Table S9
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{First campaign, seeds 6--11. Six clusters per condition; bearings share seeds.}
+\begin{tabular}{lrrrr}\toprule
+Condition & $-30$ degrees & $+30$ degrees & Total & Burst at 1 s\\\midrule
+Healthy & 5/6 & 0/6 & 5/12 & 3\\
+25\% deletion & 4/6 & 0/6 & 4/12 & 2\\
+50\% deletion & 0/6 & 0/6 & 0/12 & 0\\
+Readout disabled & 0/6 & 0/6 & 0/12 & 0\\
+\bottomrule\end{tabular}
+
+Table S10
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{First-campaign collision-free counts over both bearings within each seed (maximum two).}
+\begin{tabular}{lrrrrrr}\toprule
+Condition & 6 & 7 & 8 & 9 & 10 & 11\\\midrule
+Healthy & 0 & 1 & 1 & 1 & 1 & 1\\
+25\% deletion & 0 & 1 & 0 & 1 & 1 & 1\\
+50\% deletion & 0 & 0 & 0 & 0 & 0 & 0\\
+Readout disabled & 0 & 0 & 0 & 0 & 0 & 0\\
+\bottomrule\end{tabular}
+
+Table S11
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Median paired activity in first-campaign faults. All 12 pairs are retained in each cell.}
+\begin{tabular}{lrrrr}\toprule
+Condition & 200 ms & 300 ms & 400 ms & 500 ms\\\midrule
+25\% deletion & 0.9103 & 0.9357 & 0.9832 & 1.0073\\
+50\% deletion & 0.7484 & 0.8451 & 0.8898 & 1.0123\\
+\bottomrule\end{tabular}
+
+Figure S1
+[H]\centering\includegraphics[width=.62\textwidth,height=3.4in,keepaspectratio]{figures/prospective_outcomes.pdf}\caption{First-campaign outcomes and every first-400-ms pair. Lines join the same seed and bearing across doses; directions share six seed clusters. Dashed ratio one is a reference; black segments are medians.}
+
+Table S12
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Healthy-network controls, seeds 12--17. All retain the same neural trigger rule, not identical trigger times.}
+\begin{tabular}{lrrrr}\toprule
+Law & $-30$ degrees & $+30$ degrees & Total & Bursts triggered\\\midrule
+Original law & 4/6 & 0/6 & 4/12 & 4/12\\
+Pre-cue gate & 6/6 & 0/6 & 6/12 & 6/12\\
+Offset only & 0/6 & 0/6 & 0/12 & 11/12\\
+No steering & 0/6 & 0/6 & 0/12 & 12/12\\
+\bottomrule\end{tabular}
+
+Table S13
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Every paired seed outcome. Each cell lists (-30,+30) binary survival at 1 s.}
+\begin{tabular}{lrrrr}\toprule
+Seed & Original law & Pre-cue gate & Offset only & No steering\\\midrule
+12 & 1,0 & 1,0 & 0,0 & 0,0\\
+13 & 1,0 & 1,0 & 0,0 & 0,0\\
+14 & 0,0 & 1,0 & 0,0 & 0,0\\
+15 & 1,0 & 1,0 & 0,0 & 0,0\\
+16 & 0,0 & 1,0 & 0,0 & 0,0\\
+17 & 1,0 & 1,0 & 0,0 & 0,0\\
+\bottomrule\end{tabular}
+
+Table S14
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Mean paired difference versus original law, averaging both bearings within seed. Conditional 95\% percentile bootstrap ranges, 20,000 six-cluster draws; exploratory only.}
+\begin{tabular}{lrrr}\toprule
+Law & Difference (pp) & Range (pp) & Improved / worse / same\\\midrule
+Pre-cue gate & +16.7 & [0.0, 33.3] & 2 / 0 / 4\\
+Offset only & -33.3 & [-50.0, -16.7] & 0 / 4 / 2\\
+No steering & -33.3 & [-50.0, -16.7] & 0 / 4 / 2\\
+\bottomrule\end{tabular}
+
+Figure S2
+[H]\centering\includegraphics[width=.98\textwidth,height=2.45in,keepaspectratio]{figures/paired_controls.pdf}\caption{Every paired outcome and six-cluster differences. Blue intervals are conditional exploratory percentile ranges; open circles are seed means. Bearings are fixed scenarios sharing each seed.}
+
+Table S15
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Three-seed model-variant comparison, 12 full-connectome 600-ms runs. Retention is computed within seed before its median; it is not a ratio of group medians.}
+\begin{tabular}{lrrrr}\toprule
+Sensory refractory & Healthy (Hz) & Fault (Hz) & Paired median & Paired range\\\midrule
+2.2 ms & 94.79 & 72.50 & 0.7632 & [0.7451, 0.8285]\\
+0.0 ms & 103.12 & 81.67 & 0.7919 & [0.7619, 0.8525]\\
+\bottomrule\end{tabular}
+
+Table S16
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Measured compute on Intel Xeon W-2223, 3.60 GHz, Windows. Sums of worker episode wall times are not CPU time.}
+\begin{tabular}{lrrr}\toprule
+Campaign & Episodes & Elapsed (s) & Episode sum (s)\\\midrule
+Paired controls, 3 workers & 48 & 2134.5 & 6256.5\\
+Refractory, 1 worker & 12 & 1222.4 & 1219.7\\
+\bottomrule\end{tabular}
+
+Figure S3
+[H]\centering\includegraphics[width=.94\textwidth,height=2.8in,keepaspectratio]{figures/estimands.pdf}\caption{Individual paired whole/common/400-ms estimands. Shape and color identify bearing; negative-bearing pairs reuse calibration scenarios, while positive bearings still share calibration seeds. The black line is the median of all 12 pairs.}
+
+Figure S4
+[H]\centering\includegraphics[width=.57\textwidth,height=2.8in,keepaspectratio]{figures/revision_curves.pdf}\caption{Archived deletion doses, 12 trials each. Points are medians; bars show observed 10th--90th percentiles, not confidence intervals. Healthy references and the 51.4-Hz transmission threshold are separate lines.}
+
+Figure S5
+[H]\centering\includegraphics[width=.57\textwidth,height=1.7in,keepaspectratio]{figures/revision_activity.pdf}\caption{Historical network spikes in thousands, logarithmic scale. Each dot is a trial; horizontal segments are medians. The dashed twofold limit is operational, not an energy or safety budget. Both random-mass tail trials are retained.}
+
+Figure S6
+[H]\centering\includegraphics[width=.56\textwidth,height=3.2in,keepaspectratio]{figures/revision_demo.pdf}\caption{Legacy illustration, not a test of corrected geometry. The separation trace uses +30 degrees, seed 0. Squares/diamonds are whole/400-ms medians; dots show 400-ms pairs, open for calibration scenarios. Whole records can have unequal durations. Full-hub equal-duration late crossings remain valid in main Figure 3.}
+
+Figure S7
+[H]\centering\includegraphics[width=.94\textwidth,height=2.6in,keepaspectratio]{figures/assessment_windows.pdf}\caption{Post-hoc early-window diagnostics, all 12 scenario pairs and three shared seed medians. The 500-ms endpoint does not cover the full-hub late crossings. Refer to main Figure 3 for the complete one-second time course.}
+
+Figure S8
+[H]\centering\includegraphics[width=.55\textwidth,height=1.55in,keepaspectratio]{figures/fig0_pathway.pdf}\caption{Mapped pathway retained from the previous main Figure 1. For display, 90 of 849 relays are selected by summed sensory-input and command-output contacts. Labels follow mapped identities; line strength encodes contacts and dashed markers locate perturbations. Generator and input hashes accompany the artifact. This display does not establish a dynamical mechanism; the new main Figure 1 is a conceptual overview.}
+
+Table S17
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Complete factorial outcomes. L/G: paired losses/gains; H: healthy survivors at risk. Healthy rows are reused, not new runs.}
+\begin{tabular}{llrrrrrr}\toprule
+Law & Deletion & $-30^\circ$ & $+30^\circ$ & Total & L & G & H\\\midrule
+Original & Healthy & 4/6 & 0/6 & 4/12 & --- & --- & ---\\
+Original & 25\% & 4/6 & 0/6 & 4/12 & 1 & 1 & 4\\
+Original & 50\% & 0/6 & 0/6 & 0/12 & 4 & 0 & 4\\
+Pre-cue gate & Healthy & 6/6 & 0/6 & 6/12 & --- & --- & ---\\
+Pre-cue gate & 25\% & 3/6 & 0/6 & 3/12 & 3 & 0 & 6\\
+Pre-cue gate & 50\% & 0/6 & 0/6 & 0/12 & 6 & 0 & 6\\
+\bottomrule\end{tabular}
+
+Table S18
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Every scenario outcome: each cell lists binary survival (-30,+30 degrees). H denotes healthy; 25/50 denote deletion percentages.}
+\begin{tabular}{lrrrrrr}\toprule
+Seed & Original H & Original 25 & Original 50 & Pre-cue gate H & Pre-cue gate 25 & Pre-cue gate 50\\\midrule
+12 & 1,0 & 0,0 & 0,0 & 1,0 & 0,0 & 0,0\\
+13 & 1,0 & 1,0 & 0,0 & 1,0 & 0,0 & 0,0\\
+14 & 0,0 & 1,0 & 0,0 & 1,0 & 1,0 & 0,0\\
+15 & 1,0 & 1,0 & 0,0 & 1,0 & 1,0 & 0,0\\
+16 & 0,0 & 0,0 & 0,0 & 1,0 & 0,0 & 0,0\\
+17 & 1,0 & 1,0 & 0,0 & 1,0 & 1,0 & 0,0\\
+\bottomrule\end{tabular}
+
+Table S19
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Every paired loss/gain count within seed (two bearings). A gain is retained rather than discarded from the net loss.}
+\begin{tabular}{lrrrr}\toprule
+Seed & Original 25 & Original 50 & Gate 25 & Gate 50\\\midrule
+12 & 1,0 & 1,0 & 1,0 & 1,0\\
+13 & 0,0 & 1,0 & 1,0 & 1,0\\
+14 & 0,1 & 0,0 & 0,0 & 1,0\\
+15 & 0,0 & 1,0 & 0,0 & 1,0\\
+16 & 0,0 & 0,0 & 1,0 & 1,0\\
+17 & 0,0 & 1,0 & 0,0 & 1,0\\
+\bottomrule\end{tabular}
+
+Table S20
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Controller interaction, in percentage points (pp). Six seed values are the actual independent cluster contrasts, not six extra experiments.}
+\begin{tabular}{llrr}\toprule
+Deletion & Six seed contrasts (pp) & Mean (pp) & Range (pp)\\\midrule
+25\% & 0, 50, 50, 0, 50, 0 & +25.0 & [8.3, 41.7]\\
+50\% & 0, 0, 50, 0, 50, 0 & +16.7 & [0.0, 33.3]\\
+\bottomrule\end{tabular}
+
+Table S21
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Median within-scenario fault/healthy network-spike ratios under the same law. Each cell retains all 12 pairs. Common duration is pair-specific and outcome-dependent.}
+\begin{tabular}{lrrrrr}\toprule
+Law / deletion & 200 ms & 300 ms & 400 ms & 500 ms & Common\\\midrule
+Original 25\% & 0.8889 & 0.8976 & 0.9532 & 0.9623 & 0.9712\\
+Original 50\% & 0.7293 & 0.7525 & 0.9074 & 0.9969 & 1.0322\\
+Pre-cue gate 25\% & 0.8863 & 0.9414 & 0.9457 & 0.9470 & 0.9701\\
+Pre-cue gate 50\% & 0.7525 & 0.7750 & 0.8785 & 0.9275 & 1.0796\\
+\bottomrule\end{tabular}
+
+Table S22
+[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Activity-only flags R(t)>c versus collision/survival through 1000 ms. FC/UC: flagged/unflagged collisions; FS/US: flagged/unflagged survivors. Counts for c=2,3,4 are identical and combined. All four 200--500-ms windows appear in thresholds.csv.}
+\begin{tabular}{lrrrrrr}\toprule
+Law / deletion & $t$ (ms) & $c$ & FC & UC & FS & US\\\midrule
+Original 25\% & 400 & 1.5 & 0 & 8 & 0 & 4\\
+Original 25\% & 400 & 2/3/4 & 0 & 8 & 0 & 4\\
+Original 25\% & 500 & 1.5 & 0 & 8 & 1 & 3\\
+Original 25\% & 500 & 2/3/4 & 0 & 8 & 0 & 4\\
+Original 50\% & 400 & 1.5 & 0 & 12 & 0 & 0\\
+Original 50\% & 400 & 2/3/4 & 0 & 12 & 0 & 0\\
+Original 50\% & 500 & 1.5 & 0 & 12 & 0 & 0\\
+Original 50\% & 500 & 2/3/4 & 0 & 12 & 0 & 0\\
+Pre-cue gate 25\% & 400 & 1.5 & 0 & 9 & 0 & 3\\
+Pre-cue gate 25\% & 400 & 2/3/4 & 0 & 9 & 0 & 3\\
+Pre-cue gate 25\% & 500 & 1.5 & 0 & 9 & 1 & 2\\
+Pre-cue gate 25\% & 500 & 2/3/4 & 0 & 9 & 0 & 3\\
+Pre-cue gate 50\% & 400 & 1.5 & 0 & 12 & 0 & 0\\
+Pre-cue gate 50\% & 400 & 2/3/4 & 0 & 12 & 0 & 0\\
+Pre-cue gate 50\% & 500 & 1.5 & 0 & 12 & 0 & 0\\
+Pre-cue gate 50\% & 500 & 2/3/4 & 0 & 12 & 0 & 0\\
+\bottomrule\end{tabular}
+
+Figure S9
+[H]\centering\includegraphics[width=.85\textwidth,height=2.8in,keepaspectratio]{figures/controller_fault_pairs.pdf}\caption{Every paired seed/bearing activity ratio at 400 ms. Lines join the same seed and bearing across nested deletion doses within a control law. Color/shape identify direction; thick black bars are medians. Both bearings share six seed clusters.}

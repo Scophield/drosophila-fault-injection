@@ -1,0 +1,290 @@
+{
+  "definition": "transmission-only re-scoring, not execution of SpikeFI or SpikingJET",
+  "theta_hz": 51.4,
+  "envelope": 2,
+  "baseline_rate_hz": 94.6875,
+  "baseline_spikes": 39694.0,
+  "trials": 288,
+  "transmission_only_pass": 276,
+  "envelope_pass": 262,
+  "conditions": [
+    {
+      "name": "F1_wvar_05",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F1_wvar_05.jsonl"
+    },
+    {
+      "name": "F1_wvar_10",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F1_wvar_10.jsonl"
+    },
+    {
+      "name": "F1_wvar_20",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F1_wvar_20.jsonl"
+    },
+    {
+      "name": "F1_wvar_50",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F1_wvar_50.jsonl"
+    },
+    {
+      "name": "F2_drop_05",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F2_drop_05.jsonl"
+    },
+    {
+      "name": "F2_drop_10",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F2_drop_10.jsonl"
+    },
+    {
+      "name": "F2_drop_25",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F2_drop_25.jsonl"
+    },
+    {
+      "name": "F2_drop_50",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F2_drop_50.jsonl"
+    },
+    {
+      "name": "F3_loss_01",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F3_loss_01.jsonl"
+    },
+    {
+      "name": "F3_loss_02",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F3_loss_02.jsonl"
+    },
+    {
+      "name": "F3_loss_05",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F3_loss_05.jsonl"
+    },
+    {
+      "name": "F3_loss_10",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F3_loss_10.jsonl"
+    },
+    {
+      "name": "F4_hub_1pct",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F4_hub_1pct.jsonl"
+    },
+    {
+      "name": "F4_hub_2pct",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F4_hub_2pct.jsonl"
+    },
+    {
+      "name": "F4_hub_5pct",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F4_hub_5pct.jsonl"
+    },
+    {
+      "name": "F5_in_both",
+      "trials": 12,
+      "transmission": 0,
+      "envelope": 0,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F5_in_both.jsonl"
+    },
+    {
+      "name": "F5_in_LC4",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F5_in_LC4.jsonl"
+    },
+    {
+      "name": "F5_in_LPLC2",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim\\results\\real\\F5_in_LPLC2.jsonl"
+    },
+    {
+      "name": "EIm_1pct",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim_vision\\results_vision\\openloop_controls\\EIm_1pct.jsonl"
+    },
+    {
+      "name": "EIm_2pct",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim_vision\\results_vision\\openloop_controls\\EIm_2pct.jsonl"
+    },
+    {
+      "name": "HUB_exc",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim_vision\\results_vision\\openloop_controls\\HUB_exc.jsonl"
+    },
+    {
+      "name": "HUB_inh",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 0,
+      "additional_failures": [
+        {
+          "trial": 0,
+          "spikes": 844857,
+          "spikes_ratio": 21.284249508741876,
+          "rate_ratio": 1.7601760176017605
+        },
+        {
+          "trial": 1,
+          "spikes": 847204,
+          "spikes_ratio": 21.343376832770694,
+          "rate_ratio": 1.7843784378437846
+        },
+        {
+          "trial": 2,
+          "spikes": 846310,
+          "spikes_ratio": 21.320854537209655,
+          "rate_ratio": 1.7711771177117712
+        },
+        {
+          "trial": 3,
+          "spikes": 850259,
+          "spikes_ratio": 21.420340605633093,
+          "rate_ratio": 1.7799779977997803
+        },
+        {
+          "trial": 4,
+          "spikes": 847586,
+          "spikes_ratio": 21.35300045346904,
+          "rate_ratio": 1.7733773377337736
+        },
+        {
+          "trial": 5,
+          "spikes": 846566,
+          "spikes_ratio": 21.327303874641004,
+          "rate_ratio": 1.7865786578657867
+        },
+        {
+          "trial": 6,
+          "spikes": 848979,
+          "spikes_ratio": 21.388093918476343,
+          "rate_ratio": 1.777777777777778
+        },
+        {
+          "trial": 7,
+          "spikes": 850319,
+          "spikes_ratio": 21.421852169093565,
+          "rate_ratio": 1.7755775577557755
+        },
+        {
+          "trial": 8,
+          "spikes": 849677,
+          "spikes_ratio": 21.40567844006651,
+          "rate_ratio": 1.7799779977997803
+        },
+        {
+          "trial": 9,
+          "spikes": 847367,
+          "spikes_ratio": 21.347483246838312,
+          "rate_ratio": 1.8063806380638066
+        },
+        {
+          "trial": 10,
+          "spikes": 849336,
+          "spikes_ratio": 21.397087721066157,
+          "rate_ratio": 1.7755775577557755
+        },
+        {
+          "trial": 11,
+          "spikes": 845824,
+          "spikes_ratio": 21.308610873179827,
+          "rate_ratio": 1.7513751375137514
+        }
+      ],
+      "source": "sim_vision\\results_vision\\openloop_controls\\HUB_inh.jsonl"
+    },
+    {
+      "name": "INHrand_cells",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 12,
+      "additional_failures": [],
+      "source": "sim_vision\\results_vision\\openloop_controls\\INHrand_cells.jsonl"
+    },
+    {
+      "name": "INHrand_mass",
+      "trials": 12,
+      "transmission": 12,
+      "envelope": 10,
+      "additional_failures": [
+        {
+          "trial": 3,
+          "spikes": 327246,
+          "spikes_ratio": 8.244218269763692,
+          "rate_ratio": 1.2343234323432344
+        },
+        {
+          "trial": 9,
+          "spikes": 271058,
+          "spikes_ratio": 6.82868947447977,
+          "rate_ratio": 1.0913091309130913
+        }
+      ],
+      "source": "sim_vision\\results_vision\\openloop_controls\\INHrand_mass.jsonl"
+    }
+  ]
+}

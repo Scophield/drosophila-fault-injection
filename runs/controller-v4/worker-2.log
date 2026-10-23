@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import sys; sys.path[:0]=['D:\\autoresearch_labtorary\\drosophila-fault-injection\\tmp\\brian-current', 'D:\\autoresearch_labtorary\\drosophila-fault-injection\\tmp\\sim-deps', 'D:\\autoresearch_labtorary\\drosophila-fault-injection\\tmp\\review-deps', 'D:\\autoresearch_labtorary\\drosophila-fault-injection\\tmp\\scipy-current', 'C:\\Users\\ohsawalab gpu3\\AppData\\Local\\com.scienceguru.pro\\agent-runtime\\store\\base\\2026.09.11.1\\windows-x86_64\\python\\python313.zip', 'C:\\Users\\ohsawalab gpu3\\AppData\\Local\\com.scienceguru.pro\\agent-runtime\\store\\base\\2026.09.11.1\\windows-x86_64\\python', 'C:\\Users\\ohsawalab gpu3\\AppData\\Local\\com.scienceguru.pro\\agent-runtime\\store\\base\\2026.09.11.1\\windows-x86_64\\python\\Lib\\site-packages']; import _distutils_hack; _distutils_hack.add_shim(); import runpy; runpy.run_path("sim_vision/run_closedloop.py",run_name="__main__")
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 294, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "sim_vision/run_closedloop.py", line 11, in <module>
+    from closedloop_protocol import (PROTOCOL_VERSION, retinal_input, segment_min_distance,
+                                     frame_count, calibration_keys, validate_test_keys,
+                                     validate_calibration)
+ModuleNotFoundError: No module named 'closedloop_protocol'

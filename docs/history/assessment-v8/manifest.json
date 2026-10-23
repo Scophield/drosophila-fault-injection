@@ -1,0 +1,12 @@
+{
+  "note": "Prior local assessment-v8 documentation, preserved before v9 promotion; historical commands and conclusions are superseded.",
+  "source_sha256": {
+    "README.md": "f944f525eafcac445e6a982424817442866a2b1ad06a4fb28279d30044ae6559",
+    "REPRODUCE.md": "99d5b8839b9978f524a7db61639ddbbae3daf581a9f136f51bd68fa55cdb5389",
+    "ARTIFACT_README.md": "b50cd75d58031a7775387f9cfa8c8e564f18130776a6a21faa9586c55cbd4e7a",
+    "REVIEW_MATERIALS.md": "1304ce6f8bfbf661240a80ee0c96fc13ba37bb74b6f1e0bbec85a16374d9b1ae",
+    "docs/STATE.md": "0b5b020e74714f6d83b9b36fd5280f976ccc1ed1cce2701eab832bb86772b38c",
+    "paper/README.md": "95c3b341aaa848f3be2ef7f27aac00edc4d092bc88911462e6618d58a938b35a",
+    "paper/main.tex": "e3cc9e7f4a898ce64ae608e63e3c818fde3cf5c38e91bdfcae00d10ce94a84d8"
+  }
+}
