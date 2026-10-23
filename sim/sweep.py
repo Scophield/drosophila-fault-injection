@@ -7,6 +7,8 @@ from pathlib import Path
 import numpy as np
 
 from engine import FlyBrainSim, get_type_ids
+from hub_selection import for_sim, save_manifest
+from run_provenance import output_dir, prepare
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = Path(__file__).parent / "results"
@@ -68,14 +70,7 @@ def apply_fault(sim, spec, exc_ids, ro_ids, rng):
         return w
     if t == "hub":
         protected = set(exc_ids) | set(ro_ids)
-        out_deg = np.bincount(sim._pre_idx, weights=np.abs(sim.w0) / 2.75e-4, minlength=sim.n_neurons)
-        order = np.argsort(-out_deg)
-        hubs = []
-        for i in order:
-            if sim.i2flyid[int(i)] not in protected:
-                hubs.append(int(i))
-            if len(hubs) >= int(round(spec["frac"] * sim.n_neurons)):
-                break
+        hubs = for_sim(sim, protected, spec['frac'])
         mask = sim.out_mask(hubs)
         w = sim.w0.copy()
         w[mask] = 0.0
@@ -97,10 +92,13 @@ def main():
     ap.add_argument("--phase", default="real")
     ap.add_argument("--budget", type=float, default=780.0)
     ap.add_argument("--er-seed", type=int, default=17)
+    ap.add_argument('--trials', type=int, default=N_TRIALS)
+    ap.add_argument('--resume', action='store_true')
     args = ap.parse_args()
 
-    out_dir = OUT / args.phase
-    out_dir.mkdir(parents=True, exist_ok=True)
+    out_dir = prepare(output_dir('core') / args.phase,
+                      dict(phase=args.phase, er_seed=args.er_seed, trials=args.trials,
+                           drive_hz=R_POI, duration_ms=T_RUN, seed_rule='sha256 phase|condition|trial'), args.resume)
     ids = get_type_ids()
     exc = ids["LC4"] + ids["LPLC2"]
     ro = ids["DNp01"] + ids["DNa02"] + ids["DNp04"] + ids["DNb01"]
@@ -121,6 +119,9 @@ def main():
         raise SystemExit("phase must be real or er")
 
     t_start = time.time()
+    protected = set(exc) | set(ro)
+    hub_hashes = {f: save_manifest(out_dir / f'hubs_{f}.json', sim,
+                                 for_sim(sim, protected, f), protected) for f in (.01,.02,.05)}
     for cond, spec in conds:
         f_out = out_dir / f"{cond}.jsonl"
         done = set()
@@ -128,7 +129,7 @@ def main():
             for line in f_out.read_text().splitlines():
                 if line.strip():
                     done.add(json.loads(line)["trial"])
-        for k in range(N_TRIALS):
+        for k in range(args.trials):
             if k in done:
                 continue
             if time.time() - t_start > args.budget:
@@ -145,6 +146,8 @@ def main():
             if w_f is not None:
                 n_mod = float(np.mean(w_f != sim.w0))
             rec = {
+                'condition': cond, 'phase': args.phase, 'fault_seed': trial_seed(args.phase,cond,k),
+                'hub_sha256': hub_hashes.get(spec.get('frac')) if spec.get('type') == 'hub' else None,
                 "trial": k,
                 "pop_rate": rate,
                 "success": bool(rate >= THETA),

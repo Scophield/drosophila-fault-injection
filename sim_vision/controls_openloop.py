@@ -9,6 +9,8 @@ from brian2 import Hz, ms
 
 from vision_core import VisionSim
 from engine import get_type_ids
+from hub_selection import select_hubs, profile, save_manifest
+from run_provenance import output_dir, prepare
 
 OUT = Path(__file__).resolve().parent / "results_vision" / "openloop_controls"
 T_RUN = 600
@@ -38,12 +40,7 @@ class Setup:
         self.protected = set(self.exc) | set(self.ro)
         s = self.sim
         self.w0 = s.w0.copy()
-        sign_idx = np.unique(s._pre_idx, return_index=True)[1]
-        self.pre_sign = np.zeros(s.n_neurons, dtype=np.int64)
-        self.pre_sign[s._pre_idx[sign_idx]] = np.sign(self.w0[sign_idx]).astype(np.int64)
-        self.out_deg = np.bincount(
-            s._pre_idx, weights=np.abs(self.w0) / 2.75e-4, minlength=s.n_neurons
-        )
+        self.out_deg, self.pre_sign = profile(s)
         self.inh_pool = np.asarray(
             [i for i in range(s.n_neurons)
              if self.pre_sign[i] < 0 and s.i2flyid[i] not in self.protected], dtype=np.int64
@@ -58,14 +55,14 @@ class Setup:
             self.hubs[frac] = self._top_cells(int(round(frac * s.n_neurons)))
 
     def _top_cells(self, n):
-        order = np.argsort(-self.out_deg)
-        out = []
-        for i in order:
-            if int(i) not in self.protected:
-                out.append(int(i))
-            if len(out) >= n:
-                break
-        return np.asarray(out, dtype=np.int64)
+        return select_hubs(self.out_deg, self.sim.i2flyid, self.protected, n)
+
+    def save_hubs(self, out):
+        h=self.hubs[.01]
+        for name,pick in [('HUB_inh',h[self.pre_sign[h]<0]),('HUB_exc',h[self.pre_sign[h]>0])]:
+            save_manifest(Path(out)/f'{name}_cells.json',self.sim,pick,self.protected)
+        return {frac: save_manifest(Path(out) / f'hubs_{frac}.json', self.sim, h, self.protected)
+                for frac, h in self.hubs.items()}
 
     def hub_inh_frac(self, frac=0.01):
         h = self.hubs[frac]
@@ -131,10 +128,14 @@ def main():
     ap.add_argument("--only", default="")
     ap.add_argument("--trials", type=int, default=N_TRIALS)
     ap.add_argument("--budget", type=float, default=2400.0)
+    ap.add_argument('--resume', action='store_true')
     args = ap.parse_args()
 
-    OUT.mkdir(parents=True, exist_ok=True)
+    out = prepare(output_dir('controls'),
+                  dict(producer='controls_openloop',only=args.only,trials=args.trials,
+                       drives=list(DRIVES),duration_ms=T_RUN,seed_rule='sha256 ctrl|condition|trial'),args.resume)
     st = Setup()
+    st.save_hubs(out)
     print(f"built: n_neurons={st.sim.n_neurons} hubs1={len(st.hubs[0.01])} "
           f"inh_frac={st.hub_inh_frac():.3f} inh_pool={len(st.inh_pool)} exc_pool={len(st.exc_pool)}",
           flush=True)
@@ -143,7 +144,7 @@ def main():
     for name, base, drive in conditions():
         if args.only and args.only not in name:
             continue
-        f_out = OUT / f"{name}.jsonl"
+        f_out = out / f"{name}.jsonl"
         done = set()
         if f_out.exists():
             for line in f_out.read_text().splitlines():
@@ -173,6 +174,7 @@ def main():
             t_ro = t_ms[keep]
             rate = len(t_ro) / (len(st.ro) * T_RUN / 1000)
             rec = {
+                'fault_seed': trial_seed(name,k),
                 "trial": k,
                 "cond": name,
                 "base": base,

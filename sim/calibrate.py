@@ -5,9 +5,9 @@ from pathlib import Path
 import numpy as np
 
 from engine import FlyBrainSim, get_type_ids
+from run_provenance import output_dir, prepare
 
-OUT = Path(__file__).parent / "results" / "calib"
-OUT.mkdir(parents=True, exist_ok=True)
+OUT = prepare(output_dir('core')/'calib',dict(producer='calibrate',trials=10,drive_hz=150,duration_ms=600))
 
 ids = get_type_ids()
 ro = ids["DNp01"] + ids["DNa02"] + ids["DNp04"] + ids["DNb01"]

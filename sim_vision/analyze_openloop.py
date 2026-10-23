@@ -8,13 +8,17 @@ OUT = Path(__file__).resolve().parent / "results_vision"
 CMD_TYPES = ["DNp01", "DNa02", "DNp04", "DNb01"]
 
 
-def load_runs(name="openloop.jsonl"):
-    rows = [json.loads(l) for l in (OUT / name).open()]
+def load_runs(name="openloop.jsonl", input_dir=OUT, legacy_duration_ms=None):
+    rows = [json.loads(l) for l in (input_dir / name).open()]
     df = pd.DataFrame(rows)
     df["lr_diff"] = 0.0
     for ct in CMD_TYPES:
         df["lr_diff"] += df[f"{ct}_left"] - df[f"{ct}_right"]
-    df["cmd_rate"] = df["n_cmd_spikes"] / 0.6
+    if 'duration_ms' not in df:
+        if legacy_duration_ms is None:
+            raise ValueError('legacy visual records lack duration; supply an explicit legacy_duration_ms assumption')
+        df['duration_ms']=legacy_duration_ms
+    df["cmd_rate"] = df["n_cmd_spikes"] / (df['duration_ms'] / 1000.0) / df.get("n_readout",8)
     return df
 
 
@@ -32,9 +36,17 @@ def summarize(df):
 
 
 def main():
-    df = load_runs()
+    import argparse
+    ap=argparse.ArgumentParser()
+    ap.add_argument('--input',type=Path,default=OUT)
+    ap.add_argument('--out',type=Path,required=True)
+    ap.add_argument('--legacy-duration-ms',type=float)
+    args=ap.parse_args()
+    df = load_runs(input_dir=args.input,legacy_duration_ms=args.legacy_duration_ms)
     g = summarize(df)
-    g.to_csv(OUT / "openloop_summary.csv")
+    args.out.parent.mkdir(parents=True,exist_ok=True)
+    with args.out.open("x",newline="") as output:
+        g.to_csv(output)
     print(g.round(1).to_string())
     none_row = df[df.cond_id == "none"]
     print("\nnone: max cmd_rate across seeds =", none_row.cmd_rate.max())

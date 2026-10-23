@@ -4,11 +4,18 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-comp_ids = None
+from project_paths import PATH_COMP, PATH_ANN, ROOT
+from pathlib import Path
+import argparse
+ap=argparse.ArgumentParser()
+ap.add_argument('--results',type=Path,default=ROOT/'sim/results/real')
+ap.add_argument('--out',type=Path,required=True)
+args=ap.parse_args()
+args.out.mkdir(parents=True,exist_ok=False)
 import pandas as pd
-comp = pd.read_csv("../Drosophila_brain_model/Completeness_783.csv", index_col=0)
+comp = pd.read_csv(PATH_COMP, index_col=0)
 i2fid = comp.index.astype("int64").values
-ann = pd.read_csv("data/annotations.tsv", sep="\t", usecols=["root_id", "cell_type"], low_memory=False)
+ann = pd.read_csv(PATH_ANN, sep="\t", usecols=["root_id", "cell_type"], low_memory=False)
 cmap = dict(zip(ann.root_id.astype("int64"), ann.cell_type.fillna("?")))
 
 def counts(pat):
@@ -20,7 +27,7 @@ def counts(pat):
                 c[i] = c.get(i, 0) + 1
     return c
 
-h, f2 = counts("results/real/healthy.jsonl"), counts("results/real/F2_drop_50.jsonl")
+h, f2 = counts(str(args.results/"healthy.jsonl")), counts(str(args.results/"F2_drop_50.jsonl"))
 cells = sorted(set(h) | set(f2), key=lambda i: -h.get(i, 0))
 labels = [f"{cmap.get(int(i2fid[i]), '?')} #{i}" for i in cells]
 hv = [h.get(i, 0) for i in cells]
@@ -38,5 +45,5 @@ ax.set_title("Per-neuron command readout composition", fontsize=7.5)
 for sp in ["top", "right"]:
     ax.spines[sp].set_visible(False)
 fig.tight_layout()
-fig.savefig("figs/fig_neuron.png", bbox_inches="tight")
+fig.savefig(args.out/"fig_neuron.png", bbox_inches="tight")
 print("saved", len(cells), "cells; totals", sum(hv), sum(fv))

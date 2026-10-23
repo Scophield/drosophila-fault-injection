@@ -1,4 +1,5 @@
 import json
+import argparse
 from collections import defaultdict
 from pathlib import Path
 
@@ -42,11 +43,20 @@ def summarize(rows):
 
 
 def main():
+    global OUT, BASE
+    ap=argparse.ArgumentParser()
+    ap.add_argument('--input',type=Path,default=OUT)
+    ap.add_argument('--core',type=Path,default=Path(__file__).resolve().parents[1]/'sim/results/real')
+    ap.add_argument('--out',type=Path,required=True)
+    args=ap.parse_args()
+    OUT=args.input
+    BASE=args.core
+    args.out.mkdir(parents=True,exist_ok=False)
     files = sorted(OUT.glob("*.jsonl"))
     res = {}
     for f in files:
         res[f.stem] = summarize(load(f))
-    (OUT / "summary.json").write_text(json.dumps(res, indent=2))
+    (args.out / "summary.json").write_text(json.dumps(res, indent=2))
 
     hdr = f"{'condition':<16}{'n':>4}{'rate':>8}{'95% CI':>18}{'spikes':>10}{'lat':>7}{'pass':>7}"
     print(hdr)
@@ -58,7 +68,7 @@ def main():
     try:
         old = {}
         for name in ("healthy", "F2_drop_50", "F4_hub_1pct"):
-            p = BASE / "real" / f"{name}.jsonl"
+            p = BASE / f"{name}.jsonl"
             if p.exists():
                 old[name] = summarize(load(p))
         if old:
@@ -66,7 +76,7 @@ def main():
             for k, v in old.items():
                 print(f"  {k:<14}{v['rate_med']:>7.1f}  [{v['rate_ci'][0]:.1f},{v['rate_ci'][1]:.1f}]  "
                       f"spikes {v['tot_med']:.0f}")
-            (OUT / "summary_reference.json").write_text(json.dumps(old, indent=2))
+            (args.out / "summary_reference.json").write_text(json.dumps(old, indent=2))
     except Exception as exc:
         print("reference summary failed:", exc)
 

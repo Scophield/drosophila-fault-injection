@@ -1,57 +1,33 @@
 \documentclass[conference]{IEEEtran}
-\IEEEoverridecommandlockouts
 \usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts}
-\usepackage{graphicx}
-\usepackage{textcomp}
-\usepackage{xcolor}
-\usepackage{booktabs}
-\usepackage{placeins}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,fit,backgrounds,calc}
-\usepackage[hidelinks]{hyperref}
-\renewcommand{\topfraction}{0.95}
-\renewcommand{\dbltopfraction}{0.95}
-\renewcommand{\textfraction}{0.05}
-\renewcommand{\floatpagefraction}{0.95}
-\renewcommand{\dblfloatpagefraction}{0.95}
-\setcounter{topnumber}{3}
-\setcounter{dbltopnumber}{3}
-\setcounter{totalnumber}{5}
-\setlength{\textfloatsep}{7pt plus 2pt minus 2pt}
-\setlength{\dbltextfloatsep}{7pt plus 2pt minus 2pt}
-\setlength{\floatsep}{7pt plus 2pt minus 2pt}
-\setlength{\intextsep}{7pt plus 2pt minus 2pt}
-\raggedbottom
-\setlength{\abovecaptionskip}{3pt}
-\setlength{\belowcaptionskip}{0pt}
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
-
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx,booktabs,placeins,url}
 \begin{document}
-\title{How Much Fault Tolerance Is in a Fly Brain?\\
-{\large Fault-Injection Analysis of a Whole-Connectome Spiking Controller for Physical Intelligence}}
-
+\title{Paired Fault Assessment of a Fly-Connectome Spiking Controller}
 \author{\IEEEauthorblockN{Shuchao Gao}
-\IEEEauthorblockA{Waseda University\\
-Tokyo, Japan}}
-
+\IEEEauthorblockA{Waseda University\\Tokyo, Japan}}
 \maketitle
-
+\bstctlcite{IEEEcontrol}
 \begin{abstract}
-Whole-brain point-neuron models built from complete wiring diagrams now serve as controllers in embodied settings, yet their fault tolerance has been probed by targeted silencing and lesioning rather than by hardware fault classes. We take the released leaky integrate-and-fire (LIF) whole-brain model of \emph{Drosophila melanogaster} (138{,}639 neurons, 15.1M signed connections, 54.5M contacts) and inject five hardware-motivated fault classes---weight variability, connection loss, random-unit and hub output silencing, and sensory deafferentation---scoring the population response of descending command neurons at three to four doses, 12 seeded trials each, on the biological graph and on an edge-permuted null. Under escape-grade drive the connectome absorbs 50\% lognormal weight variability; 50\% connection loss retains 76.5\% of command rate at a 33\% latency cost; 10\% random-unit output silencing leaves the median unchanged; silencing the top-1\% hubs leaves the readout 26\% above baseline, and silencing only their inhibitory half produces a 21$\times$ runaway that the full set masks and that costs a closed loop its steering. The null, which preserves weights and degrees but reassigns every target, never reaches threshold and decays at the same relative rate, pointing to compressive recruitment on the convergence structure rather than to redundancy alone. A synthetic closed-loop escape task then exposes the limit of these metrics: at 50\% loss open-loop transmission is retained while escape collapses to 0/12, because the readout reaches its trigger only when the threat is 7--11\,cm away. Five candidate design implications follow.
+Task-level fault loss in a spiking controller can depend on feedback even when healthy success counts match. We provide an auditable paired assessment with shared input variates and deletion masks, causal feedback, exact scheduled actuation and independent input/geometry replay. A 138,639-neuron fly-connectome model is tested on 24 new seed clusters crossing two laws, two bearings and three network conditions. All 96 healthy episodes remain collision-free through one second. At 50\% connection-row deletion, proportional and relay control succeed in 37/48 and 48/48 episodes; their paired loss difference is 22.9 percentage points, with a 95\% cluster interval of 12.5--33.3 and Holm-adjusted $p=0.00195$. The 25\% contrast remains uncertain. A frozen 400-ms command-rate criterion detects only 2/13 later collisions. Geometry-informed forecasting detects all 13 but flags 57/275 successful tasks. Task loss changes with the declared horizon; stopped-duration matching leaves new group activity medians unchanged. These findings support paired task assessment without establishing biological or hardware fault tolerance.
 \end{abstract}
-
 \begin{IEEEkeywords}
-neuromorphic computing, connectome, fault tolerance, fault injection, Drosophila
+spiking neural networks, fault assessment, feedback control, connectome, neuromorphic systems
 \end{IEEEkeywords}
-
-\input{sections/intro}
-\input{sections/related}
-\input{sections/methods}
-\input{sections/results}
-\input{sections/principles}
-
+\input{sections/v9_intro}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figs/task_v9_overview.pdf}
+\caption{Model-to-task interface. (a) Representative anchors and a separate illustrative fly. (b) A 410-cell/1,050-connection subgraph, with schematic layout and routes, not measured neurites or the full recurrent graph. Colors denote groups. (c) Synthetic task, next-frame steering and exact burst timing for $t_d=200$\,ms. P/R: proportional/relay control.}
+\label{fig:v9-protocol}
+\end{figure*}
+\input{sections/v9_related}
+\input{sections/v9_methods}
+\input{sections/v9_results}
+\input{sections/v9_artifact}
+\input{sections/v9_discussion}
+\FloatBarrier
+\clearpage
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
-
 \end{document}

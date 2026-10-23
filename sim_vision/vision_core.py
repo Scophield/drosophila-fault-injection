@@ -6,7 +6,6 @@ from pathlib import Path
 
 SIM_DIR = Path(__file__).resolve().parent
 ROOT = SIM_DIR.parent
-sys.path.insert(0, str(ROOT / "Drosophila_brain_model"))
 sys.path.insert(0, str(ROOT / "sim"))
 
 import engine as _engine
@@ -41,6 +40,7 @@ def _load_edges_lean():
 
 class VisionSim:
     def __init__(self, background_seed=0):
+        _engine.defaultclock.dt = 0.1 * ms
         p = dict(_engine.default_params)
         self.params = p
         comp = pd.read_csv(_engine.PATH_COMP, index_col=0)
