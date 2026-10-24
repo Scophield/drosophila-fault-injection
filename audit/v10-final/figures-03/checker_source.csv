@@ -1,0 +1,29 @@
+adapter,error,detected,layer,issue_codes
+tank,missing paired condition,True,common,matrix-membership
+tank,duplicate trial replacing a condition,True,common,duplicate-cell;matrix-membership
+tank,swapped source/config/map/calibration binding,True,common,mixed-bindings
+tank,same seed label but different shared input stream,True,common,adapter-replay;unpaired-uniforms
+tank,fault mask changed across laws/bearings,True,common,adapter-pair-replay;unpaired-mask
+tank,milliseconds mislabelled as seconds,True,common,decision-availability;frame-clock
+tank,truncated resource exposure,True,common,incomplete-exposure
+tank,decreasing cumulative resource,True,common,resource-accounting
+tank,decision used before it exists,True,common,decision-availability
+tank,nonfinite decision time,True,common,invalid-frame-schema
+tank,success despite a recorded failure,True,common,outcome-label
+tank,missing native measurement field,True,native-only,adapter-replay
+tank,rounded delayed actuation to frame boundary,True,native-only,adapter-replay
+tank,same-frame applied control,True,native-only,adapter-replay
+fly,missing paired condition,True,common,matrix-membership
+fly,duplicate trial replacing a condition,True,common,duplicate-cell;matrix-membership
+fly,swapped source/config/map/calibration binding,True,common,mixed-bindings
+fly,same seed label but different shared input stream,True,common,unpaired-uniforms
+fly,fault mask changed across laws/bearings,True,common,adapter-pair-replay;unpaired-mask
+fly,milliseconds mislabelled as seconds,True,common,decision-availability;frame-clock
+fly,truncated resource exposure,True,common,incomplete-exposure
+fly,decreasing cumulative resource,True,common,resource-accounting
+fly,decision used before it exists,True,common,decision-availability
+fly,nonfinite decision time,True,common,invalid-frame-schema
+fly,success despite a recorded failure,True,common,outcome-label
+fly,missing native smoothing field,True,native-only,adapter-replay
+fly,wrong exact-horizon burst flag,True,native-only,adapter-replay
+fly,altered body-frame bearing,True,native-only,adapter-replay

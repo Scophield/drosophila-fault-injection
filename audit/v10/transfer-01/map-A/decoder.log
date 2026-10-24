@@ -1,0 +1,59 @@
+{
+  "role": "held-out healthy validation, descriptive diagnostic; no fitting or test tuning",
+  "episodes": 32,
+  "seed_clusters": 8,
+  "frames": 352,
+  "window_frame_end_ms": [
+    200,
+    400
+  ],
+  "target": "body-frame bearing used to encode each input frame, in degrees",
+  "feature": "five-frame smoothed rates, un-clipped affine decoder output times 60",
+  "rmse_deg": 67.76045757247081,
+  "mae_deg": 52.943376211508706,
+  "rmse_ci95_deg": [
+    66.13401723600236,
+    69.26464064148755
+  ],
+  "mae_ci95_deg": [
+    51.26786032958175,
+    54.5999433530715
+  ],
+  "bootstrap": {
+    "unit": "entire validation seed, both laws and bearings retained",
+    "draws": 20000,
+    "seed": 20261023
+  },
+  "per_law_bearing": [
+    {
+      "mode": "proportional",
+      "phi_deg": -30.0,
+      "frames": 88,
+      "rmse_deg": 47.033100290056296,
+      "mae_deg": 36.49348965426546
+    },
+    {
+      "mode": "proportional",
+      "phi_deg": 30.0,
+      "frames": 88,
+      "rmse_deg": 43.24694889455501,
+      "mae_deg": 32.39238840028795
+    },
+    {
+      "mode": "relay",
+      "phi_deg": -30.0,
+      "frames": 88,
+      "rmse_deg": 97.04284883134015,
+      "mae_deg": 86.26648472472492
+    },
+    {
+      "mode": "relay",
+      "phi_deg": 30.0,
+      "frames": 88,
+      "rmse_deg": 69.75810218775585,
+      "mae_deg": 56.621142066756484
+    }
+  ],
+  "calibration_sha256": "34d6a57ea3a5fab4b22461e21bb500399610fc4a4e7ed64ec9f4456c928aa2c6",
+  "source_sha256": "5e76f2a0b91a41f29cf113385a7e4383d6e2fa997e6ebfa1315583079bad4dfe"
+}

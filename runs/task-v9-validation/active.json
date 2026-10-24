@@ -1,0 +1,67 @@
+{
+  "started_unix": 1792638872.9695995,
+  "pids": [
+    30588,
+    39964,
+    39736
+  ],
+  "commands": [
+    [
+      "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-u",
+      "tools/run_v9.py",
+      "tools/run_task_v9.py",
+      "--out",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-validation",
+      "--seeds",
+      "300,303",
+      "--phis=-30,30",
+      "--modes",
+      "proportional,relay",
+      "--faults",
+      "healthy,F2_25,F2_50",
+      "--calibration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-development\\calibration-frozen.json",
+      "--role",
+      "validation"
+    ],
+    [
+      "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-u",
+      "tools/run_v9.py",
+      "tools/run_task_v9.py",
+      "--out",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-validation",
+      "--seeds",
+      "301",
+      "--phis=-30,30",
+      "--modes",
+      "proportional,relay",
+      "--faults",
+      "healthy,F2_25,F2_50",
+      "--calibration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-development\\calibration-frozen.json",
+      "--role",
+      "validation"
+    ],
+    [
+      "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-u",
+      "tools/run_v9.py",
+      "tools/run_task_v9.py",
+      "--out",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-validation",
+      "--seeds",
+      "302",
+      "--phis=-30,30",
+      "--modes",
+      "proportional,relay",
+      "--faults",
+      "healthy,F2_25,F2_50",
+      "--calibration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-development\\calibration-frozen.json",
+      "--role",
+      "validation"
+    ]
+  ]
+}

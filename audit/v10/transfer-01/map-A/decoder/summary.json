@@ -1,0 +1,135 @@
+{
+  "role": "held-out healthy validation, descriptive diagnostic; no fitting or test tuning",
+  "episodes": 32,
+  "seed_clusters": 8,
+  "frames": 352,
+  "window_frame_end_ms": [
+    200,
+    400
+  ],
+  "target": "body-frame bearing used to encode each input frame, in degrees",
+  "feature": "five-frame smoothed rates, un-clipped affine decoder output times 60",
+  "rmse_deg": 67.76045757247081,
+  "mae_deg": 52.943376211508706,
+  "rmse_ci95_deg": [
+    66.13401723600236,
+    69.26464064148755
+  ],
+  "mae_ci95_deg": [
+    51.26786032958175,
+    54.5999433530715
+  ],
+  "bootstrap": {
+    "unit": "entire validation seed, both laws and bearings retained",
+    "draws": 20000,
+    "seed": 20261023
+  },
+  "per_seed": [
+    {
+      "seed": 2200,
+      "rmse_deg": 67.58951693989872,
+      "mae_deg": 52.76344287862519
+    },
+    {
+      "seed": 2201,
+      "rmse_deg": 71.29771106895463,
+      "mae_deg": 56.81043887595353
+    },
+    {
+      "seed": 2202,
+      "rmse_deg": 66.48109846965808,
+      "mae_deg": 53.10322940431543
+    },
+    {
+      "seed": 2203,
+      "rmse_deg": 69.23020769479852,
+      "mae_deg": 56.071958033574425
+    },
+    {
+      "seed": 2204,
+      "rmse_deg": 67.55088360906011,
+      "mae_deg": 52.214799940098196
+    },
+    {
+      "seed": 2205,
+      "rmse_deg": 69.6949807684261,
+      "mae_deg": 52.65190432804689
+    },
+    {
+      "seed": 2206,
+      "rmse_deg": 63.20849959156833,
+      "mae_deg": 48.35014627121563
+    },
+    {
+      "seed": 2207,
+      "rmse_deg": 66.72140381551691,
+      "mae_deg": 51.58108996024027
+    }
+  ],
+  "per_law_bearing": [
+    {
+      "mode": "proportional",
+      "phi_deg": -30.0,
+      "frames": 88,
+      "rmse_deg": 47.033100290056296,
+      "mae_deg": 36.49348965426546
+    },
+    {
+      "mode": "proportional",
+      "phi_deg": 30.0,
+      "frames": 88,
+      "rmse_deg": 43.24694889455501,
+      "mae_deg": 32.39238840028795
+    },
+    {
+      "mode": "relay",
+      "phi_deg": -30.0,
+      "frames": 88,
+      "rmse_deg": 97.04284883134015,
+      "mae_deg": 86.26648472472492
+    },
+    {
+      "mode": "relay",
+      "phi_deg": 30.0,
+      "frames": 88,
+      "rmse_deg": 69.75810218775585,
+      "mae_deg": 56.621142066756484
+    }
+  ],
+  "calibration_sha256": "34d6a57ea3a5fab4b22461e21bb500399610fc4a4e7ed64ec9f4456c928aa2c6",
+  "raw_sha256": {
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi-30_s2200.json": "503b563ce7e46d1aaa61dc3d06cd48c0f32c88733e6de974717bca747f0caac1",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi-30_s2201.json": "e9391b608e2ff26af02f7179cfb4e899c3045ca96bbb5af5ef390449e72f43df",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi-30_s2202.json": "4fdf26b39f6d41feee5fb5209117d693e04c9bd94b785cd69d2a6e36f11d967e",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi-30_s2203.json": "c07faf0feaa814a1e11e8a00cf6e146d967f3dee6111591da5ac71845bd07884",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi-30_s2204.json": "37ecd20f4f90a8bf6d359995bac6a69b292babe355f571594e2a00ff7a877ec4",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi-30_s2205.json": "dd53a112a1ea595d58692ca7c5f9d27c1cd9b2e317fdbfc7c98fede397e6098f",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi-30_s2206.json": "86f4aabc085a533185b1b22f941867b4d8642f361d2533478aa5cd09c391be81",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi-30_s2207.json": "a236a6642beef5d96cb3f10fc692ccd0c90345515cb60bed2545e1b32445ef74",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi30_s2200.json": "212bc5cabc38044aad8e47cf9feb9f2084db965e9c50fce7ec9b3eee73c058e7",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi30_s2201.json": "5448a9b57bb0f2a4ca9d52709308840ec3ade3b37eea993b85f80fdf867653f6",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi30_s2202.json": "2957cfaeabf0ff9dc9bb4d77a0306a2b4885c15ffe78a42f6e28f84aa9c20b4f",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi30_s2203.json": "c1bcd88c19a2cb4b9e603a4bbf0b8af71601f7bb3ec934530fd0e578dcac9d17",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi30_s2204.json": "cee5606dc725018f7f902d777d7ffb7188b5303c713b37e8f34d6130a49f5528",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi30_s2205.json": "23090d3a4d6aec442e95dc4f1518a288ca16a3151391ca9d9e25e7998055c86e",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi30_s2206.json": "306bbfaed515dc29cbccea2d60e3e670935633262c2923301d0a300ac08ddf59",
+    "runs/task-v10-transfer/map-A/validation/episodes/proportional_healthy_phi30_s2207.json": "ff042f9e86005fa7b8834f92f13ebc15e55eebe34c3f35b8afd3376487334c86",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi-30_s2200.json": "b0c28b8199d5633d9a1b560f0e7c67c857be726645e550575ea46edc3352cbcf",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi-30_s2201.json": "939ef72471b92664afe0e7729c533240f04b0a969bb95a5add95b5f3d6f64e25",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi-30_s2202.json": "c0f847ed3cf181f2151921efaa6b4b51551fe533056aaef46c5f1567c48355d8",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi-30_s2203.json": "3c4f5dc52c1f9ac010d2a8f8c09d29620ad0e0ccfbd6212f71766f95831130cc",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi-30_s2204.json": "0a1910384762ae4dbb706ec554f03b86f7f804779fe87223964a05ea152a41e9",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi-30_s2205.json": "c57def1e3396d89f75bd9c1fc1578faf45fe69dd11ce18f4d48abb89e320ba89",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi-30_s2206.json": "1600c335a27185bbf5cce9a890880417258d9a44326fecf70247d1d898a611f4",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi-30_s2207.json": "8072e974f9989c95410b671f76ad05ba398140b48617315fe13a9373cb07a6e0",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi30_s2200.json": "7712c71ad86013df6b132b73736e12b8d95569a32c195a80569a6ab1e2e93b13",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi30_s2201.json": "9220e86b68105cd8f8af8f813302353644b3370aa32665e73583193b8ddc1f55",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi30_s2202.json": "e3e072c892a0817485af627c041c30678b98a6e7fc093fbe9d0e0963096c8df9",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi30_s2203.json": "3f28718fb7ca4bc3bc85750edaa78d5be2850e1656429748ed9e097a0f28ba28",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi30_s2204.json": "8caf72fd7dbc3b6122eb7208a03f1bf58d0c8f964abf5e47128614f7bc3fdba4",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi30_s2205.json": "f39f7d5441d1a277aa346837d933d8d598632844a3df7a7c2ff79cf7966ff34b",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi30_s2206.json": "69131c157ca2fca9cd46da64ba07bbfb1094b8ab0db18e8bd396d06b3c28c39f",
+    "runs/task-v10-transfer/map-A/validation/episodes/relay_healthy_phi30_s2207.json": "59f234c0bf5ee0fb459c024770448911f36a72f9d567c0b2ffd1f161151a99ae"
+  },
+  "source_sha256": "5e76f2a0b91a41f29cf113385a7e4383d6e2fa997e6ebfa1315583079bad4dfe"
+}

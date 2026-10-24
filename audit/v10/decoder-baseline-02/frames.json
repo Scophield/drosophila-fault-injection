@@ -1,0 +1,3170 @@
+[
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -33.47367202267387,
+    "predicted_bearing_deg": -23.04443658779627,
+    "error_deg": 10.429235434877597
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -37.07759123593942,
+    "predicted_bearing_deg": -32.469419215257155,
+    "error_deg": 4.608172020682268
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -41.884297405864345,
+    "predicted_bearing_deg": -34.836043271299545,
+    "error_deg": 7.0482541345648
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -48.60603883823842,
+    "predicted_bearing_deg": -44.26102589876043,
+    "error_deg": 4.345012939477989
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -55.83985585631726,
+    "predicted_bearing_deg": -47.790205184469684,
+    "error_deg": 8.049650671847573
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -64.99861036004651,
+    "predicted_bearing_deg": -48.75139299566048,
+    "error_deg": 16.24721736438603
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -74.90694408193224,
+    "predicted_bearing_deg": -45.32289741918927,
+    "error_deg": 29.58404666274297
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -85.04684557608175,
+    "predicted_bearing_deg": -42.855589653908844,
+    "error_deg": 42.19125592217291
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -94.53145661753663,
+    "predicted_bearing_deg": -35.99859850096641,
+    "error_deg": 58.532858116570225
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -103.5419956585196,
+    "predicted_bearing_deg": -30.002111449976734,
+    "error_deg": 73.53988420854286
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -111.19013789024524,
+    "predicted_bearing_deg": -26.573615873505517,
+    "error_deg": 84.61652201673972
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -37.90259948791385,
+    "predicted_bearing_deg": -34.93672698053758,
+    "error_deg": 2.965872507376268
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -43.9047241104069,
+    "predicted_bearing_deg": -37.404034745818,
+    "error_deg": 6.500689364588901
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -51.119410606319434,
+    "predicted_bearing_deg": -34.93672698053758,
+    "error_deg": 16.182683625781856
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -58.86547975412893,
+    "predicted_bearing_deg": -38.465906266246826,
+    "error_deg": 20.3995734878821
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -66.15625241807611,
+    "predicted_bearing_deg": -35.89791479172837,
+    "error_deg": 30.25833762634774
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -74.18703955808527,
+    "predicted_bearing_deg": -33.43060702644795,
+    "error_deg": 40.75643253163732
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -81.73671056578442,
+    "predicted_bearing_deg": -30.963299261167528,
+    "error_deg": 50.77341130461689
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -88.81984901158378,
+    "predicted_bearing_deg": -24.966812210177856,
+    "error_deg": 63.85303680140593
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -95.43124766586499,
+    "predicted_bearing_deg": -18.970325159188185,
+    "error_deg": 76.46092250667681
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -100.86035560736127,
+    "predicted_bearing_deg": -24.966812210177856,
+    "error_deg": 75.89354339718341
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -105.10424968509555,
+    "predicted_bearing_deg": -27.53480368469631,
+    "error_deg": 77.56944600039924
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -38.60843534505571,
+    "predicted_bearing_deg": -41.89440184271805,
+    "error_deg": -3.2859664976623364
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -46.49860214171079,
+    "predicted_bearing_deg": -50.358196658988135,
+    "error_deg": -3.859594517277344
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -55.11522612392881,
+    "predicted_bearing_deg": -44.36170960799847,
+    "error_deg": 10.753516515930336
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -65.46622836641272,
+    "predicted_bearing_deg": -47.790205184469684,
+    "error_deg": 17.676023181943037
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -74.66066089010079,
+    "predicted_bearing_deg": -41.89440184271805,
+    "error_deg": 32.76625904738274
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -84.57388849228502,
+    "predicted_bearing_deg": -44.36170960799847,
+    "error_deg": 40.21217888428655
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -93.33436758625592,
+    "predicted_bearing_deg": -39.42709407743763,
+    "error_deg": 53.90727350881829
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -102.60520887402708,
+    "predicted_bearing_deg": -33.531290735685985,
+    "error_deg": 69.0739181383411
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -110.89652153658346,
+    "predicted_bearing_deg": -24.106308108225097,
+    "error_deg": 86.79021342835837
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -118.00792923800265,
+    "predicted_bearing_deg": -14.681325480764205,
+    "error_deg": 103.32660375723844
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -123.2287917664975,
+    "predicted_bearing_deg": -12.214017715483784,
+    "error_deg": 111.01477405101372
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -37.02163054398619,
+    "predicted_bearing_deg": -30.446359883637534,
+    "error_deg": 6.575270660348657
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -42.12184557428367,
+    "predicted_bearing_deg": -36.442846934627205,
+    "error_deg": 5.678998639656463
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -48.43104676418267,
+    "predicted_bearing_deg": -34.836043271299545,
+    "error_deg": 13.595003492883123
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -55.974665247980454,
+    "predicted_bearing_deg": -41.793718133480006,
+    "error_deg": 14.180947114500448
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -63.23588211309139,
+    "predicted_bearing_deg": -47.790205184469684,
+    "error_deg": 15.445676928621708
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -71.9245357517549,
+    "predicted_bearing_deg": -45.32289741918927,
+    "error_deg": 26.601638332565635
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -81.8487299951488,
+    "predicted_bearing_deg": -48.75139299566048,
+    "error_deg": 33.09733699948832
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -91.31098995563516,
+    "predicted_bearing_deg": -45.32289741918927,
+    "error_deg": 45.9880925364459
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -101.4804601960853,
+    "predicted_bearing_deg": -41.89440184271805,
+    "error_deg": 59.58605835336726
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -110.97415761232108,
+    "predicted_bearing_deg": -32.469419215257155,
+    "error_deg": 78.50473839706393
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -119.78031594028884,
+    "predicted_bearing_deg": -29.04092363878594,
+    "error_deg": 90.7393923015029
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -36.52816899093011,
+    "predicted_bearing_deg": -34.93672698053758,
+    "error_deg": 1.5914420103925337
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -41.13274976984357,
+    "predicted_bearing_deg": -37.404034745818,
+    "error_deg": 3.7287150240255684
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -48.33581381084417,
+    "predicted_bearing_deg": -34.836043271299545,
+    "error_deg": 13.499770539544627
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -56.07132072581862,
+    "predicted_bearing_deg": -41.793718133480006,
+    "error_deg": 14.277602592338617
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -63.33290217962232,
+    "predicted_bearing_deg": -39.32641036819959,
+    "error_deg": 24.006491811422734
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -72.02186908932751,
+    "predicted_bearing_deg": -39.32641036819959,
+    "error_deg": 32.69545872112792
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -80.25353986505122,
+    "predicted_bearing_deg": -34.39179483763875,
+    "error_deg": 45.861745027412475
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -88.51487626367003,
+    "predicted_bearing_deg": -34.39179483763875,
+    "error_deg": 54.123081426031284
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -95.81267120200529,
+    "predicted_bearing_deg": -30.862615551929494,
+    "error_deg": 64.9500556500758
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -103.127282291873,
+    "predicted_bearing_deg": -27.434119975458277,
+    "error_deg": 75.69316231641473
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -109.74657954893856,
+    "predicted_bearing_deg": -20.476445113277812,
+    "error_deg": 89.27013443566074
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -38.1827501917748,
+    "predicted_bearing_deg": -32.36873550601912,
+    "error_deg": 5.81401468575568
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -43.48025361027459,
+    "predicted_bearing_deg": -41.793718133480006,
+    "error_deg": 1.6865354767945817
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -50.17959108197539,
+    "predicted_bearing_deg": -30.963299261167528,
+    "error_deg": 19.21629182080786
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -58.80007923187952,
+    "predicted_bearing_deg": -36.959786312157206,
+    "error_deg": 21.840292919722316
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -65.29599050189577,
+    "predicted_bearing_deg": -46.38476893961809,
+    "error_deg": 18.91122156227768
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -73.02334366177783,
+    "predicted_bearing_deg": -42.95627336314688,
+    "error_deg": 30.067070298630952
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -82.6683067889642,
+    "predicted_bearing_deg": -39.42709407743763,
+    "error_deg": 43.24121271152657
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -91.65756105243405,
+    "predicted_bearing_deg": -44.36170960799847,
+    "error_deg": 47.29585144443558
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -99.96158784664564,
+    "predicted_bearing_deg": -32.36873550601912,
+    "error_deg": 67.59285234062652
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -109.26473602585594,
+    "predicted_bearing_deg": -31.407547694828327,
+    "error_deg": 77.85718833102761
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -116.17006032474256,
+    "predicted_bearing_deg": -31.50823140406636,
+    "error_deg": 84.6618289206762
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -39.08176015626418,
+    "predicted_bearing_deg": -38.36522255700879,
+    "error_deg": 0.7165375992553891
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -45.068819126949734,
+    "predicted_bearing_deg": -35.89791479172837,
+    "error_deg": 9.170904335221365
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -52.973920464127346,
+    "predicted_bearing_deg": -39.32641036819959,
+    "error_deg": 13.647510095927757
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -60.425463252498304,
+    "predicted_bearing_deg": -30.963299261167528,
+    "error_deg": 29.462163991330776
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -68.59890438564904,
+    "predicted_bearing_deg": -40.38828188862842,
+    "error_deg": 28.210622497020616
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -75.13496653725281,
+    "predicted_bearing_deg": -34.39179483763875,
+    "error_deg": 40.74317169961406
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -83.58406579229637,
+    "predicted_bearing_deg": -34.39179483763875,
+    "error_deg": 49.19227095465762
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -90.86063759170001,
+    "predicted_bearing_deg": -33.43060702644795,
+    "error_deg": 57.43003056525206
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -98.1571674941631,
+    "predicted_bearing_deg": -30.002111449976734,
+    "error_deg": 68.15505604418637
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -105.27575633692297,
+    "predicted_bearing_deg": -26.573615873505517,
+    "error_deg": 78.70214046341745
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -111.71689582909278,
+    "predicted_bearing_deg": -23.145120297034303,
+    "error_deg": 88.57177553205847
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -36.03470743787403,
+    "predicted_bearing_deg": -35.03741068977561,
+    "error_deg": 0.997296748098421
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -41.5351748126985,
+    "predicted_bearing_deg": -41.89440184271805,
+    "error_deg": -0.3592270300195466
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -48.760105665722335,
+    "predicted_bearing_deg": -39.42709407743763,
+    "error_deg": 9.333011588284705
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -57.395349578537406,
+    "predicted_bearing_deg": -41.89440184271805,
+    "error_deg": 15.50094773581936
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -65.5795929765682,
+    "predicted_bearing_deg": -38.465906266246826,
+    "error_deg": 27.113686710321367
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -74.2948143311389,
+    "predicted_bearing_deg": -41.89440184271805,
+    "error_deg": 32.40041248842085
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -82.358567171889,
+    "predicted_bearing_deg": -44.4623933172365,
+    "error_deg": 37.89617385465251
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -91.1353584650117,
+    "predicted_bearing_deg": -41.89440184271805,
+    "error_deg": 49.24095662229366
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -100.44677916285208,
+    "predicted_bearing_deg": -45.4235811284273,
+    "error_deg": 55.02319803442478
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -109.25604086586421,
+    "predicted_bearing_deg": -35.99859850096641,
+    "error_deg": 73.2574423648978
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -118.77260021243887,
+    "predicted_bearing_deg": -24.106308108225097,
+    "error_deg": 94.66629210421378
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 31.284894714497128,
+    "error_deg": 0.06178867268185684
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 31.386838093707667,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": 14.740179828218473
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 37.81477897662265,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": 8.312238945303491
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 47.24958685132336,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": 6.298492674317288
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 56.73618888611628,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -3.188109360475636
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 67.75582636924827,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -14.207746843607623
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 78.8233887038246,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -25.27530917818396
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 89.92894114150567,
+    "predicted_bearing_deg": 60.969141129355144,
+    "error_deg": -28.95980001215053
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 101.05995042204978,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -47.511870896409135
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 113.49196015258025,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -59.9438806269396
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 124.62341918780805,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -78.49640126588191
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 34.79657525377385,
+    "predicted_bearing_deg": 32.70946926722196,
+    "error_deg": -2.08710598655189
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 40.03447202364808,
+    "predicted_bearing_deg": 40.13053087093647,
+    "error_deg": 0.09605884728838987
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 46.78737022102297,
+    "predicted_bearing_deg": 40.13053087093647,
+    "error_deg": -6.6568393500865
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 55.06206159076001,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -1.5139820651193645
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 63.379158216745765,
+    "predicted_bearing_deg": 60.969141129355144,
+    "error_deg": -2.410017087390621
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 74.41930870773123,
+    "predicted_bearing_deg": 60.969141129355144,
+    "error_deg": -13.450167578376089
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 86.79045778761719,
+    "predicted_bearing_deg": 60.969141129355144,
+    "error_deg": -25.82131665826204
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 99.19148442131154,
+    "predicted_bearing_deg": 60.969141129355144,
+    "error_deg": -38.2223432919564
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 111.60489942698746,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -58.05681990134681
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 124.0109753411507,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -85.30501902293906
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 134.45380275354108,
+    "predicted_bearing_deg": 31.284894714497128,
+    "error_deg": -103.16890803904396
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 34.79657525377385,
+    "predicted_bearing_deg": 30.24216150194154,
+    "error_deg": -4.554413751832314
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 39.541010470592,
+    "predicted_bearing_deg": 30.24216150194154,
+    "error_deg": -9.29884896865046
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 45.798282818364925,
+    "predicted_bearing_deg": 24.245674450951867,
+    "error_deg": -21.552608367413058
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 52.091258185320044,
+    "predicted_bearing_deg": 30.24216150194154,
+    "error_deg": -21.849096683378505
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 57.22056076880449,
+    "predicted_bearing_deg": 40.13053087093647,
+    "error_deg": -17.09002989786802
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 63.580154968304925,
+    "predicted_bearing_deg": 34.1340438199468,
+    "error_deg": -29.446111148358128
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 71.95209453368602,
+    "predicted_bearing_deg": 34.1340438199468,
+    "error_deg": -37.818050713739225
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 79.16236840776679,
+    "predicted_bearing_deg": 41.555105423661296,
+    "error_deg": -37.607262984105496
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 86.40332182014237,
+    "predicted_bearing_deg": 48.9761670273758,
+    "error_deg": -37.427154792766565
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 95.15481907514226,
+    "predicted_bearing_deg": 48.9761670273758,
+    "error_deg": -46.178652047766455
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 105.41056395752207,
+    "predicted_bearing_deg": 48.9761670273758,
+    "error_deg": -56.43439693014627
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": 7.482850276396363
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 37.64381703660709,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": 15.904262489033556
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 45.58542178323427,
+    "predicted_bearing_deg": 43.659710156645716,
+    "error_deg": -1.9257116265885514
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 56.53877902943938,
+    "predicted_bearing_deg": 43.659710156645716,
+    "error_deg": -12.879068872793667
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 65.56695320330803,
+    "predicted_bearing_deg": 45.08428470937055,
+    "error_deg": -20.48266849393748
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 74.63555611629374,
+    "predicted_bearing_deg": 42.616976944090126,
+    "error_deg": -32.018579172203616
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 84.02399013965942,
+    "predicted_bearing_deg": 36.620489893100455,
+    "error_deg": -47.40350024655896
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 92.94703917257516,
+    "predicted_bearing_deg": 39.08779765838087,
+    "error_deg": -53.85924151419429
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 100.68990338943888,
+    "predicted_bearing_deg": 46.50885926209538,
+    "error_deg": -54.181044127343505
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 108.93780777109498,
+    "predicted_bearing_deg": 37.663223105656044,
+    "error_deg": -71.27458466543894
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 118.67259192179802,
+    "predicted_bearing_deg": 40.13053087093647,
+    "error_deg": -78.54206105086155
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 35.176777032502386,
+    "error_deg": 3.9536709906871152
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 31.386838093707667,
+    "predicted_bearing_deg": 35.176777032502386,
+    "error_deg": 3.7899389387947195
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 38.59315544022368,
+    "predicted_bearing_deg": 42.59783863621689,
+    "error_deg": 4.004683195993209
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 45.841550546635375,
+    "predicted_bearing_deg": 50.0189002399314,
+    "error_deg": 4.177349693296023
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 54.61631975059734,
+    "predicted_bearing_deg": 50.0189002399314,
+    "error_deg": -4.597419510665944
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 64.92246511438279,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -18.79544719245665
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 75.27671967959745,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -21.728640153956803
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 84.89286372162309,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -31.34478419598244
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 96.02292320447941,
+    "predicted_bearing_deg": 40.13053087093647,
+    "error_deg": -55.892392333542944
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 107.1713754519019,
+    "predicted_bearing_deg": 36.60135158522722,
+    "error_deg": -70.57002386667467
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 115.638446164644,
+    "predicted_bearing_deg": 36.60135158522722,
+    "error_deg": -79.03709457941677
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 28.817586949216707,
+    "error_deg": -2.4055190925985634
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 35.66614316280811,
+    "predicted_bearing_deg": 28.817586949216707,
+    "error_deg": -6.848556213591404
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 41.621010527343486,
+    "predicted_bearing_deg": 32.70946926722196,
+    "error_deg": -8.911541260121524
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 47.61126798058328,
+    "predicted_bearing_deg": 40.13053087093647,
+    "error_deg": -7.48073710964681
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 54.41573459891322,
+    "predicted_bearing_deg": 42.59783863621689,
+    "error_deg": -11.817895962696326
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 62.743266373761514,
+    "predicted_bearing_deg": 44.02241318894171,
+    "error_deg": -18.720853184819802
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 71.60667678848824,
+    "predicted_bearing_deg": 44.02241318894171,
+    "error_deg": -27.58426359954653
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 80.79452700676552,
+    "predicted_bearing_deg": 54.97265407836547,
+    "error_deg": -25.821872928400047
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 90.01591184414804,
+    "predicted_bearing_deg": 47.551592474650974,
+    "error_deg": -42.46431936949706
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 101.45231386791386,
+    "predicted_bearing_deg": 54.97265407836547,
+    "error_deg": -46.479659789548386
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 111.41597574373839,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -65.28895782181225
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": 7.482850276396363
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 37.64381703660709,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": 1.0621392816045443
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 45.58542178323427,
+    "predicted_bearing_deg": 36.23864855293121,
+    "error_deg": -9.346773230303057
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 53.570354387953586,
+    "predicted_bearing_deg": 37.663223105656044,
+    "error_deg": -15.907131282297541
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 61.10385537286612,
+    "predicted_bearing_deg": 37.663223105656044,
+    "error_deg": -23.440632267210077
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 68.96047275510531,
+    "predicted_bearing_deg": 45.08428470937055,
+    "error_deg": -23.876188045734764
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 76.85327715958618,
+    "predicted_bearing_deg": 45.08428470937055,
+    "error_deg": -31.768992450215634
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 86.26234763033983,
+    "predicted_bearing_deg": 47.551592474650974,
+    "error_deg": -38.71075515568886
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 95.6990059413539,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -42.15092641571326
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 105.64688706635457,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -52.09880754071392
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 116.7994093046882,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -78.09345298647656
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 31.284894714497128,
+    "error_deg": 0.06178867268185684
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 31.386838093707667,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": 7.319118224503967
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 37.81477897662265,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": 0.8911773415889854
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 45.76537453058046,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -7.059418212368826
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 53.76145244354643,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -7.6344345216202925
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 61.80181304889072,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -15.674795126964582
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 71.368405151547,
+    "predicted_bearing_deg": 41.555105423661296,
+    "error_deg": -29.8132997278857
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 80.97700880578043,
+    "predicted_bearing_deg": 41.555105423661296,
+    "error_deg": -39.42190338211913
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 89.70555228887275,
+    "predicted_bearing_deg": 48.9761670273758,
+    "error_deg": -40.72938526149695
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 98.45890849244273,
+    "predicted_bearing_deg": 45.44698774166655,
+    "error_deg": -53.011920750776184
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "proportional",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 108.71236224993788,
+    "predicted_bearing_deg": 45.44698774166655,
+    "error_deg": -63.265374508271336
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -43.22310604181527,
+    "predicted_bearing_deg": -23.04443658779627,
+    "error_deg": 20.178669454019
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -55.439267600501154,
+    "predicted_bearing_deg": -32.469419215257155,
+    "error_deg": 22.969848385244
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -67.7089575833884,
+    "predicted_bearing_deg": -29.9014277407387,
+    "error_deg": 37.8075298426497
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -80.02342883130603,
+    "predicted_bearing_deg": -38.36522255700879,
+    "error_deg": 41.65820627429724
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -92.37087688898842,
+    "predicted_bearing_deg": -38.36522255700879,
+    "error_deg": 54.00565433197963
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -104.73677474397037,
+    "predicted_bearing_deg": -38.36522255700879,
+    "error_deg": 66.37155218696158
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -117.10443387717933,
+    "predicted_bearing_deg": -25.51174435307669,
+    "error_deg": 91.59268952410264
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -129.455766077879,
+    "predicted_bearing_deg": -22.083248776605473,
+    "error_deg": 107.37251730127352
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -133.77218963618182,
+    "predicted_bearing_deg": -10.19095838386416,
+    "error_deg": 123.58123125231766
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -134.07978894956608,
+    "predicted_bearing_deg": -4.295155042112522,
+    "error_deg": 129.78463390745355
+  },
+  {
+    "seed": 400,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -134.39836043823516,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 135.99900873787428
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -55.273738082233095,
+    "predicted_bearing_deg": -32.469419215257155,
+    "error_deg": 22.80431886697594
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -67.5327472334803,
+    "predicted_bearing_deg": -34.93672698053758,
+    "error_deg": 32.596020252942715
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -79.83455949286814,
+    "predicted_bearing_deg": -28.940239929547907,
+    "error_deg": 50.89431956332023
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -92.16776063222352,
+    "predicted_bearing_deg": -28.940239929547907,
+    "error_deg": 63.22752070267561
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -104.51837799889555,
+    "predicted_bearing_deg": -28.940239929547907,
+    "error_deg": 75.57813806934763
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -116.87043076577685,
+    "predicted_bearing_deg": -25.51174435307669,
+    "error_deg": 91.35868641270015
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -129.20666614456223,
+    "predicted_bearing_deg": -19.61594101132505,
+    "error_deg": 109.59072513323719
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -133.50942730959065,
+    "predicted_bearing_deg": -13.720137669573411,
+    "error_deg": 119.78928964001724
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -133.80345082762457,
+    "predicted_bearing_deg": -7.824334327821772,
+    "error_deg": 125.9791164998028
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -134.10745117139723,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 135.70809947103635
+  },
+  {
+    "seed": 401,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -134.42216749036453,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 136.02281579000365
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -55.273738082233095,
+    "predicted_bearing_deg": -41.89440184271805,
+    "error_deg": 13.379336239515048
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -67.5327472334803,
+    "predicted_bearing_deg": -41.89440184271805,
+    "error_deg": 25.638345390762247
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -79.83455949286814,
+    "predicted_bearing_deg": -35.89791479172837,
+    "error_deg": 43.93664470113977
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -92.16776063222352,
+    "predicted_bearing_deg": -33.43060702644795,
+    "error_deg": 58.73715360577557
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -104.51837799889555,
+    "predicted_bearing_deg": -24.106308108225097,
+    "error_deg": 80.41206989067045
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -116.87043076577685,
+    "predicted_bearing_deg": -20.67781253175388,
+    "error_deg": 96.19261823402297
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -129.20666614456223,
+    "predicted_bearing_deg": -17.249316955282662,
+    "error_deg": 111.95734918927957
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -133.50942730959065,
+    "predicted_bearing_deg": -11.353513613531023,
+    "error_deg": 122.15591369605963
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -133.80345082762457,
+    "predicted_bearing_deg": -4.3958387513505555,
+    "error_deg": 129.407612076274
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -134.10745117139723,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 135.70809947103635
+  },
+  {
+    "seed": 402,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -134.42216749036453,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 136.02281579000365
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -55.273738082233095,
+    "predicted_bearing_deg": -30.446359883637534,
+    "error_deg": 24.82737819859556
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -67.5327472334803,
+    "predicted_bearing_deg": -39.87134251109842,
+    "error_deg": 27.661404722381874
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -79.83455949286814,
+    "predicted_bearing_deg": -34.836043271299545,
+    "error_deg": 44.99851622156859
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -92.16776063222352,
+    "predicted_bearing_deg": -35.89791479172837,
+    "error_deg": 56.26984584049515
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -104.51837799889555,
+    "predicted_bearing_deg": -39.42709407743763,
+    "error_deg": 65.09128392145792
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -116.87043076577685,
+    "predicted_bearing_deg": -33.531290735685985,
+    "error_deg": 83.33914003009086
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -129.20666614456223,
+    "predicted_bearing_deg": -20.67781253175388,
+    "error_deg": 108.52885361280835
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -133.50942730959065,
+    "predicted_bearing_deg": -17.249316955282662,
+    "error_deg": 116.26011035430798
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -133.80345082762457,
+    "predicted_bearing_deg": -7.824334327821772,
+    "error_deg": 125.9791164998028
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -134.10745117139723,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 135.70809947103635
+  },
+  {
+    "seed": 403,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -134.42216749036453,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 136.02281579000365
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -55.273738082233095,
+    "predicted_bearing_deg": -39.87134251109842,
+    "error_deg": 15.402395571134676
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -67.5327472334803,
+    "predicted_bearing_deg": -37.404034745818,
+    "error_deg": 30.12871248766229
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -79.83455949286814,
+    "predicted_bearing_deg": -34.836043271299545,
+    "error_deg": 44.99851622156859
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -92.16776063222352,
+    "predicted_bearing_deg": -34.93672698053758,
+    "error_deg": 57.23103365168594
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -104.51837799889555,
+    "predicted_bearing_deg": -32.469419215257155,
+    "error_deg": 72.0489587836384
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -116.87043076577685,
+    "predicted_bearing_deg": -14.681325480764205,
+    "error_deg": 102.18910528501264
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -129.20666614456223,
+    "predicted_bearing_deg": -11.25282990429299,
+    "error_deg": 117.95383624026924
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -133.50942730959065,
+    "predicted_bearing_deg": -7.824334327821772,
+    "error_deg": 125.68509298176888
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -133.80345082762457,
+    "predicted_bearing_deg": -1.8278472768320995,
+    "error_deg": 131.97560355079247
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -134.10745117139723,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 135.70809947103635
+  },
+  {
+    "seed": 404,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -134.42216749036453,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 136.02281579000365
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -55.273738082233095,
+    "predicted_bearing_deg": -38.36522255700879,
+    "error_deg": 16.908515525224303
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -67.5327472334803,
+    "predicted_bearing_deg": -41.793718133480006,
+    "error_deg": 25.739029100000288
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -79.83455949286814,
+    "predicted_bearing_deg": -33.43060702644795,
+    "error_deg": 46.403952466420186
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -92.16776063222352,
+    "predicted_bearing_deg": -33.43060702644795,
+    "error_deg": 58.73715360577557
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -104.51837799889555,
+    "predicted_bearing_deg": -30.002111449976734,
+    "error_deg": 74.51626654891881
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -116.87043076577685,
+    "predicted_bearing_deg": -23.145120297034303,
+    "error_deg": 93.72531046874255
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -129.20666614456223,
+    "predicted_bearing_deg": -19.716624720563082,
+    "error_deg": 109.49004142399914
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -133.50942730959065,
+    "predicted_bearing_deg": -13.820821378811445,
+    "error_deg": 119.6886059307792
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -133.80345082762457,
+    "predicted_bearing_deg": -4.3958387513505555,
+    "error_deg": 129.407612076274
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -134.10745117139723,
+    "predicted_bearing_deg": -4.3958387513505555,
+    "error_deg": 129.71161242004666
+  },
+  {
+    "seed": 405,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -134.42216749036453,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 136.02281579000365
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -55.273738082233095,
+    "predicted_bearing_deg": -38.36522255700879,
+    "error_deg": 16.908515525224303
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -67.5327472334803,
+    "predicted_bearing_deg": -41.793718133480006,
+    "error_deg": 25.739029100000288
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -79.83455949286814,
+    "predicted_bearing_deg": -41.793718133480006,
+    "error_deg": 38.04084135938813
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -92.16776063222352,
+    "predicted_bearing_deg": -33.43060702644795,
+    "error_deg": 58.73715360577557
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -104.51837799889555,
+    "predicted_bearing_deg": -35.99859850096641,
+    "error_deg": 68.51977949792914
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -116.87043076577685,
+    "predicted_bearing_deg": -26.573615873505517,
+    "error_deg": 90.29681489227133
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -129.20666614456223,
+    "predicted_bearing_deg": -17.249316955282662,
+    "error_deg": 111.95734918927957
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -133.50942730959065,
+    "predicted_bearing_deg": -7.824334327821772,
+    "error_deg": 125.68509298176888
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -133.80345082762457,
+    "predicted_bearing_deg": -4.3958387513505555,
+    "error_deg": 129.407612076274
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -134.10745117139723,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 135.70809947103635
+  },
+  {
+    "seed": 406,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -134.42216749036453,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 136.02281579000365
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": -55.273738082233095,
+    "predicted_bearing_deg": -38.465906266246826,
+    "error_deg": 16.80783181598627
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": -67.5327472334803,
+    "predicted_bearing_deg": -41.89440184271805,
+    "error_deg": 25.638345390762247
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": -79.83455949286814,
+    "predicted_bearing_deg": -32.469419215257155,
+    "error_deg": 47.36514027761098
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": -92.16776063222352,
+    "predicted_bearing_deg": -35.99859850096641,
+    "error_deg": 56.16916213125711
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": -104.51837799889555,
+    "predicted_bearing_deg": -25.61242806231472,
+    "error_deg": 78.90594993658083
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": -116.87043076577685,
+    "predicted_bearing_deg": -17.14863324604463,
+    "error_deg": 99.72179751973222
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": -129.20666614456223,
+    "predicted_bearing_deg": -13.720137669573411,
+    "error_deg": 115.48652847498883
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": -133.50942730959065,
+    "predicted_bearing_deg": -11.25282990429299,
+    "error_deg": 122.25659740529765
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": -133.80345082762457,
+    "predicted_bearing_deg": -4.295155042112522,
+    "error_deg": 129.50829578551205
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": -134.10745117139723,
+    "predicted_bearing_deg": -1.8278472768320995,
+    "error_deg": 132.27960389456513
+  },
+  {
+    "seed": 407,
+    "phi_deg": -30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": -134.42216749036453,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": 136.02281579000365
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 31.284894714497128,
+    "error_deg": 0.06178867268185684
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 31.386838093707667,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": 14.740179828218473
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 43.5578000337232,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": 2.5692178882029424
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 55.79306129426055,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -2.2449817686199083
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 68.08689855237768,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -14.53881902673703
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 80.43008585945995,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -26.882006333819305
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 92.80996679823647,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -39.26188727259583
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 105.21077398788168,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": -51.662694462241035
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 117.61420781015374,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -71.4871898882276
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 130.00025106411397,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -91.29429474590233
+  },
+  {
+    "seed": 400,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 134.34815880476486,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -95.64220248655323
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 43.22310604181527,
+    "predicted_bearing_deg": 32.70946926722196,
+    "error_deg": -10.513636774593309
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 55.439267600501154,
+    "predicted_bearing_deg": 32.70946926722196,
+    "error_deg": -22.72979833327919
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 67.70895758338838,
+    "predicted_bearing_deg": 36.60135158522722,
+    "error_deg": -31.107605998161162
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 80.02342883130603,
+    "predicted_bearing_deg": 50.0189002399314,
+    "error_deg": -30.004528591374637
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 92.37087688898839,
+    "predicted_bearing_deg": 50.0189002399314,
+    "error_deg": -42.35197664905699
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 104.73677474397039,
+    "predicted_bearing_deg": 42.59783863621689,
+    "error_deg": -62.138936107753494
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 117.1044338771793,
+    "predicted_bearing_deg": 42.59783863621689,
+    "error_deg": -74.50659524096241
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 129.455766077879,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -90.74980975966736
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 133.7721896361818,
+    "predicted_bearing_deg": 23.86383311078263,
+    "error_deg": -109.90835652539917
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 134.07978894956608,
+    "predicted_bearing_deg": 16.442771507068123,
+    "error_deg": -117.63701744249795
+  },
+  {
+    "seed": 401,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 134.39836043823516,
+    "predicted_bearing_deg": 16.442771507068123,
+    "error_deg": -117.95558893116703
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 43.22310604181527,
+    "predicted_bearing_deg": 30.24216150194154,
+    "error_deg": -12.980944539873732
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 55.439267600501154,
+    "predicted_bearing_deg": 30.24216150194154,
+    "error_deg": -25.197106098559615
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 67.70895758338838,
+    "predicted_bearing_deg": 37.663223105656044,
+    "error_deg": -30.04573447773234
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 80.02342883130603,
+    "predicted_bearing_deg": 43.659710156645716,
+    "error_deg": -36.36371867466032
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 92.37087688898839,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -46.24385896706225
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 104.73677474397039,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -58.60975682204425
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 117.1044338771793,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -78.39847755896767
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 129.455766077879,
+    "predicted_bearing_deg": 23.86383311078263,
+    "error_deg": -105.59193296709637
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 133.7721896361818,
+    "predicted_bearing_deg": 16.442771507068123,
+    "error_deg": -117.32941812911366
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 134.07978894956608,
+    "predicted_bearing_deg": 9.02170990335362,
+    "error_deg": -125.05807904621246
+  },
+  {
+    "seed": 402,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 134.39836043823516,
+    "predicted_bearing_deg": 1.6006482996391174,
+    "error_deg": -132.79771213859604
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": 7.482850276396363
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 43.38683809370767,
+    "predicted_bearing_deg": 53.548079525640645,
+    "error_deg": 10.161241431932979
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 55.6121618705628,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -9.485143948636662
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 67.89342295050957,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -21.766405028583435
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 80.22163772909403,
+    "predicted_bearing_deg": 47.551592474650974,
+    "error_deg": -32.67004525444305
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 92.58458814185224,
+    "predicted_bearing_deg": 35.558618372671624,
+    "error_deg": -57.02596976918061
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 104.96715042757859,
+    "predicted_bearing_deg": 28.137556768957122,
+    "error_deg": -76.82959365862146
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 117.35186586372527,
+    "predicted_bearing_deg": 20.716495165242616,
+    "error_deg": -96.63537069848265
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 129.7197288364846,
+    "predicted_bearing_deg": 20.716495165242616,
+    "error_deg": -109.00323367124197
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 134.0511336848046,
+    "predicted_bearing_deg": 11.870859008803285,
+    "error_deg": -122.18027467600132
+  },
+  {
+    "seed": 403,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 134.37365818194394,
+    "predicted_bearing_deg": 16.442771507068123,
+    "error_deg": -117.93088667487581
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 35.176777032502386,
+    "error_deg": 3.9536709906871152
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 31.386838093707667,
+    "predicted_bearing_deg": 35.176777032502386,
+    "error_deg": 3.7899389387947195
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 43.5578000337232,
+    "predicted_bearing_deg": 42.59783863621689,
+    "error_deg": -0.959961397506305
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 55.79306129426055,
+    "predicted_bearing_deg": 50.0189002399314,
+    "error_deg": -5.774161054329156
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 68.08689855237768,
+    "predicted_bearing_deg": 50.0189002399314,
+    "error_deg": -18.067998312446278
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 80.43008585945995,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -34.30306793753381
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 92.80996679823647,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -46.682948876310334
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 105.21077398788168,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -59.08375606595554
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 117.61420781015374,
+    "predicted_bearing_deg": 31.284894714497128,
+    "error_deg": -86.32931309565662
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 130.00025106411397,
+    "predicted_bearing_deg": 23.86383311078263,
+    "error_deg": -106.13641795333135
+  },
+  {
+    "seed": 404,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 134.34815880476486,
+    "predicted_bearing_deg": 16.442771507068123,
+    "error_deg": -117.90538729769673
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 28.817586949216707,
+    "error_deg": -2.4055190925985634
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 43.38683809370767,
+    "predicted_bearing_deg": 28.817586949216707,
+    "error_deg": -14.56925114449096
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 55.6121618705628,
+    "predicted_bearing_deg": 40.13053087093647,
+    "error_deg": -15.481630999626333
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 67.89342295050957,
+    "predicted_bearing_deg": 40.13053087093647,
+    "error_deg": -27.762892079573106
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 80.22163772909403,
+    "predicted_bearing_deg": 42.59783863621689,
+    "error_deg": -37.623799092877135
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 92.58458814185224,
+    "predicted_bearing_deg": 42.59783863621689,
+    "error_deg": -49.986749505635345
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 104.96715042757859,
+    "predicted_bearing_deg": 42.59783863621689,
+    "error_deg": -62.369311791361696
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 117.35186586372527,
+    "predicted_bearing_deg": 31.284894714497128,
+    "error_deg": -86.06697114922814
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 129.7197288364846,
+    "predicted_bearing_deg": 31.284894714497128,
+    "error_deg": -98.43483412198746
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 134.0511336848046,
+    "predicted_bearing_deg": 23.86383311078263,
+    "error_deg": -110.18730057402198
+  },
+  {
+    "seed": 405,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 134.37365818194394,
+    "predicted_bearing_deg": 16.442771507068123,
+    "error_deg": -117.93088667487581
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": 7.482850276396363
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 43.38683809370767,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -4.680881775496033
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 55.6121618705628,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -16.906205552351167
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 67.89342295050957,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -21.766405028583435
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 80.22163772909403,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -34.09461980716789
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 92.58458814185224,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -46.4575702199261
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 104.96715042757859,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -58.84013250565245
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 117.35186586372527,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -78.64590954551363
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 129.7197288364846,
+    "predicted_bearing_deg": 23.86383311078263,
+    "error_deg": -105.85589572570197
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 134.0511336848046,
+    "predicted_bearing_deg": 16.442771507068123,
+    "error_deg": -117.60836217773647
+  },
+  {
+    "seed": 406,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 134.37365818194394,
+    "predicted_bearing_deg": 9.02170990335362,
+    "error_deg": -125.35194827859031
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 200.0,
+    "target_bearing_deg": 31.22310604181527,
+    "predicted_bearing_deg": 31.284894714497128,
+    "error_deg": 0.06178867268185684
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 220.0,
+    "target_bearing_deg": 31.386838093707667,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": 7.319118224503967
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 240.0,
+    "target_bearing_deg": 43.5578000337232,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -4.8518437155115635
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 260.0,
+    "target_bearing_deg": 55.79306129426055,
+    "predicted_bearing_deg": 38.70595631821163,
+    "error_deg": -17.08710497604892
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 280.0,
+    "target_bearing_deg": 68.08689855237768,
+    "predicted_bearing_deg": 46.12701792192614,
+    "error_deg": -21.959880630451536
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 300.0,
+    "target_bearing_deg": 80.43008585945995,
+    "predicted_bearing_deg": 40.13053087093647,
+    "error_deg": -40.29955498852348
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 320.0,
+    "target_bearing_deg": 92.80996679823647,
+    "predicted_bearing_deg": 47.551592474650974,
+    "error_deg": -45.2583743235855
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 340.0,
+    "target_bearing_deg": 105.21077398788168,
+    "predicted_bearing_deg": 47.551592474650974,
+    "error_deg": -57.659181513230706
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 360.0,
+    "target_bearing_deg": 117.61420781015374,
+    "predicted_bearing_deg": 47.551592474650974,
+    "error_deg": -70.06261533550277
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 380.0,
+    "target_bearing_deg": 130.00025106411397,
+    "predicted_bearing_deg": 32.70946926722196,
+    "error_deg": -97.290781796892
+  },
+  {
+    "seed": 407,
+    "phi_deg": 30.0,
+    "mode": "relay",
+    "frame_end_ms": 400.0,
+    "target_bearing_deg": 134.34815880476486,
+    "predicted_bearing_deg": 31.284894714497128,
+    "error_deg": -103.06326409026774
+  }
+]

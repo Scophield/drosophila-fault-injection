@@ -1,0 +1,59 @@
+{
+  "started_unix": 1792758876.2465513,
+  "pids": [
+    16768,
+    47768
+  ],
+  "commands": [
+    [
+      "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-u",
+      "tools/run_v9.py",
+      "tools/run_task_v10.py",
+      "--out",
+      "runs\\task-v10-transfer\\map-A\\validation",
+      "--rf-map",
+      "runs/task-v10-design/map-A.json",
+      "--design",
+      "runs\\task-v10-design\\design.json",
+      "--seeds",
+      "2200,2202,2204,2206",
+      "--phis=-30.0,30.0",
+      "--modes",
+      "proportional,relay",
+      "--faults",
+      "healthy",
+      "--horizon",
+      "1000",
+      "--role",
+      "validation",
+      "--calibration",
+      "runs\\task-v10-transfer\\map-A\\calibration.json"
+    ],
+    [
+      "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-u",
+      "tools/run_v9.py",
+      "tools/run_task_v10.py",
+      "--out",
+      "runs\\task-v10-transfer\\map-A\\validation",
+      "--rf-map",
+      "runs/task-v10-design/map-A.json",
+      "--design",
+      "runs\\task-v10-design\\design.json",
+      "--seeds",
+      "2201,2203,2205,2207",
+      "--phis=-30.0,30.0",
+      "--modes",
+      "proportional,relay",
+      "--faults",
+      "healthy",
+      "--horizon",
+      "1000",
+      "--role",
+      "validation",
+      "--calibration",
+      "runs\\task-v10-transfer\\map-A\\calibration.json"
+    ]
+  ]
+}

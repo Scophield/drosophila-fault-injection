@@ -1,0 +1,6 @@
+{
+  "design_sha256": "3e12c36e92919e09d9c5d6c4d07465583edf42349145a64b232165b1b1980f93",
+  "script_sha256": "a9aeb701c8d5ffafaeb14830e707f079e4a4c6c94eb69a7f1021392828345b36",
+  "workers_per_map": 2,
+  "total_workers": 4
+}

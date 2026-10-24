@@ -1,0 +1,75 @@
+{
+  "protocol": "task-v9.1-causal-exact-events",
+  "experiment_version": "rf-transfer-v10.1",
+  "map_id": "B",
+  "rf_map_sha256": "ae2dc2f5271c586cf4f6152cf9d4471f12d8d9b787bd6bdb7b712af8c2ecbb9f",
+  "development_seeds": [
+    2100,
+    2101,
+    2102,
+    2103
+  ],
+  "development_phis": [
+    -60.0,
+    -30.0,
+    0.0,
+    30.0,
+    60.0
+  ],
+  "training_window_ms": [
+    200,
+    400
+  ],
+  "ridge_penalty": 10,
+  "feature": "five-frame means of eight ordered command-cell rates; bearing/60 target",
+  "command_flyids": [
+    720575940622838154,
+    720575940632499757,
+    720575940604737708,
+    720575940629327659,
+    720575940604954289,
+    720575940629757036,
+    720575940625878160,
+    720575940630758418
+  ],
+  "direction_weights": [
+    0.00318529125637132,
+    -0.0039923711651835185,
+    0.0,
+    0.032015457735252315,
+    0.009761248264694225,
+    -0.011696866646156028,
+    0.0,
+    0.0
+  ],
+  "direction_intercept": 0.08080853242426213,
+  "turn_gain_deg_s": 600.0,
+  "gate_silent": true,
+  "trigger_hz": 4.885416666666666,
+  "trigger_rule": "max(2.5, half the 10th percentile of per-episode 200--300-ms development command means)",
+  "input_sha256": {
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi-30_s2100.json": "eda6a1ffad38e588eee5ec801855ab2946a56043c75579a4f7bc2ba754532139",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi-30_s2101.json": "2d66f6c17708ff2dc5cb44b6f0f600d5549edbdce75a0ce409a97f630ce7b191",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi-30_s2102.json": "7e8963502e25ea64a2f816d8b6765c96e268829800697cc6b7401e5fcf37ce4f",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi-30_s2103.json": "043ba1c501be606c3c3194cf7ee21cae7188a3d1119c94b09e695fb64b329212",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi-60_s2100.json": "06ba7e824a43eb8b6d39fb89e3e151353912adb72f798f66df2f5d31508bca6b",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi-60_s2101.json": "92f8db49477f599a4b66a8801b26f466ee15d77d2317ec95912ec6512a8c2941",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi-60_s2102.json": "15911f008694df0d65b80dadab0acbf582e0ef8e57ec5d2dbf9188dd7941a8ad",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi-60_s2103.json": "7096422117d1c3d0512a3357c5e29c5fa89464c3ea050080b739a6051edd3684",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi0_s2100.json": "f20cda2aa5af640d97865cd69d9ba1be718bb362cf97e44d336ec37856dd3f6c",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi0_s2101.json": "c7865d26e4d7872a1ab156f3ddd7260d3a8cd512473fc662c1499b2ae273eb5e",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi0_s2102.json": "410fd27c72f6a75103bade753a29a76f87b87d83ab3d7b6a827c2fbc1e74284c",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi0_s2103.json": "40d2e5e86d80200712947903e6489d7f1fb46872bcb1a38d3a065e1b56d2897a",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi30_s2100.json": "e36a1c35ab45347a3c91a573b973d6e7f16701dd01f4750b5f29b25670c016b1",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi30_s2101.json": "438498df180fa4e1f8e44f7ba38f1e2761409a33e1622e408d7c0f73584682e5",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi30_s2102.json": "a680521e50fb1d8e0125e4ab4d5ce93377914da18409d885d09132e90f82bf84",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi30_s2103.json": "cd3ef8ef338bad919ff866d346f6db3d0e5c8c9364dfa30192d8b3122d0b5ab6",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi60_s2100.json": "312817711532d08a0db0255aca875e7b5c6ed36163cd66d2dca5d82aabdcb94e",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi60_s2101.json": "8f8f2487a74bf1e73da0db703a170c3977328e4f3ed4167296d4e0a54ec2db0b",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi60_s2102.json": "2ad5eab6b68ce9654188e74a065cabca9c1c44d8502331d8bcdfa9f3fbadfa0e",
+    "runs/task-v10-transfer/map-B/development/episodes/observe_healthy_phi60_s2103.json": "b8813e72afa01062fda3fb6c06c9b1f7b167e60c33e697c2c335df2d9f95f56b"
+  },
+  "development_fit_rmse": 0.25733052933289413,
+  "development_direction_accuracy": 1.0,
+  "note": "Development fit is not held-out decoder accuracy. No validation/fault/test outcome used; common V9-B recipe fixed before new runs."
+}

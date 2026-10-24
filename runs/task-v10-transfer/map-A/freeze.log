@@ -1,0 +1,10 @@
+{
+  "registration": "runs\\task-v10-transfer\\map-A\\registration.json",
+  "sha256": "839659ae497889f70fed3c7427530f79d8cd0a2b9539cfc3b1c4abf10e6fe305",
+  "validation_successes": {
+    "proportional/-30": 8,
+    "proportional/30": 8,
+    "relay/-30": 8,
+    "relay/30": 8
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "phase": "development",
+  "seeds": [
+    2100,
+    2101,
+    2102,
+    2103
+  ],
+  "phis": [
+    -60.0,
+    -30.0,
+    0.0,
+    30.0,
+    60.0
+  ],
+  "modes": [
+    "observe"
+  ],
+  "faults": [
+    "healthy"
+  ],
+  "horizon": 400,
+  "calibration_sha256": null,
+  "registration_sha256": null,
+  "rf_map_sha256": "ae2dc2f5271c586cf4f6152cf9d4471f12d8d9b787bd6bdb7b712af8c2ecbb9f"
+}

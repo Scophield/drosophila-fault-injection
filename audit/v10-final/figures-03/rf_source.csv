@@ -1,0 +1,16 @@
+map,clusters,law,dose,losses,paired_scenarios,estimate_percent,ci_low_percent,ci_high_percent
+RF-0,24,proportional,F2_25,2,48,4.166666666666666,0.0,10.416666666666668
+RF-0,24,relay,F2_25,0,48,0.0,0.0,0.0
+RF-0,24,proportional,F2_50,11,48,22.916666666666664,12.5,33.33333333333333
+RF-0,24,relay,F2_50,0,48,0.0,0.0,0.0
+RF-0,24,R minus P (secondary),F2_50,,,-22.916666666666664,-33.33333333333333,-12.5
+RF-A,12,proportional,F2_25,0,24,0.0,0.0,0.0
+RF-A,12,relay,F2_25,0,24,0.0,0.0,0.0
+RF-A,12,proportional,F2_50,2,24,8.333333333333332,0.0,20.833333333333336
+RF-A,12,relay,F2_50,1,24,4.166666666666666,0.0,12.5
+RF-A,12,R minus P (secondary),F2_50,,,-4.166666666666666,-12.5,0.0
+RF-B,12,proportional,F2_25,0,24,0.0,0.0,0.0
+RF-B,12,relay,F2_25,0,24,0.0,0.0,0.0
+RF-B,12,proportional,F2_50,1,24,4.166666666666666,0.0,12.5
+RF-B,12,relay,F2_50,0,24,0.0,0.0,0.0
+RF-B,12,R minus P (secondary),F2_50,,,-4.166666666666666,-12.5,0.0

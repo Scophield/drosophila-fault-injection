@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "utc": "2026-10-23T12:55:26.325604+00:00",
+  "source_commit": "43bcd4d6a99b2d9b258cf8a198a4545d237b5c39",
+  "clean_dependency_install": true,
+  "dependency_cache_reused": false,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\autoresearch_labtorary\\drosophila-fault-injection\\tmp\\v10-clean-replay-env\\Scripts\\python.exe",
+  "packages": {
+    "numpy": "2.5.4",
+    "setuptools": "84.2.1"
+  },
+  "quantitative_keys_identical": {
+    "records": true,
+    "seed_clusters": true,
+    "counts": true,
+    "cluster_effects": true,
+    "interaction_raw_p": true,
+    "interaction_holm_p": true,
+    "activity_ratios": true,
+    "horizon_sensitivity": true,
+    "warning_scores": true,
+    "thresholds": true,
+    "raw_input_sha256": true
+  },
+  "records_replayed": 288,
+  "commands": [
+    {
+      "command": [
+        "D:\\autoresearch_labtorary\\drosophila-fault-injection\\tmp\\v10-clean-replay-env\\Scripts\\python.exe",
+        "-I",
+        "-X",
+        "utf8",
+        "tools/run_v9.py",
+        "tools/analyze_task_v9_exportfix.py",
+        "--root",
+        "runs/task-v9-test",
+        "--registration",
+        "runs/task-v9-frozen/registration-core.json",
+        "--out",
+        "D:\\autoresearch_labtorary\\drosophila-fault-injection\\audit\\v10\\clean-install-replay-01\\analysis"
+      ],
+      "cwd": "D:\\autoresearch_labtorary\\drosophila-fault-injection\\tmp\\v10-fresh-checkout",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "D:\\autoresearch_labtorary\\drosophila-fault-injection\\tmp\\v10-clean-replay-env\\Scripts\\python.exe",
+        "-I",
+        "-X",
+        "utf8",
+        "tools/run_v9.py",
+        "tools/replay_audit_v9.py",
+        "--root",
+        "runs/task-v9-test",
+        "--calibration",
+        "runs/task-v9-frozen/calibration.json",
+        "--out",
+        "D:\\autoresearch_labtorary\\drosophila-fault-injection\\audit\\v10\\clean-install-replay-01\\replay"
+      ],
+      "cwd": "D:\\autoresearch_labtorary\\drosophila-fault-injection\\tmp\\v10-fresh-checkout",
+      "exit_code": 0
+    }
+  ],
+  "seconds": 65.21866260003299,
+  "source_sha256": "27e2b5b29cffddb2a32cba38e5c71a711a8602e5eb384afc92335b25f30ba8e4",
+  "scope": "Fresh remote checkout and isolated dependency install on the same host; saved-record analysis/input/geometry replay only. No neural resimulation or independent host."
+}

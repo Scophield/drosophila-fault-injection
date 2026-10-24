@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "source_commit": "43bcd4d6a99b2d9b258cf8a198a4545d237b5c39",
+  "cohorts": {
+    "stress": {
+      "records": 96,
+      "clusters": 8,
+      "quantitative_and_binding_fields_identical": {
+        "complete": true,
+        "protocol": true,
+        "records": true,
+        "seed_clusters": true,
+        "registration_sha256": true,
+        "raw_input_sha256": true,
+        "validation_input_sha256": true,
+        "counts": true,
+        "cluster_effects": true,
+        "interaction_raw_p": true,
+        "interaction_holm_p": true,
+        "activity_ratios": true,
+        "horizon_sensitivity": true,
+        "activity_profiles": true,
+        "warning_scores": true,
+        "thresholds": true,
+        "mask_checks": true,
+        "common_uniform_checks": true,
+        "burst_timing_verified": true,
+        "all_prefixes_pre_contact": true,
+        "minimum_collision_ms": true,
+        "compute": true,
+        "analysis_source_sha256": true
+      },
+      "mismatched": [],
+      "replayed_records": 96
+    },
+    "causal": {
+      "records": 64,
+      "clusters": 8,
+      "quantitative_and_binding_fields_identical": {
+        "complete": true,
+        "records": true,
+        "seed_clusters": true,
+        "role": true,
+        "counts": true,
+        "cluster_effects": true,
+        "interpretation": true,
+        "registration_sha256": true,
+        "raw_input_sha256": true,
+        "compute": true,
+        "source_sha256": true
+      },
+      "mismatched": [],
+      "replayed_records": 64
+    }
+  },
+  "additional_records_reanalysed_and_replayed": 160,
+  "total_including_previously_verified_core": 448,
+  "clean_dependency_install": true,
+  "dependency_cache_reused": false,
+  "neural_resimulation": false,
+  "independent_host": false,
+  "scope": "Fresh public checkout and isolated minimal dependencies on the SAME host; independent saved-data analysis and input/plant replay. No new experimental samples."
+}

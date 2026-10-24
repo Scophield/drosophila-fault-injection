@@ -1,0 +1,159 @@
+{
+  "complete": true,
+  "records": 64,
+  "seed_clusters": 8,
+  "role": "secondary diagnostic action ablations, registered after core launch; separate from original confirmatory matrix",
+  "counts": [
+    {
+      "mode": "proportional",
+      "phi_deg": -30.0,
+      "n": 8,
+      "success": 8,
+      "triggers": 8
+    },
+    {
+      "mode": "proportional",
+      "phi_deg": 30.0,
+      "n": 8,
+      "success": 8,
+      "triggers": 8
+    },
+    {
+      "mode": "relay",
+      "phi_deg": -30.0,
+      "n": 8,
+      "success": 8,
+      "triggers": 8
+    },
+    {
+      "mode": "relay",
+      "phi_deg": 30.0,
+      "n": 8,
+      "success": 8,
+      "triggers": 8
+    },
+    {
+      "mode": "disabled",
+      "phi_deg": -30.0,
+      "n": 8,
+      "success": 0,
+      "triggers": 8
+    },
+    {
+      "mode": "disabled",
+      "phi_deg": 30.0,
+      "n": 8,
+      "success": 0,
+      "triggers": 8
+    },
+    {
+      "mode": "observe",
+      "phi_deg": -30.0,
+      "n": 8,
+      "success": 0,
+      "triggers": 0
+    },
+    {
+      "mode": "observe",
+      "phi_deg": 30.0,
+      "n": 8,
+      "success": 0,
+      "triggers": 0
+    }
+  ],
+  "cluster_effects": {
+    "proportional-minus-disabled": {
+      "estimate": 1.0,
+      "low": 1.0,
+      "high": 1.0
+    },
+    "proportional-minus-observe": {
+      "estimate": 1.0,
+      "low": 1.0,
+      "high": 1.0
+    },
+    "relay-minus-disabled": {
+      "estimate": 1.0,
+      "low": 1.0,
+      "high": 1.0
+    },
+    "relay-minus-observe": {
+      "estimate": 1.0,
+      "low": 1.0,
+      "high": 1.0
+    }
+  },
+  "interpretation": "disabled removes neural steering only and retains neural burst triggering; observe removes both steering and burst action. These diagnostic action ablations do not establish connectome-specific superiority or biological behavior.",
+  "registration_sha256": "020ad97501b7fbde836cfaf032b47679cbab4a3d330692543e1109a6cd015c86",
+  "raw_input_sha256": {
+    "runs/task-v9-causal/episodes/disabled_healthy_phi-30_s1200.json": "f2a5b91d292056e63cbbc8bac4775e46253ece840b5ed6f594347ec322443eeb",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi-30_s1201.json": "26845c32c3922ff1ac644644f412bf25e23255109bae7b4150f3d05b812ce83a",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi-30_s1202.json": "91c574f4c74a92acf5765b7a96f5355eea07ac27310a20c69ff2f7f696e36c21",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi-30_s1203.json": "169c0bdbedbe28b2a0ac594ebc66a5226d75470c276fd1d1c54db61b51f8bf76",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi-30_s1204.json": "074520f8ec31a4227a71583f73cd40aaa9e6d8a3a1e3ad750af0706d52f4003a",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi-30_s1205.json": "2b538b108ec9ee00192b97f982c9be8382c05ea2f1e05c0499928e324d9ccdb0",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi-30_s1206.json": "71c1e4eced2163d516c573d6e7a60e88804cf5730ecbc7de0ed834907b793e8d",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi-30_s1207.json": "edada2967fcbd150356963737f689faf67cb96b6b107b97b188c25ff311fbab2",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi30_s1200.json": "3c48740406c4b316efc5ed7fe618f258668d70403a02118e9801ca4a669e28ea",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi30_s1201.json": "1166710b95190591dae405f127a64ae81c3a926c5454a4f1b96283cd664f22bd",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi30_s1202.json": "771037dd4e6f87f09ba5cf0244904977372a48f6704cd1f2287122c847ce7c77",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi30_s1203.json": "c18940942f583fbb306eef64f2c24d8682800e3ae4c739e189813e36be96c309",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi30_s1204.json": "bd36bf12ceb78cf931efb2d7289ac4a136b2cd91940c007e434ec008778d5e21",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi30_s1205.json": "1b7aa32d346c552895f79f9555ca5917a02124c12f8ee36819a7ed5253139269",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi30_s1206.json": "f11c1e6415e75965818437ba4fd24a587f4f76c546a15ed994bd1d573058eaf6",
+    "runs/task-v9-causal/episodes/disabled_healthy_phi30_s1207.json": "ab36f179c65971e0f1b7e10bbc018c367169413f4f745e8db46300457c0a11d6",
+    "runs/task-v9-causal/episodes/observe_healthy_phi-30_s1200.json": "b33907de42fe02f9a1d4182a26aa4ff2b0bc3e18886441820e63482c6740e6e8",
+    "runs/task-v9-causal/episodes/observe_healthy_phi-30_s1201.json": "c48e16926d27996922143e3ff033c39f99c97ef452bcac7987143a8ca4568720",
+    "runs/task-v9-causal/episodes/observe_healthy_phi-30_s1202.json": "ff6955e5672a21076e2d39f6663cefcaaed2b9be6b33bec72ddea8460e84f16c",
+    "runs/task-v9-causal/episodes/observe_healthy_phi-30_s1203.json": "6274b54cf4e04f7b847ea6fd42e65f0ade633c93e19580722e47e8f067c28b94",
+    "runs/task-v9-causal/episodes/observe_healthy_phi-30_s1204.json": "ccb81a01409f10db99bed6fff3d9403e6996ffd1f55e7570f7e8467e8576cabc",
+    "runs/task-v9-causal/episodes/observe_healthy_phi-30_s1205.json": "09e0c663ead61650675b90bbe467da20f506a7e13a9cfd879bd239165ac81d31",
+    "runs/task-v9-causal/episodes/observe_healthy_phi-30_s1206.json": "047cac39a0af20716a10403df86a9a8875ba9777b377793e1f6397d2ddf996ea",
+    "runs/task-v9-causal/episodes/observe_healthy_phi-30_s1207.json": "f520811a73f129c00e7c63ec7b2d119b4d57014a0acc0f1da1752a742bed0bf2",
+    "runs/task-v9-causal/episodes/observe_healthy_phi30_s1200.json": "1d1e810fe1d4467ce446902ab78820f659170a87dcf73c844b614435ce78fb80",
+    "runs/task-v9-causal/episodes/observe_healthy_phi30_s1201.json": "11a6edc71a4bf57a9f869059c9ad2ce04fb92702717bd6512cda57ab12a5052c",
+    "runs/task-v9-causal/episodes/observe_healthy_phi30_s1202.json": "46b416c298e49d970e1d86c8cf09c2da7928cc08e42784a8fe91b5c525cbf48c",
+    "runs/task-v9-causal/episodes/observe_healthy_phi30_s1203.json": "4baac51f0b4e805fc802cda2df05e2a6bb8d75e047c1f57382368777a55f8f49",
+    "runs/task-v9-causal/episodes/observe_healthy_phi30_s1204.json": "c124f1caaca5b8adcbe0ab923dd761553d9c42ce3b5c5eb7a158869c45a97592",
+    "runs/task-v9-causal/episodes/observe_healthy_phi30_s1205.json": "5990d00dfa31bfc349bbcbd11c4c9175961e886c290b847cc4e145397076620f",
+    "runs/task-v9-causal/episodes/observe_healthy_phi30_s1206.json": "7a4feb575f36bd7141aeb1ab7015e94babb472a54dd4b643caade89d1262eece",
+    "runs/task-v9-causal/episodes/observe_healthy_phi30_s1207.json": "73ce9576ad79973722480314569c08dd906cbc9063f25356fc07319ca801e885",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi-30_s1200.json": "bb96991f5a70aa2a8091b5da932780f8ce6064b37e271eb8cc9aaa45ce63be01",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi-30_s1201.json": "ebb4e3e2940d71fd163da8757d4f80f989537063c27a2723b0f000d7e455dab4",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi-30_s1202.json": "89ae0d29dc02864940a56fe78229119c2278c199104e5ed336478d016dc01e7d",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi-30_s1203.json": "eeb5acfbe9db5575f7a483a0b8d2343bec4f643174ce172f6881f39ac2717c1d",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi-30_s1204.json": "a20d7ec5d7938971ab85534e11dece728c16d83f8e2add86c03b5ebf2d3b60e2",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi-30_s1205.json": "de0de254abec3b3ffe634dca34203859efacb8214890d44189986462e2187471",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi-30_s1206.json": "fcfb952a17a57ed189250ee3203a3ebc0424a475241a5d37b06c17679bf983ae",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi-30_s1207.json": "be55fddcb672c29a6ca92c00298707188bb30bc6c2593bc17598a1b315dc7953",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi30_s1200.json": "f641b0e72daac7c33b230e3ce9059f354cf96c5f12c00b94fa4108a0627da19e",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi30_s1201.json": "37476d7fa8f2aa859fafb3bb889176b7c94ace0181d1e150e49ea15d9c6b8891",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi30_s1202.json": "44322345229ab31f29cf9d96f53e19ee835f08897988c1f2b8fd6e46d9d28ae6",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi30_s1203.json": "77cbae0b38bff596b7694be97b7cba20a0a0ae8b17186200b500da8700f9c490",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi30_s1204.json": "e1a968ad93dab6e329f50b91d1a2435b536c0a95eb6fa23af10ec2f2fd2939e2",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi30_s1205.json": "aea3364568eb572ab3d94764fe8f0ca9aae85bba43f471958d476d3686a4ca45",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi30_s1206.json": "d1a21bde504fafe82a608e023cd9ee040a674c6b9889daf0e9021ed614c5b704",
+    "runs/task-v9-causal/episodes/proportional_healthy_phi30_s1207.json": "640ddf25e513bfec52025b9c652fc5f008ce5399d35db33ca0a5c6316f83c779",
+    "runs/task-v9-causal/episodes/relay_healthy_phi-30_s1200.json": "86faaf721b9d81a7760330fe73021724d9511bf50a513ca848925462b3a6795a",
+    "runs/task-v9-causal/episodes/relay_healthy_phi-30_s1201.json": "24a6226b91d2809c053367ba0d10732dfc68cc2bcc7314e3c23159dfd5676ad3",
+    "runs/task-v9-causal/episodes/relay_healthy_phi-30_s1202.json": "dcea12967af3d3e192f80e69a3f669a59b5e54d9103a901186aaecfd9bf4853f",
+    "runs/task-v9-causal/episodes/relay_healthy_phi-30_s1203.json": "f37e762895cfb73ebf97dad402cf61ae722f9b6b991427e96ae62abd9778a285",
+    "runs/task-v9-causal/episodes/relay_healthy_phi-30_s1204.json": "943144cfd78c1ffbfb857a0c3cb60884f01e4584baa274d28309b49590811fb8",
+    "runs/task-v9-causal/episodes/relay_healthy_phi-30_s1205.json": "e046bc14513e795cd877df11228af68b1ac3feb802d1ce6bbc2d6bbeff5b034d",
+    "runs/task-v9-causal/episodes/relay_healthy_phi-30_s1206.json": "8d9c412ec7a47c2f4abbb770febc333b50be956a690941c98a66a542a6f4d33a",
+    "runs/task-v9-causal/episodes/relay_healthy_phi-30_s1207.json": "9b62cba665628116c698878d35fbeabf80d1e5084ea93af77440a99f16123b72",
+    "runs/task-v9-causal/episodes/relay_healthy_phi30_s1200.json": "4f15f33f1ac29fbb67913ae56e9c4910d926b2cc0f87f1e4c77a5d426b1edcba",
+    "runs/task-v9-causal/episodes/relay_healthy_phi30_s1201.json": "9aab0e6bc22a2b69f7589fb51128d3fc447cdc131c19ca928e3e71a73b60c7a4",
+    "runs/task-v9-causal/episodes/relay_healthy_phi30_s1202.json": "feac7b957bb7d8b99f3bad974b15ccdc6111109cdbce5a390d1b65a7e4a10209",
+    "runs/task-v9-causal/episodes/relay_healthy_phi30_s1203.json": "35856dabdc69cf2f3c1a9c4f9863dddcfadb1515c9bf2409cd70c57cc23503e8",
+    "runs/task-v9-causal/episodes/relay_healthy_phi30_s1204.json": "ce7178954e30dad6c59b3db86f5a269b8fb2e98103ed0328581b31984fbcfe9a",
+    "runs/task-v9-causal/episodes/relay_healthy_phi30_s1205.json": "836962ed338d233fa3efccd3f8fa371ee218d0fa40f7c579cf11552f702207b8",
+    "runs/task-v9-causal/episodes/relay_healthy_phi30_s1206.json": "8c334a605752ec1ed8fc94a0ebecc8bea7d9562aec09adeace617bee4ae6e42c",
+    "runs/task-v9-causal/episodes/relay_healthy_phi30_s1207.json": "8237208beea39722296d1b1bfa44662a13ab1d799446387314d5add97a81d6b8"
+  },
+  "compute": {
+    "episode_wall_seconds_sum": 8401.720391499577,
+    "episode_wall_seconds_median": 131.40173279994633
+  },
+  "source_sha256": "b48b0e51e64443c23af8f7cbe7ef62566953b3b2710914d1099b6ca0d1efc7c1"
+}
