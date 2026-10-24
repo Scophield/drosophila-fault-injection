@@ -1,0 +1,206 @@
+{
+  "pdf_sha256": "7ac89fa92507d6529db773d0320821c4556e32d1c0fe1b8a4ceb4ad40eb319e1",
+  "references_only_fifth_page": true,
+  "pages": 5,
+  "page_sizes": [
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ]
+  ],
+  "fonts": {
+    "7": {
+      "type": "Type1",
+      "name": "NRRZMD+NimbusRomNo9L-Regu",
+      "embedded_bytes": 20499
+    },
+    "8": {
+      "type": "Type1",
+      "name": "LREKMX+NimbusRomNo9L-MediItal",
+      "embedded_bytes": 8298
+    },
+    "9": {
+      "type": "Type1",
+      "name": "THSCJL+NimbusRomNo9L-Medi",
+      "embedded_bytes": 16326
+    },
+    "10": {
+      "type": "Type1",
+      "name": "FSFYYG+CMSY9",
+      "embedded_bytes": 7273
+    },
+    "11": {
+      "type": "Type1",
+      "name": "PGGFOI+CMR9",
+      "embedded_bytes": 8974
+    },
+    "12": {
+      "type": "Type1",
+      "name": "KALDBT+CMMI9",
+      "embedded_bytes": 7387
+    },
+    "13": {
+      "type": "Type1",
+      "name": "QRXINV+NimbusRomNo9L-ReguItal",
+      "embedded_bytes": 15281
+    },
+    "14": {
+      "type": "Type1",
+      "name": "KALARB+CMR10",
+      "embedded_bytes": 14605
+    },
+    "15": {
+      "type": "Type1",
+      "name": "OUBBRD+CMMI10",
+      "embedded_bytes": 14143
+    },
+    "16": {
+      "type": "Type1",
+      "name": "LSCPDT+CMR7",
+      "embedded_bytes": 9116
+    },
+    "17": {
+      "type": "Type1",
+      "name": "GQWIGS+CMSY10",
+      "embedded_bytes": 7755
+    },
+    "18": {
+      "type": "Type1",
+      "name": "XIQESS+CMSY7",
+      "embedded_bytes": 7770
+    },
+    "23": {
+      "type": "Type1",
+      "name": "MTMXPA+CMMI8",
+      "embedded_bytes": 7907
+    },
+    "24": {
+      "type": "Type1",
+      "name": "SOHATY+CMMI6",
+      "embedded_bytes": 7539
+    },
+    "25": {
+      "type": "Type1",
+      "name": "SDNQFF+CMR8",
+      "embedded_bytes": 8311
+    },
+    "26": {
+      "type": "Type1",
+      "name": "ZJNYAR+CMMI7",
+      "embedded_bytes": 9175
+    },
+    "27": {
+      "type": "Type1",
+      "name": "UAGOMC+CMBX10",
+      "embedded_bytes": 7320
+    },
+    "29": {
+      "type": "Type0",
+      "name": "GWVGRZ+ArialMT",
+      "embedded_bytes": 44992
+    },
+    "30": {
+      "type": "Type0",
+      "name": "BOFGCG+Arial-BoldMT",
+      "embedded_bytes": 32148
+    },
+    "31": {
+      "type": "Type0",
+      "name": "EMXNKG+DejaVuSans-Oblique",
+      "embedded_bytes": 3512
+    },
+    "32": {
+      "type": "Type0",
+      "name": "EXWDGM+DejaVuSans",
+      "embedded_bytes": 4224
+    },
+    "62": {
+      "type": "Type0",
+      "name": "DEQMPQ+ArialMT",
+      "embedded_bytes": 41044
+    },
+    "63": {
+      "type": "Type0",
+      "name": "GJAVXT+Arial-BoldMT",
+      "embedded_bytes": 22828
+    },
+    "92": {
+      "type": "Type0",
+      "name": "FLPXPV+ArialMT",
+      "embedded_bytes": 43668
+    },
+    "93": {
+      "type": "Type0",
+      "name": "YEWPGR+Arial-BoldMT",
+      "embedded_bytes": 22320
+    },
+    "96": {
+      "type": "Type0",
+      "name": "FULYEX+ArialMT",
+      "embedded_bytes": 43460
+    },
+    "97": {
+      "type": "Type0",
+      "name": "DORSER+Arial-BoldMT",
+      "embedded_bytes": 23280
+    },
+    "128": {
+      "type": "Type0",
+      "name": "EXMUJR+ArialMT",
+      "embedded_bytes": 38052
+    },
+    "129": {
+      "type": "Type0",
+      "name": "DDOVLN+Arial-BoldMT",
+      "embedded_bytes": 18816
+    }
+  },
+  "type3": [],
+  "unembedded": [],
+  "outside_page": [],
+  "pdf_version": "1.5",
+  "encrypted": false,
+  "links_per_page": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "bookmarks": 0,
+  "widgets_per_page": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "form_fields": 0,
+  "submission_feature_errors": []
+}

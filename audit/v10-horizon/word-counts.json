@@ -1,0 +1,30 @@
+{
+  "method": "Whitespace tokens after removing section headings and citations; math tokens retained.",
+  "sections": [
+    {
+      "section": "abstract",
+      "before_tokens": 142,
+      "after_tokens": 150
+    },
+    {
+      "section": "intro",
+      "before_tokens": 246,
+      "after_tokens": 282
+    },
+    {
+      "section": "results",
+      "before_tokens": 410,
+      "after_tokens": 429
+    },
+    {
+      "section": "limits",
+      "before_tokens": 233,
+      "after_tokens": 201
+    },
+    {
+      "section": "contract",
+      "before_tokens": 319,
+      "after_tokens": 222
+    }
+  ]
+}

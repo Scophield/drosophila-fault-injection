@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "errors": [],
+  "pdf_sha256": "7ac89fa92507d6529db773d0320821c4556e32d1c0fe1b8a4ceb4ad40eb319e1",
+  "pages": 5,
+  "bytes": 3393378,
+  "font_rows": 29,
+  "rendered_pages": [
+    "page-1.png",
+    "page-2.png",
+    "page-3.png",
+    "page-4.png",
+    "page-5.png"
+  ],
+  "dpi": 130,
+  "tools": {
+    "pdftoppm": "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\pdftoppm.EXE",
+    "pdffonts": "C:\\Users\\ohsawalab gpu3\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdffonts.EXE",
+    "pdfinfo": "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\pdfinfo.EXE"
+  },
+  "utc": "2026-10-24T15:30:24.423218+00:00",
+  "source_sha256": "1341f4a5d9342c5b2d740ab1017513ee3fd31e702a314cb9271cd59989ae0fff",
+  "scope": "Native Poppler all-page rendering and font/size checks; not visual approval, references-only-page verification or scientific validation."
+}

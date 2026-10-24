@@ -1,121 +1,60 @@
-# Checked evidence for paired closed-loop SNN fault assessment — V10
+# From Connection Loss to Collision — V10 horizon candidate
 
-This is the authorized curated publication layer of the full research project.
-The frozen V10 **code/data** reference is
-[986ff54193fee6a1b95815499a4a3477b15ea49a](https://github.com/Scophield/drosophila-fault-injection/tree/986ff54193fee6a1b95815499a4a3477b15ea49a).
-It includes the pre-citation manuscript candidate. This later checkout adds the
-final paper with that real code/data citation; `PUBLIC_SCOPE.json` binds its
-exact PDF/source bytes, and the enclosing Git commit identifies the complete
-final-paper package. Use `git rev-parse HEAD` and pin that full SHA when citing
-the final manuscript. A PDF cannot contain the hash of its own enclosing commit.
+Current paper: [paper/main.pdf](paper/main.pdf). Active source:
+[paper/main_v10_horizon.tex](paper/main_v10_horizon.tex) (also `paper/main.tex`).
+The title is *From Connection Loss to Collision: Closed-Loop Fault Assessment
+of a Fly-Connectome SNN*. Four technical pages plus a reference-only fifth page;
+the four main figures and approved Blender imagery are retained.
 
-Scientific baseline:43bcd4d6a99b2d9b258cf8a198a4545d237b5c39. That V9 parent
-does NOT identify V10. The curated branch has independent distribution history
-to avoid republishing unresolved-license tables in inherited Git history.
-Original generation HEADs, frozen registrations, source snapshots, observations
-and negative results are retained. No GitHub Release or main/V9 update was made.
+This revision adds descriptive 900/1000-ms rescoring of the SAME RF-0 trajectories,
+concrete quantitative contributions, scoped frozen-warning claims, and guards for
+three reproduced malformed core-input crashes. It adds no neural experiments,
+threshold fitting, independent samples or new hypothesis tests. Frozen records,
+preregistrations and calibrations are byte-identical to the prior public snapshot.
 
-The main paper is self-contained within four technical pages. ISCAS2027 does
-not accept supplementary materials. The24-page research archive is retained
-privately as history; it is not a submission attachment or required reading.
+| RF-0, 50% deletion, contact-free tasks | P | R |
+|---|---:|---:|
+| 900 ms | 46/48 | 48/48 |
+| 1000 ms | 37/48 | 48/48 |
 
-Obtain the final branch in a NEW directory and record the actual full commit:
+Both rows reuse 24 paired seed clusters, with two bearings per law. Healthy
+clearance differs; RF redraws, recalibration and test cohorts change together.
+Small uncertain RF-A/B contrasts are neither equivalence nor RF causal effects.
+Warning conclusions concern only the tested frozen scalar criteria. Selected
+checker challenges are not general detection coverage or execution attestation.
+
+## Obtain and reproduce
 
 ```text
-git clone --single-branch --branch artifact/iscas2027-v10-final https://github.com/Scophield/drosophila-fault-injection.git v10-evidence
-cd v10-evidence
+git clone --single-branch --branch artifact/iscas2027-v10-horizon https://github.com/Scophield/drosophila-fault-injection.git v10-horizon
+cd v10-horizon
 git rev-parse HEAD
 ```
 
-The paper's fixed code/data citation deliberately identifies the earlier frozen
-data snapshot. The final-paper delivery receipt provides the enclosing final
-manuscript commit. Do not substitute V9 or that earlier candidate for the final PDF.
+[Reproduction entry](docs/PUBLIC_REPRODUCE_V10_HORIZON.md) distinguishes saved-data
+analysis, checker tests and LaTeX compilation from fresh neural simulation.
+[Contribution before/after](audit/v10-horizon/CONTRIBUTIONS_BEFORE_AFTER.md),
+[descriptive records](audit/v10-horizon/descriptive/first-contacts.csv),
+[revision report](docs/V10_HORIZON_REVISION.md) and
+[publication identities](PUBLICATION.md) document the exact scope.
 
-## Evidence and boundaries
+## Version and distribution boundary
 
-- Two native schemas use one common checker. Each detects11common-checker and
-  3native-only predefined challenges; this is not general error coverage.
-- An independent delayed tank has96actual episodes, all safe; it demonstrates
-  limited reuse, not superior fault tolerance. A synthetic logger that never
-  solves neural dynamics can pass replay: consistency is not execution authentication.
-- RF-0 uses24test clusters/288episodes; RF-A/B each12clusters/144episodes.
-  Each seed contains all directions/laws/faults. RF-A/B are independent draws
-  from the SAME prior, with separate development/validation/recalibration.
-- New50%law contrasts are both−4.17pp,95%CI[−12.5,0], four-test Holm p=1.
-  This is not equivalence or stable replication of the larger baseline contrast.
-- Saved-trace replay does not rerun neural dynamics. Same-host clean dependency
-  installation has been exercised; second-host neural replication has not.
+The original generating code/data commit remains
+[986ff54193fee6a1b95815499a4a3477b15ea49a](https://github.com/Scophield/drosophila-fault-injection/tree/986ff54193fee6a1b95815499a4a3477b15ea49a).
+The preceding fixed paper is
+[48c16c0852bcc3f6b061ab8edc97b0f16ebc1016](https://github.com/Scophield/drosophila-fault-injection/tree/48c16c0852bcc3f6b061ab8edc97b0f16ebc1016).
+Neither identifies this revised PDF/checker. The enclosing Git commit identifies
+this revision, while `PUBLIC_SCOPE.json` binds its distributed file bytes.
+Historical prepublication reports retain their original unpublished/no-push
+status; this publication entry supersedes that delivery status, not their data.
+The legacy named `paper/fly_connectome_fault_assessment_v10_final.pdf` and
+`main_v10_final*.tex` are prior candidates; use `paper/main.pdf` for this revision.
 
-## Minimal saved-record checks
-
-Use CPython3.12, a NEW virtual environment and NEW output directories. Create it:
-
-```text
-python -m venv .venv
-```
-
-Activate it before running the remaining commands: PowerShell
-`.\.venv\Scripts\Activate.ps1`, or a POSIX shell `. .venv/bin/activate`.
-Then install the minimal pinned packages:
-
-```text
-python -m pip install -r requirements-saved-v10.txt
-python -c "from pathlib import Path; Path('tmp').mkdir(exist_ok=True)"
-python -X utf8 tools/run_v9.py tools/analyze_task_v9_exportfix.py --root runs/task-v9-test --registration runs/task-v9-frozen/registration-core.json --out output/core
-python -X utf8 tools/run_v9.py tools/analyze_task_v10.py --root runs/task-v10-transfer/map-A/test --registration runs/task-v10-transfer/map-A/registration.json --out output/map-A
-python -X utf8 tools/run_v9.py tools/analyze_task_v10.py --root runs/task-v10-transfer/map-B/test --registration runs/task-v10-transfer/map-B/registration.json --out output/map-B
-python -X utf8 tools/run_v9.py tools/replay_audit_v9.py --root runs/task-v9-test --calibration runs/task-v9-frozen/calibration.json --out output/core-replay
-python -X utf8 tools/run_v9.py tools/replay_audit_v9.py --root runs/task-v10-transfer/map-A/test --calibration runs/task-v10-transfer/map-A/calibration.json --out output/map-A-replay
-python -X utf8 tools/run_v9.py tools/replay_audit_v9.py --root runs/task-v10-transfer/map-B/test --calibration runs/task-v10-transfer/map-B/calibration.json --out output/map-B-replay
-python examples/tank_v10.py --out output/tank
-```
-
-Per-map significance fields are descriptive. The registered FOUR-test family
-spans both new maps and both doses; use canonical
-`audit/v10/transfer-01/summary.json` and the independent score check, not a
-within-map two-test correction, for the reported secondary Holm p values.
-Primary loss/gain/exposure, derived net loss, prespecified secondary
-interactions/warnings and post-hoc clearance diagnostics remain distinct.
-
-## Interface, figures, tests and paper
-
-The complete scientific environment uses `requirements-v9.txt`; saved-analysis
-checks above do not require Brian2 or external connectivity tables.
-
-```text
-python -X utf8 tools/run_v9.py tools/check_evidence_v10.py --out output/interface
-python -X utf8 tools/run_v9.py tools/plot_v10f.py --out output/figures
-python -X utf8 tools/run_v9.py tools/test_v10.py --out output/tests
-powershell -File tools/build_v10.ps1 -SourceFile main_v10_final4.tex -BuildDirectory output/paper
-```
-
-Interface challenge execution imports pandas through the explicitly synthetic
-logger witness; figure rebuilding additionally needs matplotlib/PyMuPDF.
-The full test suite includes a tiny actual Brian2 reset test, not a connectome
-simulation. Plot source CSVs, saved counts, input hashes and source snapshots
-are retained. No simulation, threshold or seed is changed by plotting.
-Build from the repository root. MiKTeX/TeXLive with IEEEtran,AMS,cite,graphicx,
-booktabs,placeins,url and BibTeX is required. The locked Fig.1 PDF is included
-byte-for-byte; rebuilding the paper does not regenerate approved Blender art.
-Use a relative output directory for Python commands; the PowerShell build
-script resolves the supplied new directory against the repository working directory.
-
-## External inputs deliberately not redistributed
-
-`PUBLIC_SCOPE.json` enumerates exact bytes and explicitly omitted inputs.
-The annotation dump, transformed completeness/connectivity tables and original
-private Blender projects are not bundled. MIT applies to project code and the
-identified upstream model code copies, not all upstream datasets. Full-neural
-reruns require the pinned model, separate annotations and hash/runtime checks;
-they are not implied by successfully re-scoring saved records.
-
-Obtain model inputs from philshiu/Drosophila_brain_model at
-91bdd1e7dcf193f3e7ca5a8933497fcef63b7960. Original text inputs used CRLF
-checkout representations; Parquet bytes match upstream exactly. Annotations
-originate at flyconnectome/flywire_annotations commit
-a83b2776d60d5764cef36b927f5f9679c16c47a2. See
-`docs/THIRD_PARTY_INPUTS_V10.md` for source URLs, hashes, attribution and unresolved
-annotation/transformed-table terms. New runs need a separate compatible
-registration and output directory; do not rewrite frozen records to disguise
-changed runtime/input versions. Traceable Poisson seeds do not promise
-bit-identical trajectories across platforms.
+The full V9 scientific baseline is 43bcd4d6a99b2d9b258cf8a198a4545d237b5c39.
+This branch descends from the curated V10 distribution history, avoiding inherited
+unresolved-license input tables. Private Blender projects, external matrices,
+annotation dumps and caches are omitted; approved rendered figure PDFs remain.
+See `PUBLIC_SCOPE.json`, `THIRD_PARTY_LICENSES` and `docs/THIRD_PARTY_INPUTS_V10.md`.
+No main/V9/previous-final branch update, GitHub Release or submission is performed.
+Research archives are not formal supplementary submission attachments.

@@ -22,6 +22,27 @@ errors; malformed/missing rows are never silently deleted. `prefix(record,t)`
 returns defensive copies of completed observations through t and cannot read
 future outcomes. No cross-plant comparison of incompatible resource units occurs.
 
+### Revised core schema boundary
+
+Before generic set, regex and arithmetic checks, normalized records validate the
+integer cluster/deletion fields, hashable condition key, string law/fault/digests,
+numeric clocks and optional failure time, boolean success, mapping bindings/native
+record, and a list of frame mappings. Missing/nonfinite frame fields remain
+structured frame issues. `decode_and_audit` reports invalid core rows as
+`native-schema` with their original row index; the direct `audit` entry reports
+`record-schema`. Valid rows continue, and absent campaign cells remain explicit.
+No invalid scalar is silently coerced into a valid seed, digest or success flag.
+
+The reproduced null-uniform, numeric-mask and list-seed failures are regression
+probes, tested on both tank and saved fly schemas, with mixed valid/invalid batches.
+They are separate from the original fourteen selected challenge types and are
+not additional scientific samples or a general error-coverage estimate. This
+core-shape guard does not promise a total parser for arbitrary native objects,
+validate every plant-specific field, or authenticate neural execution. Native
+adapters retain responsibility for their declared semantics and preconditions.
+The revised guard is a source revision, not a retroactive change to the immutable
+V10 generation-time/public snapshot or frozen experiment records.
+
 ## Generic invariants
 
 1. Exactly one record per cluster/condition/law/fault; every declared cell remains.

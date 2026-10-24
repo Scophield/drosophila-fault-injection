@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "field": "uniform_sha256",
+      "value": null,
+      "crashed": false,
+      "valid_rows": 0,
+      "issues": [
+        {
+          "code": "native-schema",
+          "key": null,
+          "detail": "row 0: uniform_sha256 must be a string"
+        },
+        {
+          "code": "matrix-membership",
+          "key": null,
+          "detail": "missing=1, extra=0"
+        }
+      ]
+    },
+    {
+      "field": "mask_sha256",
+      "value": 123,
+      "crashed": false,
+      "valid_rows": 0,
+      "issues": [
+        {
+          "code": "native-schema",
+          "key": null,
+          "detail": "row 0: mask_sha256 must be a string"
+        },
+        {
+          "code": "matrix-membership",
+          "key": null,
+          "detail": "missing=1, extra=0"
+        }
+      ]
+    },
+    {
+      "field": "seed",
+      "value": [],
+      "crashed": false,
+      "valid_rows": 0,
+      "issues": [
+        {
+          "code": "native-schema",
+          "key": null,
+          "detail": "row 0: cluster/seed must be an integer"
+        },
+        {
+          "code": "matrix-membership",
+          "key": null,
+          "detail": "missing=1, extra=0"
+        }
+      ]
+    },
+    {
+      "field": "success",
+      "value": "yes",
+      "crashed": false,
+      "valid_rows": 0,
+      "issues": [
+        {
+          "code": "native-schema",
+          "key": null,
+          "detail": "row 0: success must be boolean"
+        },
+        {
+          "code": "matrix-membership",
+          "key": null,
+          "detail": "missing=1, extra=0"
+        }
+      ]
+    }
+  ],
+  "contract_sha256": "514d864c51e208ec5168abbb5868f49a459adc821caa8717ff13614f23711870"
+}

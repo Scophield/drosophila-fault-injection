@@ -1,0 +1,32 @@
+% Narrative candidate; the approved main_v10_final4.tex and PDF remain frozen.
+\documentclass[conference]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx,booktabs,placeins,url}
+\newif\iffourfigures\fourfigurestrue
+\begin{document}
+\title{From Connection Loss to Collision: Closed-Loop Fault Assessment of a Fly-Connectome SNN}
+\author{\IEEEauthorblockN{Shuchao Gao}
+\IEEEauthorblockA{Graduate School of Information, Production and Systems\\
+Waseda University\\Tokyo, Japan}}
+\maketitle
+\bstctlcite{IEEEcontrol}
+\begin{abstract}
+\input{sections/v10s_abstract}
+\end{abstract}
+\begin{IEEEkeywords}
+spiking neural networks, fault assessment, closed-loop control, reproducibility
+\end{IEEEkeywords}
+\input{sections/v10f_figures}
+\input{sections/v10s_intro}
+\SystemFigure
+\input{sections/v10f_contract}
+\ReuseFigure
+\TransferFigure
+\input{sections/v10f_methods}
+\input{sections/v10s_results}
+\input{sections/v10s_limits}
+\FloatBarrier\clearpage
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+\end{document}

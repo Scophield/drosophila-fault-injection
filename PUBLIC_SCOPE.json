@@ -1,5 +1,5 @@
 {
-  "status": "CURATED_V10_FINAL_MANUSCRIPT",
+  "status": "CURATED_V10_HORIZON_MANUSCRIPT",
   "scientific_baseline": "43bcd4d6a99b2d9b258cf8a198a4545d237b5c39",
   "distribution": "Curated clean export; no inherited V9 Git history, external tables, caches, credentials or private Blender projects.",
   "omitted": [
@@ -877,13 +877,81 @@
       "bytes": 1213,
       "sha256": "76a74359a05c1d389e3322bfd933c38d639673012379f767dc1f062880ee6961"
     },
+    "audit/v10-horizon/adapter-regression.json": {
+      "bytes": 49022,
+      "sha256": "61a60bb720249eebcf64b106ab52f505029c5ba916eec672d427a65fdf5d621c"
+    },
+    "audit/v10-horizon/code-and-analysis-changes.patch": {
+      "bytes": 20568,
+      "sha256": "02889e21631203762271825c730b1d816766dfb55502cf4577037f962f35cf35"
+    },
+    "audit/v10-horizon/CONTRIBUTIONS_BEFORE_AFTER.md": {
+      "bytes": 2712,
+      "sha256": "e747c8a22766d19f5ccb334cc416f9117b7796f68c19e0bffc88375be0f75b3c"
+    },
+    "audit/v10-horizon/descriptive/check.json": {
+      "bytes": 40758,
+      "sha256": "416dbf6638bbca26d2358db3a303fdff13e59a7245b258078ac0b4fab604eff3"
+    },
+    "audit/v10-horizon/descriptive/curve-points.csv": {
+      "bytes": 743,
+      "sha256": "0861bf2b3d6118b6dbc7691c8ac8c4974a30398ccc7b64937a678e38ebceef0b"
+    },
+    "audit/v10-horizon/descriptive/first-contacts.csv": {
+      "bytes": 28431,
+      "sha256": "12ea33387481b1da0aac56222cc2730a4b1a66d2064fbe5f36fd4bf68cc89106"
+    },
+    "audit/v10-horizon/descriptive/horizon-counts.csv": {
+      "bytes": 109,
+      "sha256": "7a8bc502071fa8a7052f63f0c284f52435d0b99137a75c8c392e74f4f6623f89"
+    },
+    "audit/v10-horizon/figure3-preservation.json": {
+      "bytes": 184,
+      "sha256": "bf472651c7968a13c1c4c654294ffb881da121616ae12b64083360144a302f42"
+    },
+    "audit/v10-horizon/manuscript-changes.patch": {
+      "bytes": 25392,
+      "sha256": "87dac03b69e5ea16b3e9199f3ae83968ad91ad2d6b6706dfcd341989e1454e56"
+    },
+    "audit/v10-horizon/native-pdf-check.json": {
+      "bytes": 1039,
+      "sha256": "48f0eb1ee9cabddbdb09577333c31f62954460ef4bb09df75418f31986b1bcfe"
+    },
+    "audit/v10-horizon/pdf-check.json": {
+      "bytes": 4050,
+      "sha256": "ee5a09a938058c0ec964c5f1a68b947b66fb32fba7ba99e130714c4a17706604"
+    },
+    "audit/v10-horizon/prepublication-check.json": {
+      "bytes": 3785,
+      "sha256": "f08e954e74acc06805c4095514409973121cdd6c8cff145040e2d0beb0115247"
+    },
+    "audit/v10-horizon/schema-after.json": {
+      "bytes": 1786,
+      "sha256": "9faf1d926bc073a5c4f0d15dd754640139513b3aedcbf53ffe59c93006b6fec7"
+    },
+    "audit/v10-horizon/schema-before.json": {
+      "bytes": 577,
+      "sha256": "6c56a71529f7b1c32d4998798f6f0ffdca11772f6d8faa39c35197b9733e36fd"
+    },
+    "audit/v10-horizon/schema-tests-final.txt": {
+      "bytes": 2965,
+      "sha256": "efcf3c9bc7e4307a7bc5ef77058dc5b6f1fb23e0cb439eb9415e5254097284d1"
+    },
+    "audit/v10-horizon/word-counts.json": {
+      "bytes": 629,
+      "sha256": "392477969ec14abfacce36a902d7e32284b00f8aff3c4548cde7a4338f05339b"
+    },
     "docs/EVIDENCE_INTERFACE_V10.md": {
-      "bytes": 6083,
-      "sha256": "1843d5b33baa80236e5ca9b452033bd8f09083a47c861bdd14beaba82bdc09f6"
+      "bytes": 7461,
+      "sha256": "b2939b082d19d6c038e5b9bc5bf50aafd1874c87f1223b5af736f084cf0b5b5d"
     },
     "docs/PUBLIC_REPRODUCE_V10_FINAL.md": {
       "bytes": 7267,
       "sha256": "dced361a6a8045fbc70db0141e2d632ddf7c8cee29489f82dad29e0f01c3b8b4"
+    },
+    "docs/PUBLIC_REPRODUCE_V10_HORIZON.md": {
+      "bytes": 2484,
+      "sha256": "3d6a0511dcc7b8de095455a39bfe94efd540ac0697e7ddbbf667aea470b62f6b"
     },
     "docs/THIRD_PARTY_INPUTS_V10.md": {
       "bytes": 4360,
@@ -913,13 +981,17 @@
       "bytes": 2611,
       "sha256": "ae44c4fe96c0470b1de7ae1f94a0411ac47ddb6d8b4b07fb6e83815aa02d5828"
     },
+    "docs/V10_HORIZON_REVISION.md": {
+      "bytes": 12801,
+      "sha256": "7f71c77039f87d26734cea0aa74e821f69dbd32a01924be868cb4a8ae5a34cc2"
+    },
     "evidence_v10/__init__.py": {
       "bytes": 149,
       "sha256": "f9fe221fe7957e813de3c2a5da0ba7d54f062a67f4fe5b68f4b41ec6c1ffe43c"
     },
     "evidence_v10/contract.py": {
-      "bytes": 6442,
-      "sha256": "6ded77e802899a658694ce824f74bd4d36d5e9fdfc1c4892310722b7055279fd"
+      "bytes": 8626,
+      "sha256": "514d864c51e208ec5168abbb5868f49a459adc821caa8717ff13614f23711870"
     },
     "evidence_v10/fly_adapter.py": {
       "bytes": 5945,
@@ -957,17 +1029,21 @@
       "bytes": 41142,
       "sha256": "137d39b22bf6cb789573c1549e412bae8e5f6f32e2d40d2f856a72473d031ef8"
     },
+    "paper/figs/v10h_rf.pdf": {
+      "bytes": 98955,
+      "sha256": "fcba6ce6e016df674d89a46d0a1d26d4c05c4bb70f19ee572f35f48cef398951"
+    },
     "paper/fly_connectome_fault_assessment_v10_final.pdf": {
       "bytes": 3344895,
       "sha256": "295b07b85ff152bfe17d59612edff9bec3124a9e3380a3db79b535d87ab16ebe"
     },
     "paper/main.pdf": {
-      "bytes": 3344895,
-      "sha256": "295b07b85ff152bfe17d59612edff9bec3124a9e3380a3db79b535d87ab16ebe"
+      "bytes": 3393378,
+      "sha256": "7ac89fa92507d6529db773d0320821c4556e32d1c0fe1b8a4ceb4ad40eb319e1"
     },
     "paper/main.tex": {
-      "bytes": 882,
-      "sha256": "6ce9276fc92f44266bc5292f73cfb82d17c47304a04afb3754d9d5c9a1ad2cc1"
+      "bytes": 1065,
+      "sha256": "be30c71896ddad509949ab024ea1118808e88a75bd6b6ff5be6112ad03e0f335"
     },
     "paper/main_v10_final3.tex": {
       "bytes": 883,
@@ -976,6 +1052,14 @@
     "paper/main_v10_final4.tex": {
       "bytes": 882,
       "sha256": "6ce9276fc92f44266bc5292f73cfb82d17c47304a04afb3754d9d5c9a1ad2cc1"
+    },
+    "paper/main_v10_horizon.tex": {
+      "bytes": 1065,
+      "sha256": "be30c71896ddad509949ab024ea1118808e88a75bd6b6ff5be6112ad03e0f335"
+    },
+    "paper/main_v10_science.tex": {
+      "bytes": 1033,
+      "sha256": "0e59819f63910b83e7f3eebeead4af6ae1f8e96ac467d805d748a0eec545a467"
     },
     "paper/PROTOCOL_v9.md": {
       "bytes": 10731,
@@ -1021,13 +1105,53 @@
       "bytes": 2577,
       "sha256": "eb4467ca1b3662587460c4bec75d546824f41855a8e29786c1d9d7724f30c3b3"
     },
+    "paper/sections/v10h_abstract.tex": {
+      "bytes": 1164,
+      "sha256": "5de619c05902bdc77b960d51a6b0ef5729b1e849c6a91554eb5e7325d0461eb4"
+    },
+    "paper/sections/v10h_contract.tex": {
+      "bytes": 1762,
+      "sha256": "c552203ad70a66a9188ae7973aa937bbb5d1e1939568837fc69f6f4e71ae9f04"
+    },
+    "paper/sections/v10h_figures.tex": {
+      "bytes": 3128,
+      "sha256": "eec5ff280b4a00c04da27d2120c9a88794d1c28bf86e7cf8e84f58cb8a488760"
+    },
+    "paper/sections/v10h_intro.tex": {
+      "bytes": 2489,
+      "sha256": "ea6805a7d872caffaa2bc6d857590cfd49c71c6cb5a1b700a0fb1ae4b4d07645"
+    },
+    "paper/sections/v10h_limits.tex": {
+      "bytes": 1610,
+      "sha256": "4b8bdf00ea2fb1d5b3bccdd44d8ac1a25b764257b63098c849d80cc32540a026"
+    },
+    "paper/sections/v10h_results.tex": {
+      "bytes": 3289,
+      "sha256": "128720091a3d1e8fd919bf3236c6a6d7941590549a594c069a677d8f5fe95f36"
+    },
+    "paper/sections/v10s_abstract.tex": {
+      "bytes": 1104,
+      "sha256": "c4cac7fb777a3183415ca7e919b8bdd6710af29a61e22654480d3f5128d8014e"
+    },
+    "paper/sections/v10s_intro.tex": {
+      "bytes": 2259,
+      "sha256": "dc08d0e53a9e2d4176ef6b1ad58ebf19ab3159254f361e32b7ea33a4017ed915"
+    },
+    "paper/sections/v10s_limits.tex": {
+      "bytes": 1817,
+      "sha256": "e283e105189344f5ded0a4583216c2593d43180bb06e0b09cc67a78d27695bf8"
+    },
+    "paper/sections/v10s_results.tex": {
+      "bytes": 3213,
+      "sha256": "77b5f6153fbb86b41c67a46369b445231cb5be730c3a1da5161d30b0090b1c81"
+    },
     "PUBLICATION.md": {
-      "bytes": 1475,
-      "sha256": "536902300c6679caff28734485a82cce1111abfdd203fa8b8325f16cd4902f5f"
+      "bytes": 1407,
+      "sha256": "759a37839b2242009d52f9a645e208a2d1b985264464d2d6f02fd877207b4e70"
     },
     "README.md": {
-      "bytes": 7267,
-      "sha256": "dced361a6a8045fbc70db0141e2d632ddf7c8cee29489f82dad29e0f01c3b8b4"
+      "bytes": 3499,
+      "sha256": "24ae0efda3e94ac53ade6837c21931a9bf0a520f94cc2f6270b596f0e84f4a96"
     },
     "requirements-saved-v10.txt": {
       "bytes": 109,
@@ -11981,6 +12105,10 @@
       "bytes": 1993,
       "sha256": "e85678d48f84de6c843559402eeb2b06c44463bcbe1212aa1334c19906900d3f"
     },
+    "tests/test_evidence_schema_v10.py": {
+      "bytes": 5314,
+      "sha256": "47de0b9315b3941e69c73ff66c09cb05161746972c2a94faabf25c030e6fd289"
+    },
     "tests/test_evidence_v10.py": {
       "bytes": 4154,
       "sha256": "38a2ff08183d1b1fdf2f19fab6479826a57d3592c4a286d12308284bfbcfa2f0"
@@ -12301,6 +12429,10 @@
       "bytes": 8238,
       "sha256": "1e262529cb10f6f9cbb1735e02ccc7981ec9fc7144e90e807484945e9655afc6"
     },
+    "tools/plot_horizon_v10.py": {
+      "bytes": 7029,
+      "sha256": "d53854ff398b285ff43be41493620332533fdb8d53a7aec8f1e5650562e9d8da"
+    },
     "tools/plot_horizons_v4.py": {
       "bytes": 4261,
       "sha256": "6c2dbadc044b4799b97b463a3a2853df5721d16d7c206afdd8e33d66fae91138"
@@ -12455,5 +12587,8 @@
     }
   },
   "code_data_reference": "986ff54193fee6a1b95815499a4a3477b15ea49a",
-  "final_manuscript_identity": "The enclosing Git commit; original generation HEADs are preserved. The cited code/data snapshot is an earlier immutable publication commit, not the final PDF identifier."
+  "final_manuscript_identity": "The enclosing Git commit identifies this horizon/checker revision; the paper citation identifies original generating code/data.",
+  "previous_final_manuscript": "48c16c0852bcc3f6b061ab8edc97b0f16ebc1016",
+  "current_manuscript_source": "paper/main_v10_horizon.tex",
+  "current_pdf_sha256": "7ac89fa92507d6529db773d0320821c4556e32d1c0fe1b8a4ceb4ad40eb319e1"
 }

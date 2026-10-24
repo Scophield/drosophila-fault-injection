@@ -1,0 +1,25 @@
+test_clean_campaign_still_passes (test_evidence_schema_v10.SchemaBoundaryTests.test_clean_campaign_still_passes) ... ok
+test_direct_normalized_entry_is_guarded_before_sets_and_regex (test_evidence_schema_v10.SchemaBoundaryTests.test_direct_normalized_entry_is_guarded_before_sets_and_regex) ... ok
+test_extreme_numeric_frame_is_a_finding (test_evidence_schema_v10.SchemaBoundaryTests.test_extreme_numeric_frame_is_a_finding) ... ok
+test_invalid_digest_text_keeps_semantic_issue (test_evidence_schema_v10.SchemaBoundaryTests.test_invalid_digest_text_keeps_semantic_issue) ... ok
+test_mixed_batch_retains_valid_rows_and_each_bad_row_index (test_evidence_schema_v10.SchemaBoundaryTests.test_mixed_batch_retains_valid_rows_and_each_bad_row_index) ... ok
+test_nonboolean_native_success_is_not_coerced (test_evidence_schema_v10.SchemaBoundaryTests.test_nonboolean_native_success_is_not_coerced) ... ok
+test_same_type_guards_apply_to_saved_fly_rows (test_evidence_schema_v10.SchemaBoundaryTests.test_same_type_guards_apply_to_saved_fly_rows) ... ok
+test_schema_failure_does_not_hide_other_record_errors (test_evidence_schema_v10.SchemaBoundaryTests.test_schema_failure_does_not_hide_other_record_errors) ... ok
+test_three_reported_native_crashes_are_indexed_findings (test_evidence_schema_v10.SchemaBoundaryTests.test_three_reported_native_crashes_are_indexed_findings) ... ok
+test_all_cells_required_even_if_healthy_failure (test_evidence_v10.EvidenceTests.test_all_cells_required_even_if_healthy_failure) ... ok
+test_empty_or_duplicate_declarations_cannot_vacuously_pass (test_evidence_v10.EvidenceTests.test_empty_or_duplicate_declarations_cannot_vacuously_pass) ... ok
+test_forced_dropout_latches_real_boundary_crossing (test_evidence_v10.EvidenceTests.test_forced_dropout_latches_real_boundary_crossing) ... ok
+test_frame_grid_rounding_is_not_exact_actuation (test_evidence_v10.EvidenceTests.test_frame_grid_rounding_is_not_exact_actuation) ... ok
+test_future_outcome_and_activity_cannot_change_prefix (test_evidence_v10.EvidenceTests.test_future_outcome_and_activity_cannot_change_prefix) ... ok
+test_invalid_clock_and_units_rejected_at_declaration (test_evidence_v10.EvidenceTests.test_invalid_clock_and_units_rejected_at_declaration) ... ok
+test_native_missing_field_reported_not_silently_dropped (test_evidence_v10.EvidenceTests.test_native_missing_field_reported_not_silently_dropped) ... ok
+test_nonfinite_decision_timestamp (test_evidence_v10.EvidenceTests.test_nonfinite_decision_timestamp) ... ok
+test_prefix_is_a_copy (test_evidence_v10.EvidenceTests.test_prefix_is_a_copy) ... ok
+test_same_seed_name_does_not_prove_same_random_inputs (test_evidence_v10.EvidenceTests.test_same_seed_name_does_not_prove_same_random_inputs) ... ok
+test_valid_independent_adapter (test_evidence_v10.EvidenceTests.test_valid_independent_adapter) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.932s
+
+OK

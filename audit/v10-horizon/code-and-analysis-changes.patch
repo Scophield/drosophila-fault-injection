@@ -1,0 +1,337 @@
+--- a/evidence_v10/contract.py
++++ b/evidence_v10/contract.py
+@@ -6,6 +6,7 @@
+ from dataclasses import dataclass,field
+ import itertools
+ import math
++from numbers import Integral,Real
+ import re
+ from typing import Any,Protocol
+ 
+@@ -68,6 +69,37 @@
+     def check_pair(self,records:list[Evidence])->None:...
+ 
+ 
++def _finite_number(value):
++    if not isinstance(value,Real) or isinstance(value,bool):return False
++    try:return math.isfinite(value)
++    except (OverflowError,ValueError):return False
++
++
++def _validate_record_shape(record):
++    """Guard core field types before regex/set/arithmetic operations.
++
++    This is a normalized-schema boundary, not validation of arbitrary native
++    plant semantics. Range, timing, pairing and replay issues remain separate.
++    """
++    if not isinstance(record,Evidence):raise ValueError('normalized Evidence record required')
++    if not isinstance(record.cluster,Integral) or isinstance(record.cluster,bool):raise ValueError('cluster/seed must be an integer')
++    for name in ['law','fault','uniform_sha256','mask_sha256']:
++        if not isinstance(getattr(record,name),str):raise ValueError(name+' must be a string')
++    try:hash(record.key)
++    except TypeError as error:raise ValueError('condition identity must be hashable') from error
++    for name in ['horizon_s','frame_s']:
++        value=getattr(record,name)
++        if not isinstance(value,Real) or isinstance(value,bool):raise ValueError(name+' must be numeric')
++    if record.failure_s is not None and (not isinstance(record.failure_s,Real) or isinstance(record.failure_s,bool)):
++        raise ValueError('failure_s must be numeric or null')
++    if not isinstance(record.success,bool):raise ValueError('success must be boolean')
++    if not isinstance(record.deleted,Integral) or isinstance(record.deleted,bool):raise ValueError('deleted must be an integer')
++    if not isinstance(record.bindings,dict):raise ValueError('bindings must be a mapping')
++    if not isinstance(record.native,dict):raise ValueError('native record must be a mapping')
++    if not isinstance(record.frames,list) or any(not isinstance(q,dict) for q in record.frames):
++        raise ValueError('frames must be a list of mappings')
++
++
+ def prefix(record:Evidence,end_s:float)->list:
+     """Only completed observations available by the requested time, no labels."""
+     if not math.isfinite(end_s) or not 0<=end_s<=record.horizon_s:raise ValueError('prefix time')
+@@ -77,6 +109,12 @@
+ def audit(records:list[Evidence],spec:Campaign,adapter:Adapter|None=None)->list[Issue]:
+     issues=[]
+     def issue(code,key,detail):issues.append(Issue(code,key,str(detail)))
++    valid=[]
++    for i,record in enumerate(records):
++        try:_validate_record_shape(record)
++        except ValueError as error:issue('record-schema',None,f'row {i}: {error}')
++        else:valid.append(record)
++    records=valid
+     expected=set(itertools.product(spec.clusters,spec.conditions,spec.laws,spec.faults))
+     keys=[r.key for r in records]
+     if len(keys)!=len(set(keys)):issue('duplicate-cell',None,'duplicate cluster/condition/law/fault')
+@@ -87,17 +125,17 @@
+         if r.bindings!=binding:issue('mixed-bindings',r.key,'map/calibration/source/config differ')
+         for name,value in [('uniform',r.uniform_sha256),('mask',r.mask_sha256)]:
+             if not re.fullmatch('[0-9a-f]{64}',value):issue('invalid-digest',r.key,name)
+-        if not math.isfinite(r.horizon_s) or not math.isfinite(r.frame_s) or r.horizon_s<=0 or r.frame_s<=0:
++        if not _finite_number(r.horizon_s) or not _finite_number(r.frame_s) or r.horizon_s<=0 or r.frame_s<=0:
+             issue('invalid-clock',r.key,'horizon/frame must be positive finite seconds');continue
+         if not math.isclose(r.horizon_s,spec.horizon_s,abs_tol=1e-12) or not math.isclose(r.frame_s,spec.frame_s,abs_tol=1e-12):
+             issue('exposure-contract',r.key,'wrong declared horizon/frame')
+         if not math.isclose(len(r.frames)*r.frame_s,r.horizon_s,abs_tol=1e-9):issue('incomplete-exposure',r.key,'missing/extra frames')
+-        if r.failure_s is not None and (not math.isfinite(r.failure_s) or not 0<=r.failure_s<=r.horizon_s):issue('invalid-failure-time',r.key,'outside horizon')
++        if r.failure_s is not None and (not _finite_number(r.failure_s) or not 0<=r.failure_s<=r.horizon_s):issue('invalid-failure-time',r.key,'outside horizon')
+         if r.success!=(r.failure_s is None):issue('outcome-label',r.key,'success must mean no failure through horizon')
+         last=0.
+         for i,q in enumerate(r.frames):
+             required=['start_s','end_s','decision_s','usable_after_s','resource']
+-            if any(k not in q or not isinstance(q[k],(int,float)) or isinstance(q[k],bool) or not math.isfinite(q[k]) for k in required):
++            if any(k not in q or not _finite_number(q[k]) for k in required):
+                 issue('invalid-frame-schema',r.key,f'nonfinite/missing/nonnumeric field in frame {i}');continue
+             start,end=i*r.frame_s,(i+1)*r.frame_s
+             if not math.isclose(q['start_s'],start,abs_tol=1e-9) or not math.isclose(q['end_s'],end,abs_tol=1e-9):issue('frame-clock',r.key,f'frame {i}')
+@@ -125,7 +163,10 @@
+     """Normalize untrusted native rows, retaining parse errors as audit findings."""
+     records=[];errors=[]
+     for i,row in enumerate(rows):
+-        try:records.append(adapter.normalize(row))
++        try:
++            record=adapter.normalize(row)
++            _validate_record_shape(record)
++            records.append(record)
+         except (ValueError,AssertionError,KeyError,TypeError,IndexError) as error:
+             errors.append(Issue('native-schema',None,f'row {i}: {error}'))
+     return records,errors+audit(records,spec,adapter)
+--- a/docs/EVIDENCE_INTERFACE_V10.md
++++ b/docs/EVIDENCE_INTERFACE_V10.md
+@@ -21,6 +21,27 @@
+ errors; malformed/missing rows are never silently deleted. `prefix(record,t)`
+ returns defensive copies of completed observations through t and cannot read
+ future outcomes. No cross-plant comparison of incompatible resource units occurs.
++
++### Revised core schema boundary
++
++Before generic set, regex and arithmetic checks, normalized records validate the
++integer cluster/deletion fields, hashable condition key, string law/fault/digests,
++numeric clocks and optional failure time, boolean success, mapping bindings/native
++record, and a list of frame mappings. Missing/nonfinite frame fields remain
++structured frame issues. `decode_and_audit` reports invalid core rows as
++`native-schema` with their original row index; the direct `audit` entry reports
++`record-schema`. Valid rows continue, and absent campaign cells remain explicit.
++No invalid scalar is silently coerced into a valid seed, digest or success flag.
++
++The reproduced null-uniform, numeric-mask and list-seed failures are regression
++probes, tested on both tank and saved fly schemas, with mixed valid/invalid batches.
++They are separate from the original fourteen selected challenge types and are
++not additional scientific samples or a general error-coverage estimate. This
++core-shape guard does not promise a total parser for arbitrary native objects,
++validate every plant-specific field, or authenticate neural execution. Native
++adapters retain responsibility for their declared semantics and preconditions.
++The revised guard is a source revision, not a retroactive change to the immutable
++V10 generation-time/public snapshot or frozen experiment records.
+ 
+ ## Generic invariants
+ 
+--- /dev/null
++++ b/tests/test_evidence_schema_v10.py
+@@ -0,0 +1,95 @@
++"""Regressions for malformed core fields; fixtures are not scientific samples."""
++import copy
++from pathlib import Path
++import sys
++import unittest
++
++ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
++from evidence_v10.contract import Campaign,audit,decode_and_audit
++from evidence_v10.tank import TankAdapter,run
++
++
++class SchemaBoundaryTests(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        cls.adapter=TankAdapter();s=cls.adapter.spec
++        cls.spec=Campaign((9000,),s.conditions,s.laws,s.faults,s.horizon_s,s.frame_s,s.resource_unit)
++        cls.rows=[run(9000,c,m,f) for c in s.conditions for m in s.laws for f in s.faults]
++
++    def test_clean_campaign_still_passes(self):
++        valid,issues=decode_and_audit(copy.deepcopy(self.rows),self.spec,self.adapter)
++        self.assertEqual(len(valid),12);self.assertEqual(issues,[])
++
++    def test_three_reported_native_crashes_are_indexed_findings(self):
++        for field,value in [('uniform_sha256',None),('mask_sha256',123),('seed',[])]:
++            with self.subTest(field=field):
++                rows=copy.deepcopy(self.rows);rows[4][field]=value
++                valid,issues=decode_and_audit(rows,self.spec,self.adapter)
++                self.assertEqual(len(valid),11)
++                self.assertTrue(any(x.code=='native-schema' and 'row 4:' in x.detail for x in issues))
++                self.assertIn('matrix-membership',{x.code for x in issues})
++
++    def test_mixed_batch_retains_valid_rows_and_each_bad_row_index(self):
++        rows=copy.deepcopy(self.rows)
++        for i,field,value in [(0,'uniform_sha256',None),(4,'mask_sha256',123),(8,'seed',[])]:rows[i][field]=value
++        valid,issues=decode_and_audit(rows,self.spec,self.adapter)
++        self.assertEqual(len(valid),9)
++        details=[x.detail for x in issues if x.code=='native-schema']
++        self.assertEqual(len(details),3)
++        for i in [0,4,8]:self.assertTrue(any(f'row {i}:' in d for d in details))
++        self.assertIn('matrix-membership',{x.code for x in issues})
++        self.assertFalse(any(x.code=='adapter-replay' for x in issues))
++
++    def test_direct_normalized_entry_is_guarded_before_sets_and_regex(self):
++        for field,value in [('cluster',[]),('condition',{}),('uniform_sha256',None),('mask_sha256',123),
++            ('success','yes'),('deleted',[]),('bindings',None),('frames',[None]),('native',None),
++            ('frame_s','0.1'),('failure_s',[])]:
++            with self.subTest(field=field):
++                records=[self.adapter.normalize(copy.deepcopy(r)) for r in self.rows]
++                setattr(records[0],field,value)
++                issues=audit(records,self.spec,self.adapter)
++                self.assertTrue(any(x.code=='record-schema' and 'row 0:' in x.detail for x in issues))
++                self.assertIn('matrix-membership',{x.code for x in issues})
++
++    def test_nonboolean_native_success_is_not_coerced(self):
++        for value in ['yes',1,None,[]]:
++            with self.subTest(value=value):
++                rows=copy.deepcopy(self.rows);rows[0]['success']=value
++                valid,issues=decode_and_audit(rows,self.spec,self.adapter)
++                self.assertEqual(len(valid),11)
++                self.assertTrue(any(x.code=='native-schema' and 'success must be boolean' in x.detail for x in issues))
++
++    def test_schema_failure_does_not_hide_other_record_errors(self):
++        rows=copy.deepcopy(self.rows);rows[0]['seed']=[];rows[1]['log'][0]['available_s']=-.1
++        valid,issues=decode_and_audit(rows,self.spec,self.adapter)
++        self.assertEqual(len(valid),11)
++        codes={x.code for x in issues}
++        self.assertTrue({'native-schema','matrix-membership','decision-availability','adapter-replay'}<=codes)
++
++    def test_invalid_digest_text_keeps_semantic_issue(self):
++        records=[self.adapter.normalize(copy.deepcopy(r)) for r in self.rows]
++        records[0].uniform_sha256='invalid'
++        self.assertIn('invalid-digest',{x.code for x in audit(records,self.spec,self.adapter)})
++
++    def test_extreme_numeric_frame_is_a_finding(self):
++        records=[self.adapter.normalize(copy.deepcopy(r)) for r in self.rows]
++        records[0].frames[0]['decision_s']=10**1000
++        self.assertIn('invalid-frame-schema',{x.code for x in audit(records,self.spec)})
++
++    def test_same_type_guards_apply_to_saved_fly_rows(self):
++        import json
++        from evidence_v10.fly_adapter import FlyAdapter
++        adapter=FlyAdapter(ROOT/'runs/task-v9-test',ROOT/'runs/task-v9-frozen/calibration.json',
++            ROOT/'runs/task-v9-frozen/registration-core.json')
++        original=json.loads((ROOT/'runs/task-v9-test/episodes/proportional_F2_50_phi-30_s1000.json').read_text())
++        spec=Campaign((1000,),(-30.,),('proportional',),('F2_50',),1.,.02,'network spikes')
++        for field,value in [('uniform_sha256',None),('mask_sha256',123),('seed',[])]:
++            with self.subTest(field=field):
++                row=copy.deepcopy(original);row[field]=value
++                valid,issues=decode_and_audit([row],spec,adapter)
++                self.assertEqual(valid,[])
++                self.assertTrue(any(x.code=='native-schema' and 'row 0:' in x.detail for x in issues))
++                self.assertIn('matrix-membership',{x.code for x in issues})
++
++
++if __name__=='__main__':unittest.main()
+--- /dev/null
++++ b/tools/plot_horizon_v10.py
+@@ -0,0 +1,112 @@
++"""Descriptive first-contact rescoring of saved RF-0 trajectories.
++
++Append a vector strip to the unchanged Figure3(a-c). No new neural episodes,
++threshold fitting, confidence intervals or hypothesis tests are generated.
++"""
++import argparse
++import csv
++import hashlib
++import json
++from pathlib import Path
++import platform
++
++import numpy as np
++import matplotlib
++matplotlib.use('Agg')
++import matplotlib.pyplot as plt
++import pymupdf
++
++ROOT=Path(__file__).resolve().parents[1]
++BLUE,GREEN,INK,GRAY='#337BA0','#2A8276','#243B49','#677983'
++sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
++
++
++def main():
++    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--out',type=Path,required=True)
++    a=ap.parse_args();a.out.mkdir(parents=True,exist_ok=False)
++    original=ROOT/'paper/figs/v10f_rf.pdf'
++    summary_path=ROOT/'audit/acceptance-v9/core-v2/summary.json'
++    summary=json.loads(summary_path.read_text());records=[];hashes={}
++    for name,h in summary['raw_input_sha256'].items():
++        p=ROOT/name;assert sha(p)==h;hashes[name]=h
++        r=json.loads(p.read_text());assert r['horizon_ms']==r['duration_ms']==1000.
++        assert r['escaped']==(r['collision_ms'] is None)
++        records.append((p,r))
++    assert len(records)==288 and len({r['seed'] for _,r in records})==24
++    selected=[(p,r) for p,r in records if r['fault']=='F2_50']
++    assert len(selected)==96
++    lookup={(r['seed'],r['phi_deg'],r['mode'],r['fault']):r for _,r in records}
++    source=[]
++    for p,r in selected:
++        other=lookup[(r['seed'],r['phi_deg'],'relay' if r['mode']=='proportional' else 'proportional','F2_50')]
++        assert r['mask_sha256']==other['mask_sha256'] and r['uniform_sha256']==other['uniform_sha256']
++        assert lookup[(r['seed'],r['phi_deg'],r['mode'],'healthy')]['escaped']
++        source.append(dict(seed=r['seed'],phi_deg=r['phi_deg'],law=r['mode'],fault=r['fault'],
++            first_contact_ms=r['collision_ms'],success900=r['collision_ms'] is None or r['collision_ms']>900,
++            success1000=r['escaped'],mask_sha256=r['mask_sha256'],uniform_sha256=r['uniform_sha256'],
++            source=p.relative_to(ROOT).as_posix(),sha256=sha(p)))
++    table=[];curves=[]
++    for t in [900.,1000.]:
++        row=dict(horizon_ms=t)
++        for mode in ['proportional','relay']:
++            group=[r for _,r in selected if r['mode']==mode]
++            assert len(group)==48
++            count=sum(r['collision_ms'] is None or r['collision_ms']>t for r in group)
++            row[mode+'_success']=count;row[mode+'_n']=len(group)
++        table.append(row)
++    assert [(r['proportional_success'],r['relay_success']) for r in table]==[(46,48),(37,48)]
++    for mode in ['proportional','relay']:
++        events=sorted(r['collision_ms'] for _,r in selected if r['mode']==mode and r['collision_ms'] is not None)
++        times=[0.,*events,1000.];counts=[0,*range(1,len(events)+1),len(events)]
++        curves.extend(dict(law=mode,time_ms=t,cumulative_contacts=c,n=48,cumulative_percent=100*c/48) for t,c in zip(times,counts))
++    for name,rows in [('first-contacts.csv',source),('horizon-counts.csv',table),('curve-points.csv',curves)]:
++        with (a.out/name).open('x',newline='',encoding='utf-8') as f:
++            w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
++    plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['Arial','DejaVu Sans'],
++        'font.size':8,'axes.labelsize':8,'xtick.labelsize':8,'ytick.labelsize':8,
++        'axes.spines.top':False,'axes.spines.right':False,'axes.linewidth':.7,
++        'lines.linewidth':1.1,'legend.frameon':False,'text.color':INK,'axes.labelcolor':INK,
++        'pdf.fonttype':42,'ps.fonttype':42,'svg.fonttype':'none'})
++    with pymupdf.open(original) as source_doc:figure_width=source_doc[0].rect.width/72
++    fig=plt.figure(figsize=(figure_width,1.5));ax=fig.add_axes([.075,.38,.53,.41])
++    for mode,color,label,marker in [('proportional',BLUE,'P','o'),('relay',GREEN,'R','s')]:
++        values=[r for r in curves if r['law']==mode]
++        ax.step([r['time_ms']/1000 for r in values],[r['cumulative_percent'] for r in values],
++            where='post',color=color,label=label)
++        ax.scatter([.9,1.],[100*(48-q[mode+'_success'])/48 for q in table],color=color,marker=marker,s=13,zorder=5)
++    ax.axvline(.9,color=GRAY,ls=':',lw=.8)
++    ax.set(xlim=(0,1.015),ylim=(-1.4,25),xticks=[0,.4,.9,1.],yticks=[0,10,20],
++        xlabel='Time since episode start (s)',ylabel='First contacts (%)')
++    ax.legend(loc='upper left',ncol=2,fontsize=8,handlelength=1.5,borderaxespad=.1)
++    fig.text(.01,.94,'d  Same RF-0 trajectories, different assessment horizons',fontsize=9,fontweight='bold',va='top')
++    fig.text(.80,.77,'Contact-free tasks',ha='center',fontsize=8.5,fontweight='bold')
++    for x,label in [(.68,'Horizon'),(.83,'P'),(.96,'R')]:fig.text(x,.59,label,ha='center',fontsize=8,color=GRAY)
++    for y,row in zip([.39,.18],table):
++        fig.text(.68,y,f"{row['horizon_ms']:.0f} ms",ha='center',fontsize=8.5)
++        fig.text(.83,y,f"{row['proportional_success']}/48",ha='center',fontsize=8.5,color=BLUE)
++        fig.text(.96,y,f"{row['relay_success']}/48",ha='center',fontsize=8.5,color=GREEN)
++    fig.text(.075,.025,'Descriptive rescoring; 48 tasks per law in 24 paired seed clusters. No new samples or hypothesis tests.',fontsize=8,color=GRAY)
++    for ext in ['pdf','svg','png']:fig.savefig(a.out/('horizon-strip.'+ext),dpi=600,facecolor='white')
++    plt.close(fig)
++    old=pymupdf.open(original);strip=pymupdf.open(a.out/'horizon-strip.pdf')
++    assert abs(old[0].rect.width-strip[0].rect.width)<.01
++    width=old[0].rect.width;old_h=old[0].rect.height;new_h=strip[0].rect.height;gap=5.
++    merged=pymupdf.open();page=merged.new_page(width=width,height=old_h+gap+new_h)
++    page.show_pdf_page(pymupdf.Rect(0,0,width,old_h),old,0)
++    page.show_pdf_page(pymupdf.Rect(0,old_h+gap,width,old_h+gap+new_h),strip,0)
++    merged.save(a.out/'rf-with-horizon.pdf',garbage=4,deflate=True)
++    page.get_pixmap(dpi=180).save(a.out/'preview.png')
++    result=dict(passed=True,classification='descriptive same-record horizon rescoring',
++        independent_seed_clusters=24,tasks_per_law=48,source_records=288,plotted_records=96,
++        horizon_counts=table,original_figure_sha256=sha(original),
++        original_panels_imported_without_scaling=True,original_dimensions_pt=list(old[0].rect),
++        composite_dimensions_pt=list(page.rect),raw_input_sha256=hashes,
++        frozen_summary_sha256=sha(summary_path),script_sha256=sha(Path(__file__).resolve()),
++        runtime=dict(python=platform.python_version(),numpy=np.__version__,matplotlib=matplotlib.__version__),
++        confidence_intervals_added=False,hypothesis_tests=False,new_neural_simulations=False,
++        unequal_healthy_reserve_and_cohort_calibration_confounding_retained=True)
++    (a.out/'check.json').write_text(json.dumps(result,indent=2)+'\n')
++    print(json.dumps({k:v for k,v in result.items() if k!='raw_input_sha256'},indent=2))
++
++
++if __name__=='__main__':main()

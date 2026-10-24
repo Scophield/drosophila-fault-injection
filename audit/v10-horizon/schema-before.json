@@ -1,0 +1,28 @@
+[
+  {
+    "field": "uniform_sha256",
+    "crashed": true,
+    "error": "TypeError",
+    "detail": "expected string or bytes-like object, got 'NoneType'"
+  },
+  {
+    "field": "mask_sha256",
+    "crashed": true,
+    "error": "TypeError",
+    "detail": "expected string or bytes-like object, got 'int'"
+  },
+  {
+    "field": "seed",
+    "crashed": true,
+    "error": "TypeError",
+    "detail": "unhashable type: 'list'"
+  },
+  {
+    "field": "success",
+    "crashed": false,
+    "valid_rows": 1,
+    "issue_codes": [
+      "outcome-label"
+    ]
+  }
+]

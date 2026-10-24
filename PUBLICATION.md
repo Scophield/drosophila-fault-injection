@@ -1,25 +1,23 @@
-# Fixed V10 publication identities
+# Fixed publication identities: V10 horizon revision
 
-Scientific baseline:43bcd4d6a99b2d9b258cf8a198a4545d237b5c39 (full V9 research).
-Frozen V10 code/data:986ff54193fee6a1b95815499a4a3477b15ea49a.
+Scientific baseline: 43bcd4d6a99b2d9b258cf8a198a4545d237b5c39.
+Original frozen V10 code/data: 986ff54193fee6a1b95815499a4a3477b15ea49a.
+Previous immutable final paper: 48c16c0852bcc3f6b061ab8edc97b0f16ebc1016.
 
-This later enclosing Git commit binds the final manuscript and updated public
-reproduction entry to the same experimental records and scientific code. Use
-its complete SHA (git rev-parse HEAD), not the earlier candidate PDF, as the
-final-paper identifier. The paper cites the earlier fixed code/data snapshot;
-a PDF cannot embed its own enclosing commit hash. PUBLIC_SCOPE.json binds file
-bytes without self-hashing that manifest. Original generation HEADs, snapshots,
-registrations, maps, calibrations and observations remain unaltered.
+The enclosing Git commit identifies the NEW horizon/contribution manuscript,
+descriptive rescoring and schema guards. Use its full SHA, not either predecessor,
+for this revision. A PDF cannot contain its own enclosing commit hash; its existing
+artifact citation identifies original generating sources/data. The revised source
+guards and horizon analysis are explicitly separate in the manuscript.
 
-Final four-figure main PDF SHA256:
-295b07b85ff152bfe17d59612edff9bec3124a9e3380a3db79b535d87ab16ebe.
-The same bytes are stored at paper/main.pdf and
-paper/fly_connectome_fault_assessment_v10_final.pdf. Source is
-paper/main_v10_final4.tex with sections/v10f_*.tex and refs.bib.
+Current paper/main.pdf SHA256:
+7ac89fa92507d6529db773d0320821c4556e32d1c0fe1b8a4ceb4ad40eb319e1.
+Active source: paper/main.tex = paper/main_v10_horizon.tex.
+Old named final PDFs/sources remain historical; the prior branch/ref is untouched.
+PUBLIC_SCOPE.json binds all distributed bytes excluding its own manifest.
 
-No GitHub Release, conference submission or main/V9 update. No forbidden SI
-attachment, unresolved-license source tables, private Blender projects or
-caches are distributed. See README.md, PUBLIC_SCOPE.json, THIRD_PARTY_LICENSES
-and audit/v10-final/public-checks.json. Public code/data saved-record checks
-actually ran in a new anonymous checkout on the SAME host, with existing minimal
-packages; this is not a neural rerun or second-host replication.
+The current audit/v10-horizon/prepublication-check.json and revision report are
+historical records of local validation before authorization to publish. Their
+unpublished/no-push fields describe that earlier state. This new enclosing commit
+and remote readback receipt establish publication, without rewriting those checks.
+No neural simulations, frozen-data edits, main/V9 updates or Release are involved.

@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "pdf": "<research-checkout>/output/v10-horizon-candidate/iscas2027-v10-horizon-candidate.pdf",
+  "pdf_sha256": "7ac89fa92507d6529db773d0320821c4556e32d1c0fe1b8a4ceb4ad40eb319e1",
+  "pages": 5,
+  "fifth_page_references_only": true,
+  "printed_references": 15,
+  "citation_keys": [
+    "an2026sparse",
+    "artifactV10",
+    "chessa2026crosslayer",
+    "colucci2022enpheeph",
+    "dangelo2026embodied",
+    "donze2010breach",
+    "dorkenwald2024neuronal",
+    "glasserman1992crn",
+    "gogebakan2024spikingjet",
+    "jha2019drivefi",
+    "jo2026simulating",
+    "shiu2024drosophila",
+    "spyrou2024spikefi",
+    "stimberg2019brian2",
+    "yik2023neurobench"
+  ],
+  "missing_citations": [],
+  "overflow": [],
+  "type3_fonts": [],
+  "unembedded_fonts": [],
+  "native_font_count": 29,
+  "unchanged_original_files": 175,
+  "changed_existing_files": [
+    "<research-checkout>/docs/EVIDENCE_INTERFACE_V10.md",
+    "<research-checkout>/evidence_v10/contract.py"
+  ],
+  "unchanged_raster_assets_and_display_sizes": true,
+  "original_Fig3_abc_pixel_identical": true,
+  "original_four_figures_retained": true,
+  "raw_records_unchanged": 576,
+  "raw_records_changed": [],
+  "preregistrations_and_calibrations_unchanged": 8,
+  "frozen_changed": [],
+  "unchanged_methods_text": true,
+  "methods_precede_contract": true,
+  "no_font_or_margin_scaling": true,
+  "exact_requested_IVB_title": true,
+  "future_direction_sentence_verified": true,
+  "review_sha256": "6638dfa8197494c0f9819105fd4f317223464038acb4cd66d913db638b02da44",
+  "baseline_pdf_sha256": "536ede47297f2c561fa44ad86fe1adaae8dbd5c9852db4f182a322c4057d731c",
+  "numerical_checks": {
+    "horizon_counts": [
+      {
+        "horizon_ms": 900.0,
+        "proportional_success": 46,
+        "proportional_n": 48,
+        "relay_success": 48,
+        "relay_n": 48
+      },
+      {
+        "horizon_ms": 1000.0,
+        "proportional_success": 37,
+        "proportional_n": 48,
+        "relay_success": 48,
+        "relay_n": 48
+      }
+    ],
+    "P50_late_contacts": "9/11",
+    "latest_P50_contact_ms": 999.9617396415485,
+    "baseline_secondary_contrast_pp": -22.916666666666664,
+    "transfer_secondary_contrast_pp": [
+      -4.166666666666666,
+      -4.166666666666666
+    ],
+    "warning_confusion": [
+      {
+        "map": "RF-0",
+        "tp": 2,
+        "fp": 51,
+        "tn": 224,
+        "fn": 11
+      },
+      {
+        "map": "RF-A",
+        "tp": 2,
+        "fp": 42,
+        "tn": 99,
+        "fn": 1
+      },
+      {
+        "map": "RF-B",
+        "tp": 0,
+        "fp": 24,
+        "tn": 119,
+        "fn": 1
+      }
+    ]
+  },
+  "checker": {
+    "unit_test_methods": 20,
+    "clean_records": {
+      "tank": 96,
+      "fly": 288
+    },
+    "original_selected_cases_per_adapter": 14,
+    "common_cases": 11,
+    "native_only_cases": 3,
+    "malformed_core_probes_no_longer_crash": true,
+    "logger_without_neural_execution_still_passes": true,
+    "general_detection_coverage_claimed": false
+  },
+  "source_archive": "<research-checkout>/output/v10-horizon-candidate/iscas2027-v10-horizon-source.zip",
+  "source_archive_sha256": "a7c975602c98e0d9e7f1bd7936a4bd7d6701e686108dba021d98c68ceb2c00fc",
+  "source_files": 330,
+  "new_neural_experiments": false,
+  "new_hypothesis_tests": false,
+  "current_revision_published": false,
+  "committed": false,
+  "pushed": false,
+  "unchanged_public_generating_commit": "986ff54193fee6a1b95815499a4a3477b15ea49a",
+  "branch": "research/iscas2027-v10-horizon-evidence",
+  "python": "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "utc": "2026-10-24T15:41:33.222328+00:00"
+}
