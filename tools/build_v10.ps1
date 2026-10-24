@@ -1,4 +1,4 @@
-param([Parameter(Mandatory=$true)][string]$BuildDirectory, [string]$SourceFile = 'main_v10.tex', [switch]$Promote)
+param([Parameter(Mandatory=$true)][string]$BuildDirectory, [string]$SourceFile = 'main_v10_final4.tex', [switch]$Promote)
 $ErrorActionPreference = 'Stop'
 function Invoke-CheckedNative([string]$Executable, [string[]]$Arguments, [string]$LogPath) {
     $savedPreference = $ErrorActionPreference
@@ -33,11 +33,12 @@ try {
         throw 'Unresolved reference, overflow or missing glyph: inspect main.log before promoting PDF'
     }
     if ($Promote) {
+        if ($SourceFile -ne 'main_v10_final4.tex') { throw 'Only the final four-figure candidate may be promoted; historical named PDFs are protected.' }
         $sourceText = Get-Content -LiteralPath (Join-Path $paperRoot $SourceFile) -Raw
         $sectionText = (Get-ChildItem -LiteralPath (Join-Path $paperRoot 'sections') -Filter 'v10_*.tex' | Get-Content -Raw) -join "`n"
         if (($sourceText + $sectionText) -match 'V10_PENDING') { throw 'Unfinished V10 draft marker; PDF not promoted' }
         Copy-Item -LiteralPath (Join-Path $buildPath 'main.pdf') -Destination (Join-Path $paperRoot 'main.pdf')
-        Copy-Item -LiteralPath (Join-Path $buildPath 'main.pdf') -Destination (Join-Path $paperRoot 'fly_connectome_fault_assessment_v10.pdf')
+        Copy-Item -LiteralPath (Join-Path $buildPath 'main.pdf') -Destination (Join-Path $paperRoot 'fly_connectome_fault_assessment_v10_final.pdf')
         Copy-Item -LiteralPath (Join-Path $paperRoot $SourceFile) -Destination (Join-Path $paperRoot 'main.tex')
         Write-Output "Built and promoted checked V10 source/PDF"
     } else { Write-Output "Built staged draft only: $buildPath\main.pdf" }

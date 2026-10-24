@@ -1,5 +1,5 @@
 {
-  "status": "PREPARED_LOCAL_NOT_PUBLISHED",
+  "status": "CURATED_V10_FINAL_MANUSCRIPT",
   "scientific_baseline": "43bcd4d6a99b2d9b258cf8a198a4545d237b5c39",
   "distribution": "Curated clean export; no inherited V9 Git history, external tables, caches, credentials or private Blender projects.",
   "omitted": [
@@ -873,13 +873,17 @@
       "bytes": 1052,
       "sha256": "429189e83ecab3f8e3e0417781174de6e0cdef232c04f2412cf828bdaaf77b72"
     },
+    "audit/v10-final/public-checks.json": {
+      "bytes": 1213,
+      "sha256": "76a74359a05c1d389e3322bfd933c38d639673012379f767dc1f062880ee6961"
+    },
     "docs/EVIDENCE_INTERFACE_V10.md": {
       "bytes": 6083,
       "sha256": "1843d5b33baa80236e5ca9b452033bd8f09083a47c861bdd14beaba82bdc09f6"
     },
     "docs/PUBLIC_REPRODUCE_V10_FINAL.md": {
-      "bytes": 5983,
-      "sha256": "14f73d0d742eb868bad0b99bdcea3f931cba02eb4b74b6d24fb6d5b238660e6c"
+      "bytes": 7267,
+      "sha256": "dced361a6a8045fbc70db0141e2d632ddf7c8cee29489f82dad29e0f01c3b8b4"
     },
     "docs/THIRD_PARTY_INPUTS_V10.md": {
       "bytes": 4360,
@@ -890,8 +894,8 @@
       "sha256": "9ff4d41603c3ca0a5243e3de0165819551965f396db34ee82924c809b12d30f9"
     },
     "docs/V10_CAPABILITY_COMPARISON.md": {
-      "bytes": 3168,
-      "sha256": "2b14ee9480a9906593b5c958740cb02476401a5cd5ec9877cac91e90a896ea18"
+      "bytes": 3758,
+      "sha256": "7a59d41d8247bd8efa7ccae33b4d446da5b0ef5e035d56268c93886eb44db2ac"
     },
     "docs/V10_DATA_INDEX.md": {
       "bytes": 2986,
@@ -900,6 +904,10 @@
     "docs/V10_ERROR_CASES.md": {
       "bytes": 3934,
       "sha256": "1c2279e4e05d13d4eff4bd8f794aec234a8167d692e519b453448e8f2a29e986"
+    },
+    "docs/V10_FINAL_CHANGELOG.md": {
+      "bytes": 2491,
+      "sha256": "6e6ad835a4e427e17f87adb6f0ae416488219aee91ca696d14ab5900b3ff9fce"
     },
     "docs/V10_FINAL_FIGURE_CONTRACT.md": {
       "bytes": 2611,
@@ -950,12 +958,12 @@
       "sha256": "137d39b22bf6cb789573c1549e412bae8e5f6f32e2d40d2f856a72473d031ef8"
     },
     "paper/fly_connectome_fault_assessment_v10_final.pdf": {
-      "bytes": 3344674,
-      "sha256": "9533a8da98d824703a339dffbf8722f53fb97159938c9526156433c60eec7f66"
+      "bytes": 3344895,
+      "sha256": "295b07b85ff152bfe17d59612edff9bec3124a9e3380a3db79b535d87ab16ebe"
     },
     "paper/main.pdf": {
-      "bytes": 3344674,
-      "sha256": "9533a8da98d824703a339dffbf8722f53fb97159938c9526156433c60eec7f66"
+      "bytes": 3344895,
+      "sha256": "295b07b85ff152bfe17d59612edff9bec3124a9e3380a3db79b535d87ab16ebe"
     },
     "paper/main.tex": {
       "bytes": 882,
@@ -982,8 +990,8 @@
       "sha256": "4dd043189292b8557581331ff540bd448490c2982524f900ffc4c0945c8dc93f"
     },
     "paper/refs.bib": {
-      "bytes": 20763,
-      "sha256": "fb9cbda0725b04088afccd97863da70a754e6a010b0c70b0425e9a6ac33b3bdd"
+      "bytes": 21061,
+      "sha256": "69141f586b7c6a54ad583e1394af9ae542c87018e6eb72e0fee03b73b5330459"
     },
     "paper/sections/v10f_abstract.tex": {
       "bytes": 1092,
@@ -1002,8 +1010,8 @@
       "sha256": "3deba7d68a19c8ec076c24791c7855f449c7b1ac492fde8592144e636aab2ff1"
     },
     "paper/sections/v10f_limits.tex": {
-      "bytes": 1616,
-      "sha256": "4850e7ebf4bd38b11ebcdf7082fe1ef0bab6aa93178ee3af2b5027288ac7b174"
+      "bytes": 1601,
+      "sha256": "2915a40543bbc64c7e8c7b5af432df2b8614811aa49c632b2a3b6283ba3e2e41"
     },
     "paper/sections/v10f_methods.tex": {
       "bytes": 5439,
@@ -1013,9 +1021,13 @@
       "bytes": 2577,
       "sha256": "eb4467ca1b3662587460c4bec75d546824f41855a8e29786c1d9d7724f30c3b3"
     },
+    "PUBLICATION.md": {
+      "bytes": 1475,
+      "sha256": "536902300c6679caff28734485a82cce1111abfdd203fa8b8325f16cd4902f5f"
+    },
     "README.md": {
-      "bytes": 5983,
-      "sha256": "14f73d0d742eb868bad0b99bdcea3f931cba02eb4b74b6d24fb6d5b238660e6c"
+      "bytes": 7267,
+      "sha256": "dced361a6a8045fbc70db0141e2d632ddf7c8cee29489f82dad29e0f01c3b8b4"
     },
     "requirements-saved-v10.txt": {
       "bytes": 109,
@@ -12065,6 +12077,10 @@
       "bytes": 14669,
       "sha256": "33ec42c44ff4003dd7e4c55a7b0fdc711184224277aafa42770d84a0de8f1dfb"
     },
+    "tools/archive_labels_v10f.py": {
+      "bytes": 3865,
+      "sha256": "14378ac6b2e04649d0444c416a7856967612409887f98c71d4d816765cc0a1df"
+    },
     "tools/audit_acceptance_baseline.py": {
       "bytes": 3204,
       "sha256": "deab15e6660bbcbfdcc77263842a2d65bc42fec83d2ac5a054a5ef6ea3efeb0e"
@@ -12110,8 +12126,8 @@
       "sha256": "9e96de055dc104a5878deb97aff4a96727aa2dee450b9929b0c5cefadc9f9615"
     },
     "tools/build_v10.ps1": {
-      "bytes": 3224,
-      "sha256": "2c1036503460ed0815aa2513be2a7d1e36ea1d6df4519b63e267a23da99641d2"
+      "bytes": 3392,
+      "sha256": "f9ca78e35f1655dca38784634987537a12f42f794c3c50c32d582587ca04f535"
     },
     "tools/calibrate_task_v10.py": {
       "bytes": 2790,
@@ -12330,8 +12346,8 @@
       "sha256": "4fff53cdc6f5fb2e12daf2b54013c37fb4b50968a702704d97fdf9a1a3de20c8"
     },
     "tools/prepare_public_v10f.py": {
-      "bytes": 7245,
-      "sha256": "9f2d25fcb21b5f055a0c92b9d5b5dc69bdab1c4eaff79326dc7c607f40dc2fe2"
+      "bytes": 7339,
+      "sha256": "b92ad8afc389c3a630f5ce3ed23fe7245538f428a9c2dc5aed843a9a9abf8753"
     },
     "tools/prepare_rf_v10.py": {
       "bytes": 4265,
@@ -12437,5 +12453,7 @@
       "bytes": 5697,
       "sha256": "c438dd72b2053f65b19b628147e6854963f44de0bd8ed11a9fb58a596b7ad704"
     }
-  }
+  },
+  "code_data_reference": "986ff54193fee6a1b95815499a4a3477b15ea49a",
+  "final_manuscript_identity": "The enclosing Git commit; original generation HEADs are preserved. The cited code/data snapshot is an earlier immutable publication commit, not the final PDF identifier."
 }

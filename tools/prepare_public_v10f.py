@@ -42,7 +42,8 @@ def main():
     for name in ['EVIDENCE_INTERFACE_V10.md','THIRD_PARTY_INPUTS_V10.md',
                  'V10_ANALYSIS_NOTES.md','V10_CAPABILITY_COMPARISON.md',
                  'V10_ERROR_CASES.md','V10_DATA_INDEX.md',
-                 'PUBLIC_REPRODUCE_V10_FINAL.md','V10_FINAL_FIGURE_CONTRACT.md']:
+                 'PUBLIC_REPRODUCE_V10_FINAL.md','V10_FINAL_FIGURE_CONTRACT.md',
+                 'V10_FINAL_CHANGELOG.md']:
         add(ROOT/'docs'/name)
     for p in (ROOT/'paper/sections').glob('v10f_*.tex'):add(p)
     for p in (ROOT/'paper').glob('main_v10_final*.tex'):add(p)
@@ -72,6 +73,7 @@ def main():
         name=item.get('path',item.get('file'))
         if name:add(ROOT/name)
     for p in a.plot_root.rglob('*'):add(p)
+    add(ROOT/'audit/v10-final/public-checks.json')
     # The plotter validates graph context from the locked PDF; no source tables
     # or Blender project are needed to rebuild the main LaTeX document.
     forbidden=[]

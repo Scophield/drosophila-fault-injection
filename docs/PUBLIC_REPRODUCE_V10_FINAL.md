@@ -1,14 +1,35 @@
 # Checked evidence for paired closed-loop SNN fault assessment — V10
 
-This is a curated publication layer of the full research project. Scientific
-baseline:43bcd4d6a99b2d9b258cf8a198a4545d237b5c39. That V9 parent does NOT
-identify the V10 additions. A fixed V10 commit is assigned only on publication.
-Prepared local exports are not public releases. Preserve original generation
-HEADs, frozen registrations, source snapshots, raw observations and negative results.
+This is the authorized curated publication layer of the full research project.
+The frozen V10 **code/data** reference is
+[986ff54193fee6a1b95815499a4a3477b15ea49a](https://github.com/Scophield/drosophila-fault-injection/tree/986ff54193fee6a1b95815499a4a3477b15ea49a).
+It includes the pre-citation manuscript candidate. This later checkout adds the
+final paper with that real code/data citation; `PUBLIC_SCOPE.json` binds its
+exact PDF/source bytes, and the enclosing Git commit identifies the complete
+final-paper package. Use `git rev-parse HEAD` and pin that full SHA when citing
+the final manuscript. A PDF cannot contain the hash of its own enclosing commit.
+
+Scientific baseline:43bcd4d6a99b2d9b258cf8a198a4545d237b5c39. That V9 parent
+does NOT identify V10. The curated branch has independent distribution history
+to avoid republishing unresolved-license tables in inherited Git history.
+Original generation HEADs, frozen registrations, source snapshots, observations
+and negative results are retained. No GitHub Release or main/V9 update was made.
 
 The main paper is self-contained within four technical pages. ISCAS2027 does
 not accept supplementary materials. The24-page research archive is retained
 privately as history; it is not a submission attachment or required reading.
+
+Obtain the final branch in a NEW directory and record the actual full commit:
+
+```text
+git clone --single-branch --branch artifact/iscas2027-v10-final https://github.com/Scophield/drosophila-fault-injection.git v10-evidence
+cd v10-evidence
+git rev-parse HEAD
+```
+
+The paper's fixed code/data citation deliberately identifies the earlier frozen
+data snapshot. The final-paper delivery receipt provides the enclosing final
+manuscript commit. Do not substitute V9 or that earlier candidate for the final PDF.
 
 ## Evidence and boundaries
 
@@ -27,11 +48,17 @@ privately as history; it is not a submission attachment or required reading.
 
 ## Minimal saved-record checks
 
-Use CPython3.12, a NEW virtual environment and NEW output directories. Activate
-the environment using your shell, then install the minimal pinned packages:
+Use CPython3.12, a NEW virtual environment and NEW output directories. Create it:
 
 ```text
 python -m venv .venv
+```
+
+Activate it before running the remaining commands: PowerShell
+`.\.venv\Scripts\Activate.ps1`, or a POSIX shell `. .venv/bin/activate`.
+Then install the minimal pinned packages:
+
+```text
 python -m pip install -r requirements-saved-v10.txt
 python -c "from pathlib import Path; Path('tmp').mkdir(exist_ok=True)"
 python -X utf8 tools/run_v9.py tools/analyze_task_v9_exportfix.py --root runs/task-v9-test --registration runs/task-v9-frozen/registration-core.json --out output/core

@@ -1,0 +1,27 @@
+{
+  "code_data_reference": "986ff54193fee6a1b95815499a4a3477b15ea49a",
+  "final_pdf_sha256": "295b07b85ff152bfe17d59612edff9bec3124a9e3380a3db79b535d87ab16ebe",
+  "pdf_bytes": 3344895,
+  "pages": 5,
+  "fifth_page_references_only": true,
+  "all_fonts_embedded": true,
+  "type3_fonts": 0,
+  "all_final_pages_viewed": true,
+  "locked_assets_unchanged": 109,
+  "blender_pixels_and_printed_size_unchanged": true,
+  "anonymous_code_data_checkout_verified": true,
+  "saved_neural_records_rescored_and_replayed": 576,
+  "tank_records": 96,
+  "contract_tests_this_round": 11,
+  "whole_cluster_inference_unchanged": true,
+  "source_csvs_rebuilt_from_public_checkout_identical": {
+    "checker_source.csv": true,
+    "rf_source.csv": true,
+    "tank_source.csv": true,
+    "warning_source.csv": true
+  },
+  "prior_79test_source_files_unchanged": 38,
+  "scientific_frozen_files_unchanged": 3976,
+  "scope": "Same host; already-installed isolated minimal environment; no neural resimulation, second-host validation, execution authentication or portal certification.",
+  "publication": "Final enclosing commit supplies exact manuscript identity. This receipt does not contain its own commit hash."
+}

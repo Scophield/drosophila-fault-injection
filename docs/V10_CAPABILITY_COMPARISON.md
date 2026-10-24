@@ -6,6 +6,8 @@ No overhead, accuracy, coverage or fault-tolerance superiority is claimed over t
 
 | Established work | Primary-source capability inspected | V10's tested scope |
 |---|---|---|
+| [DriveFI](https://ssbanerje.github.io/publications/dsn2019/) | Closed-loop AV fault/scenario search for violated safety constraints; Bayesian selection | Executable paired-record invariants and native input/plant replay, evaluated on two schemas; no claim to invent end-to-end safety evaluation or outperform DriveFI |
+| [Chessa et al.2026](https://doi.org/10.1145/3822454.3822495) | Cross-layer asynchronous NoC fault propagation into SNN application behavior | Functional connection-row deletion and recorded task evidence only; no equivalent physical defect mapping, power or area evidence |
 | [SpikeFI](https://arxiv.org/abs/2412.06795) | Configurable neuron/synapse faults and automated SNN campaigns | Check complete paired record matrices, declared shared randomness and native task clocks after generation |
 | [SpikingJET](https://arxiv.org/abs/2404.00383) | Faults in weights, neuron parameters, states and activation functions | Independent replay of the declared plant/input/actuator semantics; no new physical fault model |
 | [enpheeph](https://arxiv.org/abs/2208.00328) | Configurable SNN/compressed-network fault injection, specialized-device execution | Two native record adapters use one common checker; this is adoption evidence, not an injector runtime comparison |
@@ -20,7 +22,7 @@ real-manifest regressions check source/calibration integrity, and declaration
 guards reject empty/duplicate campaigns. The standalone tank example was actually
 run in a new minimal dependency environment without fly/Brian2 imports. Its
 repeat adds no independent samples. Both independent RF matrices tested the same
-interface after they are complete, without changing registered analysis roles.
+interface after completion, without changing registered analysis roles.
 
 A deliberately synthetic zero-readout logger passes the trace check without
 executing neural equations. Thus the interface is not execution attestation,
