@@ -1,0 +1,118 @@
+{
+  "status": "FROZEN_ADDITIONAL_EVALUATION_SPEC_BEFORE_SCORING",
+  "base_commit": "22999d28d8fe22f863fc8f62eaa45a57256083d0",
+  "seed": 2026102501,
+  "repetitions_per_family": 3,
+  "design_scope": "Fixed additional record-corruption evaluation, not blind generalization or an independent neural experiment. Authors have inspected the checker and earlier development cases.",
+  "case_unit": "One declared worker seed block with the complete 2 conditions x 2 laws x 3 faults matrix. Source blocks selected by seeded shuffle within each family; target row selected by seeded draw without outcome filtering.",
+  "normalization": "Deep-copy raw source rows, mutate raw rows, then let every evaluation arm freshly normalize those exact same rows. No Evidence-only corruption.",
+  "valid_families": [
+    {
+      "name": "unaltered",
+      "expected_invalid": false,
+      "generation": "Use the complete declared seed block without mutation."
+    },
+    {
+      "name": "legal_nonframe_actuation",
+      "expected_invalid": false,
+      "generation": "Reuse an unmodified source block containing existing valid off-frame actuator events; do not round or invent an event."
+    },
+    {
+      "name": "legal_worker_seed_partition",
+      "expected_invalid": false,
+      "generation": "Reuse an unmodified complete seed block declared as a worker subset of the registered seed matrix."
+    },
+    {
+      "name": "legal_feedback_dependence",
+      "expected_invalid": false,
+      "generation": "Reuse unmodified records where common exogenous variates coexist with different realized input events (fly) or controller/plant histories (tank)."
+    }
+  ],
+  "invalid_families": [
+    {
+      "name": "uniform_identity",
+      "expected_invalid": true,
+      "generation": "Change one raw uniform_sha256 to a different syntactically valid 64-hex digest."
+    },
+    {
+      "name": "mask_identity",
+      "expected_invalid": true,
+      "generation": "Change one raw mask_sha256 to a different syntactically valid 64-hex digest."
+    },
+    {
+      "name": "seed_identity",
+      "expected_invalid": true,
+      "generation": "Set one seed to its original seed plus 1000000, outside the declared worker seed set."
+    },
+    {
+      "name": "condition_identity",
+      "expected_invalid": true,
+      "generation": "Relabel one raw bearing/inflow condition as the other declared condition, producing a duplicate and missing matrix cell."
+    },
+    {
+      "name": "actuator_start",
+      "expected_invalid": true,
+      "generation": "Fly: shift the observed first burst-on subframe boundary later while retaining full observation-frame coverage; tank: shift one available_s timestamp by +0.01 s."
+    },
+    {
+      "name": "actuator_end",
+      "expected_invalid": true,
+      "generation": "Fly: terminate the last observed burst-on segment 1 ms early and append a walk-marked segment; tank: shift one internal applied-control event boundary by 0.01 s."
+    },
+    {
+      "name": "endpoint_actuator_state",
+      "expected_invalid": true,
+      "generation": "Fly: invert burst_active_at_horizon only; tank: remove an internal event boundary by merging the frame segments."
+    },
+    {
+      "name": "task_label_contradiction",
+      "expected_invalid": true,
+      "generation": "Invert escaped/success without changing the saved first-failure timestamp."
+    },
+    {
+      "name": "first_failure_time",
+      "expected_invalid": true,
+      "generation": "Change/add a finite in-horizon first contact/failure timestamp and keep the final success label consistent with that timestamp."
+    },
+    {
+      "name": "resource_decrease",
+      "expected_invalid": true,
+      "generation": "Choose a frame whose predecessor has resource >=1 and replace that frame resource with predecessor minus 1 (still nonnegative)."
+    },
+    {
+      "name": "monotone_resource_bias",
+      "expected_invalid": true,
+      "generation": "Add 10 to all cumulative frame resources; for fly also add 10 to final n_total. This is known source corruption; global neural-count authenticity is not reconstructable from command logs."
+    },
+    {
+      "name": "truncated_exposure",
+      "expected_invalid": true,
+      "generation": "Remove the last frame while preserving declared observation horizon and other final metadata."
+    },
+    {
+      "name": "missing_required_header",
+      "expected_invalid": true,
+      "generation": "Delete the raw mask_sha256 header; retain the parse failure in the denominator."
+    },
+    {
+      "name": "uniform_binding_replacement",
+      "expected_invalid": true,
+      "generation": "Replace the input-map digest (fly) or source digest (tank) by the same wrong 64-hex value in every row; cross-record agreement alone is insufficient."
+    }
+  ],
+  "fly_additional": [
+    {
+      "name": "declared_burst_header",
+      "expected_invalid": true,
+      "generation": "Increase raw burst_delay_ms by 10 ms and burst_duration_ms by 10 ms in one row, without changing observed execution. Valid numeric fields but declaration/execution disagreement; retain even if every frozen checker misses it."
+    }
+  ],
+  "expected_case_counts": {
+    "fly": 57,
+    "tank": 54,
+    "total": 111
+  },
+  "applicability": "Structural prerequisites are checked without scoring. Any unavailable required event/resource frame is marked inapplicable with reason and retained in the manifest; not silently replaced by another source block.",
+  "out_of_scope_development_counterexample": "The previously demonstrated zero-neural-logger replay is a development counterexample, not a new blind case. No saved-record check authenticates unlogged neural execution.",
+  "ground_truth": "Validity is defined by the unchanged source record and declared protocol semantics, not by whether any evaluated checker detects a mutation. Script/plan will be committed and hash-bound before final evaluation; no score-dependent revisions allowed."
+}

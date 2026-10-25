@@ -1,0 +1,217 @@
+{
+  "test_episodes": 576,
+  "episode_wall_seconds_sum": 106365.35744369961,
+  "sum_in_hours": 29.545932623249893,
+  "median_episode_wall_seconds": 167.14916615001857,
+  "range_episode_wall_seconds": [
+    125.50725979998242,
+    792.7015442999545
+  ],
+  "mean_episode_wall_seconds": 184.66207889531182,
+  "worker_build_values_repeated_per_episode": true,
+  "hardware_manifest_records": [
+    {
+      "RF": "RF-0",
+      "path": "runs/task-v9-test/batches/1f7496053cc6/run_manifest.json",
+      "sha256": "f1f7d85147caca4bb7c2b0cc4c2a947b8e84c14ec1e74756a5a0f7d02ff593e6",
+      "hardware": {
+        "system": "Windows",
+        "release": "11",
+        "processor": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+        "logical_cpus": 8
+      },
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "packages": {
+        "numpy": "2.5.4",
+        "brian2": "2.10.1",
+        "pandas": "3.0.6",
+        "pyarrow": "26.0.0",
+        "matplotlib": "3.11.2",
+        "scipy": "1.17.1",
+        "Cython": "3.1.3",
+        "joblib": "1.6.0"
+      },
+      "runtime_backend": "numpy"
+    },
+    {
+      "RF": "RF-0",
+      "path": "runs/task-v9-test/batches/5e60568d0b5f/run_manifest.json",
+      "sha256": "40af14473fad690f65c129a71ff2ebe6080afdb8d9c5358a889bbdf0f1719373",
+      "hardware": {
+        "system": "Windows",
+        "release": "11",
+        "processor": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+        "logical_cpus": 8
+      },
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "packages": {
+        "numpy": "2.5.4",
+        "brian2": "2.10.1",
+        "pandas": "3.0.6",
+        "pyarrow": "26.0.0",
+        "matplotlib": "3.11.2",
+        "scipy": "1.17.1",
+        "Cython": "3.1.3",
+        "joblib": "1.6.0"
+      },
+      "runtime_backend": "numpy"
+    },
+    {
+      "RF": "RF-0",
+      "path": "runs/task-v9-test/batches/d1c2813ba1ea/run_manifest.json",
+      "sha256": "6aa9a91cc47cec1a7558e0d04ffb9954b1a7647ec030bda13816e437add56ff5",
+      "hardware": {
+        "system": "Windows",
+        "release": "11",
+        "processor": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+        "logical_cpus": 8
+      },
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "packages": {
+        "numpy": "2.5.4",
+        "brian2": "2.10.1",
+        "pandas": "3.0.6",
+        "pyarrow": "26.0.0",
+        "matplotlib": "3.11.2",
+        "scipy": "1.17.1",
+        "Cython": "3.1.3",
+        "joblib": "1.6.0"
+      },
+      "runtime_backend": "numpy"
+    },
+    {
+      "RF": "RF-A",
+      "path": "runs/task-v10-transfer/map-A/test/batches/5b156133fedb/run_manifest.json",
+      "sha256": "19757c5fbb57df1b50bfb301e51951ff6034a6bb1d870d5b7ce15e26bf07c6f0",
+      "hardware": {
+        "system": "Windows",
+        "release": "11",
+        "processor": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+        "logical_cpus": 8
+      },
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "packages": {
+        "numpy": "2.5.4",
+        "brian2": "2.10.1",
+        "pandas": "3.0.6",
+        "pyarrow": "26.0.0",
+        "matplotlib": "3.11.2",
+        "scipy": "1.17.1",
+        "Cython": "3.1.3",
+        "joblib": "1.6.0"
+      },
+      "runtime_backend": "numpy"
+    },
+    {
+      "RF": "RF-A",
+      "path": "runs/task-v10-transfer/map-A/test/batches/6c0b2df2d116/run_manifest.json",
+      "sha256": "9d0aa795c0c28c24995185a3fb6e628db01ee68eadfd06892e52620ce606dee2",
+      "hardware": {
+        "system": "Windows",
+        "release": "11",
+        "processor": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+        "logical_cpus": 8
+      },
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "packages": {
+        "numpy": "2.5.4",
+        "brian2": "2.10.1",
+        "pandas": "3.0.6",
+        "pyarrow": "26.0.0",
+        "matplotlib": "3.11.2",
+        "scipy": "1.17.1",
+        "Cython": "3.1.3",
+        "joblib": "1.6.0"
+      },
+      "runtime_backend": "numpy"
+    },
+    {
+      "RF": "RF-B",
+      "path": "runs/task-v10-transfer/map-B/test/batches/7674460cb524/run_manifest.json",
+      "sha256": "a2fef4baaa5833ac9505b615c8176d48214a2d707d7b03f40e8d4c1d416f5a33",
+      "hardware": {
+        "system": "Windows",
+        "release": "11",
+        "processor": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+        "logical_cpus": 8
+      },
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "packages": {
+        "numpy": "2.5.4",
+        "brian2": "2.10.1",
+        "pandas": "3.0.6",
+        "pyarrow": "26.0.0",
+        "matplotlib": "3.11.2",
+        "scipy": "1.17.1",
+        "Cython": "3.1.3",
+        "joblib": "1.6.0"
+      },
+      "runtime_backend": "numpy"
+    },
+    {
+      "RF": "RF-B",
+      "path": "runs/task-v10-transfer/map-B/test/batches/7f4f27491e02/run_manifest.json",
+      "sha256": "df855966feea882a6fc45292ba925611722aef7004238c0926583e0b9ec1e1d5",
+      "hardware": {
+        "system": "Windows",
+        "release": "11",
+        "processor": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+        "logical_cpus": 8
+      },
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "packages": {
+        "numpy": "2.5.4",
+        "brian2": "2.10.1",
+        "pandas": "3.0.6",
+        "pyarrow": "26.0.0",
+        "matplotlib": "3.11.2",
+        "scipy": "1.17.1",
+        "Cython": "3.1.3",
+        "joblib": "1.6.0"
+      },
+      "runtime_backend": "numpy"
+    }
+  ],
+  "transfer_worker_resources": [
+    {
+      "RF": "RF-A",
+      "manifest_sha256": "9d0aa795c0c28c24995185a3fb6e628db01ee68eadfd06892e52620ce606dee2",
+      "records": 72,
+      "max_reported_process_lifetime_peak_bytes": 1285705728,
+      "processor_model": "Intel(R) Xeon(R) W-2223 CPU @ 3.60GHz",
+      "physical_memory_bytes": 33922715648,
+      "logical_cpus": 8
+    },
+    {
+      "RF": "RF-A",
+      "manifest_sha256": "19757c5fbb57df1b50bfb301e51951ff6034a6bb1d870d5b7ce15e26bf07c6f0",
+      "records": 72,
+      "max_reported_process_lifetime_peak_bytes": 1296125952,
+      "processor_model": "Intel(R) Xeon(R) W-2223 CPU @ 3.60GHz",
+      "physical_memory_bytes": 33922715648,
+      "logical_cpus": 8
+    },
+    {
+      "RF": "RF-B",
+      "manifest_sha256": "df855966feea882a6fc45292ba925611722aef7004238c0926583e0b9ec1e1d5",
+      "records": 72,
+      "max_reported_process_lifetime_peak_bytes": 1286746112,
+      "processor_model": "Intel(R) Xeon(R) W-2223 CPU @ 3.60GHz",
+      "physical_memory_bytes": 33922715648,
+      "logical_cpus": 8
+    },
+    {
+      "RF": "RF-B",
+      "manifest_sha256": "a2fef4baaa5833ac9505b615c8176d48214a2d707d7b03f40e8d4c1d416f5a33",
+      "records": 72,
+      "max_reported_process_lifetime_peak_bytes": 1297596416,
+      "processor_model": "Intel(R) Xeon(R) W-2223 CPU @ 3.60GHz",
+      "physical_memory_bytes": 33922715648,
+      "logical_cpus": 8
+    }
+  ],
+  "RF0_process_memory_not_recorded": true,
+  "campaign_elapsed_wall_time_not_identifiable": true,
+  "CPU_time_not_recorded": true,
+  "budget_note": "wall_seconds includes task run and per-episode damage-cache accounting; elapsed sums are neither CPU-hours nor actual campaign duration. Peak working set is a cumulative worker-lifetime value, not a per-episode peak."
+}
