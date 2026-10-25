@@ -1,0 +1,73 @@
+{
+  "started_unix": 1792661743.085697,
+  "pids": [
+    31280,
+    34116,
+    34588
+  ],
+  "commands": [
+    [
+      "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-u",
+      "tools/run_v9.py",
+      "tools/run_task_v9.py",
+      "--out",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-causal",
+      "--seeds",
+      "1200,1203,1206",
+      "--phis=-30.0,30.0",
+      "--modes",
+      "proportional,relay,disabled,observe",
+      "--faults",
+      "healthy",
+      "--calibration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-frozen\\calibration.json",
+      "--role",
+      "test",
+      "--registration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-frozen\\registration-causal.json"
+    ],
+    [
+      "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-u",
+      "tools/run_v9.py",
+      "tools/run_task_v9.py",
+      "--out",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-causal",
+      "--seeds",
+      "1201,1204,1207",
+      "--phis=-30.0,30.0",
+      "--modes",
+      "proportional,relay,disabled,observe",
+      "--faults",
+      "healthy",
+      "--calibration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-frozen\\calibration.json",
+      "--role",
+      "test",
+      "--registration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-frozen\\registration-causal.json"
+    ],
+    [
+      "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-u",
+      "tools/run_v9.py",
+      "tools/run_task_v9.py",
+      "--out",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-causal",
+      "--seeds",
+      "1202,1205",
+      "--phis=-30.0,30.0",
+      "--modes",
+      "proportional,relay,disabled,observe",
+      "--faults",
+      "healthy",
+      "--calibration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-frozen\\calibration.json",
+      "--role",
+      "test",
+      "--registration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-frozen\\registration-causal.json"
+    ]
+  ]
+}

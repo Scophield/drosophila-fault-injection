@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+/tmp/
+/output/*
+!/output/burst-end-20261025-01/
+!/output/burst-end-validation-20261025-03/
+!/output/trigger-timing-20261025-03/

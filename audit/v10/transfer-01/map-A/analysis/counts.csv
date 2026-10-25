@@ -1,0 +1,13 @@
+mode,fault,phi_deg,n,success,losses,gains,healthy_at_risk
+proportional,healthy,-30.0,12,12,0,0,12
+proportional,healthy,30.0,12,12,0,0,12
+proportional,F2_25,-30.0,12,12,0,0,12
+proportional,F2_25,30.0,12,12,0,0,12
+proportional,F2_50,-30.0,12,11,1,0,12
+proportional,F2_50,30.0,12,11,1,0,12
+relay,healthy,-30.0,12,12,0,0,12
+relay,healthy,30.0,12,12,0,0,12
+relay,F2_25,-30.0,12,12,0,0,12
+relay,F2_25,30.0,12,12,0,0,12
+relay,F2_50,-30.0,12,12,0,0,12
+relay,F2_50,30.0,12,11,1,0,12

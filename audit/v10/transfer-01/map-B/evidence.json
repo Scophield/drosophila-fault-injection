@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "records": 144,
+  "issues": [],
+  "interface_source_sha256": {
+    "evidence_v10/contract.py": "6ded77e802899a658694ce824f74bd4d36d5e9fdfc1c4892310722b7055279fd",
+    "evidence_v10/fly_adapter.py": "896b816b40ee874f0920af50a7823978eea56f14fa2fc1c09c9297cc3ac523be",
+    "evidence_v10/tank.py": "6cc1fdf7644eb5d142ed1c7cee79b062f766c0759fd215652e51e36665177fdd",
+    "evidence_v10/__init__.py": "f9fe221fe7957e813de3c2a5da0ba7d54f062a67f4fe5b68f4b41ec6c1ffe43c"
+  },
+  "scope": "same generic contract and fly native adapter; no neural resimulation"
+}

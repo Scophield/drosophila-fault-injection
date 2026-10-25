@@ -1,0 +1,13 @@
+{
+  "seeds": [
+    300,
+    301,
+    302,
+    303
+  ],
+  "calibration_sha256": "bdccc41cee6e2c8082f3fddc410fef58a6d6d46d5e3fa13405658b900d0e368c",
+  "role": "validation",
+  "faults": "healthy,F2_25,F2_50",
+  "workers": 3,
+  "registration_sha256": null
+}

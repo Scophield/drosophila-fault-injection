@@ -1,0 +1,13 @@
+RF,law,fault,all_pairs,seeds,scheduled_B_delay_mean_ms,delay_CI95,delay_min_ms,delay_max_ms,row_status_counts
+RF-0,proportional,F2_25,48,24,25.833333333333332,"[np.float64(20.833333333333332), np.float64(30.416666666666668)]",0.0,100.0,{'at_risk': 48}
+RF-0,proportional,F2_50,48,24,80.0,"[np.float64(69.58333333333333), np.float64(90.0)]",0.0,180.0,"{'at_risk': 35, 'prior_contact': 2, 'ongoing_at_H': 7, 'zero_followup': 4}"
+RF-0,relay,F2_25,48,24,25.833333333333332,"[np.float64(21.25), np.float64(30.416666666666668)]",0.0,100.0,{'at_risk': 48}
+RF-0,relay,F2_50,48,24,80.0,"[np.float64(70.0), np.float64(90.0)]",0.0,180.0,"{'at_risk': 36, 'ongoing_at_H': 8, 'zero_followup': 4}"
+RF-A,proportional,F2_25,24,12,24.166666666666668,"[np.float64(16.666666666666668), np.float64(31.666666666666668)]",0.0,60.0,{'at_risk': 24}
+RF-A,proportional,F2_50,24,12,57.5,"[np.float64(42.5), np.float64(77.5)]",20.0,240.0,"{'at_risk': 22, 'prior_contact': 1, 'ongoing_at_H': 1}"
+RF-A,relay,F2_25,24,12,24.166666666666668,"[np.float64(16.666666666666668), np.float64(31.666666666666668)]",0.0,60.0,{'at_risk': 24}
+RF-A,relay,F2_50,24,12,57.5,"[np.float64(43.333333333333336), np.float64(77.5)]",20.0,240.0,"{'at_risk': 22, 'prior_contact': 1, 'ongoing_at_H': 1}"
+RF-B,proportional,F2_25,24,12,13.333333333333334,"[np.float64(6.666666666666667), np.float64(19.166666666666668)]",-20.0,40.0,{'at_risk': 24}
+RF-B,proportional,F2_50,24,12,57.5,"[np.float64(47.5), np.float64(67.5)]",0.0,120.0,"{'at_risk': 22, 'zero_followup': 2}"
+RF-B,relay,F2_25,24,12,13.333333333333334,"[np.float64(6.666666666666667), np.float64(19.166666666666668)]",-20.0,40.0,{'at_risk': 24}
+RF-B,relay,F2_50,24,12,57.5,"[np.float64(48.333333333333336), np.float64(67.5)]",0.0,120.0,"{'at_risk': 22, 'zero_followup': 2}"

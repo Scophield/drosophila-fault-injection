@@ -1,0 +1,34 @@
+{
+  "phase": "test",
+  "seeds": [
+    3000,
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009,
+    3010,
+    3011
+  ],
+  "phis": [
+    -30.0,
+    30.0
+  ],
+  "modes": [
+    "proportional",
+    "relay"
+  ],
+  "faults": [
+    "healthy",
+    "F2_25",
+    "F2_50"
+  ],
+  "horizon": 1000,
+  "calibration_sha256": "34d6a57ea3a5fab4b22461e21bb500399610fc4a4e7ed64ec9f4456c928aa2c6",
+  "registration_sha256": "839659ae497889f70fed3c7427530f79d8cd0a2b9539cfc3b1c4abf10e6fe305",
+  "rf_map_sha256": "24a825d3b0ec90e1d9689ac60dc91ddfe596b9ba1ff4cc6d264d4f7d8bace932"
+}

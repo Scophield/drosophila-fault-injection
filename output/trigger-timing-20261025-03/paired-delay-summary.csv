@@ -1,0 +1,7 @@
+RF,fault,independent_seed_clusters,distribution_unit,n,mean,sd,median,q25,q75,minimum,maximum,earlier,tied,later,seed_mean_sd_ms
+RF-0,F2_25,24,paired bearing context; P/R timing duplicates shown once,48,25.833333333333332,18.88749821052228,20.0,20.0,40.0,0.0,100.0,0,9,39,12.12853862900895
+RF-0,F2_50,24,paired bearing context; P/R timing duplicates shown once,48,80.0,42.87537606062978,70.0,60.0,100.0,0.0,180.0,0,1,47,25.707383476686058
+RF-A,F2_25,12,paired bearing context; P/R timing duplicates shown once,24,24.166666666666668,17.672544824662634,20.0,20.0,40.0,0.0,60.0,0,5,19,14.433756729740644
+RF-A,F2_50,12,paired bearing context; P/R timing duplicates shown once,24,57.5,46.555250019174274,50.0,40.0,60.0,20.0,240.0,0,0,24,33.063300170760606
+RF-B,F2_25,12,paired bearing context; P/R timing duplicates shown once,24,13.333333333333334,17.36229464564862,20.0,0.0,20.0,-20.0,40.0,2,8,14,11.547005383792516
+RF-B,F2_50,12,paired bearing context; P/R timing duplicates shown once,24,57.5,29.672121302810414,60.0,40.0,80.0,0.0,120.0,0,1,23,18.15338686155987

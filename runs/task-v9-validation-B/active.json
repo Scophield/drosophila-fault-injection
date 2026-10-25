@@ -1,0 +1,67 @@
+{
+  "started_unix": 1792639218.321573,
+  "pids": [
+    36120,
+    12132,
+    24712
+  ],
+  "commands": [
+    [
+      "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-u",
+      "tools/run_v9.py",
+      "tools/run_task_v9.py",
+      "--out",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-validation-B",
+      "--seeds",
+      "400,403,406",
+      "--phis=-30,30",
+      "--modes",
+      "proportional,relay",
+      "--faults",
+      "healthy",
+      "--calibration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-development\\calibration-B-frozen.json",
+      "--role",
+      "validation"
+    ],
+    [
+      "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-u",
+      "tools/run_v9.py",
+      "tools/run_task_v9.py",
+      "--out",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-validation-B",
+      "--seeds",
+      "401,404,407",
+      "--phis=-30,30",
+      "--modes",
+      "proportional,relay",
+      "--faults",
+      "healthy",
+      "--calibration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-development\\calibration-B-frozen.json",
+      "--role",
+      "validation"
+    ],
+    [
+      "C:\\Users\\ohsawalab gpu3\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-u",
+      "tools/run_v9.py",
+      "tools/run_task_v9.py",
+      "--out",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-validation-B",
+      "--seeds",
+      "402,405",
+      "--phis=-30,30",
+      "--modes",
+      "proportional,relay",
+      "--faults",
+      "healthy",
+      "--calibration",
+      "D:\\autoresearch_labtorary\\drosophila-fault-injection\\runs\\task-v9-development\\calibration-B-frozen.json",
+      "--role",
+      "validation"
+    ]
+  ]
+}

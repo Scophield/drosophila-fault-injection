@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "input_binding_only": true,
+  "maps": [
+    {
+      "map_id": "A",
+      "rf_map_sha256": "24a825d3b0ec90e1d9689ac60dc91ddfe596b9ba1ff4cc6d264d4f7d8bace932",
+      "canonical_order": true,
+      "phases": [
+        {
+          "phase": "development",
+          "input_map_sha256": "6ee22d6c5e192e3a27c03107539fd9a779d115ec809301319581e82d858bbe31",
+          "sensory_rows": 314,
+          "worker_manifests": [
+            "runs/task-v10-transfer/map-A/development/batches/25e559acfd28/run_manifest.json",
+            "runs/task-v10-transfer/map-A/development/batches/2d3b22e76980/run_manifest.json"
+          ]
+        },
+        {
+          "phase": "validation",
+          "input_map_sha256": "6ee22d6c5e192e3a27c03107539fd9a779d115ec809301319581e82d858bbe31",
+          "sensory_rows": 314,
+          "worker_manifests": [
+            "runs/task-v10-transfer/map-A/validation/batches/9907a4b47212/run_manifest.json",
+            "runs/task-v10-transfer/map-A/validation/batches/aecd2585b261/run_manifest.json"
+          ]
+        },
+        {
+          "phase": "test",
+          "input_map_sha256": "6ee22d6c5e192e3a27c03107539fd9a779d115ec809301319581e82d858bbe31",
+          "sensory_rows": 314,
+          "worker_manifests": [
+            "runs/task-v10-transfer/map-A/test/batches/5b156133fedb/run_manifest.json",
+            "runs/task-v10-transfer/map-A/test/batches/6c0b2df2d116/run_manifest.json"
+          ]
+        }
+      ]
+    },
+    {
+      "map_id": "B",
+      "rf_map_sha256": "ae2dc2f5271c586cf4f6152cf9d4471f12d8d9b787bd6bdb7b712af8c2ecbb9f",
+      "canonical_order": true,
+      "phases": [
+        {
+          "phase": "development",
+          "input_map_sha256": "fa85a53418bc659171e13b6c4fcd96037d4c8e2d2024bbd95dbb0aec3d3db4f5",
+          "sensory_rows": 314,
+          "worker_manifests": [
+            "runs/task-v10-transfer/map-B/development/batches/7ac6ce555003/run_manifest.json",
+            "runs/task-v10-transfer/map-B/development/batches/8b2f0315432d/run_manifest.json"
+          ]
+        },
+        {
+          "phase": "validation",
+          "input_map_sha256": "fa85a53418bc659171e13b6c4fcd96037d4c8e2d2024bbd95dbb0aec3d3db4f5",
+          "sensory_rows": 314,
+          "worker_manifests": [
+            "runs/task-v10-transfer/map-B/validation/batches/dc3242641b94/run_manifest.json",
+            "runs/task-v10-transfer/map-B/validation/batches/df472585bc63/run_manifest.json"
+          ]
+        },
+        {
+          "phase": "test",
+          "input_map_sha256": "fa85a53418bc659171e13b6c4fcd96037d4c8e2d2024bbd95dbb0aec3d3db4f5",
+          "sensory_rows": 314,
+          "worker_manifests": [
+            "runs/task-v10-transfer/map-B/test/batches/7674460cb524/run_manifest.json",
+            "runs/task-v10-transfer/map-B/test/batches/7f4f27491e02/run_manifest.json"
+          ]
+        }
+      ]
+    }
+  ],
+  "design_sha256": "3e12c36e92919e09d9c5d6c4d07465583edf42349145a64b232165b1b1980f93",
+  "source_sha256": "2619d4bb513d8e300ff011b3a405300e85c1830e7bfbb97b5aa5e70855f2aeda",
+  "scope": "Frozen RF contents, canonical FlyID order, phase input maps and worker input snapshots; not test completion, neural-state validation or execution authentication"
+}

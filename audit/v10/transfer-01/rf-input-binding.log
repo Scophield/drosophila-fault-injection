@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "input_binding_only": true,
+  "design_sha256": "3e12c36e92919e09d9c5d6c4d07465583edf42349145a64b232165b1b1980f93",
+  "source_sha256": "2619d4bb513d8e300ff011b3a405300e85c1830e7bfbb97b5aa5e70855f2aeda",
+  "scope": "Frozen RF contents, canonical FlyID order, phase input maps and worker input snapshots; not test completion, neural-state validation or execution authentication"
+}

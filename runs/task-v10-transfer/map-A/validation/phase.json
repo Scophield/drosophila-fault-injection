@@ -1,0 +1,28 @@
+{
+  "phase": "validation",
+  "seeds": [
+    2200,
+    2201,
+    2202,
+    2203,
+    2204,
+    2205,
+    2206,
+    2207
+  ],
+  "phis": [
+    -30.0,
+    30.0
+  ],
+  "modes": [
+    "proportional",
+    "relay"
+  ],
+  "faults": [
+    "healthy"
+  ],
+  "horizon": 1000,
+  "calibration_sha256": "34d6a57ea3a5fab4b22461e21bb500399610fc4a4e7ed64ec9f4456c928aa2c6",
+  "registration_sha256": null,
+  "rf_map_sha256": "24a825d3b0ec90e1d9689ac60dc91ddfe596b9ba1ff4cc6d264d4f7d8bace932"
+}

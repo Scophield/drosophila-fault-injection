@@ -1,0 +1,1722 @@
+{
+  "complete": true,
+  "protocol": "task-v9.1-causal-exact-events",
+  "records": 144,
+  "seed_clusters": 12,
+  "registration_sha256": "f83aad61a59d3f34f5188df4bf45d5634b8c83f3e87b86902b305c90b8d1a6a5",
+  "raw_input_sha256": {
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3100.json": "7436393a7121fddac2027445c2650e3f90e2c070ccd9bbda8a97ece235c658f4",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3101.json": "032f10207f4102a49e19881f9573097b344041801b165a88ba4b0a2dd9d039df",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3102.json": "1ac6888e2f358dc501a18cbc185dec88107adc17c2d4c8b4579c75859c7563f1",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3103.json": "60783f957810f4a2b31dea8c402772273079dc933797749cb1d1e930dad1ec28",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3104.json": "297911dcd9f19a28b979766777c8e60196bc11f522c72a0914a158502c995da2",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3105.json": "4513591e8427e5d3d506d164e2f51105f70978036eb38b5071d9761c83bf8161",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3106.json": "c1f7a79f9c87d59fc30920475397088e0e53d7a72f63445c088d31260e213d0d",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3107.json": "e6428a0da8becea9c8b3728604a65786374f8a309a3c0b1247d1c03b94e13290",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3108.json": "d32e809ec137123cabc7b2c66b659f778c5235cc6ee564bced32c72b8495aff3",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3109.json": "c7036c763a9cf36a3a54cca2554582c31a704c17580011a86fd744a07f546d1f",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3110.json": "fa7347fe167c1d2e103ae746daa2db1f2b9134900b96dd24fc04c7ec3680b368",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi-30_s3111.json": "80f400db15dbe342ac475bf6cdb1091c228eb9f05e5eea95b8931a9e1ff35c1d",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3100.json": "58391c92d33a2264ae52605c9b140fa88e45d79eaf768d89f6ff8522fca95b29",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3101.json": "1440c3b5c0800c135f064ba23ac894c880b3d6af0a3175a0c1579b7561a6aca8",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3102.json": "d7a089ae6fc234a1791b05f02dca190aca4d7a0edea1673ee36ecb529527eab3",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3103.json": "70a0637a3fb564ee4b4876727a3b54b29b3a436fcfe980949a2f312346b99f45",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3104.json": "f7e6fd0778868ff160fcf0d6126ab6c7f27901d44ce24c7ee9f84cdccb679a56",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3105.json": "efe527d225ba2da3f2284d4c9cda1471f8371821d9f8ee3ca9240f76df9713ff",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3106.json": "453156713f8b091d2c48c95d549f851950a1c67d1eb1a18c8349f07336c40d62",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3107.json": "24960455a91caed6e3973f50c25a0123e5dd85a51e92b04fdf06d90c84cdeecb",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3108.json": "731dd4d6e063ed643590f135badff04be248e96c4fa0caabada4a5bf5a8fe716",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3109.json": "783f472b43e57fd97a6f8250a3ce93ce5c69d4794705c280c1d0ece6a73778ca",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3110.json": "dedb68595d78a970c37f95cd03a21939a39e3d38d4b2b06079638820e239756f",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_25_phi30_s3111.json": "f085dfcae678f983100ef04796eba37f7b88555335b78fbdd2cf538c6456d1b2",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3100.json": "fd8732797c8d9e36346d6d1b54865b29753011fe4f4e9843d32fc467eb51b794",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3101.json": "5860aff5646727898158d970cbf23046308d557e93a7bab8fe38f4a7829b0782",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3102.json": "b082a6511668b66970281ff6972346c249592c1ea11e7a401005582fae6a5fe3",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3103.json": "a6c2dc0f8c88a32dfc961172d331b4ed00baeddeb2bb8cca39fbec29785b20b9",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3104.json": "6fb23da317f8532ec783d307039b732329f671fbbcaf201d0fc49e1d98d4f598",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3105.json": "ac18af39fcd0fb0c91162c73b65fd9ab4905d8055f53f3bb6fbd977e840259c0",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3106.json": "b7abea22cbed842d9446d421447db6d5699e4052d04762844fbae5c9c8edb2f5",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3107.json": "050eef5e2ef2018eaa5dec118da929767a3befb7164af1330c5e8c7fc9b736fd",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3108.json": "bc057ba4b7a9e35d3ebdf08c9cecd61e27cde45c97907ddb731a241c35ac142c",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3109.json": "6b11e42e0beb74c4cc2129b51355c5000a5617332fb95b3fba46a3468f2bb85e",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3110.json": "61c9234f162942825ef8f689bcb82f03949c778e21bd7da1bc445d327b2d16b1",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi-30_s3111.json": "d4e83af204421b5902c7a4ddef018dd67c5531a7695e4363f91489673c14b189",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3100.json": "82b61a63d9e838a0ecb917477b15b73991f99bce9c3872f50c6203babe015b6b",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3101.json": "13ce3e364dc3b0641903b18d510e2eaeae87b7b5dc47cceda6034077fa7827c9",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3102.json": "ad51d497663ca264dde84a957a27e47d24312d2ef224d2c3ac084fe0d3792615",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3103.json": "6fb8c4b7069e1e5135963eba159e584e48ea9266d1a038d0d1109aff53f3b442",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3104.json": "f42de700e3a14a1917f5de66c5a31f99f2fec426af85fa62dd518dabd2f6398b",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3105.json": "55e5cb0dd660c55ef01114be7aa601f1bb3086bf260be350b657e9674eae95c6",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3106.json": "41d461d00e94587ca74ec7f6bf12e90a1b4cf1891ac48355659c02a395a61f2e",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3107.json": "66dd2e7948d6740630f0927e21caaf2332f5a6687a8a43bc4f01190c55e2b3e7",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3108.json": "3a279b51eb55ef0aaf111a2eb8c2f9f162db56fc3e3a2f1af714cf27fabf3cdf",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3109.json": "0107e05c5d8209d7f43c9ef719bd9891be772a9560ce0aa05f431aee3557f70a",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3110.json": "31c0244309096aac2cd9c811828f8a78e35adf5944e50be763a518fe25d81fb1",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_F2_50_phi30_s3111.json": "f2a298f9aad7aa882c80e36e7e06c2f74c58922848bf35e81ad8d2e5e4fe0004",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3100.json": "fcb3c6e04a462897753bb6d612aafc5e4637d116651379fa66cea1069184adcf",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3101.json": "15ddad13747a7ac178aff409932a878d010b0cf4cef2a4a0287884224e8ed8f8",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3102.json": "d012bb32a0c2e514ba8ab38ca52f1f0e756603b7acfbb725341dda2ad418d373",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3103.json": "95c65a54c3aba3cfe33e9dacb426ab580946a52853fca000c5df8772d38d6916",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3104.json": "635018fe41931c8a4097591391b2f7be8836fc9e25d0cccd13d41030dd4759c1",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3105.json": "d15590ee0c546eafd4be83619791662c8db27c85aff703832816910b951a9555",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3106.json": "1ae7dc2ec5fb82031253bba13eebd665c25a0b3398998c5dcbd06afeff79a635",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3107.json": "1d77f3398081785edd23fe346de196808da2f3e19e411bbe173855a6dc9a79e2",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3108.json": "5bb3f456b73e08e58604cf936b831d13a2154e804d691d2c371b44dd6f65f7c3",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3109.json": "d6263bde62a3ee13bf2b8b3dcc50d4c57350fa113493b2170cde049e9247b7ab",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3110.json": "002373891b20d2660c83ec5b81212ad6b277e7e8cf87eff5f320cefb29459a4f",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi-30_s3111.json": "3d92737447c1fb8e63a807a28bbb7da06c8715f012b397523d8ff9284e04f08e",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3100.json": "d67a374df5017c03f46b6d760bb2101a6778a3b12d18ad80fc3d2169ed2443d6",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3101.json": "b75e275a16c7231f83c634e496199507631957293b080c90802ea3ff871817c7",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3102.json": "69a34546b47e7c56801e3f2439edaf178e5ba092ffbbd9d58860c6d8b70edaa6",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3103.json": "0322bab8fda1faddf7299c9ab3a6097043f1272eb9e5588279d8107f21413233",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3104.json": "52a40bf8c5c9e3295959a050634f0a00ab1a26d00f4ab597b87d7b7b011225cb",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3105.json": "2ae187a996a6bd8a889187a63ac8a4d01aef83403318eb2fe5336d6250b9386e",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3106.json": "f91089e0f0596f0146c91f2112a9ca4881d5ee816389db975fe2b1b0a518a112",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3107.json": "8674670e4244b343152b5a58ffaeac9ab1520bc969716b1e7daa18066c74482f",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3108.json": "5e521b31c5e3de5291f53aee183838ffbaaa0487c0fe476110d609acf93154cd",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3109.json": "adfa3774e6faa9099130f5c8db55bcdc1af45b77fbe51f49f70e4dd749133aa2",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3110.json": "70fb745c336b78d9d30631ea6622423dae56ebe6360d0cdbdc335a6f50360c41",
+    "runs/task-v10-transfer/map-B/test/episodes/proportional_healthy_phi30_s3111.json": "b12efe242beda73111df6460c4b5fbff0f2b00b2d553e51612573b3ef1798a4a",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3100.json": "d08f4b5ed75c9bf8b42ea785fc01972ed9f8bbf57209e7c02a8a6d70c92cd4d6",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3101.json": "6957a6cb76e62363ac81d37fa5853f532163b6996f115c2dd0a70bfa9965f6d5",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3102.json": "84b41902f6523109c06a6812f5107e95d94c337d9fa2f9797ccff043c529e86b",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3103.json": "9ecaddeb293295b6713a7231e9f84c8a1d3551cd15987118c7ed6f2c92faae8a",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3104.json": "6576ae0bfb392769a6e77caf557a8fdfdac63c7b98083cd31d9b91baaa398036",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3105.json": "cae0c10fb02712c15eb0c57760a6e120444de873d7fc4271dd5a6027dc87b763",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3106.json": "737b710b952ce797f95298f14a6ec4e3d8581ba56460ddcb714800687b807019",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3107.json": "fa02e0955ebb0bf2effe65401c98019afcbe1a849355d93af9f2a4de73037557",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3108.json": "f674bb5349722379de36bcd57531d127ed5a7d828b4e1933dde1e160a7a45dfe",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3109.json": "4afd0b8671cdebe3676b1598e5b39712cd0827dad6911c24010da90d4cc9dd08",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3110.json": "84c37ed0ccaba1cc38964ad2e9e6c23727274971efce91ebf14aa744bcd13a38",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi-30_s3111.json": "e0a4dda8835372b41b7ae0c809da00c17bd81a66ec8173241056e70fa51835aa",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3100.json": "addac84c34b0f929f968feac926e6a523cbbedb11964c5cb86cce25abb58912a",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3101.json": "908a1a45f18ba5b6d678ebf0915641e8815b030979c63864d3c6a3dad829498f",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3102.json": "26c29ca23609ca100ff1af5bd3b6196a462c5d3d2e63ff86c691cce6046a5f2c",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3103.json": "1f292f85d0cb14c7776cdfcf8273bcd8ae1eb379411855b2a6b47d4c8bb951c4",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3104.json": "4b03f47d813aa3c290c84c6bb5924816107e7bacd174fb43009a059f066e1daf",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3105.json": "fad7b9a77bc90eadfd464a190aa40af4b537974856e144d68d5e76e70aec84c5",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3106.json": "18f77127eef0713d3405c73058cb6cdc84de39ec9af78064bb14eebd8586fd25",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3107.json": "7103f279e09e7493d7de5073e5cf09bc9943508364e1a8858ce51308dae6a79d",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3108.json": "de554c49e9b9a3183d855e56a9b880f45ebe18f61f62e40ba4c034ba13723c2c",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3109.json": "9e96c3e0cf459d373deeb00d791a5451dab58c084978d0c3b77bd0eb439d12a0",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3110.json": "efa11673c0fddddebd38aedc1ec206c809f27c0873d88b726e1e42d8665e614a",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_25_phi30_s3111.json": "852be8c44a170da773948ead12c8fdd481d423dc18d64a1f60c228aa7a66c4ac",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3100.json": "776470db6afa3a2293a76ef0650c83caa4a6e84a83f9acb0a6f182c87e2b953f",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3101.json": "e5e98f7b49ca34b2dbfdc2ecc6df388592ad0aaf0ca55929563581e5bd68475d",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3102.json": "d7d026041fbbf036d384fbda8eba8f6f40b2998000c73be48e5de350abf51307",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3103.json": "fa48c8162ecef1161b7145bcb87dddde9aa4b9384ad773e83402ed620b8e8677",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3104.json": "89e0ad969e813b5985e128149169c885e53605ec4057e93e2e9bf2f8ccc571ee",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3105.json": "7b03cf04a92b5c79247e2b2049085a74be6cea1ccb27aa6933ff75522314aea3",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3106.json": "f9ea1672e0a82177f9c75835358defba30ae35bc359d37c132260486a8c5095d",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3107.json": "c00f8b772586dc7e35aa20219e31bc0e7791a347fb34310b84fdf952c1d7bfc5",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3108.json": "c6aee0c56545e0b7a21fbdd606de5c274d0705bdfb981eb2bbf28926e8602861",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3109.json": "bbeadbe2d8702e6c589ac9794d688bd266a6faa3d91dce6cbf34d99b8c3272d1",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3110.json": "dadb71cce9b75e09e6350af5d9683632762d8f4190f9e07f9b72b48cf19dcaf0",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi-30_s3111.json": "f35a07373872b2d659ca2fdf970ded5b98561b7d3f6401e3a3a5c98237701d14",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3100.json": "f3ef7a8bf1457f4511db3f65c58a89b5f74d99d2d61f81e9d02656e85945a04d",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3101.json": "c0495d10987a4d1343c636f2650fd8bc32c22f6786153ccbc96817907645614d",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3102.json": "9b5faf8f8e4c40b36c4fc0f2be55de3981e160d938665969879ec5616f67ffeb",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3103.json": "dab5f37e56d7705d316f93bf6f4257412e19b24e786ab31c1d8fb40bd77f5e3a",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3104.json": "b7f003affb9c6ec241cf6fb1896001017dfe341214c7506b97a36ccd040f3c23",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3105.json": "027f4efce0950ac6464e7b891b43c05a15fb3a483792833760953d17ea6f26e8",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3106.json": "746fb8d25e9623b5b52dce0b0f281d71ef22e791f341fbcf7a2b4221a6782963",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3107.json": "cbdb83941c9387958556625bc4553c8d0bff0fcac7d406fcc313302c7740cc7d",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3108.json": "d9b648292411b724aff2e9901332451426fad923ce6af14c66c620bc2a289f84",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3109.json": "88bedfb65eeefd95232107fe0b5dc9f93e9bde002ab3d763ace61e233517612f",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3110.json": "cdb1cbefd6eeffd27c3fdaf51d2aae36b2406c2467ae41bc3db355fd69fe984a",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_F2_50_phi30_s3111.json": "6bb08804cb2d548d89e41d99f478d115d42f660b52103dd7f4b435ac60fe9b5d",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3100.json": "b08afaf203a3794d961557f9a7fc2b333e6c55a5a6f23a9731ca7a02c7c8e37d",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3101.json": "64deca45a43faffdce9dc8eef8d6ff28754adad755d86685b610a2b6ee930130",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3102.json": "10dc4f09e69f85d7cdfee5fca28fd2509e7ac7e721190267f30bbf4e0d284269",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3103.json": "daecaaedff86d001fe678fb8b52f74ee894cd347895b4bfe29f1c4251d5b2a74",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3104.json": "cac2a6fedd54dc68edd73612ae4d28f9047ac7c06b24ba3c5b0eea377219a24f",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3105.json": "c5e689381f5445de2967751f89f8d6e43fc4f0b1e3c7f25fc2394495b6187db8",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3106.json": "a8100b1cda91b91396b0233842424f552b07b7a34c9110540a242847eaee5489",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3107.json": "05a7bbcba4041f92ea469b70503ac9e79718bb9b5b7845a5fd535b35ff5c8884",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3108.json": "eec697c8408c650197ace96b9950ba83fc8c6335cb178072933b8643e20206d1",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3109.json": "1f02d0fb2e63f85ae4ae0c161172230beccb7bba55a660949363d14cac352e09",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3110.json": "243d77d94ad801dd257bf355c3197cb1d71927817f02c275e703752795b94bef",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi-30_s3111.json": "e9a5b60650db6afee6a82d1fa6bd3421b62e35c9b6e9da586ae56606c279f359",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3100.json": "a30f6dff4365ce3852b992f084de63150b67f1ff9ea027eae17d4d45f5786611",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3101.json": "c0090cf2b8f064f6a18d9f7d5435621616426e4bdd8cd703ff1ca7df161d554a",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3102.json": "9314cc4fc5fdda586efcc557a076d0a8ba6bfd224b87db4734e62eef983050e0",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3103.json": "c733e23264773ebf99a44bae72059eef60096f7f19444ddaa09d456aa22e7938",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3104.json": "275816b9a54cf82dbc57bfdde96b82b1786ed241e7c9bff7fcfefd1e0ea2b322",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3105.json": "2b4bf0570aebe1c0803fa306f96a52865b0c81f77b10be60c744726941e9fc1d",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3106.json": "d78a435f0f3aa1a530d5e7041b012aa7676759d534b81342ead9f6596edba840",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3107.json": "0175ef2d491e692f3f38278f6dca5efaa4c407d387705754a14351cd935b4309",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3108.json": "932aaa09c3cec2fd24a1ab3fa59a41bce47f61ab4d0d746397271484b43405fe",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3109.json": "eee993a4817ee7ba1bd2a386f0f1549d734ae2c3358f2401b6b29be2c9b92e39",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3110.json": "a14dea150dbf570131f0161bcdbf290c1d91480b6363b7b3548f6d2f3cff1946",
+    "runs/task-v10-transfer/map-B/test/episodes/relay_healthy_phi30_s3111.json": "5d52226a3fc43257b8f231577e4d08da475fcf3e9b86ce449e2141bde8d51d28"
+  },
+  "validation_input_sha256": {
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi-30_s2300.json": "dd8066253dfed147e28857f47aecf2ae9dfe964add78fa45e38411a5fe0f17ea",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi-30_s2301.json": "ad3bb30d7a0bfc166c6d0de3bd146974bc7b893fcf5e163c3b65d7c26b6a9b9a",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi-30_s2302.json": "2b7c65a69c67049611c84c9e70f6d96d64171776c7ffe3a6f2603c6515a5e118",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi-30_s2303.json": "f116790e163d312863420dc76259526613dc69985602d424b9d4f2e905b68b64",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi-30_s2304.json": "aa16bff2d29ac510701b1c07c7a8087f62495366002de3051b9797b8056daaf1",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi-30_s2305.json": "cc092ae9a4e8a62f86467e732f0b9f5bcf3c179f0ae2f12bff4bd31432269b0b",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi-30_s2306.json": "2116b5a58b7176516f6767aa21bccead94bcf255a1d61f4e067f7c75ff551a4a",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi-30_s2307.json": "ad9ff38ae7a8aa33b3b07369d2122dd7e4e8235b6b71bb5735b3251be081290a",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi30_s2300.json": "638c1c9e725558f85c6d639b62de6a8720c59e7ad4eece17eb8e0f58d98dd7c0",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi30_s2301.json": "f63dfaa5ca76fbd9c09fd694d653b316b83de0c71c7362ec85740987ec7a63d6",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi30_s2302.json": "bc6d1e4cb3a1fb380a1eb1fd15d0f953bbf8b5fe2a217286ee53467f60840e96",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi30_s2303.json": "629eeb4bb9f84282e9d00f4395a98eac0fcbd8284805844fc900ff1e8592f4b9",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi30_s2304.json": "47b34c5580366aa471debeea3f3a8df0b057196ead7d43079c29fb36c9347c9a",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi30_s2305.json": "086aafb56f71792c08be3e81af7e2107b4033cea0c04a1da010109dbd88e6014",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi30_s2306.json": "d5f708a2bbceb639cc2101f9e16d3e3017ae4429a3b11535786ce540a9328f3b",
+    "runs/task-v10-transfer/map-B/validation/episodes/proportional_healthy_phi30_s2307.json": "c5df801ff25957f73366e29a8f376802c2dd7883f05ff06129fe479ed7e45796",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi-30_s2300.json": "6427ce8e3484b4c582e9a29ce4eae53812587672075be359ed0dfe80397406f1",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi-30_s2301.json": "78b4d31cc598bc45d315fe30db271f005e37e85c8ac73f98702b98d97bc9f02b",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi-30_s2302.json": "acca47551df6b503042bcd6ddcbce32b0cbcb3002b56a98bc21924009af392d1",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi-30_s2303.json": "84e767651788403a22d41891b660f0d073a6faaf42fc8f6977653d3b2b691e11",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi-30_s2304.json": "2305d9a3e6a8954270a26ef7d46e8a5653f0a6162c56f7a478d38a1476bb894e",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi-30_s2305.json": "cad209c96be846cb0a3509ecbf153d89a0f99445969eb3fa5bbf96584ccab7cf",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi-30_s2306.json": "54712d1d8b0c5373a7e650ae56728e7a3dd2784faeba04c647cbaec71e7c6f11",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi-30_s2307.json": "be9be9c499e644bf33e2722b3438041a3e3b411f0d8b657d8cc09c1b8535f9a0",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi30_s2300.json": "aacd187c2fdc02504bf4f70e3272476836de7cfb0e41371c55276b64b5e5fc9b",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi30_s2301.json": "42fca2c8a6cab07227fa2068c5fcfa5c901d11bc198a6cb5cebe0e8f387c7ad9",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi30_s2302.json": "b1d2ee9399efe3da0c073f2ebb52a6363d03ba5f6340a398c674652d41ac8c26",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi30_s2303.json": "77a50e8085e6d87852d189de1b3c54ead9246d27927ecf3abdeb3c11dcea76fd",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi30_s2304.json": "6c076847833bb33d82bf7ec20a7d187924965e90b3cfb388e17b243a1881a446",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi30_s2305.json": "762fd4c2212fcfc0767a58ab937edb8ab176ade28a3bece35ff05bd9ce7d5a5b",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi30_s2306.json": "e9053435cf420ceef188a2f0734f5e3c816398a31f46c1feb5a7e0cc420ce9ca",
+    "runs/task-v10-transfer/map-B/validation/episodes/relay_healthy_phi30_s2307.json": "08b3eb400ad9d4bb1452625a8529860c0328bf3512e6c9395496569c9849ae66"
+  },
+  "counts": [
+    {
+      "mode": "proportional",
+      "fault": "healthy",
+      "phi_deg": -30.0,
+      "n": 12,
+      "success": 12,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 12
+    },
+    {
+      "mode": "proportional",
+      "fault": "healthy",
+      "phi_deg": 30.0,
+      "n": 12,
+      "success": 12,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 12
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "n": 12,
+      "success": 12,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 12
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "n": 12,
+      "success": 12,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 12
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "n": 12,
+      "success": 11,
+      "losses": 1,
+      "gains": 0,
+      "healthy_at_risk": 12
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "n": 12,
+      "success": 12,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 12
+    },
+    {
+      "mode": "relay",
+      "fault": "healthy",
+      "phi_deg": -30.0,
+      "n": 12,
+      "success": 12,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 12
+    },
+    {
+      "mode": "relay",
+      "fault": "healthy",
+      "phi_deg": 30.0,
+      "n": 12,
+      "success": 12,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 12
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "phi_deg": -30.0,
+      "n": 12,
+      "success": 12,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 12
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "phi_deg": 30.0,
+      "n": 12,
+      "success": 12,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 12
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "phi_deg": -30.0,
+      "n": 12,
+      "success": 12,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 12
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "phi_deg": 30.0,
+      "n": 12,
+      "success": 12,
+      "losses": 0,
+      "gains": 0,
+      "healthy_at_risk": 12
+    }
+  ],
+  "cluster_effects": {
+    "proportional_F2_25_net_loss": {
+      "estimate": 0.0,
+      "low": 0.0,
+      "high": 0.0
+    },
+    "proportional_F2_50_net_loss": {
+      "estimate": 0.041666666666666664,
+      "low": 0.0,
+      "high": 0.125
+    },
+    "relay_F2_25_net_loss": {
+      "estimate": 0.0,
+      "low": 0.0,
+      "high": 0.0
+    },
+    "relay_F2_50_net_loss": {
+      "estimate": 0.0,
+      "low": 0.0,
+      "high": 0.0
+    },
+    "F2_25_interaction": {
+      "estimate": 0.0,
+      "low": 0.0,
+      "high": 0.0
+    },
+    "F2_50_interaction": {
+      "estimate": -0.041666666666666664,
+      "low": -0.125,
+      "high": 0.0
+    }
+  },
+  "interaction_raw_p": {
+    "F2_25": 1.0,
+    "F2_50": 1.0
+  },
+  "interaction_holm_within_map_p": {
+    "F2_25": 1.0,
+    "F2_50": 1.0
+  },
+  "interaction_holm_p": null,
+  "interaction_multiplicity_note": "Final Holm over four map/dose tests is computed jointly after both matrices; no per-map adjusted p is confirmatory.",
+  "experiment_version": "rf-transfer-v10.1",
+  "map_id": "B",
+  "activity_ratios": {
+    "proportional/F2_25": {
+      "stop_ratio": {
+        "median": 0.996919014084507,
+        "cluster_interval": [
+          0.9461522299126228,
+          1.0394482848571802
+        ]
+      },
+      "common_ratio": {
+        "median": 0.996919014084507,
+        "cluster_interval": [
+          0.9461522299126228,
+          1.0394482848571802
+        ]
+      },
+      "early_ratio": {
+        "median": 0.9802065300291757,
+        "cluster_interval": [
+          0.9405506148924305,
+          1.0047757283189545
+        ]
+      },
+      "full_ratio": {
+        "median": 0.996919014084507,
+        "cluster_interval": [
+          0.9461522299126228,
+          1.0394482848571802
+        ]
+      }
+    },
+    "proportional/F2_50": {
+      "stop_ratio": {
+        "median": 1.1393796538575207,
+        "cluster_interval": [
+          1.0777873811581677,
+          1.2337703650470604
+        ]
+      },
+      "common_ratio": {
+        "median": 1.1393796538575207,
+        "cluster_interval": [
+          1.0777873811581677,
+          1.2337703650470604
+        ]
+      },
+      "early_ratio": {
+        "median": 0.955754023596405,
+        "cluster_interval": [
+          0.9090909090909091,
+          1.0126121917853925
+        ]
+      },
+      "full_ratio": {
+        "median": 1.1393796538575207,
+        "cluster_interval": [
+          1.0777873811581677,
+          1.2337703650470604
+        ]
+      }
+    },
+    "relay/F2_25": {
+      "stop_ratio": {
+        "median": 0.9692975206611569,
+        "cluster_interval": [
+          0.9528459336877265,
+          1.0663864743528513
+        ]
+      },
+      "common_ratio": {
+        "median": 0.9692975206611569,
+        "cluster_interval": [
+          0.9528459336877265,
+          1.0663864743528513
+        ]
+      },
+      "early_ratio": {
+        "median": 0.9629848212892149,
+        "cluster_interval": [
+          0.946813075362771,
+          1.0534351145038168
+        ]
+      },
+      "full_ratio": {
+        "median": 0.9692975206611569,
+        "cluster_interval": [
+          0.9528459336877265,
+          1.0663864743528513
+        ]
+      }
+    },
+    "relay/F2_50": {
+      "stop_ratio": {
+        "median": 1.1131243827641768,
+        "cluster_interval": [
+          1.075419297528378,
+          1.1857279730013155
+        ]
+      },
+      "common_ratio": {
+        "median": 1.1131243827641768,
+        "cluster_interval": [
+          1.075419297528378,
+          1.1857279730013155
+        ]
+      },
+      "early_ratio": {
+        "median": 1.0394354032184743,
+        "cluster_interval": [
+          1.0201322389420884,
+          1.1540652201917592
+        ]
+      },
+      "full_ratio": {
+        "median": 1.1131243827641768,
+        "cluster_interval": [
+          1.075419297528378,
+          1.1857279730013155
+        ]
+      }
+    }
+  },
+  "horizon_sensitivity": [
+    {
+      "mode": "proportional",
+      "fault": "healthy",
+      "horizon_ms": 800,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "proportional",
+      "fault": "healthy",
+      "horizon_ms": 900,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "proportional",
+      "fault": "healthy",
+      "horizon_ms": 1000,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "horizon_ms": 800,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "horizon_ms": 900,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "horizon_ms": 1000,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "horizon_ms": 800,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "horizon_ms": 900,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "horizon_ms": 1000,
+      "n": 24,
+      "success": 23
+    },
+    {
+      "mode": "relay",
+      "fault": "healthy",
+      "horizon_ms": 800,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "relay",
+      "fault": "healthy",
+      "horizon_ms": 900,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "relay",
+      "fault": "healthy",
+      "horizon_ms": 1000,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "horizon_ms": 800,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "horizon_ms": 900,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "horizon_ms": 1000,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "horizon_ms": 800,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "horizon_ms": 900,
+      "n": 24,
+      "success": 24
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "horizon_ms": 1000,
+      "n": 24,
+      "success": 24
+    }
+  ],
+  "activity_profiles": [
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "window_ms": 200,
+      "n_pairs": 24,
+      "median_ratio": 0.8806588162856923,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "window_ms": 400,
+      "n_pairs": 24,
+      "median_ratio": 0.9802065300291757,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "window_ms": 600,
+      "n_pairs": 24,
+      "median_ratio": 0.9964633068081343,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "window_ms": 800,
+      "n_pairs": 24,
+      "median_ratio": 0.9964633068081343,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_25",
+      "window_ms": 1000,
+      "n_pairs": 24,
+      "median_ratio": 0.996919014084507,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "window_ms": 200,
+      "n_pairs": 24,
+      "median_ratio": 0.7505655397762976,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "window_ms": 400,
+      "n_pairs": 24,
+      "median_ratio": 0.955754023596405,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "window_ms": 600,
+      "n_pairs": 24,
+      "median_ratio": 1.136189138576779,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "window_ms": 800,
+      "n_pairs": 24,
+      "median_ratio": 1.1398712687278931,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "proportional",
+      "fault": "F2_50",
+      "window_ms": 1000,
+      "n_pairs": 24,
+      "median_ratio": 1.1393796538575207,
+      "faulty_contact_by_window": 1
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "window_ms": 200,
+      "n_pairs": 24,
+      "median_ratio": 0.8772228254312946,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "window_ms": 400,
+      "n_pairs": 24,
+      "median_ratio": 0.9629848212892149,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "window_ms": 600,
+      "n_pairs": 24,
+      "median_ratio": 0.970458152958153,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "window_ms": 800,
+      "n_pairs": 24,
+      "median_ratio": 0.970458152958153,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_25",
+      "window_ms": 1000,
+      "n_pairs": 24,
+      "median_ratio": 0.9692975206611569,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "window_ms": 200,
+      "n_pairs": 24,
+      "median_ratio": 0.7578420213976781,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "window_ms": 400,
+      "n_pairs": 24,
+      "median_ratio": 1.0394354032184743,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "window_ms": 600,
+      "n_pairs": 24,
+      "median_ratio": 1.1148215231740668,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "window_ms": 800,
+      "n_pairs": 24,
+      "median_ratio": 1.1155768101831303,
+      "faulty_contact_by_window": 0
+    },
+    {
+      "mode": "relay",
+      "fault": "F2_50",
+      "window_ms": 1000,
+      "n_pairs": 24,
+      "median_ratio": 1.1131243827641768,
+      "faulty_contact_by_window": 0
+    }
+  ],
+  "warning_scores": {
+    "transmission": {
+      "all": {
+        "tp": 0,
+        "fp": 24,
+        "tn": 119,
+        "fn": 1,
+        "sensitivity": 0.0,
+        "specificity": 0.8321678321678322,
+        "false_positive_rate": 0.16783216783216784,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          0.7676056338028169,
+          0.8958333333333334
+        ],
+        "false_positive_rate_interval": [
+          0.10416666666666667,
+          0.2323943661971831
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 10,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 1,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "faulty": {
+        "tp": 0,
+        "fp": 21,
+        "tn": 74,
+        "fn": 1,
+        "sensitivity": 0.0,
+        "specificity": 0.7789473684210526,
+        "false_positive_rate": 0.22105263157894736,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          0.6842105263157895,
+          0.8736842105263158
+        ],
+        "false_positive_rate_interval": [
+          0.12631578947368421,
+          0.3157894736842105
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 9,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 1,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 3,
+        "tn": 45,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 0.9375,
+        "false_positive_rate": 0.0625,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          0.875,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.125
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 3,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.22092219194555585
+      },
+      "strata": {
+        "proportional/-30": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 35,
+          "fn": 1,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "proportional/30": {
+          "tp": 0,
+          "fp": 2,
+          "tn": 34,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.9444444444444444,
+          "false_positive_rate": 0.05555555555555555,
+          "false_negative_rate": null
+        },
+        "relay/-30": {
+          "tp": 0,
+          "fp": 8,
+          "tn": 28,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.7777777777777778,
+          "false_positive_rate": 0.2222222222222222,
+          "false_negative_rate": null
+        },
+        "relay/30": {
+          "tp": 0,
+          "fp": 14,
+          "tn": 22,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.6111111111111112,
+          "false_positive_rate": 0.3888888888888889,
+          "false_negative_rate": null
+        }
+      }
+    },
+    "stop_count_upper": {
+      "all": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 143,
+        "fn": 1,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.22092219194555585,
+        "clusters_with_false_negative": 1,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "faulty": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 95,
+        "fn": 1,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.22092219194555585,
+        "clusters_with_false_negative": 1,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 48,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.22092219194555585,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.22092219194555585
+      },
+      "strata": {
+        "proportional/-30": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 35,
+          "fn": 1,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "proportional/30": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 36,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        },
+        "relay/-30": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 36,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        },
+        "relay/30": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 36,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        }
+      }
+    },
+    "equal_duration_upper": {
+      "all": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 143,
+        "fn": 1,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.22092219194555585,
+        "clusters_with_false_negative": 1,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "faulty": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 95,
+        "fn": 1,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.22092219194555585,
+        "clusters_with_false_negative": 1,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 48,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.22092219194555585,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.22092219194555585
+      },
+      "strata": {
+        "proportional/-30": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 35,
+          "fn": 1,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "proportional/30": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 36,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        },
+        "relay/-30": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 36,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        },
+        "relay/30": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 36,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        }
+      }
+    },
+    "equal_duration_two_sided": {
+      "all": {
+        "tp": 0,
+        "fp": 15,
+        "tn": 128,
+        "fn": 1,
+        "sensitivity": 0.0,
+        "specificity": 0.8951048951048951,
+        "false_positive_rate": 0.1048951048951049,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          0.8309859154929577,
+          0.9513888888888888
+        ],
+        "false_positive_rate_interval": [
+          0.04861111111111111,
+          0.16901408450704225
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 7,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 1,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "faulty": {
+        "tp": 0,
+        "fp": 15,
+        "tn": 80,
+        "fn": 1,
+        "sensitivity": 0.0,
+        "specificity": 0.8421052631578947,
+        "false_positive_rate": 0.15789473684210525,
+        "false_negative_rate": 1.0,
+        "sensitivity_interval": [
+          0.0,
+          0.0
+        ],
+        "specificity_interval": [
+          0.7446808510638298,
+          0.9270833333333334
+        ],
+        "false_positive_rate_interval": [
+          0.07291666666666667,
+          0.2553191489361702
+        ],
+        "false_negative_rate_interval": [
+          1.0,
+          1.0
+        ],
+        "clusters_with_false_positive": 7,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 1,
+        "zero_cluster_false_negative_one_sided_95_upper": null
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 48,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          1.0,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 0,
+        "zero_cluster_false_positive_one_sided_95_upper": 0.22092219194555585,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.22092219194555585
+      },
+      "strata": {
+        "proportional/-30": {
+          "tp": 0,
+          "fp": 4,
+          "tn": 31,
+          "fn": 1,
+          "sensitivity": 0.0,
+          "specificity": 0.8857142857142857,
+          "false_positive_rate": 0.11428571428571428,
+          "false_negative_rate": 1.0
+        },
+        "proportional/30": {
+          "tp": 0,
+          "fp": 1,
+          "tn": 35,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.9722222222222222,
+          "false_positive_rate": 0.027777777777777776,
+          "false_negative_rate": null
+        },
+        "relay/-30": {
+          "tp": 0,
+          "fp": 5,
+          "tn": 31,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.8611111111111112,
+          "false_positive_rate": 0.1388888888888889,
+          "false_negative_rate": null
+        },
+        "relay/30": {
+          "tp": 0,
+          "fp": 5,
+          "tn": 31,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.8611111111111112,
+          "false_positive_rate": 0.1388888888888889,
+          "false_negative_rate": null
+        }
+      }
+    },
+    "schedule_only": {
+      "all": {
+        "tp": 1,
+        "fp": 40,
+        "tn": 103,
+        "fn": 0,
+        "sensitivity": 1.0,
+        "specificity": 0.7202797202797203,
+        "false_positive_rate": 0.27972027972027974,
+        "false_negative_rate": 0.0,
+        "sensitivity_interval": [
+          1.0,
+          1.0
+        ],
+        "specificity_interval": [
+          0.6805555555555556,
+          0.7605633802816901
+        ],
+        "false_positive_rate_interval": [
+          0.23943661971830985,
+          0.3194444444444444
+        ],
+        "false_negative_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "clusters_with_false_positive": 12,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.22092219194555585
+      },
+      "faulty": {
+        "tp": 1,
+        "fp": 39,
+        "tn": 56,
+        "fn": 0,
+        "sensitivity": 1.0,
+        "specificity": 0.5894736842105263,
+        "false_positive_rate": 0.4105263157894737,
+        "false_negative_rate": 0.0,
+        "sensitivity_interval": [
+          1.0,
+          1.0
+        ],
+        "specificity_interval": [
+          0.5416666666666666,
+          0.6421052631578947
+        ],
+        "false_positive_rate_interval": [
+          0.35789473684210527,
+          0.4583333333333333
+        ],
+        "false_negative_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "clusters_with_false_positive": 12,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.22092219194555585
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 1,
+        "tn": 47,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 0.9791666666666666,
+        "false_positive_rate": 0.020833333333333332,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          0.9375,
+          1.0
+        ],
+        "false_positive_rate_interval": [
+          0.0,
+          0.0625
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 1,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.22092219194555585
+      },
+      "strata": {
+        "proportional/-30": {
+          "tp": 1,
+          "fp": 16,
+          "tn": 19,
+          "fn": 0,
+          "sensitivity": 1.0,
+          "specificity": 0.5428571428571428,
+          "false_positive_rate": 0.45714285714285713,
+          "false_negative_rate": 0.0
+        },
+        "proportional/30": {
+          "tp": 0,
+          "fp": 20,
+          "tn": 16,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.4444444444444444,
+          "false_positive_rate": 0.5555555555555556,
+          "false_negative_rate": null
+        },
+        "relay/-30": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 36,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        },
+        "relay/30": {
+          "tp": 0,
+          "fp": 4,
+          "tn": 32,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.8888888888888888,
+          "false_positive_rate": 0.1111111111111111,
+          "false_negative_rate": null
+        }
+      }
+    },
+    "deadline": {
+      "all": {
+        "tp": 1,
+        "fp": 33,
+        "tn": 110,
+        "fn": 0,
+        "sensitivity": 1.0,
+        "specificity": 0.7692307692307693,
+        "false_positive_rate": 0.23076923076923078,
+        "false_negative_rate": 0.0,
+        "sensitivity_interval": [
+          1.0,
+          1.0
+        ],
+        "specificity_interval": [
+          0.7291666666666666,
+          0.8142857142857143
+        ],
+        "false_positive_rate_interval": [
+          0.18571428571428572,
+          0.2708333333333333
+        ],
+        "false_negative_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "clusters_with_false_positive": 12,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.22092219194555585
+      },
+      "faulty": {
+        "tp": 1,
+        "fp": 28,
+        "tn": 67,
+        "fn": 0,
+        "sensitivity": 1.0,
+        "specificity": 0.7052631578947368,
+        "false_positive_rate": 0.29473684210526313,
+        "false_negative_rate": 0.0,
+        "sensitivity_interval": [
+          1.0,
+          1.0
+        ],
+        "specificity_interval": [
+          0.65625,
+          0.7578947368421053
+        ],
+        "false_positive_rate_interval": [
+          0.24210526315789474,
+          0.34375
+        ],
+        "false_negative_rate_interval": [
+          0.0,
+          0.0
+        ],
+        "clusters_with_false_positive": 12,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.22092219194555585
+      },
+      "healthy": {
+        "tp": 0,
+        "fp": 5,
+        "tn": 43,
+        "fn": 0,
+        "sensitivity": null,
+        "specificity": 0.8958333333333334,
+        "false_positive_rate": 0.10416666666666667,
+        "false_negative_rate": null,
+        "sensitivity_interval": null,
+        "specificity_interval": [
+          0.8333333333333334,
+          0.9583333333333334
+        ],
+        "false_positive_rate_interval": [
+          0.041666666666666664,
+          0.16666666666666666
+        ],
+        "false_negative_rate_interval": null,
+        "clusters_with_false_positive": 5,
+        "zero_cluster_false_positive_one_sided_95_upper": null,
+        "clusters_with_false_negative": 0,
+        "zero_cluster_false_negative_one_sided_95_upper": 0.22092219194555585
+      },
+      "strata": {
+        "proportional/-30": {
+          "tp": 1,
+          "fp": 19,
+          "tn": 16,
+          "fn": 0,
+          "sensitivity": 1.0,
+          "specificity": 0.45714285714285713,
+          "false_positive_rate": 0.5428571428571428,
+          "false_negative_rate": 0.0
+        },
+        "proportional/30": {
+          "tp": 0,
+          "fp": 10,
+          "tn": 26,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.7222222222222222,
+          "false_positive_rate": 0.2777777777777778,
+          "false_negative_rate": null
+        },
+        "relay/-30": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 36,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": null
+        },
+        "relay/30": {
+          "tp": 0,
+          "fp": 4,
+          "tn": 32,
+          "fn": 0,
+          "sensitivity": null,
+          "specificity": 0.8888888888888888,
+          "false_positive_rate": 0.1111111111111111,
+          "false_negative_rate": null
+        }
+      }
+    }
+  },
+  "thresholds": {
+    "window_ms": 400.0,
+    "command_lower_hz": 5.645833333333334,
+    "activity_reference": {
+      "proportional/-30": 1099.0,
+      "proportional/30": 740.0,
+      "relay/-30": 636.0,
+      "relay/30": 545.5
+    },
+    "activity_lower": 0.8260107423463616,
+    "activity_upper": 1.2106380083622224,
+    "activity_abs_log_upper": 0.19114750028378763,
+    "deadline_lower_m": 0.02974408847170008,
+    "schedule_lower_m": 0.026718980905826244,
+    "method": "healthy-validation-only 5th percentile of command/margin, 95th percentile absolute log activity ratio; same nominal 5% healthy flag rate. All healthy records retained, including failed tasks; no fault outcomes used. This is not guaranteed task FPR.",
+    "n_healthy": 32
+  },
+  "mask_checks": {
+    "3100/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3100/F2_25": {
+      "sha256": "7be19aeaefc280b82859afb73f83edc523ed1987c69a3d60269458acdbeef044",
+      "deleted_rows": 3772964
+    },
+    "3100/F2_50": {
+      "sha256": "d4274e99b9753eedaf5348dae2c8409a5b092a23b65814dc17aa25468b642b5b",
+      "deleted_rows": 7544247
+    },
+    "3101/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3101/F2_25": {
+      "sha256": "9c08f97663b0590033d3a1679d65cc9dc4d39c2b0e4f3389b9349ae391eae650",
+      "deleted_rows": 3773835
+    },
+    "3101/F2_50": {
+      "sha256": "d0430b72820dad7bdad4940f11942da919f9128d0d34ffc3ea81fea7d7202038",
+      "deleted_rows": 7547380
+    },
+    "3102/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3102/F2_25": {
+      "sha256": "5e4e12cdfe828b4c114f1f80f7f06819a79cecd46943c2cb282bb93017562e5a",
+      "deleted_rows": 3770545
+    },
+    "3102/F2_50": {
+      "sha256": "7b8f666a7128653af433df77697236f52dc6b3a38e46c26a8161aa7157a0f53b",
+      "deleted_rows": 7544293
+    },
+    "3103/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3103/F2_25": {
+      "sha256": "0196c55267ed9307087d4f535c6893318020720c2672251b2bedb0e407e73cb5",
+      "deleted_rows": 3773251
+    },
+    "3103/F2_50": {
+      "sha256": "ba6cc73d91774333f489cb6f8d92ddbb83f9e932b184685142e660023a2fcdbf",
+      "deleted_rows": 7547001
+    },
+    "3104/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3104/F2_25": {
+      "sha256": "2fd69df00984c3b42d6213c1bbe36a7918d1f2a89094e8ebc376afb8246c8f67",
+      "deleted_rows": 3773704
+    },
+    "3104/F2_50": {
+      "sha256": "321dc37e74e3974ffda4d9805252979042be1d7c296743491f8ba3192e3614ff",
+      "deleted_rows": 7547868
+    },
+    "3105/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3105/F2_25": {
+      "sha256": "4484b35cdcf44e5450dc9c088f47ec877452da646e27b95cb30a86dad1776122",
+      "deleted_rows": 3770732
+    },
+    "3105/F2_50": {
+      "sha256": "2b1dd1bec4074c86e273654e4c9d49ceced782a91b121409c288acefddd0abee",
+      "deleted_rows": 7543452
+    },
+    "3106/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3106/F2_25": {
+      "sha256": "3e00380611280b96ff8e06a51b550b709bb67bb5b1c60c060b0d55713c564dc2",
+      "deleted_rows": 3775531
+    },
+    "3106/F2_50": {
+      "sha256": "d6b48180f55ba9c350b42b9e0a0e27dce37f569ba1978189870dae7af972648c",
+      "deleted_rows": 7550941
+    },
+    "3107/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3107/F2_25": {
+      "sha256": "0326469240ee1ad2436fc4d00a89556fadec97d305cd7337cc099b628889a8c7",
+      "deleted_rows": 3773134
+    },
+    "3107/F2_50": {
+      "sha256": "66650c9aa80cbfe86aac7f2ea2e7565a1f89ce16afc8d7f27ed9c0d8604dfa6b",
+      "deleted_rows": 7546484
+    },
+    "3108/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3108/F2_25": {
+      "sha256": "ce3d82052b86ecf6b124d7c0e6ce399afa7f04d745ca80d7e4337b0cd0d070e3",
+      "deleted_rows": 3773142
+    },
+    "3108/F2_50": {
+      "sha256": "61ce1f52870d5c782b09f5b8beddd06e8a11c23dfa58daf1ffd4f4704d059f5b",
+      "deleted_rows": 7549598
+    },
+    "3109/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3109/F2_25": {
+      "sha256": "64c0b43d62bc016057ef2707a2f0710b14160be54fbe1aacfdcc6db162cc5d20",
+      "deleted_rows": 3771753
+    },
+    "3109/F2_50": {
+      "sha256": "ecbc7654d058346d7db47cc42b7b834f4d7c5bd2da90e31ecdaaee584b331132",
+      "deleted_rows": 7546329
+    },
+    "3110/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3110/F2_25": {
+      "sha256": "a571f9a1c8a8039f5f8f2d7e9ea4e7a4b1d0b4cb9366f6b2312b6372f2193cd3",
+      "deleted_rows": 3773000
+    },
+    "3110/F2_50": {
+      "sha256": "579d1616d316917f8c523176d87a2d28d51ab9dae3e979027fe4f3f3430aadb7",
+      "deleted_rows": 7544559
+    },
+    "3111/healthy": {
+      "sha256": "408b9f17ea991337aaeb56091758fa0e990747ed3b5dc22d06c6ba304b342417",
+      "deleted_rows": 0
+    },
+    "3111/F2_25": {
+      "sha256": "2e75c941e9502659b6c483b74cbf6199c4442e43844bca3ed85e29c70f0ccaf4",
+      "deleted_rows": 3774138
+    },
+    "3111/F2_50": {
+      "sha256": "05af4b83f5f84e82064e1b937b87a9c2c468b10f1e039e32b8a1d12e692815ae",
+      "deleted_rows": 7546561
+    }
+  },
+  "common_uniform_checks": {
+    "3100": true,
+    "3101": true,
+    "3102": true,
+    "3103": true,
+    "3104": true,
+    "3105": true,
+    "3106": true,
+    "3107": true,
+    "3108": true,
+    "3109": true,
+    "3110": true,
+    "3111": true
+  },
+  "burst_timing_verified": true,
+  "all_prefixes_pre_contact": true,
+  "minimum_collision_ms": 994.7829048348926,
+  "compute": {
+    "episode_wall_seconds_sum": 31707.797191000194,
+    "episode_wall_seconds_median": 179.4627465000376,
+    "note": "overlapping episode wall times are not CPU seconds or elapsed campaign time"
+  },
+  "analysis_seconds": 13.425350099918433,
+  "analysis_source_sha256": "d516397404d820966d336dd9e1c08a4796790728034419106db6217f8b341114"
+}

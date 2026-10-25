@@ -1,0 +1,9 @@
+mode,phi_deg,n,success,triggers
+proportional,-30.0,8,8,8
+proportional,30.0,8,8,8
+relay,-30.0,8,8,8
+relay,30.0,8,8,8
+disabled,-30.0,8,0,8
+disabled,30.0,8,0,8
+observe,-30.0,8,0,0
+observe,30.0,8,0,0

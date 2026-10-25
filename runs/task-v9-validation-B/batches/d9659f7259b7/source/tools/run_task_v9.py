@@ -1,0 +1,83 @@
+"""One non-overwriting worker. Configuration and source snapshot precede data."""
+import argparse
+import json
+import os
+from pathlib import Path
+import time
+import hashlib
+from run_provenance import prepare,sha256
+
+
+def main():
+    ap=argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--out',type=Path,required=True)
+    ap.add_argument('--seeds',required=True)
+    ap.add_argument('--phis',default='-30,30')
+    ap.add_argument('--modes',default='observe')
+    ap.add_argument('--faults',default='healthy')
+    ap.add_argument('--calibration',type=Path)
+    ap.add_argument('--horizon',type=float,default=1000.)
+    ap.add_argument('--role',choices=['development','validation','test'],default='development')
+    ap.add_argument('--registration',type=Path)
+    ap.add_argument('--resume',action='store_true')
+    args=ap.parse_args()
+    import task_v9
+    from encoder import load_sensory,build_rf_map
+    from run_openloop import get_dn_sides
+    from vision_v9 import PairedVisionSim
+    out=args.out.resolve(); os.environ['FLY_RUN_DIR']=str(out)
+    cal=json.loads(args.calibration.read_text()) if args.calibration else None
+    config=dict(protocol=task_v9.VERSION,seeds=[int(x) for x in args.seeds.split(',')],
+        phis=[float(x) for x in args.phis.split(',')],modes=args.modes.split(','),faults=args.faults.split(','),
+        horizon=args.horizon,calibration_sha256=sha256(args.calibration) if cal else None,
+        role=args.role,registration_sha256=sha256(args.registration) if args.registration else None,
+        entrypoint_sha256={p:sha256(Path(p)) for p in ['tools/run_v9.py','tools/run_task_v9.py','tools/calibrate_task_v9.py']},
+        stimulus_note='Common frame-indexed Bernoulli uniforms; independent deletion stream; hashes recorded. Seed traceability does not promise cross-platform bit identity.')
+    if config['modes']!=['observe'] and cal is None: raise ValueError('calibration required')
+    if len(set(config['seeds']))!=len(config['seeds']) or len(set(config['phis']))!=len(config['phis']):
+        raise ValueError('duplicate seed/bearing')
+    if args.horizon<=0 or args.horizon%20 or not all(__import__('math').isfinite(x) for x in config['phis']):
+        raise ValueError('invalid horizon or bearing')
+    if cal and set(config['seeds']) & set(cal['development_seeds']):
+        raise ValueError('calibration/evaluation seed overlap')
+    if args.role=='test':
+        if args.registration is None: raise ValueError('independent tests require prior registration')
+        reg=json.loads(args.registration.read_text())
+        if (not set(config['seeds'])<=set(reg['test_seeds']) or config['phis']!=reg['phis']
+            or config['modes']!=reg['modes'] or config['faults']!=reg['faults']
+            or config['horizon']!=reg['horizon_ms'] or config['calibration_sha256']!=reg['calibration_sha256']):
+            raise ValueError('test configuration differs from frozen registration')
+    key=hashlib.sha256(json.dumps(config,sort_keys=True).encode()).hexdigest()[:12]
+    batch=prepare(out/'batches'/key,config,args.resume)
+    for name,expected in config['entrypoint_sha256'].items():
+        path=batch/'source'/name
+        path.parent.mkdir(parents=True,exist_ok=True)
+        if not path.exists(): path.write_bytes(Path(name).read_bytes())
+        if sha256(path)!=expected: raise ValueError('runner snapshot mismatch')
+    (out/'episodes').mkdir(exist_ok=True)
+    rf=build_rf_map(load_sensory(),seed=20260201); cmd,_=get_dn_sides()
+    if cal and ([int(f) for f in cmd.flyid]!=cal['command_flyids'] or
+                cal['protocol']!=task_v9.VERSION):
+        raise ValueError('command mapping or calibration protocol differs')
+    t=time.perf_counter(); sim=PairedVisionSim(cmd.flyid); build=time.perf_counter()-t
+    sim.arm_stim_weights(rf.root_id.tolist())
+    for seed in config['seeds']:
+        for phi in config['phis']:
+            for mode in config['modes']:
+                for fault in config['faults']:
+                    path=out/'episodes'/f'{mode}_{fault}_phi{phi:g}_s{seed}.json'
+                    if path.exists():
+                        if args.resume:
+                            if json.loads(path.read_text())['run_manifest_sha256']!=sha256(batch/'run_manifest.json'):
+                                raise ValueError('incompatible resume')
+                            continue
+                        raise FileExistsError(path)
+                    t=time.perf_counter()
+                    res=task_v9.run(sim,rf,cmd,seed,phi,fault,mode,cal,horizon=args.horizon)
+                    res.update(wall_seconds=time.perf_counter()-t,build_seconds=build,
+                        run_manifest_sha256=sha256(batch/'run_manifest.json'),calibration_sha256=config['calibration_sha256'])
+                    with path.open('x') as f: json.dump(res,f)
+                    print(json.dumps({k:v for k,v in res.items() if k!='log'}),flush=True)
+
+
+if __name__=='__main__': main()

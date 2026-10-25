@@ -1,0 +1,18 @@
+{
+  "seeds": [
+    1100,
+    1101,
+    1102,
+    1103,
+    1104,
+    1105,
+    1106,
+    1107
+  ],
+  "calibration_sha256": "8ba27037d006ba6a8ae581c07170be6ac1ed0563873d4a3dc60af6d35d8e4ddf",
+  "role": "test",
+  "faults": "healthy,F2_25,F2_50",
+  "phis": "-45,45",
+  "workers": 3,
+  "registration_sha256": "6ccfc0412b95d59929bd5c3effff0af08fc7351552d2dd69873a99014ab5f11f"
+}

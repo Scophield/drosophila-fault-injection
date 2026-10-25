@@ -1,0 +1,285 @@
+{
+  "classification": "Post-hoc validation and uncertainty supplement; no tuning or new samples",
+  "tests": {
+    "analytic_contact_fixtures": 5,
+    "randomized_heading_bound_fixtures": 2000,
+    "synthetic_fixtures_are_not_experiment_records": true,
+    "prefix_only_forecasts_verified": 543,
+    "max_held_heading_first_contact_error_ms": 0.0,
+    "all_P_R_schedule_and_mask_matches": 288
+  },
+  "all_pair_timing": [
+    {
+      "RF": "RF-0",
+      "law": "proportional",
+      "fault": "F2_25",
+      "all_pairs": 48,
+      "seeds": 24,
+      "scheduled_B_delay_mean_ms": 25.833333333333332,
+      "delay_CI95": [
+        20.833333333333332,
+        30.416666666666668
+      ],
+      "delay_min_ms": 0.0,
+      "delay_max_ms": 100.0,
+      "row_status_counts": {
+        "at_risk": 48
+      }
+    },
+    {
+      "RF": "RF-0",
+      "law": "proportional",
+      "fault": "F2_50",
+      "all_pairs": 48,
+      "seeds": 24,
+      "scheduled_B_delay_mean_ms": 80.0,
+      "delay_CI95": [
+        69.58333333333333,
+        90.0
+      ],
+      "delay_min_ms": 0.0,
+      "delay_max_ms": 180.0,
+      "row_status_counts": {
+        "at_risk": 35,
+        "prior_contact": 2,
+        "ongoing_at_H": 7,
+        "zero_followup": 4
+      }
+    },
+    {
+      "RF": "RF-0",
+      "law": "relay",
+      "fault": "F2_25",
+      "all_pairs": 48,
+      "seeds": 24,
+      "scheduled_B_delay_mean_ms": 25.833333333333332,
+      "delay_CI95": [
+        21.25,
+        30.416666666666668
+      ],
+      "delay_min_ms": 0.0,
+      "delay_max_ms": 100.0,
+      "row_status_counts": {
+        "at_risk": 48
+      }
+    },
+    {
+      "RF": "RF-0",
+      "law": "relay",
+      "fault": "F2_50",
+      "all_pairs": 48,
+      "seeds": 24,
+      "scheduled_B_delay_mean_ms": 80.0,
+      "delay_CI95": [
+        70.0,
+        90.0
+      ],
+      "delay_min_ms": 0.0,
+      "delay_max_ms": 180.0,
+      "row_status_counts": {
+        "at_risk": 36,
+        "ongoing_at_H": 8,
+        "zero_followup": 4
+      }
+    },
+    {
+      "RF": "RF-A",
+      "law": "proportional",
+      "fault": "F2_25",
+      "all_pairs": 24,
+      "seeds": 12,
+      "scheduled_B_delay_mean_ms": 24.166666666666668,
+      "delay_CI95": [
+        16.666666666666668,
+        31.666666666666668
+      ],
+      "delay_min_ms": 0.0,
+      "delay_max_ms": 60.0,
+      "row_status_counts": {
+        "at_risk": 24
+      }
+    },
+    {
+      "RF": "RF-A",
+      "law": "proportional",
+      "fault": "F2_50",
+      "all_pairs": 24,
+      "seeds": 12,
+      "scheduled_B_delay_mean_ms": 57.5,
+      "delay_CI95": [
+        42.5,
+        77.5
+      ],
+      "delay_min_ms": 20.0,
+      "delay_max_ms": 240.0,
+      "row_status_counts": {
+        "at_risk": 22,
+        "prior_contact": 1,
+        "ongoing_at_H": 1
+      }
+    },
+    {
+      "RF": "RF-A",
+      "law": "relay",
+      "fault": "F2_25",
+      "all_pairs": 24,
+      "seeds": 12,
+      "scheduled_B_delay_mean_ms": 24.166666666666668,
+      "delay_CI95": [
+        16.666666666666668,
+        31.666666666666668
+      ],
+      "delay_min_ms": 0.0,
+      "delay_max_ms": 60.0,
+      "row_status_counts": {
+        "at_risk": 24
+      }
+    },
+    {
+      "RF": "RF-A",
+      "law": "relay",
+      "fault": "F2_50",
+      "all_pairs": 24,
+      "seeds": 12,
+      "scheduled_B_delay_mean_ms": 57.5,
+      "delay_CI95": [
+        43.333333333333336,
+        77.5
+      ],
+      "delay_min_ms": 20.0,
+      "delay_max_ms": 240.0,
+      "row_status_counts": {
+        "at_risk": 22,
+        "prior_contact": 1,
+        "ongoing_at_H": 1
+      }
+    },
+    {
+      "RF": "RF-B",
+      "law": "proportional",
+      "fault": "F2_25",
+      "all_pairs": 24,
+      "seeds": 12,
+      "scheduled_B_delay_mean_ms": 13.333333333333334,
+      "delay_CI95": [
+        6.666666666666667,
+        19.166666666666668
+      ],
+      "delay_min_ms": -20.0,
+      "delay_max_ms": 40.0,
+      "row_status_counts": {
+        "at_risk": 24
+      }
+    },
+    {
+      "RF": "RF-B",
+      "law": "proportional",
+      "fault": "F2_50",
+      "all_pairs": 24,
+      "seeds": 12,
+      "scheduled_B_delay_mean_ms": 57.5,
+      "delay_CI95": [
+        47.5,
+        67.5
+      ],
+      "delay_min_ms": 0.0,
+      "delay_max_ms": 120.0,
+      "row_status_counts": {
+        "at_risk": 22,
+        "zero_followup": 2
+      }
+    },
+    {
+      "RF": "RF-B",
+      "law": "relay",
+      "fault": "F2_25",
+      "all_pairs": 24,
+      "seeds": 12,
+      "scheduled_B_delay_mean_ms": 13.333333333333334,
+      "delay_CI95": [
+        6.666666666666667,
+        19.166666666666668
+      ],
+      "delay_min_ms": -20.0,
+      "delay_max_ms": 40.0,
+      "row_status_counts": {
+        "at_risk": 24
+      }
+    },
+    {
+      "RF": "RF-B",
+      "law": "relay",
+      "fault": "F2_50",
+      "all_pairs": 24,
+      "seeds": 12,
+      "scheduled_B_delay_mean_ms": 57.5,
+      "delay_CI95": [
+        48.333333333333336,
+        67.5
+      ],
+      "delay_min_ms": 0.0,
+      "delay_max_ms": 120.0,
+      "row_status_counts": {
+        "at_risk": 22,
+        "zero_followup": 2
+      }
+    }
+  ],
+  "zero_error_cluster_uncertainty": [
+    {
+      "RF": "RF-0",
+      "failure_seed_clusters": 10,
+      "safe_seed_clusters": 24,
+      "miss_cluster_probability_95_upper_if_zero_misses": 0.2588655508930523,
+      "false_alarm_cluster_probability_95_upper_if_zero_false_alarms": 0.11734615615494881
+    },
+    {
+      "RF": "RF-A",
+      "failure_seed_clusters": 1,
+      "safe_seed_clusters": 12,
+      "miss_cluster_probability_95_upper_if_zero_misses": 0.95,
+      "false_alarm_cluster_probability_95_upper_if_zero_false_alarms": 0.22092219194555585
+    },
+    {
+      "RF": "RF-B",
+      "failure_seed_clusters": 1,
+      "safe_seed_clusters": 12,
+      "miss_cluster_probability_95_upper_if_zero_misses": 0.95,
+      "false_alarm_cluster_probability_95_upper_if_zero_false_alarms": 0.22092219194555585
+    }
+  ],
+  "feedback": {
+    "risk_records": 543,
+    "decisions": 3114,
+    "silent_gated": 3114,
+    "zero_turn": 3114,
+    "all_trajectories_radially_separating_before_B": true,
+    "all_trajectories_radially_closing_after_B": true
+  },
+  "model_extrapolation": {
+    "classification": "Analytic model consequence, not an observed outcome or extended neural simulation",
+    "assumptions": "continued same pursuer, fixed walk speed after the single burst, unchanged collision radius and frame time",
+    "eventual_capture_bound_ms_min": 948.4240047521665,
+    "eventual_capture_bound_ms_max": 1169.6424044970283,
+    "observed_success_means": "no first contact through 1000 ms only"
+  },
+  "lead_time_ms": {
+    "min": 41.483236470861584,
+    "median": 82.6903213714022,
+    "max": 115.1166303767285
+  },
+  "input_result_sha256": "a27c9db3a2eb710e823e39c424bc0bf45ee22f6e28fe6456db9ccb2644d97d80",
+  "source_sha256": "d2268e6047c1afe6ad2eec3c1f07600c9c9bf86375bdd10f73fcdfc621056a51",
+  "calibration_sha256": {
+    "RF-0": "8ba27037d006ba6a8ae581c07170be6ac1ed0563873d4a3dc60af6d35d8e4ddf",
+    "RF-A": "34d6a57ea3a5fab4b22461e21bb500399610fc4a4e7ed64ec9f4456c928aa2c6",
+    "RF-B": "45efc7c4a6263fc97af002c0fc2d0f090eca7608aff6167b9826f6dc7bfaa9fe"
+  },
+  "baseline_commit": "69dfd2ed9e8fe597ae293398fe58a5d36fef2b7e",
+  "timing_bootstrap": {
+    "draws": 10000,
+    "seed": 20261026,
+    "unit": "whole seed within RF"
+  },
+  "utc": "2026-10-25T02:46:29.253117+00:00"
+}
