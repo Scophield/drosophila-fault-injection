@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "base_commit": "75313d7740491e7f7830e2fc554c21e1aaefe655",
+  "protected_existing_files": 2923,
+  "all_protected_hashes_unchanged": true,
+  "frozen_test_records": 576,
+  "frozen_validation_records": 96,
+  "tests_passed": 38,
+  "new_warning_tests": 18,
+  "existing_evidence_tests": 20,
+  "warning_labels_changed": 0,
+  "alternative_boundary_records": 19,
+  "regenerated_timing_csv_equal": {
+    "all-contact-pairs.csv": true,
+    "all-healthy-fault-pairs.csv": true,
+    "all-P-R-pairs.csv": true,
+    "all-records.csv": true,
+    "conditional-stage-associations.csv": true,
+    "dose-order-pairs.csv": true,
+    "earlier-trigger-counterexamples.csv": true,
+    "paired-delay-frequencies.csv": true,
+    "paired-delay-summary.csv": true,
+    "paired-delays-by-bearing.csv": true,
+    "post-B-gate-groups.csv": true,
+    "post-B-gate-records.csv": true,
+    "seed-average-delays.csv": true,
+    "stage-summary.csv": true,
+    "steering-helper-fixtures.csv": true
+  },
+  "thresholds": {
+    "RF-0": {
+      "numerator": 14,
+      "denominator": 1,
+      "quantile": "linear/type-7",
+      "probability": "1/20",
+      "comparison": "<",
+      "equality": "not flagged",
+      "window_start_ms": 100,
+      "window_end_ms": 400,
+      "cells": 8,
+      "healthy_validation_records": 32
+    },
+    "RF-A": {
+      "numerator": 291,
+      "denominator": 20,
+      "quantile": "linear/type-7",
+      "probability": "1/20",
+      "comparison": "<",
+      "equality": "not flagged",
+      "window_start_ms": 100,
+      "window_end_ms": 400,
+      "cells": 8,
+      "healthy_validation_records": 32
+    },
+    "RF-B": {
+      "numerator": 271,
+      "denominator": 20,
+      "quantile": "linear/type-7",
+      "probability": "1/20",
+      "comparison": "<",
+      "equality": "not flagged",
+      "window_start_ms": 100,
+      "window_end_ms": 400,
+      "cells": 8,
+      "healthy_validation_records": 32
+    }
+  },
+  "source_sha256": {
+    "tools/task_metrics_v9.py": "a23d88dedfeeab47e67968850e37da301c347cd20a099ebdbcd88c93d11ff547",
+    "tools/rescore_warnings_v10_1.py": "6887bd896a22214f366c0562e1ae054bb432d5e0b0eaf1cbbe4eb3196354ff46",
+    "tools/analyze_postburst_stage_v10_1.py": "20e85c3c04538e931417d6604119aa78cf9b1dafbc7b7f740c262c4ab238fa7c",
+    "tools/plot_warning_counts_v10_1.py": "15e7f62aaa9dd210ed958cf5525f55267c402b3c858fb4525c3fbf8a56277c85",
+    "tests/test_warning_counts_v10_1.py": "f6846a21431d83fa2dc749ec14ff0043d875f7fc0c26985ff8d12adf9690fe9d",
+    "tools/check_calibration_v10.py": "732dd2b6c05fdd65d7ea0c51718cd962dc8706f58a3768df8706d79d5607dcb2"
+  }
+}

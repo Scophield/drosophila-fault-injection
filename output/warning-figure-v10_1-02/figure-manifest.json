@@ -1,0 +1,57 @@
+{
+  "input_file": "output/warning-counts-v10_1-02/results.json",
+  "input_sha256": "164609f86cb48d95363044d0a4fdd841359fbfa4c2c59c92d4cd8cfa110a9daa",
+  "script_sha256": "15e7f62aaa9dd210ed958cf5525f55267c402b3c858fb4525c3fbf8a56277c85",
+  "figure_contract_sha256": "d0543e389a657670eea39edc76aa62caa272f70e96efa038031c07a7165d7c1a",
+  "figure": "v10_1_warning_count",
+  "outputs": {
+    "v10_1_warning_count.pdf": {
+      "bytes": 41445,
+      "sha256": "bcdb806341f12c16a52b0010747b744b7d97da1b7e27485f4e960423d0ec0dfd"
+    },
+    "v10_1_warning_count.png": {
+      "bytes": 121086,
+      "sha256": "dd337d3fd3e0793f3165649f56cee5186cc04cc78598e18d7ac099e88b71c301"
+    },
+    "v10_1_warning_count.svg": {
+      "bytes": 17367,
+      "sha256": "6315992cab0fe52ed3e8e7bb321b6a98fda84ff771bfa5f4fc4c7f3bcd9a5b8f"
+    },
+    "v10_1_warning_count_source.csv": {
+      "bytes": 1449,
+      "sha256": "02775c902f072912a6eb2622f5088110991448ee9c969f67313867e4730d26ff"
+    }
+  },
+  "size_inches": [
+    3.5,
+    2.55
+  ],
+  "png_dpi": 600,
+  "minimum_font_pt": 7.5,
+  "font_family": "Arial",
+  "pdf_fonttype": 42,
+  "svg_text": "editable",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2"
+  },
+  "total_records": 576,
+  "independent_seed_clusters": {
+    "RF-0": 24,
+    "RF-A": 12,
+    "RF-B": 12
+  },
+  "positive_class_seed_clusters": {
+    "RF-0": 12,
+    "RF-A": 2,
+    "RF-B": 1
+  },
+  "intervals": "Pointwise 95% whole-seed percentile bootstrap CIs from the executed input analysis",
+  "scientific_boundary": "Sparse class-conditional empirical intervals do not establish zero population error. Exact-state forecast is not neural-only. These are frozen operating points, not matched-information ROC comparisons.",
+  "original_records_modified": false,
+  "thresholds_selected": false,
+  "neural_simulation": false,
+  "fig1_to_3_modified": false,
+  "blender_modified": false
+}

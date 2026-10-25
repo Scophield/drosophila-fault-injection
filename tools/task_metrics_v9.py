@@ -1,9 +1,90 @@
 """Fixed-prefix metrics and seed-cluster statistics; no access to future labels."""
 from collections import Counter
+from fractions import Fraction
+import math
 import numpy as np
 from task_v9 import motion
 
 WINDOW=400.
+COMMAND_CELLS=8
+CUE_MS=100
+FRAME_MS=20
+
+
+def command_count(record,t=WINDOW):
+    """Recover integer counts losslessly from the saved 20-ms rate lattice.
+
+    Native records store counts/(20/1000), not spike timestamps. Reject any
+    off-lattice value rather than silently rounding it. Frame-end samples in
+    (100,t] account for the [100,t) stimulus window.
+    """
+    if not math.isfinite(t) or t<=CUE_MS or (t-CUE_MS)%FRAME_MS:
+        raise ValueError('Command window must contain complete post-cue 20-ms bins')
+    rows=[q for q in record['log'] if CUE_MS<q['t_end_ms']<=t]
+    expected=list(range(CUE_MS+FRAME_MS,int(t)+1,FRAME_MS))
+    if [q['t_end_ms'] for q in rows]!=expected:
+        raise ValueError('Missing, duplicated or unordered command bins')
+    count=0
+    for q in rows:
+        if q.get('t_ms',q['t_end_ms']-FRAME_MS)!=q['t_end_ms']-FRAME_MS:
+            raise ValueError('Wrong native command-bin duration')
+        if len(q['cmd_rates'])!=COMMAND_CELLS:
+            raise ValueError('Expected eight descending-cell rates')
+        for value in q['cmd_rates']:
+            if not math.isfinite(value) or value<0 or value%50!=0:
+                raise ValueError('Command rate is not an exact nonnegative 50-Hz lattice value')
+            count+=int(value/50)
+    return count
+
+
+def linear_count_quantile(counts,probability=Fraction(1,20)):
+    """Exact type-7/linear quantile: h=(n-1)p, without a float boundary."""
+    values=sorted(counts)
+    if not values or any(type(v) is not int or v<0 for v in values):
+        raise ValueError('Quantile requires nonnegative integer counts')
+    p=Fraction(probability)
+    if not 0<=p<=1:
+        raise ValueError('Invalid quantile probability')
+    h=(len(values)-1)*p;k=h.numerator//h.denominator
+    return Fraction(values[k]) if k==len(values)-1 else Fraction(values[k])+(h-k)*(values[k+1]-values[k])
+
+
+def count_cutoff(records):
+    healthy=[r for r in records if r['fault']=='healthy']
+    counts=[command_count(r) for r in healthy]
+    q=linear_count_quantile(counts)
+    return dict(numerator=q.numerator,denominator=q.denominator,
+                quantile='linear/type-7',probability='1/20',comparison='<',
+                equality='not flagged',window_start_ms=CUE_MS,window_end_ms=400,
+                cells=COMMAND_CELLS,healthy_validation_records=len(healthy))
+
+
+def command_alert(count,cutoff):
+    if type(count) is not int or count<0:
+        raise ValueError('Expected a nonnegative integer command count')
+    if cutoff.get('comparison')!='<' or cutoff.get('equality')!='not flagged':
+        raise ValueError('Unsupported command boundary semantics')
+    numerator,denominator=cutoff['numerator'],cutoff['denominator']
+    if type(numerator) is not int or type(denominator) is not int or numerator<0 or denominator<=0:
+        raise ValueError('Invalid exact count cutoff')
+    return count*denominator<numerator
+
+
+def bind_count_cutoff(thresholds,validation_records):
+    """Enrich a frozen threshold record using only its healthy validation set.
+
+    Preserve its original Hz field and every other frozen field. Its rounded
+    Hz value must agree with the exact validation quantile to four binary64
+    ulps. This is a compatibility check, never a test-outcome-selected cutoff.
+    """
+    cutoff=count_cutoff(validation_records)
+    exact_hz=float(Fraction(cutoff['numerator'],cutoff['denominator'])/Fraction(12,5))
+    frozen_hz=thresholds['command_lower_hz']
+    if not math.isfinite(frozen_hz) or frozen_hz<0:
+        raise ValueError('Frozen Hz cutoff must be finite and nonnegative')
+    if abs(frozen_hz-exact_hz)>4*max(math.ulp(frozen_hz),math.ulp(exact_hz)):
+        raise ValueError('Frozen Hz cutoff disagrees with validation count quantile')
+    return {**thresholds,'command_count_cutoff':cutoff}
 
 
 def reference_key(record,references):
@@ -20,10 +101,10 @@ def prefix(record,t=WINDOW):
 
 
 def features(record,t=WINDOW):
-    rows=[q for q in record['log'] if 100<q['t_end_ms']<=t]
     q=prefix(record,t)
-    command=sum(sum(r['cmd_rates'])*.02 for r in rows)/(8*((t-100)/1000))
-    return dict(command_hz=command,activity=q['n_total'],
+    count=command_count(record,t)
+    command=float(Fraction(count)*1000/(COMMAND_CELLS*Fraction(t-CUE_MS)))
+    return dict(command_hz=command,command_count=count,activity=q['n_total'],
                 deadline=forecast_margin(q,record['burst_delay_ms'],record['horizon_ms']),
                 schedule_only=forecast_margin({**q,'next_omega':0.},record['burst_delay_ms'],record['horizon_ms']))
 
@@ -61,7 +142,9 @@ def calibration_thresholds(records):
             references[f'{mode}/{phi:g}']=float(np.median(values))
     ratios=[f['activity']/references[f"{r['mode']}/{r['phi_deg']:g}"] for r,f in zip(healthy,fs)]
     radius=float(np.quantile(np.abs(np.log(ratios)),.95))
-    return dict(window_ms=WINDOW,command_lower_hz=float(np.quantile([f['command_hz'] for f in fs],.05)),
+    cutoff=count_cutoff(healthy)
+    return dict(window_ms=WINDOW,command_lower_hz=float(Fraction(cutoff['numerator'],cutoff['denominator'])/Fraction(12,5)),
+        command_count_cutoff=cutoff,
         activity_reference=references,activity_lower=float(np.exp(-radius)),
         activity_upper=float(np.exp(radius)),activity_abs_log_upper=radius,
         deadline_lower_m=float(np.quantile([f['deadline'] for f in fs],.05)),
@@ -74,7 +157,9 @@ def flags(record,thresholds,healthy_pair=None):
     f=features(record)
     reference=thresholds['activity_reference'][reference_key(record,thresholds['activity_reference'])]
     ratio=f['activity']/reference
-    result=dict(transmission=f['command_hz']<thresholds['command_lower_hz'],
+    if 'command_count_cutoff' not in thresholds:
+        raise ValueError('Bind the frozen healthy-validation count cutoff before current warning scoring; historical float analyses require their frozen source snapshot')
+    result=dict(transmission=command_alert(f['command_count'],thresholds['command_count_cutoff']),
         equal_duration_upper=ratio>2,
         equal_duration_two_sided=ratio<thresholds['activity_lower'] or ratio>thresholds['activity_upper'],
         deadline=f['deadline']<thresholds['deadline_lower_m'])

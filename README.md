@@ -11,6 +11,8 @@
 - **Explicit task horizons:** first-contact trajectories quantify task preservation at both 900 and 1000 ms on the same paired records.
 - **Executable evidence checks:** a common contract and native replay bind pairing, actuation and endpoints; a delayed-tank adapter demonstrates reuse across two plant schemas.
 - **Reproducible publication:** complete active LaTeX, four approved figures, paired analysis tables, source hashes, frozen configurations and saved records are included.
+- **Exact warning semantics:** validation-derived integer-count cutoffs remove floating-order boundary ambiguity; all 576 historical warning labels and their whole-seed intervals are preserved. [Count-domain protocol](docs/WARNING_COUNT_PROTOCOL_V10_1.md).
+- **Stage-resolved evidence:** 543 contact-free burst completions with follow-up expose an observed zero-command walking regime, distinguished from ongoing, prior-contact and zero-follow-up cases.
 
 | 50% deletion: contact-free tasks (P, R) | 900 ms | 1000 ms |
 |---|---|---|
@@ -23,7 +25,7 @@ These endpoints use the same 24/12/12 seed clusters. Timing analysis is retrospe
 ## Use this version
 
 ```text
-git clone --single-branch --branch artifact/iscas2027-v10.1-timing https://github.com/Scophield/drosophila-fault-injection.git drosophila-v10.1
+git clone --single-branch --branch artifact/iscas2027-v10.1-count-warning https://github.com/Scophield/drosophila-fault-injection.git drosophila-v10.1
 cd drosophila-v10.1
 git rev-parse HEAD
 python tools/verify_v10_1.py

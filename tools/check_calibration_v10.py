@@ -7,10 +7,11 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import sys
 import numpy as np
-from task_metrics_v9 import calibration_thresholds
-
 ROOT = Path(__file__).resolve().parents[1]
+sys.path[:0]=[str(ROOT/'tools'),str(ROOT/'sim_vision')]
+from task_metrics_v9 import calibration_thresholds,bind_count_cutoff
 
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -49,12 +50,18 @@ def main():
         coef=np.linalg.lstsq(np.vstack([A,penalty]),np.r_[target,np.zeros(9)],rcond=None)[0]
         weights=coef[:8]/scale;intercept=coef[8]-mean@weights
         trigger=max(2.5,np.percentile([np.mean([q['cmd_hz'] for q in r['log'] if 200<=q['t_end_ms']<=300]) for r in development],10)/2)
+        computed=calibration_thresholds(validation)
+        bound=bind_count_cutoff(reg['thresholds'],validation)
+        # Keep frozen rounded-Hz metadata intact; compare the count boundary
+        # explicitly and require exact reproduction of every other cutoff.
+        cutoff_match=all(computed[k]==v for k,v in reg['thresholds'].items() if k!='command_lower_hz')
+        cutoff_match=cutoff_match and computed['command_count_cutoff']==bound['command_count_cutoff']
         checks=dict(
             ridge_weights=np.allclose(weights,cal['direction_weights'],rtol=0,atol=1e-10),
             ridge_intercept=bool(np.isclose(intercept,cal['direction_intercept'],rtol=0,atol=1e-10)),
             trigger=bool(np.isclose(trigger,cal['trigger_hz'],rtol=0,atol=1e-12)),
             fixed_control=cal['turn_gain_deg_s']==600 and cal['gate_silent'] is True,
-            validation_cutoffs=calibration_thresholds(validation)==reg['thresholds'],
+            validation_cutoffs=cutoff_match,
             calibration_binding=sha(base/'calibration.json')==reg['calibration_sha256'],
             design_binding=sha(a.design)==reg['design_sha256'],
             validation_seed_set={r['seed'] for r in validation}==cohorts[1],
@@ -62,12 +69,12 @@ def main():
         )
         checks={k:bool(v) for k,v in checks.items()}
         errors.extend(tag+'/'+k for k,v in checks.items() if not v)
-        results.append(dict(map=tag,checks=checks,development_records=20,validation_records=32,
+        results.append(dict(map=tag,checks=checks,command_count_cutoff=bound['command_count_cutoff'],development_records=20,validation_records=32,
                             coefficient_max_abs_error=float(np.max(np.abs(weights-cal['direction_weights']))),
                             test_episode_files_read=0))
     report=dict(passed=not errors,errors=errors,maps=results,input_sha256=inputs,
                 source_sha256=sha(Path(__file__)),
-                scope='Development-only augmented least-squares reconstruction independent of normal-equation fitting; validation cutoff provenance uses the frozen feature helper. No test outcomes read, no refitting of deployed parameters, no external timestamp or execution-authentication claim.')
+                scope='Development-only augmented least-squares reconstruction independent of normal-equation fitting; validation cutoffs use exact command counts with frozen rounded-Hz compatibility checks. No test outcomes read, no refitting of deployed parameters, no external timestamp or execution-authentication claim.')
     a.out.mkdir(parents=True,exist_ok=False)
     (a.out/'check.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k!='input_sha256'},indent=2))
