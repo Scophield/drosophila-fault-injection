@@ -1,0 +1,259 @@
+{
+  "scientific_commit": "75313d7740491e7f7830e2fc554c21e1aaefe655",
+  "example_manifest_sha256": "cd7f3968d64106de21ec934bb7d934f3bb19a9ef895adbc9889453640b345e2f",
+  "renderer_sha256": "d298701dc520ce90a045f733a10197938988e85af96fb908631818a78dc362fe",
+  "runtime": {
+    "python": "3.12.14",
+    "pillow": "13.0.0"
+  },
+  "coordinate_bounds_m": [
+    -0.1,
+    0.25,
+    -0.15000000000000002,
+    0.25
+  ],
+  "illustrative_examples": true,
+  "neural_simulation": false,
+  "clips": {
+    "demo-a-delay": {
+      "duration_s": 17.0,
+      "frames": 408,
+      "fps": 24,
+      "width": 1280,
+      "height": 720,
+      "codec": "H.264",
+      "pixel_format": "yuv420p",
+      "audio": false,
+      "simulation_knots": [
+        [
+          0,
+          0
+        ],
+        [
+          1.2,
+          0
+        ],
+        [
+          5.5,
+          220.0
+        ],
+        [
+          6.3,
+          220.0
+        ],
+        [
+          14.2,
+          1000
+        ],
+        [
+          17,
+          1000
+        ]
+      ],
+      "condition_ids": [
+        "RF-0-s1012-b-30-proportional-healthy",
+        "RF-0-s1012-b-30-proportional-F2_25",
+        "RF-0-s1012-b-30-proportional-F2_50"
+      ],
+      "gif": {
+        "width": 800,
+        "fps": 8,
+        "colors": 112,
+        "bytes": 946182,
+        "loop": 0
+      }
+    },
+    "demo-b-control": {
+      "duration_s": 17.0,
+      "frames": 408,
+      "fps": 24,
+      "width": 1280,
+      "height": 720,
+      "codec": "H.264",
+      "pixel_format": "yuv420p",
+      "audio": false,
+      "simulation_knots": [
+        [
+          0,
+          0
+        ],
+        [
+          1.2,
+          0
+        ],
+        [
+          4.8,
+          200.0
+        ],
+        [
+          5.6,
+          200.0
+        ],
+        [
+          13.2,
+          964.1195680265521
+        ],
+        [
+          14.2,
+          964.1195680265521
+        ],
+        [
+          16,
+          1000
+        ],
+        [
+          17,
+          1000
+        ]
+      ],
+      "condition_ids": [
+        "RF-0-s1010-b-30-proportional-F2_50",
+        "RF-0-s1010-b-30-relay-F2_50"
+      ],
+      "gif": {
+        "width": 800,
+        "fps": 8,
+        "colors": 112,
+        "bytes": 712996,
+        "loop": 0
+      }
+    },
+    "demo-c-horizon": {
+      "duration_s": 18.0,
+      "frames": 432,
+      "fps": 24,
+      "width": 1280,
+      "height": 720,
+      "codec": "H.264",
+      "pixel_format": "yuv420p",
+      "audio": false,
+      "simulation_knots": [
+        [
+          0,
+          0
+        ],
+        [
+          1.2,
+          0
+        ],
+        [
+          9.4,
+          900
+        ],
+        [
+          11.2,
+          900
+        ],
+        [
+          14.6,
+          964.1195680265521
+        ],
+        [
+          15.6,
+          964.1195680265521
+        ],
+        [
+          17,
+          1000
+        ],
+        [
+          18,
+          1000
+        ]
+      ],
+      "condition_ids": [
+        "RF-0-s1010-b-30-proportional-F2_50"
+      ],
+      "gif": {
+        "width": 800,
+        "fps": 8,
+        "colors": 112,
+        "bytes": 560521,
+        "loop": 0
+      }
+    },
+    "overview": {
+      "duration_s": 26.0,
+      "frames": 624,
+      "fps": 24,
+      "width": 1280,
+      "height": 720,
+      "source_edits": [
+        {
+          "clip": "demo-a-delay",
+          "start_wall_s": 3.0,
+          "end_wall_s": 12.0
+        },
+        {
+          "clip": "demo-b-control",
+          "start_wall_s": 8.0,
+          "end_wall_s": 17.0
+        },
+        {
+          "clip": "demo-c-horizon",
+          "start_wall_s": 10.0,
+          "end_wall_s": 18.0
+        }
+      ],
+      "no_new_experiment": true,
+      "gif": {
+        "width": 800,
+        "fps": 8,
+        "colors": 112,
+        "bytes": 1406073,
+        "loop": 0
+      }
+    }
+  },
+  "encoder_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "files": {
+    "demo-a-delay.gif": {
+      "bytes": 946182,
+      "sha256": "39c818fbbb8084a41854a2add62cff037b177ca279b2c31cd4cec7a0d6b89cb2"
+    },
+    "demo-a-delay.mp4": {
+      "bytes": 568720,
+      "sha256": "639d62e469e9b9f0405a17ebbc0f781a50422aaf7f0270049fd8994d15c0476f"
+    },
+    "demo-a-delay.png": {
+      "bytes": 159913,
+      "sha256": "c87f6c6956434b4853b13ce2cc3d9e9bef1f6825fd28d2614162d437f1383d4b"
+    },
+    "demo-b-control.gif": {
+      "bytes": 712996,
+      "sha256": "87a3157ff13565addcd4cfa3e629ff53e8c6e2293a6c301cb393117238788ded"
+    },
+    "demo-b-control.mp4": {
+      "bytes": 435305,
+      "sha256": "104e263b3d5592e7b9c189ff2b97a9f587c75d8cbfd62a772d63e435d9ac6ed7"
+    },
+    "demo-b-control.png": {
+      "bytes": 173468,
+      "sha256": "cd330a8cdf903a74f5aec568ffe45e09953c0936db88a2fe7878892ca35c40fc"
+    },
+    "demo-c-horizon.gif": {
+      "bytes": 560521,
+      "sha256": "697c0c361f0c08336237e11297dbb0dfc766aa46d43a410bc9e6a8e1f2b1abda"
+    },
+    "demo-c-horizon.mp4": {
+      "bytes": 393502,
+      "sha256": "e495a89f7a8d1bfd0b7249fccfa51a68869b415d7d710635718d8ae17766bf5c"
+    },
+    "demo-c-horizon.png": {
+      "bytes": 185378,
+      "sha256": "7f442768f64dee2c4657360a402d9af3bab41a0df0e8f8bd7b4943ca534cc3e8"
+    },
+    "overview.gif": {
+      "bytes": 1406073,
+      "sha256": "3687a1603e0c9f556d7dee8791a204038099d1cd39bb00093b38dd913fdbd187"
+    },
+    "overview.mp4": {
+      "bytes": 797354,
+      "sha256": "356b0b377fdab458dce02c4b4ad4bdb062ab9e9dbaa662de143d7b767c782404"
+    },
+    "overview.png": {
+      "bytes": 315098,
+      "sha256": "f392d0ef5b312f4a3a4942f6472f32f80bb2920ccaa94616f559ce6a4248f286"
+    }
+  }
+}

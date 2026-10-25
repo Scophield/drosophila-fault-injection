@@ -1,0 +1,4 @@
+/README.md text eol=lf
+/media/paper-v10.1/** -text
+/docs/homepage-animation/** -text
+/tools/homepage/*.py -text

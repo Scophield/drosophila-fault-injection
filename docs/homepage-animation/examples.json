@@ -1,0 +1,749 @@
+{
+  "source_commit": "75313d7740491e7f7830e2fc554c21e1aaefe655",
+  "source_branch": "artifact/iscas2027-v10.1-timing",
+  "main_baseline": "8463020054538e8b9989c0ee8848047d833c4a0c",
+  "selection_rules": {
+    "A": "RF-0 proportional: minimize squared Euclidean distance of (25%-healthy,50%-healthy) trigger delays to the complete 48-context mean vector; tie ascending seed, then bearing; no outcome-based filtering.",
+    "B": "RF-0 50% deletion: among P-contact/R-contact-free discordant pairs, minimize distance to the median P first-contact time of those pairs; tie ascending seed, then bearing.",
+    "C": "Reuse B proportional record when 900 < first contact < 1000 ms; otherwise choose the median-contact example among RF-0 proportional 50% late-contact records, with seed/bearing tie-break."
+  },
+  "example_scope": "Illustrative examples selected retrospectively for explanation, not estimates of population incidence or isolated mechanisms.",
+  "A": {
+    "records": [
+      {
+        "id": "RF-0-s1012-b-30-proportional-healthy",
+        "RF": "RF-0",
+        "seed": 1012,
+        "bearing_deg": -30.0,
+        "law": "proportional",
+        "condition": "healthy",
+        "source": "runs/task-v9-test/episodes/proportional_healthy_phi-30_s1012.json",
+        "source_sha256": "877a352ff4fa38e57c323a0d95a06ed248ab5eed8224960ff243222d5771c586",
+        "trigger_ms": 140.0,
+        "onset_ms": 390.0,
+        "B_ms": 840.0,
+        "contact_ms": null,
+        "contact_free_at_900_ms": true,
+        "contact_free_through_1000_ms": true,
+        "illustrative_example": true,
+        "replay_file": "data/RF-0-s1012-b-30-proportional-healthy.json",
+        "replay_sha256": "d14c83f456cc84d8b436a05c3be22e4db94368739516ae77df819b56023926cb"
+      },
+      {
+        "id": "RF-0-s1012-b-30-proportional-F2_25",
+        "RF": "RF-0",
+        "seed": 1012,
+        "bearing_deg": -30.0,
+        "law": "proportional",
+        "condition": "F2_25",
+        "source": "runs/task-v9-test/episodes/proportional_F2_25_phi-30_s1012.json",
+        "source_sha256": "2a78b6a552c65cd93f0ff3576bd0ab148530c472b03e2b4e7cadf5cb7d1ad256",
+        "trigger_ms": 160.0,
+        "onset_ms": 410.0,
+        "B_ms": 860.0,
+        "contact_ms": null,
+        "contact_free_at_900_ms": true,
+        "contact_free_through_1000_ms": true,
+        "illustrative_example": true,
+        "replay_file": "data/RF-0-s1012-b-30-proportional-F2_25.json",
+        "replay_sha256": "2c7a1d0846c4dfabf9b6fe21cdb97f9964265301a50a6d5344341d6635663ad3"
+      },
+      {
+        "id": "RF-0-s1012-b-30-proportional-F2_50",
+        "RF": "RF-0",
+        "seed": 1012,
+        "bearing_deg": -30.0,
+        "law": "proportional",
+        "condition": "F2_50",
+        "source": "runs/task-v9-test/episodes/proportional_F2_50_phi-30_s1012.json",
+        "source_sha256": "bd3099b146218e304590b9b5cba0831c471c59adc8dd24998eb38f497274dbee",
+        "trigger_ms": 220.0,
+        "onset_ms": 470.0,
+        "B_ms": 920.0,
+        "contact_ms": 961.4832364708616,
+        "contact_free_at_900_ms": true,
+        "contact_free_through_1000_ms": false,
+        "illustrative_example": true,
+        "replay_file": "data/RF-0-s1012-b-30-proportional-F2_50.json",
+        "replay_sha256": "88fc3e4636e33725205e37fbcce7808077878146e85f8b399e4a161c6c1e70e7"
+      }
+    ],
+    "target_delay_vector_ms": [
+      25.833333333333332,
+      80.0
+    ],
+    "selected_score": 34.027777777777764,
+    "candidates": [
+      {
+        "seed": 1000,
+        "bearing_deg": -30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 20.0,
+        "squared_distance_to_mean_ms2": 3634.027777777778
+      },
+      {
+        "seed": 1000,
+        "bearing_deg": 30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 160.0,
+        "squared_distance_to_mean_ms2": 6600.694444444444
+      },
+      {
+        "seed": 1001,
+        "bearing_deg": -30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 600.6944444444445
+      },
+      {
+        "seed": 1001,
+        "bearing_deg": 30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 140.0,
+        "squared_distance_to_mean_ms2": 3634.027777777778
+      },
+      {
+        "seed": 1002,
+        "bearing_deg": -30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 600.6944444444445
+      },
+      {
+        "seed": 1002,
+        "bearing_deg": 30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 100.0,
+        "squared_distance_to_mean_ms2": 434.02777777777777
+      },
+      {
+        "seed": 1003,
+        "bearing_deg": -30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 600.6944444444445
+      },
+      {
+        "seed": 1003,
+        "bearing_deg": 30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 40.0,
+        "squared_distance_to_mean_ms2": 1634.0277777777778
+      },
+      {
+        "seed": 1004,
+        "bearing_deg": -30.0,
+        "delay25_ms": 0.0,
+        "delay50_ms": 80.0,
+        "squared_distance_to_mean_ms2": 667.3611111111111
+      },
+      {
+        "seed": 1004,
+        "bearing_deg": 30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 100.0,
+        "squared_distance_to_mean_ms2": 434.02777777777777
+      },
+      {
+        "seed": 1005,
+        "bearing_deg": -30.0,
+        "delay25_ms": 0.0,
+        "delay50_ms": 40.0,
+        "squared_distance_to_mean_ms2": 2267.3611111111113
+      },
+      {
+        "seed": 1005,
+        "bearing_deg": 30.0,
+        "delay25_ms": 0.0,
+        "delay50_ms": 20.0,
+        "squared_distance_to_mean_ms2": 4267.361111111111
+      },
+      {
+        "seed": 1006,
+        "bearing_deg": -30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 40.0,
+        "squared_distance_to_mean_ms2": 1634.0277777777778
+      },
+      {
+        "seed": 1006,
+        "bearing_deg": 30.0,
+        "delay25_ms": 0.0,
+        "delay50_ms": 180.0,
+        "squared_distance_to_mean_ms2": 10667.361111111111
+      },
+      {
+        "seed": 1007,
+        "bearing_deg": -30.0,
+        "delay25_ms": 0.0,
+        "delay50_ms": 20.0,
+        "squared_distance_to_mean_ms2": 4267.361111111111
+      },
+      {
+        "seed": 1007,
+        "bearing_deg": 30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 120.0,
+        "squared_distance_to_mean_ms2": 1800.6944444444446
+      },
+      {
+        "seed": 1008,
+        "bearing_deg": -30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 600.6944444444445
+      },
+      {
+        "seed": 1008,
+        "bearing_deg": 30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 80.0,
+        "squared_distance_to_mean_ms2": 200.69444444444449
+      },
+      {
+        "seed": 1009,
+        "bearing_deg": -30.0,
+        "delay25_ms": 0.0,
+        "delay50_ms": 40.0,
+        "squared_distance_to_mean_ms2": 2267.3611111111113
+      },
+      {
+        "seed": 1009,
+        "bearing_deg": 30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 434.02777777777777
+      },
+      {
+        "seed": 1010,
+        "bearing_deg": -30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 600.6944444444445
+      },
+      {
+        "seed": 1010,
+        "bearing_deg": 30.0,
+        "delay25_ms": 0.0,
+        "delay50_ms": 80.0,
+        "squared_distance_to_mean_ms2": 667.3611111111111
+      },
+      {
+        "seed": 1011,
+        "bearing_deg": -30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 100.0,
+        "squared_distance_to_mean_ms2": 434.02777777777777
+      },
+      {
+        "seed": 1011,
+        "bearing_deg": 30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 100.0,
+        "squared_distance_to_mean_ms2": 434.02777777777777
+      },
+      {
+        "seed": 1012,
+        "bearing_deg": -30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 80.0,
+        "squared_distance_to_mean_ms2": 34.027777777777764
+      },
+      {
+        "seed": 1012,
+        "bearing_deg": 30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 120.0,
+        "squared_distance_to_mean_ms2": 1800.6944444444446
+      },
+      {
+        "seed": 1013,
+        "bearing_deg": -30.0,
+        "delay25_ms": 0.0,
+        "delay50_ms": 0.0,
+        "squared_distance_to_mean_ms2": 7067.361111111111
+      },
+      {
+        "seed": 1013,
+        "bearing_deg": 30.0,
+        "delay25_ms": 100.0,
+        "delay50_ms": 120.0,
+        "squared_distance_to_mean_ms2": 7100.694444444445
+      },
+      {
+        "seed": 1014,
+        "bearing_deg": -30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 80.0,
+        "squared_distance_to_mean_ms2": 34.027777777777764
+      },
+      {
+        "seed": 1014,
+        "bearing_deg": 30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 140.0,
+        "squared_distance_to_mean_ms2": 3634.027777777778
+      },
+      {
+        "seed": 1015,
+        "bearing_deg": -30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 80.0,
+        "squared_distance_to_mean_ms2": 34.027777777777764
+      },
+      {
+        "seed": 1015,
+        "bearing_deg": 30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 140.0,
+        "squared_distance_to_mean_ms2": 3800.6944444444443
+      },
+      {
+        "seed": 1016,
+        "bearing_deg": -30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 100.0,
+        "squared_distance_to_mean_ms2": 600.6944444444445
+      },
+      {
+        "seed": 1016,
+        "bearing_deg": 30.0,
+        "delay25_ms": 0.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 1067.361111111111
+      },
+      {
+        "seed": 1017,
+        "bearing_deg": -30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 434.02777777777777
+      },
+      {
+        "seed": 1017,
+        "bearing_deg": 30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 600.6944444444445
+      },
+      {
+        "seed": 1018,
+        "bearing_deg": -30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 40.0,
+        "squared_distance_to_mean_ms2": 1634.0277777777778
+      },
+      {
+        "seed": 1018,
+        "bearing_deg": 30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 20.0,
+        "squared_distance_to_mean_ms2": 3634.027777777778
+      },
+      {
+        "seed": 1019,
+        "bearing_deg": -30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 80.0,
+        "squared_distance_to_mean_ms2": 200.69444444444449
+      },
+      {
+        "seed": 1019,
+        "bearing_deg": 30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 100.0,
+        "squared_distance_to_mean_ms2": 434.02777777777777
+      },
+      {
+        "seed": 1020,
+        "bearing_deg": -30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 434.02777777777777
+      },
+      {
+        "seed": 1020,
+        "bearing_deg": 30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 40.0,
+        "squared_distance_to_mean_ms2": 1634.0277777777778
+      },
+      {
+        "seed": 1021,
+        "bearing_deg": -30.0,
+        "delay25_ms": 20.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 434.02777777777777
+      },
+      {
+        "seed": 1021,
+        "bearing_deg": 30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 160.0,
+        "squared_distance_to_mean_ms2": 6600.694444444444
+      },
+      {
+        "seed": 1022,
+        "bearing_deg": -30.0,
+        "delay25_ms": 60.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 1567.3611111111115
+      },
+      {
+        "seed": 1022,
+        "bearing_deg": 30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 160.0,
+        "squared_distance_to_mean_ms2": 6600.694444444444
+      },
+      {
+        "seed": 1023,
+        "bearing_deg": -30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 60.0,
+        "squared_distance_to_mean_ms2": 600.6944444444445
+      },
+      {
+        "seed": 1023,
+        "bearing_deg": 30.0,
+        "delay25_ms": 40.0,
+        "delay50_ms": 140.0,
+        "squared_distance_to_mean_ms2": 3800.6944444444443
+      }
+    ]
+  },
+  "B": {
+    "records": [
+      {
+        "id": "RF-0-s1010-b-30-proportional-F2_50",
+        "RF": "RF-0",
+        "seed": 1010,
+        "bearing_deg": -30.0,
+        "law": "proportional",
+        "condition": "F2_50",
+        "source": "runs/task-v9-test/episodes/proportional_F2_50_phi-30_s1010.json",
+        "source_sha256": "34b4580b68d7254edea4b80381a13e5f22bd56b8bbe78e64184f33c7e2e230dd",
+        "trigger_ms": 200.0,
+        "onset_ms": 450.0,
+        "B_ms": 900.0,
+        "contact_ms": 964.1195680265521,
+        "contact_free_at_900_ms": true,
+        "contact_free_through_1000_ms": false,
+        "illustrative_example": true,
+        "replay_file": "data/RF-0-s1010-b-30-proportional-F2_50.json",
+        "replay_sha256": "053cc52e983d46b168c38872c9d5a9c5720043696507d4c18fcbdc3e037d22db"
+      },
+      {
+        "id": "RF-0-s1010-b-30-relay-F2_50",
+        "RF": "RF-0",
+        "seed": 1010,
+        "bearing_deg": -30.0,
+        "law": "relay",
+        "condition": "F2_50",
+        "source": "runs/task-v9-test/episodes/relay_F2_50_phi-30_s1010.json",
+        "source_sha256": "210fe089ba2a38c284c5e4cf29409a033cf5d8492703f4b6254123e65bbf9641",
+        "trigger_ms": 200.0,
+        "onset_ms": 450.0,
+        "B_ms": 900.0,
+        "contact_ms": null,
+        "contact_free_at_900_ms": true,
+        "contact_free_through_1000_ms": true,
+        "illustrative_example": true,
+        "replay_file": "data/RF-0-s1010-b-30-relay-F2_50.json",
+        "replay_sha256": "a15976c4f0044f1a286edf4c6a959d137f9c69b93603dbacb073ae21a7cc5435"
+      }
+    ],
+    "median_P_contact_ms": 964.1195680265521,
+    "candidates": [
+      {
+        "RF": "RF-0",
+        "seed": 1002,
+        "bearing_deg": -30.0,
+        "fault": "F2_50",
+        "trigger_ms": 200.0,
+        "onset_ms": 450.0,
+        "planned_burst_end_ms": 900.0,
+        "P_contact_ms": 999.9617396415485,
+        "R_contact_ms": null,
+        "task_discordant": true
+      },
+      {
+        "RF": "RF-0",
+        "seed": 1003,
+        "bearing_deg": -30.0,
+        "fault": "F2_50",
+        "trigger_ms": 200.0,
+        "onset_ms": 450.0,
+        "planned_burst_end_ms": 900.0,
+        "P_contact_ms": 988.0448872733291,
+        "R_contact_ms": null,
+        "task_discordant": true
+      },
+      {
+        "RF": "RF-0",
+        "seed": 1005,
+        "bearing_deg": -30.0,
+        "fault": "F2_50",
+        "trigger_ms": 180.0,
+        "onset_ms": 430.0,
+        "planned_burst_end_ms": 880.0,
+        "P_contact_ms": 948.1191044466806,
+        "R_contact_ms": null,
+        "task_discordant": true
+      },
+      {
+        "RF": "RF-0",
+        "seed": 1008,
+        "bearing_deg": -30.0,
+        "fault": "F2_50",
+        "trigger_ms": 200.0,
+        "onset_ms": 450.0,
+        "planned_burst_end_ms": 900.0,
+        "P_contact_ms": 953.7568734921717,
+        "R_contact_ms": null,
+        "task_discordant": true
+      },
+      {
+        "RF": "RF-0",
+        "seed": 1010,
+        "bearing_deg": -30.0,
+        "fault": "F2_50",
+        "trigger_ms": 200.0,
+        "onset_ms": 450.0,
+        "planned_burst_end_ms": 900.0,
+        "P_contact_ms": 964.1195680265521,
+        "R_contact_ms": null,
+        "task_discordant": true
+      },
+      {
+        "RF": "RF-0",
+        "seed": 1011,
+        "bearing_deg": -30.0,
+        "fault": "F2_50",
+        "trigger_ms": 240.0,
+        "onset_ms": 490.0,
+        "planned_burst_end_ms": 940.0,
+        "P_contact_ms": 654.138782072569,
+        "R_contact_ms": null,
+        "task_discordant": true
+      },
+      {
+        "RF": "RF-0",
+        "seed": 1012,
+        "bearing_deg": -30.0,
+        "fault": "F2_50",
+        "trigger_ms": 220.0,
+        "onset_ms": 470.0,
+        "planned_burst_end_ms": 920.0,
+        "P_contact_ms": 961.4832364708616,
+        "R_contact_ms": null,
+        "task_discordant": true
+      },
+      {
+        "RF": "RF-0",
+        "seed": 1017,
+        "bearing_deg": -30.0,
+        "fault": "F2_50",
+        "trigger_ms": 200.0,
+        "onset_ms": 450.0,
+        "planned_burst_end_ms": 900.0,
+        "P_contact_ms": 979.4931869130025,
+        "R_contact_ms": null,
+        "task_discordant": true
+      },
+      {
+        "RF": "RF-0",
+        "seed": 1020,
+        "bearing_deg": -30.0,
+        "fault": "F2_50",
+        "trigger_ms": 200.0,
+        "onset_ms": 450.0,
+        "planned_burst_end_ms": 900.0,
+        "P_contact_ms": 982.6903213714022,
+        "R_contact_ms": null,
+        "task_discordant": true
+      },
+      {
+        "RF": "RF-0",
+        "seed": 1022,
+        "bearing_deg": -30.0,
+        "fault": "F2_50",
+        "trigger_ms": 220.0,
+        "onset_ms": 470.0,
+        "planned_burst_end_ms": 920.0,
+        "P_contact_ms": 989.495071036786,
+        "R_contact_ms": null,
+        "task_discordant": true
+      },
+      {
+        "RF": "RF-0",
+        "seed": 1006,
+        "bearing_deg": 30.0,
+        "fault": "F2_50",
+        "trigger_ms": 360.0,
+        "onset_ms": 610.0,
+        "planned_burst_end_ms": 1060.0,
+        "P_contact_ms": 607.5993115820243,
+        "R_contact_ms": null,
+        "task_discordant": true
+      }
+    ],
+    "same_mask": true,
+    "same_uniforms": true,
+    "same_input_map": true,
+    "same_calibration": true,
+    "same_schedule": true,
+    "pretrigger_prefix_identical": true
+  },
+  "C": {
+    "records": [
+      {
+        "id": "RF-0-s1010-b-30-proportional-F2_50",
+        "RF": "RF-0",
+        "seed": 1010,
+        "bearing_deg": -30.0,
+        "law": "proportional",
+        "condition": "F2_50",
+        "source": "runs/task-v9-test/episodes/proportional_F2_50_phi-30_s1010.json",
+        "source_sha256": "34b4580b68d7254edea4b80381a13e5f22bd56b8bbe78e64184f33c7e2e230dd",
+        "trigger_ms": 200.0,
+        "onset_ms": 450.0,
+        "B_ms": 900.0,
+        "contact_ms": 964.1195680265521,
+        "contact_free_at_900_ms": true,
+        "contact_free_through_1000_ms": false,
+        "illustrative_example": true,
+        "replay_file": "data/RF-0-s1010-b-30-proportional-F2_50.json",
+        "replay_sha256": "053cc52e983d46b168c38872c9d5a9c5720043696507d4c18fcbdc3e037d22db"
+      }
+    ],
+    "reuses_B_proportional": true
+  },
+  "exports": [
+    {
+      "id": "RF-0-s1012-b-30-proportional-healthy",
+      "RF": "RF-0",
+      "seed": 1012,
+      "bearing_deg": -30.0,
+      "law": "proportional",
+      "condition": "healthy",
+      "source": "runs/task-v9-test/episodes/proportional_healthy_phi-30_s1012.json",
+      "source_sha256": "877a352ff4fa38e57c323a0d95a06ed248ab5eed8224960ff243222d5771c586",
+      "trigger_ms": 140.0,
+      "onset_ms": 390.0,
+      "B_ms": 840.0,
+      "contact_ms": null,
+      "contact_free_at_900_ms": true,
+      "contact_free_through_1000_ms": true,
+      "illustrative_example": true,
+      "replay_file": "data/RF-0-s1012-b-30-proportional-healthy.json",
+      "replay_sha256": "d14c83f456cc84d8b436a05c3be22e4db94368739516ae77df819b56023926cb"
+    },
+    {
+      "id": "RF-0-s1012-b-30-proportional-F2_25",
+      "RF": "RF-0",
+      "seed": 1012,
+      "bearing_deg": -30.0,
+      "law": "proportional",
+      "condition": "F2_25",
+      "source": "runs/task-v9-test/episodes/proportional_F2_25_phi-30_s1012.json",
+      "source_sha256": "2a78b6a552c65cd93f0ff3576bd0ab148530c472b03e2b4e7cadf5cb7d1ad256",
+      "trigger_ms": 160.0,
+      "onset_ms": 410.0,
+      "B_ms": 860.0,
+      "contact_ms": null,
+      "contact_free_at_900_ms": true,
+      "contact_free_through_1000_ms": true,
+      "illustrative_example": true,
+      "replay_file": "data/RF-0-s1012-b-30-proportional-F2_25.json",
+      "replay_sha256": "2c7a1d0846c4dfabf9b6fe21cdb97f9964265301a50a6d5344341d6635663ad3"
+    },
+    {
+      "id": "RF-0-s1012-b-30-proportional-F2_50",
+      "RF": "RF-0",
+      "seed": 1012,
+      "bearing_deg": -30.0,
+      "law": "proportional",
+      "condition": "F2_50",
+      "source": "runs/task-v9-test/episodes/proportional_F2_50_phi-30_s1012.json",
+      "source_sha256": "bd3099b146218e304590b9b5cba0831c471c59adc8dd24998eb38f497274dbee",
+      "trigger_ms": 220.0,
+      "onset_ms": 470.0,
+      "B_ms": 920.0,
+      "contact_ms": 961.4832364708616,
+      "contact_free_at_900_ms": true,
+      "contact_free_through_1000_ms": false,
+      "illustrative_example": true,
+      "replay_file": "data/RF-0-s1012-b-30-proportional-F2_50.json",
+      "replay_sha256": "88fc3e4636e33725205e37fbcce7808077878146e85f8b399e4a161c6c1e70e7"
+    },
+    {
+      "id": "RF-0-s1010-b-30-proportional-F2_50",
+      "RF": "RF-0",
+      "seed": 1010,
+      "bearing_deg": -30.0,
+      "law": "proportional",
+      "condition": "F2_50",
+      "source": "runs/task-v9-test/episodes/proportional_F2_50_phi-30_s1010.json",
+      "source_sha256": "34b4580b68d7254edea4b80381a13e5f22bd56b8bbe78e64184f33c7e2e230dd",
+      "trigger_ms": 200.0,
+      "onset_ms": 450.0,
+      "B_ms": 900.0,
+      "contact_ms": 964.1195680265521,
+      "contact_free_at_900_ms": true,
+      "contact_free_through_1000_ms": false,
+      "illustrative_example": true,
+      "replay_file": "data/RF-0-s1010-b-30-proportional-F2_50.json",
+      "replay_sha256": "053cc52e983d46b168c38872c9d5a9c5720043696507d4c18fcbdc3e037d22db"
+    },
+    {
+      "id": "RF-0-s1010-b-30-relay-F2_50",
+      "RF": "RF-0",
+      "seed": 1010,
+      "bearing_deg": -30.0,
+      "law": "relay",
+      "condition": "F2_50",
+      "source": "runs/task-v9-test/episodes/relay_F2_50_phi-30_s1010.json",
+      "source_sha256": "210fe089ba2a38c284c5e4cf29409a033cf5d8492703f4b6254123e65bbf9641",
+      "trigger_ms": 200.0,
+      "onset_ms": 450.0,
+      "B_ms": 900.0,
+      "contact_ms": null,
+      "contact_free_at_900_ms": true,
+      "contact_free_through_1000_ms": true,
+      "illustrative_example": true,
+      "replay_file": "data/RF-0-s1010-b-30-relay-F2_50.json",
+      "replay_sha256": "a15976c4f0044f1a286edf4c6a959d137f9c69b93603dbacb073ae21a7cc5435"
+    }
+  ],
+  "replay_code_sha256": {
+    "sim_vision/task_v9.py": "b97ced4a2cd827604fedf2895893e8edcf4e61e18e190fc84568824ec89bb2e9",
+    "tools/analyze_burst_end.py": "e7ae9eb5b95acadee41cb56ffaaaeebcc7a545ed1c6d01ae5162a1da577f0e19",
+    "tools/replay_audit_v9.py": "424f6406c27024f89e3d7c2777e0742c879afd422eae3b36b50d4b2ab370e8d9"
+  },
+  "pipeline_sha256": "35d2f167d0325906dab71359fe844be4f04fbe94a64ee1c6fcbb167d7eb0a6a9",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.4"
+  },
+  "all_576_source_hashes_verified": true,
+  "all_576_geometry_reconstructed": true,
+  "all_288_P_R_prefixes_verified": true,
+  "selected_sources_independently_replayed": 5,
+  "physical_model": {
+    "radius_m": 0.05,
+    "frame_ms": 20,
+    "walk_m_s": 0.05,
+    "burst_m_s": 0.35,
+    "pursuer_m_s": 0.3,
+    "delay_ms": 250,
+    "burst_duration_ms": 450,
+    "horizon_ms": 1000
+  },
+  "rendering_contract": {
+    "position_rule": "Affine only within original validated linear subsegments",
+    "heading_rule": "Hold segment-start heading until original segment end",
+    "post_contact_rule": "Freeze exact first-contact pose; no counterfactual suffix motion",
+    "icons_are_decorative": true
+  }
+}

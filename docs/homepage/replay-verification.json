@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "source_commit": "75313d7740491e7f7830e2fc554c21e1aaefe655",
+  "renderer_sha256": "d298701dc520ce90a045f733a10197938988e85af96fb908631818a78dc362fe",
+  "example_manifest_sha256": "cd7f3968d64106de21ec934bb7d934f3bb19a9ef895adbc9889453640b345e2f",
+  "state_rows": 2472,
+  "max_position_error_m": 0.0,
+  "max_heading_error_deg": 0.0,
+  "sampled_state_checks": 15011,
+  "post_step_rate_checks": 15011,
+  "post_step_curve_checks": 30,
+  "common_bounds_m": [
+    -0.1,
+    0.25,
+    -0.15000000000000002,
+    0.25
+  ],
+  "clips": [
+    {
+      "clip": "demo-a-delay",
+      "frames": 408,
+      "state_rows": 1224,
+      "final_simulation_ms": 1000,
+      "frames_at_900_pause": 0,
+      "contact_latched_frames": 76,
+      "frames_at_1000_endpoint": 67
+    },
+    {
+      "clip": "demo-b-control",
+      "frames": 408,
+      "state_rows": 816,
+      "final_simulation_ms": 1000,
+      "frames_at_900_pause": 0,
+      "contact_latched_frames": 91,
+      "frames_at_1000_endpoint": 24
+    },
+    {
+      "clip": "demo-c-horizon",
+      "frames": 432,
+      "state_rows": 432,
+      "final_simulation_ms": 1000,
+      "frames_at_900_pause": 43,
+      "contact_latched_frames": 81,
+      "frames_at_1000_endpoint": 24
+    }
+  ],
+  "overview_manifest_frames": 624,
+  "overview_manifest_fps": 24,
+  "overview_manifest_duration_s": 26,
+  "scope": "Frame-state, renderer and source-export consistency; media decoding/browser/GitHub checks are separate"
+}

@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "scientific_commit": "22999d28d8fe22f863fc8f62eaa45a57256083d0",
+  "media_generation_commit": "75313d7740491e7f7830e2fc554c21e1aaefe655",
+  "media_bytes_unchanged": true,
+  "raw_records": 576,
+  "independently_reconstructed_records": 576,
+  "independent_seed_clusters": {
+    "RF-0": 24,
+    "RF-A": 12,
+    "RF-B": 12
+  },
+  "mean_trigger_delays": {
+    "RF-0": {
+      "mean_ms": 80.0,
+      "sd_ms": 42.87537606062978,
+      "bearing_pairs": 48,
+      "independent_seed_clusters": 24
+    },
+    "RF-A": {
+      "mean_ms": 57.5,
+      "sd_ms": 46.555250019174274,
+      "bearing_pairs": 24,
+      "independent_seed_clusters": 12
+    },
+    "RF-B": {
+      "mean_ms": 57.5,
+      "sd_ms": 29.672121302810414,
+      "bearing_pairs": 24,
+      "independent_seed_clusters": 12
+    }
+  },
+  "P_R_pairs": 288,
+  "P_R_discordant": 15,
+  "horizon_counts": {
+    "RF-0": {
+      "proportional": {
+        "deletion_fraction": 0.5,
+        "n": 48,
+        "at_900_ms": 46,
+        "at_1000_ms": 37
+      },
+      "relay": {
+        "deletion_fraction": 0.5,
+        "n": 48,
+        "at_900_ms": 48,
+        "at_1000_ms": 48
+      }
+    },
+    "RF-A": {
+      "proportional": {
+        "deletion_fraction": 0.5,
+        "n": 24,
+        "at_900_ms": 23,
+        "at_1000_ms": 22
+      },
+      "relay": {
+        "deletion_fraction": 0.5,
+        "n": 24,
+        "at_900_ms": 23,
+        "at_1000_ms": 23
+      }
+    },
+    "RF-B": {
+      "proportional": {
+        "deletion_fraction": 0.5,
+        "n": 24,
+        "at_900_ms": 24,
+        "at_1000_ms": 23
+      },
+      "relay": {
+        "deletion_fraction": 0.5,
+        "n": 24,
+        "at_900_ms": 24,
+        "at_1000_ms": 24
+      }
+    }
+  },
+  "canonical_count_warning_confusion": {
+    "RF-0": {
+      "tp": 2,
+      "fp": 51,
+      "tn": 224,
+      "fn": 11
+    },
+    "RF-A": {
+      "tp": 2,
+      "fp": 42,
+      "tn": 99,
+      "fn": 1
+    },
+    "RF-B": {
+      "tp": 0,
+      "fp": 24,
+      "tn": 119,
+      "fn": 1
+    }
+  },
+  "selected_sources": [
+    {
+      "id": "RF-0-s1012-b-30-proportional-healthy",
+      "source": "runs/task-v9-test/episodes/proportional_healthy_phi-30_s1012.json",
+      "sha256": "877a352ff4fa38e57c323a0d95a06ed248ab5eed8224960ff243222d5771c586",
+      "trigger_ms": 140.0,
+      "contact_ms": null
+    },
+    {
+      "id": "RF-0-s1012-b-30-proportional-F2_25",
+      "source": "runs/task-v9-test/episodes/proportional_F2_25_phi-30_s1012.json",
+      "sha256": "2a78b6a552c65cd93f0ff3576bd0ab148530c472b03e2b4e7cadf5cb7d1ad256",
+      "trigger_ms": 160.0,
+      "contact_ms": null
+    },
+    {
+      "id": "RF-0-s1012-b-30-proportional-F2_50",
+      "source": "runs/task-v9-test/episodes/proportional_F2_50_phi-30_s1012.json",
+      "sha256": "bd3099b146218e304590b9b5cba0831c471c59adc8dd24998eb38f497274dbee",
+      "trigger_ms": 220.0,
+      "contact_ms": 961.4832364708616
+    },
+    {
+      "id": "RF-0-s1010-b-30-proportional-F2_50",
+      "source": "runs/task-v9-test/episodes/proportional_F2_50_phi-30_s1010.json",
+      "sha256": "34b4580b68d7254edea4b80381a13e5f22bd56b8bbe78e64184f33c7e2e230dd",
+      "trigger_ms": 200.0,
+      "contact_ms": 964.1195680265521
+    },
+    {
+      "id": "RF-0-s1010-b-30-relay-F2_50",
+      "source": "runs/task-v9-test/episodes/relay_F2_50_phi-30_s1010.json",
+      "sha256": "210fe089ba2a38c284c5e4cf29409a033cf5d8492703f4b6254123e65bbf9641",
+      "trigger_ms": 200.0,
+      "contact_ms": null
+    }
+  ],
+  "public_pdf_sha256": "7c337a1dd44025cdee01817fad226fdb3db1014623d505a29cef2cd201ee18af",
+  "new_neural_simulation": false,
+  "new_threshold_fitting": false,
+  "new_confirmatory_test": false
+}

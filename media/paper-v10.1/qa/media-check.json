@@ -1,0 +1,83 @@
+{
+  "scientific_commit": "75313d7740491e7f7830e2fc554c21e1aaefe655",
+  "clips": {
+    "demo-a-delay": {
+      "duration_s": 17.0,
+      "decoded_frames": 408,
+      "decoding": "passed",
+      "gif": {
+        "width": 800,
+        "height": 450,
+        "frames": 136,
+        "loop": 0,
+        "bytes": 946182,
+        "duration_s": 17.01
+      },
+      "inspected_frame_times_s": [
+        0.0,
+        6.0,
+        12.0,
+        16.9
+      ]
+    },
+    "demo-b-control": {
+      "duration_s": 17.0,
+      "decoded_frames": 408,
+      "decoding": "passed",
+      "gif": {
+        "width": 800,
+        "height": 450,
+        "frames": 136,
+        "loop": 0,
+        "bytes": 712996,
+        "duration_s": 17.01
+      },
+      "inspected_frame_times_s": [
+        0.0,
+        8.0,
+        13.8,
+        16.9
+      ]
+    },
+    "demo-c-horizon": {
+      "duration_s": 18.0,
+      "decoded_frames": 432,
+      "decoding": "passed",
+      "gif": {
+        "width": 800,
+        "height": 450,
+        "frames": 144,
+        "loop": 0,
+        "bytes": 560521,
+        "duration_s": 18.01
+      },
+      "inspected_frame_times_s": [
+        0.0,
+        10.2,
+        15.1,
+        17.9
+      ]
+    },
+    "overview": {
+      "duration_s": 26.0,
+      "decoded_frames": 624,
+      "decoding": "passed",
+      "gif": {
+        "width": 800,
+        "height": 450,
+        "frames": 208,
+        "loop": 0,
+        "bytes": 1406073,
+        "duration_s": 26.01
+      },
+      "inspected_frame_times_s": [
+        0.0,
+        8.9,
+        14.8,
+        25.9
+      ]
+    }
+  },
+  "github_remote_rendering": "Not verified: local unpublished candidate",
+  "all_manifest_media_hashes_verified": true
+}
