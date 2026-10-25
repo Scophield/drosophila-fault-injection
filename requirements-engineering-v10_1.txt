@@ -1,0 +1,6 @@
+# Measured Python 3.12.14 environment; no neural simulator is needed.
+numpy==2.5.4
+setuptools==84.2.1
+# Only figure regeneration / PDF inspection require these packages:
+matplotlib==3.11.2
+PyMuPDF==1.28.2

@@ -5,14 +5,14 @@
 \caption{System and checked assessment interface. (a) Representative model anchors and an illustrative fly; (b) a selected 410-cell/1,050-connection graph. The layout is schematic, not measured neurites or the complete recurrent graph. (c) Sampled feedback and exact burst events; $t_d=200$\,ms is illustrative. (d) Native traces enter common checks and independent replay before endpoint analysis.}
 \label{fig:v10f-system}
 \end{figure*}}
-\newcommand{\ReuseCaption}{Cross-plant reuse and predefined error challenges. (a) First registered tank seed, high inflow, proportional law; level axis is zoomed, safe interval $[0.2,0.8]$. All 96 example tasks remain safe. (b) A requested outflow first changes at 0.60\,s and applies at 0.75\,s, between 100-ms frame boundaries. (c) Eleven common-checker and three native-only cases are detected per adapter, not a general coverage estimate.}
+\newcommand{\ReuseCaption}{Cross-plant example and frozen-checker ablation. (a) First tank seed, high inflow, proportional law; zoomed level axis, safe interval $[0.2,0.8]$; all 96 tasks remain safe. (b) Requested outflow at 0.60\,s applies at 0.75\,s on 100-ms frames. (c) Invalid cases detected: A headers, B=A+common, C=A+native, D=full. Fly/tank invalid denominators are 45/42, with 12 valid controls each. Designed cases are not general coverage.}
 \newcommand{\WarningCaption}{Frozen secondary warning operating points. Rows state contact/success denominators; RF-0/A/B contain 24/12/12 independent seed clusters. Markers show (a) missed-contact and (b) false-alarm rates with pointwise 95\% whole-seed bootstrap CIs. Activity is two-sided; the forecast holds the current command using exact simulated state. Positive-class support is 12/2/1 seed clusters. Zero-width and class-conditional empirical intervals do not establish zero population risk.}
 \iffourfigures
 \newcommand{\reuseRef}{Fig.~\ref{fig:v10f-reuse}}
 \newcommand{\warningRef}{Fig.~\ref{fig:v10f-warning}}
 \newcommand{\ReuseFigure}{%
 \begin{figure}[t]\centering
-\includegraphics[width=\columnwidth]{figs/v10f_reuse_parenthesized.pdf}
+\includegraphics[width=\columnwidth]{figs/v10_1_ablation.pdf}
 \caption{\ReuseCaption}\label{fig:v10f-reuse}
 \end{figure}}
 \newcommand{\WarningFigure}{%
