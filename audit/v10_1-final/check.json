@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "base_commit": "f78942d12fe9978353b3390f649b07a5ddb413b3",
+  "pages": 5,
+  "technical_pages": 4,
+  "references": 19,
+  "reference_only_page": 5,
+  "all_fonts_embedded": true,
+  "type3_fonts": 0,
+  "undefined_references": 0,
+  "overfull_boxes": 0,
+  "missing_glyph_warnings": 0,
+  "protected_files_verified": 3092,
+  "protected_images_and_analysis_unchanged": true,
+  "embedded_raster_images_unchanged": true,
+  "pdf_sha256": "7c337a1dd44025cdee01817fad226fdb3db1014623d505a29cef2cd201ee18af",
+  "literal_nu_command_in_baseline": false,
+  "visual_frame_seconds": 0.02,
+  "neural_step_seconds": 0.0001,
+  "first_enabled_input_ms": 100,
+  "first_enabled_difference_ms": [
+    80,
+    100
+  ],
+  "tests_passed": 44,
+  "warning_confusion_unchanged": {
+    "RF-0": [
+      2,
+      51,
+      224,
+      11
+    ],
+    "RF-A": [
+      2,
+      42,
+      99,
+      1
+    ],
+    "RF-B": [
+      0,
+      24,
+      119,
+      1
+    ]
+  },
+  "warning_order": "TP,FP,TN,FN",
+  "neural_simulation": false,
+  "threshold_fitting": false,
+  "new_hypothesis_test": false,
+  "visual_inspection": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "formula_figures_and_captions": "checked",
+    "blender_renders": "unchanged",
+    "font_or_figure_scaling_changed": false
+  },
+  "baseline_pdf_sha256": "bcabba2c968da4130328bef5b376506ba0dae8631e3a0d91e3708030a5f8ba11",
+  "source_sha256": {
+    "paper/sections/v10f_methods.tex": "13250e29111966c9010d09f98302615e1e1a438d42d63fb1351edaa2915ef5a7",
+    "paper/sections/v10h_abstract.tex": "70b00431a4c1b498f51231d5f47dcce25f6dbf9561ab2b5efe1264d75bee1be6",
+    "paper/sections/v10h_intro.tex": "09970536020be1a3e15a211a8bfda7203790f113d7d2b10b6c40a063a2a1f267",
+    "tests/test_retinal_input_formula_v10_1.py": "1b3431771d2c97221f7cee8494b23bfd207a920c9d5f9f2558d607958ad027c2"
+  },
+  "official_submission_portal_validation_performed": false
+}

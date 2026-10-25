@@ -2,16 +2,16 @@
 \subsection{Network, Feedback and Calibration}
 The FlyWire v783-derived model\cite{dorkenwald2024neuronal} has 138,639 LIF neurons and 15,091,983 signed, contact-weighted connection rows; cell labels use FlyWire annotations\cite{schlegel2024annotation}. Shiu parameters\cite{shiu2024drosophila} run in Brian~2\cite{stimberg2019brian2}, with 0.1-ms steps, 2.2-ms sensory refractoriness and state/weight restoration per episode. Assumed RFs stimulate 104 LC4 and 210 LPLC2 cells; eight descending cells provide command features (Fig.~\ref{fig:v10f-system}(a--c)).
 
-Between events, $\dot v=(v_0-v+g)/(20\,\mathrm{ms})$ and $\dot g=-g/(5\,\mathrm{ms})$. Threshold $-45$\,mV resets $v$ to $v_0=-52$\,mV and $g$ to zero; both equations pause during refractoriness. Recurrent events add signed contact count times 0.275\,mV to $g$ after 1.8\,ms; external events add 68.75\,mV to voltage.
+Between events, $\dot v=(v_0-v+g)/(20\,\mathrm{ms})$ and $\dot g=-g/(5\,\mathrm{ms})$. At $-45$\,mV, reset $(v,g)=(v_0,0)$, $v_0=-52$\,mV; both derivatives pause during refractoriness. Recurrent events add 0.275\,mV per signed contact to $g$ after 1.8\,ms; external events add 68.75\,mV to $v$.
 
-Input starts at 100\,ms with 20-ms updates. Let $\beta$ be world bearing minus heading, $a=\arctan(0.05/d)$ the half-angle at separation $d$, and $\sigma=\max(30^\circ,a)$. In degrees and seconds,
+Input starts at 100\,ms with visual period $\delta_{\rm v}=0.020$\,s. In degrees, $\beta$ is world bearing minus heading, $a=(180/\pi)\arctan(0.05/d)$ is half-angle at separation $d$, $\sigma=\max(30^\circ,a)$ and $\ell=(a-a_{\rm prev})/\delta_{\rm v}$:
 \begin{equation}
 \begin{aligned}
-u&=\operatorname{clip}_{[0,1]}[(\Delta a/\Delta t)_+e^{-a/60}/150],\\
+u&=\operatorname{clip}_{[0,1]}[\ell_+e^{-a/60}/150],\\
 \lambda_i&=\operatorname{clip}_{[0,150]}[150w_i u e^{-[\operatorname{wrap}(\phi_i-\beta)^2+\psi_i^2]/(2\sigma^2)}]\ \mathrm{Hz}.
 \end{aligned}
 \end{equation}
-Here $\phi_i,\psi_i$ are stored RF azimuth/elevation; $w_i=1$ for LC4 and $1+0.8(\psi_i+30)/90$ for LPLC2. Other external rates are zero. The pursuer starts 0.25\,m away at $\pm30^\circ$, moves at 0.3\,m/s and aims at the agent's segment-start position. Both advance linearly using starting heading; heading updates at segment end, capped at $\pm100^\circ$. Frame-end decisions affect the next frame. The first trigger schedules a heading-fixed 0.35-m/s burst after 250\,ms for 450\,ms; otherwise speed is 0.05\,m/s. Motion splits at actuator events; first contact at 0.05-m center separation is solved within each segment. Failure latches; traces continue to $H=1$\,s for resource accounting. Post-contact activity is excluded from warnings.
+Pre-cue $u=0$ masks the initial analytic expansion; the 100-ms input uses 80--100-ms angle history. Wrap maps to $[-180^\circ,180^\circ)$. RF azimuth/elevation $\phi_i,\psi_i$ set $w_i=1$ for LC4 and $1+0.8(\psi_i+30)/90$ for LPLC2; other external rates are zero. A 0.3-m/s pursuer starts 0.25\,m away at $\pm30^\circ$ and targets the agent's segment-start position. Linear segments use starting headings; agent heading updates at segment end, capped at $\pm100^\circ$. Decisions apply next frame. First trigger starts a heading-fixed 0.35-m/s burst 250\,ms later for 450\,ms; otherwise speed is 0.05\,m/s. Actuator events split segments; first contact is solved within them at 0.05-m center separation. Failure latches; resources continue to $H=1$\,s; warnings use pre-contact data.
 
 Per map, 20 passive development episodes (four seeds, five bearings in $[-60^\circ,60^\circ]$) fit affine score $z$. Standardized eight-cell five-frame means over 200--400\,ms predict bearing/$60^\circ$ with ridge penalty 10 and an unpenalized intercept. Trigger threshold is half the development tenth percentile of 200--300-ms episode command means, floored at 2.5\,Hz. Before cue or below threshold, steering is zero; otherwise P/R apply $-600\operatorname{clip}(z,-1,1)$/$-600\operatorname{sgn}(z)$ deg/s outside the burst. Eight held-out validation clusters per RF give RMSE $65.9^\circ/67.8^\circ/67.2^\circ$: $z$ poorly reconstructs closed-loop bearing.
 
