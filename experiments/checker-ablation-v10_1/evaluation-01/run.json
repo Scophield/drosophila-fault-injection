@@ -1,0 +1,11 @@
+{
+  "plan_sha256": "464f612588bd3527840a8085b6d1befe43b07380f90e886e4537867fece2901e",
+  "base_commit": "22999d28d8fe22f863fc8f62eaa45a57256083d0",
+  "started_utc": "2026-10-25T13:39:51Z",
+  "setup_seconds": 2.2352661000331864,
+  "python": "3.12.14",
+  "numpy": "2.5.4",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+  "rss_method": "5-ms self-process working-set sampling; absolute RSS, not per-case allocation or independent worker peak"
+}

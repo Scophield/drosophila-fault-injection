@@ -1,0 +1,26 @@
+{
+  "source_figure_sha256": "b89d37c4cb33a47d69a0aab23cd319884e8eba0d9b526640da0c53e1f32ed0fa",
+  "summary_sha256": "479a3699cd557522c3ce1ca49e7e570ad30704afb8fa47d33eb82b9454108c73",
+  "script_sha256": "4267eea90466f7b968a8b7a89c16439362b9cba67c7be8a0672492a320abf1a5",
+  "cases": 111,
+  "unique_inputs": 107,
+  "invalid_cases": 87,
+  "valid_cases": 24,
+  "top_panels_pixel_identical": true,
+  "unchanged_clip_points": [
+    0.0,
+    0.0,
+    252.0,
+    122.0
+  ],
+  "outputs": {
+    "panel_c.pdf": "11c0052334cda7aead26ff309a08850778888b53e907706d3db6a9a099d36d92",
+    "panel_c.png": "46862cbf66b256599319f0182060fc3c0e696b7369f39d0a7f2252db1d0e21fd",
+    "panel_c.svg": "22c8345065ff33e20dd05cda81a35df75b7bad95757c609a7de2feb1090b1b58",
+    "source.csv": "a2a4834e4967385d385f7a8a57f0f7ed13051dee36de18a680706a52c2eca8d9",
+    "v10_1_ablation.pdf": "c8062c149c637d6623370fdb93627eee062ba5773a619a88b46474e27626e172",
+    "v10_1_ablation.png": "65f578c54ba571bcbfb4bef953732e036b1f2c81f4b703bde2a6ed91941fbff8"
+  },
+  "fonttype": 42,
+  "neural_simulation": false
+}

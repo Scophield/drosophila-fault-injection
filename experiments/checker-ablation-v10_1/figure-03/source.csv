@@ -1,0 +1,9 @@
+plant,arm,detected_invalid,invalid,false_reject,valid
+fly,A,18,45,0,12
+fly,B,27,45,0,12
+fly,C,39,45,0,12
+fly,D,39,45,0,12
+tank,A,18,42,0,12
+tank,B,27,42,0,12
+tank,C,36,42,0,12
+tank,D,42,42,0,12

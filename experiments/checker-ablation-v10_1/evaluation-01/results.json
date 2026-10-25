@@ -1,0 +1,161 @@
+{
+  "completed": true,
+  "summary": {
+    "fly": {
+      "A": {
+        "cases": 57,
+        "invalid": 45,
+        "valid": 12,
+        "tp": 18,
+        "fn": 27,
+        "fp": 0,
+        "tn": 12,
+        "total_seconds": 0.11633999983314425,
+        "median_seconds": 0.0016047999961301684,
+        "max_sampled_rss_bytes": 249372672
+      },
+      "B": {
+        "cases": 57,
+        "invalid": 45,
+        "valid": 12,
+        "tp": 27,
+        "fn": 18,
+        "fp": 0,
+        "tn": 12,
+        "total_seconds": 0.33884369977749884,
+        "median_seconds": 0.00480459991376847,
+        "max_sampled_rss_bytes": 250015744
+      },
+      "C": {
+        "cases": 57,
+        "invalid": 45,
+        "valid": 12,
+        "tp": 39,
+        "fn": 6,
+        "fp": 0,
+        "tn": 12,
+        "total_seconds": 74.0444273998728,
+        "median_seconds": 1.2927341000176966,
+        "max_sampled_rss_bytes": 467234816
+      },
+      "D": {
+        "cases": 57,
+        "invalid": 45,
+        "valid": 12,
+        "tp": 39,
+        "fn": 6,
+        "fp": 0,
+        "tn": 12,
+        "total_seconds": 75.32755429972894,
+        "median_seconds": 1.3075718999607489,
+        "max_sampled_rss_bytes": 467419136
+      }
+    },
+    "tank": {
+      "A": {
+        "cases": 54,
+        "invalid": 42,
+        "valid": 12,
+        "tp": 18,
+        "fn": 24,
+        "fp": 0,
+        "tn": 12,
+        "total_seconds": 0.10489390010479838,
+        "median_seconds": 0.0013458500034175813,
+        "max_sampled_rss_bytes": 287080448
+      },
+      "B": {
+        "cases": 54,
+        "invalid": 42,
+        "valid": 12,
+        "tp": 27,
+        "fn": 15,
+        "fp": 0,
+        "tn": 12,
+        "total_seconds": 0.3099676998099312,
+        "median_seconds": 0.004760599986184388,
+        "max_sampled_rss_bytes": 287080448
+      },
+      "C": {
+        "cases": 54,
+        "invalid": 42,
+        "valid": 12,
+        "tp": 36,
+        "fn": 6,
+        "fp": 0,
+        "tn": 12,
+        "total_seconds": 0.7551721996860579,
+        "median_seconds": 0.011933050001971424,
+        "max_sampled_rss_bytes": 287072256
+      },
+      "D": {
+        "cases": 54,
+        "invalid": 42,
+        "valid": 12,
+        "tp": 42,
+        "fn": 0,
+        "fp": 0,
+        "tn": 12,
+        "total_seconds": 0.9351269003236666,
+        "median_seconds": 0.015392549976240844,
+        "max_sampled_rss_bytes": 287076352
+      }
+    },
+    "all": {
+      "A": {
+        "cases": 111,
+        "invalid": 87,
+        "valid": 24,
+        "tp": 36,
+        "fn": 51,
+        "fp": 0,
+        "tn": 24,
+        "total_seconds": 0.22123389993794262,
+        "median_seconds": 0.0015372999478131533,
+        "max_sampled_rss_bytes": 287080448
+      },
+      "B": {
+        "cases": 111,
+        "invalid": 87,
+        "valid": 24,
+        "tp": 54,
+        "fn": 33,
+        "fp": 0,
+        "tn": 24,
+        "total_seconds": 0.6488113995874301,
+        "median_seconds": 0.004776999936439097,
+        "max_sampled_rss_bytes": 287080448
+      },
+      "C": {
+        "cases": 111,
+        "invalid": 87,
+        "valid": 24,
+        "tp": 75,
+        "fn": 12,
+        "fp": 0,
+        "tn": 24,
+        "total_seconds": 74.79959959955886,
+        "median_seconds": 0.2265108999563381,
+        "max_sampled_rss_bytes": 467234816
+      },
+      "D": {
+        "cases": 111,
+        "invalid": 87,
+        "valid": 24,
+        "tp": 81,
+        "fn": 6,
+        "fp": 0,
+        "tn": 24,
+        "total_seconds": 76.26268120005261,
+        "median_seconds": 0.23043100000359118,
+        "max_sampled_rss_bytes": 467419136
+      }
+    }
+  },
+  "elapsed_seconds": 270.9994654000038,
+  "inapplicable": [],
+  "plan_sha256": "464f612588bd3527840a8085b6d1befe43b07380f90e886e4537867fece2901e",
+  "new_neural_simulations": 0,
+  "checker_source_unchanged": true,
+  "scope": "Designed fixed cases and technical source repetitions; not population error rates or blind coverage"
+}
