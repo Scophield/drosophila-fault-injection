@@ -1,7 +1,7 @@
 # V10.1 publication identities
 
 Current candidate: paper/iscas2027-v10.1-timing-candidate.pdf
-PDF SHA256: 5afbcf4b3dc184be2ce09f0e2c282948d2e5c5d89c2bb580ce12a8bcfed4ab8b
+PDF SHA256: 1cb5347be6e817424b3bb45815deef0371229c71ab9a07bc0467d04c6d49a3e5
 Active source: paper/main_v10_1_timing.tex = paper/main.tex = paper/main_v10_horizon.tex.
 The enclosing Git commit fixes the V10.1 publication. PUBLIC_SCOPE.json binds its file bytes.
 

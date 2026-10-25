@@ -2,6 +2,7 @@
 
 V10.1 adds a retrospective, all-record characterization of neural-triggered action timing to the existing paired first-contact study.
 
+- Adds He and Gao (2026), the four-stage structural evolution review, as background on directly trained LIF-SNNs.
 - Reports mean 50%-deletion trigger delays and paired SDs for RF-0/A/B.
 - Connects shared trigger/burst schedules to 15 P/R pairs with distinct first-contact outcomes; records the zero-delay RF-0 25% contact examples.
 - Preserves all frozen data, registrations, calibrations, primary/secondary statistics and the four main figures.
