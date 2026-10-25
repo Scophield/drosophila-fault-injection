@@ -46,6 +46,6 @@ pdflatex main_v10_1_timing.tex
 pdflatex main_v10_1_timing.tex
 ```
 
-The distributed named PDF and paper/main.pdf have identical bytes. Recompilation can vary PDF metadata; sources, numerical content and rendered pages provide the scientific comparison. The paper has four technical pages and a reference-only fifth page. Approved figure PDFs are already supplied, including unchanged Blender imagery. Rebuilding panel-label parentheses is optional: tools/parenthesize_panel_labels.py accepts an existing licensed Arial Bold TTF through --font-file; no system font files are distributed.
+The distributed count-candidate PDF, timing-candidate filename and paper/main.pdf have identical bytes. Recompilation can vary PDF metadata; sources, numerical content and rendered pages provide the scientific comparison. The paper has four technical pages and a reference-only fifth page. Approved figure PDFs are already supplied, including unchanged Blender imagery. Rebuilding panel-label parentheses is optional: tools/parenthesize_panel_labels.py accepts an existing licensed Arial Bold TTF through --font-file; no system font files are distributed.
 
 Fresh neural simulation uses the separately acquired, pinned inputs described in docs/THIRD_PARTY_INPUTS_V10.md and the frozen run configurations. Original registrations, seeds, calibrations and raw records remain unchanged.

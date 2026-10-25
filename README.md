@@ -2,7 +2,7 @@
 
 **Closed-loop fault assessment of a fly-connectome spiking neural network.**
 
-[Read the V10.1 paper](paper/iscas2027-v10.1-timing-candidate.pdf) · [Source](paper/main_v10_1_timing.tex) · [Reproduce the results](REPRODUCE.md) · [What's new](docs/V10_1_CHANGELOG.md)
+[Read the V10.1 paper](paper/iscas2027-v10.1-count-candidate.pdf) · [Source](paper/main_v10_1_timing.tex) · [Reproduce the results](REPRODUCE.md) · [What's new](docs/V10_1_CHANGELOG.md)
 
 ## Research highlights
 
@@ -31,6 +31,6 @@ git rev-parse HEAD
 python tools/verify_v10_1.py
 ```
 
-The named PDF is the V10.1 candidate; `paper/main.pdf` is its byte-identical build alias. Original V10 is preserved in [the frozen source/PDF folder](paper/frozen-v10-69dfd2e), and at [commit 69dfd2e](https://github.com/Scophield/drosophila-fault-injection/tree/69dfd2ed9e8fe597ae293398fe58a5d36fef2b7e).
+The count-candidate PDF is the current V10.1 revision; `paper/main.pdf` and the timing-candidate filename are byte-identical build aliases. The original [V10.1 timing snapshot](https://github.com/Scophield/drosophila-fault-injection/tree/75313d7740491e7f7830e2fc554c21e1aaefe655) is preserved. Original V10 is preserved in [the frozen source/PDF folder](paper/frozen-v10-69dfd2e), and at [commit 69dfd2e](https://github.com/Scophield/drosophila-fault-injection/tree/69dfd2ed9e8fe597ae293398fe58a5d36fef2b7e).
 
 The generating data snapshot remains [986ff54](https://github.com/Scophield/drosophila-fault-injection/tree/986ff54193fee6a1b95815499a4a3477b15ea49a). [Publication identities](PUBLICATION.md), [file hashes](PUBLIC_SCOPE.json), [data index](docs/V10_DATA_INDEX.md) and [third-party input information](docs/THIRD_PARTY_INPUTS_V10.md) connect the paper to its scientific sources. Generation-time metadata are retained.

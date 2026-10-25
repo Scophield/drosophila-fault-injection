@@ -1,6 +1,6 @@
 # V10.1 exact-count and stage implementation
 
-This implementation snapshot fixes the executable count-domain warning semantics and saved-record stage analysis. It builds on published V10.1 `75313d7740491e7f7830e2fc554c21e1aaefe655`; original experimental records, registrations, calibrations and historical analyses are unchanged. The enclosing Git commit identifies these code and analysis files. A subsequent manuscript revision may cite this implementation commit without embedding its own future hash.
+This implementation snapshot fixes the executable count-domain warning semantics and saved-record stage analysis. It builds on published V10.1 `75313d7740491e7f7830e2fc554c21e1aaefe655`; original experimental records, registrations, calibrations and historical analyses are unchanged. Fixed implementation commit `d55bb27ae0f8e04ff425a76f47f86d90bd93f835` identifies these code and analysis files. A subsequent manuscript revision may cite this implementation commit without embedding its own future hash.
 
 ## Executed evidence
 
@@ -21,7 +21,7 @@ The 18 added warning tests and 20 evidence tests pass. Exact threshold semantics
 | `986ff54193fee6a1b95815499a4a3477b15ea49a` | Original curated V10 source, observations and frozen generation metadata |
 | `126e265ef1a0bb49d2a3103ff47b0c9077acdcc0` | Earlier schema/horizon assessment; no V10.1 trigger-timing entry |
 | `75313d7740491e7f7830e2fc554c21e1aaefe655` | Published V10.1 timing analysis, verification entry and paper |
-| Enclosing implementation commit | Exact-count warning library, tests, re-scores and stage recheck listed above |
+| `d55bb27ae0f8e04ff425a76f47f86d90bd93f835` | Exact-count warning library, tests, re-scores and stage recheck listed above |
 | Later manuscript commit | Revised paper/PDF citing the fixed implementation commit; identified externally by its Git permalink and publication manifest |
 
 Use root `REPRODUCE.md` for portable commands and `docs/WARNING_COUNT_PROTOCOL_V10_1.md` for the count-domain definition. Historical full-matrix workflows retain frozen-source guards and must use their corresponding source snapshots.

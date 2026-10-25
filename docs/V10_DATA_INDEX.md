@@ -1,5 +1,7 @@
 # V10.1 canonical data products
 
+The exact-count/stage revision adds `output/warning-counts-v10_1-02/` (canonical warning labels, all 19 boundary cases, validation counts and whole-seed intervals), `output/warning-figure-v10_1-02/` (Fig.4 source/export manifest), `output/postburst-stage-recheck-03/` (all-record phase accounting and decisions), `output/count-calibration-check-v10_1-02/` (development/validation-only checks) and `output/timing-recheck-count-v10_1-01/` (fresh timing verification). Their fixed implementation is `d55bb27ae0f8e04ff425a76f47f86d90bd93f835`; the historical products below retain their generation identities.
+
 The distributed cohorts and derived tables connect each result to its registered inputs and independent seed clusters.
 
 | Product | Source | Unit and role |

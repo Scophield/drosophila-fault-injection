@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "pages": 5,
+  "technical_pages": 4,
+  "reference_only_page": 5,
+  "numbered_references": 19,
+  "figures": 4,
+  "all_fonts_embedded": true,
+  "type3_fonts": 0,
+  "undefined_references": 0,
+  "overfull_boxes": 0,
+  "underfull_warnings_retained": true,
+  "existing_figure_pdf_version_warning_retained": true,
+  "pdf_sha256": "bcabba2c968da4130328bef5b376506ba0dae8631e3a0d91e3708030a5f8ba11",
+  "implementation_commit": "d55bb27ae0f8e04ff425a76f47f86d90bd93f835",
+  "scientific_base": "75313d7740491e7f7830e2fc554c21e1aaefe655",
+  "protected_original_files_verified": 2923,
+  "original_experiments_modified": false,
+  "locked_fig1_to_3_sha256": {
+    "paper/figs/evidence_v10_overview_parenthesized.pdf": "c79ac484967e376de23fc4d1bc28b4f7379b20a22625192ed33c9ca363f47a60",
+    "paper/figs/v10f_reuse_parenthesized.pdf": "b89d37c4cb33a47d69a0aab23cd319884e8eba0d9b526640da0c53e1f32ed0fa",
+    "paper/figs/v10h_rf_parenthesized.pdf": "6b409745e86898b4af41270a6a176da8c89a66e05fa4d85d4b476dace39aa377"
+  },
+  "new_figure4_sha256": "bcdb806341f12c16a52b0010747b744b7d97da1b7e27485f4e960423d0ec0dfd",
+  "source_sha256": {
+    "paper/sections/v10f_methods.tex": "7eb8e319e7b39d126140cbf21923c22037991bcc375afae2b30b243d8550fcdf",
+    "paper/sections/v10h_results.tex": "e159d5a8037c7e10b66e0a35baaa0b4c5e746cdfe7a120ba7207141f71fb886a",
+    "paper/sections/v10h_limits.tex": "95dc2b722172c621e88bd59f4f8f392ee27a5b00d9f17ed7fde2d4881a8950a3",
+    "paper/refs.bib": "cf69b9e8a9045402fa94c54357d1ec0a3746a16bbb7fbae51cbd45a2e0c19cd3"
+  }
+}

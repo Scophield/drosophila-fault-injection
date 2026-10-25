@@ -176,3 +176,5 @@ implementation. A later manuscript commit can reference that fixed implementatio
 and expose its own final PDF through the publication manifest and external Git
 permalink, without embedding its own future commit hash. Original generation
 metadata are retained, not relabelled with a later implementation identity.
+
+Fixed implementation: [d55bb27ae0f8e04ff425a76f47f86d90bd93f835](https://github.com/Scophield/drosophila-fault-injection/tree/d55bb27ae0f8e04ff425a76f47f86d90bd93f835). The revised manuscript cites this preceding code/analysis snapshot; its own PDF identity is supplied by the manuscript commit and `PUBLICATION.md`.
