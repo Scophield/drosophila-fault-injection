@@ -1,0 +1,7 @@
+map,horizon_ms,proportional_success,proportional_n,relay_success,relay_n
+RF-0,900.0,46,48,48,48
+RF-0,1000.0,37,48,48,48
+RF-A,900.0,23,24,23,24
+RF-A,1000.0,22,24,23,24
+RF-B,900.0,24,24,24,24
+RF-B,1000.0,23,24,24,24

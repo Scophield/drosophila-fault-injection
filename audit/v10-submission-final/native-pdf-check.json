@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "errors": [],
+  "pdf_sha256": "94cf80f8a27a230e0f6e1077337bee54b5c10429b049022d442130da528bbb1f",
+  "pages": 5,
+  "bytes": 3396621,
+  "font_rows": 29,
+  "rendered_pages": [
+    "page-1.png",
+    "page-2.png",
+    "page-3.png",
+    "page-4.png",
+    "page-5.png"
+  ],
+  "dpi": 130,
+  "tools": {
+    "pdftoppm": "pdftoppm.EXE",
+    "pdffonts": "pdffonts.EXE",
+    "pdfinfo": "pdfinfo.EXE"
+  },
+  "utc": "2026-10-25T02:16:28.358727+00:00",
+  "source_sha256": "1341f4a5d9342c5b2d740ab1017513ee3fd31e702a314cb9271cd59989ae0fff",
+  "scope": "Native Poppler all-page rendering and font/size checks; not visual approval, references-only-page verification or scientific validation.",
+  "public_copy_note": "Host-specific executable paths reduced to names; original check retained locally."
+}

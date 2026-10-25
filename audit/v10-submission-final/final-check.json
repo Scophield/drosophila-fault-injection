@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "baseline_commit": "126e265ef1a0bb49d2a3103ff47b0c9077acdcc0",
+  "pdf_sha256": "94cf80f8a27a230e0f6e1077337bee54b5c10429b049022d442130da528bbb1f",
+  "pdf_bytes": 3396621,
+  "pages": 5,
+  "technical_pages": 4,
+  "fifth_page_references_only": true,
+  "printed_references": 16,
+  "all_fonts_embedded": true,
+  "type3_fonts": [],
+  "overflow": [],
+  "undefined_citations": [],
+  "native_font_entries": 29,
+  "figures": 4,
+  "Blender_assets_unchanged": true,
+  "locked_asset_files_verified": 110,
+  "Fig1_and_Fig4_bytes_unchanged": true,
+  "Fig3_abc_pixel_identical": true,
+  "RF0_curve_pixel_identical": true,
+  "Fig2_curves_and_challenge_bars_pixel_identical": true,
+  "raster_content_resolution_and_display_sizes_unchanged": true,
+  "raw_test_records_unchanged": 576,
+  "all_existing_runs_and_frozen_analysis_bytes_unchanged": true,
+  "historical_records": 72,
+  "historical_error_categories": {
+    "horizon_flags": 6,
+    "delays": 17,
+    "completed_durations": 4
+  },
+  "historical_distinct_affected_records": 17,
+  "historical_categories_overlap": true,
+  "horizon_counts": [
+    {
+      "map": "RF-0",
+      "horizon_ms": 900.0,
+      "proportional_success": 46,
+      "proportional_n": 48,
+      "relay_success": 48,
+      "relay_n": 48
+    },
+    {
+      "map": "RF-0",
+      "horizon_ms": 1000.0,
+      "proportional_success": 37,
+      "proportional_n": 48,
+      "relay_success": 48,
+      "relay_n": 48
+    },
+    {
+      "map": "RF-A",
+      "horizon_ms": 900.0,
+      "proportional_success": 23,
+      "proportional_n": 24,
+      "relay_success": 23,
+      "relay_n": 24
+    },
+    {
+      "map": "RF-A",
+      "horizon_ms": 1000.0,
+      "proportional_success": 22,
+      "proportional_n": 24,
+      "relay_success": 23,
+      "relay_n": 24
+    },
+    {
+      "map": "RF-B",
+      "horizon_ms": 900.0,
+      "proportional_success": 24,
+      "proportional_n": 24,
+      "relay_success": 24,
+      "relay_n": 24
+    },
+    {
+      "map": "RF-B",
+      "horizon_ms": 1000.0,
+      "proportional_success": 23,
+      "proportional_n": 24,
+      "relay_success": 24,
+      "relay_n": 24
+    }
+  ],
+  "horizon_analysis": "Same-trajectory descriptive rescoring; no additional independent samples or confirmatory tests",
+  "independent_clusters": {
+    "RF0": 24,
+    "RFA": 12,
+    "RFB": 12
+  },
+  "separately_calibrated_frozen_RF_warning_thresholds": true,
+  "generating_snapshot": "986ff54193fee6a1b95815499a4a3477b15ea49a",
+  "assessment_revision": "126e265ef1a0bb49d2a3103ff47b0c9077acdcc0",
+  "original_scientific_conclusions_unchanged": true,
+  "checker_implementation_unchanged": true,
+  "new_neural_simulations": false,
+  "new_hypothesis_tests": false,
+  "review_sha256": "82aecae56f700cf34ceceebc7caa8a7592d55cadeb8f40b6e0e54dde563f8634",
+  "manuscript_changed_files": [
+    "paper/figs/v10f_reuse.pdf",
+    "paper/figs/v10h_rf.pdf",
+    "paper/main.pdf",
+    "paper/refs.bib",
+    "paper/sections/v10f_methods.tex",
+    "paper/sections/v10h_contract.tex",
+    "paper/sections/v10h_figures.tex",
+    "paper/sections/v10h_intro.tex",
+    "paper/sections/v10h_limits.tex",
+    "paper/sections/v10h_results.tex",
+    "tools/plot_horizon_v10.py",
+    "tools/plot_v10f.py"
+  ],
+  "utc": "2026-10-25T02:20:00.152316+00:00"
+}

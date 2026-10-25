@@ -41,6 +41,7 @@ def style():
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--out', type=Path, required=True)
+    ap.add_argument('--reuse-only', action='store_true', help='Export only Fig.2, preserving other approved figures')
     a = ap.parse_args()
     a.out.mkdir(parents=True, exist_ok=False)
     inputs = {Path(__file__).resolve().relative_to(ROOT).as_posix(): sha(__file__)}
@@ -147,9 +148,11 @@ def main():
     delay.text((td['available_s']+td['decision_s'])/2,.269,'150 ms',ha='center',fontsize=7.5)
     for t in [.4,.5,.6,.7,.8]:delay.axvline(t,lw=.4,color=LINE,zorder=0)
     delay.set(xlim=(.4,.85),ylim=(.17,.29),xticks=[.4,.6,.8],yticks=[.18,.24],xlabel='Time (s)',ylabel='Outflow (1/s)')
-    # A shared line-key applies to both panels; semantic labels remain in caption.
-    fig.text(.15,.385,'Healthy / applied',color=BLUE,fontsize=7.5)
-    fig.text(.59,.385,'Faulty / requested',color=ORANGE,fontsize=7.5)
+    # Each panel has its own semantic key; colors retain the original curves.
+    fig.text(.15,.385,'Healthy',color=BLUE,fontsize=7.5)
+    fig.text(.32,.385,'50% deletion',color=ORANGE,fontsize=7.5)
+    fig.text(.66,.385,'Applied',color=BLUE,fontsize=7.5)
+    fig.text(.82,.385,'Requested',color=ORANGE,fontsize=7.5)
     for y, adapter in [(1,'fly'),(0,'tank')]:
         g,n = layers[adapter]; bars.barh(y,g,color=BLUE,height=.52)
         bars.barh(y,n,left=g,color=PURPLE,height=.52)
@@ -161,6 +164,10 @@ def main():
     fig.text(.06,.335,'c  Predefined challenges detected',weight='bold',fontsize=8.5)
     fig.legend(handles=[Patch(color=BLUE,label='Common checker'),Patch(color=PURPLE,label='Native replay only')],loc='lower center',ncol=2,fontsize=7.5,bbox_to_anchor=(.53,.005),columnspacing=.9,handlelength=1.)
     save(fig,'v10f_reuse')
+    if a.reuse_only:
+        (a.out/'reuse-check.json').write_text(json.dumps(dict(source_sha256=inputs,
+            figure='v10f_reuse',only_panel_legends_changed=True,new_simulations=False),indent=2)+'\n')
+        return
 
     # Primary task loss, prespecified SECONDARY contrast, descriptive reserve.
     effects = {(tag,q['fault'],q['mode']):q['estimands']['loss'] for tag in tags for q in ps[tag]}

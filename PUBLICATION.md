@@ -1,23 +1,19 @@
-# Fixed publication identities: V10 horizon revision
+# Fixed publication identities: limited V10 submission polish
 
-Scientific baseline: 43bcd4d6a99b2d9b258cf8a198a4545d237b5c39.
-Original frozen V10 code/data: 986ff54193fee6a1b95815499a4a3477b15ea49a.
-Previous immutable final paper: 48c16c0852bcc3f6b061ab8edc97b0f16ebc1016.
+Generating sources/data: 986ff54193fee6a1b95815499a4a3477b15ea49a.
+Preceding horizon/schema revision: 126e265ef1a0bb49d2a3103ff47b0c9077acdcc0.
+Both are cited separately by the paper. Original generation metadata are preserved.
+The enclosing Git commit identifies THIS final manuscript and all-map descriptive
+rescoring; do not substitute either predecessor as its PDF version.
 
-The enclosing Git commit identifies the NEW horizon/contribution manuscript,
-descriptive rescoring and schema guards. Use its full SHA, not either predecessor,
-for this revision. A PDF cannot contain its own enclosing commit hash; its existing
-artifact citation identifies original generating sources/data. The revised source
-guards and horizon analysis are explicitly separate in the manuscript.
-
-Current paper/main.pdf SHA256:
-7ac89fa92507d6529db773d0320821c4556e32d1c0fe1b8a4ceb4ad40eb319e1.
+Current paper/main.pdf SHA256: 94cf80f8a27a230e0f6e1077337bee54b5c10429b049022d442130da528bbb1f
 Active source: paper/main.tex = paper/main_v10_horizon.tex.
-Old named final PDFs/sources remain historical; the prior branch/ref is untouched.
-PUBLIC_SCOPE.json binds all distributed bytes excluding its own manifest.
+Four technical pages and a reference-only fifth; no change to IEEE fonts/margins.
+The four main figures remain, with only the existing Fig.3(d) count area extended
+and Fig.2 legends separated. Blender assets and Fig.3(a-c) are unchanged.
 
-The current audit/v10-horizon/prepublication-check.json and revision report are
-historical records of local validation before authorization to publish. Their
-unpublished/no-push fields describe that earlier state. This new enclosing commit
-and remote readback receipt establish publication, without rewriting those checks.
-No neural simulations, frozen-data edits, main/V9 updates or Release are involved.
+The original data, registrations/calibrations and statistics are unchanged.
+No neural experiments, new hypothesis tests, main/old-branch update or Release.
+PUBLIC_SCOPE.json binds the distributed bytes except its own manifest.
+See docs/V10_SUBMISSION_FINAL_zh.md and audit/v10-submission-final/final-check.json.
+Old audit reports retain their historical validation/publication status.

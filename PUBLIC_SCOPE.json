@@ -1,5 +1,5 @@
 {
-  "status": "CURATED_V10_HORIZON_MANUSCRIPT",
+  "status": "CURATED_V10_SUBMISSION_POLISH",
   "scientific_baseline": "43bcd4d6a99b2d9b258cf8a198a4545d237b5c39",
   "distribution": "Curated clean export; no inherited V9 Git history, external tables, caches, credentials or private Blender projects.",
   "omitted": [
@@ -950,8 +950,8 @@
       "sha256": "dced361a6a8045fbc70db0141e2d632ddf7c8cee29489f82dad29e0f01c3b8b4"
     },
     "docs/PUBLIC_REPRODUCE_V10_HORIZON.md": {
-      "bytes": 2484,
-      "sha256": "3d6a0511dcc7b8de095455a39bfe94efd540ac0697e7ddbbf667aea470b62f6b"
+      "bytes": 2571,
+      "sha256": "270f858b4a269af72b15e8ff7ca19e6cd4e1a232e97d8b5cf149763f0f9b2b3a"
     },
     "docs/THIRD_PARTY_INPUTS_V10.md": {
       "bytes": 4360,
@@ -1014,8 +1014,8 @@
       "sha256": "398b4337a988a1290f7106c63b1bbf1a8be171cc13b96bb4f9297cef2c910f02"
     },
     "paper/figs/v10f_reuse.pdf": {
-      "bytes": 45010,
-      "sha256": "a125b0028d2063d070d7576e2c329b3d4b3c967492b8fd4f313845a6de784173"
+      "bytes": 46422,
+      "sha256": "45fb54fae58de888effd4fcd56d875143b4ed0b632e3933898cc7420a05a6fe6"
     },
     "paper/figs/v10f_reuse_warning.pdf": {
       "bytes": 85646,
@@ -1030,16 +1030,16 @@
       "sha256": "137d39b22bf6cb789573c1549e412bae8e5f6f32e2d40d2f856a72473d031ef8"
     },
     "paper/figs/v10h_rf.pdf": {
-      "bytes": 98955,
-      "sha256": "fcba6ce6e016df674d89a46d0a1d26d4c05c4bb70f19ee572f35f48cef398951"
+      "bytes": 100463,
+      "sha256": "05d43c2233fc8074613a515120276f25c1c9d4c7bd7e5997e7f7cf87b0ae56a1"
     },
     "paper/fly_connectome_fault_assessment_v10_final.pdf": {
       "bytes": 3344895,
       "sha256": "295b07b85ff152bfe17d59612edff9bec3124a9e3380a3db79b535d87ab16ebe"
     },
     "paper/main.pdf": {
-      "bytes": 3393378,
-      "sha256": "7ac89fa92507d6529db773d0320821c4556e32d1c0fe1b8a4ceb4ad40eb319e1"
+      "bytes": 3396621,
+      "sha256": "94cf80f8a27a230e0f6e1077337bee54b5c10429b049022d442130da528bbb1f"
     },
     "paper/main.tex": {
       "bytes": 1065,
@@ -1074,8 +1074,8 @@
       "sha256": "4dd043189292b8557581331ff540bd448490c2982524f900ffc4c0945c8dc93f"
     },
     "paper/refs.bib": {
-      "bytes": 21061,
-      "sha256": "69141f586b7c6a54ad583e1394af9ae542c87018e6eb72e0fee03b73b5330459"
+      "bytes": 21376,
+      "sha256": "e09b38890af0f79e65beb264c8bf5f245385267a3455aaf2c168005afb8a1453"
     },
     "paper/sections/v10f_abstract.tex": {
       "bytes": 1092,
@@ -1098,8 +1098,8 @@
       "sha256": "2915a40543bbc64c7e8c7b5af432df2b8614811aa49c632b2a3b6283ba3e2e41"
     },
     "paper/sections/v10f_methods.tex": {
-      "bytes": 5439,
-      "sha256": "bad3cab7cc196964b7d55b5f954ac371f2e929f354d8aead75074c574796e595"
+      "bytes": 5491,
+      "sha256": "e838062332c0bd1b5e70e188cc1f0ae7987ade282d98c29dab583262956635fd"
     },
     "paper/sections/v10f_results.tex": {
       "bytes": 2577,
@@ -1110,24 +1110,24 @@
       "sha256": "5de619c05902bdc77b960d51a6b0ef5729b1e849c6a91554eb5e7325d0461eb4"
     },
     "paper/sections/v10h_contract.tex": {
-      "bytes": 1762,
-      "sha256": "c552203ad70a66a9188ae7973aa937bbb5d1e1939568837fc69f6f4e71ae9f04"
+      "bytes": 1944,
+      "sha256": "78fdfd702fc688c9435cabc63a02e05893504727fa9432921ef80ccaa815ccf7"
     },
     "paper/sections/v10h_figures.tex": {
-      "bytes": 3128,
-      "sha256": "eec5ff280b4a00c04da27d2120c9a88794d1c28bf86e7cf8e84f58cb8a488760"
+      "bytes": 3148,
+      "sha256": "cd99fb5595926956fed36f2cc3f06cd009ee8e70a6635c440c97de87f3ace9db"
     },
     "paper/sections/v10h_intro.tex": {
-      "bytes": 2489,
-      "sha256": "ea6805a7d872caffaa2bc6d857590cfd49c71c6cb5a1b700a0fb1ae4b4d07645"
+      "bytes": 2459,
+      "sha256": "e2933fe080e80d9a857e69c6ea3ee5f59b5672635dfab850e8b3e980351218dd"
     },
     "paper/sections/v10h_limits.tex": {
-      "bytes": 1610,
-      "sha256": "4b8bdf00ea2fb1d5b3bccdd44d8ac1a25b764257b63098c849d80cc32540a026"
+      "bytes": 1608,
+      "sha256": "8b81ac1f90a048e23752b89e6d23fdacca894693563cdb671f58fc83005f0e75"
     },
     "paper/sections/v10h_results.tex": {
-      "bytes": 3289,
-      "sha256": "128720091a3d1e8fd919bf3236c6a6d7941590549a594c069a677d8f5fe95f36"
+      "bytes": 3338,
+      "sha256": "3803cf26ed5f2759e817af43177251e8c9f1c8d4e83f61c8761f485a3daa50a2"
     },
     "paper/sections/v10s_abstract.tex": {
       "bytes": 1104,
@@ -1146,12 +1146,12 @@
       "sha256": "77b5f6153fbb86b41c67a46369b445231cb5be730c3a1da5161d30b0090b1c81"
     },
     "PUBLICATION.md": {
-      "bytes": 1407,
-      "sha256": "759a37839b2242009d52f9a645e208a2d1b985264464d2d6f02fd877207b4e70"
+      "bytes": 1241,
+      "sha256": "e026ad4ef68763d5ac73dbe449ea59ce2e6f77c0b9265015816b289c68cacb3c"
     },
     "README.md": {
-      "bytes": 3499,
-      "sha256": "24ae0efda3e94ac53ade6837c21931a9bf0a520f94cc2f6270b596f0e84f4a96"
+      "bytes": 4136,
+      "sha256": "a772396f6d198bb980c12a42790deab09ddeeac2c68a2ec15ed8cbb5937adaf3"
     },
     "requirements-saved-v10.txt": {
       "bytes": 109,
@@ -12430,8 +12430,8 @@
       "sha256": "1e262529cb10f6f9cbb1735e02ccc7981ec9fc7144e90e807484945e9655afc6"
     },
     "tools/plot_horizon_v10.py": {
-      "bytes": 7029,
-      "sha256": "d53854ff398b285ff43be41493620332533fdb8d53a7aec8f1e5650562e9d8da"
+      "bytes": 9355,
+      "sha256": "317ccc021451383bc536076842b6dc2f2ebbbc5b9804255c41790dd444510dc4"
     },
     "tools/plot_horizons_v4.py": {
       "bytes": 4261,
@@ -12474,8 +12474,8 @@
       "sha256": "ea92e6974063c3214e00728b4e2dde2ea373e79d525844fcae29ff91f2545e72"
     },
     "tools/plot_v10f.py": {
-      "bytes": 16649,
-      "sha256": "4fff53cdc6f5fb2e12daf2b54013c37fb4b50968a702704d97fdf9a1a3de20c8"
+      "bytes": 17087,
+      "sha256": "f1548f4ebf35d7eda1cf6dfe9159a5a6542fd04c4a3c517ff0883d075f2483dc"
     },
     "tools/prepare_public_v10f.py": {
       "bytes": 7339,
@@ -12584,11 +12584,60 @@
     "tools/write_cross_results_v8.py": {
       "bytes": 5697,
       "sha256": "c438dd72b2053f65b19b628147e6854963f44de0bd8ed11a9fb58a596b7ad704"
+    },
+    "audit/v10-submission-final/descriptive/check.json": {
+      "bytes": 85896,
+      "sha256": "4a558bf5b944c13f6c738c22df744cd20127aaba62d858cdee650559ee9e68aa"
+    },
+    "audit/v10-submission-final/descriptive/curve-points.csv": {
+      "bytes": 743,
+      "sha256": "0861bf2b3d6118b6dbc7691c8ac8c4974a30398ccc7b64937a678e38ebceef0b"
+    },
+    "audit/v10-submission-final/descriptive/first-contacts.csv": {
+      "bytes": 59133,
+      "sha256": "5a7bc7a53690e1c76e9934c5268160cd7ecf479ac7336b0d561bd8fd270463d2"
+    },
+    "audit/v10-submission-final/descriptive/horizon-counts.csv": {
+      "bytes": 221,
+      "sha256": "583239257fbef1236ed84b8c5670c4b1aa56080925f5ac6412d37f0b8e755c61"
+    },
+    "audit/v10-submission-final/final-check.json": {
+      "bytes": 3369,
+      "sha256": "6e63c970274bbddd6fccf512d18432550f7181ce359952b8921d5f403e19ae6e"
+    },
+    "audit/v10-submission-final/legacy-recheck.json": {
+      "bytes": 23239,
+      "sha256": "4729ac0165054accb3ea66b940076c29327316393bc7e7b1a4e156c7347f88fd"
+    },
+    "audit/v10-submission-final/limited-changes.patch": {
+      "bytes": 27823,
+      "sha256": "6e48f0a8332879677d4164d03313f3f6fec0a8288a4f1d9c8b0eb1dcfe9b0978"
+    },
+    "audit/v10-submission-final/native-pdf-check.json": {
+      "bytes": 830,
+      "sha256": "4fba275849cf8bdb27c09c3d0dd3785b5f05d245a96e78ddffd556335af4a664"
+    },
+    "audit/v10-submission-final/pdf-check.json": {
+      "bytes": 4050,
+      "sha256": "8b47f708a5656a36e370b1170bd889223bc9792f7c0575957be9333d9316e05a"
+    },
+    "audit/v10-submission-final/reuse-check.json": {
+      "bytes": 98563,
+      "sha256": "593810bde4022b66961335e4eb443f1c23782ff6811730a60c80b32c32dae2ce"
+    },
+    "audit/v10-submission-final/tank_source.csv": {
+      "bytes": 7752,
+      "sha256": "790d4bde9b9685d90df0d4fd24908c0ad553ae3cab2be91dff2141797237feb4"
+    },
+    "docs/V10_SUBMISSION_FINAL_zh.md": {
+      "bytes": 4210,
+      "sha256": "e653a9f2eaa6b96939b8dbabcc8b97fa18dbed1fd662cce76f60678b74b6090f"
     }
   },
   "code_data_reference": "986ff54193fee6a1b95815499a4a3477b15ea49a",
-  "final_manuscript_identity": "The enclosing Git commit identifies this horizon/checker revision; the paper citation identifies original generating code/data.",
+  "final_manuscript_identity": "The enclosing Git commit identifies this limited final-paper/all-map rescoring revision; references distinguish generation986ff54 from assessment126e265.",
   "previous_final_manuscript": "48c16c0852bcc3f6b061ab8edc97b0f16ebc1016",
   "current_manuscript_source": "paper/main_v10_horizon.tex",
-  "current_pdf_sha256": "7ac89fa92507d6529db773d0320821c4556e32d1c0fe1b8a4ceb4ad40eb319e1"
+  "current_pdf_sha256": "94cf80f8a27a230e0f6e1077337bee54b5c10429b049022d442130da528bbb1f",
+  "preceding_assessment_revision": "126e265ef1a0bb49d2a3103ff47b0c9077acdcc0"
 }

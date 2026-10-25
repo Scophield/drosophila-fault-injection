@@ -1,4 +1,4 @@
-"""Descriptive first-contact rescoring of saved RF-0 trajectories.
+"""Descriptive horizon rescoring across RFs; unchanged RF-0 first-contact curve.
 
 Append a vector strip to the unchanged Figure3(a-c). No new neural episodes,
 threshold fitting, confidence intervals or hypothesis tests are generated.
@@ -55,11 +55,40 @@ def main():
             row[mode+'_success']=count;row[mode+'_n']=len(group)
         table.append(row)
     assert [(r['proportional_success'],r['relay_success']) for r in table]==[(46,48),(37,48)]
+    for row in source:row['map']='RF-0'
+    all_table=[dict(map='RF-0',**r) for r in table]
+    summary_hashes={'RF-0':sha(summary_path)}
+    for tag in ['A','B']:
+        path=ROOT/f'audit/v10/transfer-01/map-{tag}/analysis/summary.json'
+        saved=json.loads(path.read_text());summary_hashes['RF-'+tag]=sha(path);rows=[]
+        for name,h in saved['raw_input_sha256'].items():
+            p=ROOT/name;assert sha(p)==h;hashes[name]=h
+            r=json.loads(p.read_text());assert r['horizon_ms']==r['duration_ms']==1000.
+            assert r['escaped']==(r['collision_ms'] is None);rows.append((p,r))
+        assert len(rows)==144 and len({r['seed'] for _,r in rows})==12
+        pairs={(r['seed'],r['phi_deg'],r['mode'],r['fault']):r for _,r in rows}
+        fault_rows=[(p,r) for p,r in rows if r['fault']=='F2_50'];assert len(fault_rows)==48
+        for p,r in fault_rows:
+            other=pairs[r['seed'],r['phi_deg'],'relay' if r['mode']=='proportional' else 'proportional','F2_50']
+            assert r['mask_sha256']==other['mask_sha256'] and r['uniform_sha256']==other['uniform_sha256']
+            assert pairs[r['seed'],r['phi_deg'],r['mode'],'healthy']['escaped']
+            source.append(dict(seed=r['seed'],phi_deg=r['phi_deg'],law=r['mode'],fault=r['fault'],
+                first_contact_ms=r['collision_ms'],success900=r['collision_ms'] is None or r['collision_ms']>900,
+                success1000=r['escaped'],mask_sha256=r['mask_sha256'],uniform_sha256=r['uniform_sha256'],
+                source=p.relative_to(ROOT).as_posix(),sha256=sha(p),map='RF-'+tag))
+        for t in [900.,1000.]:
+            q=dict(map='RF-'+tag,horizon_ms=t)
+            for mode in ['proportional','relay']:
+                group=[r for _,r in fault_rows if r['mode']==mode];assert len(group)==24
+                q[mode+'_success']=sum(r['collision_ms'] is None or r['collision_ms']>t for r in group)
+                q[mode+'_n']=24
+            all_table.append(q)
+    assert [(q['proportional_success'],q['relay_success']) for q in all_table]==[(46,48),(37,48),(23,23),(22,23),(24,24),(23,24)]
     for mode in ['proportional','relay']:
         events=sorted(r['collision_ms'] for _,r in selected if r['mode']==mode and r['collision_ms'] is not None)
         times=[0.,*events,1000.];counts=[0,*range(1,len(events)+1),len(events)]
         curves.extend(dict(law=mode,time_ms=t,cumulative_contacts=c,n=48,cumulative_percent=100*c/48) for t,c in zip(times,counts))
-    for name,rows in [('first-contacts.csv',source),('horizon-counts.csv',table),('curve-points.csv',curves)]:
+    for name,rows in [('first-contacts.csv',source),('horizon-counts.csv',all_table),('curve-points.csv',curves)]:
         with (a.out/name).open('x',newline='',encoding='utf-8') as f:
             w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
     plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['Arial','DejaVu Sans'],
@@ -78,14 +107,15 @@ def main():
     ax.set(xlim=(0,1.015),ylim=(-1.4,25),xticks=[0,.4,.9,1.],yticks=[0,10,20],
         xlabel='Time since episode start (s)',ylabel='First contacts (%)')
     ax.legend(loc='upper left',ncol=2,fontsize=8,handlelength=1.5,borderaxespad=.1)
-    fig.text(.01,.94,'d  Same RF-0 trajectories, different assessment horizons',fontsize=9,fontweight='bold',va='top')
-    fig.text(.80,.77,'Contact-free tasks',ha='center',fontsize=8.5,fontweight='bold')
-    for x,label in [(.68,'Horizon'),(.83,'P'),(.96,'R')]:fig.text(x,.59,label,ha='center',fontsize=8,color=GRAY)
-    for y,row in zip([.39,.18],table):
-        fig.text(.68,y,f"{row['horizon_ms']:.0f} ms",ha='center',fontsize=8.5)
-        fig.text(.83,y,f"{row['proportional_success']}/48",ha='center',fontsize=8.5,color=BLUE)
-        fig.text(.96,y,f"{row['relay_success']}/48",ha='center',fontsize=8.5,color=GREEN)
-    fig.text(.075,.025,'Descriptive rescoring; 48 tasks per law in 24 paired seed clusters. No new samples or hypothesis tests.',fontsize=8,color=GRAY)
+    fig.text(.01,.94,'d  RF-0 first contacts; 50% deletion outcomes across horizons',fontsize=9,fontweight='bold',va='top')
+    fig.text(.81,.77,'Contact-free tasks (P, R)',ha='center',fontsize=8.5,fontweight='bold')
+    for x,label in [(.66,'RF'),(.78,'900 ms'),(.935,'1000 ms')]:fig.text(x,.60,label,ha='center',fontsize=8,color=GRAY)
+    for y,tag in zip([.43,.27,.11],['RF-0','RF-A','RF-B']):
+        fig.text(.66,y,tag,ha='center',fontsize=8.5)
+        for x,t in [(.78,900.),(.935,1000.)]:
+            q=next(q for q in all_table if q['map']==tag and q['horizon_ms']==t);n=q['proportional_n']
+            fig.text(x,y,f"{q['proportional_success']}/{n}, {q['relay_success']}/{n}",ha='center',fontsize=8.5)
+    fig.text(.075,.025,'Same trajectories at both horizons; 24/12/12 seed clusters. No new samples or hypothesis tests.',fontsize=8,color=GRAY)
     for ext in ['pdf','svg','png']:fig.savefig(a.out/('horizon-strip.'+ext),dpi=600,facecolor='white')
     plt.close(fig)
     old=pymupdf.open(original);strip=pymupdf.open(a.out/'horizon-strip.pdf')
@@ -97,11 +127,12 @@ def main():
     merged.save(a.out/'rf-with-horizon.pdf',garbage=4,deflate=True)
     page.get_pixmap(dpi=180).save(a.out/'preview.png')
     result=dict(passed=True,classification='descriptive same-record horizon rescoring',
-        independent_seed_clusters=24,tasks_per_law=48,source_records=288,plotted_records=96,
-        horizon_counts=table,original_figure_sha256=sha(original),
+        independent_seed_clusters={'RF-0':24,'RF-A':12,'RF-B':12},
+        tasks_per_law={'RF-0':48,'RF-A':24,'RF-B':24},source_records=576,plotted_records=96,tabulated_records=192,
+        horizon_counts=all_table,original_figure_sha256=sha(original),
         original_panels_imported_without_scaling=True,original_dimensions_pt=list(old[0].rect),
         composite_dimensions_pt=list(page.rect),raw_input_sha256=hashes,
-        frozen_summary_sha256=sha(summary_path),script_sha256=sha(Path(__file__).resolve()),
+        frozen_summary_sha256=sha(summary_path),all_summary_sha256=summary_hashes,script_sha256=sha(Path(__file__).resolve()),
         runtime=dict(python=platform.python_version(),numpy=np.__version__,matplotlib=matplotlib.__version__),
         confidence_intervals_added=False,hypothesis_tests=False,new_neural_simulations=False,
         unequal_healthy_reserve_and_cohort_calibration_confounding_retained=True)

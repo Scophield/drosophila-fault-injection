@@ -1,0 +1,274 @@
+--- a/paper/refs.bib
++++ b/paper/refs.bib
+@@ -447,6 +447,14 @@
+   url={https://github.com/Scophield/drosophila-fault-injection/tree/986ff54193fee6a1b95815499a4a3477b15ea49a}
+ }
+ 
++@misc{artifactV10Horizon,
++  author={Gao, Shuchao},
++  title={From Connection Loss to Collision: {V10} horizon analysis and checked evidence revision},
++  year={2026},
++  howpublished={Git commit 126e265},
++  url={https://github.com/Scophield/drosophila-fault-injection/tree/126e265ef1a0bb49d2a3103ff47b0c9077acdcc0}
++}
++
+ @inproceedings{donze2010breach,
+   author={Donz{\'e}, Alexandre},
+   title={Breach, A Toolbox for Verification and Parameter Synthesis of Hybrid Systems},
+--- a/paper/sections/v10f_methods.tex
++++ b/paper/sections/v10f_methods.tex
+@@ -22,4 +22,4 @@
+ 
+ Estimates average both bearings within seed. Pointwise 95\% CIs use 20,000 whole-seed percentile resamples, conditional on stored map/calibration/thresholds (RNG 20261022 for RF-0; 20261023 for transfer). Symmetric-null sign-flip sensitivity tests are Holm-adjusted over two baseline doses, separately from four new map/dose contrasts. Maps and separate angle/action cohorts are not pooled.
+ 
+-Warnings use only data through 400\,ms: unsmoothed 20-ms command rates averaged over 100--400\,ms, or the absolute log spike-count ratio to a law/bearing-specific healthy reference. Healthy validation sets fifth-percentile command/forecast and 95th-percentile two-sided activity cutoffs; an upper-only comparator flags activity above twice its healthy reference. A held-command forecast uses exact simulated geometry and pending actuation, retaining the current turn; its schedule-only baseline sets future turn to zero. These information-rich forecasts are not neural-only detectors.
++Warnings use only data through 400\,ms: unsmoothed 20-ms command rates averaged over 100--400\,ms, or the absolute log spike-count ratio to a law/bearing-specific healthy reference. Each RF's healthy validation separately sets fifth-percentile command/forecast and 95th-percentile two-sided activity cutoffs, frozen before its test cohort; an upper-only comparator flags activity above twice its healthy reference. A held-command forecast uses exact simulated geometry and pending actuation, retaining the current turn; its schedule-only baseline sets future turn to zero. These information-rich forecasts are not neural-only detectors.
+--- a/paper/sections/v10h_contract.tex
++++ b/paper/sections/v10h_contract.tex
+@@ -1,8 +1,8 @@
+ \section{Executable Evidence Contract}
+ A campaign declares seed, condition, law, fault, horizon $H$, frame duration and resource unit. Adapters normalize native traces into those identities, source/map/calibration bindings, input/mask digests, completed observations, cumulative resource and first failure. Hashes bind bytes, not execution. Common checks test matrix membership, pairing, clocks, exposure, resources and outcome labels; native replay separately regenerates inputs and plant transitions. Shared variates need not produce identical feedback-dependent events. Warning prefixes exclude future labels.
+ 
+-Core field types and key hashability are validated before regex/set operations. The reproduced null digest, numeric digest and list seed now yield row-indexed schema issues; valid rows continue and missing cells remain reported. This guards the tested normalized schema, not arbitrary native semantics.
++Native timing checks require burst onset 250\,ms after the trigger, 450\,ms duration, and an active-at-$H$ flag consistent with that interval. In 72 separate historical records, an audit found 17 delays of 260\,ms, four completed bursts of 440\,ms and six incorrect horizon flags. These overlapping categories are not pooled with current cohorts. Ignoring them would misstate fast-motion duration or actuation at the endpoint. Replay therefore checks realized events, rather than accepting nominal parameters. Core-schema findings retain row indices; arbitrary native semantics remain adapter obligations.
+ 
+-\reuseRef\ uses the same checker on a distinct delayed tank: $\dot h=I-u-0.04h$, $h(0)=0.5$, safe interval $[0.2,0.8]$. Eight seeds cross two inflows, two fixed laws and three sensor-deletion levels (0/25/50\%), producing 96 examples. Deleted samples hold their last value; an independent analytic replayer checks sensor accounting and queued actuation, delayed 150\,ms on a 100-ms observation grid. All examples remain safe: they demonstrate reuse, not neural fault tolerance.
++\reuseRef\ adapts the same checker to a delayed tank: $\dot h=I-u-0.04h$, $h(0)=0.5$, safe interval $[0.2,0.8]$. Eight seeds, two inflows, two laws and three sensor-deletion levels (0/25/50\%) give 96 examples. Deleted samples hold their last value. Independent analytic replay checks sensor accounting and 150-ms delayed actuation on a 100-ms grid. All examples remain safe: they demonstrate reuse, not neural fault tolerance.
+ 
+-The original challenge set detects eleven common-checker and three native-only cases per adapter, not general coverage. Historical clock/actuator defects remain separate regression fixtures. A synthetic zero-neural-readout logger passes input/plant replay without solving neural equations: consistent traces cannot authenticate execution, unlogged state or safety.
++The original challenge set detects eleven common-checker and three native-only cases per adapter, not general coverage. A synthetic zero-neural-readout logger passes input/plant replay without solving neural equations: consistent traces cannot authenticate execution, unlogged state or safety.
+--- a/paper/sections/v10h_figures.tex
++++ b/paper/sections/v10h_figures.tex
+@@ -1,39 +1,39 @@
+-\newcommand{\SystemFigure}{%
+-\begin{figure*}[t]
+-\centering
+-\includegraphics[width=\textwidth]{figs/evidence_v10_overview.pdf}
+-\caption{System and checked assessment interface. (a,b) Representative model anchors, an illustrative fly and a selected 410-cell/1,050-connection graph. The layout is schematic, not measured neurites or the complete recurrent graph. (c) Sampled feedback and exact burst events; $t_d=200$\,ms is illustrative. (d) Native traces enter common checks and independent replay before endpoint analysis.}
+-\label{fig:v10f-system}
+-\end{figure*}}
+-\newcommand{\ReuseCaption}{Cross-plant reuse and predefined error challenges. (a) First registered tank seed, high inflow, proportional law; level axis is zoomed, safe interval $[0.2,0.8]$. All 96 example tasks remain safe. (b) A requested outflow first changes at 0.60\,s and applies at 0.75\,s, between 100-ms frame boundaries. (c) Eleven common-checker and three native-only cases are detected per adapter, not a general coverage estimate.}
+-\newcommand{\WarningCaption}{Frozen secondary warning operating points. Rows state contact/success denominators; RF-0/A/B contain 24/12/12 independent seed clusters. Markers show missed-contact and false-alarm rates with pointwise 95\% whole-seed bootstrap CIs. Activity is two-sided; the forecast holds the current command using exact simulated state. Positive-class support is 12/2/1 seed clusters. Zero-width and class-conditional empirical intervals do not establish zero population risk.}
+-\iffourfigures
+-\newcommand{\reuseRef}{Fig.~\ref{fig:v10f-reuse}}
+-\newcommand{\warningRef}{Fig.~\ref{fig:v10f-warning}}
+-\newcommand{\ReuseFigure}{%
+-\begin{figure}[t]\centering
+-\includegraphics[width=\columnwidth]{figs/v10f_reuse.pdf}
+-\caption{\ReuseCaption}\label{fig:v10f-reuse}
+-\end{figure}}
+-\newcommand{\WarningFigure}{%
+-\begin{figure}[t]\centering
+-\includegraphics[width=\columnwidth]{figs/v10f_warning.pdf}
+-\caption{\WarningCaption}\label{fig:v10f-warning}
+-\end{figure}}
+-\else
+-\newcommand{\reuseRef}{Fig.~\ref{fig:v10f-reuse} (left)}
+-\newcommand{\warningRef}{Fig.~\ref{fig:v10f-warning} (right)}
+-\newcommand{\ReuseFigure}{%
+-\begin{figure*}[t]\centering
+-\includegraphics[width=\textwidth]{figs/v10f_reuse_warning.pdf}
+-\caption{\emph{Left:} \ReuseCaption\ \emph{Right:} \WarningCaption}
+-\label{fig:v10f-reuse}\label{fig:v10f-warning}
+-\end{figure*}}
+-\newcommand{\WarningFigure}{}
+-\fi
+-\newcommand{\TransferFigure}{%
+-\begin{figure*}[t]\centering
+-\includegraphics[width=\textwidth]{figs/v10h_rf.pdf}
+-\caption{Paired loss across sensory realizations and horizons. (a,b) Primary losses and prespecified secondary R-minus-P contrasts (percentage points), with pointwise 95\% whole-seed CIs, $n=24/12/12$, conditional on saved calibrations. All healthy tasks succeed; no gains occur. (c) Healthy minimum clearance shows unequal reserve. (d) Empirical RF-0/50\% first contacts; 900/1000-ms success counts reuse 48 tasks per law within 24 clusters, not new replicates or tests. Maps differ in draws, recalibration and cohorts, not an isolated RF effect.}
+-\label{fig:v10f-transfer}
+-\end{figure*}}
++\newcommand{\SystemFigure}{%
++\begin{figure*}[t]
++\centering
++\includegraphics[width=\textwidth]{figs/evidence_v10_overview.pdf}
++\caption{System and checked assessment interface. (a,b) Representative model anchors, an illustrative fly and a selected 410-cell/1,050-connection graph. The layout is schematic, not measured neurites or the complete recurrent graph. (c) Sampled feedback and exact burst events; $t_d=200$\,ms is illustrative. (d) Native traces enter common checks and independent replay before endpoint analysis.}
++\label{fig:v10f-system}
++\end{figure*}}
++\newcommand{\ReuseCaption}{Cross-plant reuse and predefined error challenges. (a) First registered tank seed, high inflow, proportional law; level axis is zoomed, safe interval $[0.2,0.8]$. All 96 example tasks remain safe. (b) A requested outflow first changes at 0.60\,s and applies at 0.75\,s, between 100-ms frame boundaries. (c) Eleven common-checker and three native-only cases are detected per adapter, not a general coverage estimate.}
++\newcommand{\WarningCaption}{Frozen secondary warning operating points. Rows state contact/success denominators; RF-0/A/B contain 24/12/12 independent seed clusters. Markers show missed-contact and false-alarm rates with pointwise 95\% whole-seed bootstrap CIs. Activity is two-sided; the forecast holds the current command using exact simulated state. Positive-class support is 12/2/1 seed clusters. Zero-width and class-conditional empirical intervals do not establish zero population risk.}
++\iffourfigures
++\newcommand{\reuseRef}{Fig.~\ref{fig:v10f-reuse}}
++\newcommand{\warningRef}{Fig.~\ref{fig:v10f-warning}}
++\newcommand{\ReuseFigure}{%
++\begin{figure}[t]\centering
++\includegraphics[width=\columnwidth]{figs/v10f_reuse.pdf}
++\caption{\ReuseCaption}\label{fig:v10f-reuse}
++\end{figure}}
++\newcommand{\WarningFigure}{%
++\begin{figure}[t]\centering
++\includegraphics[width=\columnwidth]{figs/v10f_warning.pdf}
++\caption{\WarningCaption}\label{fig:v10f-warning}
++\end{figure}}
++\else
++\newcommand{\reuseRef}{Fig.~\ref{fig:v10f-reuse} (left)}
++\newcommand{\warningRef}{Fig.~\ref{fig:v10f-warning} (right)}
++\newcommand{\ReuseFigure}{%
++\begin{figure*}[t]\centering
++\includegraphics[width=\textwidth]{figs/v10f_reuse_warning.pdf}
++\caption{\emph{Left:} \ReuseCaption\ \emph{Right:} \WarningCaption}
++\label{fig:v10f-reuse}\label{fig:v10f-warning}
++\end{figure*}}
++\newcommand{\WarningFigure}{}
++\fi
++\newcommand{\TransferFigure}{%
++\begin{figure*}[t]\centering
++\includegraphics[width=\textwidth]{figs/v10h_rf.pdf}
++\caption{Paired loss across sensory realizations and horizons. (a,b) Primary losses and prespecified secondary R-minus-P contrasts (percentage points), with pointwise 95\% whole-seed CIs, $n=24/12/12$, conditional on saved calibrations. All healthy tasks succeed; no gains occur. (c) Healthy minimum clearance shows unequal reserve. (d) RF-0/50\% first contacts and all-map 900/1000-ms success counts (P, R); both endpoints reuse the same 24/12/12 seed clusters, not new replicates or tests. Maps differ in draws, recalibration and cohorts, not an isolated RF effect.}
++\label{fig:v10f-transfer}
++\end{figure*}}
+--- a/paper/sections/v10h_intro.tex
++++ b/paper/sections/v10h_intro.tex
+@@ -5,4 +5,4 @@
+ 
+ DriveFI searches faults and scenarios that violate closed-loop driving safety\cite{jha2019drivefi}; SpikeFI, SpikingJET and enpheeph provide configurable SNN injection campaigns\cite{spyrou2024spikefi,gogebakan2024spikingjet,colucci2022enpheeph}. Common random numbers\cite{glasserman1992crn}, hybrid-trajectory monitoring\cite{donze2010breach}, task/resource benchmarking\cite{yik2023neurobench,dangelo2026embodied} and physical fault propagation\cite{chessa2026crosslayer} are established. Our evidence interface checks supplied paired records and native replay obligations, complementing injection and violation search.
+ 
+-We contribute three concrete findings and capabilities: (i) a paired first-contact characterization in which RF-0 proportional 50\%-deletion losses rise from 2/48 to 11/48 between 900 and 1000\,ms, with no relay contacts, alongside smaller uncertain contrasts in separately recalibrated RF cohorts; (ii) a frozen-prefix evaluation exposing 11/13 missed RF-0 contacts and cross-configuration false alarms, limiting substitution of the tested scalar warnings for task outcomes; and (iii) executable pairing, timing and exposure checks with native replay, tested error cases and limited cross-plant reuse. These quantify a mismatch between healthy success, deletion-task preservation and frozen warnings, without identifying a damage-specific protection mechanism.
++We contribute three concrete findings and capabilities: (i) a paired first-contact characterization in which RF-0 proportional 50\%-deletion losses rise from 2/48 to 11/48 between 900 and 1000\,ms, with no relay contacts, alongside smaller uncertain contrasts in separately recalibrated RF cohorts; (ii) a frozen-prefix evaluation exposing 11/13 missed RF-0 contacts and cross-configuration false alarms, limiting substitution of the tested scalar warnings for task outcomes; and (iii) executable pairing, timing and exposure contracts, checked against archived actuator/endpoint errors and reused on a delayed tank. These distinguish declared schedules from realized actuation before task loss or activity exposure is interpreted.
+--- a/paper/sections/v10h_limits.tex
++++ b/paper/sections/v10h_limits.tex
+@@ -1,6 +1,6 @@
+ \section{Scope, Artifacts and Conclusion}
+ The evidence concerns one graph, an assumed RF family, a synthetic plant, unequal healthy reserve and sparse failures. The roughly $66^\circ$ held-out steering error is not accurate bearing reconstruction. Walk-only contact by 0.8\,s follows from plant speeds, not connectome advantage. Functional row loss establishes no biological tolerance, device upset rate, hardware safety, energy or area benefit; record consistency does not authenticate neural execution.
+ 
+-The fixed V10 archive\cite{artifactV10} preserves original generating sources, 576 neural records, 96 tank examples and frozen configurations. Saved-record analysis/replay needs no external matrices; fresh neural runs require separately obtained, hash-matched inputs. Third-party tables with unresolved redistribution terms are excluded. The revised schema guards and descriptive horizon analysis accompany this manuscript's source revision, separately from the immutable generating snapshot.
++The generating snapshot\cite{artifactV10} preserves original sources, 576 neural records, 96 tank examples and frozen configurations. The fixed assessment revision\cite{artifactV10Horizon} provides schema guards, horizon-analysis sources and file manifests. Saved-record analysis/replay needs no external matrices; fresh neural runs require separately obtained, hash-matched inputs. Third-party tables with unresolved redistribution terms are excluded. Generation metadata remain unchanged.
+ 
+ The measured knowledge is conditional: matched deletion yields different first-contact timing under two feedback laws, the 1-s contrast is smaller and uncertain in recalibrated RF cohorts, and the tested frozen scalar prefixes retain task-label errors. Healthy clearance and horizon sensitivity delimit, rather than explain away, these observations. The checked interface makes the supporting pairs and clocks testable across two plant schemas. This task-level assessment provides a basis for evaluating how future device-level nonidealities propagate through neuromorphic controllers to closed-loop behavior.
+--- a/paper/sections/v10h_results.tex
++++ b/paper/sections/v10h_results.tex
+@@ -1,6 +1,6 @@
+ \section{Results and Conditional Interpretation}
+ \subsection{First-Contact Loss Depends on the Declared Horizon}
+-Both laws completed 48/48 healthy RF-0 tasks. For the same paired 50\% deletion trajectories, success at 900\,ms was P 46/48 and R 48/48; at 1000\,ms it was 37/48 and 48/48 (Fig.~\ref{fig:v10f-transfer}d). The nine additional P contacts occurred in the final 100\,ms, the latest at 999.962\,ms. This is descriptive rescoring of existing trajectories, not new samples or a confirmatory horizon test. Conditional task preservation means no first contact through the stated endpoint.
++Both laws completed 48/48 healthy RF-0 tasks. Fig.~\ref{fig:v10f-transfer}d gives 900/1000-ms success counts for all three RFs at 50\% deletion. RF-0 has nine additional P contacts in the final 100\,ms, the latest at 999.962\,ms; the law-discordant RF-A/B contacts also occur after 900\,ms. These are same-trajectory descriptive rescorings, not new samples or confirmatory horizon tests. RF-0's registration already lists these repeated endpoints. Conditional task preservation means no first contact through the stated endpoint.
+ 
+ At the registered 1-s endpoint, the prespecified secondary R-minus-P net-loss contrast was $-22.9$\,pp (95\% CI $[-33.3,-12.5]$; Holm $p=0.00195$). RF-A/B each yielded $-4.2$\,pp, CI $[-12.5,0]$; all four new map/dose Holm $p$ values are 1. Each new 50\% contrast has only one nonzero cluster. The smaller point estimates neither establish equivalence nor identify a causal RF effect; no between-map effect-change test is claimed. The baseline 25\% contrast remains uncertain ($p=0.50$). No 25\% loss occurs in A/B; twelve event-free clusters still allow a one-sided 95\% upper bound of 22.1\% for any loss in a new identically defined two-bearing cluster.
+ 
+--- a/tools/plot_horizon_v10.py
++++ b/tools/plot_horizon_v10.py
+@@ -1,4 +1,4 @@
+-"""Descriptive first-contact rescoring of saved RF-0 trajectories.
++"""Descriptive horizon rescoring across RFs; unchanged RF-0 first-contact curve.
+ 
+ Append a vector strip to the unchanged Figure3(a-c). No new neural episodes,
+ threshold fitting, confidence intervals or hypothesis tests are generated.
+@@ -55,11 +55,40 @@
+             row[mode+'_success']=count;row[mode+'_n']=len(group)
+         table.append(row)
+     assert [(r['proportional_success'],r['relay_success']) for r in table]==[(46,48),(37,48)]
++    for row in source:row['map']='RF-0'
++    all_table=[dict(map='RF-0',**r) for r in table]
++    summary_hashes={'RF-0':sha(summary_path)}
++    for tag in ['A','B']:
++        path=ROOT/f'audit/v10/transfer-01/map-{tag}/analysis/summary.json'
++        saved=json.loads(path.read_text());summary_hashes['RF-'+tag]=sha(path);rows=[]
++        for name,h in saved['raw_input_sha256'].items():
++            p=ROOT/name;assert sha(p)==h;hashes[name]=h
++            r=json.loads(p.read_text());assert r['horizon_ms']==r['duration_ms']==1000.
++            assert r['escaped']==(r['collision_ms'] is None);rows.append((p,r))
++        assert len(rows)==144 and len({r['seed'] for _,r in rows})==12
++        pairs={(r['seed'],r['phi_deg'],r['mode'],r['fault']):r for _,r in rows}
++        fault_rows=[(p,r) for p,r in rows if r['fault']=='F2_50'];assert len(fault_rows)==48
++        for p,r in fault_rows:
++            other=pairs[r['seed'],r['phi_deg'],'relay' if r['mode']=='proportional' else 'proportional','F2_50']
++            assert r['mask_sha256']==other['mask_sha256'] and r['uniform_sha256']==other['uniform_sha256']
++            assert pairs[r['seed'],r['phi_deg'],r['mode'],'healthy']['escaped']
++            source.append(dict(seed=r['seed'],phi_deg=r['phi_deg'],law=r['mode'],fault=r['fault'],
++                first_contact_ms=r['collision_ms'],success900=r['collision_ms'] is None or r['collision_ms']>900,
++                success1000=r['escaped'],mask_sha256=r['mask_sha256'],uniform_sha256=r['uniform_sha256'],
++                source=p.relative_to(ROOT).as_posix(),sha256=sha(p),map='RF-'+tag))
++        for t in [900.,1000.]:
++            q=dict(map='RF-'+tag,horizon_ms=t)
++            for mode in ['proportional','relay']:
++                group=[r for _,r in fault_rows if r['mode']==mode];assert len(group)==24
++                q[mode+'_success']=sum(r['collision_ms'] is None or r['collision_ms']>t for r in group)
++                q[mode+'_n']=24
++            all_table.append(q)
++    assert [(q['proportional_success'],q['relay_success']) for q in all_table]==[(46,48),(37,48),(23,23),(22,23),(24,24),(23,24)]
+     for mode in ['proportional','relay']:
+         events=sorted(r['collision_ms'] for _,r in selected if r['mode']==mode and r['collision_ms'] is not None)
+         times=[0.,*events,1000.];counts=[0,*range(1,len(events)+1),len(events)]
+         curves.extend(dict(law=mode,time_ms=t,cumulative_contacts=c,n=48,cumulative_percent=100*c/48) for t,c in zip(times,counts))
+-    for name,rows in [('first-contacts.csv',source),('horizon-counts.csv',table),('curve-points.csv',curves)]:
++    for name,rows in [('first-contacts.csv',source),('horizon-counts.csv',all_table),('curve-points.csv',curves)]:
+         with (a.out/name).open('x',newline='',encoding='utf-8') as f:
+             w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+     plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['Arial','DejaVu Sans'],
+@@ -78,14 +107,15 @@
+     ax.set(xlim=(0,1.015),ylim=(-1.4,25),xticks=[0,.4,.9,1.],yticks=[0,10,20],
+         xlabel='Time since episode start (s)',ylabel='First contacts (%)')
+     ax.legend(loc='upper left',ncol=2,fontsize=8,handlelength=1.5,borderaxespad=.1)
+-    fig.text(.01,.94,'d  Same RF-0 trajectories, different assessment horizons',fontsize=9,fontweight='bold',va='top')
+-    fig.text(.80,.77,'Contact-free tasks',ha='center',fontsize=8.5,fontweight='bold')
+-    for x,label in [(.68,'Horizon'),(.83,'P'),(.96,'R')]:fig.text(x,.59,label,ha='center',fontsize=8,color=GRAY)
+-    for y,row in zip([.39,.18],table):
+-        fig.text(.68,y,f"{row['horizon_ms']:.0f} ms",ha='center',fontsize=8.5)
+-        fig.text(.83,y,f"{row['proportional_success']}/48",ha='center',fontsize=8.5,color=BLUE)
+-        fig.text(.96,y,f"{row['relay_success']}/48",ha='center',fontsize=8.5,color=GREEN)
+-    fig.text(.075,.025,'Descriptive rescoring; 48 tasks per law in 24 paired seed clusters. No new samples or hypothesis tests.',fontsize=8,color=GRAY)
++    fig.text(.01,.94,'d  RF-0 first contacts; 50% deletion outcomes across horizons',fontsize=9,fontweight='bold',va='top')
++    fig.text(.81,.77,'Contact-free tasks (P, R)',ha='center',fontsize=8.5,fontweight='bold')
++    for x,label in [(.66,'RF'),(.78,'900 ms'),(.935,'1000 ms')]:fig.text(x,.60,label,ha='center',fontsize=8,color=GRAY)
++    for y,tag in zip([.43,.27,.11],['RF-0','RF-A','RF-B']):
++        fig.text(.66,y,tag,ha='center',fontsize=8.5)
++        for x,t in [(.78,900.),(.935,1000.)]:
++            q=next(q for q in all_table if q['map']==tag and q['horizon_ms']==t);n=q['proportional_n']
++            fig.text(x,y,f"{q['proportional_success']}/{n}, {q['relay_success']}/{n}",ha='center',fontsize=8.5)
++    fig.text(.075,.025,'Same trajectories at both horizons; 24/12/12 seed clusters. No new samples or hypothesis tests.',fontsize=8,color=GRAY)
+     for ext in ['pdf','svg','png']:fig.savefig(a.out/('horizon-strip.'+ext),dpi=600,facecolor='white')
+     plt.close(fig)
+     old=pymupdf.open(original);strip=pymupdf.open(a.out/'horizon-strip.pdf')
+@@ -97,11 +127,12 @@
+     merged.save(a.out/'rf-with-horizon.pdf',garbage=4,deflate=True)
+     page.get_pixmap(dpi=180).save(a.out/'preview.png')
+     result=dict(passed=True,classification='descriptive same-record horizon rescoring',
+-        independent_seed_clusters=24,tasks_per_law=48,source_records=288,plotted_records=96,
+-        horizon_counts=table,original_figure_sha256=sha(original),
++        independent_seed_clusters={'RF-0':24,'RF-A':12,'RF-B':12},
++        tasks_per_law={'RF-0':48,'RF-A':24,'RF-B':24},source_records=576,plotted_records=96,tabulated_records=192,
++        horizon_counts=all_table,original_figure_sha256=sha(original),
+         original_panels_imported_without_scaling=True,original_dimensions_pt=list(old[0].rect),
+         composite_dimensions_pt=list(page.rect),raw_input_sha256=hashes,
+-        frozen_summary_sha256=sha(summary_path),script_sha256=sha(Path(__file__).resolve()),
++        frozen_summary_sha256=sha(summary_path),all_summary_sha256=summary_hashes,script_sha256=sha(Path(__file__).resolve()),
+         runtime=dict(python=platform.python_version(),numpy=np.__version__,matplotlib=matplotlib.__version__),
+         confidence_intervals_added=False,hypothesis_tests=False,new_neural_simulations=False,
+         unequal_healthy_reserve_and_cohort_calibration_confounding_retained=True)
+--- a/tools/plot_v10f.py
++++ b/tools/plot_v10f.py
+@@ -41,6 +41,7 @@
+ def main():
+     ap = argparse.ArgumentParser(description=__doc__)
+     ap.add_argument('--out', type=Path, required=True)
++    ap.add_argument('--reuse-only', action='store_true', help='Export only Fig.2, preserving other approved figures')
+     a = ap.parse_args()
+     a.out.mkdir(parents=True, exist_ok=False)
+     inputs = {Path(__file__).resolve().relative_to(ROOT).as_posix(): sha(__file__)}
+@@ -147,9 +148,11 @@
+     delay.text((td['available_s']+td['decision_s'])/2,.269,'150 ms',ha='center',fontsize=7.5)
+     for t in [.4,.5,.6,.7,.8]:delay.axvline(t,lw=.4,color=LINE,zorder=0)
+     delay.set(xlim=(.4,.85),ylim=(.17,.29),xticks=[.4,.6,.8],yticks=[.18,.24],xlabel='Time (s)',ylabel='Outflow (1/s)')
+-    # A shared line-key applies to both panels; semantic labels remain in caption.
+-    fig.text(.15,.385,'Healthy / applied',color=BLUE,fontsize=7.5)
+-    fig.text(.59,.385,'Faulty / requested',color=ORANGE,fontsize=7.5)
++    # Each panel has its own semantic key; colors retain the original curves.
++    fig.text(.15,.385,'Healthy',color=BLUE,fontsize=7.5)
++    fig.text(.32,.385,'50% deletion',color=ORANGE,fontsize=7.5)
++    fig.text(.66,.385,'Applied',color=BLUE,fontsize=7.5)
++    fig.text(.82,.385,'Requested',color=ORANGE,fontsize=7.5)
+     for y, adapter in [(1,'fly'),(0,'tank')]:
+         g,n = layers[adapter]; bars.barh(y,g,color=BLUE,height=.52)
+         bars.barh(y,n,left=g,color=PURPLE,height=.52)
+@@ -161,6 +164,10 @@
+     fig.text(.06,.335,'c  Predefined challenges detected',weight='bold',fontsize=8.5)
+     fig.legend(handles=[Patch(color=BLUE,label='Common checker'),Patch(color=PURPLE,label='Native replay only')],loc='lower center',ncol=2,fontsize=7.5,bbox_to_anchor=(.53,.005),columnspacing=.9,handlelength=1.)
+     save(fig,'v10f_reuse')
++    if a.reuse_only:
++        (a.out/'reuse-check.json').write_text(json.dumps(dict(source_sha256=inputs,
++            figure='v10f_reuse',only_panel_legends_changed=True,new_simulations=False),indent=2)+'\n')
++        return
+ 
+     # Primary task loss, prespecified SECONDARY contrast, descriptive reserve.
+     effects = {(tag,q['fault'],q['mode']):q['estimands']['loss'] for tag in tags for q in ps[tag]}
