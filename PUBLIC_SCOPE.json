@@ -1,11 +1,11 @@
 {
-  "status": "CURATED_V10_1_ENGINEERING_CANDIDATE",
+  "status": "LOCAL_V10_1_FINAL_CLARIFICATION_CANDIDATE",
   "version": "V10.1",
   "scientific_baseline": "43bcd4d6a99b2d9b258cf8a198a4545d237b5c39",
   "frozen_V10": "69dfd2ed9e8fe597ae293398fe58a5d36fef2b7e",
   "generating_snapshot": "986ff54193fee6a1b95815499a4a3477b15ea49a",
   "candidate_pdf": "paper/iscas2027-v10.1-count-candidate.pdf",
-  "candidate_pdf_sha256": "97a936f912e904472fd119b4d53941319fee48a09848cbf658ce1c658ea173b6",
+  "candidate_pdf_sha256": "c5917fa982a92fb126052d4abd11849248c4365baac9822e73aeb1a4443ee736",
   "distribution": "Independent curated scientific snapshot; original generation metadata preserved.",
   "omitted": [
     {
@@ -46,8 +46,8 @@
       "sha256": "782a9ecb33f761da8376f42a12842e8299ffa6a4bd661455066150f95a3e0978"
     },
     "PUBLICATION.md": {
-      "bytes": 2832,
-      "sha256": "f5e6be3ceb853e10f5fc689c5eb2a859538a66c04a985f4becea7f723cf2c9d1"
+      "bytes": 3467,
+      "sha256": "2db5c123341d7045559190b944e1db1be4716b75fd64386cdfd37e84dc18c663"
     },
     "README.md": {
       "bytes": 3768,
@@ -749,6 +749,14 @@
       "bytes": 8914,
       "sha256": "dec7984ed3c6c97cb50a89647256d7835c9aaab3ea7d39321d12ff53dd3fb882"
     },
+    "audit/v10_1-final-clarifications/check.json": {
+      "bytes": 626073,
+      "sha256": "5c4af66375b53a890a2ee26abb91d94821db5b587f9098e877947019c1a8f7f8"
+    },
+    "audit/v10_1-final-clarifications/tests.log": {
+      "bytes": 8914,
+      "sha256": "3f0fdc812767387a9a4c71606d0a1d36bf509d480bbe599de0db92677a916363"
+    },
     "audit/v10_1-final/check.json": {
       "bytes": 1985,
       "sha256": "883896c4e886936bd71d0f656452a6a3ada129eeda48af5a5e9e0447bff81439"
@@ -764,6 +772,10 @@
     "docs/EVIDENCE_INTERFACE_V10.md": {
       "bytes": 7461,
       "sha256": "b2939b082d19d6c038e5b9bc5bf50aafd1874c87f1223b5af736f084cf0b5b5d"
+    },
+    "docs/FINAL_CLARIFICATIONS_V10_1.md": {
+      "bytes": 6120,
+      "sha256": "d5036300e582dfb4cd0a38093501ca42dbd43ab1d445f6ed060d1e0ab15871f7"
     },
     "docs/FINAL_NOTATION_V10_1.md": {
       "bytes": 2410,
@@ -836,6 +848,10 @@
     "experiments/checker-ablation-v10_1/PROTOCOL.md": {
       "bytes": 6398,
       "sha256": "34c37e0973898b5ebe4e966e4782d734ee96b2e17173ac2620c9930717c6ecf5"
+    },
+    "experiments/checker-ablation-v10_1/README.md": {
+      "bytes": 966,
+      "sha256": "44866123b382dc1819b6559ff75541be7e473f4d07f5d15aba7ba629999bd5c9"
     },
     "experiments/checker-ablation-v10_1/STATE.md": {
       "bytes": 1102,
@@ -1390,28 +1406,28 @@
       "sha256": "3803cf26ed5f2759e817af43177251e8c9f1c8d4e83f61c8761f485a3daa50a2"
     },
     "paper/iscas2027-v10.1-count-candidate.pdf": {
-      "bytes": 3500665,
-      "sha256": "97a936f912e904472fd119b4d53941319fee48a09848cbf658ce1c658ea173b6"
+      "bytes": 3491265,
+      "sha256": "c5917fa982a92fb126052d4abd11849248c4365baac9822e73aeb1a4443ee736"
     },
     "paper/iscas2027-v10.1-timing-candidate.pdf": {
-      "bytes": 3500665,
-      "sha256": "97a936f912e904472fd119b4d53941319fee48a09848cbf658ce1c658ea173b6"
+      "bytes": 3491265,
+      "sha256": "c5917fa982a92fb126052d4abd11849248c4365baac9822e73aeb1a4443ee736"
     },
     "paper/main.pdf": {
-      "bytes": 3500665,
-      "sha256": "97a936f912e904472fd119b4d53941319fee48a09848cbf658ce1c658ea173b6"
+      "bytes": 3491265,
+      "sha256": "c5917fa982a92fb126052d4abd11849248c4365baac9822e73aeb1a4443ee736"
     },
     "paper/main.tex": {
-      "bytes": 1128,
-      "sha256": "62e6de22e50fda1cff97eb2b6236b09cb3dc8f59a5e53a3248d5a280f6581f28"
+      "bytes": 1048,
+      "sha256": "ce7aa8ada2c8366d318a8efffdaba5d9c7d582f7dc9d3e5dec8f7debe09c9513"
     },
     "paper/main_v10_1_timing.tex": {
-      "bytes": 1128,
-      "sha256": "62e6de22e50fda1cff97eb2b6236b09cb3dc8f59a5e53a3248d5a280f6581f28"
+      "bytes": 1048,
+      "sha256": "ce7aa8ada2c8366d318a8efffdaba5d9c7d582f7dc9d3e5dec8f7debe09c9513"
     },
     "paper/main_v10_horizon.tex": {
-      "bytes": 1128,
-      "sha256": "62e6de22e50fda1cff97eb2b6236b09cb3dc8f59a5e53a3248d5a280f6581f28"
+      "bytes": 1048,
+      "sha256": "ce7aa8ada2c8366d318a8efffdaba5d9c7d582f7dc9d3e5dec8f7debe09c9513"
     },
     "paper/refs.bib": {
       "bytes": 22655,
@@ -1422,28 +1438,28 @@
       "sha256": "a1f5d7fb05787e476116ade023564c09fd184e1d11a8c7c5cb4351a2c29e6ede"
     },
     "paper/sections/v10h_abstract.tex": {
-      "bytes": 1075,
-      "sha256": "6fff00401069c653613262180d353240bd02027fa80e7eb58385ce37865e313a"
+      "bytes": 945,
+      "sha256": "cbdd2252063ae20a3f773bf3c13d8733c95b30d44d76211399151637bac61293"
     },
     "paper/sections/v10h_contract.tex": {
-      "bytes": 1435,
-      "sha256": "75f4749e234fad0e1eefd59f86971e286c38f9bd2c2a2429d90babb0b18234eb"
+      "bytes": 1370,
+      "sha256": "d2b9b70a59e1c326956a45827c1a79247c2c477cf53f1e008e4facf2c2868ccc"
     },
     "paper/sections/v10h_figures.tex": {
-      "bytes": 3238,
-      "sha256": "92ee7852b493cc2e3d2949f2036fdd34ee4e71a72edacc12609920cbed1e59bf"
+      "bytes": 3239,
+      "sha256": "4a8f304e3d31b5f079c74fc97567b43dd18b8ecaec7815ba636b18b4e1b6a52e"
     },
     "paper/sections/v10h_intro.tex": {
-      "bytes": 1771,
-      "sha256": "474db2b6b323b4146fca51bba936eea8633e72ea6c5dfc05aca8f133ac702bdd"
+      "bytes": 1672,
+      "sha256": "63418f65f546d39b2ab6a847b26e1cdb35be17fa2b6800a0e2e01ab28c982393"
     },
     "paper/sections/v10h_limits.tex": {
-      "bytes": 1083,
-      "sha256": "f4254a38a8a059dccf7b4eca29f49d2bdf9d224506e975c4b400392aa704d2fa"
+      "bytes": 897,
+      "sha256": "3f63a5e76cf8f8cde51882371100534af690424ade108a063d7392a6b563f473"
     },
     "paper/sections/v10h_results.tex": {
-      "bytes": 4467,
-      "sha256": "1ae2c2676658688b8b54ba55fe97da2c25d1daaeb650b515d142ccf32116ba2b"
+      "bytes": 4681,
+      "sha256": "5a1635a43b1dd6d04efde98ad1d25cc9def357831d16a21f6b3d80298b1ac292"
     },
     "provenance/analysis-source/analyze_burst_end.py": {
       "bytes": 20466,
@@ -12900,5 +12916,8 @@
   "engineering_scientific_baseline": "22999d28d8fe22f863fc8f62eaa45a57256083d0",
   "engineering_plan_commit": "246352cff3d0ca9f7e3e9d7ac5158fd4cd734482",
   "engineering_code_data_commit": "b29f08970f7749c916a472e835517547d832e6cc",
-  "regression_tests_passed": 54
+  "regression_tests_passed": 54,
+  "reviewed_baseline": "0966a17d035c191891b3ea54c3ee2c9b68723319",
+  "local_revision_branch": "research/v10.1-final-clarifications",
+  "publication_status": "Local only; no push or formal submission authorized/performed"
 }

@@ -2,7 +2,7 @@
 
 Current candidate: `paper/iscas2027-v10.1-count-candidate.pdf`
 
-PDF SHA256: `97a936f912e904472fd119b4d53941319fee48a09848cbf658ce1c658ea173b6`
+PDF SHA256: `c5917fa982a92fb126052d4abd11849248c4365baac9822e73aeb1a4443ee736`
 
 Active source: `paper/main_v10_1_timing.tex = paper/main.tex = paper/main_v10_horizon.tex`.
 
@@ -10,7 +10,12 @@ The timing-candidate filename and `paper/main.pdf` are byte-identical PDF aliase
 
 ## Engineering candidate
 
-Branch: `research/v10.1-engineering-ablation`.
+Local clarification branch: `research/v10.1-final-clarifications`.
+
+Reviewed baseline: `0966a17d035c191891b3ea54c3ee2c9b68723319` on
+`research/v10.1-engineering-ablation`, preserved unchanged. This child revision
+is local only; publication and formal submission require separate authorization.
+See [the clarification and manifest-scope notes](docs/FINAL_CLARIFICATIONS_V10_1.md).
 
 - Preserved scientific/manuscript baseline: `22999d28d8fe22f863fc8f62eaa45a57256083d0`.
 - Pre-scoring plan/labels/fixtures commit: `246352cff3d0ca9f7e3e9d7ac5158fd4cd734482`.
@@ -26,11 +31,15 @@ versus 36/87 for trusted-header checks, with zero valid-control rejects and six
 retained misses. Separate re-scoring of 72 V8 records quantifies actual reporting
 impact; those records are not pooled with 576 current neural episodes.
 
-Only Fig.2(c) is replaced. Fig.2(a,b), original Fig.1/3/4 assets and all frozen
-scientific records/calibrations/registrations remain unchanged. The original
-44 regressions are retained and ten new tests added. The PDF has four technical
-pages and a reference-only fifth page. See `docs/ENGINEERING_EVALUATION_V10_1.md`,
-`ENGINEERING_SCOPE.json` and `audit/v10_1-engineering/`.
+The engineering baseline replaced only Fig.2(c). This clarification revision
+changes no figure asset; Fig.1's caption distinguishes its earlier development
+challenges from the additional catalogue. All frozen scientific records,
+calibrations and registrations remain unchanged. The engineering baseline
+retained the original 44 regressions and added ten; this revision reruns the same
+54 tests. The PDF has four technical pages and a reference-only fifth page.
+Current checks are in `audit/v10_1-final-clarifications/`; earlier checks in
+`audit/v10_1-engineering/` remain archived unchanged. See also
+`docs/ENGINEERING_EVALUATION_V10_1.md` and `ENGINEERING_SCOPE.json`.
 
 ## Scientific provenance retained
 
