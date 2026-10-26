@@ -13,7 +13,7 @@ import urllib.request
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
-COMMIT = '22999d28d8fe22f863fc8f62eaa45a57256083d0'
+COMMIT = 'f58968795e9a325d88d478851bdb270d5389c5e5'
 
 
 def slug(text):

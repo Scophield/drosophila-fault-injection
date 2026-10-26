@@ -2,3 +2,6 @@
 /media/paper-v10.1/** -text
 /docs/homepage-animation/** -text
 /tools/homepage/*.py -text
+/media/showcase/** -text
+/docs/showcase/** -text
+/tools/homepage/*.cjs -text

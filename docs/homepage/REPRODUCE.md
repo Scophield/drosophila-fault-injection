@@ -1,6 +1,6 @@
 # Verify and reproduce the homepage media
 
-The homepage uses saved experimental records, not new neural simulations. Current scientific snapshot: `22999d28d8fe22f863fc8f62eaa45a57256083d0`; main-page baseline: `8463020054538e8b9989c0ee8848047d833c4a0c`.
+The homepage uses saved experimental records, not new neural simulations. The current paper is [f58968795e9a325d88d478851bdb270d5389c5e5](https://github.com/Scophield/drosophila-fault-injection/tree/f58968795e9a325d88d478851bdb270d5389c5e5). Animation scientific verification remains pinned to `22999d28d8fe22f863fc8f62eaa45a57256083d0`, with original media generation at `75313d7740491e7f7830e2fc554c21e1aaefe655`; the same neural records are retained in the current paper. Main-page baseline: `8463020054538e8b9989c0ee8848047d833c4a0c`.
 
 ## Current scientific verification
 
@@ -28,7 +28,7 @@ python tools/homepage/check_media.py --media media/paper-v10.1 --ffmpeg "<path-t
 
 This decodes all four videos, checks the manifest hashes, dimensions, duration, frame counts and GIFs, and writes display-only QA files under `media/paper-v10.1/qa/`. It does not edit MP4/GIF/poster bytes or experimental records.
 
-MP4 outputs are 1280×720, 24 fps, H.264/yuv420p with no audio; durations are 17/17/18/26 s for A/B/C/overview. GIF previews are 800×450, 8 fps and approximately 0.95/0.71/0.56/1.41 MB. The overview edits only A/B/C and adds no experiment. The homepage embeds only the overview GIF; individual clips are linked with optional static posters.
+MP4 outputs are 1280×720, 24 fps, H.264/yuv420p with no audio; durations are 17/17/18/26 s for A/B/C/overview. GIF previews are 800×450, 8 fps and approximately 0.95/0.71/0.56/1.41 MB. The overview edits only A/B/C and adds no experiment. The homepage now embeds all four GIFs, each linked to its MP4, with separate original posters.
 
 ## Re-encode the original media
 

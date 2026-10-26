@@ -1,6 +1,6 @@
 # Earlier project versions
 
-The current homepage presents the V10.1 closed-loop timing/contact campaigns, with fixed scientific snapshot [22999d28d8fe22f863fc8f62eaa45a57256083d0](https://github.com/Scophield/drosophila-fault-injection/tree/22999d28d8fe22f863fc8f62eaa45a57256083d0).
+The current homepage links the [f58968795e9a325d88d478851bdb270d5389c5e5 paper](https://github.com/Scophield/drosophila-fault-injection/tree/f58968795e9a325d88d478851bdb270d5389c5e5). Its animation evidence remains verified against [22999d28d8fe22f863fc8f62eaa45a57256083d0](https://github.com/Scophield/drosophila-fault-injection/tree/22999d28d8fe22f863fc8f62eaa45a57256083d0), with the same frozen neural records; generation and verification identities are retained separately.
 
 - [Original main project page at 8463020](https://github.com/Scophield/drosophila-fault-injection/blob/8463020054538e8b9989c0ee8848047d833c4a0c/README.md) covers earlier open-loop transmission/activity experiments. Its claims and figures retain that historical identity.
 - [Original 3.13-s escape clip](../../sim_vision/results_vision/demo_escape.mp4) is preserved byte-for-byte. It is not a V10.1 experiment or a source for the new animations.

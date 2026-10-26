@@ -1,0 +1,87 @@
+{
+  "homepage_parent": "c6d5189f88dc108c6e7d87114d64d32029b9a759",
+  "current_paper_commit": "f58968795e9a325d88d478851bdb270d5389c5e5",
+  "executed_engineering_commit": "b29f08970f7749c916a472e835517547d832e6cc",
+  "animation_generation_commit": "75313d7740491e7f7830e2fc554c21e1aaefe655",
+  "animation_verification_commit": "22999d28d8fe22f863fc8f62eaa45a57256083d0",
+  "blender_rerendered": false,
+  "blender_edited": false,
+  "neural_simulation": false,
+  "paper_modified": false,
+  "assets": [
+    {
+      "file": "media/showcase/fruit_fly.png",
+      "bytes": 3998363,
+      "pixels": [
+        2400,
+        1600
+      ],
+      "sha256": "55876834ab465bb3136d1d9d7513fb462f13494f2635a1d37ff48611d0595023",
+      "source": "blender_drosophila/fruit_fly.png",
+      "source_sha256": "55876834ab465bb3136d1d9d7513fb462f13494f2635a1d37ff48611d0595023",
+      "copy": "byte-identical",
+      "role": "existing approved Blender studio render"
+    },
+    {
+      "file": "media/showcase/connectome.png",
+      "bytes": 4850297,
+      "pixels": [
+        2400,
+        1600
+      ],
+      "sha256": "de7ee5003c24a705f7d52098f44f5ad30bdee6ec40ab0ecc8b36ad2d992cbdc9",
+      "source": "blender_drosophila/connectome.png",
+      "source_sha256": "de7ee5003c24a705f7d52098f44f5ad30bdee6ec40ab0ecc8b36ad2d992cbdc9",
+      "copy": "byte-identical",
+      "role": "existing approved Blender studio render"
+    },
+    {
+      "file": "media/showcase/visual_pathway.png",
+      "bytes": 5705783,
+      "pixels": [
+        2600,
+        1600
+      ],
+      "sha256": "6ee605256e11242a0bddee666951fcf583bac32142db32967146eaf6ceb7bd52",
+      "source": "blender_drosophila/visual_pathway.png",
+      "source_sha256": "6ee605256e11242a0bddee666951fcf583bac32142db32967146eaf6ceb7bd52",
+      "copy": "byte-identical",
+      "role": "existing approved Blender studio render"
+    },
+    {
+      "file": "media/showcase/v10_1_ablation.png",
+      "bytes": 57488,
+      "pixels": [
+        756,
+        588
+      ],
+      "sha256": "65f578c54ba571bcbfb4bef953732e036b1f2c81f4b703bde2a6ed91941fbff8",
+      "source_commit": "b29f08970f7749c916a472e835517547d832e6cc",
+      "source": "experiments/checker-ablation-v10_1/figure-03/v10_1_ablation.png",
+      "source_sha256": "65f578c54ba571bcbfb4bef953732e036b1f2c81f4b703bde2a6ed91941fbff8",
+      "copy": "byte-identical",
+      "role": "existing quantitative figure; unchanged in f589687"
+    },
+    {
+      "file": "media/showcase/research-vision.svg",
+      "bytes": 2832,
+      "viewbox": [
+        0,
+        0,
+        1100,
+        330
+      ],
+      "sha256": "8e9629f9e8a440aedbaefd8378c9ead19744d592e3474a5b9968ca29ec02bdf4",
+      "source": "new original repository-native SVG",
+      "role": "schematic planned research vision; no measured data",
+      "blender_asset": false,
+      "experimental_data": false,
+      "implemented_capability_claim": false
+    }
+  ],
+  "archived_readme": {
+    "file": "docs/showcase/README-c6d5189.md",
+    "sha256": "d0b96dea01c3a7bc925b9af9fb7b874ff9aa7c8bf0a7353218d15049c5732e79",
+    "comparison": "original checkout bytes; CRLF checkout normalization matches c6 Git blob"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "local_only": true,
+  "published": false,
+  "homepage_parent": "c6d5189f88dc108c6e7d87114d64d32029b9a759",
+  "current_paper_commit": "f58968795e9a325d88d478851bdb270d5389c5e5",
+  "executed_engineering_commit": "b29f08970f7749c916a472e835517547d832e6cc",
+  "readme_word_count": 1115,
+  "relative_links_checked": 40,
+  "broken_relative_links": [],
+  "html_script_or_style": false,
+  "showcase_copy_hashes_pass": true,
+  "protected_paper_code_and_original_media_unchanged": true,
+  "local_browser_viewports": 4,
+  "local_videos_played": 4,
+  "github_actual_rendering": "not verified; not published",
+  "showcase_assets": 5,
+  "new_original_schematic": "media/showcase/research-vision.svg",
+  "new_schematic_contains_measured_data": false,
+  "blender_images_byte_identical": true,
+  "reproduction_command_invalid_required_argument_removed": true,
+  "vision_is_explicitly_planned": true,
+  "current_paper_link_checker_commit": "f58968795e9a325d88d478851bdb270d5389c5e5"
+}

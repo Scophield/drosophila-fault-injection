@@ -1,0 +1,379 @@
+{
+  "local_file_links": 49,
+  "local_anchors": 6,
+  "external_links": 15,
+  "links": [
+    {
+      "document": "README.md",
+      "link": "#demos",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "#measured-evidence",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "#reproduce",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "#future-directions",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/showcase/PROVENANCE.md",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/overview.mp4",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/overview.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/homepage-animation/examples.json",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-a-delay.mp4",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-a-delay.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/homepage/EVIDENCE.md#selected-examples",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-b-control.mp4",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-b-control.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/homepage/EVIDENCE.md#selected-examples",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-c-horizon.mp4",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-c-horizon.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/homepage/EVIDENCE.md",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/homepage/REPRODUCE.md",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/showcase/PROVENANCE.md",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/showcase/PROVENANCE.md",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/homepage/HISTORY.md",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/showcase/README-c6d5189.md",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/showcase/fruit_fly.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/showcase/fruit_fly.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/showcase/connectome.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/showcase/connectome.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/showcase/visual_pathway.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/showcase/visual_pathway.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/overview.mp4",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/overview.gif",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-a-delay.mp4",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-a-delay.gif",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-b-control.mp4",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-b-control.gif",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-c-horizon.mp4",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/paper-v10.1/demo-c-horizon.gif",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/showcase/v10_1_ablation.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/showcase/v10_1_ablation.png",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/showcase/research-vision.svg",
+      "file_exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "media/showcase/research-vision.svg",
+      "file_exists": true
+    },
+    {
+      "document": "docs/homepage/EVIDENCE.md",
+      "link": "current-verification.json",
+      "file_exists": true
+    },
+    {
+      "document": "docs/homepage/EVIDENCE.md",
+      "link": "../homepage-animation/examples.json",
+      "file_exists": true
+    },
+    {
+      "document": "docs/homepage/HISTORY.md",
+      "link": "../../sim_vision/results_vision/demo_escape.mp4",
+      "file_exists": true
+    },
+    {
+      "document": "docs/homepage/REPRODUCE.md",
+      "link": "current-verification.json",
+      "file_exists": true
+    },
+    {
+      "document": "docs/homepage/REPRODUCE.md",
+      "link": "../homepage-animation/replay-check.json",
+      "file_exists": true
+    },
+    {
+      "document": "docs/homepage/REPRODUCE.md",
+      "link": "../homepage-animation/REPRODUCE.md",
+      "file_exists": true
+    },
+    {
+      "document": "docs/homepage-animation/EVIDENCE_MAP.md",
+      "link": "examples.json",
+      "file_exists": true
+    },
+    {
+      "document": "docs/homepage-animation/EVIDENCE_MAP.md",
+      "link": "summary.json",
+      "file_exists": true
+    },
+    {
+      "document": "docs/homepage-animation/REPRODUCE.md",
+      "link": "../homepage/REPRODUCE.md",
+      "file_exists": true
+    }
+  ],
+  "anchors": [
+    {
+      "document": "README.md",
+      "link": "#demos",
+      "passed": true
+    },
+    {
+      "document": "README.md",
+      "link": "#measured-evidence",
+      "passed": true
+    },
+    {
+      "document": "README.md",
+      "link": "#reproduce",
+      "passed": true
+    },
+    {
+      "document": "README.md",
+      "link": "#future-directions",
+      "passed": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/homepage/EVIDENCE.md#selected-examples",
+      "passed": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/homepage/EVIDENCE.md#selected-examples",
+      "passed": true
+    }
+  ],
+  "remote": [
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/paper/iscas2027-v10.1-count-candidate.pdf",
+      "exact_git_object_verified": true,
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/paper/iscas2027-v10.1-count-candidate.pdf"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/docs/WARNING_COUNT_PROTOCOL_V10_1.md",
+      "exact_git_object_verified": true,
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/docs/WARNING_COUNT_PROTOCOL_V10_1.md"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/tree/b29f08970f7749c916a472e835517547d832e6cc",
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/tree/b29f08970f7749c916a472e835517547d832e6cc"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/docs/ENGINEERING_EVALUATION_V10_1.md",
+      "exact_git_object_verified": true,
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/docs/ENGINEERING_EVALUATION_V10_1.md"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/tree/f58968795e9a325d88d478851bdb270d5389c5e5/paper",
+      "exact_git_object_verified": true,
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/tree/f58968795e9a325d88d478851bdb270d5389c5e5/paper"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/tree/f58968795e9a325d88d478851bdb270d5389c5e5",
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/tree/f58968795e9a325d88d478851bdb270d5389c5e5"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/REPRODUCE.md",
+      "exact_git_object_verified": true,
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/REPRODUCE.md"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/docs/V10_DATA_INDEX.md",
+      "exact_git_object_verified": true,
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/docs/V10_DATA_INDEX.md"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/docs/THIRD_PARTY_INPUTS_V10.md",
+      "exact_git_object_verified": true,
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/blob/f58968795e9a325d88d478851bdb270d5389c5e5/docs/THIRD_PARTY_INPUTS_V10.md"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/tree/22999d28d8fe22f863fc8f62eaa45a57256083d0",
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/tree/22999d28d8fe22f863fc8f62eaa45a57256083d0"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/blob/22999d28d8fe22f863fc8f62eaa45a57256083d0/docs/V10_DATA_INDEX.md",
+      "exact_git_object_verified": true,
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/blob/22999d28d8fe22f863fc8f62eaa45a57256083d0/docs/V10_DATA_INDEX.md"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/blob/22999d28d8fe22f863fc8f62eaa45a57256083d0/docs/WARNING_COUNT_PROTOCOL_V10_1.md",
+      "exact_git_object_verified": true,
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/blob/22999d28d8fe22f863fc8f62eaa45a57256083d0/docs/WARNING_COUNT_PROTOCOL_V10_1.md"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/blob/8463020054538e8b9989c0ee8848047d833c4a0c/README.md",
+      "exact_git_object_verified": true,
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/blob/8463020054538e8b9989c0ee8848047d833c4a0c/README.md"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/tree/69dfd2ed9e8fe597ae293398fe58a5d36fef2b7e",
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/tree/69dfd2ed9e8fe597ae293398fe58a5d36fef2b7e"
+    },
+    {
+      "url": "https://github.com/Scophield/drosophila-fault-injection/tree/75313d7740491e7f7830e2fc554c21e1aaefe655",
+      "http_status": 200,
+      "final_url": "https://github.com/Scophield/drosophila-fault-injection/tree/75313d7740491e7f7830e2fc554c21e1aaefe655"
+    }
+  ],
+  "public_pdf": {
+    "url": "https://raw.githubusercontent.com/Scophield/drosophila-fault-injection/f58968795e9a325d88d478851bdb270d5389c5e5/paper/iscas2027-v10.1-count-candidate.pdf",
+    "sha256": "35eb9d3e96a2f45317a3f6c5205d5a78683be4e067d6cf155532175cb44be622",
+    "local_public_bytes_equal": true
+  },
+  "all_http_links_passed": true,
+  "github_default_homepage_updated": false,
+  "github_candidate_media_rendering_verified": false
+}

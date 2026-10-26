@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="330" viewBox="0 0 1100 330" role="img" aria-labelledby="title description">
+  <title id="title">Research vision — planned</title>
+  <desc id="description">A schematic future research direction: device nonidealities to spiking dynamics to feedback and motion to task outcomes. The diagram contains no measured results or claimed implemented hardware.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#147f87" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="1100" height="330" rx="14" fill="#ffffff"/>
+  <g font-family="Arial, DejaVu Sans, sans-serif" fill="#203e48">
+    <text x="28" y="36" font-size="20" font-weight="700" letter-spacing="2.3" fill="#147f87">RESEARCH VISION / PLANNED</text>
+    <path d="M 28 54 H 1072" stroke="#d8e5e7" stroke-width="2"/>
+    <g stroke="#147f87" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="94" y="91" width="83" height="72" rx="10" fill="#edf7f7"/>
+      <rect x="116" y="111" width="39" height="32" rx="4"/>
+      <path d="M 110 80 V 91 M 135 80 V 91 M 160 80 V 91 M 110 163 V 174 M 135 163 V 174 M 160 163 V 174 M 83 106 H 94 M 83 128 H 94 M 83 150 H 94 M 177 106 H 188 M 177 128 H 188 M 177 150 H 188"/>
+      <path d="M 337 147 H 360 L 369 142 L 381 155 L 396 96 L 409 156 L 420 147 H 447"/>
+      <path d="M 330 172 H 454" stroke="#d8e5e7" stroke-width="2"/>
+      <path d="M 599 160 C 614 160 609 115 635 116 C 653 117 658 143 689 121"/>
+      <path d="M 666 99 L 696 118 L 663 131 Z" fill="#edf7f7"/>
+      <path d="M 611 99 A 60 60 0 0 1 685 85" stroke="#d66049" stroke-width="3"/>
+      <circle cx="928" cy="128" r="41" stroke="#d66049" stroke-dasharray="6 7" stroke-width="3"/>
+      <circle cx="905" cy="128" r="10" fill="#147f87"/>
+      <circle cx="951" cy="128" r="10" fill="#d66049" stroke="#d66049"/>
+      <path d="M 220 128 H 289" marker-end="url(#arrow)" stroke-width="3"/>
+      <path d="M 479 128 H 548" marker-end="url(#arrow)" stroke-width="3"/>
+      <path d="M 739 128 H 808" marker-end="url(#arrow)" stroke-width="3"/>
+    </g>
+    <g text-anchor="middle" font-size="30" font-weight="700">
+      <text x="135" y="228">Device</text><text x="135" y="265">nonidealities</text>
+      <text x="394" y="228">Spiking</text><text x="394" y="265">dynamics</text>
+      <text x="653" y="228">Feedback</text><text x="653" y="265">and motion</text>
+      <text x="928" y="228">Task</text><text x="928" y="265">outcomes</text>
+    </g>
+    <text x="550" y="310" font-size="17" text-anchor="middle" fill="#60767e">Schematic roadmap · future research directions</text>
+  </g>
+</svg>

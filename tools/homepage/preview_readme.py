@@ -7,6 +7,7 @@ from pathlib import Path
 import html
 import re
 import argparse
+import os
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -92,7 +93,8 @@ def main():
     text = (ROOT/'README.md').read_text(encoding='utf-8')
     body = render(text)
     # Resolve file links while keeping fragment navigation in this document.
-    body = re.sub(r'(href|src)="([^"]+)"', lambda m: m[0] if m[2].startswith(('#','https://')) else m[1]+'="../'+m[2]+'"', body)
+    prefix = Path(os.path.relpath(ROOT, args.out.resolve())).as_posix()+'/'
+    body = re.sub(r'(href|src)="([^"]+)"', lambda m: m[0] if m[2].startswith(('#','https://')) else m[1]+'="'+prefix+m[2]+'"', body)
     assert '@@SLOT' not in body
     for dark in [False, True]:
         page = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local README preview</title><style>'+CSS+'</style></head>'
@@ -100,7 +102,7 @@ def main():
         (args.out/('readme-dark.html' if dark else 'readme.html')).write_text(page, encoding='utf-8')
     media_page = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local media check</title><style>body{max-width:1000px;margin:24px auto;padding:16px;font:16px/1.5 system-ui}video{display:block;width:100%;background:white}section{margin-bottom:32px}</style></head><body><h1>Local media check — unpublished</h1>'
     for key, name in [('a','demo-a-delay'),('b','demo-b-control'),('c','demo-c-horizon'),('overview','overview')]:
-        media_page += f'<section><h2>{name}</h2><video id="video-{key}" controls muted playsinline preload="metadata" poster="../media/paper-v10.1/{name}.png"><source src="../media/paper-v10.1/{name}.mp4" type="video/mp4"></video></section>'
+        media_page += f'<section><h2>{name}</h2><video id="video-{key}" controls muted playsinline preload="metadata" poster="{prefix}media/paper-v10.1/{name}.png"><source src="{prefix}media/paper-v10.1/{name}.mp4" type="video/mp4"></video></section>'
     (args.out/'media.html').write_text(media_page+'</body></html>', encoding='utf-8')
     print(args.out/'readme.html')
 
