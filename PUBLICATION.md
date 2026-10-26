@@ -2,7 +2,7 @@
 
 Current candidate: `paper/iscas2027-v10.1-count-candidate.pdf`
 
-PDF SHA256: `cc896a04cd349c59320445e7f55cc299a93dc1d3a3b4d36ae61b059722108dbe`
+PDF SHA256: `35eb9d3e96a2f45317a3f6c5205d5a78683be4e067d6cf155532175cb44be622`
 
 Active source: `paper/main_v10_1_timing.tex = paper/main.tex = paper/main_v10_horizon.tex`.
 
@@ -10,17 +10,19 @@ The timing-candidate filename and `paper/main.pdf` are byte-identical PDF aliase
 
 ## Engineering candidate
 
-Local abstract-context branch: `research/v10.1-abstract-context`.
+Repository branch: `research/v10.1-abstract-context`.
 
-Frozen manuscript parent: `9efb38678373acaaf9427e7aad5331ed73734606`,
-preserved on `research/v10.1-final-clarifications`. This child adds one abstract
-background sentence and an existing source citation in the Introduction. See
-[the abstract-context note](docs/ABSTRACT_CONTEXT_V10_1.md).
+The current abstract follows the author-provided collision-first wording, with
+fact-preserving compression for four technical pages. Its source/PDF bytes are
+bound by PUBLIC_SCOPE.json and the enclosing commit. Publication to this
+independent branch is authorized; formal submission has not been performed.
+See [the current abstract note](docs/ABSTRACT_FINAL_V10_1.md).
 
-Reviewed baseline: `0966a17d035c191891b3ea54c3ee2c9b68723319` on
-`research/v10.1-engineering-ablation`, preserved unchanged. This child revision
-is local only; publication and formal submission require separate authorization.
-See [the clarification and manifest-scope notes](docs/FINAL_CLARIFICATIONS_V10_1.md).
+Preserved manuscript stages: abstract background parent
+`37becae465a563679bf6db2d668fe01b1779adce`, clarification parent
+`9efb38678373acaaf9427e7aad5331ed73734606`, and engineering baseline
+`0966a17d035c191891b3ea54c3ee2c9b68723319`. Their stage-specific local notes
+remain archived; the current publication status is stated here.
 
 - Preserved scientific/manuscript baseline: `22999d28d8fe22f863fc8f62eaa45a57256083d0`.
 - Pre-scoring plan/labels/fixtures commit: `246352cff3d0ca9f7e3e9d7ac5158fd4cd734482`.
@@ -42,7 +44,8 @@ challenges from the additional catalogue. All frozen scientific records,
 calibrations and registrations remain unchanged. The engineering baseline
 retained the original 44 regressions and added ten; the clarification parent reran the same
 54 tests. The abstract-only child preserves their source hashes. The PDF has four technical pages and a reference-only fifth page.
-Current checks are in `audit/v10_1-abstract-context/`; prior clarification
+Current document checks are in `audit/v10_1-abstract-final/`; the background-only
+checks in `audit/v10_1-abstract-context/` and prior clarification
 checks in `audit/v10_1-final-clarifications/` and engineering checks in
 `audit/v10_1-engineering/` remain archived unchanged. Numerical code is unchanged;
 this round reruns document/integrity checks, retaining the parent's 54-test result. See also

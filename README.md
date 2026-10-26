@@ -25,7 +25,7 @@ These endpoints use the same 24/12/12 seed clusters. Timing analysis is retrospe
 ## Use this version
 
 ```text
-git clone --single-branch --branch research/v10.1-engineering-ablation https://github.com/Scophield/drosophila-fault-injection.git drosophila-v10.1
+git clone --single-branch --branch research/v10.1-abstract-context https://github.com/Scophield/drosophila-fault-injection.git drosophila-v10.1
 cd drosophila-v10.1
 git rev-parse HEAD
 python tools/verify_v10_1.py

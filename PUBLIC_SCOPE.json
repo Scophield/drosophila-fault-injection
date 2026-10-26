@@ -1,11 +1,11 @@
 {
-  "status": "LOCAL_V10_1_ABSTRACT_CONTEXT_CANDIDATE",
+  "status": "V10_1_ABSTRACT_FINAL_CANDIDATE",
   "version": "V10.1",
   "scientific_baseline": "43bcd4d6a99b2d9b258cf8a198a4545d237b5c39",
   "frozen_V10": "69dfd2ed9e8fe597ae293398fe58a5d36fef2b7e",
   "generating_snapshot": "986ff54193fee6a1b95815499a4a3477b15ea49a",
   "candidate_pdf": "paper/iscas2027-v10.1-count-candidate.pdf",
-  "candidate_pdf_sha256": "cc896a04cd349c59320445e7f55cc299a93dc1d3a3b4d36ae61b059722108dbe",
+  "candidate_pdf_sha256": "35eb9d3e96a2f45317a3f6c5205d5a78683be4e067d6cf155532175cb44be622",
   "distribution": "Independent curated scientific snapshot; original generation metadata preserved.",
   "omitted": [
     {
@@ -46,12 +46,12 @@
       "sha256": "782a9ecb33f761da8376f42a12842e8299ffa6a4bd661455066150f95a3e0978"
     },
     "PUBLICATION.md": {
-      "bytes": 4008,
-      "sha256": "cd56c5fb5149c1b2ab5ee53d64acfcf8ea1878ed7197e239eb28ea8d97be3b53"
+      "bytes": 4172,
+      "sha256": "c34fdef3f2863acc417263ee8aa4afe07c1991cdd6d27dc73df49ac3aac96f01"
     },
     "README.md": {
-      "bytes": 3768,
-      "sha256": "dbf47456145f8e2f4a6249c5c1292910fb89adce8a0e1512058d291c5467a2ca"
+      "bytes": 3764,
+      "sha256": "a2aa7e519a1c804ff4c4a2f101f55fbddd307c721c0a0c1d273d22686b26d083"
     },
     "REPRODUCE.md": {
       "bytes": 6675,
@@ -733,6 +733,10 @@
       "bytes": 1964,
       "sha256": "e29fabb9111703ac9c54ff8bea14468842008b82d26664677bbb05c3ecf9d6cd"
     },
+    "audit/v10_1-abstract-final/check.json": {
+      "bytes": 1991,
+      "sha256": "f6e0add31d3174e1cc0d5d2c42eac3e76ea7c1c735a0f97d893886ec09e8e938"
+    },
     "audit/v10_1-count/check.json": {
       "bytes": 2677,
       "sha256": "9f1840e03acd3b53fa730afaf0609eeec55a615fc490e1c6ed3389a01771cdaa"
@@ -768,6 +772,10 @@
     "docs/ABSTRACT_CONTEXT_V10_1.md": {
       "bytes": 1854,
       "sha256": "31abbcf3810e9b7261371c519677b829eacc56a73bde0e0d033e13d8afe45aee"
+    },
+    "docs/ABSTRACT_FINAL_V10_1.md": {
+      "bytes": 1669,
+      "sha256": "0e630488f0f179794a5b5827fb6c297ae664f415908389ee6ab9fc9769648222"
     },
     "docs/COUNT_REVISION_IMPLEMENTATION.md": {
       "bytes": 3020,
@@ -1414,16 +1422,16 @@
       "sha256": "3803cf26ed5f2759e817af43177251e8c9f1c8d4e83f61c8761f485a3daa50a2"
     },
     "paper/iscas2027-v10.1-count-candidate.pdf": {
-      "bytes": 3491409,
-      "sha256": "cc896a04cd349c59320445e7f55cc299a93dc1d3a3b4d36ae61b059722108dbe"
+      "bytes": 3490330,
+      "sha256": "35eb9d3e96a2f45317a3f6c5205d5a78683be4e067d6cf155532175cb44be622"
     },
     "paper/iscas2027-v10.1-timing-candidate.pdf": {
-      "bytes": 3491409,
-      "sha256": "cc896a04cd349c59320445e7f55cc299a93dc1d3a3b4d36ae61b059722108dbe"
+      "bytes": 3490330,
+      "sha256": "35eb9d3e96a2f45317a3f6c5205d5a78683be4e067d6cf155532175cb44be622"
     },
     "paper/main.pdf": {
-      "bytes": 3491409,
-      "sha256": "cc896a04cd349c59320445e7f55cc299a93dc1d3a3b4d36ae61b059722108dbe"
+      "bytes": 3490330,
+      "sha256": "35eb9d3e96a2f45317a3f6c5205d5a78683be4e067d6cf155532175cb44be622"
     },
     "paper/main.tex": {
       "bytes": 1048,
@@ -1446,8 +1454,8 @@
       "sha256": "a1f5d7fb05787e476116ade023564c09fd184e1d11a8c7c5cb4351a2c29e6ede"
     },
     "paper/sections/v10h_abstract.tex": {
-      "bytes": 1035,
-      "sha256": "a0274ba54fa6ab7d101f82ad2867faa6fe1939d82061f6404c5047a67258cf27"
+      "bytes": 1177,
+      "sha256": "c6fbaab58ea4be16f032aeae511f9060001b1ff5e86d90f4a1528ae4b8dcba05"
     },
     "paper/sections/v10h_contract.tex": {
       "bytes": 1370,
@@ -12927,7 +12935,7 @@
   "regression_tests_passed": 54,
   "reviewed_baseline": "0966a17d035c191891b3ea54c3ee2c9b68723319",
   "local_revision_branch": "research/v10.1-abstract-context",
-  "publication_status": "Local only; no push or formal submission authorized/performed",
-  "frozen_parent": "9efb38678373acaaf9427e7aad5331ed73734606",
-  "regression_tests_reexecuted_this_revision": false
+  "publication_status": "User-authorized Git distribution on independent research/v10.1-abstract-context; not formally submitted",
+  "frozen_parent": "37becae465a563679bf6db2d668fe01b1779adce",
+  "publication_branch": "research/v10.1-abstract-context"
 }
