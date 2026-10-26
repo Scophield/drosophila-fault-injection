@@ -1,11 +1,11 @@
 {
-  "status": "LOCAL_V10_1_FINAL_CLARIFICATION_CANDIDATE",
+  "status": "LOCAL_V10_1_ABSTRACT_CONTEXT_CANDIDATE",
   "version": "V10.1",
   "scientific_baseline": "43bcd4d6a99b2d9b258cf8a198a4545d237b5c39",
   "frozen_V10": "69dfd2ed9e8fe597ae293398fe58a5d36fef2b7e",
   "generating_snapshot": "986ff54193fee6a1b95815499a4a3477b15ea49a",
   "candidate_pdf": "paper/iscas2027-v10.1-count-candidate.pdf",
-  "candidate_pdf_sha256": "c5917fa982a92fb126052d4abd11849248c4365baac9822e73aeb1a4443ee736",
+  "candidate_pdf_sha256": "cc896a04cd349c59320445e7f55cc299a93dc1d3a3b4d36ae61b059722108dbe",
   "distribution": "Independent curated scientific snapshot; original generation metadata preserved.",
   "omitted": [
     {
@@ -46,8 +46,8 @@
       "sha256": "782a9ecb33f761da8376f42a12842e8299ffa6a4bd661455066150f95a3e0978"
     },
     "PUBLICATION.md": {
-      "bytes": 3467,
-      "sha256": "2db5c123341d7045559190b944e1db1be4716b75fd64386cdfd37e84dc18c663"
+      "bytes": 4008,
+      "sha256": "cd56c5fb5149c1b2ab5ee53d64acfcf8ea1878ed7197e239eb28ea8d97be3b53"
     },
     "README.md": {
       "bytes": 3768,
@@ -729,6 +729,10 @@
       "bytes": 126590,
       "sha256": "9dab8334ad6c8bbcaaf1b4d8a2f33733224393de8c89c605937d5c478d9aa2c8"
     },
+    "audit/v10_1-abstract-context/check.json": {
+      "bytes": 1964,
+      "sha256": "e29fabb9111703ac9c54ff8bea14468842008b82d26664677bbb05c3ecf9d6cd"
+    },
     "audit/v10_1-count/check.json": {
       "bytes": 2677,
       "sha256": "9f1840e03acd3b53fa730afaf0609eeec55a615fc490e1c6ed3389a01771cdaa"
@@ -760,6 +764,10 @@
     "audit/v10_1-final/check.json": {
       "bytes": 1985,
       "sha256": "883896c4e886936bd71d0f656452a6a3ada129eeda48af5a5e9e0447bff81439"
+    },
+    "docs/ABSTRACT_CONTEXT_V10_1.md": {
+      "bytes": 1854,
+      "sha256": "31abbcf3810e9b7261371c519677b829eacc56a73bde0e0d033e13d8afe45aee"
     },
     "docs/COUNT_REVISION_IMPLEMENTATION.md": {
       "bytes": 3020,
@@ -1406,16 +1414,16 @@
       "sha256": "3803cf26ed5f2759e817af43177251e8c9f1c8d4e83f61c8761f485a3daa50a2"
     },
     "paper/iscas2027-v10.1-count-candidate.pdf": {
-      "bytes": 3491265,
-      "sha256": "c5917fa982a92fb126052d4abd11849248c4365baac9822e73aeb1a4443ee736"
+      "bytes": 3491409,
+      "sha256": "cc896a04cd349c59320445e7f55cc299a93dc1d3a3b4d36ae61b059722108dbe"
     },
     "paper/iscas2027-v10.1-timing-candidate.pdf": {
-      "bytes": 3491265,
-      "sha256": "c5917fa982a92fb126052d4abd11849248c4365baac9822e73aeb1a4443ee736"
+      "bytes": 3491409,
+      "sha256": "cc896a04cd349c59320445e7f55cc299a93dc1d3a3b4d36ae61b059722108dbe"
     },
     "paper/main.pdf": {
-      "bytes": 3491265,
-      "sha256": "c5917fa982a92fb126052d4abd11849248c4365baac9822e73aeb1a4443ee736"
+      "bytes": 3491409,
+      "sha256": "cc896a04cd349c59320445e7f55cc299a93dc1d3a3b4d36ae61b059722108dbe"
     },
     "paper/main.tex": {
       "bytes": 1048,
@@ -1438,8 +1446,8 @@
       "sha256": "a1f5d7fb05787e476116ade023564c09fd184e1d11a8c7c5cb4351a2c29e6ede"
     },
     "paper/sections/v10h_abstract.tex": {
-      "bytes": 945,
-      "sha256": "cbdd2252063ae20a3f773bf3c13d8733c95b30d44d76211399151637bac61293"
+      "bytes": 1035,
+      "sha256": "a0274ba54fa6ab7d101f82ad2867faa6fe1939d82061f6404c5047a67258cf27"
     },
     "paper/sections/v10h_contract.tex": {
       "bytes": 1370,
@@ -1450,8 +1458,8 @@
       "sha256": "4a8f304e3d31b5f079c74fc97567b43dd18b8ecaec7815ba636b18b4e1b6a52e"
     },
     "paper/sections/v10h_intro.tex": {
-      "bytes": 1672,
-      "sha256": "63418f65f546d39b2ab6a847b26e1cdb35be17fa2b6800a0e2e01ab28c982393"
+      "bytes": 1740,
+      "sha256": "3636f21fe45c011c871ee280e29a5a27998a97790ca593ffea7b4740a033e4c9"
     },
     "paper/sections/v10h_limits.tex": {
       "bytes": 897,
@@ -12918,6 +12926,8 @@
   "engineering_code_data_commit": "b29f08970f7749c916a472e835517547d832e6cc",
   "regression_tests_passed": 54,
   "reviewed_baseline": "0966a17d035c191891b3ea54c3ee2c9b68723319",
-  "local_revision_branch": "research/v10.1-final-clarifications",
-  "publication_status": "Local only; no push or formal submission authorized/performed"
+  "local_revision_branch": "research/v10.1-abstract-context",
+  "publication_status": "Local only; no push or formal submission authorized/performed",
+  "frozen_parent": "9efb38678373acaaf9427e7aad5331ed73734606",
+  "regression_tests_reexecuted_this_revision": false
 }

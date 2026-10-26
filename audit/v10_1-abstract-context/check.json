@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "base_commit": "22999d28d8fe22f863fc8f62eaa45a57256083d0",
+  "candidate_pdf": "paper\\iscas2027-v10.1-count-candidate.pdf",
+  "candidate_pdf_sha256": "cc896a04cd349c59320445e7f55cc299a93dc1d3a3b4d36ae61b059722108dbe",
+  "bytes": 3491409,
+  "pages": 5,
+  "technical_pages": 4,
+  "references_only_page": 5,
+  "references": 16,
+  "all_fonts_embedded": true,
+  "type3_fonts": 0,
+  "embedded_fonts": 36,
+  "undefined_references": 0,
+  "overfull_boxes": 0,
+  "missing_glyph_warnings": 0,
+  "protected_baseline_files": 3136,
+  "engineering_snapshot_files_verified": 56,
+  "existing_raster_images_unchanged": true,
+  "fig2_ab_pixel_comparison": {
+    "equal": true,
+    "scale": 4,
+    "clip_pt": [
+      0.0,
+      0.0,
+      252.0,
+      122.0
+    ]
+  },
+  "compiled_log_sha256": "6b0a74d28dfc7add95338c7ba0594107c4ed88e437c918ddb2c2c8b91c16b36c",
+  "page_stats": [
+    {
+      "page": 1,
+      "words": 735
+    },
+    {
+      "page": 2,
+      "words": 672
+    },
+    {
+      "page": 3,
+      "words": 668
+    },
+    {
+      "page": 4,
+      "words": 761
+    },
+    {
+      "page": 5,
+      "words": 520
+    }
+  ],
+  "visual_inspection": "All five final pages rendered with Poppler110dpi and inspected; no orphaned Introduction line, clipping or overlap.",
+  "submission_portal_validation": "Not performed.",
+  "frozen_parent": "9efb38678373acaaf9427e7aad5331ed73734606",
+  "protected_parent_files": 3214,
+  "authorized_parent_changes": [
+    "PUBLICATION.md",
+    "paper/iscas2027-v10.1-count-candidate.pdf",
+    "paper/iscas2027-v10.1-timing-candidate.pdf",
+    "paper/main.pdf",
+    "paper/sections/v10h_abstract.tex",
+    "paper/sections/v10h_intro.tex"
+  ],
+  "regression_tests_reexecuted_this_revision": false,
+  "inherited_regression_tests_passed": 54,
+  "figure_assets_changed": 0,
+  "scientific_code_changed": 0,
+  "publication": "Local only; no push or submission."
+}

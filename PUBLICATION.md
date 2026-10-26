@@ -2,7 +2,7 @@
 
 Current candidate: `paper/iscas2027-v10.1-count-candidate.pdf`
 
-PDF SHA256: `c5917fa982a92fb126052d4abd11849248c4365baac9822e73aeb1a4443ee736`
+PDF SHA256: `cc896a04cd349c59320445e7f55cc299a93dc1d3a3b4d36ae61b059722108dbe`
 
 Active source: `paper/main_v10_1_timing.tex = paper/main.tex = paper/main_v10_horizon.tex`.
 
@@ -10,7 +10,12 @@ The timing-candidate filename and `paper/main.pdf` are byte-identical PDF aliase
 
 ## Engineering candidate
 
-Local clarification branch: `research/v10.1-final-clarifications`.
+Local abstract-context branch: `research/v10.1-abstract-context`.
+
+Frozen manuscript parent: `9efb38678373acaaf9427e7aad5331ed73734606`,
+preserved on `research/v10.1-final-clarifications`. This child adds one abstract
+background sentence and an existing source citation in the Introduction. See
+[the abstract-context note](docs/ABSTRACT_CONTEXT_V10_1.md).
 
 Reviewed baseline: `0966a17d035c191891b3ea54c3ee2c9b68723319` on
 `research/v10.1-engineering-ablation`, preserved unchanged. This child revision
@@ -31,14 +36,16 @@ versus 36/87 for trusted-header checks, with zero valid-control rejects and six
 retained misses. Separate re-scoring of 72 V8 records quantifies actual reporting
 impact; those records are not pooled with 576 current neural episodes.
 
-The engineering baseline replaced only Fig.2(c). This clarification revision
-changes no figure asset; Fig.1's caption distinguishes its earlier development
+The engineering baseline replaced only Fig.2(c). The clarification parent
+changed no figure asset; Fig.1's caption distinguishes its earlier development
 challenges from the additional catalogue. All frozen scientific records,
 calibrations and registrations remain unchanged. The engineering baseline
-retained the original 44 regressions and added ten; this revision reruns the same
-54 tests. The PDF has four technical pages and a reference-only fifth page.
-Current checks are in `audit/v10_1-final-clarifications/`; earlier checks in
-`audit/v10_1-engineering/` remain archived unchanged. See also
+retained the original 44 regressions and added ten; the clarification parent reran the same
+54 tests. The abstract-only child preserves their source hashes. The PDF has four technical pages and a reference-only fifth page.
+Current checks are in `audit/v10_1-abstract-context/`; prior clarification
+checks in `audit/v10_1-final-clarifications/` and engineering checks in
+`audit/v10_1-engineering/` remain archived unchanged. Numerical code is unchanged;
+this round reruns document/integrity checks, retaining the parent's 54-test result. See also
 `docs/ENGINEERING_EVALUATION_V10_1.md` and `ENGINEERING_SCOPE.json`.
 
 ## Scientific provenance retained
